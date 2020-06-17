@@ -21,7 +21,7 @@ $yellow-darken-10: darken($base-yellow, 10%);
 $yellow-darken-20: darken($base-yellow, 20%);
 
 // Blues
-$base-blue: #2462C6;
+$base-blue: #2462c6;
 
 $blue: $base-blue;
 $blue-lighten-10: lighten($base-blue, 10%);
@@ -40,7 +40,7 @@ $darkgrey-25: lighten($base-darkgrey, 75%);
 $darkgrey-15: lighten($base-darkgrey, 85%);
 
 // Success
-$success-green: #00AA55;
+$success-green: #00aa55;
 
 $success: $success-green;
 $success-lighten-5: lighten($success-green, 5%);
@@ -48,7 +48,7 @@ $success-darken-5: darken($success-green, 5%);
 $success-darken-10: darken($success-green, 10%);
 
 // Error
-$error-red: #F64747;
+$error-red: #f64747;
 
 $error: $error-red;
 $error-lighten-10: lighten($error-red, 10%);
@@ -58,33 +58,33 @@ $error-darken-20: darken($error-red, 20%);
 // color map
 // used for setting color variables in root
 $color-map: (
-  "white": $white,
-  "black": $black,
-  "green": $green,
-  "green-light": $green-lighten-5,
-  "green-dark": $green-darken-10,
-  "green-darker": $green-darken-20,
-  "yellow": $yellow,
-  "yellow-light": $yellow-lighten-10,
-  "yellow-dark": $yellow-darken-10,
-  "yellow-darker": $yellow-darken-20,
-  "blue": $blue,
-  "blue-light": $blue-lighten-10,
-  "blue-dark": $blue-darken-5,
-  "blue-darker": $blue-darken-15,
-  "darkgrey": $darkgrey,
-  "darkgrey-85": $darkgrey-85,
-  "darkgrey-70": $darkgrey-70,
-  "darkgrey-55": $darkgrey-55,
-  "darkgrey-40": $darkgrey-40,
-  "darkgrey-25": $darkgrey-25,
-  "darkgrey-15": $darkgrey-15,
-  "success": $success,
-  "success-light": $success-lighten-5,
-  "success-dark": $success-darken-5,
-  "success-darker": $success-darken-10,
-  "error": $error,
-  "error-light": $error-lighten-10,
-  "error-dark": $error-darken-10,
-  "error-darker": $error-darken-20
+  'white': $white,
+  'black': $black,
+  'green': $green,
+  'green-light': $green-lighten-5,
+  'green-dark': $green-darken-10,
+  'green-darker': $green-darken-20,
+  'yellow': $yellow,
+  'yellow-light': $yellow-lighten-10,
+  'yellow-dark': $yellow-darken-10,
+  'yellow-darker': $yellow-darken-20,
+  'blue': $blue,
+  'blue-light': $blue-lighten-10,
+  'blue-dark': $blue-darken-5,
+  'blue-darker': $blue-darken-15,
+  'darkgrey': $darkgrey,
+  'darkgrey-85': $darkgrey-85,
+  'darkgrey-70': $darkgrey-70,
+  'darkgrey-55': $darkgrey-55,
+  'darkgrey-40': $darkgrey-40,
+  'darkgrey-25': $darkgrey-25,
+  'darkgrey-15': $darkgrey-15,
+  'success': $success,
+  'success-light': $success-lighten-5,
+  'success-dark': $success-darken-5,
+  'success-darker': $success-darken-10,
+  'error': $error,
+  'error-light': $error-lighten-10,
+  'error-dark': $error-darken-10,
+  'error-darker': $error-darken-20
 );
