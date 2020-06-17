@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "build-storybook"
+    "build": "build-storybook",
+    "lint": "pretty-quick"
   },
   "dependencies": {},
   "devDependencies": {
@@ -13,7 +14,14 @@
     "@whitespace/storybook-addon-html": "1.2.1",
     "babel-loader": "8.1.0",
     "bootstrap": "^4.5.0",
+    "husky": "4.2.5",
     "node-sass": "4.14.1",
+    "pretty-quick": "2.0.1",
     "sass-loader": "8.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
