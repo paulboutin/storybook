@@ -4,6 +4,6 @@ import registerAddonCode from '@whitespace/storybook-addon-code/register'
 registerAddonCode({
   tabs: [
     { label: 'SCSS', lang: 'scss' },
-    { label: 'JavaScript', lang: 'javascript', matchFiles: 'js' },
-  ],
-});
+    { label: 'JavaScript', lang: 'javascript', matchFiles: 'js' }
+  ]
+})
