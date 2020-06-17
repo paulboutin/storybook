@@ -1,0 +1,14 @@
+{
+  "name": "botw-component-library",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "start-storybook -p 6006",
+    "build": "build-storybook"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.10.2",
+    "@storybook/html": "5.3.19",
+    "babel-loader": "8.1.0"
+  }
+}
