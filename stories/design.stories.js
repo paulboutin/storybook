@@ -1,3 +1,5 @@
+import '../sass/base/_colors.scss'
+
 export default {
   title: 'Design System'
 }
