@@ -4,17 +4,11 @@
 $white: #ffffff;
 $black: #000000;
 
-// variables
-$five: 5;
-$ten: 10;
-$twenty: 20;
-
-
 // Greens
 $base-green: #00925b;
 
 $green: $base-green;
-$green-lighten-5: lighten($base-green, $five);
+$green-lighten-5: lighten($base-green, 5%);
 $green-darken-10: darken($base-green, 10%);
 $green-darken-20: darken($base-green, 20%);
 
@@ -31,7 +25,7 @@ $base-blue: #2462C6;
 
 $blue: $base-blue;
 $blue-lighten-10: lighten($base-blue, 10%);
-$blue-darken-5: darken($base-blue, $five);
+$blue-darken-5: darken($base-blue, 5%);
 $blue-darken-15: darken($base-blue, 15%);
 
 // Greys
@@ -49,8 +43,8 @@ $darkgrey-15: lighten($base-darkgrey, 85%);
 $success-green: #00AA55;
 
 $success: $success-green;
-$success-lighten-5: lighten($success-green, $five);
-$success-darken-5: darken($success-green, $five);
+$success-lighten-5: lighten($success-green, 5%);
+$success-darken-5: darken($success-green, 5%);
 $success-darken-10: darken($success-green, 10%);
 
 // Error
