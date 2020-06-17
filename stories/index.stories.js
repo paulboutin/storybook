@@ -1,7 +1,11 @@
+import { withHTML } from '@whitespace/storybook-addon-html/html'
 import '../sass/main.scss'
 
 export default {
-  title: 'Demo'
+  title: 'Demo',
+  decorators: [
+    withHTML
+  ]
 }
 
 export const Heading = () => '<h1>Hello World</h1>'
