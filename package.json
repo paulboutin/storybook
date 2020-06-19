@@ -3,14 +3,13 @@
   "version": "1.0.0",
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "build-storybook",
-    "lint": "pretty-quick",
-    "tailwind": "postcss tailwind/main.css -o tailwind-build/bundle.css -v",
-    "tailwind:watch": "npm run tailwind -- --watch",
-    "tailwind:split": "run-s tailwind:split:*",
-    "tailwind:split:base": "postcss node_modules/tailwindcss/base.css -o tailwind-build/split/base.css -v",
-    "tailwind:split:components": "postcss tailwind/components -d tailwind-build/split -v",
-    "tailwind:split:sass": "node create-main-sass.js"
+    "build:storybook": "build-storybook",
+    "build:tailwind:bundle": "postcss css/main.css -o tailwind-build/bundle.css -v",
+    "build:tailwind:split": "run-s build:tailwind:split:*",
+    "build:tailwind:split:base": "postcss node_modules/tailwindcss/base.css -o tailwind-build/split/base.css -v",
+    "build:tailwind:split:components": "postcss css/components -d tailwind-build/split -v",
+    "build:tailwind:split:sass": "node create-main-sass.js",
+    "lint": "pretty-quick"
   },
   "dependencies": {
     "@storybook/html": "5.3.19",

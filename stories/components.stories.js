@@ -1,4 +1,4 @@
-import '../tailwind-build/bundle.css'
+import '../css/main.css'
 
 export default {
   title: 'Components'
