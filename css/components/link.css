@@ -1,7 +1,7 @@
 .link {
-  @apply text-blue-400;
+  @apply text-blue;
 }
 
 .link:hover {
-  @apply underline text-blue-300;
+  @apply underline text-blue-light;
 }

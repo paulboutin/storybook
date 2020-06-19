@@ -7,9 +7,9 @@
 }
 
 .btn-primary {
-  @apply text-white bg-teal-400;
+  @apply text-white bg-green;
 }
 
 .btn-primary:hover {
-  @apply bg-teal-300;
+  @apply bg-green-light;
 }
