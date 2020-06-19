@@ -4,19 +4,29 @@
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "build-storybook",
-    "lint": "pretty-quick"
+    "lint": "pretty-quick",
+    "jest:integration": "jest -c jest.config.js",
+    "test:integration": "start-server-and-test start http://localhost:6006 jest:integration"
   },
   "dependencies": {},
   "devDependencies": {
     "@babel/core": "7.10.2",
+    "@babel/preset-env": "7.10.2",
     "@storybook/html": "5.3.19",
+    "@types/jest": "26.0.0",
     "@whitespace/storybook-addon-code": "1.0.2",
     "@whitespace/storybook-addon-html": "1.2.1",
+    "babel-jest": "26.0.1",
     "babel-loader": "8.1.0",
     "husky": "4.2.5",
+    "jest": "26.0.1",
+    "jest-image-snapshot": "4.0.2",
+    "jest-puppeteer": "4.4.0",
     "node-sass": "4.14.1",
     "pretty-quick": "2.0.1",
-    "sass-loader": "8.0.2"
+    "puppeteer": "4.0.0",
+    "sass-loader": "8.0.2",
+    "start-server-and-test": "1.11.0"
   },
   "husky": {
     "hooks": {
