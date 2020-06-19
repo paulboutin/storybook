@@ -2,6 +2,10 @@ export default {
   title: 'Design System'
 }
 
+export const Download = () => `
+  <a href='/styles.zip' class='link'>Download styles</a>
+`
+
 export const Colors = () => `
   <div class='flex flex-wrap m-auto'>
     <div class='w-full sm:w-1/2 md:w-1/3'>

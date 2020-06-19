@@ -2,13 +2,14 @@
   "name": "botw-component-library",
   "version": "1.0.0",
   "scripts": {
-    "start": "start-storybook -p 6006",
-    "build:storybook": "build-storybook",
+    "start": "start-storybook -p 6006 -s public",
+    "build:storybook": "build-storybook -s public",
     "build:tailwind:bundle": "postcss css/main.css -o tailwind-build/bundle.css -v",
     "build:tailwind:split": "run-s build:tailwind:split:*",
     "build:tailwind:split:base": "postcss node_modules/tailwindcss/base.css -o tailwind-build/split/base.css -v",
     "build:tailwind:split:components": "postcss css/components -d tailwind-build/split -v",
     "build:tailwind:split:sass": "node create-main-sass.js",
+    "build:tailwind:split:zip": "zip -r -j -X public/styles.zip tailwind-build/split/*",
     "lint": "pretty-quick"
   },
   "dependencies": {
