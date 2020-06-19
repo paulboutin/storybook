@@ -1,5 +1,6 @@
 .DS_Store
 .idea/
+public/styles.zip
 storybook-static/
 tailwind-build/
 node_modules/
