@@ -1,5 +1,5 @@
 export const getStoryUrl = (selectedKind, selectedStory) => {
-  const BASE_URL = 'http://localhost:6006/iframe.html'
+  const BASE_URL = `http://localhost:${process.env.PORT}/iframe.html`
 
   const searchParams = new URLSearchParams()
   searchParams.append('selectedKind', selectedKind)
