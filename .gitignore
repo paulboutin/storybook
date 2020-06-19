@@ -1,4 +1,5 @@
 .DS_Store
 .idea/
 storybook-static/
+tailwind-build/
 node_modules/
