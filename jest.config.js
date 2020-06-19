@@ -1,5 +1,4 @@
 module.exports = {
-  preset: 'jest-puppeteer',
-  testRegex: './*\\.test\\.js$',
-  setupFilesAfterEnv: ['./config/integration.js']
+  // TODO: define test location
+  roots: ['<rootDir>/test']
 }

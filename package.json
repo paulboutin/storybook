@@ -5,8 +5,10 @@
     "start": "start-storybook -p ${PORT:-6006}",
     "build": "build-storybook",
     "lint": "pretty-quick",
-    "test": "cross-env PORT=${PORT:-6006} jest",
-    "test:integration": "cross-env PORT=${PORT:-6006} start-server-and-test start http://localhost:${PORT:-6006} test"
+    "test": "npm run test:server",
+    "test:unit": "jest -c jest.config.js",
+    "test:integration": "jest -c jest.integration.js",
+    "test:server": "cross-env PORT=${PORT:-6006} start-server-and-test start http://localhost:${PORT:-6006} test:integration"
   },
   "dependencies": {},
   "devDependencies": {
