@@ -1,8 +1,0 @@
-@import 'colors';
-
-:root {
-  // configure colors
-  @each $color, $value in $color-map {
-    --color-#{$color}: #{$value};
-  }
-}
