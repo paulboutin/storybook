@@ -1,126 +1,74 @@
-import '../sass/base/_colors.scss'
-
 export default {
   title: 'Design System'
 }
 
-// TODO: replace in-lined styles with classes when framework is chosebn
-
 export const Colors = () => `
-<div class="container" style="font-family: sans-serif;">
-  
-    <div style="width: 18rem; color: var(--color-white)">
-      <h5 style="color: var(--color-black)">Green</h5>
-      <div style="background: var(--color-green-light); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          green-lighten-5
-      </div>
-      <div style="background: var(--color-green); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          base-green
-      </div>
-      <div style="background: var(--color-green-dark); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          green-darken-10
-      </div>
-      <div style="background: var(--color-green-darker); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          green-darken-20
+  <div class='flex flex-wrap m-auto'>
+    <div class='w-1/3'>
+      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+        <h4 class='text-grey text-sm font-semibold mb-2'>Green</h4>
+        <div class='bg-green text-white text-center rounded py-1 mb-1'>Base</div>
+        <div class='bg-green-light text-white text-center rounded py-1 mb-1'>Light</div>
+        <div class='bg-green-dark text-white text-center rounded py-1 mb-1'>Dark</div>
+        <div class='bg-green-darker text-white text-center rounded py-1'>Darker</div>
       </div>
     </div>
     
-    <div style="width: 18rem;">
-      <h5>Yellow</h5>
-      <div style="background: var(--color-yellow-light); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          yellow-lighten-10
-      </div>
-      <div style="background: var(--color-yellow); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          base-yellow
-      </div>
-      <div style="background: var(--color-yellow-dark); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          yellow-darken-10
-      </div>
-      <div style="background: var(--color-yellow-darker); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          yellow-darken-20
+    <div class='w-1/3'>
+      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+        <h4 class='text-grey text-sm font-semibold mb-2'>Yellow</h4>
+        <div class='bg-yellow text-black text-center rounded py-1 mb-1'>Base</div>
+        <div class='bg-yellow-light text-black text-center rounded py-1 mb-1'>Light</div>
+        <div class='bg-yellow-dark text-black text-center rounded py-1 mb-1'>Dark</div>
+        <div class='bg-yellow-darker text-black text-center rounded py-1'>Darker</div>
       </div>
     </div>
     
-    <div style="width: 18rem; color: var(--color-white)">
-      <h5 style="color: var(--color-black)">Blue</h5>
-      <div style="background: var(--color-blue-light); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          blue-lighten-10
-      </div>
-      <div style="background: var(--color-blue); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          base-blue
-      </div>
-      <div style="background: var(--color-blue-dark); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          blue-darken-5
-      </div>
-      <div style="background: var(--color-blue-darker); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          blue-darken-15
-      </div>
-    </div>
-  
-    <div style="width: 18rem; color: var(--color-white)">
-      <h5 style="color: var(--color-black)">Greyscale</h5>
-      <div style="background: var(--color-black); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          black
-      </div>
-      <div style="background: var(--color-darkgrey); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          darkgrey
-      </div>
-      <div style="background: var(--color-darkgrey-85); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          darkgrey-85
-      </div>
-      <div style="background: var(--color-darkgrey-70); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          darkgrey-70
-      </div>
-      <div style="background: var(--color-darkgrey-55); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          darkgrey-55
-      </div>
-      <div style="background: var(--color-darkgrey-40); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          darkgrey-40
-      </div>
-      <div style="background: var(--color-darkgrey-25); margin-bottom:5px; padding: 5px; border-radius: 5px; color: var(--color-black)">
-          darkgrey-25
-      </div>
-      <div style="background: var(--color-darkgrey-15); margin-bottom:5px; padding: 5px; border-radius: 5px; color: var(--color-black)">
-          darkgrey-15
-      </div>
-      <div style="background: var(--color-white); margin-bottom:5px; padding: 5px; border-radius: 5px; color: var(--color-black); border: 1px solid var(--color-black)">
-          white
-      </div>
-    </div>    
-  
-    <div style="width: 18rem; color: var(--color-white)">
-      <h5 style="color: var(--color-black)">Success</h5>
-      <div style="background: var(--color-success-light); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          success-lighten-5
-      </div>
-      <div style="background: var(--color-success); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          base-success
-      </div>
-      <div style="background: var(--color-success-dark); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          success-darken-5
-      </div>
-      <div style="background: var(--color-success-darker); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          success-darken-10
-      </div>
-    </div>    
-  
-    <div style="width: 18rem; color: var(--color-white)">
-      <h5 style="color: var(--color-black)">Error</h5>
-      <div style="background: var(--color-error-light); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          error-lighten-10
-      </div>
-      <div style="background: var(--color-error); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          base-error
-      </div>
-      <div style="background: var(--color-error-dark); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          error-darken-10
-      </div>
-      <div style="background: var(--color-error-darker); margin-bottom:5px; padding: 5px; border-radius: 5px;">
-          error-darken-20
+    <div class='w-1/3'>
+      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+        <h4 class='text-grey text-sm font-semibold mb-2'>Blue</h4>
+        <div class='bg-blue text-white text-center rounded py-1 mb-1'>Base</div>
+        <div class='bg-blue-light text-white text-center rounded py-1 mb-1'>Light</div>
+        <div class='bg-blue-dark text-white text-center rounded py-1 mb-1'>Dark</div>
+        <div class='bg-blue-darker text-white text-center rounded py-1'>Darker</div>
       </div>
     </div>
     
-</div>
+    <div class='w-1/3'>
+      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+        <h4 class='text-grey text-sm font-semibold mb-2'>Greyscale</h4>
+        <div class='bg-black text-white text-center rounded py-1 mb-1'>Black</div>
+        <div class='bg-grey text-white text-center rounded py-1 mb-1'>Grey</div>
+        <div class='bg-grey-85 text-white text-center rounded py-1 mb-1'>85%</div>
+        <div class='bg-grey-70 text-white text-center rounded py-1 mb-1'>70%</div>
+        <div class='bg-grey-55 text-white text-center rounded py-1 mb-1'>55%</div>
+        <div class='bg-grey-40 text-black text-center rounded py-1 mb-1'>40%</div>
+        <div class='bg-grey-25 text-black text-center rounded py-1 mb-1'>25%</div>
+        <div class='bg-grey-15 text-black text-center rounded py-1 mb-1'>15%</div>
+        <div class='bg-white text-black text-center rounded py-1 border border-grey-25'>White</div>
+      </div>
+    </div>
+    
+    <div class='w-1/3'>
+      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+        <h4 class='text-grey text-sm font-semibold mb-2'>Success</h4>
+        <div class='bg-success text-white text-center rounded py-1 mb-1'>Base</div>
+        <div class='bg-success-light text-white text-center rounded py-1 mb-1'>Light</div>
+        <div class='bg-success-dark text-white text-center rounded py-1 mb-1'>Dark</div>
+        <div class='bg-success-darker text-white text-center rounded py-1'>Darker</div>
+      </div>
+    </div>
+    
+    <div class='w-1/3'>
+      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+        <h4 class='text-grey text-sm font-semibold mb-2'>Error</h4>
+        <div class='bg-error text-white text-center rounded py-1 mb-1'>Base</div>
+        <div class='bg-error-light text-white text-center rounded py-1 mb-1'>Light</div>
+        <div class='bg-error-dark text-white text-center rounded py-1 mb-1'>Dark</div>
+        <div class='bg-error-darker text-white text-center rounded py-1'>Darker</div>
+      </div>
+    </div>
+  </div>
 `
 
 export const Typography = () => '<h1>Hello World</h1>'
