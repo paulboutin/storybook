@@ -1,0 +1,15 @@
+.btn {
+  @apply px-4 py-2 rounded transform transition duration-300;
+}
+
+.btn:hover {
+  @apply scale-110;
+}
+
+.btn-primary {
+  @apply text-white bg-teal-400;
+}
+
+.btn-primary:hover {
+  @apply bg-teal-300;
+}
