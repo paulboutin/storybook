@@ -37,6 +37,12 @@ module.exports = {
       'error-dark': '#f41616',
       'error-darker': '#cd0a0a'
     },
+    screens: {
+      xs: '480px',
+      sm: '768px',
+      md: '992px',
+      lg: '1200px'
+    },
     extend: {}
   },
   variants: {},

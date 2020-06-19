@@ -4,7 +4,7 @@ export default {
 
 export const Colors = () => `
   <div class='flex flex-wrap m-auto'>
-    <div class='w-1/3'>
+    <div class='w-full sm:w-1/2 md:w-1/3'>
       <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Green</h4>
         <div class='bg-green text-white text-center rounded py-1 mb-1'>Base</div>
@@ -14,7 +14,7 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-1/3'>
+    <div class='w-full sm:w-1/2 md:w-1/3'>
       <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Yellow</h4>
         <div class='bg-yellow text-black text-center rounded py-1 mb-1'>Base</div>
@@ -24,7 +24,7 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-1/3'>
+    <div class='w-full sm:w-1/2 md:w-1/3'>
       <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Blue</h4>
         <div class='bg-blue text-white text-center rounded py-1 mb-1'>Base</div>
@@ -34,7 +34,7 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-1/3'>
+    <div class='w-full sm:w-1/2 md:w-1/3'>
       <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Greyscale</h4>
         <div class='bg-black text-white text-center rounded py-1 mb-1'>Black</div>
@@ -49,7 +49,7 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-1/3'>
+    <div class='w-full sm:w-1/2 md:w-1/3'>
       <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Success</h4>
         <div class='bg-success text-white text-center rounded py-1 mb-1'>Base</div>
@@ -59,7 +59,7 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-1/3'>
+    <div class='w-full sm:w-1/2 md:w-1/3'>
       <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Error</h4>
         <div class='bg-error text-white text-center rounded py-1 mb-1'>Base</div>
