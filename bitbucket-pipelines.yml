@@ -1,5 +1,5 @@
 # Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
-image: node:12.18-alpine
+image: node:12.18
 
 pipelines:
   default:
@@ -7,6 +7,5 @@ pipelines:
         caches:
           - node
         script:
-          - apk add chromium
           - npm install
           - npm test

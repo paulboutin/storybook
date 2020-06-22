@@ -15,7 +15,7 @@
     "lint": "pretty-quick",
     "test": "npm run test:server",
     "test:unit": "jest -c jest.config.js",
-    "test:integration": "jest -c jest.integration.js",
+    "test:integration": "jest -c jest.integration.js --max-workers 2",
     "test:server": "cross-env PORT=${PORT:-6006} start-server-and-test start:ci http://localhost:${PORT:-6006} test:integration"
   },
   "dependencies": {
