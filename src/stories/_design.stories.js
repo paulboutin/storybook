@@ -75,4 +75,38 @@ export const Colors = () => `
   </div>
 `
 
-export const Typography = () => '<h1>Hello World</h1>'
+export const Typography = () => `
+<div class='container m-auto'>
+  <div>
+    <h1>H1 Bank of the West</h1>
+
+    <h2>H2 Bank of the West</h2>
+
+    <h3>H3 Bank of the West</h3>
+
+    <h4>H4 Bank of the West</h4>
+
+    <h5>H5 Bank of the West</h5>
+
+    <h6>H6 Bank of the West</h6>
+  </div>
+  
+  <div class="mt-8">
+    <h3 class="text-green">Bank of the West</h3>
+    <h3 class="text-blue">Bank of the West</h3>
+    <h3 class="text-yellow">Bank of the West</h3>
+    <h3 class="text-grey">Bank of the West</h3>
+    <h3 class="text-success">Bank of the West</h3>
+    <h3 class="text-error">Bank of the West</h3>
+  </div>
+  
+  <p class="mt-8">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, magni, neque. 
+    A adipisci animi, autem commodi corporis doloribus expedita explicabo fugit, 
+    illo ipsa ipsum libero maiores maxime minus molestias nobis officia qui 
+    quibusdam ratione reiciendis rerum soluta totam unde veniam voluptates. 
+    Animi blanditiis commodi expedita maiores nostrum quaerat, sapiente tempora.
+  </p>  
+
+</div>
+`
