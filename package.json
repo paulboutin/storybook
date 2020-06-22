@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "start": "start-storybook -p ${PORT:-6006} -s public",
-    "start:ci": "npm start -- --ci",
+    "start:ci": "npm start -- --ci --quiet",
     "build": "run-s build:**",
     "build:tailwind:bundle": "postcss src/css/main.css -o tailwind-build/styles.css -v",
     "build:tailwind:split": "run-s tailwind:split:*",
