@@ -1,15 +1,31 @@
 import { getStoryUrl } from './utils'
 
 describe('Design', () => {
-  it('matches snapshot', async () => {
-    // Arrange
-    const url = getStoryUrl('design-system', 'colors')
+  describe('Color System', () => {
+    it('matches snapshot', async () => {
+      // Arrange
+      const url = getStoryUrl('design-system', 'colors')
 
-    // Act
-    await page.goto(url)
-    const image = await page.screenshot({ fullPage: true })
+      // Act
+      await page.goto(url)
+      const image = await page.screenshot({ fullPage: true })
 
-    // Assert
-    expect(image).toMatchImageSnapshot()
+      // Assert
+      expect(image).toMatchImageSnapshot()
+    })
+  })
+
+  describe('Typography', () => {
+    it('matches snapshot', async () => {
+      // Arrange
+      const url = getStoryUrl('design-system', 'typography')
+
+      // Act
+      await page.goto(url)
+      const image = await page.screenshot({ fullPage: true })
+
+      // Assert
+      expect(image).toMatchImageSnapshot()
+    })
   })
 })
