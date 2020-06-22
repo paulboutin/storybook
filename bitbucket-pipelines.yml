@@ -1,0 +1,11 @@
+# Check our guides at https://confluence.atlassian.com/x/14UWN for more examples.
+image: node:12.18-alpine
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script:
+          - npm install
+          - npm test
