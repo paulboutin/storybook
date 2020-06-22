@@ -1,5 +1,8 @@
 module.exports = {
+  // mark if required to enforce !important on all rules
+  // important: true,
   purge: [],
+
   theme: {
     colors: {
       green: '#00925b',
@@ -43,8 +46,27 @@ module.exports = {
       md: '992px',
       lg: '1200px'
     },
+    fontSize: {
+      // define values as [fontSize, lineHeight]
+      sm: ['.875rem'],
+      base: ['1rem', '1.5rem'], // h6/p
+      lg: ['1.125rem', '1.625rem'], // h5
+      xl: ['1.25rem', '1.75rem'], // h4
+      '2xl': ['1.5rem', '2rem'], // h3
+      '3xl': ['1.875rem', '2.375rem'], // h2
+      '4xl': ['2.25rem', '2.75rem'] // h1
+    },
     extend: {}
   },
+
+  fluidTypography: {
+    minSize: '16px',
+    maxSize: '20px',
+    minScreen: '480px',
+    maxScreen: '1200px'
+  },
+
   variants: {},
-  plugins: []
+
+  plugins: [require('./src/tailwind/fluid-typography-plugin')]
 }
