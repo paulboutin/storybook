@@ -28,4 +28,18 @@ describe('Design', () => {
       expect(image).toMatchImageSnapshot()
     })
   })
+
+  describe('Spacing', () => {
+    it('matches snapshot', async () => {
+      // Arrange
+      const url = getStoryUrl('design-system', 'spacing')
+
+      // Act
+      await page.goto(url)
+      const image = await page.screenshot({ fullPage: true })
+
+      // Assert
+      expect(image).toMatchImageSnapshot()
+    })
+  })
 })
