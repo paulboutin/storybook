@@ -43,7 +43,7 @@ module.exports = {
 
     screens: {
       // configure media queries to match bootstrap 3
-      xs: { max: '767px' },
+      xs: { min: '480px' },
       sm: { min: '768px' },
       md: { min: '992px' },
       lg: { min: '1200px' }
@@ -51,7 +51,7 @@ module.exports = {
 
     fontSize: {
       // define values as [fontSize, lineHeight]
-      sm: ['0.75rem', '1rem'],
+      sm: ['0.75rem', '1.25rem'],
       base: ['1rem', '1.5rem'], // h6/p
       lg: ['1.125rem', '1.625rem'], // h5
       xl: ['1.25rem', '1.75rem'], // h4
@@ -80,7 +80,7 @@ module.exports = {
   fluidTypography: {
     minSize: '16px',
     maxSize: '20px',
-    minScreen: '320px',
+    minScreen: '480px',
     maxScreen: '1200px'
   },
 
