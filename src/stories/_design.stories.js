@@ -285,9 +285,8 @@ export const Grid = () => `
       <ul class="pl-16">
         <li><strong>xs</strong>: <768px</li>
         <li><strong>sm</strong>: >768px</li>
-        <li><strong>md</strong>: <992px</li>
-        <li><strong>lg</strong>: <1200px</li>
-        <li><strong>xl</strong>: >1200px</li>
+        <li><strong>md</strong>: >992px</li>
+        <li><strong>lg</strong>: >1200px</li>
       </ul>
     </code>
     <br>

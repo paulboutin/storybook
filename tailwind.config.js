@@ -46,8 +46,7 @@ module.exports = {
       xs: { max: '767px' },
       sm: { min: '768px' },
       md: { min: '992px' },
-      lg: { min: '1200px' },
-      xl: { max: '1201px' }
+      lg: { min: '1200px' }
     },
 
     fontSize: {
