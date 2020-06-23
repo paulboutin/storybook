@@ -9,67 +9,67 @@ export const Download = () => `
 export const Colors = () => `
   <div class='flex flex-wrap m-auto'>
     <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
-        <h4 class='text-grey text-sm font-semibold mb-2'>Green</h4>
-        <div class='bg-green text-white text-center rounded py-1 mb-1'>Base</div>
-        <div class='bg-green-light text-white text-center rounded py-1 mb-1'>Light</div>
-        <div class='bg-green-dark text-white text-center rounded py-1 mb-1'>Dark</div>
-        <div class='bg-green-darker text-white text-center rounded py-1'>Darker</div>
+      <div class='max-w-xs m-auto mb-16 p-4 border border-grey-25 rounded'>
+        <h4 class='text-grey text-sm font-semibold mb-4'>Green</h4>
+        <div class='bg-green text-white text-center rounded py-2 mb-2'>Base</div>
+        <div class='bg-green-light text-white text-center rounded py-2 mb-2'>Light</div>
+        <div class='bg-green-dark text-white text-center rounded py-2 mb-2'>Dark</div>
+        <div class='bg-green-darker text-white text-center rounded py-2'>Darker</div>
       </div>
     </div>
     
     <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
-        <h4 class='text-grey text-sm font-semibold mb-2'>Yellow</h4>
-        <div class='bg-yellow text-black text-center rounded py-1 mb-1'>Base</div>
-        <div class='bg-yellow-light text-black text-center rounded py-1 mb-1'>Light</div>
-        <div class='bg-yellow-dark text-black text-center rounded py-1 mb-1'>Dark</div>
-        <div class='bg-yellow-darker text-black text-center rounded py-1'>Darker</div>
+      <div class='max-w-xs m-auto mb-16 p-4 border border-grey-25 rounded'>
+        <h4 class='text-grey text-sm font-semibold mb-4'>Yellow</h4>
+        <div class='bg-yellow text-black text-center rounded py-2 mb-2'>Base</div>
+        <div class='bg-yellow-light text-black text-center rounded py-2 mb-2'>Light</div>
+        <div class='bg-yellow-dark text-black text-center rounded py-2 mb-2'>Dark</div>
+        <div class='bg-yellow-darker text-black text-center rounded py-2'>Darker</div>
       </div>
     </div>
     
     <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+      <div class='max-w-xs m-auto mb-16 p-4 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Blue</h4>
-        <div class='bg-blue text-white text-center rounded py-1 mb-1'>Base</div>
-        <div class='bg-blue-light text-white text-center rounded py-1 mb-1'>Light</div>
-        <div class='bg-blue-dark text-white text-center rounded py-1 mb-1'>Dark</div>
-        <div class='bg-blue-darker text-white text-center rounded py-1'>Darker</div>
+        <div class='bg-blue text-white text-center rounded py-2 mb-2'>Base</div>
+        <div class='bg-blue-light text-white text-center rounded py-2 mb-2'>Light</div>
+        <div class='bg-blue-dark text-white text-center rounded py-2 mb-2'>Dark</div>
+        <div class='bg-blue-darker text-white text-center rounded py-2'>Darker</div>
       </div>
     </div>
     
     <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+      <div class='max-w-xs m-auto mb-4 p-4 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Greyscale</h4>
-        <div class='bg-black text-white text-center rounded py-1 mb-1'>Black</div>
-        <div class='bg-grey text-white text-center rounded py-1 mb-1'>Grey</div>
-        <div class='bg-grey-85 text-white text-center rounded py-1 mb-1'>85%</div>
-        <div class='bg-grey-70 text-white text-center rounded py-1 mb-1'>70%</div>
-        <div class='bg-grey-55 text-white text-center rounded py-1 mb-1'>55%</div>
-        <div class='bg-grey-40 text-black text-center rounded py-1 mb-1'>40%</div>
-        <div class='bg-grey-25 text-black text-center rounded py-1 mb-1'>25%</div>
-        <div class='bg-grey-15 text-black text-center rounded py-1 mb-1'>15%</div>
-        <div class='bg-white text-black text-center rounded py-1 border border-grey-25'>White</div>
+        <div class='bg-black text-white text-center rounded py-2 mb-2'>Black</div>
+        <div class='bg-grey text-white text-center rounded py-2 mb-2'>Grey</div>
+        <div class='bg-grey-85 text-white text-center rounded py-2 mb-2'>85%</div>
+        <div class='bg-grey-70 text-white text-center rounded py-2 mb-2'>70%</div>
+        <div class='bg-grey-55 text-white text-center rounded py-2 mb-2'>55%</div>
+        <div class='bg-grey-40 text-black text-center rounded py-2 mb-2'>40%</div>
+        <div class='bg-grey-25 text-black text-center rounded py-2 mb-2'>25%</div>
+        <div class='bg-grey-15 text-black text-center rounded py-2 mb-2'>15%</div>
+        <div class='bg-white text-black text-center rounded py-2 border border-grey-25'>White</div>
       </div>
     </div>
     
     <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+      <div class='max-w-xs m-auto mb-16 p-4 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Success</h4>
-        <div class='bg-success text-white text-center rounded py-1 mb-1'>Base</div>
-        <div class='bg-success-light text-white text-center rounded py-1 mb-1'>Light</div>
-        <div class='bg-success-dark text-white text-center rounded py-1 mb-1'>Dark</div>
-        <div class='bg-success-darker text-white text-center rounded py-1'>Darker</div>
+        <div class='bg-success text-white text-center rounded py-2 mb-2'>Base</div>
+        <div class='bg-success-light text-white text-center rounded py-2 mb-2'>Light</div>
+        <div class='bg-success-dark text-white text-center rounded py-2 mb-2'>Dark</div>
+        <div class='bg-success-darker text-white text-center rounded py-2'>Darker</div>
       </div>
     </div>
     
     <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='w-64 m-auto mb-4 p-5 border border-grey-25 rounded'>
+      <div class='max-w-xs m-auto mb-16 p-4 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-2'>Error</h4>
-        <div class='bg-error text-white text-center rounded py-1 mb-1'>Base</div>
-        <div class='bg-error-light text-white text-center rounded py-1 mb-1'>Light</div>
-        <div class='bg-error-dark text-white text-center rounded py-1 mb-1'>Dark</div>
-        <div class='bg-error-darker text-white text-center rounded py-1'>Darker</div>
+        <div class='bg-error text-white text-center rounded py-2 mb-2'>Base</div>
+        <div class='bg-error-light text-white text-center rounded py-2 mb-2'>Light</div>
+        <div class='bg-error-dark text-white text-center rounded py-2 mb-2'>Dark</div>
+        <div class='bg-error-darker text-white text-center rounded py-2'>Darker</div>
       </div>
     </div>
   </div>
@@ -108,5 +108,70 @@ export const Typography = () => `
     Animi blanditiis commodi expedita maiores nostrum quaerat, sapiente tempora.
   </p>  
 
+</div>
+`
+
+export const Spacing = () => `
+<div class='container m-auto'>
+  <h2 class="mb-8">Sizes</h2>
+  <div class="flex flex-wrap w-full justify-between items-end mb-64">
+    <span class="block w-2 h-2 bg-grey"></span>
+    <span class="block w-4 h-4 bg-grey"></span>
+    <span class="block w-8 h-8 bg-grey"></span>
+    <span class="block w-12 h-12 bg-grey"></span>
+    <span class="block w-16 h-16 bg-grey"></span>
+    <span class="block w-24 h-24 bg-grey"></span>
+    <span class="block w-32 h-32 bg-grey"></span>
+    <span class="block w-48 h-48 bg-grey"></span>
+    <span class="block w-64 h-64 bg-grey"></span>
+    <span class="block w-96 h-96 bg-grey"></span>
+    <span class="block w-160 h-160 bg-grey"></span>
+  </div>
+  
+  <h2 class="mb-8">Padding</h2>
+  <div class="flex flex-wrap w-full justify-between items-end mb-64">
+    <span class="border p-2">
+      <span class="block w-16 h-16 bg-grey"></span>
+    </span>
+    <span class="border p-4">
+      <span class="block w-16 h-16 bg-grey"></span>
+    </span>
+    <span class="border p-8">
+      <span class="block w-16 h-16 bg-grey"></span>
+    </span>
+    <span class="border p-12">
+      <span class="block w-16 h-16 bg-grey"></span>
+    </span>
+    <span class="border p-16">
+      <span class="block w-16 h-16 bg-grey"></span>
+    </span>
+    <span class="border p-32">
+      <span class="block w-16 h-16 bg-grey"></span>
+    </span>
+    <span class="border p-48">
+      <span class="block w-16 h-16 bg-grey"></span>
+    </span>
+    <span class="border p-64">
+      <span class="block w-16 h-16 bg-grey"></span>
+    </span>
+    <span class="border p-96">
+      <span class="block w-16 h-16 bg-grey"></span>
+    </span>
+  </div>
+  
+  <h2 class="mb-8">Margins</h2>
+  <div class="w-full">
+    <p class="mb-2 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="mb-4 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="mb-8 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="mb-12 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="mb-16 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="mb-32 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="mb-48 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="mb-64 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="mb-96 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="mb-160 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    <p class="bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+  </div>
 </div>
 `
