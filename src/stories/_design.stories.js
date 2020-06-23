@@ -265,10 +265,17 @@ export const Grid = () => `
     <div class="col-8 border border-dashed border-grey-25 bg-grey-15 p-4">.col-8</div>
     <div class="col-2 border border-dashed border-grey-25 bg-grey-15 p-4">.col-2</div>
   </div>
-  <div class="row mb-16">
+  <div class="row">
     <div class="col-3 border border-dashed border-grey-25 bg-grey-15 p-4">.col-3</div>
     <div class="col-4 border border-dashed border-grey-25 bg-grey-15 p-4">.col-4</div>
     <div class="col-5 border border-dashed border-grey-25 bg-grey-15 p-4">.col-5</div>
+  </div>
+  <div class="row mb-16">
+    <div class="col border border-dashed border-grey-25 bg-grey-15 p-4">.col</div>
+    <div class="col border border-dashed border-grey-25 bg-grey-15 p-4">.col</div>
+    <div class="col border border-dashed border-grey-25 bg-grey-15 p-4">.col</div>
+    <div class="col border border-dashed border-grey-25 bg-grey-15 p-4">.col</div>
+    <div class="col border border-dashed border-grey-25 bg-grey-15 p-4">.col</div>
   </div>
     
   <h2 class="mb-16">Responsive columns</h2>

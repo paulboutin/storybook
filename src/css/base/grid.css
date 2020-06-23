@@ -6,7 +6,7 @@
   /* implementation of bootstrap 3 12-column grid system */
   .col,
   .col-12 {
-    @apply w-full;
+    @apply flex-1;
   }
 
   .col-2 {
