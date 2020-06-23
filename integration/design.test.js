@@ -42,4 +42,18 @@ describe('Design', () => {
       expect(image).toMatchImageSnapshot()
     })
   })
+
+  describe('Grid', () => {
+    it('matches snapshot', async () => {
+      // Arrange
+      const url = getStoryUrl('design-system', 'grid')
+
+      // Act
+      await page.goto(url)
+      const image = await page.screenshot({ fullPage: true })
+
+      // Assert
+      expect(image).toMatchImageSnapshot()
+    })
+  })
 })

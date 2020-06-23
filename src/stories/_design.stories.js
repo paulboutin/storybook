@@ -76,8 +76,20 @@ export const Colors = () => `
 `
 
 export const Typography = () => `
-<div class='container m-auto'>
-  <div>
+<div class='container'>
+  <h2 class="mb-8">Headings</h2>
+  <div class="rounded bg-grey-15 mb-16 p-8">
+    <p>
+        Headings are configured by default and require no further styling. However, if needed, you may use the heading 
+        as a class to covert that tag to those styles.
+    </p>
+    <p class="mt-16">Usage example</p>
+    <code>
+        <span class="pl-16">&lt;<span class="text-error">h1</span>&gt;...&lt;/<span class="text-error">h1</span>&gt;</span><br>
+        <span class="pl-16">&lt;<span class="text-error">h2</span> class="<span class="text-yellow-darker">h1</span>"&gt;...&lt;/<span class="text-error">h2</span>&gt;</span>
+    </code>
+  </div>
+  <div class="pl-16">
     <h1>H1 Bank of the West</h1>
 
     <h2>H2 Bank of the West</h2>
@@ -91,7 +103,19 @@ export const Typography = () => `
     <h6>H6 Bank of the West</h6>
   </div>
   
-  <div class="mt-8">
+  <h2 class="mb-8 mt-16">Color</h2>
+  <div class="rounded bg-grey-15 mb-16 p-8">
+    <p>
+        Color can be applied to text using the utility class <code>text-{color}</code>, where color is the name of any color variant
+        defined in the color system.
+    </p>
+    <p class="mt-16">Usage example</p>
+    <code>
+        <span class="pl-16">&lt;<span class="text-error">h2</span> class="<span class="text-yellow-darker">text-green</span>"&gt;...&lt;/<span class="text-error">h2</span>&gt;</span><br>
+        <span class="pl-16">&lt;<span class="text-error">h2</span> class="<span class="text-yellow-darker">text-blue-darker</span>"&gt;...&lt;/<span class="text-error">h2</span>&gt;</span>
+    </code>
+  </div>
+  <div class="mt-8 pl-16">
     <h3 class="text-green">Bank of the West</h3>
     <h3 class="text-blue">Bank of the West</h3>
     <h3 class="text-yellow">Bank of the West</h3>
@@ -100,7 +124,14 @@ export const Typography = () => `
     <h3 class="text-error">Bank of the West</h3>
   </div>
   
-  <p class="mt-8">
+  <h2 class="mb-8 mt-16">Paragraph</h2>
+  <div class="rounded bg-grey-15 mb-16 p-8">
+    <p>
+        Paragraphs are configured as <code>display: block</code> and inherit the base <code>font-size</code> from which to
+        scale according to the fluid typography system.
+    </p>
+  </div>
+  <p class="pl-16 mt-8">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, magni, neque. 
     A adipisci animi, autem commodi corporis doloribus expedita explicabo fugit, 
     illo ipsa ipsum libero maiores maxime minus molestias nobis officia qui 
@@ -112,8 +143,19 @@ export const Typography = () => `
 `
 
 export const Spacing = () => `
-<div class='container m-auto'>
+<div class='container'>
   <h2 class="mb-8">Sizes</h2>
+  <div class="rounded bg-grey-15 mb-16 p-8">
+    <p>
+        Sizing is based on an 8px system. Width and height classes are defined as <code>.w-{n}</code> and <code>.h-{n}</code> respectively,
+        where <code>n</code> corresponds to the pixel value from the system.
+        Valid values include: 2, 4, 8, 12, 16, 24, 32, 48, 64, 96 and 160.
+    </p>
+    <p class="mt-16">Usage example</p>
+    <code class="pl-16">
+        &lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">w-16 h-24</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;
+    </code>
+  </div>
   <div class="flex flex-wrap w-full justify-between items-end mb-64">
     <span class="block w-2 h-2 bg-grey"></span>
     <span class="block w-4 h-4 bg-grey"></span>
@@ -129,6 +171,18 @@ export const Spacing = () => `
   </div>
   
   <h2 class="mb-8">Padding</h2>
+  <div class="rounded bg-grey-15 mb-16 p-8">
+    <p>
+        Padding is defined as <code>.p-{n}</code> for symmetrical padding, or <code>.p{side}-{n}</code>
+        where <code>side</code> corresponds to l, r, t or b for the corresponding side.
+        Valid values include: 2, 4, 8, 12, 16, 24, 32, 48, 64, 96 and 160.
+    </p>
+    <p class="mt-16">Usage example</p>
+    <code>
+        <span class="pl-16">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">p-16</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span><br>
+        <span class="pl-16">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">pt-16 pr-24</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span>
+    </code>
+  </div>
   <div class="flex flex-wrap w-full justify-between items-end mb-64">
     <span class="border p-2">
       <span class="block w-16 h-16 bg-grey"></span>
@@ -160,6 +214,18 @@ export const Spacing = () => `
   </div>
   
   <h2 class="mb-8">Margins</h2>
+  <div class="rounded bg-grey-15 mb-16 p-8">
+    <p>
+        Margin is defined as <code>.m-{n}</code> for symmetrical margins, or <code>.m{side}-{n}</code>
+        where <code>side</code> corresponds to l, r, t or b for the corresponding side.
+        Valid values include: 2, 4, 8, 12, 16, 24, 32, 48, 64, 96 and 160.
+    </p>
+    <p class="mt-16">Usage example</p>
+    <code>
+        <span class="pl-16">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">m-16</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span><br>
+        <span class="pl-16">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">mt-16 mr-24</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span>
+    </code>
+  </div>
   <div class="w-full">
     <p class="mb-2 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <p class="mb-4 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -173,5 +239,67 @@ export const Spacing = () => `
     <p class="mb-160 bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     <p class="bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
   </div>
+</div>
+`
+
+export const Grid = () => `
+<div class="container">
+  <h2 class="mb-16">Bootstrap 3 style grid</h2>
+    <div class="rounded bg-grey-15 mb-16 p-8">
+      <p>This is a 12-column system based on flexbox, and can be used in a similar fashion to bootstrap 3 by using <code>.col-{n}</code> and substituting n with a number between 1 and 12.</p>
+      <p class="mt-16">Usage example</p>
+      <code>
+        <span class="pl-16">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">row</span>"&gt;<br></span>
+          <span class="pl-32">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">col-6</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span><br>
+          <span class="pl-32">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">col-6</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span><br>
+        <span class="pl-16">&lt;/<span class="text-error">div</span>&gt;</span>
+      </code>
+    </div>
+  <div class="row">
+    <div class="col-4 border border-dashed border-grey-25 bg-grey-15 p-4">.col-4</div>
+    <div class="col-4 border border-dashed border-grey-25 bg-grey-15 p-4">.col-4</div>
+    <div class="col-4 border border-dashed border-grey-25 bg-grey-15 p-4">.col-4</div>
+  </div>
+  <div class="row">
+    <div class="col-2 border border-dashed border-grey-25 bg-grey-15 p-4">.col-2</div>
+    <div class="col-8 border border-dashed border-grey-25 bg-grey-15 p-4">.col-8</div>
+    <div class="col-2 border border-dashed border-grey-25 bg-grey-15 p-4">.col-2</div>
+  </div>
+  <div class="row mb-16">
+    <div class="col-3 border border-dashed border-grey-25 bg-grey-15 p-4">.col-3</div>
+    <div class="col-4 border border-dashed border-grey-25 bg-grey-15 p-4">.col-4</div>
+    <div class="col-5 border border-dashed border-grey-25 bg-grey-15 p-4">.col-5</div>
+  </div>
+    
+  <h2 class="mb-16">Responsive columns</h2>
+  <div class="rounded bg-grey-15 mb-16 p-8">
+    <p>Breakpoints</p>
+    <code>
+      <ul class="pl-16">
+        <li><strong>xs</strong>: <768px</li>
+        <li><strong>sm</strong>: >768px</li>
+        <li><strong>md</strong>: <992px</li>
+        <li><strong>lg</strong>: <1200px</li>
+        <li><strong>xl</strong>: >1200px</li>
+      </ul>
+    </code>
+    <br>
+    <p>Breakpoints are selected by prefixing the breakpoint to the column class <code>{breakpoint}:col-{n}</code></p>
+    <p class="mt-16">Usage example</p>
+    <code class="pl-16">
+        &lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">xs:col-6 md:col-4 lg:col-3</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;
+    </code>
+    <p class="mt-16">Keep in mind that responsive classes are defined to <strong>defeat</strong> non-responsive classes.</p>
+  </div>
+
+  <div class="row">
+    <div class="md:col-4 sm:col-8 border border-dashed border-grey-25 bg-grey-15 p-4">.md:col-4 .sm:col-8</div>
+    <div class="md:col-8 sm:col-4 border border-dashed border-grey-25 bg-grey-15 p-4"> .md:col-8  .sm:col-4</div>
+  </div>
+  <div class="row">
+    <div class="md:col-6 sm:col-3 border border-dashed border-grey-25 bg-grey-15 p-4">.md:col-6 .sm:col-3</div>
+    <div class="md:col-6 sm:col-9 border border-dashed border-grey-25 bg-grey-15 p-4"> .md:col-6  .sm:col-9</div>
+  </div>
+
 </div>
 `
