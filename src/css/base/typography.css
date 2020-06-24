@@ -1,34 +1,23 @@
-h1,
-.h1 {
-  @apply text-4xl block;
+h1 {
+  @apply text-h1 font-bold;
 }
 
-h2,
-.h2 {
-  @apply text-3xl block;
+h2 {
+  @apply text-h2 font-bold;
 }
 
-h3,
-.h3 {
-  @apply text-2xl block;
+h3 {
+  @apply text-h3 font-bold;
 }
 
-h4,
-.h4 {
-  @apply text-xl block;
+h4 {
+  @apply text-h4 font-bold;
 }
 
-h5,
-.h5 {
-  @apply text-lg block;
+h5 {
+  @apply text-h5 font-bold;
 }
 
-h6,
-.h6 {
-  @apply text-base block;
-}
-
-p,
-.p {
-  @apply text-base block;
+h6 {
+  @apply text-h6 font-bold;
 }
