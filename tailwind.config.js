@@ -43,10 +43,10 @@ module.exports = {
 
     screens: {
       // configure media queries to match bootstrap 3
-      xs: { min: '480px' },
-      sm: { min: '768px' },
-      md: { min: '992px' },
-      lg: { min: '1200px' }
+      xs: '480px',
+      sm: '768px',
+      md: '992px',
+      lg: '1200px'
     },
 
     fontSize: {
@@ -85,7 +85,7 @@ module.exports = {
     minSize: '18px',
     maxSize: '24.75px',
     minScreen: '480px',
-    maxScreen: '1920px'
+    maxScreen: '1400px'
   },
 
   variants: {},

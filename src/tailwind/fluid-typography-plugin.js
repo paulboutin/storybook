@@ -11,14 +11,23 @@ module.exports = plugin(({ addBase, config }) => {
   const fontFactor = fromPx(maxSize) - fromPx(minSize)
   const screenFactor = fromPx(maxScreen) - fromPx(minScreen)
 
-  const minMedia = `@media screen and (min-width: ${minScreen})`
   const maxMedia = `@media screen and (min-width: ${maxScreen})`
   const fluidSize = `calc(${minSize} + ${fontFactor} * ((100vw - ${minScreen}) / ${screenFactor}))`
+
+  const fluidMediaQueries = Object.values(config('theme.screens')).reduce(
+    (mq, width) => {
+      return {
+        ...mq,
+        [`@media screen and (min-width: ${width})`]: { fontSize: fluidSize }
+      }
+    },
+    {}
+  )
 
   addBase({
     html: {
       fontSize: minSize,
-      [minMedia]: { fontSize: fluidSize },
+      ...fluidMediaQueries,
       [maxMedia]: { fontSize: maxSize }
     }
   })
