@@ -6,24 +6,28 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'BNPP Sans';
   src: url('/fonts/bnpp-sans/bold.woff') format('woff');
   font-weight: 700;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'BNPP Sans';
   src: url('/fonts/bnpp-sans/bold-italic.woff') format('woff');
   font-weight: 700;
   font-style: italic;
 }
+
 @font-face {
   font-family: 'BNPP Sans';
   src: url('/fonts/bnpp-sans/extrabold.woff') format('woff');
   font-weight: 800;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'BNPP Sans';
   src: url('/fonts/bnpp-sans/extrabold-italic.woff') format('woff');
