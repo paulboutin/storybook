@@ -43,10 +43,10 @@ module.exports = {
 
     screens: {
       // configure media queries to match bootstrap 3
-      xs: { min: '480px' },
-      sm: { min: '768px' },
-      md: { min: '992px' },
-      lg: { min: '1200px' }
+      xs: '480px',
+      sm: '768px',
+      md: '992px',
+      lg: '1200px'
     },
 
     fontSize: {
@@ -62,6 +62,11 @@ module.exports = {
       h4: ['1.555rem', '1.333'],
       h5: ['1.166rem', '1.5'],
       h6: ['1rem', '1.5']
+    },
+
+    fontFamily: {
+      display: '"BNPP SANS"',
+      body: '"BNPP Sans"'
     },
 
     spacing: {
@@ -84,7 +89,7 @@ module.exports = {
     minSize: '18px',
     maxSize: '24.75px',
     minScreen: '480px',
-    maxScreen: '1920px'
+    maxScreen: '1400px'
   },
 
   variants: {},
