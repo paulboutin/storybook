@@ -76,7 +76,17 @@ export const Colors = () => `
 `
 
 export const Typography = () => `
-  <div class='container m-auto'>
+  <div class='container'>
+    <h2 class="mb-8">Headings</h2>
+    <div class="rounded bg-grey-15 mb-16 p-8">
+      <p>
+          Headings are configured by default and require no further styling.
+      </p>
+      <p class="mt-16">Usage example</p>
+      <code>
+          <span class="pl-16">&lt;<span class="text-error">h1</span>&gt;...&lt;/<span class="text-error">h1</span>&gt;</span><br>
+      </code>
+    </div>
     <p class='text-grey-55 text-xs'>Heading 1</p>
     <h1 class='mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</h1>
     
@@ -95,6 +105,18 @@ export const Typography = () => `
     <p class='text-grey-55 text-xs'>Heading 6</p>
     <h6 class='mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</h6>
     
+    <h2 class="mb-8">Base</h2>
+    <div class="rounded bg-grey-15 mb-16 p-8">
+      <p>
+          Text sizes can be modified with the class <code>.text-{size}</code>, 
+          where size is any of the following: xs, sm, md, lg, h1, h2, h3, h4, h5 or h6.
+          
+      </p>
+      <p class="mt-16">Usage example</p>
+      <code>
+          <span class="pl-16">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">text-lg</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span>
+      </code>
+    </div>
     <p class='text-grey-55 text-xs'>Body large</p>
     <div class='text-lg mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</div>
     
