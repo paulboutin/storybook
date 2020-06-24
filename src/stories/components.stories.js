@@ -2,10 +2,5 @@ export default {
   title: 'Components'
 }
 
-export const Button = () => `
-  <button class='btn btn-primary'>Apply now</button>
-`
-
-export const Link = () => `
-  <a href='#' class='link'>Link</a>
-`
+export { Button } from './components/Button'
+export { Link } from './components/Link'
