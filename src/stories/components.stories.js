@@ -3,7 +3,7 @@ export default {
 }
 
 export const Button = () => `
-  <button class='btn btn-primary'>Button</button>
+  <button class='btn btn-primary'>Apply now</button>
 `
 
 export const Link = () => `

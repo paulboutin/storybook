@@ -51,13 +51,17 @@ module.exports = {
 
     fontSize: {
       // define values as [fontSize, lineHeight]
-      sm: ['0.75rem', '1.25rem'],
-      base: ['1rem', '1.5rem'], // h6/p
-      lg: ['1.125rem', '1.625rem'], // h5
-      xl: ['1.25rem', '1.75rem'], // h4
-      '2xl': ['1.5rem', '2rem'], // h3
-      '3xl': ['1.875rem', '2.375rem'], // h2
-      '4xl': ['2.25rem', '2.75rem'] // h1
+      xs: ['0.777rem', '1.5'],
+      sm: ['0.888rem', '1.5'],
+      base: ['1rem', '1.5'],
+      lg: ['1.166rem', '1.5'],
+
+      h1: ['2.5rem', '1.18'],
+      h2: ['2.055rem', '1.15'],
+      h3: ['1.777rem', '1.333'],
+      h4: ['1.555rem', '1.333'],
+      h5: ['1.166rem', '1.5'],
+      h6: ['1rem', '1.5']
     },
 
     spacing: {
@@ -78,10 +82,10 @@ module.exports = {
   },
 
   fluidTypography: {
-    minSize: '16px',
-    maxSize: '20px',
+    minSize: '18px',
+    maxSize: '24.75px',
     minScreen: '480px',
-    maxScreen: '1200px'
+    maxScreen: '1920px'
   },
 
   variants: {},

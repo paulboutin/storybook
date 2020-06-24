@@ -1,5 +1,6 @@
 .btn {
-  @apply px-4 py-2 rounded transform transition duration-300;
+  @apply px-16 py-12 rounded transform transition duration-300 font-medium text-sm;
+  min-width: 100px;
 }
 
 .btn:hover {

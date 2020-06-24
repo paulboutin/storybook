@@ -8,8 +8,8 @@ export const Download = () => `
 
 export const Colors = () => `
   <div class='flex flex-wrap m-auto'>
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Green</h4>
         <div class='bg-green text-white text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-green-light text-white text-center rounded py-8 mb-4'>Light</div>
@@ -18,8 +18,8 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Yellow</h4>
         <div class='bg-yellow text-black text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-yellow-light text-black text-center rounded py-8 mb-4'>Light</div>
@@ -28,8 +28,8 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Blue</h4>
         <div class='bg-blue text-white text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-blue-light text-white text-center rounded py-8 mb-4'>Light</div>
@@ -38,7 +38,7 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
       <div class='max-w-xs m-auto mb-4 p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Greyscale</h4>
         <div class='bg-black text-white text-center rounded py-8 mb-4'>Black</div>
@@ -53,8 +53,8 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Success</h4>
         <div class='bg-success text-white text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-success-light text-white text-center rounded py-8 mb-4'>Light</div>
@@ -63,8 +63,8 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Error</h4>
         <div class='bg-error text-white text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-error-light text-white text-center rounded py-8 mb-4'>Light</div>
@@ -76,70 +76,59 @@ export const Colors = () => `
 `
 
 export const Typography = () => `
-<div class='container'>
-  <h2 class="mb-8">Headings</h2>
-  <div class="rounded bg-grey-15 mb-16 p-8">
-    <p>
-        Headings are configured by default and require no further styling. However, if needed, you may use the heading 
-        as a class to covert that tag to those styles.
-    </p>
-    <p class="mt-16">Usage example</p>
-    <code>
-        <span class="pl-16">&lt;<span class="text-error">h1</span>&gt;...&lt;/<span class="text-error">h1</span>&gt;</span><br>
-        <span class="pl-16">&lt;<span class="text-error">h2</span> class="<span class="text-yellow-darker">h1</span>"&gt;...&lt;/<span class="text-error">h2</span>&gt;</span>
-    </code>
+  <div class='container'>
+    <h2 class="mb-8">Headings</h2>
+    <div class="rounded bg-grey-15 mb-16 p-8">
+      <p>
+          Headings are configured by default and require no further styling.
+      </p>
+      <p class="mt-16">Usage example</p>
+      <code>
+          <span class="pl-16">&lt;<span class="text-error">h1</span>&gt;...&lt;/<span class="text-error">h1</span>&gt;</span><br>
+      </code>
+    </div>
+    <p class='text-grey-55 text-xs'>Heading 1</p>
+    <h1 class='mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</h1>
+    
+    <p class='text-grey-55 text-xs'>Heading 2</p>
+    <h2 class='mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</h2>
+    
+    <p class='text-grey-55 text-xs'>Heading 3</p>
+    <h3 class='mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</h3>
+    
+    <p class='text-grey-55 text-xs'>Heading 4</p>
+    <h4 class='mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</h4>
+    
+    <p class='text-grey-55 text-xs'>Heading 5</p>
+    <h5 class='mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</h5>
+    
+    <p class='text-grey-55 text-xs'>Heading 6</p>
+    <h6 class='mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</h6>
+    
+    <h2 class="mb-8">Base</h2>
+    <div class="rounded bg-grey-15 mb-16 p-8">
+      <p>
+          Text sizes can be modified with the class <code>.text-{size}</code>, 
+          where size is any of the following: xs, sm, md, lg, h1, h2, h3, h4, h5 or h6.
+          
+      </p>
+      <p class="mt-16">Usage example</p>
+      <code>
+          <span class="pl-16">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">text-lg</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span>
+      </code>
+    </div>
+    <p class='text-grey-55 text-xs'>Body large</p>
+    <div class='text-lg mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</div>
+    
+    <p class='text-grey-55 text-xs'>Body base</p>
+    <div class='text-base mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</div>
+    
+    <p class='text-grey-55 text-xs'>Body small</p>
+    <div class='text-sm mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</div>
+    
+    <p class='text-grey-55 text-xs'>Body extra small</p>
+    <div class='text-xs mb-16'>Where you put your money matters.<br>A bank that finances a sustainable tomorrow.</div>
   </div>
-  <div class="pl-16">
-    <h1>H1 Bank of the West</h1>
-
-    <h2>H2 Bank of the West</h2>
-
-    <h3>H3 Bank of the West</h3>
-
-    <h4>H4 Bank of the West</h4>
-
-    <h5>H5 Bank of the West</h5>
-
-    <h6>H6 Bank of the West</h6>
-  </div>
-  
-  <h2 class="mb-8 mt-16">Color</h2>
-  <div class="rounded bg-grey-15 mb-16 p-8">
-    <p>
-        Color can be applied to text using the utility class <code>text-{color}</code>, where color is the name of any color variant
-        defined in the color system.
-    </p>
-    <p class="mt-16">Usage example</p>
-    <code>
-        <span class="pl-16">&lt;<span class="text-error">h2</span> class="<span class="text-yellow-darker">text-green</span>"&gt;...&lt;/<span class="text-error">h2</span>&gt;</span><br>
-        <span class="pl-16">&lt;<span class="text-error">h2</span> class="<span class="text-yellow-darker">text-blue-darker</span>"&gt;...&lt;/<span class="text-error">h2</span>&gt;</span>
-    </code>
-  </div>
-  <div class="mt-8 pl-16">
-    <h3 class="text-green">Bank of the West</h3>
-    <h3 class="text-blue">Bank of the West</h3>
-    <h3 class="text-yellow">Bank of the West</h3>
-    <h3 class="text-grey">Bank of the West</h3>
-    <h3 class="text-success">Bank of the West</h3>
-    <h3 class="text-error">Bank of the West</h3>
-  </div>
-  
-  <h2 class="mb-8 mt-16">Paragraph</h2>
-  <div class="rounded bg-grey-15 mb-16 p-8">
-    <p>
-        Paragraphs are configured as <code>display: block</code> and inherit the base <code>font-size</code> from which to
-        scale according to the fluid typography system.
-    </p>
-  </div>
-  <p class="pl-16 mt-8">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius, magni, neque. 
-    A adipisci animi, autem commodi corporis doloribus expedita explicabo fugit, 
-    illo ipsa ipsum libero maiores maxime minus molestias nobis officia qui 
-    quibusdam ratione reiciendis rerum soluta totam unde veniam voluptates. 
-    Animi blanditiis commodi expedita maiores nostrum quaerat, sapiente tempora.
-  </p>  
-
-</div>
 `
 
 export const Spacing = () => `
