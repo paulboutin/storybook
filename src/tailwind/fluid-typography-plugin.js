@@ -15,9 +15,9 @@ module.exports = plugin(({ addBase, config }) => {
   const fluidSize = `calc(${minSize} + ${fontFactor} * ((100vw - ${minScreen}) / ${screenFactor}))`
 
   const fluidMediaQueries = Object.values(config('theme.screens')).reduce(
-    (mq, width) => {
+    (mediaQueries, width) => {
       return {
-        ...mq,
+        ...mediaQueries,
         [`@media screen and (min-width: ${width})`]: { fontSize: fluidSize }
       }
     },
