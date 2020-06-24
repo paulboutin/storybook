@@ -64,6 +64,11 @@ module.exports = {
       h6: ['1rem', '1.5']
     },
 
+    fontFamily: {
+      display: '"BNPP SANS"',
+      body: '"BNPP Sans"'
+    },
+
     spacing: {
       '0': '0',
       '2': '0.125rem',
