@@ -8,8 +8,8 @@ export const Download = () => `
 
 export const Colors = () => `
   <div class='flex flex-wrap m-auto'>
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Green</h4>
         <div class='bg-green text-white text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-green-light text-white text-center rounded py-8 mb-4'>Light</div>
@@ -18,8 +18,8 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Yellow</h4>
         <div class='bg-yellow text-black text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-yellow-light text-black text-center rounded py-8 mb-4'>Light</div>
@@ -28,8 +28,8 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Blue</h4>
         <div class='bg-blue text-white text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-blue-light text-white text-center rounded py-8 mb-4'>Light</div>
@@ -38,7 +38,7 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
       <div class='max-w-xs m-auto mb-4 p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Greyscale</h4>
         <div class='bg-black text-white text-center rounded py-8 mb-4'>Black</div>
@@ -53,8 +53,8 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Success</h4>
         <div class='bg-success text-white text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-success-light text-white text-center rounded py-8 mb-4'>Light</div>
@@ -63,8 +63,8 @@ export const Colors = () => `
       </div>
     </div>
     
-    <div class='w-full sm:w-1/2 md:w-1/3'>
-      <div class='max-w-xs m-auto mb-16 p-16 border border-grey-25 rounded'>
+    <div class='w-full sm:w-1/2 md:w-1/3 p-8'>
+      <div class='max-w-xs m-auto p-16 border border-grey-25 rounded'>
         <h4 class='text-grey text-sm font-semibold mb-4'>Error</h4>
         <div class='bg-error text-white text-center rounded py-8 mb-4'>Base</div>
         <div class='bg-error-light text-white text-center rounded py-8 mb-4'>Light</div>
