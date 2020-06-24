@@ -40,15 +40,18 @@ module.exports = {
       'error-dark': '#f41616',
       'error-darker': '#cd0a0a'
     },
+
     screens: {
-      xs: '480px',
-      sm: '768px',
-      md: '992px',
-      lg: '1200px'
+      // configure media queries to match bootstrap 3
+      xs: { max: '767px' },
+      sm: { min: '768px' },
+      md: { min: '992px' },
+      lg: { min: '1200px' }
     },
+
     fontSize: {
       // define values as [fontSize, lineHeight]
-      sm: ['.875rem'],
+      sm: ['0.75rem', '1rem'],
       base: ['1rem', '1.5rem'], // h6/p
       lg: ['1.125rem', '1.625rem'], // h5
       xl: ['1.25rem', '1.75rem'], // h4
@@ -56,13 +59,28 @@ module.exports = {
       '3xl': ['1.875rem', '2.375rem'], // h2
       '4xl': ['2.25rem', '2.75rem'] // h1
     },
-    extend: {}
+
+    spacing: {
+      '0': '0',
+      '2': '0.125rem',
+      '4': '0.25rem',
+      '8': '0.5rem',
+      '12': '0.75rem',
+      '16': '1rem',
+      '24': '1.5rem',
+      '32': '2rem',
+      '48': '3rem',
+      '64': '4rem',
+      '96': '6rem',
+      '160': '10rem',
+      '320': '20rem'
+    }
   },
 
   fluidTypography: {
     minSize: '16px',
     maxSize: '20px',
-    minScreen: '480px',
+    minScreen: '320px',
     maxScreen: '1200px'
   },
 

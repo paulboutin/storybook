@@ -19,6 +19,7 @@
     "test:server": "cross-env PORT=${PORT:-6006} start-server-and-test start:ci http://localhost:${PORT:-6006} test:integration"
   },
   "dependencies": {
+    "@storybook/addon-viewport": "5.3.19",
     "@storybook/html": "5.3.19",
     "@whitespace/storybook-addon-html": "1.2.1",
     "tailwindcss": "1.4.6"
