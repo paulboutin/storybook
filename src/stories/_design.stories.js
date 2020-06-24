@@ -283,7 +283,7 @@ export const Grid = () => `
     <p>Breakpoints</p>
     <code>
       <ul class="pl-16">
-        <li><strong>xs</strong>: <768px</li>
+        <li><strong>xs</strong>: >480px</li>
         <li><strong>sm</strong>: >768px</li>
         <li><strong>md</strong>: >992px</li>
         <li><strong>lg</strong>: >1200px</li>
