@@ -11,4 +11,4 @@ pipelines:
           - npm install
           - npm test
         artifacts:
-          - __image_snapshots__/*.png
+          - test/**/__diff_output__/*.png
