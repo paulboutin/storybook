@@ -15,7 +15,7 @@ export const Spacing = () => `
         &lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">w-base h-lg</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;
       </code>
     </div>
-    <div class="flex flex-wrap w-full justify-between items-end mb-64">
+    <div class="flex flex-wrap w-full justify-between items-end mb-2xl">
       <span class="block w-3xs h-3xs bg-grey"></span>
       <span class="block w-2xs h-2xs bg-grey"></span>
       <span class="block w-xs h-xs bg-grey"></span>
@@ -39,36 +39,36 @@ export const Spacing = () => `
       <p class="mt-base">Usage example</p>
       <code>
         <span class="pl-base">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">p-base</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span><br>
-        <span class="pl-base">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">pt-16 pr-24</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span>
+        <span class="pl-base">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">pt-base pr-lg</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span>
       </code>
     </div>
-    <div class="flex flex-wrap w-full justify-between items-end mb-64">
-      <span class="border p-3xs">
-        <span class="block w-base h-base bg-grey"></span>
+    <div class="flex flex-wrap w-full justify-between items-end mb-2xl">
+      <span class="bg-grey-40 p-3xs">
+        <span class="block w-base h-base bg-grey-85"></span>
       </span>
-      <span class="border p-2xs">
-        <span class="block w-base h-base bg-grey"></span>
+      <span class="bg-grey-40 p-2xs">
+        <span class="block w-base h-base bg-grey-85"></span>
       </span>
-      <span class="border p-xs">
-        <span class="block w-base h-base bg-grey"></span>
+      <span class="bg-grey-40 p-xs">
+        <span class="block w-base h-base bg-grey-85"></span>
       </span>
-      <span class="border p-sm">
-        <span class="block w-base h-base bg-grey"></span>
+      <span class="bg-grey-40 p-sm">
+        <span class="block w-base h-base bg-grey-85"></span>
       </span>
-      <span class="border p-base">
-        <span class="block w-base h-base bg-grey"></span>
+      <span class="bg-grey-40 p-base">
+        <span class="block w-base h-base bg-grey-85"></span>
       </span>
-      <span class="border p-lg">
-        <span class="block w-base h-base bg-grey"></span>
+      <span class="bg-grey-40 p-lg">
+        <span class="block w-base h-base bg-grey-85"></span>
       </span>
-      <span class="border p-xl">
-        <span class="block w-base h-base bg-grey"></span>
+      <span class="bg-grey-40 p-xl">
+        <span class="block w-base h-base bg-grey-85"></span>
       </span>
-      <span class="border p-2xl">
-        <span class="block w-base h-base bg-grey"></span>
+      <span class="bg-grey-40 p-2xl">
+        <span class="block w-base h-base bg-grey-85"></span>
       </span>
-      <span class="border p-3xl">
-        <span class="block w-base h-base bg-grey"></span>
+      <span class="bg-grey-40 p-3xl">
+        <span class="block w-base h-base bg-grey-85"></span>
       </span>
     </div>
     
@@ -81,8 +81,8 @@ export const Spacing = () => `
       </p>
       <p class="mt-base">Usage example</p>
       <code>
-        <span class="pl-base">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">m-16</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span><br>
-        <span class="pl-base">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">mt-base mr-24</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span>
+        <span class="pl-base">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">m-base</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span><br>
+        <span class="pl-base">&lt;<span class="text-error">div</span> class="<span class="text-yellow-darker">mt-base mr-lg</span>"&gt;...&lt;/<span class="text-error">div</span>&gt;</span>
       </code>
     </div>
     <div class="w-full">
