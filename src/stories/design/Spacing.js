@@ -16,17 +16,17 @@ export const Spacing = () => `
       </code>
     </div>
     <div class="flex flex-wrap w-full justify-between items-end mb-2xl">
-      <span class="block w-3xs h-3xs bg-grey"></span>
-      <span class="block w-2xs h-2xs bg-grey"></span>
-      <span class="block w-xs h-xs bg-grey"></span>
-      <span class="block w-sm h-sm bg-grey"></span>
-      <span class="block w-base h-base bg-grey"></span>
-      <span class="block w-lg h-lg bg-grey"></span>
-      <span class="block w-xl h-xl bg-grey"></span>
-      <span class="block w-2xl h-2xl bg-grey"></span>
-      <span class="block w-3xl h-3xl bg-grey"></span>
-      <span class="block w-4xl h-4xl bg-grey"></span>
-      <span class="block w-5xl h-5xl bg-grey"></span>
+      <span class="block w-3xs h-3xs bg-grey mb-sm"></span>
+      <span class="block w-2xs h-2xs bg-grey mb-sm"></span>
+      <span class="block w-xs h-xs bg-grey mb-sm"></span>
+      <span class="block w-sm h-sm bg-grey mb-sm"></span>
+      <span class="block w-base h-base bg-grey mb-sm"></span>
+      <span class="block w-lg h-lg bg-grey mb-sm"></span>
+      <span class="block w-xl h-xl bg-grey mb-sm"></span>
+      <span class="block w-2xl h-2xl bg-grey mb-sm"></span>
+      <span class="block w-3xl h-3xl bg-grey mb-sm"></span>
+      <span class="block w-4xl h-4xl bg-grey mb-sm"></span>
+      <span class="block w-5xl h-5xl bg-grey mb-sm"></span>
     </div>
     
     <h2 class="mb-sm">Padding</h2>
@@ -43,33 +43,33 @@ export const Spacing = () => `
       </code>
     </div>
     <div class="flex flex-wrap w-full justify-between items-end mb-2xl">
-      <span class="bg-grey-40 p-3xs">
+      <div class="bg-grey-40 p-3xs mb-sm">
         <span class="block w-base h-base bg-grey-85"></span>
-      </span>
-      <span class="bg-grey-40 p-2xs">
+      </div>
+      <div class="bg-grey-40 p-2xs mb-sm">
         <span class="block w-base h-base bg-grey-85"></span>
-      </span>
-      <span class="bg-grey-40 p-xs">
+      </div>
+      <div class="bg-grey-40 p-xs mb-sm">
         <span class="block w-base h-base bg-grey-85"></span>
-      </span>
-      <span class="bg-grey-40 p-sm">
+      </div>
+      <div class="bg-grey-40 p-sm mb-sm">
         <span class="block w-base h-base bg-grey-85"></span>
-      </span>
-      <span class="bg-grey-40 p-base">
+      </div>
+      <div class="bg-grey-40 p-base mb-sm">
         <span class="block w-base h-base bg-grey-85"></span>
-      </span>
-      <span class="bg-grey-40 p-lg">
+      </div>
+      <div class="bg-grey-40 p-lg mb-sm">
         <span class="block w-base h-base bg-grey-85"></span>
-      </span>
-      <span class="bg-grey-40 p-xl">
+      </div>
+      <div class="bg-grey-40 p-xl mb-sm">
         <span class="block w-base h-base bg-grey-85"></span>
-      </span>
-      <span class="bg-grey-40 p-2xl">
+      </div>
+      <div class="bg-grey-40 p-2xl mb-sm">
         <span class="block w-base h-base bg-grey-85"></span>
-      </span>
-      <span class="bg-grey-40 p-3xl">
+      </div>
+      <div class="bg-grey-40 p-3xl mb-sm">
         <span class="block w-base h-base bg-grey-85"></span>
-      </span>
+      </div>
     </div>
     
     <h2 class="mb-sm">Margins</h2>
