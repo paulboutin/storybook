@@ -14,10 +14,10 @@
     "tailwind:split:zip": "zip -r -j -X public/styles.zip tailwind-build/split/* && rm -rf tailwind-build/split",
     "lint": "pretty-quick",
     "test": "run-s test:unit test:snapshot",
-    "test:unit": "jest -c jest.config.js",
-    "test:integration": "jest -c jest.integration.js --max-workers 2 --updateSnapshot=${UPDATE_SNAPSHOT:-false}",
-    "test:snapshot": "cross-env PORT=${PORT:-6006} start-server-and-test start:ci http://localhost:${PORT:-6006} test:integration",
-    "test:snapshot:update": "UPDATE_SNAPSHOT=true npm run test:snapshot"
+    "test:unit": "jest -c test/unit/jest.config.js",
+    "test:integration": "jest -c test/integration/jest.config.js --max-workers 2 --updateSnapshot=${UPDATE_SNAPSHOT:-false}",
+    "test:snapshot": "cross-env PORT=${PORT:-6006} JEST_PUPPETEER_CONFIG=test/integration/jest-puppeteer.config.js start-server-and-test start:ci http://localhost:${PORT:-6006} test:integration",
+    "test:snapshot:update": "cross-env UPDATE_SNAPSHOT=true npm run test:snapshot"
   },
   "dependencies": {
     "@storybook/addon-viewport": "5.3.19",

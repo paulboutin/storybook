@@ -1,4 +1,4 @@
-import fluidTypography from '../../src/tailwind/fluid-typography-plugin'
+import fluidTypography from '../../../src/plugins/fluid-typography'
 
 describe('fluid typography plugin', () => {
   it('should return a valid css-in-js object', () => {
