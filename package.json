@@ -10,7 +10,7 @@
     "build:storybook": "build-storybook -s public",
     "tailwind:split:base": "postcss node_modules/tailwindcss/base.css -o tailwind-build/split/base.css -v",
     "tailwind:split:components": "postcss src/css/components -d tailwind-build/split -v",
-    "tailwind:split:sass": "node create-main-sass.js",
+    "tailwind:split:sass": "node scripts/create-main-sass.js",
     "tailwind:split:zip": "zip -r -j -X public/styles.zip tailwind-build/split/* && rm -rf tailwind-build/split",
     "lint": "pretty-quick",
     "test": "run-s test:unit test:snapshot",

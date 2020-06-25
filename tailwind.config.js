@@ -101,5 +101,5 @@ module.exports = {
 
   variants: {},
 
-  plugins: [require('./src/tailwind/fluid-typography-plugin')]
+  plugins: [require('./src/plugins/fluid-typography')]
 }
