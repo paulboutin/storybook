@@ -13,10 +13,11 @@
     "tailwind:split:sass": "node create-main-sass.js",
     "tailwind:split:zip": "zip -r -j -X public/styles.zip tailwind-build/split/* && rm -rf tailwind-build/split",
     "lint": "pretty-quick",
-    "test": "npm run test:server",
+    "test": "run-s test:unit test:snapshot",
     "test:unit": "jest -c jest.config.js",
-    "test:integration": "jest -c jest.integration.js --max-workers 2",
-    "test:server": "cross-env PORT=${PORT:-6006} start-server-and-test start:ci http://localhost:${PORT:-6006} test:integration"
+    "test:integration": "jest -c jest.integration.js --max-workers 2 --updateSnapshot=${UPDATE_SNAPSHOT:-false}",
+    "test:snapshot": "cross-env PORT=${PORT:-6006} start-server-and-test start:ci http://localhost:${PORT:-6006} test:integration",
+    "test:snapshot:update": "UPDATE_SNAPSHOT=true npm run test:snapshot"
   },
   "dependencies": {
     "@storybook/addon-viewport": "5.3.19",
