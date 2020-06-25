@@ -3,10 +3,7 @@ const plugin = require('tailwindcss/plugin')
 const fromPx = val => parseInt(val.replace('px', ''))
 
 module.exports = plugin(({ addBase, config }) => {
-  const minSize = config('fluidTypography.minSize')
-  const maxSize = config('fluidTypography.maxSize')
-  const minScreen = config('fluidTypography.minScreen')
-  const maxScreen = config('fluidTypography.maxScreen')
+  const { minSize, maxSize, minScreen, maxScreen } = config('fluidTypography')
 
   const fontFactor = fromPx(maxSize) - fromPx(minSize)
   const screenFactor = fromPx(maxScreen) - fromPx(minScreen)
