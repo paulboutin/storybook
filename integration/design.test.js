@@ -1,73 +1,21 @@
 import { getStoryUrl } from './utils'
 
 describe('Design', () => {
-  describe('Color System', () => {
-    it('matches snapshot', async () => {
-      // Arrange
-      const url = getStoryUrl('design-system', 'colors')
+  const stories = ['colors', 'typography', 'fonts', 'spacing', 'grid']
 
-      // Act
-      await page.goto(url)
-      const image = await page.screenshot({ fullPage: true })
+  stories.forEach(story => {
+    describe(story, () => {
+      it('matches snapshot', async () => {
+        // Arrange
+        const url = getStoryUrl('design-system', story)
 
-      // Assert
-      expect(image).toMatchImageSnapshot()
-    })
-  })
+        // Act
+        await page.goto(url)
+        const image = await page.screenshot({ fullPage: true })
 
-  describe('Typography', () => {
-    it('matches snapshot', async () => {
-      // Arrange
-      const url = getStoryUrl('design-system', 'typography')
-
-      // Act
-      await page.goto(url)
-      const image = await page.screenshot({ fullPage: true })
-
-      // Assert
-      expect(image).toMatchImageSnapshot()
-    })
-  })
-
-  describe('Typography', () => {
-    it('matches snapshot', async () => {
-      // Arrange
-      const url = getStoryUrl('design-system', 'fonts')
-
-      // Act
-      await page.goto(url)
-      const image = await page.screenshot({ fullPage: true })
-
-      // Assert
-      expect(image).toMatchImageSnapshot()
-    })
-  })
-
-  describe('Spacing', () => {
-    it('matches snapshot', async () => {
-      // Arrange
-      const url = getStoryUrl('design-system', 'spacing')
-
-      // Act
-      await page.goto(url)
-      const image = await page.screenshot({ fullPage: true })
-
-      // Assert
-      expect(image).toMatchImageSnapshot()
-    })
-  })
-
-  describe('Grid', () => {
-    it('matches snapshot', async () => {
-      // Arrange
-      const url = getStoryUrl('design-system', 'grid')
-
-      // Act
-      await page.goto(url)
-      const image = await page.screenshot({ fullPage: true })
-
-      // Assert
-      expect(image).toMatchImageSnapshot()
+        // Assert
+        expect(image).toMatchImageSnapshot()
+      })
     })
   })
 })
