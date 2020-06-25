@@ -8,21 +8,36 @@ describe('fluid typography plugin', () => {
       config: jest.fn()
     }
 
-    mock.config.mockReturnValueOnce('16px')
-    mock.config.mockReturnValueOnce('20px')
-    mock.config.mockReturnValueOnce('480px')
-    mock.config.mockReturnValueOnce('1200px')
+    mock.config.mockReturnValueOnce({
+      minSize: '16px',
+      maxSize: '20px',
+      minScreen: '480px',
+      maxScreen: '1200px'
+    })
+
+    mock.config.mockReturnValueOnce({
+      xs: '480px',
+      sm: '768px',
+      md: '992px',
+      lg: '1200px'
+    })
 
     // Act
     fluidTypography.handler(mock)
 
     // Assert
-    expect(mock.config).toBeCalledTimes(4)
+    expect(mock.config).toBeCalledTimes(2)
 
     expect(mock.addBase).toBeCalledWith({
       html: {
         fontSize: '16px',
         '@media screen and (min-width: 480px)': {
+          fontSize: 'calc(16px + 4 * ((100vw - 480px) / 720))'
+        },
+        '@media screen and (min-width: 768px)': {
+          fontSize: 'calc(16px + 4 * ((100vw - 480px) / 720))'
+        },
+        '@media screen and (min-width: 992px)': {
           fontSize: 'calc(16px + 4 * ((100vw - 480px) / 720))'
         },
         '@media screen and (min-width: 1200px)': { fontSize: '20px' }
