@@ -1,5 +1,5 @@
 export const Colors = () => `
-  <div class='flex xs:flex-wrap md:flex-no-wrap m-auto text-sm'>
+  <div class='flex flex-wrap md:flex-no-wrap m-auto text-sm'>
     <div class='w-full sm:w-1/2 md:w-1/3 p-sm'>
       <div class='max-w-xs m-auto'>
         <h4 class='text-grey text-sm font-semibold mb-2xs'>Brand Green</h4>
