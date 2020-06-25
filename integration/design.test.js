@@ -29,6 +29,20 @@ describe('Design', () => {
     })
   })
 
+  describe('Typography', () => {
+    it('matches snapshot', async () => {
+      // Arrange
+      const url = getStoryUrl('design-system', 'fonts')
+
+      // Act
+      await page.goto(url)
+      const image = await page.screenshot({ fullPage: true })
+
+      // Assert
+      expect(image).toMatchImageSnapshot()
+    })
+  })
+
   describe('Spacing', () => {
     it('matches snapshot', async () => {
       // Arrange
