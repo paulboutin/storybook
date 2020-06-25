@@ -10,7 +10,7 @@ describe('Design', () => {
         const url = getStoryUrl('design-system', story)
 
         // Act
-        await page.goto(url)
+        await page.goto(url, { waitUntil: 'networkidle2' })
         const image = await page.screenshot({ fullPage: true })
 
         // Assert
