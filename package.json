@@ -20,6 +20,7 @@
     "test:snapshot:update": "cross-env UPDATE_SNAPSHOT=true npm run test:snapshot"
   },
   "dependencies": {
+    "@storybook/addon-knobs": "5.3.19",
     "@storybook/addon-viewport": "5.3.19",
     "@storybook/html": "5.3.19",
     "@whitespace/storybook-addon-html": "1.2.1",
