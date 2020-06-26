@@ -12,6 +12,8 @@
     "tailwind:split:components": "postcss src/css/components -d tailwind-build/split -v",
     "tailwind:split:sass": "node scripts/create-main-sass.js",
     "tailwind:split:zip": "zip -r -j -X public/styles.zip tailwind-build/split/* && rm -rf tailwind-build/split",
+    "dsm:publish": "dsm-storybook --auth-token ${DSM_TOKEN} publish",
+    "dsm:preview": "dsm-storybook --auth-token ${DSM_TOKEN} preview -s public",
     "lint": "pretty-quick",
     "test": "run-s test:unit test:snapshot",
     "test:unit": "jest -c test/unit/jest.config.js",
@@ -20,8 +22,11 @@
     "test:snapshot:update": "cross-env UPDATE_SNAPSHOT=true npm run test:snapshot"
   },
   "dependencies": {
+    "@invisionapp/dsm-storybook": "0.0.129",
     "@storybook/addon-knobs": "5.3.19",
+    "@storybook/addon-options": "5.3.19",
     "@storybook/addon-viewport": "5.3.19",
+    "@storybook/addons": "5.3.19",
     "@storybook/html": "5.3.19",
     "@whitespace/storybook-addon-html": "1.2.1",
     "tailwindcss": "1.4.6"
