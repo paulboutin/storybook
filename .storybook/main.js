@@ -3,6 +3,7 @@ module.exports = {
   addons: [
     '@whitespace/storybook-addon-html/register',
     '@storybook/addon-knobs/register',
-    '@storybook/addon-viewport/register'
+    '@storybook/addon-viewport/register',
+    '@invisionapp/dsm-storybook/register'
   ]
 }
