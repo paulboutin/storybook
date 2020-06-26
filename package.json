@@ -13,7 +13,7 @@
     "tailwind:split:sass": "node scripts/create-main-sass.js",
     "tailwind:split:zip": "zip -r -j -X public/styles.zip tailwind-build/split/* && rm -rf tailwind-build/split",
     "dsm:publish": "dsm-storybook --auth-token ${DSM_TOKEN} publish",
-    "dsm:preview": "dsm-storybook --auth-token ${DSM_TOKEN} preview -s public",
+    "dsm:preview": "dsm-storybook --auth-token ${DSM_TOKEN:-preview} preview -s public --quiet",
     "lint": "pretty-quick",
     "test": "run-s test:unit test:snapshot",
     "test:unit": "jest -c test/unit/jest.config.js",
