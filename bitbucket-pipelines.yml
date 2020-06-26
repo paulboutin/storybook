@@ -12,3 +12,4 @@ pipelines:
           - npm test
         artifacts:
           - test/**/__diff_output__/*.png
+          - test/**/__image_snapshots__/*.png
