@@ -5,7 +5,12 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import '../src/css/main.css'
 
-addDecorator(withKnobs)
+addDecorator(
+  withKnobs({
+    escapeHTML: false
+  })
+)
+
 addDecorator(withHTML)
 
 const customViewports = {
