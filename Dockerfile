@@ -7,5 +7,3 @@ RUN npm config set update-notifier false
 
 COPY package.json .
 RUN npm install
-
-COPY . .

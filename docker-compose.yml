@@ -4,8 +4,12 @@ services:
   test:
     build: .
     command: npm run test
+    volumes:
+      - .:/app
+      - /app/node_modules
   test-update:
     build: .
     command: npm run test:snapshot:update
     volumes:
-      - ./test:/app/test
+      - .:/app
+      - /app/node_modules
