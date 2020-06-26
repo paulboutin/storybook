@@ -1,4 +1,4 @@
-import { getStoryUrl } from './utils'
+import { getStoryUrl } from '../utils'
 
 describe('Design', () => {
   const stories = ['colors', 'typography', 'fonts', 'spacing', 'grid']
