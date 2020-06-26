@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@invisionapp/dsm-storybook": "0.0.129",
+    "@storybook/addon-backgrounds": "5.3.19",
     "@storybook/addon-knobs": "5.3.19",
     "@storybook/addon-options": "5.3.19",
     "@storybook/addon-viewport": "5.3.19",
