@@ -1,10 +1,11 @@
 version: '3.7'
 
 services:
-  integration:
+  test:
     build: .
-    environment:
-      - PORT=6006
+    command: npm run test
+  test-update:
+    build: .
+    command: npm run test:snapshot:update
     volumes:
-      - .:/app
-    command: npm test
+      - ./test:/app/test
