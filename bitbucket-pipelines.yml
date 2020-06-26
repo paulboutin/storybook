@@ -6,6 +6,7 @@ pipelines:
         caches:
           - node
         script:
+          - apt-get update && apt-get -y install procps
           - npm install
           - npm test
         artifacts:
