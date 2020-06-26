@@ -1,9 +1,11 @@
 import { addDecorator, addParameters } from '@storybook/html'
-import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
+import { withKnobs } from '@storybook/addon-knobs'
 import { withHTML } from '@whitespace/storybook-addon-html/html'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 
 import '../src/css/main.css'
 
+addDecorator(withKnobs)
 addDecorator(withHTML)
 
 const customViewports = {
