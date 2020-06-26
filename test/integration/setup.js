@@ -1,9 +1,5 @@
 const { configureToMatchImageSnapshot } = require('jest-image-snapshot')
 
-const toMatchImageSnapshot = configureToMatchImageSnapshot({
-  customDiffConfig: {
-    threshold: 0
-  }
-})
+const toMatchImageSnapshot = configureToMatchImageSnapshot({})
 
 expect.extend({ toMatchImageSnapshot })
