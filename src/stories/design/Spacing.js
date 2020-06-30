@@ -1,98 +1,93 @@
 export const Spacing = () => `
   <div class="container">
-    <h2 class="mb-sm text-grey-40">Spacing scale</h2>
-    <div class="flex flex-wrap w-full justify-between items-end mb-2xl">
+    <h2 class="mb-12 text-grey-40">Spacing scale</h2>
+    <div class="flex flex-wrap w-full justify-between items-end mb-48">
       <div class="flex flex-col items-center">
-        <span class="block w-3xs h-3xs bg-green mb-sm"></span>
-        <span>3xs</span>
+        <span class="block w-4 h-4 bg-green mb-12"></span>
+        <span>4</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="block w-2xs h-2xs bg-green mb-sm"></span>
-        <span>2xs</span>
+        <span class="block w-8 h-8 bg-green mb-12"></span>
+        <span>8</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="block w-xs h-xs bg-green mb-sm"></span>
-        <span>xs</span>
+        <span class="block w-12 h-12 bg-green mb-12"></span>
+        <span>12</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="block w-sm h-sm bg-green mb-sm"></span>
-        <span>sm</span>
+        <span class="block w-16 h-16 bg-green mb-12"></span>
+        <span>16</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="block w-base h-base bg-green mb-sm"></span>
-        <span>base</span>
+        <span class="block w-24 h-24 bg-green mb-12"></span>
+        <span>24</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="block w-lg h-lg bg-green mb-sm"></span>
-        <span>lg</span>
+        <span class="block w-32 h-32 bg-green mb-12"></span>
+        <span>32</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="block w-xl h-xl bg-green mb-sm"></span>
-        <span>xl</span>
+        <span class="block w-48 h-48 bg-green mb-12"></span>
+        <span>48</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="block w-2xl h-2xl bg-green mb-sm"></span>
-        <span>2xl</span>
+        <span class="block w-64 h-64 bg-green mb-12"></span>
+        <span>64</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="block w-3xl h-3xl bg-green mb-sm"></span>
-        <span>3xl</span>
+        <span class="block w-96 h-96 bg-green mb-12"></span>
+        <span>96</span>
       </div>
       <div class="flex flex-col items-center">
-        <span class="block w-4xl h-4xl bg-green mb-sm"></span>
-        <span>4xl</span>
-      </div>
-      <div class="flex flex-col items-center">
-        <span class="block w-5xl h-5xl bg-green mb-sm"></span>
-        <span>5xl</span>
+        <span class="block w-160 h-160 bg-green mb-12"></span>
+        <span>160</span>
       </div>
     </div>
     
-    <h2 class="mb-sm text-grey-40">Padding</h2>
-    <div class="flex flex-wrap w-full justify-between items-end mb-2xl">
-      <div class="bg-green p-3xs mb-sm">
-        <span class="block w-base h-base bg-green-darker"></span>
+    <h2 class="mb-12 text-grey-40">Padding</h2>
+    <div class="flex flex-wrap w-full justify-between items-end mb-48">
+      <div class="bg-green p-4 mb-12">
+        <span class="block w-16 h-16 bg-green-darker"></span>
       </div>
-      <div class="bg-green p-2xs mb-sm">
-        <span class="block w-base h-base bg-green-darker"></span>
+      <div class="bg-green p-8 mb-12">
+        <span class="block w-16 h-16 bg-green-darker"></span>
       </div>
-      <div class="bg-green p-xs mb-sm">
-        <span class="block w-base h-base bg-green-darker"></span>
+      <div class="bg-green p-12 mb-12">
+        <span class="block w-16 h-16 bg-green-darker"></span>
       </div>
-      <div class="bg-green p-sm mb-sm">
-        <span class="block w-base h-base bg-green-darker"></span>
+      <div class="bg-green p-16 mb-12">
+        <span class="block w-16 h-16 bg-green-darker"></span>
       </div>
-      <div class="bg-green p-base mb-sm">
-        <span class="block w-base h-base bg-green-darker"></span>
+      <div class="bg-green p-24 mb-12">
+        <span class="block w-16 h-16 bg-green-darker"></span>
       </div>
-      <div class="bg-green p-lg mb-sm">
-        <span class="block w-base h-base bg-green-darker"></span>
+      <div class="bg-green p-32 mb-12">
+        <span class="block w-16 h-16 bg-green-darker"></span>
       </div>
-      <div class="bg-green p-xl mb-sm">
-        <span class="block w-base h-base bg-green-darker"></span>
+      <div class="bg-green p-48 mb-12">
+        <span class="block w-16 h-16 bg-green-darker"></span>
       </div>
-      <div class="bg-green p-2xl mb-sm">
-        <span class="block w-base h-base bg-green-darker"></span>
+      <div class="bg-green p-64 mb-12">
+        <span class="block w-16 h-16 bg-green-darker"></span>
       </div>
-      <div class="bg-green p-3xl mb-sm">
-        <span class="block w-base h-base bg-green-darker"></span>
+      <div class="bg-green p-96 mb-12">
+        <span class="block w-16 h-16 bg-green-darker"></span>
       </div>
     </div>
     
-    <h2 class="mb-sm text-grey-40">Margin</h2>
+    <h2 class="mb-12 text-grey-40">Margin</h2>
     <div class="w-full">
-      <p class="mb-3xs bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-2xs bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-xs bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-sm bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-base bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-lg bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-xl bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-2xl bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-3xl bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-4xl bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="mb-5xl bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-      <p class="bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-4 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-8 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-12 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-16 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-24 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-32 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-48 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-64 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-96 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="mb-160 bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <p class="bg-grey-20">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
   </div>
 `

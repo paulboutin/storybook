@@ -75,17 +75,16 @@ module.exports = {
 
     spacing: {
       '0': '0',
-      '3xs': '0.125rem',
-      '2xs': '0.25rem',
-      xs: '0.5rem',
-      sm: '0.75rem',
-      base: '1rem',
-      lg: '1.5rem',
-      xl: '2rem',
-      '2xl': '3rem',
-      '3xl': '4rem',
-      '4xl': '6rem',
-      '5xl': '10rem'
+      '4': '0.222rem',
+      '8': '0.444rem',
+      '12': '0.666rem',
+      '16': '0.888rem',
+      '24': '1.333rem',
+      '32': '1.777rem',
+      '48': '2.666rem',
+      '64': '3.555rem',
+      '96': '5.333rem',
+      '160': '8.888rem'
     },
 
     borderWidth: {
