@@ -5,40 +5,44 @@ module.exports = {
 
   theme: {
     colors: {
-      green: '#00925b',
-      'green-light': '#00ab6b',
-      'green-dark': '#00784b',
-      'green-darker': '#00452b',
+      green: '#008855',
+      'green-light': '#00BB75',
+      'green-dark': '#005535',
+      'green-darker': '#003B25',
 
-      yellow: '#ffc86f',
-      'yellow-light': '#ffdba2',
-      'yellow-dark': '#ffb53c',
-      'yellow-darker': '#ffa109',
+      yellow: '#FFC86F',
+      'yellow-light': '#FFDBA2',
+      'yellow-dark': '#FFB53C',
+      'yellow-darker': '#FFA109',
 
-      blue: '#2462c6',
-      'blue-light': '#417cdc',
-      'blue-dark': '#2057b0',
-      'blue-darker': '#184285',
+      blue: '#0062FF',
+      'blue-light': '#3381FF',
+      'blue-dark': '#0058E6',
+      'blue-darker': '#003B99',
 
       black: '#000000',
       grey: '#202020',
-      'grey-85': '#464646',
-      'grey-70': '#6c6c6c',
-      'grey-55': '#939393',
-      'grey-40': '#b9b9b9',
-      'grey-25': '#dfdfdf',
-      'grey-15': '#f9f9f9',
-      white: '#ffffff',
+      'grey-80': '#464646',
+      'grey-40': '#B9B9B9',
+      'grey-30': '#D2D2D2',
+      'grey-20': '#ECECEC',
+      'grey-15': '#F9F9F9',
+      white: '#FFFFFF',
 
-      success: '#00aa55',
-      'success-light': '#00c362',
+      success: '#00AA55',
+      'success-light': '#00C362',
       'success-dark': '#009048',
-      'success-darker': '#00773b',
+      'success-darker': '#00773B',
 
-      error: '#f64747',
-      'error-light': '#f75f5f',
-      'error-dark': '#f41616',
-      'error-darker': '#cd0a0a'
+      warning: '#FFA109',
+      'warning-light': '#FFBE55',
+      'warning-dark': '#EE9300',
+      'warning-darker': '#d58400',
+
+      error: '#CD0A0A',
+      'error-light': '#F41616',
+      'error-dark': '#B50909',
+      'error-darker': '#9C0808'
     },
 
     screens: {
@@ -65,8 +69,8 @@ module.exports = {
     },
 
     fontFamily: {
-      display: '"BNPP SANS"',
-      body: '"BNPP Sans"'
+      display: ['"BNPP SANS"', 'sans-serif'],
+      body: ['"Public Sans"', 'sans-serif']
     },
 
     spacing: {
