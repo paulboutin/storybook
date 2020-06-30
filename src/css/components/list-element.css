@@ -1,0 +1,60 @@
+.list-element-container {
+  @apply p-xl;
+}
+
+.list-element-header {
+  @apply mb-lg;
+}
+
+.list-element-header-lead {
+  @apply uppercase mb-base text-grey-80;
+}
+
+.list-element-header-spacer {
+  @apply block border-b-2 mb-base border-yellow w-2xl;
+}
+
+.list-element-heading {
+  @apply text-h2;
+}
+
+.list-element-header-text {
+  @apply text-grey-80 hidden;
+}
+
+.list-element-alt-content .list-element-header-lead {
+  @apply text-green;
+}
+
+.list-element-items {
+  @apply ml-xl py-2xs font-display;
+}
+
+.list-element-item {
+  @apply relative;
+}
+
+.list-element-item.check:before {
+  @apply w-base h-base -ml-xl absolute top-2xs;
+  content: '';
+  background: url('/icons/check_circle.svg');
+  background-size: cover;
+}
+
+.list-element-item:not(:last-child) {
+  @apply mb-lg;
+}
+
+@screen md {
+  .list-element-container {
+    @apply flex;
+  }
+
+  .list-element-header.padded {
+    @apply py-2xs px-3xl mb-0;
+  }
+
+  .list-element-header-text {
+    @apply block;
+  }
+}
