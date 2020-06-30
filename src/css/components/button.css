@@ -1,5 +1,5 @@
 .btn {
-  @apply px-base py-sm rounded transform transition duration-300 font-medium text-sm;
+  @apply px-16 py-12 rounded transform transition duration-300 font-medium text-sm;
   min-width: 100px;
 }
 

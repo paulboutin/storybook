@@ -9,7 +9,7 @@ export const Fonts = () => `
         <p class='font-bold'>Bold</p>
         <p class='font-extrabold'>Extra bold</p>
     
-        <div class='mb-xs'></div>
+        <div class='mb-8'></div>
     
         <p class='font-light italic'>Light italic</p>
         <p class='italic'>Normal italic</p>
@@ -23,7 +23,7 @@ export const Fonts = () => `
         <p class='font-semibold'>Semi bold</p>
         <p class='font-bold'>Bold</p>
     
-        <div class='mb-xs'></div>
+        <div class='mb-8'></div>
     
         <p class='italic'>Normal italic</p>
         <p class='font-semibold italic'>Semi bold italic</p>
