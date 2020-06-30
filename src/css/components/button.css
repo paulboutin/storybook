@@ -1,10 +1,5 @@
 .btn {
-  @apply px-base py-sm rounded transform transition duration-300 font-medium text-sm;
-  min-width: 100px;
-}
-
-.btn:hover {
-  @apply scale-110;
+  @apply px-xl py-xs inline-block rounded font-medium text-xs uppercase transition duration-300;
 }
 
 .btn-primary {
@@ -12,5 +7,5 @@
 }
 
 .btn-primary:hover {
-  @apply bg-green-light;
+  @apply bg-green-dark;
 }

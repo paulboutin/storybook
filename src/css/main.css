@@ -4,6 +4,7 @@
 @import './base/grid.css';
 
 @import 'tailwindcss/components';
+@import './components/hero.css';
 @import './components/button.css';
 @import './components/link.css';
 

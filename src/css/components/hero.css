@@ -1,0 +1,77 @@
+.hero {
+  @apply h-screen text-grey;
+}
+
+.hero-full {
+  @apply flex flex-col;
+}
+
+.hero-spaced {
+  @apply relative;
+}
+
+.hero-img {
+  @apply w-full object-cover;
+}
+
+.hero-full .hero-img {
+  @apply min-h-0;
+}
+
+.hero-spaced .hero-img {
+  @apply absolute h-full;
+}
+
+.hero-content {
+  @apply bg-white;
+}
+
+.hero-full .hero-content {
+  @apply px-xl py-2xl;
+}
+
+.hero-spaced .hero-content {
+  @apply absolute bottom-0 inset-x-0 mx-base mb-lg p-lg pl-base;
+}
+
+.hero-title {
+  @apply mb-2xs text-green uppercase;
+}
+
+.hero-heading {
+  @apply mb-sm;
+}
+
+.hero-text {
+  @apply mb-base;
+}
+
+.hero-btn {
+  @apply mb-base;
+}
+
+.hero-subtext {
+  @apply text-xs;
+}
+
+@screen xs {
+  .hero {
+    @apply h-auto;
+  }
+
+  .hero-full {
+    @apply relative flex-row;
+  }
+
+  .hero-full .hero-img {
+    @apply order-1 min-w-0;
+  }
+
+  .hero-full .hero-content {
+    @apply w-full;
+  }
+
+  .hero-spaced .hero-content {
+    @apply relative inline-block mx-3xl my-xl p-xl pl-lg;
+  }
+}
