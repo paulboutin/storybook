@@ -1,6 +1,6 @@
 export const Grid = () => `
   <div class="container">
-    <h2 class="mb-base">Bootstrap 3 style grid</h2>
+    <h2 class="mb-base text-grey-40">Bootstrap 3 style grid</h2>
     
     <div class="row">
       <div class="col-4 border border-dashed border-grey-25 bg-grey-15 p-2xs">.col-4</div>
@@ -25,7 +25,7 @@ export const Grid = () => `
       <div class="col border border-dashed border-grey-25 bg-grey-15 p-2xs">.col</div>
     </div>
     
-    <h2 class="mb-base">Responsive columns</h2>
+    <h2 class="mb-base text-grey-40">Responsive columns</h2>
     <div class="rounded bg-grey-15 mb-base p-sm">
       <h6>Breakpoints:</h6>
       <ul class="pl-base">
