@@ -87,11 +87,20 @@ module.exports = {
       '160': '8.888rem'
     },
 
+    inset: theme => theme('spacing'),
+
     borderWidth: {
       default: '1px',
       '0': '0',
       '2': '2px',
       '4': '4px'
+    },
+
+    extend: {
+      maxWidth: {
+        '1/2': '50%',
+        '3/4': '75%'
+      }
     }
   },
 
