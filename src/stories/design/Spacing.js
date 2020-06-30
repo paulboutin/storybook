@@ -1,6 +1,6 @@
 export const Spacing = () => `
   <div class="container">
-    <h2 class="mb-sm">Spacing scale</h2>
+    <h2 class="mb-sm text-grey-40">Spacing scale</h2>
     <div class="flex flex-wrap w-full justify-between items-end mb-2xl">
       <div class="flex flex-col items-center">
         <span class="block w-3xs h-3xs bg-green mb-sm"></span>
@@ -48,7 +48,7 @@ export const Spacing = () => `
       </div>
     </div>
     
-    <h2 class="mb-sm">Padding</h2>
+    <h2 class="mb-sm text-grey-40">Padding</h2>
     <div class="flex flex-wrap w-full justify-between items-end mb-2xl">
       <div class="bg-green p-3xs mb-sm">
         <span class="block w-base h-base bg-green-darker"></span>
@@ -79,7 +79,7 @@ export const Spacing = () => `
       </div>
     </div>
     
-    <h2 class="mb-sm">Margin</h2>
+    <h2 class="mb-sm text-grey-40">Margin</h2>
     <div class="w-full">
       <p class="mb-3xs bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       <p class="mb-2xs bg-grey-25">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

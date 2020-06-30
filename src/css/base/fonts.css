@@ -55,3 +55,53 @@
   font-weight: 300;
   font-style: italic;
 }
+
+/* Public Sans */
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/public-sans/regular-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/public-sans/regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/public-sans/semibold-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('/fonts/public-sans/semibold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/public-sans/bold-italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Public Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/fonts/public-sans/bold.woff') format('woff');
+}
