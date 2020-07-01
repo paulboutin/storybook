@@ -34,8 +34,8 @@
   @apply absolute bottom-0 inset-x-0 mx-16 mb-24 p-24 pl-16;
 }
 
-.hero-title {
-  @apply mb-4 text-green uppercase;
+.hero-eyebrow {
+  @apply mb-8 text-green text-xs font-bold tracking-wider uppercase;
 }
 
 .hero-heading {
@@ -43,18 +43,18 @@
 }
 
 .hero-text {
-  @apply mb-16;
+  @apply mb-16 text-grey-80;
 }
 
 .hero-btn {
-  @apply mb-16;
+  @apply mb-16 px-32;
 }
 
 .hero-subtext {
   @apply text-xs;
 }
 
-@screen xs {
+@screen sm {
   .hero {
     @apply h-auto;
   }
@@ -64,14 +64,14 @@
   }
 
   .hero-full .hero-img {
-    @apply order-1 min-w-0;
+    @apply absolute right-0 h-full w-3/5;
   }
 
   .hero-full .hero-content {
-    @apply w-full;
+    @apply relative px-96 py-64;
   }
 
   .hero-spaced .hero-content {
-    @apply relative inline-block mx-64 my-32 p-32 pl-24;
+    @apply relative inline-block mx-64 my-32 p-32;
   }
 }

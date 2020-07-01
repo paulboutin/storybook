@@ -12,7 +12,7 @@ export const Hero = () => {
         alt='Hero image'
       />
       <div className='hero-content'>
-        <p className='hero-title'>Any deposit checking</p>
+        <p className='hero-eyebrow'>Any deposit checking</p>
         <h2 className='hero-heading'>
           No hidden fees.
           <br />
