@@ -11,13 +11,9 @@ const ColorName = ({ children }) => (
   <h4 className='text-grey text-sm font-semibold mb-4'>{children}</h4>
 )
 
-const ColorBlock = ({ children, backgroundColor, textColor, className }) => (
+const ColorBlock = ({ children, className }) => (
   <div
-    className={classNames(
-      `bg-${backgroundColor} text-${textColor}`,
-      'rounded text-center text-sm py-4 mb-4',
-      className
-    )}
+    className={classNames('rounded text-center text-sm py-4 mb-4', className)}
   >
     {children}
   </div>
@@ -27,130 +23,64 @@ export const Colors = () => (
   <div className='flex flex-wrap lg:flex-no-wrap'>
     <ColorGroup>
       <ColorName>Brand Green</ColorName>
-      <ColorBlock backgroundColor='green' textColor='white'>
-        Base
-      </ColorBlock>
-      <ColorBlock backgroundColor='green-light' textColor='white'>
-        Light
-      </ColorBlock>
-      <ColorBlock backgroundColor='green-dark' textColor='white'>
-        Dark
-      </ColorBlock>
-      <ColorBlock backgroundColor='green-darker' textColor='white'>
-        Darker
-      </ColorBlock>
+      <ColorBlock className='bg-green text-white'>Base</ColorBlock>
+      <ColorBlock className='bg-green-light text-white'>Light</ColorBlock>
+      <ColorBlock className='bg-green-dark text-white'>Dark</ColorBlock>
+      <ColorBlock className='bg-green-darker text-white'>Darker</ColorBlock>
     </ColorGroup>
 
     <ColorGroup>
       <ColorName>Accent Yellow</ColorName>
-      <ColorBlock backgroundColor='yellow' textColor='black'>
-        Base
-      </ColorBlock>
-      <ColorBlock backgroundColor='yellow-light' textColor='black'>
-        Light
-      </ColorBlock>
-      <ColorBlock backgroundColor='yellow-dark' textColor='black'>
-        Dark
-      </ColorBlock>
-      <ColorBlock backgroundColor='yellow-darker' textColor='black'>
-        Darker
-      </ColorBlock>
+      <ColorBlock className='bg-yellow text-black'>Base</ColorBlock>
+      <ColorBlock className='bg-yellow-light text-black'>Light</ColorBlock>
+      <ColorBlock className='bg-yellow-dark text-black'>Dark</ColorBlock>
+      <ColorBlock className='bg-yellow-darker text-black'>Darker</ColorBlock>
     </ColorGroup>
 
     <ColorGroup>
       <ColorName>Accessible Blue</ColorName>
-      <ColorBlock backgroundColor='blue' textColor='white'>
-        Base
-      </ColorBlock>
-      <ColorBlock backgroundColor='blue-light' textColor='white'>
-        Light
-      </ColorBlock>
-      <ColorBlock backgroundColor='blue-dark' textColor='white'>
-        Dark
-      </ColorBlock>
-      <ColorBlock backgroundColor='blue-darker' textColor='white'>
-        Darker
-      </ColorBlock>
+      <ColorBlock className='bg-blue text-white'>Base</ColorBlock>
+      <ColorBlock className='bg-blue-light text-white'>Light</ColorBlock>
+      <ColorBlock className='bg-blue-dark text-white'>Dark</ColorBlock>
+      <ColorBlock className='bg-blue-darker text-white'>Darker</ColorBlock>
     </ColorGroup>
 
     <ColorGroup>
       <ColorName>BW & Greyscale</ColorName>
-      <ColorBlock backgroundColor='black' textColor='white'>
-        Black
-      </ColorBlock>
-      <ColorBlock backgroundColor='grey' textColor='white'>
-        Grey
-      </ColorBlock>
-      <ColorBlock backgroundColor='grey-80' textColor='white'>
-        80%
-      </ColorBlock>
-      <ColorBlock backgroundColor='grey-40' textColor='grey'>
-        40%
-      </ColorBlock>
-      <ColorBlock backgroundColor='grey-30' textColor='grey'>
-        30%
-      </ColorBlock>
-      <ColorBlock backgroundColor='grey-20' textColor='grey'>
-        20%
-      </ColorBlock>
-      <ColorBlock backgroundColor='grey-15' textColor='grey'>
-        15%
-      </ColorBlock>
-      <ColorBlock
-        backgroundColor='white'
-        textColor='grey'
-        className='border border-grey-40'
-      >
+      <ColorBlock className='bg-black text-white'>Black</ColorBlock>
+      <ColorBlock className='bg-grey text-white'>Grey</ColorBlock>
+      <ColorBlock className='bg-grey-80 text-white'>80%</ColorBlock>
+      <ColorBlock className='bg-grey-40 text-grey'>40%</ColorBlock>
+      <ColorBlock className='bg-grey-30 text-grey'>30%</ColorBlock>
+      <ColorBlock className='bg-grey-20 text-grey'>20%</ColorBlock>
+      <ColorBlock className='bg-grey-15 text-grey'>15%</ColorBlock>
+      <ColorBlock className='bg-white text-grey border border-grey-40'>
         White
       </ColorBlock>
     </ColorGroup>
 
     <ColorGroup>
       <ColorName>Success Green</ColorName>
-      <ColorBlock backgroundColor='success' textColor='white'>
-        Base
-      </ColorBlock>
-      <ColorBlock backgroundColor='success-light' textColor='white'>
-        Light
-      </ColorBlock>
-      <ColorBlock backgroundColor='success-dark' textColor='white'>
-        Dark
-      </ColorBlock>
-      <ColorBlock backgroundColor='success-darker' textColor='white'>
-        Darker
-      </ColorBlock>
+      <ColorBlock className='bg-success text-white'>Base</ColorBlock>
+      <ColorBlock className='bg-success-light text-white'>Light</ColorBlock>
+      <ColorBlock className='bg-success-dark text-white'>Dark</ColorBlock>
+      <ColorBlock className='bg-success-darker text-white'>Darker</ColorBlock>
     </ColorGroup>
 
     <ColorGroup>
       <ColorName>Warning Yellow</ColorName>
-      <ColorBlock backgroundColor='warning' textColor='black'>
-        Base
-      </ColorBlock>
-      <ColorBlock backgroundColor='warning-light' textColor='black'>
-        Light
-      </ColorBlock>
-      <ColorBlock backgroundColor='warning-dark' textColor='black'>
-        Dark
-      </ColorBlock>
-      <ColorBlock backgroundColor='warning-darker' textColor='black'>
-        Darker
-      </ColorBlock>
+      <ColorBlock className='bg-warning text-black'>Base</ColorBlock>
+      <ColorBlock className='bg-warning-light text-black'>Light</ColorBlock>
+      <ColorBlock className='bg-warning-dark text-black'>Dark</ColorBlock>
+      <ColorBlock className='bg-warning-darker text-black'>Darker</ColorBlock>
     </ColorGroup>
 
     <ColorGroup>
       <ColorName>Error Red</ColorName>
-      <ColorBlock backgroundColor='error' textColor='white'>
-        Base
-      </ColorBlock>
-      <ColorBlock backgroundColor='error-light' textColor='white'>
-        Light
-      </ColorBlock>
-      <ColorBlock backgroundColor='error-dark' textColor='white'>
-        Dark
-      </ColorBlock>
-      <ColorBlock backgroundColor='error-darker' textColor='white'>
-        Darker
-      </ColorBlock>
+      <ColorBlock className='bg-error text-white'>Base</ColorBlock>
+      <ColorBlock className='bg-error-light text-white'>Light</ColorBlock>
+      <ColorBlock className='bg-error-dark text-white'>Dark</ColorBlock>
+      <ColorBlock className='bg-error-darker text-white'>Darker</ColorBlock>
     </ColorGroup>
   </div>
 )
