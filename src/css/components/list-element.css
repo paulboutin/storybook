@@ -73,7 +73,7 @@
     @apply relative;
 
     &.check:before {
-      @apply absolute text-green -ml-32 font-awesome-solid;
+      @apply absolute text-green -ml-32 font-awesome font-bold;
       content: '\f058';
     }
 
