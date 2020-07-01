@@ -1,5 +1,7 @@
 import React from 'react'
 
 export const Button = () => (
-  <button className='btn btn-primary'>Apply now</button>
+  <a className='btn btn-primary' href='#'>
+    Apply now
+  </a>
 )
