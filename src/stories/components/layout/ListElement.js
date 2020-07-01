@@ -15,9 +15,9 @@ const headerText = {
 }
 
 const ListElementItems = ({ items, listClass = 'check' }) => (
-  <ul className={classNames('list-element-items', listClass)}>
+  <ul className='list-element-items'>
     {items.map((item, index) => (
-      <li key={index} className='list-element-item check'>
+      <li key={index} className={classNames('list-element-item', listClass)}>
         {item}
       </li>
     ))}
