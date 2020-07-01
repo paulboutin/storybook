@@ -6,9 +6,10 @@
   }
 
   & .list-element-image {
-    @apply p-32 object-cover;
+    @apply object-cover mb-16;
 
     @screen md {
+      @apply p-32 mb-0;
       max-width: 50%;
     }
   }
@@ -26,10 +27,8 @@
   }
 
   &.alt {
-    & .list-element-header {
-      & .list-element-header-lead {
-        @apply text-green;
-      }
+    & .list-element-header .list-element-header-lead {
+      @apply text-green;
     }
   }
 
