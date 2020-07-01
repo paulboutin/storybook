@@ -1,25 +1,47 @@
 .list-element-container {
-  @apply p-xl;
+  @apply p-32;
 
   @screen md {
     @apply flex;
   }
 
-  & .list-element-header {
-    @apply mb-lg;
+  & .list-element-image {
+    @apply p-32 object-cover;
 
     @screen md {
-      &.padded {
-        @apply py-2xs px-3xl mb-0;
+      max-width: 50%;
+    }
+  }
+}
+
+.list-element-content {
+  &:not(.alt) {
+    @screen md {
+      @apply flex;
+
+      & .list-element-header {
+        @apply py-4 px-64 mb-0;
       }
     }
+  }
+
+  &.alt {
+    & .list-element-header {
+      & .list-element-header-lead {
+        @apply text-green;
+      }
+    }
+  }
+
+  & .list-element-header {
+    @apply mb-24;
 
     & .list-element-header-lead {
-      @apply uppercase mb-base text-grey-80;
+      @apply uppercase mb-16 text-grey-80;
     }
 
     & .list-element-header-spacer {
-      @apply block border-b-2 mb-base border-yellow w-2xl;
+      @apply block border-b-2 mb-16 border-yellow w-48;
     }
 
     & .list-element-heading {
@@ -34,29 +56,23 @@
       }
     }
   }
+}
 
-  & .list-element-alt-content {
-    & .list-element-header-lead {
-      @apply text-green;
+.list-element-items {
+  @apply ml-32 py-4 font-display;
+
+  & .list-element-item {
+    @apply relative;
+
+    &.check:before {
+      @apply w-16 h-16 -ml-32 absolute top-4;
+      content: '';
+      background: url('/icons/check_circle.svg');
+      background-size: cover;
     }
-  }
 
-  & .list-element-items {
-    @apply ml-xl py-2xs font-display;
-
-    & .list-element-item {
-      @apply relative;
-
-      &.check:before {
-        @apply w-base h-base -ml-xl absolute top-2xs;
-        content: '';
-        background: url('/icons/check_circle.svg');
-        background-size: cover;
-      }
-
-      &:not(:last-child) {
-        @apply mb-lg;
-      }
+    &:not(:last-child) {
+      @apply mb-24;
     }
   }
 }
