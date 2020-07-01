@@ -87,6 +87,8 @@ module.exports = {
       '160': '8.888rem'
     },
 
+    inset: theme => theme('spacing'),
+
     borderWidth: {
       default: '1px',
       '0': '0',

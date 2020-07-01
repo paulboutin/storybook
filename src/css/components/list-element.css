@@ -1,0 +1,77 @@
+.list-element-container {
+  @apply p-32;
+
+  @screen md {
+    @apply flex;
+  }
+
+  & .list-element-image {
+    @apply object-cover mb-16;
+
+    @screen md {
+      @apply p-32 mb-0;
+      max-width: 50%;
+    }
+  }
+}
+
+.list-element-content {
+  &:not(.alt) {
+    @screen md {
+      @apply flex;
+
+      & .list-element-header {
+        @apply py-4 px-64 mb-0;
+      }
+    }
+  }
+
+  &.alt {
+    & .list-element-header .list-element-header-lead {
+      @apply text-green;
+    }
+  }
+
+  & .list-element-header {
+    @apply mb-24;
+
+    & .list-element-header-lead {
+      @apply uppercase mb-16 text-grey-80;
+    }
+
+    & .list-element-header-spacer {
+      @apply block border-b-2 mb-16 border-yellow w-48;
+    }
+
+    & .list-element-heading {
+      @apply text-h2;
+    }
+
+    & .list-element-header-text {
+      @apply text-grey-80 hidden;
+
+      @screen md {
+        @apply block;
+      }
+    }
+  }
+}
+
+.list-element-items {
+  @apply ml-32 py-4 font-display;
+
+  & .list-element-item {
+    @apply relative;
+
+    &.check:before {
+      @apply w-16 h-16 -ml-32 absolute top-4;
+      content: '';
+      background: url('/icons/check_circle.svg');
+      background-size: cover;
+    }
+
+    &:not(:last-child) {
+      @apply mb-24;
+    }
+  }
+}
