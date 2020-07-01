@@ -46,6 +46,12 @@ const ListElementContent = ({
   </div>
 )
 
+const ListElementImage = ({ src, alt }) => (
+  <div className='list-element-image-wrapper'>
+    <img className='list-element-image' src={src} alt={alt} />
+  </div>
+)
+
 export const ListElementWithHeader = () => (
   <section className='list-element-container'>
     <ListElementContent
@@ -57,11 +63,7 @@ export const ListElementWithHeader = () => (
 
 export const ListElementWithImage = () => (
   <section className='list-element-container'>
-    <img
-      className='list-element-image'
-      src='http://via.placeholder.com/600'
-      alt='Image'
-    />
+    <ListElementImage src='http://via.placeholder.com/500x400' alt='Image' />
     <ListElementContent
       headerText={headerText}
       items={array('Items', defaultItems)}
