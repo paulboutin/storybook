@@ -1,62 +1,50 @@
 import React from 'react'
+import classNames from 'classnames'
+
+const Column = ({ children, className }) => (
+  <div
+    className={classNames(
+      'border border-dashed border-grey-40 bg-grey-20 px-12 py-4',
+      className
+    )}
+  >
+    {children}
+  </div>
+)
 
 export const Grid = () => (
-  <div className='container'>
+  <div className='text-grey'>
     <h2 className='mb-16 text-grey-40'>Bootstrap 3 style grid</h2>
 
     <div className='row'>
-      <div className='col-4 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-4
-      </div>
-      <div className='col-4 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-4
-      </div>
-      <div className='col-4 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-4
-      </div>
-    </div>
-    <div className='row'>
-      <div className='col-2 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-2
-      </div>
-      <div className='col-8 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-8
-      </div>
-      <div className='col-2 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-2
-      </div>
-    </div>
-    <div className='row'>
-      <div className='col-3 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-3
-      </div>
-      <div className='col-4 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-4
-      </div>
-      <div className='col-5 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-5
-      </div>
-    </div>
-    <div className='row mb-16'>
-      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-12
-      </div>
-      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-12
-      </div>
-      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-12
-      </div>
-      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-12
-      </div>
-      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col-12
-      </div>
+      <Column className='col-4'>.col-4</Column>
+      <Column className='col-4'>.col-4</Column>
+      <Column className='col-4'>.col-4</Column>
     </div>
 
-    <h2 className='mb-16 text-grey-40'>Responsive columns</h2>
-    <div className='rounded bg-grey-15 mb-16 p-12'>
+    <div className='row'>
+      <Column className='col-2'>.col-2</Column>
+      <Column className='col-8'>.col-8</Column>
+      <Column className='col-2'>.col-2</Column>
+    </div>
+
+    <div className='row'>
+      <Column className='col-3'>.col-3</Column>
+      <Column className='col-4'>.col-4</Column>
+      <Column className='col-5'>.col-5</Column>
+    </div>
+
+    <div className='row'>
+      <Column className='col'>.col</Column>
+      <Column className='col'>.col</Column>
+      <Column className='col'>.col</Column>
+      <Column className='col'>.col</Column>
+      <Column className='col'>.col</Column>
+    </div>
+
+    <h2 className='mt-32 mb-16 text-grey-40'>Responsive columns</h2>
+
+    <div className='rounded bg-grey-20 mb-16 p-12'>
       <h6>Breakpoints:</h6>
       <ul className='pl-16'>
         <li>
@@ -75,20 +63,13 @@ export const Grid = () => (
     </div>
 
     <div className='row'>
-      <div className='md:col-4 sm:col-8 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .md:col-4 .sm:col-8
-      </div>
-      <div className='md:col-8 sm:col-4 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .md:col-8 .sm:col-4
-      </div>
+      <Column className='md:col-4 sm:col-8'>.md:col-4 .sm:col-8</Column>
+      <Column className='md:col-8 sm:col-4'>.md:col-8 .sm:col-4</Column>
     </div>
+
     <div className='row'>
-      <div className='md:col-6 sm:col-3 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .md:col-6 .sm:col-3
-      </div>
-      <div className='md:col-6 sm:col-9 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .md:col-6 .sm:col-9
-      </div>
+      <Column className='md:col-6 sm:col-3'>.md:col-6 .sm:col-3</Column>
+      <Column className='md:col-6 sm:col-9'>.md:col-6 .sm:col-9</Column>
     </div>
   </div>
 )

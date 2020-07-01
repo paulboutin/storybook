@@ -4,6 +4,10 @@
 
 @responsive {
   /* implementation of bootstrap 3 12-column grid system */
+  .col {
+    @apply flex-1;
+  }
+
   .col-1 {
     @apply w-1/12;
   }
