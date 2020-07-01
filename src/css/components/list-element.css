@@ -1,16 +1,24 @@
 .list-element-container {
-  @apply p-32;
+  @apply p-16;
 
   @screen md {
-    @apply flex;
+    @apply flex p-32;
   }
 
-  & .list-element-image {
-    @apply object-cover p-16 mb-16;
+  & .list-element-image-wrapper {
+    @apply mb-16 flex justify-center;
 
     @screen md {
-      @apply p-32 mb-0;
+      @apply mb-0;
       max-width: 50%;
+    }
+
+    & .list-element-image {
+      @apply p-16 self-center;
+
+      @screen md {
+        @apply p-32;
+      }
     }
   }
 }
@@ -59,16 +67,14 @@
 }
 
 .list-element-items {
-  @apply ml-32 py-4 font-display;
+  @apply py-4 ml-32 font-display;
 
   & .list-element-item {
     @apply relative;
 
     &.check:before {
-      @apply w-16 h-16 -ml-32 absolute top-4;
-      content: '';
-      background: url('/icons/check_circle.svg');
-      background-size: cover;
+      @apply absolute text-green -ml-32 font-awesome-solid;
+      content: '\f058';
     }
 
     &:not(:last-child) {
