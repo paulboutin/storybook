@@ -1,7 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
+import { array } from '@storybook/addon-knobs'
 
-const features = [
+const defaultItems = [
   '$0 monthly service charge with any deposit per statement',
   'Free access to Online Banking in our mobile app',
   'No minimum balance',
@@ -47,7 +48,10 @@ const ListElementContent = ({
 
 export const ListElementWithHeader = () => (
   <section className='list-element-container'>
-    <ListElementContent headerText={headerText} items={features} />
+    <ListElementContent
+      headerText={headerText}
+      items={array('Items', defaultItems)}
+    />
   </section>
 )
 
@@ -58,6 +62,10 @@ export const ListElementWithImage = () => (
       src='http://via.placeholder.com/600'
       alt='Image'
     />
-    <ListElementContent headerText={headerText} items={features} altLayout />
+    <ListElementContent
+      headerText={headerText}
+      items={array('Items', defaultItems)}
+      altLayout
+    />
   </section>
 )
