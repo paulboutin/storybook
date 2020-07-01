@@ -27,27 +27,27 @@
 }
 
 .hero-full .hero-content {
-  @apply px-xl py-2xl;
+  @apply px-32 py-48;
 }
 
 .hero-spaced .hero-content {
-  @apply absolute bottom-0 inset-x-0 mx-base mb-lg p-lg pl-base;
+  @apply absolute bottom-0 inset-x-0 mx-16 mb-24 p-24 pl-16;
 }
 
 .hero-title {
-  @apply mb-2xs text-green uppercase;
+  @apply mb-4 text-green uppercase;
 }
 
 .hero-heading {
-  @apply mb-sm;
+  @apply mb-12;
 }
 
 .hero-text {
-  @apply mb-base;
+  @apply mb-16;
 }
 
 .hero-btn {
-  @apply mb-base;
+  @apply mb-16;
 }
 
 .hero-subtext {
@@ -72,6 +72,6 @@
   }
 
   .hero-spaced .hero-content {
-    @apply relative inline-block mx-3xl my-xl p-xl pl-lg;
+    @apply relative inline-block mx-64 my-32 p-32 pl-24;
   }
 }

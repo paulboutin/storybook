@@ -1,3 +1,7 @@
-export const Link = () => `
-  <a href='#' class='link'>Link</a>
-`
+import React from 'react'
+
+export const Link = () => (
+  <a href='#' className='link'>
+    Link
+  </a>
+)

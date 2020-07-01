@@ -1,17 +1,37 @@
-export const Fonts = () => `
+import React from 'react'
+
+export const Fonts = () => (
   <div>
-    <h4 class='text-grey-55'>BNPP Sans</h4>
+    <div className='flex flex-wrap'>
+      <div className='col-6 font-display'>
+        <h4 className='text-grey-40'>BNPP Sans</h4>
 
-    <p class='font-light'>Light</p>
-    <p>Normal</p>
-    <p class='font-bold'>Bold</p>
-    <p class='font-extrabold'>Extra bold</p>
+        <p className='font-light'>Light</p>
+        <p>Normal</p>
+        <p className='font-bold'>Bold</p>
+        <p className='font-extrabold'>Extra bold</p>
 
-    <div class='mb-xs'></div>
+        <div className='mb-8' />
 
-    <p class='font-light italic'>Light italic</p>
-    <p class='italic'>Normal italic</p>
-    <p class='font-bold italic'>Bold italic</p>
-    <p class='font-extrabold italic'>Extra bold italic</p>
+        <p className='font-light italic'>Light italic</p>
+        <p className='italic'>Normal italic</p>
+        <p className='font-bold italic'>Bold italic</p>
+        <p className='font-extrabold italic'>Extra bold italic</p>
+      </div>
+
+      <div className='col-6'>
+        <h4 className='text-grey-40 font-body'>Public Sans</h4>
+
+        <p>Normal</p>
+        <p className='font-semibold'>Semi bold</p>
+        <p className='font-bold'>Bold</p>
+
+        <div className='mb-8' />
+
+        <p className='italic'>Normal italic</p>
+        <p className='font-semibold italic'>Semi bold italic</p>
+        <p className='font-bold italic'>Bold italic</p>
+      </div>
+    </div>
   </div>
-`
+)

@@ -1,3 +1,7 @@
-export const Button = () => `
-  <button class='btn btn-primary'>Apply now</button>
-`
+import React from 'react'
+
+export const Button = () => (
+  <a className='btn btn-primary' href='#'>
+    Apply now
+  </a>
+)

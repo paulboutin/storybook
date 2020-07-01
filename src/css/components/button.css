@@ -1,5 +1,5 @@
 .btn {
-  @apply px-xl py-xs inline-block rounded font-medium text-xs uppercase transition duration-300;
+  @apply px-24 py-8 inline-block rounded text-xs font-semibold uppercase transition duration-300;
 }
 
 .btn-primary {
