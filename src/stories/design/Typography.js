@@ -8,8 +8,9 @@ export const Typography = () => {
   )
 
   return (
-    <div className='container'>
+    <div>
       <h2 className='mb-16 text-grey-40'>Headings</h2>
+
       <p className='text-grey-40 text-xs'>Heading 1</p>
       <h1 className='mb-16'>{txt}</h1>
 
@@ -29,6 +30,7 @@ export const Typography = () => {
       <h6 className='mb-48'>{txt}</h6>
 
       <h2 className='mb-16 text-grey-40'>Body</h2>
+
       <p className='text-grey-40 text-xs'>Body large</p>
       <div className='text-lg mb-16'>{txt}</div>
 

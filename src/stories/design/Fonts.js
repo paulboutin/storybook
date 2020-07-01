@@ -1,9 +1,9 @@
 import React from 'react'
 
 export const Fonts = () => (
-  <div className='container'>
+  <div>
     <div className='flex flex-wrap'>
-      <div className='w-1/2 font-display'>
+      <div className='col-6 font-display'>
         <h4 className='text-grey-40'>BNPP Sans</h4>
 
         <p className='font-light'>Light</p>
@@ -18,7 +18,8 @@ export const Fonts = () => (
         <p className='font-bold italic'>Bold italic</p>
         <p className='font-extrabold italic'>Extra bold italic</p>
       </div>
-      <div className='w-1/2'>
+
+      <div className='col-6'>
         <h4 className='text-grey-40 font-body'>Public Sans</h4>
 
         <p>Normal</p>
