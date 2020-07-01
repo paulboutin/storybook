@@ -3,3 +3,7 @@ export default {
 }
 
 export { Hero } from './layout/Hero'
+export {
+  ListElementWithHeader,
+  ListElementWithImage
+} from './layout/ListElement'
