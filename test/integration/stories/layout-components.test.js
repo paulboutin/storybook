@@ -1,6 +1,6 @@
 import { buildSnapshotTests } from '../utils'
 
-describe('Design', () => {
+describe('Layout Components', () => {
   const stories = ['list-element-with-header', 'list-element-with-image']
-  buildSnapshotTests('components')(stories)
+  buildSnapshotTests('components-layout')(stories)
 })
