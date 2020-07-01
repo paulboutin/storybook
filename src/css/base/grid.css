@@ -1,12 +1,11 @@
 .row {
-  @apply flex w-full;
+  @apply flex;
 }
 
 @responsive {
   /* implementation of bootstrap 3 12-column grid system */
-  .col,
-  .col-12 {
-    @apply flex-1;
+  .col-1 {
+    @apply w-1/12;
   }
 
   .col-2 {
@@ -47,5 +46,9 @@
 
   .col-11 {
     @apply w-11/12;
+  }
+
+  .col-12 {
+    @apply w-full;
   }
 }

@@ -38,20 +38,20 @@ export const Grid = () => (
       </div>
     </div>
     <div className='row mb-16'>
-      <div className='col border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col
+      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
+        .col-12
       </div>
-      <div className='col border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col
+      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
+        .col-12
       </div>
-      <div className='col border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col
+      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
+        .col-12
       </div>
-      <div className='col border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col
+      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
+        .col-12
       </div>
-      <div className='col border border-dashed border-grey-25 bg-grey-15 p-4'>
-        .col
+      <div className='col-12 border border-dashed border-grey-25 bg-grey-15 p-4'>
+        .col-12
       </div>
     </div>
 
@@ -87,7 +87,6 @@ export const Grid = () => (
         .md:col-6 .sm:col-3
       </div>
       <div className='md:col-6 sm:col-9 border border-dashed border-grey-25 bg-grey-15 p-4'>
-        {' '}
         .md:col-6 .sm:col-9
       </div>
     </div>
