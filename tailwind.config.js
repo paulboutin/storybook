@@ -70,7 +70,8 @@ module.exports = {
 
     fontFamily: {
       display: ['"BNPP SANS"', 'sans-serif'],
-      body: ['"Public Sans"', 'sans-serif']
+      body: ['"Public Sans"', 'sans-serif'],
+      awesome: ['"Font Awesome 5 Free"']
     },
 
     spacing: {

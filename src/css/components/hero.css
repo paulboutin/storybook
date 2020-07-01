@@ -1,77 +1,77 @@
 .hero {
   @apply h-screen text-grey;
+
+  & .hero-img {
+    @apply w-full object-cover;
+  }
+
+  & .hero-content {
+    @apply bg-white;
+  }
+
+  & .hero-eyebrow {
+    @apply mb-8 text-green text-xs font-bold tracking-wider uppercase;
+  }
+
+  & .hero-heading {
+    @apply mb-12;
+  }
+
+  & .hero-text {
+    @apply mb-16 text-grey-80;
+  }
+
+  & .hero-btn {
+    @apply mb-16 px-32;
+  }
+
+  & .hero-subtext {
+    @apply text-xs;
+  }
+
+  @screen sm {
+    @apply h-auto;
+  }
 }
 
 .hero-full {
   @apply flex flex-col;
+
+  & .hero-img {
+    @apply min-h-0;
+  }
+
+  & .hero-content {
+    @apply px-32 py-48;
+  }
+
+  @screen sm {
+    @apply relative flex-row;
+
+    & .hero-img {
+      @apply absolute right-0 h-full w-3/5;
+    }
+
+    & .hero-content {
+      @apply relative px-96 py-64;
+    }
+  }
 }
 
 .hero-spaced {
   @apply relative;
-}
 
-.hero-img {
-  @apply w-full object-cover;
-}
-
-.hero-full .hero-img {
-  @apply min-h-0;
-}
-
-.hero-spaced .hero-img {
-  @apply absolute h-full;
-}
-
-.hero-content {
-  @apply bg-white;
-}
-
-.hero-full .hero-content {
-  @apply px-32 py-48;
-}
-
-.hero-spaced .hero-content {
-  @apply absolute bottom-0 inset-x-0 mx-16 mb-24 p-24 pl-16;
-}
-
-.hero-eyebrow {
-  @apply mb-8 text-green text-xs font-bold tracking-wider uppercase;
-}
-
-.hero-heading {
-  @apply mb-12;
-}
-
-.hero-text {
-  @apply mb-16 text-grey-80;
-}
-
-.hero-btn {
-  @apply mb-16 px-32;
-}
-
-.hero-subtext {
-  @apply text-xs;
-}
-
-@screen sm {
-  .hero {
-    @apply h-auto;
+  & .hero-img {
+    @apply absolute h-full;
   }
 
-  .hero-full {
-    @apply relative flex-row;
+  & .hero-content {
+    @apply absolute bottom-0 inset-x-0 mx-16 mb-24 p-24 pl-16;
   }
 
-  .hero-full .hero-img {
-    @apply absolute right-0 h-full w-3/5;
-  }
-
-  .hero-full .hero-content {
-    @apply relative px-96 py-64;
-  }
-
-  .hero-spaced .hero-content {
-    @apply relative inline-block mx-64 my-32 p-32;
+  @screen sm {
+    & .hero-content {
+      @apply relative inline-block mx-64 my-32 p-32;
+    }
   }
 }
