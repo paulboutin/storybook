@@ -3,7 +3,5 @@ export default {
 }
 
 export { Hero } from './layout/Hero'
-export {
-  ListElementWithHeader,
-  ListElementWithImage
-} from './layout/ListElement'
+export * from './layout/ListElement'
+export { FAQ } from './layout/FAQ'
