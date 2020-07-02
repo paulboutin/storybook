@@ -2,6 +2,7 @@ export default {
   title: 'Components/Layout'
 }
 
-export { Hero } from './layout/Hero'
-export * from './layout/ListElement'
+export { ClosingCTA } from './layout/ClosingCTA'
 export { FAQ } from './layout/FAQ'
+export { Hero } from './layout/Hero'
+export { ListElement } from './layout/ListElement'
