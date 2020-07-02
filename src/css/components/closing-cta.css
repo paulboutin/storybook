@@ -1,0 +1,44 @@
+.closing-cta {
+  @apply relative h-screen text-grey flex justify-center items-center;
+
+  @screen sm {
+    @apply h-auto;
+  }
+
+  &.alt .closing-cta-content {
+    @apply self-end;
+
+    @screen sm {
+      @apply text-left;
+      margin-left: 40%;
+    }
+
+    @screen lg {
+      @apply px-32;
+    }
+  }
+
+  & .closing-cta-img {
+    @apply absolute h-full w-full object-cover;
+  }
+
+  & .closing-cta-content {
+    @apply relative mx-48 mb-24 text-center;
+
+    @screen sm {
+      @apply inline-block mx-64 my-64 w-1/2;
+    }
+
+    @screen lg {
+      @apply w-7/12;
+    }
+  }
+
+  & .closing-cta-heading {
+    @apply mb-12 text-white;
+  }
+
+  & .closing-cta-btn {
+    @apply px-32;
+  }
+}
