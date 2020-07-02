@@ -9,8 +9,10 @@ export const Card = ({ heading, text, link, imageSrc, imageAlt }) => {
     <div className='card'>
       <img className='card-img' src={imageSrc} alt={imageAlt} />
       <div className='card-content'>
-        <h2 className='card-heading'>{heading}</h2>
-        <p className='card-text'>{text}</p>
+        <h4 className='card-heading'>{heading}</h4>
+        <div className='card-text-wrapper'>
+          <p className='card-text'>{text}</p>
+        </div>
         <a className='card-link' href={link}>
           Read more &#10230;
         </a>

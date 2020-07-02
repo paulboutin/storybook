@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from '../base/Card'
+import { text } from '@storybook/addon-knobs'
 
 const items = [
   {
@@ -16,9 +17,11 @@ const items = [
   }
 ]
 
-const placeholder = 'http://via.placeholder.com/500'
+const defaultPlaceholder = 'http://via.placeholder.com/500'
 
 export const Recommendations = () => {
+  const placeholder = text('Placeholder', defaultPlaceholder)
+
   return (
     <div className='recommendations'>
       <h2 className='recommendations-heading'>Recommended for you</h2>
