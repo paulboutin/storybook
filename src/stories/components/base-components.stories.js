@@ -3,4 +3,5 @@ export default {
 }
 
 export { Button } from './base/Button'
+export { Icons } from './base/Icons'
 export { Link } from './base/Link'
