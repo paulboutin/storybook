@@ -1,0 +1,39 @@
+.card {
+  @apply flex shadow-lg rounded-sm w-full overflow-hidden;
+
+  @screen sm {
+    @apply block;
+  }
+
+  & .card-img {
+    @apply rounded-l-sm w-1/3 object-cover;
+
+    @screen sm {
+      @apply rounded-bl-none rounded-tr-sm w-auto;
+    }
+  }
+
+  & .card-content {
+    @apply flex flex-col justify-between p-16;
+
+    @screen sm {
+      @apply block;
+    }
+
+    & .card-heading {
+      @apply font-display font-bold mb-16;
+    }
+
+    & .card-text {
+      @apply hidden font-display font-light mb-16;
+
+      @screen sm {
+        @apply block;
+      }
+    }
+
+    & .card-link {
+      @apply font-bold text-green;
+    }
+  }
+}
