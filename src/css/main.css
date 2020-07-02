@@ -9,4 +9,6 @@
 @import './components/hero.css';
 @import './components/list-element.css';
 
+@import './lib/fontawesome.css';
+
 @import 'tailwindcss/utilities';
