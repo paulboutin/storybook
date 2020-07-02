@@ -10,4 +10,6 @@
 @import './components/list-element.css';
 @import './components/faq.css';
 
+@import './lib/fontawesome.css';
+
 @import 'tailwindcss/utilities';
