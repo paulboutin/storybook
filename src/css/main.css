@@ -8,5 +8,6 @@
 @import './components/link.css';
 @import './components/hero.css';
 @import './components/list-element.css';
+@import './components/faq.css';
 
 @import 'tailwindcss/utilities';
