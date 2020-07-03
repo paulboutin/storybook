@@ -107,5 +107,8 @@ module.exports = {
 
   variants: {},
 
-  plugins: [require('./src/plugins/fluid-typography')]
+  plugins: [
+    require('./src/plugins/fluid-typography'),
+    require('./src/plugins/bootstrap-grid')
+  ]
 }
