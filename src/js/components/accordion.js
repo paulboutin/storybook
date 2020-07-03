@@ -8,10 +8,10 @@ accordions.forEach(accordion => {
       content.style.height = getComputedStyle(content).height
       content.style.transitionProperty = 'height'
 
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         content.style.height = '0'
         accordion.classList.remove('accordion-expanded')
-      }, 0)
+      })
     } else {
       content.style.transitionProperty = 'none'
       content.style.height = 'auto'
@@ -19,10 +19,10 @@ accordions.forEach(accordion => {
       content.style.height = '0'
       content.style.transitionProperty = 'height'
 
-      setTimeout(() => {
+      requestAnimationFrame(() => {
         content.style.height = height
         accordion.classList.add('accordion-expanded')
-      }, 0)
+      })
     }
   })
 })
