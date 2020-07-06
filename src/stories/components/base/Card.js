@@ -15,7 +15,7 @@ export const Card = ({ heading, text, link, imageSrc, imageAlt }) => {
           <p className='card-text'>{text}</p>
         </div>
         <a className='card-link' href={link}>
-          Read more &#10230;
+          Read more
         </a>
       </div>
     </div>
