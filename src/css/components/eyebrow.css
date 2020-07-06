@@ -1,4 +1,6 @@
 .eyebrow {
+  @apply text-left;
+
   &:not(.alt) {
     & .list-element-header {
       @apply py-4 px-64 mb-0;

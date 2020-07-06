@@ -1,0 +1,35 @@
+.promo-element {
+  @apply h-screen flex text-grey text-left;
+
+  @screen sm {
+    @apply h-auto;
+  }
+
+  &.alt {
+    @apply flex-row-reverse;
+  }
+
+  & .promo-element-img {
+    @apply w-1/2 object-cover;
+  }
+
+  & .promo-element-content {
+    @apply mb-24 w-1/2;
+
+    @screen sm {
+      @apply inline-block mx-64 my-64 w-1/2;
+    }
+
+    @screen lg {
+      @apply w-7/12;
+    }
+  }
+
+  & .promo-element-heading {
+    @apply mb-12;
+  }
+
+  & .promo-element-btn {
+    @apply px-32;
+  }
+}
