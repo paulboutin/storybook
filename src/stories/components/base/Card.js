@@ -1,8 +1,9 @@
 import React from 'react'
+import { text } from '@storybook/addon-knobs'
 
-const heading = 'How to pick a checking account'
-const text = 'We will help you to decide what is best for you'
-const placeholder = 'http://via.placeholder.com/500'
+const defaultHeading = 'How to pick a checking account'
+const defaultText = 'We will help you to decide what is best for you'
+const defaultPlaceholder = 'http://via.placeholder.com/500'
 
 export const Card = ({ heading, text, link, imageSrc, imageAlt }) => {
   return (
@@ -21,16 +22,22 @@ export const Card = ({ heading, text, link, imageSrc, imageAlt }) => {
   )
 }
 
-export const CardStory = () => (
-  <div className='sm:max-w-xs'>
-    <Card
-      heading={heading}
-      text={text}
-      imageSrc={placeholder}
-      imageAlt='Image'
-    />
-  </div>
-)
+export const CardStory = () => {
+  const heading = text('Heading', defaultHeading)
+  const cardText = text('Text', defaultText)
+  const placeholder = text('Placeholder', defaultPlaceholder)
+
+  return (
+    <div className='sm:max-w-xs'>
+      <Card
+        heading={heading}
+        text={cardText}
+        imageSrc={placeholder}
+        imageAlt='Image'
+      />
+    </div>
+  )
+}
 
 CardStory.story = {
   name: 'Card'
