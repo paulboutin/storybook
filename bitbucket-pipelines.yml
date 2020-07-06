@@ -11,7 +11,7 @@ definitions:
 
     - step: &snapshot-tests
         name: Snapshot tests
-        image: buildkite/puppeteer:v3.0.4
+        image: buildkite/puppeteer:latest
         caches:
           - node
         script:
