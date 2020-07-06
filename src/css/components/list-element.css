@@ -1,4 +1,4 @@
-.list-element-container {
+.list-element {
   @apply p-16;
 
   @screen md {
@@ -34,23 +34,8 @@
     }
   }
 
-  &.alt {
-    & .list-element-header .list-element-header-lead {
-      @apply text-green;
-    }
-  }
-
   & .list-element-header {
     @apply mb-24;
-
-    & .list-element-header-lead {
-      @apply uppercase mb-8 text-grey-80 font-bold;
-    }
-
-    & .list-element-header-spacer {
-      @apply block border-b-2 border-yellow w-48 mb-16;
-      margin-bottom: calc(theme('spacing.16') - theme('borderWidth.2'));
-    }
 
     & .list-element-heading {
       @apply text-h2;
