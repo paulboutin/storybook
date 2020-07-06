@@ -37,7 +37,12 @@
     }
 
     & .card-link {
-      @apply font-bold text-green;
+      @apply font-bold text-green cursor-pointer;
+
+      &:after {
+        @apply font-awesome font-bold ml-8;
+        content: '\f30b';
+      }
     }
   }
 }
