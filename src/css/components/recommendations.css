@@ -1,0 +1,25 @@
+.recommendations {
+  & .recommendations-heading {
+    @apply text-center mb-16;
+  }
+
+  & .recommendations-content {
+    @apply block;
+
+    @screen sm {
+      @apply flex flex-wrap;
+    }
+
+    & .recommendations-col {
+      @apply w-full py-8;
+
+      @screen sm {
+        @apply w-1/2 px-8;
+      }
+
+      @screen md {
+        @apply w-1/3 px-16;
+      }
+    }
+  }
+}
