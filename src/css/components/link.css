@@ -1,7 +1,3 @@
 .link {
-  @apply text-blue;
-}
-
-.link:hover {
-  @apply underline text-blue-light;
+  @apply font-bold text-green cursor-pointer;
 }
