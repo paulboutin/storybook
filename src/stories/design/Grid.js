@@ -71,5 +71,19 @@ export const Grid = () => (
       <Column className='col-md-6 col-3'>.col-md-6 .col-3</Column>
       <Column className='col-md-6 col-9'>.col-md-6 .col-9</Column>
     </div>
+
+    <h2 className='mt-32 mb-16 text-grey-40'>Offset columns</h2>
+
+    <div className='row'>
+      <Column className='col-4'>.col-4</Column>
+      <Column className='col-md-offset-4 col-md-4 col-8'>
+        .col-md-offset-4 .col-md-4 .col-8
+      </Column>
+    </div>
+
+    <div className='row'>
+      <Column className='col-4'>.col-4</Column>
+      <Column className='col-offset-2 col-8'>.col-offset-2 .col-8</Column>
+    </div>
   </div>
 )
