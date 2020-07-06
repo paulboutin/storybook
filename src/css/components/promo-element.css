@@ -1,12 +1,12 @@
 .promo-element {
-  @apply h-screen flex text-grey text-left;
+  @apply h-screen text-grey text-left;
 
   @screen sm {
-    @apply h-auto;
+    @apply h-auto flex flex-row-reverse justify-center p-32;
   }
 
   &.alt {
-    @apply flex-row-reverse;
+    @apply flex-row;
   }
 
   & .promo-element-img {
@@ -14,22 +14,15 @@
   }
 
   & .promo-element-content {
-    @apply mb-24 w-1/2;
+    @apply w-1/2;
 
     @screen sm {
-      @apply inline-block mx-64 my-64 w-1/2;
+      @apply w-1/2 mx-64 my-64 flex flex-col justify-center;
     }
 
-    @screen lg {
-      @apply w-7/12;
+    & .promo-element-heading,
+    & .promo-element-text {
+      @apply mb-12;
     }
-  }
-
-  & .promo-element-heading {
-    @apply mb-12;
-  }
-
-  & .promo-element-btn {
-    @apply px-32;
   }
 }

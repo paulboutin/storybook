@@ -23,7 +23,7 @@ export const PromoElement = () => {
         alt='Hero image'
       />
       <div className='promo-element-content'>
-        <Eyebrow text={eyebrow} alt={type === 'Standard'} />
+        <Eyebrow text={eyebrow} alt={type === 'Alt'} />
         <h2 className='promo-element-heading'>{heading}</h2>
         <p className='promo-element-text'>{text}</p>
         <Link href='#'>
