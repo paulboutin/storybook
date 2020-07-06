@@ -1,3 +1,5 @@
+import accordions from './components/accordion'
+
 function ready(fn) {
   if (
     document.readyState === 'complete' ||
@@ -9,6 +11,8 @@ function ready(fn) {
   }
 }
 
-ready(() => {
-  require('./components/accordion')
-})
+export default () => {
+  ready(() => {
+    accordions()
+  })
+}
