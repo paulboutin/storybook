@@ -22,14 +22,16 @@ export const PromoElement = () => {
         src='http://via.placeholder.com/1600'
         alt='Hero image'
       />
-      <div className='promo-element-content'>
-        <Eyebrow text={eyebrow} alt={type === 'Alt'} />
-        <h2 className='promo-element-heading'>{heading}</h2>
-        <p className='promo-element-text'>{text}</p>
-        <Link href='#'>
-          {link}
-          <span className='ml-8 font-awesome font-bold fa-long-arrow-alt-right' />
-        </Link>
+      <div className='promo-element-content-wrapper'>
+        <div className='promo-element-content'>
+          <Eyebrow text={eyebrow} alt={type === 'Alt'} />
+          <h2 className='promo-element-heading'>{heading}</h2>
+          <p className='promo-element-text'>{text}</p>
+          <Link href='#'>
+            {link}
+            <span className='ml-8 font-awesome font-bold fa-long-arrow-alt-right' />
+          </Link>
+        </div>
       </div>
     </div>
   )

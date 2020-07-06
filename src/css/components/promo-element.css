@@ -1,28 +1,59 @@
 .promo-element {
-  @apply h-screen text-grey text-left;
+  @apply relative h-screen text-grey text-left p-32;
 
   @screen sm {
-    @apply h-auto flex flex-row-reverse justify-center p-32;
+    @apply h-auto flex flex-row-reverse items-center;
   }
 
   &.alt {
     @apply flex-row;
+
+    @screen sm {
+      & .promo-element-img {
+        @apply absolute h-full w-1/2;
+      }
+
+      & .promo-element-content-wrapper {
+        @apply bg-grey-20 my-64 flex justify-end items-center;
+        z-index: -1;
+
+        & .promo-element-content {
+          @apply pl-64 w-1/2;
+        }
+      }
+    }
+
+    &:not(.alt) {
+      & .promo-element-content-wrapper {
+        @apply w-1/2;
+      }
+    }
   }
 
   & .promo-element-img {
-    @apply w-1/2 object-cover;
-  }
-
-  & .promo-element-content {
-    @apply w-1/2;
+    @apply w-full object-cover mb-16;
 
     @screen sm {
-      @apply w-1/2 mx-64 my-64 flex flex-col justify-center;
+      @apply mb-0 py-32 px-64;
     }
+  }
 
-    & .promo-element-heading,
-    & .promo-element-text {
-      @apply mb-12;
+  & .promo-element-content-wrapper {
+    @apply w-full;
+
+    & .promo-element-content {
+      @screen sm {
+        @apply m-48 flex flex-col justify-center;
+      }
+
+      & .promo-element-heading,
+      & .promo-element-text {
+        @apply mb-12;
+      }
+
+      & .promo-element-text {
+        @apply text-grey-80;
+      }
     }
   }
 }
