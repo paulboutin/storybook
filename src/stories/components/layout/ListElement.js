@@ -1,6 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
-import { array } from '@storybook/addon-knobs'
+import { array, radios, text } from '@storybook/addon-knobs'
+
+const defaultPlaceholder = 'http://via.placeholder.com/500x400'
 
 const defaultItems = [
   '$0 monthly service charge with any deposit per statement',
@@ -52,22 +54,21 @@ const ListElementImage = ({ src, alt }) => (
   </div>
 )
 
-export const ListElementWithHeader = () => (
-  <section className='list-element-container'>
-    <ListElementContent
-      headerText={headerText}
-      items={array('Items', defaultItems)}
-    />
-  </section>
-)
+export const ListElement = () => {
+  const items = array('Items', defaultItems)
+  const placeholder = text('Placeholder', defaultPlaceholder)
+  const type = radios('Type', ['Standard', 'Alt'], 'Standard')
 
-export const ListElementWithImage = () => (
-  <section className='list-element-container'>
-    <ListElementImage src='http://via.placeholder.com/500x400' alt='Image' />
-    <ListElementContent
-      headerText={headerText}
-      items={array('Items', defaultItems)}
-      altLayout
-    />
-  </section>
-)
+  const isAlt = type === 'Alt'
+
+  return (
+    <section className='list-element-container'>
+      {isAlt && <ListElementImage src={placeholder} alt='Image' />}
+      <ListElementContent
+        headerText={headerText}
+        items={items}
+        altLayout={isAlt}
+      />
+    </section>
+  )
+}
