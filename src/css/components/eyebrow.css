@@ -1,0 +1,22 @@
+.eyebrow {
+  &:not(.alt) {
+    & .list-element-header {
+      @apply py-4 px-64 mb-0;
+    }
+  }
+
+  &.alt {
+    & .eyebrow-text {
+      @apply text-green;
+    }
+  }
+
+  & .eyebrow-text {
+    @apply uppercase mb-8 text-grey-80 font-bold;
+  }
+
+  & .eyebrow-spacer {
+    @apply block border-b-2 border-yellow w-48 mb-16;
+    margin-bottom: calc(theme('spacing.16') - theme('borderWidth.2'));
+  }
+}
