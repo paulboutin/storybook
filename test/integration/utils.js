@@ -3,11 +3,10 @@ export const defaultViewports = {
   '992px': { width: 992, height: 558 }
 }
 
-export const getStoryUrl = params => {
+export const getStoryUrl = ({ block, component, ...extra }) => {
   const BASE_URL = `http://localhost:${process.env.PORT}/iframe.html`
 
   const searchParams = new URLSearchParams()
-  const { block, component, ...extra } = params
 
   searchParams.append('id', [block, component].join('--'))
   Object.entries(extra).forEach(([key, value]) => {
