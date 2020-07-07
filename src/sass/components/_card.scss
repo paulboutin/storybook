@@ -4,6 +4,7 @@
   height: 100%;
   overflow: hidden;
   @include box-shadow('lg');
+  @include border-radius('sm');
 
   @include screen('sm') {
     max-width: 2 * spacing(160);
