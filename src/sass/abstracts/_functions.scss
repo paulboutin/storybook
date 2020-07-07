@@ -1,0 +1,7 @@
+@function color($color) {
+  @return map-get($colors, $color);
+}
+
+@function spacing($size) {
+  @return map-get($spacings, $size);
+}
