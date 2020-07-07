@@ -9,7 +9,7 @@ export const Link = ({ href, children }) => (
 export const LinkStory = () => (
   <Link href='#'>
     Link
-    <span className='ml-8 font-awesome font-bold fa-long-arrow-alt-right' />
+    <span className='font-awesome-bold fa-long-arrow-alt-right' />
   </Link>
 )
 

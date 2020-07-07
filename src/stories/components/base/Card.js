@@ -17,7 +17,7 @@ export const Card = ({ heading, text, href, imageSrc, imageAlt }) => {
         </div>
         <Link href={href}>
           Read more
-          <span className='ml-8 font-awesome font-bold fa-long-arrow-alt-right' />
+          <span className='font-awesome-bold fa-long-arrow-alt-right' />
         </Link>
       </div>
     </div>

@@ -1,0 +1,34 @@
+.eyebrow {
+  text-align: left;
+
+  &:not(.alt) {
+    .list-element-header {
+      padding: spacing(4) spacing(64);
+      margin-bottom: 0;
+    }
+  }
+
+  &.alt {
+    .eyebrow-text {
+      color: color('green');
+    }
+
+    .eyebrow-spacer {
+      display: none;
+    }
+  }
+
+  .eyebrow-text {
+    text-transform: uppercase;
+    color: color('grey-80');
+    margin-bottom: spacing(8);
+    @include font-weight('bold');
+  }
+
+  .eyebrow-spacer {
+    display: block;
+    border-bottom: 4px solid color('yellow');
+    width: spacing(48);
+    margin-bottom: calc(#{spacing(16)} - 4px);
+  }
+}

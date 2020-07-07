@@ -54,18 +54,5 @@
         color: color('grey-80');
       }
     }
-
-    .card-link {
-      color: color('green');
-      cursor: pointer;
-      @include font-weight('bold');
-
-      &:after {
-        margin-left: spacing(8);
-        @include font-family('font-awesome');
-        @include font-weight('bold');
-        content: '\f30b';
-      }
-    }
   }
 }

@@ -7,7 +7,7 @@ const defaultText = 'Mobile banking'
 export const Eyebrow = ({ text, alt = false }) => (
   <div className={classNames('eyebrow', alt ? 'alt' : '')}>
     <p className='eyebrow-text'>{text}</p>
-    {!alt && <div className='eyebrow-spacer' />}
+    <div className='eyebrow-spacer' />
   </div>
 )
 

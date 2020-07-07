@@ -40,6 +40,8 @@
   }
 
   &.alt {
+    margin-top: spacing(16);
+
     .list-element-header .list-element-header-lead {
       color: color('green');
     }
@@ -47,20 +49,6 @@
 
   .list-element-header {
     margin-bottom: spacing(24);
-
-    .list-element-header-lead {
-      text-transform: uppercase;
-      margin-bottom: spacing(8);
-      color: color('grey-80');
-      @include font-weight('bold');
-    }
-
-    .list-element-header-spacer {
-      display: block;
-      border: 2px solid color('yellow');
-      width: spacing(48);
-      margin-bottom: calc(#{spacing(16)} - 2px);
-    }
 
     .list-element-heading {
       @include font-size('h2');
