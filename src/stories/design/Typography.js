@@ -9,39 +9,39 @@ export const Typography = () => {
 
   return (
     <div>
-      <h2 className='mb-16 text-grey-40'>Headings</h2>
+      <h2 className='ds:typography-heading'>Headings</h2>
 
-      <p className='text-grey-40 text-xs'>Heading 1</p>
-      <h1 className='mb-16'>{txt}</h1>
+      <p className='ds:typography-title'>Heading 1</p>
+      <h1 className='ds:typography-text'>{txt}</h1>
 
-      <p className='text-grey-40 text-xs'>Heading 2</p>
-      <h2 className='mb-16'>{txt}</h2>
+      <p className='ds:typography-title'>Heading 2</p>
+      <h2 className='ds:typography-text'>{txt}</h2>
 
-      <p className='text-grey-40 text-xs'>Heading 3</p>
-      <h3 className='mb-16'>{txt}</h3>
+      <p className='ds:typography-title'>Heading 3</p>
+      <h3 className='ds:typography-text'>{txt}</h3>
 
-      <p className='text-grey-40 text-xs'>Heading 4</p>
-      <h4 className='mb-16'>{txt}</h4>
+      <p className='ds:typography-title'>Heading 4</p>
+      <h4 className='ds:typography-text'>{txt}</h4>
 
-      <p className='text-grey-40 text-xs'>Heading 5</p>
-      <h5 className='mb-16'>{txt}</h5>
+      <p className='ds:typography-title'>Heading 5</p>
+      <h5 className='ds:typography-text'>{txt}</h5>
 
-      <p className='text-grey-40 text-xs'>Heading 6</p>
-      <h6 className='mb-48'>{txt}</h6>
+      <p className='ds:typography-title'>Heading 6</p>
+      <h6 className='ds:typography-text'>{txt}</h6>
 
-      <h2 className='mb-16 text-grey-40'>Body</h2>
+      <h2 className='ds:typography-heading'>Body</h2>
 
-      <p className='text-grey-40 text-xs'>Body large</p>
-      <div className='text-lg mb-16'>{txt}</div>
+      <p className='ds:typography-title'>Body large</p>
+      <div className='ds:typography-text--lg'>{txt}</div>
 
-      <p className='text-grey-40 text-xs'>Body base</p>
-      <div className='text-base mb-16'>{txt}</div>
+      <p className='ds:typography-title'>Body base</p>
+      <div className='ds:typography-text--base'>{txt}</div>
 
-      <p className='text-grey-40 text-xs'>Body small</p>
-      <div className='text-sm mb-16'>{txt}</div>
+      <p className='ds:typography-title'>Body small</p>
+      <div className='ds:typography-text--sm'>{txt}</div>
 
-      <p className='text-grey-40 text-xs'>Body extra small</p>
-      <div className='text-xs mb-16'>{txt}</div>
+      <p className='ds:typography-title'>Body extra small</p>
+      <div className='ds:typography-text--xs'>{txt}</div>
     </div>
   )
 }
