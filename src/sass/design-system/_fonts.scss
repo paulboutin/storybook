@@ -1,0 +1,33 @@
+.ds\:fonts {
+  display: flex;
+}
+
+.ds\:fonts-section {
+  width: 50%;
+}
+
+.ds\:font--display {
+  @include font-family('display');
+}
+
+.ds\:font--body {
+  @include font-family('body');
+}
+
+.ds\:fonts-title {
+  color: color('grey-40');
+}
+
+.ds\:fonts-divider {
+  margin-bottom: spacing(8);
+}
+
+.ds\:font--italic {
+  font-style: italic;
+}
+
+@each $name, $weight in $font-weights {
+  .ds\:font--#{$name} {
+    font-weight: $weight;
+  }
+}
