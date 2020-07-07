@@ -14,7 +14,7 @@
   .hero-eyebrow {
     margin-bottom: spacing(8);
     color: color('green');
-    letter-spacing: 0.05em;
+    letter-spacing: 1px;
     text-transform: uppercase;
     @include font-size('xs');
     @include font-weight('bold');
@@ -37,6 +37,12 @@
 
   .hero-subtext {
     @include font-size('xs');
+
+    :last-child {
+      @include font-weight('bold');
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 
   @include screen('sm') {
@@ -64,7 +70,7 @@
       position: absolute;
       right: 0;
       height: 100%;
-      width: col(3, 5);
+      width: 60%;
     }
 
     .hero-content {

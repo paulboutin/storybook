@@ -26,9 +26,9 @@
 
 .ds\:color-block {
   @include font-size('sm');
+  @include border-radius('base');
   padding: spacing(4) 0;
   margin-bottom: spacing(4);
-  border-radius: 5px;
   text-align: center;
 }
 
