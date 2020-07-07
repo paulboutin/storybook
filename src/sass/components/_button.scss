@@ -1,0 +1,18 @@
+.btn {
+  @include font-size('xs');
+  @include font-weight('semi-bold');
+  padding: spacing(8) spacing(24);
+  border-radius: 5px;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: background-color 0.3s;
+}
+
+.btn-primary {
+  background-color: color('green');
+  color: color('white');
+}
+
+.btn-primary:hover {
+  background-color: color('green-dark');
+}
