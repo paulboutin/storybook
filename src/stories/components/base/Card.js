@@ -28,14 +28,12 @@ export const CardStory = () => {
   const placeholder = text('Placeholder', defaultPlaceholder)
 
   return (
-    <div className='sm:max-w-xs'>
-      <Card
-        heading={heading}
-        text={cardText}
-        imageSrc={placeholder}
-        imageAlt='Image'
-      />
-    </div>
+    <Card
+      heading={heading}
+      text={cardText}
+      imageSrc={placeholder}
+      imageAlt='Image'
+    />
   )
 }
 
