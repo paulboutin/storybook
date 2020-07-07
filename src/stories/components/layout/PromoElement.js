@@ -10,13 +10,17 @@ const text =
   'Deposit checks, transfer funds, pay your bills, and manage all of your finances securely, right on the mobile app.'
 const link = 'See all you can do in mobile banking'
 
+const classes = {
+  Standard: '',
+  Alt: 'alt',
+  Full: 'full'
+}
+
 export const PromoElement = () => {
-  const type = radios('Type', ['Standard', 'Alt'], 'Standard')
+  const type = radios('Type', ['Standard', 'Alt', 'Full'], 'Standard')
 
   return (
-    <div
-      className={classNames('promo-element', type === 'Standard' ? '' : 'alt')}
-    >
+    <div className={classNames('promo-element', classes[type])}>
       <img
         className='promo-element-img'
         src='http://via.placeholder.com/1600'
@@ -24,12 +28,16 @@ export const PromoElement = () => {
       />
       <div className='promo-element-content-wrapper'>
         <div className='promo-element-content'>
-          <Eyebrow text={eyebrow} alt={type === 'Alt'} />
+          <Eyebrow
+            text={eyebrow}
+            alt={['Alt', 'Full'].includes(type)}
+            inverted={type === 'Full'}
+          />
           <h2 className='promo-element-heading'>{heading}</h2>
           <p className='promo-element-text'>{text}</p>
-          <Link href='#'>
+          <Link href='#' inverted={type === 'Full'}>
             {link}
-            <span className='ml-8 font-awesome font-bold fa-long-arrow-alt-right' />
+            <span className='ml-8 font-awesome-bold fa-long-arrow-alt-right' />
           </Link>
         </div>
       </div>

@@ -1,7 +1,8 @@
 import React from 'react'
+import classNames from 'classnames'
 
-export const Link = ({ href, children }) => (
-  <a href={href} className='link'>
+export const Link = ({ inverted = false, href, children }) => (
+  <a href={href} className={classNames('link', inverted ? 'inverted' : '')}>
     {children}
   </a>
 )

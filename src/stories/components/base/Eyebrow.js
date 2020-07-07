@@ -4,8 +4,14 @@ import { text, radios } from '@storybook/addon-knobs'
 
 const defaultText = 'Mobile banking'
 
-export const Eyebrow = ({ text, alt = false }) => (
-  <div className={classNames('eyebrow', alt ? 'alt' : '')}>
+export const Eyebrow = ({ text, alt = false, inverted = false }) => (
+  <div
+    className={classNames(
+      'eyebrow',
+      alt ? 'alt' : '',
+      inverted ? 'inverted' : ''
+    )}
+  >
     <p className='eyebrow-text'>{text}</p>
     <div className='eyebrow-spacer' />
   </div>
