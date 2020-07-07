@@ -5,3 +5,7 @@
 @function spacing($size) {
   @return map-get($spacings, $size);
 }
+
+@function col($col) {
+  @return percentage($col / 12);
+}
