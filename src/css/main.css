@@ -5,6 +5,4 @@
 @import 'tailwindcss/components';
 @import './components/all.css';
 
-@import './lib/fontawesome.css';
-
 @import 'tailwindcss/utilities';
