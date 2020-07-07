@@ -1,0 +1,48 @@
+.ds\:spacing-heading {
+  color: color('grey-40');
+  margin-bottom: spacing(12);
+}
+
+.ds\:spacing-block-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: spacing(48);
+}
+
+.ds\:spacing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ds\:spacing-block {
+  background-color: color('green');
+  margin-bottom: spacing(12);
+}
+
+.ds\:spacing-block--padding {
+  width: spacing(16);
+  height: spacing(16);
+  background-color: color('green-darker');
+}
+
+.ds\:spacing-block--margin {
+  background-color: color('grey-20');
+}
+
+@each $name, $size in $spacings {
+  .ds\:spacing--#{$name} {
+    width: $size;
+    height: $size;
+  }
+
+  .ds\:padding--#{$name} {
+    padding: $size;
+  }
+
+  .ds\:margin--#{$name} {
+    margin-top: $size;
+  }
+}
