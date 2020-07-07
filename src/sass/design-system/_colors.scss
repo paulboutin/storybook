@@ -1,0 +1,43 @@
+.ds\:colors {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include screen('lg') {
+    flex-wrap: nowrap;
+  }
+}
+
+.ds\:color-group {
+  padding: spacing(8);
+  width: 100%;
+
+  & > div {
+    margin: auto;
+    max-width: 20rem;
+  }
+}
+
+.ds\:color-name {
+  @include font-size('sm');
+  @include font-weight('semi-bold');
+  color: color('grey');
+  margin-bottom: spacing(4);
+}
+
+.ds\:color-block {
+  @include font-size('sm');
+  padding: spacing(4) 0;
+  margin-bottom: spacing(4);
+  border-radius: 5px;
+  text-align: center;
+}
+
+.ds\:color--white {
+  border: 1px solid color('grey-40');
+}
+
+@each $name, $color in $colors {
+  .ds\:color--#{$name} {
+    background-color: #{$color};
+  }
+}
