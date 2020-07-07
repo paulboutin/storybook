@@ -8,7 +8,7 @@
   }
 
   & .legal-list {
-    @apply list-decimal ml-24 text-grey-80 text-sm;
+    @apply list-decimal ml-24 text-grey-80 text-xs;
 
     & .legal-list-item:not(:last-child) {
       @apply mb-16;
