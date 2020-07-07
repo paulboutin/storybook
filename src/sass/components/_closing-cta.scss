@@ -1,0 +1,61 @@
+.closing-cta {
+  position: relative;
+  height: 100vh;
+  color: color('grey');
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include screen('sm') {
+    height: auto;
+  }
+
+  &.alt .closing-cta-content {
+    align-self: flex-end;
+
+    @include screen('sm') {
+      text-align: left;
+      margin-left: 40%;
+    }
+
+    @include screen('lg') {
+      padding-left: spacing(32);
+      padding-right: spacing(32);
+    }
+  }
+
+  .closing-cta-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .closing-cta-content {
+    position: relative;
+    margin-left: spacing(48);
+    margin-right: spacing(48);
+    margin-bottom: spacing(24);
+    text-align: center;
+
+    @include screen('sm') {
+      display: inline-block;
+      margin: spacing(64);
+      width: col(6);
+    }
+
+    @include screen('lg') {
+      width: col(7);
+    }
+  }
+
+  .closing-cta-heading {
+    margin-bottom: spacing(12);
+    color: color('white');
+  }
+
+  .closing-cta-btn {
+    padding-left: spacing(32);
+    padding-right: spacing(32);
+  }
+}

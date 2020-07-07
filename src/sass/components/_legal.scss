@@ -1,0 +1,22 @@
+.legal {
+  .legal-spacer {
+    border: 1px solid color('grey-40');
+    margin-top: spacing(16);
+    margin-bottom: spacing(48);
+  }
+
+  .legal-heading {
+    margin-bottom: spacing(16);
+  }
+
+  .legal-list {
+    list-style: decimal;
+    margin-left: spacing(24);
+    color: color('grey-80');
+    @include font-size('xs');
+
+    .legal-list-item:not(:last-child) {
+      margin-bottom: spacing(16);
+    }
+  }
+}

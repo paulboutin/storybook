@@ -42,3 +42,22 @@
     font-size: #{$max-font-size}px;
   }
 }
+
+@mixin box-shadow($size) {
+  box-shadow: map-get($box-shadows, $size);
+}
+
+@mixin border-radius($sizes...) {
+  // mixin accepts variadic arguments
+  // pass one value for all corners
+  // pass two values for x and y values
+  // pass 4 values for individual corners
+  // top-left, top-right, bottom-right, bottom-left
+  $values: ();
+
+  @each $size in $sizes {
+    $values: append($values, map-get($border-radius, $size));
+  }
+
+  border-radius: $values;
+}

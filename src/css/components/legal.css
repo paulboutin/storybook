@@ -1,0 +1,17 @@
+.legal {
+  & .legal-spacer {
+    @apply border border-grey-40 mt-16 mb-48;
+  }
+
+  & .legal-heading {
+    @apply mb-16;
+  }
+
+  & .legal-list {
+    @apply list-decimal ml-24 text-grey-80 text-xs;
+
+    & .legal-list-item:not(:last-child) {
+      @apply mb-16;
+    }
+  }
+}
