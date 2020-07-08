@@ -1,0 +1,149 @@
+$colors: (
+  'green': #008855,
+  'green-light': #00bb75,
+  'green-dark': #005535,
+  'green-darker': #003b25,
+  'yellow': #ffc86f,
+  'yellow-light': #ffdba2,
+  'yellow-dark': #ffb53c,
+  'yellow-darker': #ffa109,
+  'blue': #0062ff,
+  'blue-light': #3381ff,
+  'blue-dark': #0058e6,
+  'blue-darker': #003b99,
+  'black': #000000,
+  'grey': #202020,
+  'grey-80': #464646,
+  'grey-40': #b9b9b9,
+  'grey-30': #d2d2d2,
+  'grey-20': #ececec,
+  'grey-15': #f9f9f9,
+  'white': #ffffff,
+  'success': #00aa55,
+  'success-light': #00c362,
+  'success-dark': #009048,
+  'success-darker': #00773b,
+  'warning': #ffa109,
+  'warning-light': #ffbe55,
+  'warning-dark': #ee9300,
+  'warning-darker': #d58400,
+  'error': #cd0a0a,
+  'error-light': #f41616,
+  'error-dark': #b50909,
+  'error-darker': #9c0808
+);
+
+$spacings: (
+  0: 0,
+  4: 0.222rem,
+  8: 0.444rem,
+  12: 0.666rem,
+  16: 0.888rem,
+  24: 1.333rem,
+  32: 1.777rem,
+  48: 2.666rem,
+  64: 3.555rem,
+  96: 5.333rem,
+  160: 8.888rem
+);
+
+$screens: (
+  xs: 480px,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
+
+$font-sizes: (
+  xs: (
+    font-size: 0.777rem,
+    line-height: 1.5
+  ),
+  sm: (
+    font-size: 0.888rem,
+    line-height: 1.5
+  ),
+  base: (
+    font-size: 1rem,
+    line-height: 1.5
+  ),
+  lg: (
+    font-size: 1.166rem,
+    line-height: 1.5
+  ),
+  h1: (
+    font-size: 2.5rem,
+    line-height: 1.18
+  ),
+  h2: (
+    font-size: 2.055rem,
+    line-height: 1.15
+  ),
+  h3: (
+    font-size: 1.777rem,
+    line-height: 1.333
+  ),
+  h4: (
+    font-size: 1.555rem,
+    line-height: 1.333
+  ),
+  h5: (
+    font-size: 1.166rem,
+    line-height: 1.5
+  ),
+  h6: (
+    font-size: 1rem,
+    line-height: 1.5
+  )
+);
+
+$font-families: (
+  display: (
+    'BNPP SANS',
+    sans-serif
+  ),
+  body: (
+    'Public Sans',
+    sans-serif
+  ),
+  font-awesome: (
+    'Font Awesome 5 Free'
+  )
+);
+
+$font-weights: (
+  light: 300,
+  normal: 400,
+  semi-bold: 600,
+  bold: 700,
+  extra-bold: 800
+);
+
+$box-shadows: (
+  sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05),
+  base: (
+    0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.06)
+  ),
+  md: (
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06)
+  ),
+  lg: (
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05)
+  ),
+  xl: (
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04)
+  ),
+  inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06),
+  none: none
+);
+
+$border-radius: (
+  none: 0,
+  sm: 2px,
+  base: 5px,
+  full: 9999px
+);

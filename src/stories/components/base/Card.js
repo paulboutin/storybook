@@ -16,6 +16,7 @@ export const Card = ({ heading, text, link, imageSrc, imageAlt }) => {
         </div>
         <a className='card-link' href={link}>
           Read more
+          <i className='fa fa-long-arrow-alt-right' />
         </a>
       </div>
     </div>
@@ -28,14 +29,12 @@ export const CardStory = () => {
   const placeholder = text('Placeholder', defaultPlaceholder)
 
   return (
-    <div className='sm:max-w-xs'>
-      <Card
-        heading={heading}
-        text={cardText}
-        imageSrc={placeholder}
-        imageAlt='Image'
-      />
-    </div>
+    <Card
+      heading={heading}
+      text={cardText}
+      imageSrc={placeholder}
+      imageAlt='Image'
+    />
   )
 }
 

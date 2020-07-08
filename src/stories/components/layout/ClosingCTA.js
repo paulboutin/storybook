@@ -18,7 +18,7 @@ export const ClosingCTA = () => {
       />
       <div className='closing-cta-content'>
         <h2 className='closing-cta-heading'>{heading}</h2>
-        <a className='btn btn-primary closing-cta-btn' href='#'>
+        <a className='button button-primary closing-cta-button' href='#'>
           Apply now
         </a>
       </div>
