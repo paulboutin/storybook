@@ -20,7 +20,7 @@ export const Hero = () => {
           No hassle.
         </h2>
         <p className='hero-text'>Open an account in about 10 minutes</p>
-        <a className='btn btn-primary hero-btn' href='#'>
+        <a className='button button-primary hero-button' href='#'>
           Apply now
         </a>
         <p className='hero-subtext'>

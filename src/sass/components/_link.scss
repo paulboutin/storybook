@@ -1,8 +1,8 @@
 .link {
   color: color('blue');
-}
 
-.link:hover {
-  color: color('blue-light');
-  text-decoration: underline;
+  &:hover {
+    color: color('blue-light');
+    text-decoration: underline;
+  }
 }
