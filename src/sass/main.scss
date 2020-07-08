@@ -3,7 +3,6 @@
 @import 'abstracts/functions';
 
 @import 'base/reset';
-@import 'base/grid';
 @import 'base/fonts';
 @import 'base/typography';
 @import 'base/utilities';
@@ -25,4 +24,5 @@
 @import 'design-system/spacing';
 @import 'design-system/grid';
 
+@import 'lib/bootstrap-grid';
 @import 'lib/fontawesome';
