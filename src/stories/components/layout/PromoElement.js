@@ -37,7 +37,7 @@ export const PromoElement = () => {
           <p className='promo-element-text'>{text}</p>
           <Link href='#' inverted={type === 'Full'}>
             {link}
-            <span className='ml-8 font-awesome-bold fa-long-arrow-alt-right' />
+            <span className='link-pad-left fa fa-long-arrow-alt-right' />
           </Link>
         </div>
       </div>

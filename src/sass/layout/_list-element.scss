@@ -1,4 +1,4 @@
-.list-element-container {
+.list-element {
   padding: spacing(16);
 
   @include screen('sm') {
@@ -41,22 +41,19 @@
 
   &.alt {
     margin-top: spacing(16);
-
-    .list-element-header .list-element-header-lead {
-      color: color('green');
-    }
   }
 
   .list-element-header {
     margin-bottom: spacing(24);
 
     .list-element-heading {
-      @include font-size('h2');
+      @include font-size('h3');
     }
 
     .list-element-header-text {
       color: color('grey-80');
       display: none;
+      @include font-size('sm');
 
       @include screen('sm') {
         display: block;
