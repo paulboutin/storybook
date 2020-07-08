@@ -3,6 +3,11 @@
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
  */
 
+.fa {
+  @include font-family('font-awesome');
+  font-weight: 900;
+}
+
 .fa-lg {
   font-size: 1.33333em;
   line-height: 0.75em;
