@@ -11,8 +11,14 @@ function ready(fn) {
   }
 }
 
-export default () => {
+function setup() {
   ready(() => {
     accordions()
   })
 }
+
+if (process.env.NODE_ENV === 'production') {
+  setup()
+}
+
+export default setup
