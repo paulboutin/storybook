@@ -33,9 +33,9 @@ describe('Layout Components', () => {
       'knob-Type': 'Alt'
     },
     {
-      title: 'promo-element full',
+      title: 'promo-element accent',
       component: 'promo-element',
-      'knob-Type': 'Full'
+      'knob-Type': 'Accent'
     }
   ]
   buildDefaultSnapshotTests('components-layout')(stories)

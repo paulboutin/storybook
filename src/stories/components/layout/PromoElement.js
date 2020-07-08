@@ -13,29 +13,31 @@ const link = 'See all you can do in mobile banking'
 const classes = {
   Standard: '',
   Alt: 'alt',
-  Full: 'full'
+  Accent: 'accent'
 }
 
 export const PromoElement = () => {
-  const type = radios('Type', ['Standard', 'Alt', 'Full'], 'Standard')
+  const type = radios('Type', ['Standard', 'Alt', 'Accent'], 'Standard')
 
   return (
     <div className={classNames('promo-element', classes[type])}>
-      <img
-        className='promo-element-img'
-        src='http://via.placeholder.com/1600'
-        alt='Hero image'
-      />
+      <div className='promo-element-img-wrapper'>
+        <img
+          className='promo-element-img'
+          src='http://via.placeholder.com/1600'
+          alt='Hero image'
+        />
+      </div>
       <div className='promo-element-content-wrapper'>
         <div className='promo-element-content'>
           <Eyebrow
             text={eyebrow}
-            alt={['Alt', 'Full'].includes(type)}
-            inverted={type === 'Full'}
+            alt={['Alt', 'Accent'].includes(type)}
+            inverted={type === 'Accent'}
           />
           <h2 className='promo-element-heading'>{heading}</h2>
           <p className='promo-element-text'>{text}</p>
-          <Link href='#' inverted={type === 'Full'}>
+          <Link href='#' inverted={type === 'Accent'}>
             {link}
             <span className='link-pad-left fa fa-long-arrow-alt-right' />
           </Link>
