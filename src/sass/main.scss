@@ -2,6 +2,9 @@
 @import 'abstracts/mixins';
 @import 'abstracts/functions';
 
+@import 'lib/bootstrap-grid';
+@import 'lib/fontawesome';
+
 @import 'base/reset';
 @import 'base/fonts';
 @import 'base/typography';
@@ -23,6 +26,3 @@
 @import 'design-system/fonts';
 @import 'design-system/spacing';
 @import 'design-system/grid';
-
-@import 'lib/bootstrap-grid';
-@import 'lib/fontawesome';
