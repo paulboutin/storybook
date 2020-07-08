@@ -12,7 +12,7 @@ module.exports = {
     config.module.rules.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: path.resolve(__dirname, '../src/sass')
+      include: path.resolve(__dirname, '../src')
     })
     return config
   }

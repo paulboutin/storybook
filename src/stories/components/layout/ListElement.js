@@ -18,10 +18,10 @@ const headerText = {
   text: 'Manage your money while contributing with the planet'
 }
 
-const ListElementItems = ({ items, listClass = 'check' }) => (
+const ListElementItems = ({ items, listClass = 'fa-check-circle' }) => (
   <ul className='list-element-items'>
     {items.map((item, index) => (
-      <li key={index} className={classNames('list-element-item', listClass)}>
+      <li key={index} className={classNames('list-element-item fa', listClass)}>
         {item}
       </li>
     ))}

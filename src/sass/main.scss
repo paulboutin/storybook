@@ -2,27 +2,22 @@
 @import 'abstracts/mixins';
 @import 'abstracts/functions';
 
+@import 'lib/bootstrap-grid';
+@import 'lib/fontawesome';
+
 @import 'base/reset';
-@import 'base/grid';
 @import 'base/fonts';
 @import 'base/typography';
-@import 'base/utilities';
 
 @import 'components/button';
 @import 'components/card';
-@import 'components/closing-cta';
 @import 'components/eyebrow';
-@import 'components/faq';
-@import 'components/hero';
-@import 'components/legal';
 @import 'components/link';
-@import 'components/list-element';
-@import 'components/promo-element';
-@import 'components/recommendations';
 
-@import 'design-system/colors';
-@import 'design-system/typography';
-@import 'design-system/fonts';
-@import 'design-system/spacing';
-
-@import 'lib/fontawesome';
+@import 'layout/closing-cta';
+@import 'layout/faq';
+@import 'layout/hero';
+@import 'layout/legal';
+@import 'layout/list-element';
+@import 'layout/promo-element';
+@import 'layout/recommendations';

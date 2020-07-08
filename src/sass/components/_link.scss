@@ -15,4 +15,12 @@
       color: color('grey-20');
     }
   }
+
+  .link-pad-left {
+    margin-left: spacing(8);
+  }
+
+  .link-pad-right {
+    margin-right: spacing(8);
+  }
 }

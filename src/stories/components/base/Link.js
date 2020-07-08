@@ -10,7 +10,7 @@ export const Link = ({ inverted = false, href, children }) => (
 export const LinkStory = () => (
   <Link href='#'>
     Link
-    <span className='font-awesome-bold fa-long-arrow-alt-right' />
+    <span className='link-pad-left fa fa-long-arrow-alt-right' />
   </Link>
 )
 

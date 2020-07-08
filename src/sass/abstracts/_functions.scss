@@ -6,6 +6,6 @@
   @return map-get($spacings, $size);
 }
 
-@function col($col, $cols: 12) {
-  @return percentage($col / $cols);
+@function col($col) {
+  @return percentage($col / 12);
 }

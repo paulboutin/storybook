@@ -1,8 +1,8 @@
 .DS_Store
 .idea/
-public/styles.zip
+public/*.zip
 storybook-static/
-tailwind-build/
+build/
 __diff_output__/
 node_modules/
 .dsm/

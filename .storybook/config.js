@@ -5,8 +5,7 @@ import { initDsm } from '@invisionapp/dsm-storybook'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import renderHTML from '../src/decorators/renderHTML'
 import runScripts from '../src/decorators/runScripts'
-import '../src/css/main.css'
-import '../src/sass/main.scss'
+import '../src/stories/sass/main.scss'
 
 addDecorator(renderHTML)
 addDecorator(runScripts)
