@@ -21,7 +21,22 @@ describe('Layout Components', () => {
     { title: 'hero full', component: 'hero', 'knob-Type': 'Full' },
     { title: 'hero spaced', component: 'hero', 'knob-Type': 'Spaced' },
     { title: 'recommendations', component: 'recommendations' },
-    { title: 'faq', component: 'faq' }
+    { title: 'faq', component: 'faq' },
+    {
+      title: 'promo-element standard',
+      component: 'promo-element',
+      'knob-Type': 'Standard'
+    },
+    {
+      title: 'promo-element alt',
+      component: 'promo-element',
+      'knob-Type': 'Alt'
+    },
+    {
+      title: 'promo-element full',
+      component: 'promo-element',
+      'knob-Type': 'Full'
+    }
   ]
   buildDefaultSnapshotTests('components-layout')(stories)
 })
