@@ -15,7 +15,7 @@
     "dsm:preview": "dsm-storybook --auth-token ${DSM_TOKEN:-preview} preview -s public --quiet",
     "lint": "pretty-quick",
     "test": "run-s test:unit test:snapshot",
-    "test:unit": "jest -c test/unit/jest.config.js",
+    "test:unit": "jest -c test/unit/jest.config.js --passWithNoTests",
     "test:integration": "jest -c test/integration/jest.config.js --max-workers 2 --updateSnapshot=${UPDATE_SNAPSHOT:-false}",
     "test:snapshot": "cross-env PORT=${PORT:-6006} JEST_PUPPETEER_CONFIG=test/integration/jest-puppeteer.config.js start-server-and-test start:ci http://localhost:${PORT:-6006} test:integration",
     "test:snapshot:update": "cross-env UPDATE_SNAPSHOT=true npm run test:snapshot"
