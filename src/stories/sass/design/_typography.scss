@@ -1,0 +1,24 @@
+.ds\:typography-heading {
+  color: color('grey-40');
+  margin-bottom: spacing(16);
+
+  &:not(:first-child) {
+    margin-top: spacing(48);
+  }
+}
+
+.ds\:typography-title {
+  @include font-size('xs');
+  color: color('grey-40');
+}
+
+.ds\:typography-text {
+  margin-bottom: spacing(16);
+}
+
+@each $size in (lg, base, sm, xs) {
+  .ds\:typography-text--#{$size} {
+    @extend .ds\:typography-text;
+    @include font-size($size);
+  }
+}

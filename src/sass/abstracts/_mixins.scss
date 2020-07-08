@@ -1,0 +1,63 @@
+@mixin screen($size) {
+  @media (min-width: map-get($screens, $size)) {
+    @content;
+  }
+}
+
+@mixin font-size($size) {
+  $values: map-get($font-sizes, $size);
+  font-size: map-get($values, 'font-size');
+  line-height: map-get($values, 'line-height');
+}
+
+@mixin font-family($type) {
+  font-family: map-get($font-families, $type);
+}
+
+@mixin font-weight($name) {
+  font-weight: map-get($font-weights, $name);
+}
+
+@mixin fluid-typography() {
+  $min-font-size: 18;
+  $max-font-size: 24.75;
+  $min-screen-width: 480;
+  $max-screen-width: 1400;
+
+  $font-factor: $max-font-size - $min-font-size;
+  $screen-factor: $max-screen-width - $min-screen-width;
+
+  /* prettier-ignore */
+  $fluid-size: calc(#{$min-font-size}px + #{$font-factor} * ((100vw - #{$min-screen-width}px) / #{$screen-factor}));
+
+  font-size: #{$min-font-size}px;
+
+  @each $size, $width in $screens {
+    @media (min-width: $width) {
+      font-size: $fluid-size;
+    }
+  }
+
+  @media (min-width: $max-screen-width) {
+    font-size: #{$max-font-size}px;
+  }
+}
+
+@mixin box-shadow($size) {
+  box-shadow: map-get($box-shadows, $size);
+}
+
+@mixin border-radius($sizes...) {
+  // mixin accepts variadic arguments
+  // pass one value for all corners
+  // pass two values for x and y values
+  // pass 4 values for individual corners
+  // top-left, top-right, bottom-right, bottom-left
+  $values: ();
+
+  @each $size in $sizes {
+    $values: append($values, map-get($border-radius, $size));
+  }
+
+  border-radius: $values;
+}

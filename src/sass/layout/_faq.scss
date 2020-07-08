@@ -1,0 +1,43 @@
+.faq {
+  color: color('grey');
+}
+
+.faq-heading {
+  padding-left: spacing(32);
+  margin-bottom: spacing(16);
+  @include font-weight('bold');
+}
+
+.faq-block {
+  display: flex;
+  align-items: baseline;
+  cursor: pointer;
+  padding: spacing(24) spacing(24) spacing(24) spacing(32);
+  border-bottom: 1px solid color('grey-40');
+
+  .faq-question {
+    @include font-size('lg');
+  }
+
+  .faq-answer {
+    color: color('grey-80');
+    @include font-size('sm');
+  }
+
+  .accordion-content {
+    height: 0;
+    overflow: hidden;
+    transition-duration: 300ms;
+  }
+
+  .faq-icon {
+    @include font-size('xs');
+    color: color('green');
+  }
+}
+
+.accordion-expanded {
+  .accordion-content {
+    height: auto;
+  }
+}
