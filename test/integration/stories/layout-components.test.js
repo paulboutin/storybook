@@ -1,4 +1,4 @@
-import { buildDefaultSnapshotTests } from '../utils'
+import { buildSnapshotTests } from '../utils'
 
 describe('Layout Components', () => {
   const stories = [
@@ -17,11 +17,31 @@ describe('Layout Components', () => {
       component: 'closing-cta',
       'knob-Type': 'Standard'
     },
-    { title: 'closing-cta alt', component: 'closing-cta', 'knob-Type': 'Alt' },
-    { title: 'hero full', component: 'hero', 'knob-Type': 'Full' },
-    { title: 'hero spaced', component: 'hero', 'knob-Type': 'Spaced' },
-    { title: 'recommendations', component: 'recommendations' },
-    { title: 'faq', component: 'faq' }
+    {
+      title: 'closing-cta alt',
+      component: 'closing-cta',
+      'knob-Type': 'Alt'
+    },
+    {
+      title: 'hero full',
+      component: 'hero',
+      'knob-Type': 'Full'
+    },
+    {
+      title: 'hero spaced',
+      component: 'hero',
+      'knob-Type': 'Spaced'
+    },
+    {
+      title: 'recommendations',
+      component: 'recommendations',
+      devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'faq',
+      component: 'faq',
+      devices: ['mobile']
+    }
   ]
-  buildDefaultSnapshotTests('components-layout')(stories)
+  buildSnapshotTests('components-layout')(stories)
 })

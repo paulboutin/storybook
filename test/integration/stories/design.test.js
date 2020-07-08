@@ -1,6 +1,31 @@
-import { buildDefaultSnapshotTests } from '../utils'
+import { buildSnapshotTests } from '../utils'
 
-describe('Design', () => {
-  const stories = ['colors', 'typography', 'fonts', 'spacing', 'grid']
-  buildDefaultSnapshotTests('design-system')(stories)
+describe('Design System', () => {
+  const stories = [
+    {
+      title: 'colors',
+      component: 'colors',
+      devices: ['mobile', 'desktop']
+    },
+    {
+      title: 'typography',
+      component: 'typography',
+      devices: ['mobile', 'desktop']
+    },
+    {
+      title: 'fonts',
+      component: 'fonts',
+      devices: ['mobile']
+    },
+    {
+      title: 'spacing',
+      component: 'spacing',
+      devices: ['desktop']
+    },
+    {
+      title: 'grid',
+      component: 'grid'
+    }
+  ]
+  buildSnapshotTests('design-system')(stories)
 })
