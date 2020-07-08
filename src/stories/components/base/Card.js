@@ -16,6 +16,7 @@ export const Card = ({ heading, text, link, imageSrc, imageAlt }) => {
         </div>
         <a className='card-link' href={link}>
           Read more
+          <i className='fa fa-long-arrow-alt-right' />
         </a>
       </div>
     </div>

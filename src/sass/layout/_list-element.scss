@@ -84,18 +84,12 @@
 
   .list-element-item {
     position: relative;
+    margin-left: spacing(32);
 
-    &.check {
-      margin-left: spacing(32);
-    }
-
-    &.check:before {
+    &:before {
       position: absolute;
       color: color('green');
-      content: '\f058';
       margin-left: -#{spacing(32)};
-      @include font-family('font-awesome');
-      @include font-weight('bold');
     }
 
     &:not(:last-child) {

@@ -60,11 +60,8 @@
       cursor: pointer;
       @include font-weight('bold');
 
-      &:after {
+      .fa {
         margin-left: spacing(8);
-        @include font-family('font-awesome');
-        @include font-weight('bold');
-        content: '\f30b';
       }
     }
   }
