@@ -30,21 +30,14 @@
     transition-duration: 300ms;
   }
 
-  .faq-icon:before {
-    content: '+';
+  .faq-icon {
+    @include font-size('xs');
     color: color('green');
-    @include font-size('h3');
-    @include font-family('display');
-    @include font-weight('light');
   }
 }
 
 .accordion-expanded {
   .accordion-content {
     height: auto;
-  }
-
-  .faq-icon:before {
-    content: '-';
   }
 }

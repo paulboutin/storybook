@@ -12,7 +12,9 @@ const Block = ({ children, question, expanded }) => (
       <p className='faq-answer accordion-content'>{children}</p>
     </div>
 
-    <span className='faq-icon' />
+    <i
+      className={classNames('faq-icon fa', expanded ? 'fa-minus' : 'fa-plus')}
+    />
   </div>
 )
 
