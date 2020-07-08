@@ -1,6 +1,6 @@
 .DS_Store
 .idea/
-public/styles.zip
+public/*.zip
 storybook-static/
 build/
 __diff_output__/
