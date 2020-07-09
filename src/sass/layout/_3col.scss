@@ -1,0 +1,8 @@
+.three-col {
+  .three-col-heading {
+    text-align: center;
+    margin-top: spacing(16);
+    margin-bottom: spacing(16);
+    @include font-size('h2');
+  }
+}
