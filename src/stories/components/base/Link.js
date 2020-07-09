@@ -6,12 +6,16 @@ export const Link = ({
   inverted = false,
   icon,
   iconPosition = 'right',
+  className,
   children
 }) => {
   const Icon = <span className={`fa fa-${icon} link-icon-${iconPosition}`} />
 
   return (
-    <a href={href} className={classNames('link', inverted ? 'inverted' : '')}>
+    <a
+      href={href}
+      className={classNames('link', inverted ? 'inverted' : '', className)}
+    >
       {icon && iconPosition === 'left' && Icon}
       {children}
       {icon && iconPosition === 'right' && Icon}
