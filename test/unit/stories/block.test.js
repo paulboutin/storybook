@@ -1,6 +1,6 @@
 import React from 'react'
-import { renderToStaticMarkup } from 'react-dom/server'
 import { waitFor } from '@testing-library/dom'
+import { mount } from '../utils'
 
 import { Block } from '../../../src/stories/components/layout/FAQ'
 import fn from '../../../src/js/components/accordion'
@@ -8,23 +8,18 @@ import fn from '../../../src/js/components/accordion'
 describe('Block component', () => {
   it('should be interactive', async () => {
     // Arrange
-    document.body.innerHTML = renderToStaticMarkup(
-      <Block>Lorem ipsum dolor.</Block>
-    )
-    fn()
-
-    const el = document.querySelector('.accordion')
+    const component = mount(<Block>Lorem ipsum dolor.</Block>, fn)
 
     // Assert
-    expect(el).not.toHaveClass('accordion-expanded')
+    expect(component).not.toHaveClass('accordion-expanded')
 
     // Act
-    el.click()
+    component.click()
 
     // Assert
     await waitFor(() => {
-      expect(el).toHaveClass('accordion-expanded')
-      expect(el.querySelector('.accordion-content')).not.toHaveStyle({
+      expect(component).toHaveClass('accordion-expanded')
+      expect(component.querySelector('.accordion-content')).not.toHaveStyle({
         height: 0
       })
     })
