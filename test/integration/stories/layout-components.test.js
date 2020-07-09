@@ -41,6 +41,21 @@ describe('Layout Components', () => {
       title: 'faq',
       component: 'faq',
       devices: ['mobile']
+    },
+    {
+      title: 'promo-element standard',
+      component: 'promo-element',
+      'knob-Type': 'Standard'
+    },
+    {
+      title: 'promo-element alt',
+      component: 'promo-element',
+      'knob-Type': 'Alt'
+    },
+    {
+      title: 'promo-element accent',
+      component: 'promo-element',
+      'knob-Type': 'Accent'
     }
   ]
   buildSnapshotTests('components-layout')(stories)

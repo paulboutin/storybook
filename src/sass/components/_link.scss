@@ -1,8 +1,26 @@
 .link {
-  color: color('blue');
+  cursor: pointer;
+  color: color('green');
+  @include font-weight('bold');
 
   &:hover {
-    color: color('blue-light');
+    color: color('green-dark');
     text-decoration: underline;
+  }
+
+  &.inverted {
+    color: color('white');
+
+    &:hover {
+      color: color('grey-20');
+    }
+  }
+
+  .link-pad-left {
+    margin-left: spacing(8);
+  }
+
+  .link-pad-right {
+    margin-right: spacing(8);
   }
 }

@@ -1,0 +1,39 @@
+.eyebrow {
+  &.alt {
+    .eyebrow-text {
+      color: color('green');
+    }
+
+    .eyebrow-spacer {
+      display: none;
+    }
+  }
+
+  &.inverted {
+    .eyebrow-text {
+      color: color('white');
+    }
+  }
+
+  &.alt.inverted {
+    @include screen('sm') {
+      .eyebrow-spacer {
+        display: block;
+      }
+    }
+  }
+
+  .eyebrow-text {
+    text-transform: uppercase;
+    color: color('grey-80');
+    margin-bottom: spacing(8);
+    @include font-weight('bold');
+  }
+
+  .eyebrow-spacer {
+    display: block;
+    border-bottom: 4px solid color('yellow');
+    width: spacing(48);
+    margin-bottom: calc(#{spacing(16)} - 4px);
+  }
+}

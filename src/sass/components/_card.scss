@@ -54,15 +54,5 @@
         color: color('grey-80');
       }
     }
-
-    .card-link {
-      color: color('green');
-      cursor: pointer;
-      @include font-weight('bold');
-
-      .fa {
-        margin-left: spacing(8);
-      }
-    }
   }
 }

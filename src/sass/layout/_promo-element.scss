@@ -1,0 +1,132 @@
+.promo-element {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: color('grey');
+  text-align: left;
+  margin: spacing(16);
+
+  @include screen('sm') {
+    margin: 0;
+    flex-direction: row-reverse;
+    align-items: stretch;
+  }
+
+  &.alt {
+    flex-direction: column;
+
+    @include screen('sm') {
+      padding-top: spacing(32);
+      padding-bottom: spacing(32);
+      flex-direction: row;
+
+      .promo-element-img-wrapper {
+        position: absolute;
+        margin-left: spacing(32);
+        padding: spacing(32);
+
+        .promo-element-img {
+          height: 100%;
+        }
+      }
+
+      .promo-element-content-wrapper {
+        width: 100%;
+        background: color('grey-20');
+        margin-top: spacing(64);
+        margin-bottom: spacing(64);
+        z-index: -1;
+
+        .promo-element-content {
+          width: 40%;
+        }
+      }
+    }
+  }
+
+  &.accent {
+    background: color('green');
+    flex-direction: column-reverse;
+    align-items: stretch;
+    text-align: center;
+
+    @include screen('sm') {
+      flex-direction: row-reverse;
+      text-align: left;
+    }
+
+    .promo-element-img-wrapper {
+      @include screen('sm') {
+        width: col(5);
+      }
+    }
+
+    .promo-element-content-wrapper {
+      padding: spacing(32);
+
+      @include screen('sm') {
+        width: col(7);
+        padding: 0;
+      }
+
+      .promo-element-content {
+        margin-bottom: spacing(16);
+
+        .promo-element-heading,
+        .promo-element-text {
+          color: color('white');
+        }
+      }
+    }
+  }
+
+  .promo-element-img-wrapper {
+    align-self: center;
+
+    .promo-element-img {
+      object-fit: cover;
+    }
+
+    @include screen('sm') {
+      height: 100%;
+      max-height: 100vh;
+      width: 50%;
+    }
+  }
+
+  .promo-element-content-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    @include screen('sm') {
+      width: 50%;
+    }
+
+    .promo-element-content {
+      margin-top: spacing(16);
+
+      @include screen('sm') {
+        margin: spacing(32);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .promo-element-heading {
+        @include font-size('h3');
+      }
+
+      .promo-element-heading,
+      .promo-element-text {
+        margin-bottom: spacing(12);
+      }
+
+      .promo-element-text {
+        color: color('grey-80');
+        @include font-size('sm');
+      }
+    }
+  }
+}

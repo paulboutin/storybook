@@ -4,4 +4,5 @@ export default {
 
 export { Button } from './base/Button'
 export { CardStory } from './base/Card'
-export { Link } from './base/Link'
+export { EyebrowStory } from './base/Eyebrow'
+export { LinkStory } from './base/Link'

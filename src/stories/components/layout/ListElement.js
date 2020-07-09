@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { array, radios, text } from '@storybook/addon-knobs'
+import { Eyebrow } from '../base/Eyebrow'
 
 const defaultPlaceholder = 'http://via.placeholder.com/500x400'
 
@@ -12,7 +13,7 @@ const defaultItems = [
 ]
 
 const headerText = {
-  lead: 'Features',
+  eyebrow: 'Features',
   heading: 'Here are the basics',
   text: 'Manage your money while contributing with the planet'
 }
@@ -37,8 +38,7 @@ const ListElementContent = ({
     className={altLayout ? 'list-element-content alt' : 'list-element-content'}
   >
     <div className='list-element-header'>
-      <p className='list-element-header-lead'>{headerText.lead}</p>
-      {!altLayout && <span className='list-element-header-spacer' />}
+      <Eyebrow text={headerText.eyebrow} alt={altLayout} />
       <div className='list-element-header-text-block'>
         <h2 className='list-element-heading'>{headerText.heading}</h2>
         <p className='list-element-header-text'>{headerText.text}</p>
@@ -62,7 +62,7 @@ export const ListElement = () => {
   const isAlt = type === 'Alt'
 
   return (
-    <section className='list-element-container'>
+    <section className='list-element'>
       {isAlt && <ListElementImage src={placeholder} alt='Image' />}
       <ListElementContent
         headerText={headerText}
