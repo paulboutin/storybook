@@ -1,0 +1,46 @@
+.highlight {
+  display: flex;
+  flex-direction: column;
+  padding: spacing(16);
+
+  .highlight-img-container {
+    background-color: color('grey-20');
+
+    &:after {
+      content: '';
+      display: block;
+      padding-bottom: 100%;
+    }
+
+    @include screen('sm') {
+      width: 50%;
+      flex-shrink: 0;
+      margin-right: spacing(48);
+    }
+  }
+
+  .highlight-content-container {
+    margin-top: spacing(48);
+
+    @include screen('sm') {
+      margin-top: 0;
+    }
+  }
+
+  .highlight-text {
+    @include font-size('sm');
+    color: color('grey-80');
+    margin-top: spacing(16);
+    margin-bottom: spacing(12);
+  }
+
+  .highlight-link {
+    @include font-size('sm');
+  }
+
+  @include screen('sm') {
+    flex-direction: row;
+    align-items: center;
+    padding: spacing(48) spacing(160) spacing(48) spacing(96);
+  }
+}
