@@ -31,13 +31,18 @@
   }
 
   .faq-icon {
+    @extend .fa-plus;
     @include font-size('xs');
     color: color('green');
   }
-}
 
-.accordion-expanded {
-  .accordion-content {
-    height: auto;
+  &.accordion-expanded {
+    .accordion-content {
+      height: auto;
+    }
+
+    .faq-icon {
+      @extend .fa-minus;
+    }
   }
 }

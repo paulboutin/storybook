@@ -3,10 +3,15 @@ import classNames from 'classnames'
 import { radios } from '@storybook/addon-knobs'
 
 export const Hero = () => {
-  const type = radios('Type', ['Full', 'Spaced'], 'Full').toLowerCase()
+  const type = radios('Type', ['Full', 'Spaced'], 'Full')
 
   return (
-    <div className={classNames('hero', `hero-${type}`)}>
+    <div
+      className={classNames(
+        'hero',
+        type === 'Spaced' ? 'hero-spaced' : 'hero-full'
+      )}
+    >
       <img
         className='hero-img'
         src='http://via.placeholder.com/1600'
