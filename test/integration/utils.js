@@ -1,7 +1,10 @@
-export const defaultViewports = {
-  '480px': { width: 480, height: 800, isMobile: true },
-  '992px': { width: 992, height: 558 }
+const viewports = {
+  mobile: { width: 480, height: 800, isMobile: true },
+  tablet: { width: 992, height: 558 },
+  desktop: { width: 1600, height: 900 }
 }
+
+const defaultDevices = ['mobile', 'tablet']
 
 export const getStoryUrl = ({ block, component, ...extra }) => {
   const BASE_URL = `http://localhost:${process.env.PORT}/iframe.html`
@@ -16,17 +19,24 @@ export const getStoryUrl = ({ block, component, ...extra }) => {
   return BASE_URL + '?' + searchParams.toString()
 }
 
-export const buildSnapshotTests = viewports => block => stories => {
+export const buildSnapshotTests = block => stories => {
   stories.forEach(story => {
     if (typeof story === 'string') {
       story = { title: story, component: story }
     }
 
-    const { title, ...params } = story
+    const { title, devices = defaultDevices, ...params } = story
+    const testViewports = devices.reduce(
+      (currentViewports, device) => ({
+        ...currentViewports,
+        [device]: viewports[device]
+      }),
+      {}
+    )
 
     describe(title, () => {
-      Object.entries(viewports).forEach(([breakpoint, viewport]) => {
-        it(`matches snapshot, ${breakpoint}`, async () => {
+      Object.entries(testViewports).forEach(([device, viewport]) => {
+        it(`matches snapshot on ${device}`, async () => {
           // Arrange
           const url = getStoryUrl({ block, ...params })
 
@@ -42,5 +52,3 @@ export const buildSnapshotTests = viewports => block => stories => {
     })
   })
 }
-
-export const buildDefaultSnapshotTests = buildSnapshotTests(defaultViewports)
