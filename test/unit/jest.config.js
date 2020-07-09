@@ -1,3 +1,4 @@
 module.exports = {
-  roots: ['.']
+  roots: ['.'],
+  setupFilesAfterEnv: ['./setup.js']
 }
