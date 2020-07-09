@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Block = ({ children, question, expanded }) => (
+export const Block = ({ children, question, expanded }) => (
   <div
     className={classNames('faq-block accordion', {
       'accordion-expanded': expanded
