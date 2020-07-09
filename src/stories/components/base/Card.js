@@ -15,9 +15,8 @@ export const Card = ({ heading, text, href, imageSrc, imageAlt }) => {
         <div className='card-text-wrapper'>
           <p className='card-text'>{text}</p>
         </div>
-        <Link href={href}>
+        <Link href={href} icon='long-arrow-alt-right'>
           Read more
-          <span className='link-pad-left fa fa-long-arrow-alt-right' />
         </Link>
       </div>
     </div>
