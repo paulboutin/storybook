@@ -75,6 +75,10 @@ describe('Layout Components', () => {
       component: 'highlight-story',
       'knob-Type': 'Overlap',
       'knob-Overlap': 'Image'
+    },
+    {
+      title: '3col cards',
+      component: 'three-col-cards'
     }
   ]
   buildSnapshotTests('components-layout')(stories)
