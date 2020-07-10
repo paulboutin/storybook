@@ -1,14 +1,23 @@
 import React from 'react'
+import classNames from 'classnames'
+import { radios } from '@storybook/addon-knobs'
 import { Eyebrow } from '../base/Eyebrow'
 import { Link } from '../base/Link'
 
 export const Highlight = () => {
+  const type = radios('Type', ['Overlap', 'Single'], 'Overlap')
+
   return (
-    <div className='highlight'>
+    <div
+      className={classNames(
+        'highlight',
+        type === 'Single' ? 'highlight-single' : 'highlight-overlap'
+      )}
+    >
       <div className='highlight-img-container'></div>
 
       <div className='highlight-content-container'>
-        <Eyebrow text='Sustainable banking' />
+        <Eyebrow text='Sustainable banking' alt={type === 'Single'} />
         <h4>Bank for the planet</h4>
 
         <p className='highlight-text'>

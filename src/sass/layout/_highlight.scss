@@ -15,7 +15,6 @@
     @include screen('sm') {
       width: 50%;
       flex-shrink: 0;
-      margin-right: spacing(48);
     }
   }
 
@@ -41,6 +40,31 @@
   @include screen('sm') {
     flex-direction: row;
     align-items: center;
+  }
+}
+
+.highlight-overlap {
+  @include screen('sm') {
     padding: spacing(48) spacing(160) spacing(48) spacing(96);
+
+    .highlight-img-container {
+      order: 0;
+      margin-right: spacing(48);
+    }
+  }
+}
+
+.highlight-single {
+  @include screen('sm') {
+    padding: spacing(64) spacing(64) spacing(32);
+
+    .highlight-img-container {
+      order: 1;
+      margin-left: spacing(48);
+    }
+
+    .highlight-content-container {
+      padding-top: spacing(64);
+    }
   }
 }
