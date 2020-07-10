@@ -1,7 +1,7 @@
 .highlight {
   display: flex;
   flex-direction: column;
-  padding: spacing(16);
+  padding: spacing(32) spacing(16);
 
   .highlight-img-container {
     @extend .square;
@@ -9,23 +9,23 @@
 
     @include screen('sm') {
       width: 50%;
-      flex-shrink: 0;
     }
   }
 
   .highlight-content-container {
-    margin-top: spacing(48);
+    margin-top: spacing(24);
 
     @include screen('sm') {
+      width: 50%;
       margin-top: 0;
     }
   }
 
   .highlight-text {
-    @include font-size('sm');
+    @include font-size('xs');
     color: color('grey-80');
-    margin-top: spacing(16);
-    margin-bottom: spacing(12);
+    margin-top: spacing(12);
+    margin-bottom: spacing(24);
   }
 
   .highlight-link {
@@ -33,33 +33,42 @@
   }
 
   @include screen('sm') {
+    padding: spacing(48) spacing(96);
     flex-direction: row;
     align-items: center;
   }
 }
 
-.highlight-overlap {
+.highlight-right {
   @include screen('sm') {
-    padding: spacing(48) spacing(160) spacing(48) spacing(96);
-
     .highlight-img-container {
       order: 0;
-      margin-right: spacing(48);
+      margin-left: spacing(64);
+    }
+
+    .highlight-content-container {
+      margin-left: spacing(64);
+    }
+
+    &.highlight-single .highlight-img-container {
+      margin-right: spacing(24);
     }
   }
 }
 
-.highlight-single {
+.highlight-left {
   @include screen('sm') {
-    padding: spacing(64) spacing(64) spacing(32);
-
     .highlight-img-container {
       order: 1;
-      margin-left: spacing(48);
+      margin-right: spacing(64);
     }
 
     .highlight-content-container {
-      padding-top: spacing(64);
+      margin-right: spacing(64);
+    }
+
+    &.highlight-single .highlight-img-container {
+      margin-left: spacing(24);
     }
   }
 }
