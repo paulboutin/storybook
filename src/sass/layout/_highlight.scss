@@ -4,13 +4,8 @@
   padding: spacing(16);
 
   .highlight-img-container {
+    @extend .square;
     background-color: color('grey-20');
-
-    &:after {
-      content: '';
-      display: block;
-      padding-bottom: 100%;
-    }
 
     @include screen('sm') {
       width: 50%;
