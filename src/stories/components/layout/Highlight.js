@@ -4,15 +4,39 @@ import { radios } from '@storybook/addon-knobs'
 import { Eyebrow } from '../base/Eyebrow'
 import { Link } from '../base/Link'
 
-const Highlight = ({ contentPosition, type, images, backgroundColor }) => (
+const Highlight = ({ contentPosition, type, overlap, color }) => (
   <div
     className={classNames(
       'highlight',
       contentPosition === 'Left' ? 'highlight-left' : 'highlight-right',
-      type === 'Single' ? 'highlight-single' : 'highlight-overlap'
+      type === 'Single' ? 'highlight-single' : 'highlight-overlap',
+      type === 'Overlap' &&
+        overlap === 'Color' &&
+        (color === 'Secondary' ? 'highlight-secondary' : 'highlight-primary')
     )}
   >
-    <div className='highlight-img-container'></div>
+    <div className='highlight-img-container'>
+      {type === 'Single' ? (
+        <img src='http://via.placeholder.com/640' alt='Highlight image' />
+      ) : overlap === 'Color' ? (
+        <>
+          <div />
+          <img src='http://via.placeholder.com/640' alt='Highlight image' />
+        </>
+      ) : (
+        <>
+          <img
+            src='http://via.placeholder.com/640'
+            alt='Secondary highlight image'
+          />
+
+          <img
+            src='http://via.placeholder.com/640'
+            alt='Primary highlight image'
+          />
+        </>
+      )}
+    </div>
 
     <div className='highlight-content-container'>
       <Eyebrow text='Bank for the planet' />
@@ -32,10 +56,10 @@ const Highlight = ({ contentPosition, type, images, backgroundColor }) => (
 
 export const HighlightStory = () => {
   const type = radios('Type', ['Single', 'Overlap'], 'Overlap')
-  let images
+  let overlap
 
   if (type === 'Overlap') {
-    images = radios('Images', ['1', '2'], '1')
+    overlap = radios('Overlap', ['Color', 'Image'], 'Color')
   }
 
   return (
@@ -43,14 +67,14 @@ export const HighlightStory = () => {
       <Highlight
         contentPosition='Right'
         type={type}
-        images={images}
-        backgroundColor='Primary'
+        overlap={overlap}
+        color='Primary'
       />
       <Highlight
         contentPosition='Left'
         type={type}
-        images={images}
-        backgroundColor='Secondary'
+        overlap={overlap}
+        color='Secondary'
       />
     </div>
   )

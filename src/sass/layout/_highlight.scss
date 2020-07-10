@@ -5,7 +5,13 @@
 
   .highlight-img-container {
     @extend .square;
-    background-color: color('grey-20');
+    position: relative;
+
+    img,
+    div {
+      @extend .square;
+      position: absolute;
+    }
 
     @include screen('sm') {
       width: 50%;
@@ -40,6 +46,16 @@
 }
 
 .highlight-right {
+  &.highlight-overlap .highlight-img-container {
+    :nth-child(1) {
+      left: 0;
+    }
+
+    :nth-child(2) {
+      right: 0;
+    }
+  }
+
   @include screen('sm') {
     .highlight-img-container {
       order: 0;
@@ -57,6 +73,16 @@
 }
 
 .highlight-left {
+  &.highlight-overlap .highlight-img-container {
+    :nth-child(1) {
+      right: 0;
+    }
+
+    :nth-child(2) {
+      left: 0;
+    }
+  }
+
   @include screen('sm') {
     .highlight-img-container {
       order: 1;
@@ -69,6 +95,37 @@
 
     &.highlight-single .highlight-img-container {
       margin-left: spacing(24);
+    }
+  }
+}
+
+.highlight-overlap {
+  .highlight-img-container {
+    :nth-child(1) {
+      width: 60%;
+      top: 0;
+    }
+
+    :nth-child(2) {
+      width: 80%;
+      bottom: 0;
+      border: 2px solid color('white');
+    }
+  }
+}
+
+.highlight-primary {
+  .highlight-img-container {
+    :nth-child(1) {
+      background-color: color('green');
+    }
+  }
+}
+
+.highlight-secondary {
+  .highlight-img-container {
+    :nth-child(1) {
+      background-color: color('yellow');
     }
   }
 }
