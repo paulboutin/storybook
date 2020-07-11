@@ -40,7 +40,7 @@ describe('Layout Components', () => {
     {
       title: 'faq',
       component: 'faq',
-      devices: ['mobile']
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'promo-element standard',
