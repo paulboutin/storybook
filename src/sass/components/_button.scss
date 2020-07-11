@@ -1,6 +1,5 @@
 .button {
   @include font-size('xs');
-  @include font-weight('semi-bold');
   @include border-radius('base');
   padding: spacing(12) spacing(32);
   display: inline-block;
