@@ -1,0 +1,131 @@
+.highlight {
+  display: flex;
+  flex-direction: column;
+  padding: spacing(32) spacing(16);
+
+  .highlight-img-container {
+    @extend .square;
+    position: relative;
+
+    img,
+    div {
+      @extend .square;
+      position: absolute;
+    }
+
+    @include screen('sm') {
+      width: 50%;
+    }
+  }
+
+  .highlight-content-container {
+    margin-top: spacing(24);
+
+    @include screen('sm') {
+      width: 50%;
+      margin-top: 0;
+    }
+  }
+
+  .highlight-text {
+    @include font-size('xs');
+    color: color('grey-80');
+    margin-top: spacing(12);
+    margin-bottom: spacing(24);
+  }
+
+  .highlight-link {
+    @include font-size('sm');
+  }
+
+  @include screen('sm') {
+    padding: spacing(48) spacing(96);
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.highlight-right {
+  &.highlight-overlap .highlight-img-container {
+    :nth-child(1) {
+      left: 0;
+    }
+
+    :nth-child(2) {
+      right: 0;
+    }
+  }
+
+  @include screen('sm') {
+    .highlight-img-container {
+      order: 0;
+      margin-left: spacing(64);
+    }
+
+    .highlight-content-container {
+      margin-left: spacing(64);
+    }
+
+    &.highlight-single .highlight-img-container {
+      margin-right: spacing(24);
+    }
+  }
+}
+
+.highlight-left {
+  &.highlight-overlap .highlight-img-container {
+    :nth-child(1) {
+      right: 0;
+    }
+
+    :nth-child(2) {
+      left: 0;
+    }
+  }
+
+  @include screen('sm') {
+    .highlight-img-container {
+      order: 1;
+      margin-right: spacing(64);
+    }
+
+    .highlight-content-container {
+      margin-right: spacing(64);
+    }
+
+    &.highlight-single .highlight-img-container {
+      margin-left: spacing(24);
+    }
+  }
+}
+
+.highlight-overlap {
+  .highlight-img-container {
+    :nth-child(1) {
+      width: 60%;
+      top: 0;
+    }
+
+    :nth-child(2) {
+      width: 80%;
+      bottom: 0;
+      border: 2px solid color('white');
+    }
+  }
+}
+
+.highlight-primary {
+  .highlight-img-container {
+    :nth-child(1) {
+      background-color: color('green');
+    }
+  }
+}
+
+.highlight-secondary {
+  .highlight-img-container {
+    :nth-child(1) {
+      background-color: color('yellow');
+    }
+  }
+}

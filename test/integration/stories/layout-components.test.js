@@ -56,6 +56,23 @@ describe('Layout Components', () => {
       title: 'promo-element accent',
       component: 'promo-element',
       'knob-Type': 'Accent'
+    },
+    {
+      title: 'highlight single',
+      component: 'highlight-story',
+      'knob-Type': 'Single'
+    },
+    {
+      title: 'highlight overlap color',
+      component: 'highlight-story',
+      'knob-Type': 'Overlap',
+      'knob-Overlap': 'Color'
+    },
+    {
+      title: 'highlight overlap image',
+      component: 'highlight-story',
+      'knob-Type': 'Overlap',
+      'knob-Overlap': 'Image'
     }
   ]
   buildSnapshotTests('components-layout')(stories)
