@@ -11,35 +11,25 @@
     background: color('white');
   }
 
-  .hero-eyebrow {
-    margin-bottom: spacing(8);
-    color: color('green');
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    @include font-size('xs');
-    @include font-weight('bold');
-  }
-
   .hero-heading {
-    margin-bottom: spacing(12);
+    margin-bottom: spacing(4);
   }
 
   .hero-text {
-    margin-bottom: spacing(16);
+    @include font-size('xs');
     color: color('grey-80');
   }
 
   .hero-button {
-    margin-bottom: spacing(16);
-    padding-left: spacing(32);
-    padding-right: spacing(32);
+    margin: spacing(24) 0;
   }
 
   .hero-subtext {
     @include font-size('xs');
 
     :last-child {
-      @include font-weight('bold');
+      @include font-weight('semi-bold');
+      color: color('green');
       text-decoration: underline;
       cursor: pointer;
     }
@@ -47,6 +37,18 @@
 
   @include screen('sm') {
     height: auto;
+  }
+
+  @include screen('md') {
+    .hero-heading {
+      @include font-size('h2');
+    }
+  }
+
+  @include screen('lg') {
+    .hero-heading {
+      @include font-size('h1');
+    }
   }
 }
 
@@ -59,7 +61,7 @@
   }
 
   .hero-content {
-    padding: spacing(48) spacing(32);
+    padding: spacing(32) spacing(16);
   }
 
   @include screen('sm') {
@@ -75,7 +77,19 @@
 
     .hero-content {
       position: relative;
-      padding: spacing(64) spacing(96);
+      padding: spacing(32);
+    }
+  }
+
+  @include screen('md') {
+    .hero-content {
+      padding: spacing(64);
+    }
+  }
+
+  @include screen('lg') {
+    .hero-content {
+      padding: spacing(96);
     }
   }
 }
@@ -96,15 +110,28 @@
     margin-left: spacing(16);
     margin-right: spacing(16);
     margin-bottom: spacing(24);
-    padding: spacing(24) spacing(24) spacing(24) spacing(16);
+    padding: spacing(32) spacing(24);
   }
 
   @include screen('sm') {
     .hero-content {
       position: relative;
       display: inline-block;
-      margin: spacing(32) spacing(64);
+      margin: spacing(16) spacing(48);
       padding: spacing(32);
+    }
+  }
+
+  @include screen('md') {
+    .hero-content {
+      margin: spacing(24) spacing(64);
+      padding: spacing(64);
+    }
+  }
+
+  @include screen('lg') {
+    .hero-content {
+      margin: spacing(32) spacing(96);
     }
   }
 }

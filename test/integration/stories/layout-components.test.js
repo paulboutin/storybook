@@ -25,11 +25,13 @@ describe('Layout Components', () => {
     {
       title: 'hero full',
       component: 'hero',
+      devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Full'
     },
     {
       title: 'hero spaced',
       component: 'hero',
+      devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Spaced'
     },
     {
@@ -40,7 +42,7 @@ describe('Layout Components', () => {
     {
       title: 'faq',
       component: 'faq',
-      devices: ['mobile']
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'promo-element standard',

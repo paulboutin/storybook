@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { radios } from '@storybook/addon-knobs'
+import { Eyebrow } from '../base/Eyebrow'
 
 export const Hero = () => {
   const type = radios('Type', ['Full', 'Spaced'], 'Full')
@@ -18,15 +19,15 @@ export const Hero = () => {
         alt='Hero image'
       />
       <div className='hero-content'>
-        <p className='hero-eyebrow'>Any deposit checking</p>
-        <h2 className='hero-heading'>
+        <Eyebrow text='Any deposit checking' />
+        <h3 className='hero-heading'>
           No hidden fees.
           <br />
           No hassle.
-        </h2>
+        </h3>
         <p className='hero-text'>Open an account in about 10 minutes</p>
         <a className='button button-primary hero-button' href='#'>
-          Apply now
+          Apply Now
         </a>
         <p className='hero-subtext'>
           <span>Not in Alabama? </span>

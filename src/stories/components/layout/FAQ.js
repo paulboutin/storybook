@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { Link } from '../base/Link'
 
 export const Block = ({ children, question, expanded }) => (
   <div
@@ -8,7 +9,7 @@ export const Block = ({ children, question, expanded }) => (
     })}
   >
     <div>
-      <h4 className='faq-question'>{question}</h4>
+      <h6 className='faq-question'>{question}</h6>
       <p className='faq-answer accordion-content'>{children}</p>
     </div>
 
@@ -18,7 +19,11 @@ export const Block = ({ children, question, expanded }) => (
 
 export const FAQ = () => (
   <div className='faq'>
-    <h3 className='faq-heading'>Still have questions? We have answers.</h3>
+    <h4 className='faq-heading'>
+      Still have questions?
+      <br />
+      We have answers.
+    </h4>
 
     <Block question="What if I'm under 25?" expanded>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores
@@ -52,5 +57,9 @@ export const FAQ = () => (
       illum ipsa nostrum porro quae, quas reiciendis reprehenderit soluta,
       voluptate?
     </Block>
+
+    <Link href='#' icon='long-arrow-alt-right' className='faq-link'>
+      View All
+    </Link>
   </div>
 )

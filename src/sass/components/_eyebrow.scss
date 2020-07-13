@@ -27,13 +27,14 @@
     text-transform: uppercase;
     color: color('grey-80');
     margin-bottom: spacing(8);
-    @include font-weight('bold');
+    letter-spacing: 2px;
+    @include font-size('sm');
+    @include font-weight('semi-bold');
   }
 
   .eyebrow-spacer {
-    display: block;
-    border-bottom: 4px solid color('yellow');
-    width: spacing(48);
-    margin-bottom: calc(#{spacing(16)} - 4px);
+    border-bottom: 5px solid color('yellow');
+    width: spacing(64);
+    margin-bottom: spacing(16);
   }
 }
