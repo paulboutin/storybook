@@ -64,6 +64,9 @@
     .promo-element-content-wrapper {
       padding: spacing(32);
 
+      .promo-element-content {
+      }
+
       @include screen('sm') {
         width: col(7);
         padding: 0;
@@ -71,6 +74,14 @@
 
       .promo-element-content {
         margin-bottom: spacing(16);
+
+        .eyebrow-spacer {
+          margin: 0 auto spacing(16) auto;
+
+          @include screen('sm') {
+            margin: 0 0 spacing(16);
+          }
+        }
 
         .promo-element-heading,
         .promo-element-text {

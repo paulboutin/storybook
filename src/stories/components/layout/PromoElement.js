@@ -32,7 +32,7 @@ export const PromoElement = () => {
         <div className='promo-element-content'>
           <Eyebrow
             text={eyebrow}
-            alt={['Alt', 'Accent'].includes(type)}
+            alt={type === 'Alt'}
             inverted={type === 'Accent'}
           />
           <h2 className='promo-element-heading'>{heading}</h2>
