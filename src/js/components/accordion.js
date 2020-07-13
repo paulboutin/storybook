@@ -7,7 +7,7 @@ export default () => {
 
       if (accordion.classList.contains('accordion-expanded')) {
         content.style.height = getComputedStyle(content).height
-        content.style.transitionProperty = 'height'
+        content.style.transitionProperty = 'all'
 
         requestAnimationFrame(() => {
           content.style.height = '0'
@@ -18,7 +18,7 @@ export default () => {
         content.style.height = 'auto'
         const height = getComputedStyle(content).height
         content.style.height = '0'
-        content.style.transitionProperty = 'height'
+        content.style.transitionProperty = 'all'
 
         requestAnimationFrame(() => {
           content.style.height = height

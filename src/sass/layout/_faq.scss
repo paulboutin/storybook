@@ -34,12 +34,13 @@
   .faq-answer {
     @include font-size('xs');
     color: color('grey-80');
+    margin-top: 0;
   }
 
   .accordion-content {
     height: 0;
     overflow: hidden;
-    transition-duration: 300ms;
+    transition-duration: 0.3s;
   }
 
   .faq-icon {
