@@ -35,7 +35,7 @@ export const CardStory = () => {
       heading={heading}
       imageSrc={placeholder}
       imageAlt='Image'
-      flat={type === 'flat'}
+      flat={type === 'Flat'}
     >
       {cardText}
     </Card>
