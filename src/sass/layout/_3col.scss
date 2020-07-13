@@ -1,8 +1,14 @@
 .three-col {
+  padding: spacing(16);
+
   .three-col-heading {
     text-align: center;
     margin-top: spacing(16);
     margin-bottom: spacing(16);
     @include font-size('h2');
+  }
+
+  .col-sm-4 {
+    margin-top: spacing(48);
   }
 }
