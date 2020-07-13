@@ -34,11 +34,9 @@ const ListElementContent = ({
   altLayout = false,
   listClass
 }) => (
-  <div
-    className={altLayout ? 'list-element-content alt' : 'list-element-content'}
-  >
+  <div className={classNames('list-element-content', altLayout ? 'alt' : '')}>
     <div className='list-element-header'>
-      <Eyebrow text={headerText.eyebrow} alt={altLayout} />
+      <Eyebrow text={headerText.eyebrow} />
       <div className='list-element-header-text-block'>
         <h2 className='list-element-heading'>{headerText.heading}</h2>
         <p className='list-element-header-text'>{headerText.text}</p>
@@ -64,7 +62,11 @@ export const ListElement = () => {
   return (
     <section className='list-element'>
       {isAlt && <ListElementImage src={placeholder} alt='Image' />}
-      <ListElementContent headerText={headerText} items={items} />
+      <ListElementContent
+        headerText={headerText}
+        items={items}
+        altLayout={isAlt}
+      />
     </section>
   )
 }
