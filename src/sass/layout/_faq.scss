@@ -24,7 +24,7 @@
   align-items: baseline;
   cursor: pointer;
   padding: spacing(16) 0;
-  border-bottom: 1px solid color('grey-40');
+  border-bottom: 1px solid color('grey-30');
 
   .faq-question {
     @include font-size('sm');
