@@ -81,7 +81,7 @@ export const Colors = () => (
       <ColorBlock bg='grey-80' text='white'>
         80%
       </ColorBlock>
-      <ColorBlock bg='grey-70' text='black'>
+      <ColorBlock bg='grey-70' text='white'>
         70%
       </ColorBlock>
       <ColorBlock bg='grey-30' text='black'>
