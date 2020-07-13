@@ -1,5 +1,5 @@
 .ds\:typography-heading {
-  color: color('grey-40');
+  color: color('grey-70');
   margin-bottom: spacing(16);
 
   &:not(:first-child) {
@@ -9,7 +9,7 @@
 
 .ds\:typography-title {
   @include font-size('xs');
-  color: color('grey-40');
+  color: color('grey-70');
 }
 
 .ds\:typography-text {
