@@ -28,11 +28,9 @@ export const Recommendations = () => {
       <div className='recommendations-content'>
         {items.map((item, index) => (
           <div key={index} className='recommendations-col'>
-            <Card
-              heading={item.heading}
-              text={item.text}
-              imageSrc={placeholder}
-            />
+            <Card heading={item.heading} imageSrc={placeholder}>
+              {item.text}
+            </Card>
           </div>
         ))}
       </div>
