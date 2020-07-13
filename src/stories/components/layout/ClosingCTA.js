@@ -2,7 +2,8 @@ import React from 'react'
 import classNames from 'classnames'
 import { radios } from '@storybook/addon-knobs'
 
-const heading = 'Open your account online in about 10 minutes'
+const heading =
+  'Together, we can safeguard the environment and the future of our planet.'
 
 export const ClosingCTA = () => {
   const type = radios('Type', ['Standard', 'Alt'], 'Standard')
@@ -18,7 +19,8 @@ export const ClosingCTA = () => {
       />
       <div className='closing-cta-content'>
         <h2 className='closing-cta-heading'>{heading}</h2>
-        <a className='button button-primary closing-cta-button' href='#'>
+        <p className='closing-cta-text'>Type something</p>
+        <a className='button button-secondary closing-cta-button' href='#'>
           Apply now
         </a>
       </div>
