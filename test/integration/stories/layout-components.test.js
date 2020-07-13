@@ -10,6 +10,7 @@ describe('Layout Components', () => {
     {
       title: 'list-element alt',
       component: 'list-element',
+      devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Alt'
     },
     {
