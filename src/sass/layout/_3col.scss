@@ -23,6 +23,15 @@
     }
   }
 
+  .row {
+    display: flex;
+    flex-direction: column;
+
+    @include screen('sm') {
+      flex-direction: row;
+    }
+  }
+
   .col-sm-4 {
     margin-bottom: spacing(48);
   }

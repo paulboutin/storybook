@@ -1,6 +1,8 @@
 import React from 'react'
-import { Card } from '../base/Card'
 import { text } from '@storybook/addon-knobs'
+
+import { ThreeCol } from './3Col'
+import { Card } from '../base/Card'
 
 const items = [
   {
@@ -22,18 +24,15 @@ const defaultPlaceholder = 'http://via.placeholder.com/500'
 export const Recommendations = () => {
   const placeholder = text('Placeholder', defaultPlaceholder)
 
+  const heading = 'Recommended for you'
+
   return (
-    <div className='recommendations'>
-      <h2 className='recommendations-heading'>Recommended for you</h2>
-      <div className='recommendations-content'>
-        {items.map((item, index) => (
-          <div key={index} className='recommendations-col'>
-            <Card heading={item.heading} imageSrc={placeholder}>
-              {item.text}
-            </Card>
-          </div>
-        ))}
-      </div>
-    </div>
+    <ThreeCol heading={heading}>
+      {items.map((item, index) => (
+        <Card key={index} heading={item.heading} imageSrc={placeholder}>
+          {item.text}
+        </Card>
+      ))}
+    </ThreeCol>
   )
 }
