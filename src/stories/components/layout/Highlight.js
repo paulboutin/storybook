@@ -7,7 +7,7 @@ import { Link } from '../base/Link'
 const Highlight = ({ contentPosition, type, overlap, color }) => (
   <div
     className={classNames(
-      'highlight',
+      'highlight container',
       contentPosition === 'Left' ? 'highlight-left' : 'highlight-right',
       type === 'Single' ? 'highlight-single' : 'highlight-overlap',
       type === 'Overlap' &&

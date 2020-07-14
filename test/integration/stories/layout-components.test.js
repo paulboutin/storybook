@@ -69,17 +69,20 @@ describe('Layout Components', () => {
     {
       title: 'highlight single',
       component: 'highlight-story',
+      devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Single'
     },
     {
       title: 'highlight overlap color',
       component: 'highlight-story',
+      devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Overlap',
       'knob-Overlap': 'Color'
     },
     {
       title: 'highlight overlap image',
       component: 'highlight-story',
+      devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Overlap',
       'knob-Overlap': 'Image'
     },
