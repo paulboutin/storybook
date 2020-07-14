@@ -18,7 +18,7 @@ export const Block = ({ children, question, expanded }) => (
 )
 
 export const FAQ = () => (
-  <div className='faq'>
+  <div className='faq container'>
     <h4 className='faq-heading'>
       Still have questions?
       <br />
