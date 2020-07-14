@@ -5,6 +5,7 @@ describe('Layout Components', () => {
     {
       title: 'list-element standard',
       component: 'list-element',
+      devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Standard'
     },
     {
@@ -22,6 +23,11 @@ describe('Layout Components', () => {
       title: 'closing-cta alt',
       component: 'closing-cta',
       'knob-Type': 'Alt'
+    },
+    {
+      title: 'closing-cta half',
+      component: 'closing-cta',
+      'knob-Type': 'Half'
     },
     {
       title: 'hero full',
