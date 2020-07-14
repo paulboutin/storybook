@@ -1,13 +1,33 @@
 .three-col {
-  padding: spacing(16);
+  padding: spacing(32) spacing(16);
+
+  @include screen('sm') {
+    padding: spacing(64) spacing(24);
+  }
+
+  @include screen('md') {
+    padding: spacing(64) spacing(48);
+  }
+
+  @include screen('lg') {
+    padding: spacing(64) spacing(96);
+  }
 
   .three-col-heading {
-    text-align: center;
-    margin-bottom: spacing(16);
-    @include font-size('h2');
+    text-align: left;
+    margin-bottom: spacing(48);
+    @include font-size('h4');
+
+    @include screen('md') {
+      @include font-size('h3');
+    }
   }
 
   .col-sm-4 {
-    margin-top: spacing(48);
+    margin-bottom: spacing(48);
+  }
+
+  &.grey {
+    background: color('grey-5');
   }
 }

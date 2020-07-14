@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import { Card } from '../base/Card'
 import { text } from '@storybook/addon-knobs'
 
@@ -22,8 +23,8 @@ const items = [
   }
 ]
 
-const ThreeCol = ({ children }) => (
-  <div className='three-col'>
+const ThreeCol = ({ children, bgColor }) => (
+  <div className={classNames('three-col', bgColor || '')}>
     <h2 className='three-col-heading'>More reasons to love your account</h2>
     <div className='row'>
       {children.map((child, index) => (
@@ -39,13 +40,22 @@ export const ThreeColCards = () => {
   const placeholder = text('Placeholder', defaultPlaceholder)
 
   return (
-    <ThreeCol>
-      {items.map((item, index) => (
-        <Card key={index} imageSrc={placeholder} heading={item.heading} flat>
-          {item.text}
-        </Card>
-      ))}
-    </ThreeCol>
+    <>
+      <ThreeCol>
+        {items.map((item, index) => (
+          <Card key={index} imageSrc={placeholder} heading={item.heading} flat>
+            {item.text}
+          </Card>
+        ))}
+      </ThreeCol>
+      <ThreeCol bgColor='grey'>
+        {items.map((item, index) => (
+          <Card key={index} imageSrc={placeholder} heading={item.heading} flat>
+            {item.text}
+          </Card>
+        ))}
+      </ThreeCol>
+    </>
   )
 }
 
