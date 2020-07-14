@@ -12,13 +12,8 @@ addDecorator(renderHTML)
 addDecorator(toggleBodyClass)
 addDecorator(runScripts)
 
-addDecorator(
-  withKnobs({
-    escapeHTML: false
-  })
-)
-
 addDecorator(withHTML)
+addDecorator(withKnobs({ escapeHTML: false }))
 
 const customViewports = {
   desktop: {

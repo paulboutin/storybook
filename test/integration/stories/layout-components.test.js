@@ -79,6 +79,10 @@ describe('Layout Components', () => {
     {
       title: '3col cards',
       component: 'three-col-cards'
+    },
+    {
+      title: 'column-icons',
+      component: 'column-icons'
     }
   ]
   buildSnapshotTests('components-layout')(stories)
