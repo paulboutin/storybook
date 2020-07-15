@@ -92,7 +92,8 @@ describe('Layout Components', () => {
     },
     {
       title: 'column-icons',
-      component: 'column-icons'
+      component: 'column-icons',
+      devices: ['mobile', 'tablet', 'desktop']
     }
   ]
   buildSnapshotTests('components-layout')(stories)
