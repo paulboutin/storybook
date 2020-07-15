@@ -1,11 +1,6 @@
 .closing-cta {
   position: relative;
   color: color('grey');
-  height: 100vh;
-
-  @include screen('sm') {
-    height: auto;
-  }
 
   &.half {
     background: color('green');
@@ -79,6 +74,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+
+    @include screen('sm') {
+      height: auto;
+    }
+
     @include container('lg');
   }
 
