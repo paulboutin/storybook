@@ -57,11 +57,6 @@ describe('Layout Components', () => {
       'knob-Type': 'Standard'
     },
     {
-      title: 'promo-element alt',
-      component: 'promo-element',
-      'knob-Type': 'Alt'
-    },
-    {
       title: 'promo-element accent',
       component: 'promo-element',
       'knob-Type': 'Accent'
