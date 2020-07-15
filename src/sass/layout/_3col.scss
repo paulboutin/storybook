@@ -2,15 +2,20 @@
   padding: spacing(32) spacing(16);
 
   @include screen('sm') {
-    padding: spacing(64) spacing(24);
+    padding: spacing(32);
   }
 
   @include screen('md') {
-    padding: spacing(64) spacing(48);
+    padding: spacing(64);
   }
 
   @include screen('lg') {
     padding: spacing(64) spacing(96);
+  }
+
+  .three-col-center {
+    @include container('md');
+    @include container('lg');
   }
 
   .three-col-heading {
