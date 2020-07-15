@@ -1,6 +1,7 @@
 .button {
   @include font-size('xs');
   @include border-radius('base');
+  cursor: pointer;
   padding: spacing(12) spacing(16);
   display: inline-block;
   transition: background-color 0.3s;
