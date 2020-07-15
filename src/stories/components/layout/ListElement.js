@@ -61,12 +61,14 @@ export const ListElement = () => {
 
   return (
     <section className='list-element'>
-      {isAlt && <ListElementImage src={placeholder} alt='Image' />}
-      <ListElementContent
-        headerText={headerText}
-        items={items}
-        altLayout={isAlt}
-      />
+      <div className='list-element-center'>
+        {isAlt && <ListElementImage src={placeholder} alt='Image' />}
+        <ListElementContent
+          headerText={headerText}
+          items={items}
+          altLayout={isAlt}
+        />
+      </div>
     </section>
   )
 }

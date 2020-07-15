@@ -2,7 +2,6 @@
   padding: spacing(16);
 
   @include screen('sm') {
-    display: flex;
     padding: spacing(32);
   }
 
@@ -12,6 +11,14 @@
 
   @include screen('lg') {
     padding: spacing(64) spacing(96);
+  }
+
+  .list-element-center {
+    @include container('lg');
+
+    @include screen('sm') {
+      display: flex;
+    }
   }
 
   .list-element-image-wrapper {
