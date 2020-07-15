@@ -1,7 +1,38 @@
 import React from 'react'
+import classNames from 'classnames'
+import { boolean, radios } from '@storybook/addon-knobs'
 
-export const Button = () => (
-  <a className='button button-primary' href='#'>
-    Apply now
-  </a>
+export const Button = ({ children, type = 'primary', ...attr }) => (
+  <button className={classNames('button', `button-${type}`)} {...attr}>
+    {children}
+  </button>
 )
+
+export const ButtonStory = () => {
+  const disabled = boolean('Disabled', false)
+  const type = radios(
+    'Type',
+    ['Primary', 'Secondary', 'Tertiary', 'Ghost', 'Link', 'Danger'],
+    'Primary'
+  )
+
+  return (
+    <div style={{ background: '#fff', padding: '1rem' }}>
+      <Button type={type.toLowerCase()} disabled={disabled}>
+        {type === 'Link' ? (
+          <>
+            Type something <span className='fa fa-long-arrow-alt-right' />
+          </>
+        ) : (
+          <>
+            Apply now <span className='fa fa-plus' />
+          </>
+        )}
+      </Button>
+    </div>
+  )
+}
+
+ButtonStory.story = {
+  name: 'Button'
+}
