@@ -27,13 +27,15 @@ const items = [
 
 export const ThreeCol = ({ heading, children, bgColor }) => (
   <div className={classNames('three-col', bgColor || '')}>
-    <h2 className='three-col-heading'>{heading}</h2>
-    <div className='row'>
-      {children.map((child, index) => (
-        <div key={index} className='col-sm-4'>
-          {child}
-        </div>
-      ))}
+    <div className='three-col-center'>
+      <h2 className='three-col-heading'>{heading}</h2>
+      <div className='row'>
+        {children.map((child, index) => (
+          <div key={index} className='col-sm-4'>
+            {child}
+          </div>
+        ))}
+      </div>
     </div>
   </div>
 )

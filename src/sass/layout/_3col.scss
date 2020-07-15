@@ -13,6 +13,11 @@
     padding: spacing(64) spacing(96);
   }
 
+  .three-col-center {
+    @include container('md');
+    @include container('lg');
+  }
+
   .three-col-heading {
     text-align: left;
     margin-bottom: spacing(48);

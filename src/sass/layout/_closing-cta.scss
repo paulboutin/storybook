@@ -1,21 +1,11 @@
 .closing-cta {
   position: relative;
   color: color('grey');
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @include screen('sm') {
-    height: auto;
-  }
 
   &.half {
     background: color('green');
-    flex-direction: column;
 
     @include screen('sm') {
-      flex-direction: row;
       padding: 0 spacing(24);
     }
 
@@ -25,6 +15,14 @@
 
     @include screen('lg') {
       padding: 0 spacing(96);
+    }
+
+    .closing-cta-center {
+      flex-direction: column;
+
+      @include screen('sm') {
+        flex-direction: row;
+      }
     }
 
     .closing-cta-img {
@@ -70,6 +68,19 @@
         padding: 0 0 0 spacing(160);
       }
     }
+  }
+
+  .closing-cta-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+    @include screen('sm') {
+      height: auto;
+    }
+
+    @include container('lg');
   }
 
   .closing-cta-img {
