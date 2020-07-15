@@ -1,14 +1,26 @@
 .link {
+  color: color('blue');
   cursor: pointer;
+  text-decoration: underline;
+
+  &:hover {
+    color: color('blue-darker');
+  }
+}
+
+.link-cta {
   color: color('green');
-  @include font-weight('bold');
+  text-decoration: none;
 
   &:hover {
     color: color('green-dark');
-    text-decoration: underline;
+
+    .link-text {
+      text-decoration: underline;
+    }
   }
 
-  &.inverted {
+  &.link-inverted {
     color: color('white');
 
     &:hover {
@@ -16,11 +28,7 @@
     }
   }
 
-  .link-icon-right {
+  .fa {
     margin-left: spacing(8);
-  }
-
-  .link-icon-left {
-    margin-right: spacing(8);
   }
 }

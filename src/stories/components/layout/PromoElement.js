@@ -37,11 +37,7 @@ export const PromoElement = () => {
           />
           <h2 className='promo-element-heading'>{heading}</h2>
           <p className='promo-element-text'>{text}</p>
-          <Link
-            href='#'
-            inverted={type === 'Accent'}
-            icon='long-arrow-alt-right'
-          >
+          <Link icon='long-arrow-alt-right' inverted={type === 'Accent'}>
             {link}
           </Link>
         </div>

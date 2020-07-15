@@ -18,7 +18,7 @@ export const Block = ({ children, question, expanded }) => (
 )
 
 export const FAQ = () => (
-  <div className='faq'>
+  <div className='faq container'>
     <h4 className='faq-heading'>
       Still have questions?
       <br />
@@ -58,7 +58,7 @@ export const FAQ = () => (
       voluptate?
     </Block>
 
-    <Link href='#' icon='long-arrow-alt-right' className='faq-link'>
+    <Link icon='long-arrow-alt-right' className='faq-link'>
       View All
     </Link>
   </div>

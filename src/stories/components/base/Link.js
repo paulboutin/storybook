@@ -1,33 +1,26 @@
 import React from 'react'
 import classNames from 'classnames'
+import { radios } from '@storybook/addon-knobs'
 
-export const Link = ({
-  href,
-  inverted = false,
-  icon,
-  iconPosition = 'right',
-  className,
-  children
-}) => {
-  const Icon = <span className={`fa fa-${icon} link-icon-${iconPosition}`} />
-
-  return (
-    <a
-      href={href}
-      className={classNames('link', inverted ? 'inverted' : '', className)}
-    >
-      {icon && iconPosition === 'left' && Icon}
-      {children}
-      {icon && iconPosition === 'right' && Icon}
-    </a>
-  )
-}
-
-export const LinkStory = () => (
-  <Link href='#' icon='long-arrow-alt-right'>
-    Link
-  </Link>
+export const Link = ({ href = '#', inverted, icon, className, children }) => (
+  <a
+    href={href}
+    className={classNames(
+      'link',
+      { 'link-inverted': inverted, 'link-cta': icon },
+      className
+    )}
+  >
+    <span className='link-text'>{children}</span>
+    {icon && <span className={`fa fa-${icon}`} />}
+  </a>
 )
+
+export const LinkStory = () => {
+  const type = radios('Type', ['Inline', 'CTA'], 'Inline')
+
+  return <Link icon={type === 'CTA' ? 'long-arrow-alt-right' : null}>Link</Link>
+}
 
 LinkStory.story = {
   name: 'Link'

@@ -7,7 +7,7 @@ import { Link } from '../base/Link'
 const Highlight = ({ contentPosition, type, overlap, color }) => (
   <div
     className={classNames(
-      'highlight',
+      'highlight container',
       contentPosition === 'Left' ? 'highlight-left' : 'highlight-right',
       type === 'Single' ? 'highlight-single' : 'highlight-overlap',
       type === 'Overlap' &&
@@ -47,7 +47,7 @@ const Highlight = ({ contentPosition, type, overlap, color }) => (
         and what we don't.
       </p>
 
-      <Link href='#' icon='long-arrow-alt-right' className='highlight-link'>
+      <Link icon='long-arrow-alt-right' className='highlight-link'>
         Your choice of bank matters
       </Link>
     </div>

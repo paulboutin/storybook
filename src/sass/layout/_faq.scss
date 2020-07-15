@@ -2,16 +2,8 @@
   color: color('grey');
   padding: spacing(32) spacing(16);
 
-  @include screen('sm') {
-    padding: spacing(32) spacing(64);
-  }
-
   @include screen('md') {
-    padding: spacing(48) spacing(96);
-  }
-
-  @include screen('lg') {
-    padding: spacing(48) spacing(160);
+    padding: spacing(48) spacing(64);
   }
 }
 

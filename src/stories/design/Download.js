@@ -1,17 +1,18 @@
 import React from 'react'
+import { Link } from '../components/base/Link'
 
 export const Download = () => (
   <div>
     <div>
-      <a href='/styles.zip' className='link'>
+      <Link href='/styles.zip' icon='file-download'>
         Styles
-      </a>
+      </Link>
     </div>
 
     <div>
-      <a href='/scripts.zip' className='link'>
+      <Link href='/scripts.zip' icon='file-download'>
         Scripts
-      </a>
+      </Link>
     </div>
   </div>
 )
