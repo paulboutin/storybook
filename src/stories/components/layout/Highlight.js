@@ -47,7 +47,7 @@ const Highlight = ({ contentPosition, type, overlap, color }) => (
         and what we don't.
       </p>
 
-      <Link href='#' icon='long-arrow-alt-right' className='highlight-link'>
+      <Link icon='long-arrow-alt-right' className='highlight-link'>
         Your choice of bank matters
       </Link>
     </div>

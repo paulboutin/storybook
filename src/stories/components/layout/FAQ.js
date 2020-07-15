@@ -58,7 +58,7 @@ export const FAQ = () => (
       voluptate?
     </Block>
 
-    <Link href='#' icon='long-arrow-alt-right' className='faq-link'>
+    <Link icon='long-arrow-alt-right' className='faq-link'>
       View All
     </Link>
   </div>
