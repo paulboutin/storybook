@@ -52,15 +52,13 @@
     }
 
     .card-heading {
-      margin-bottom: spacing(16);
-      @include font-family('display');
-      @include font-weight('bold');
-      @include font-size('h5');
+      margin-top: spacing(8);
+      margin-bottom: spacing(4);
     }
 
     .card-text-wrapper {
       display: none;
-      margin-bottom: spacing(16);
+      margin-bottom: spacing(32);
       flex: 1;
 
       @include screen('sm') {
@@ -70,7 +68,6 @@
 
       .card-text {
         color: color('grey-80');
-        @include font-size('sm');
       }
     }
   }
