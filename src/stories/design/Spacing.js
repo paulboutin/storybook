@@ -2,28 +2,28 @@ import React from 'react'
 import classNames from 'classnames'
 
 const SpacingBlock = ({ size }) => (
-  <div className='ds:spacing'>
-    <div className={classNames('ds:spacing-block', `ds:spacing--${size}`)} />
+  <div className='sb:spacing'>
+    <div className={classNames('sb:spacing-block', `sb:spacing--${size}`)} />
     <span>{size}</span>
   </div>
 )
 
 const PaddingBlock = ({ size }) => (
-  <div className={classNames('ds:spacing-block', `ds:padding--${size}`)}>
-    <div className='ds:spacing-block--padding' />
+  <div className={classNames('sb:spacing-block', `sb:padding--${size}`)}>
+    <div className='sb:spacing-block--padding' />
   </div>
 )
 
 const MarginBlock = ({ size }) => (
-  <p className={classNames('ds:spacing-block--margin', `ds:margin--${size}`)}>
+  <p className={classNames('sb:spacing-block--margin', `sb:margin--${size}`)}>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit.
   </p>
 )
 
 export const Spacing = () => (
   <div>
-    <h2 className='ds:spacing-heading'>Spacing scale</h2>
-    <div className='ds:spacing-block-section'>
+    <h2 className='sb:spacing-heading'>Spacing scale</h2>
+    <div className='sb:spacing-block-section'>
       <SpacingBlock size={4} />
       <SpacingBlock size={8} />
       <SpacingBlock size={12} />
@@ -36,8 +36,8 @@ export const Spacing = () => (
       <SpacingBlock size={160} />
     </div>
 
-    <h2 className='ds:spacing-heading'>Padding</h2>
-    <div className='ds:spacing-block-section'>
+    <h2 className='sb:spacing-heading'>Padding</h2>
+    <div className='sb:spacing-block-section'>
       <PaddingBlock size={4} />
       <PaddingBlock size={8} />
       <PaddingBlock size={12} />
@@ -49,7 +49,7 @@ export const Spacing = () => (
       <PaddingBlock size={96} />
     </div>
 
-    <h2 className='ds:spacing-heading'>Margin</h2>
+    <h2 className='sb:spacing-heading'>Margin</h2>
     <div>
       <MarginBlock size={0} />
       <MarginBlock size={4} />
