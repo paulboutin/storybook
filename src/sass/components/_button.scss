@@ -4,7 +4,7 @@
   cursor: pointer;
   padding: spacing(12) spacing(16);
   display: inline-block;
-  transition-property: color, background-color;
+  transition-property: color, background-color, border-color;
   transition-duration: 0.3s;
 
   .fa {
@@ -66,16 +66,19 @@
 
   &:focus {
     background-color: color('green-light');
+    border-color: color('green-light');
     color: color('white');
   }
 
   &:hover {
     background-color: color('green');
+    border-color: color('green');
     color: color('white');
   }
 
   &:active {
     background-color: color('green-dark');
+    border-color: color('green-dark');
     color: color('white');
   }
 
