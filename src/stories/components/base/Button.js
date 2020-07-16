@@ -18,16 +18,14 @@ export const ButtonStory = () => {
 
   return (
     <div style={{ background: '#e9e9e9', padding: '1rem' }}>
-      <Button type={type.toLowerCase()} disabled={disabled} focused>
-        {type === 'Link' ? (
-          <>
-            Type something <span className='fa fa-long-arrow-alt-right' />
-          </>
-        ) : (
-          <>
-            Apply now <span className='fa fa-plus' />
-          </>
-        )}
+      <Button type={type.toLowerCase()} disabled={disabled}>
+        Apply Now
+        <span
+          className={classNames(
+            'fa',
+            type === 'Link' ? 'fa-long-arrow-alt-right' : 'fa-plus'
+          )}
+        />
       </Button>
     </div>
   )

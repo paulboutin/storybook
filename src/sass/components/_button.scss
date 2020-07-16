@@ -4,7 +4,7 @@
   cursor: pointer;
   padding: spacing(12) spacing(16);
   display: inline-block;
-  transition: background-color 0.3s;
+  transition: 0.3s;
 
   .fa {
     margin-left: spacing(8);
@@ -17,8 +17,8 @@
   &.button-link,
   &.button-danger {
     &:focus {
-      outline: none;
-      border: 1px solid color('blue');
+      outline: 1px solid color('blue');
+      outline-offset: 2px;
     }
 
     &:disabled,
@@ -33,13 +33,13 @@
     background-color: color('green');
     color: color('white');
 
+    &:focus {
+      background-color: color('green-light');
+    }
+
     &:active,
     &:hover {
       background-color: color('green-dark');
-    }
-
-    &:focus {
-      background-color: color('green-light');
     }
   }
 
@@ -47,23 +47,23 @@
     background-color: color('white');
     color: color('green');
 
+    &:focus {
+      background-color: color('grey-10');
+    }
+
     &:active,
     &:hover {
       background-color: color('grey-5');
     }
-
-    &:focus {
-      background-color: color('grey-10');
-    }
   }
 
   &.button-tertiary {
-    background-color: white;
+    background-color: transparent;
     color: color('green');
     border: 1px solid color('green');
 
-    &:active {
-      background-color: color('green-dark');
+    &:focus {
+      background-color: color('green-light');
       color: color('white');
     }
 
@@ -72,14 +72,14 @@
       color: color('white');
     }
 
-    &:focus {
-      background-color: color('green-light');
+    &:active {
+      background-color: color('green-dark');
+      color: color('white');
     }
 
     &:disabled,
     &:disabled:hover {
-      background-color: color('white');
-      color: color('grey-20');
+      background-color: transparent;
       border: 1px solid color('grey-20');
     }
   }
@@ -88,18 +88,17 @@
     background: transparent;
     color: color('green');
 
-    &:active {
-      background-color: color('grey-10');
-    }
-
     &:hover {
       background-color: color('grey-5');
+    }
+
+    &:active {
+      background-color: color('grey-10');
     }
 
     &:disabled,
     &:disabled:hover {
       background-color: transparent;
-      color: color('grey-20');
     }
   }
 
@@ -107,19 +106,18 @@
     background: transparent;
     color: color('green');
 
-    &:active {
-      color: color('green-dark');
+    &:focus {
+      outline: none;
+      color: color('blue');
     }
 
-    &:focus {
-      border: none;
-      color: color('blue');
+    &:active {
+      color: color('green-dark');
     }
 
     &:disabled,
     &:disabled:hover {
       background-color: transparent;
-      color: color('grey-20');
     }
   }
 
@@ -127,16 +125,16 @@
     background-color: color('error');
     color: color('white');
 
-    &:active {
-      background-color: color('error-darker');
+    &:focus {
+      background-color: color('error-light');
     }
 
     &:hover {
       background-color: color('error-dark');
     }
 
-    &:focus {
-      background-color: color('error-light');
+    &:active {
+      background-color: color('error-darker');
     }
   }
 }
