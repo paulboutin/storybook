@@ -27,27 +27,30 @@ export const ButtonStory = () => {
 
   return (
     <div className='sb:buttons'>
-      {states.map(state => (
-        <div className='sb:button-wrapper'>
-          <h4 className='sb:button-title'>{state}</h4>
+      {states.map(state => {
+        const normal = state === 'normal'
 
-          <Button
-            type={type}
-            className={classNames(
-              state !== 'normal' && `sb:button-${type}-${state}`
-            )}
-            disabled={state === 'normal' && disabled}
-          >
-            Apply Now
-            <span
-              className={classNames(
-                'fa',
-                type === 'link' ? 'fa-long-arrow-alt-right' : 'fa-plus'
-              )}
-            />
-          </Button>
-        </div>
-      ))}
+        return (
+          <div className='sb:button-wrapper'>
+            <h4 className='sb:button-title'>{state}</h4>
+
+            <Button
+              type={type}
+              className={classNames(!normal && `sb:button-${type}-${state}`)}
+              disabled={state === 'normal' && disabled}
+              tabIndex={normal ? 1 : -1}
+            >
+              Apply Now
+              <span
+                className={classNames(
+                  'fa',
+                  type === 'link' ? 'fa-long-arrow-alt-right' : 'fa-plus'
+                )}
+              />
+            </Button>
+          </div>
+        )
+      })}
     </div>
   )
 }
