@@ -4,7 +4,8 @@
   cursor: pointer;
   padding: spacing(12) spacing(16);
   display: inline-block;
-  transition: 0.3s;
+  transition-property: color, background-color;
+  transition-duration: 0.3s;
 
   .fa {
     margin-left: spacing(8);
