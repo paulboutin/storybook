@@ -2,33 +2,52 @@ import React from 'react'
 import classNames from 'classnames'
 import { boolean, radios } from '@storybook/addon-knobs'
 
-export const Button = ({ children, type = 'primary', ...attr }) => (
-  <button className={classNames('button', `button-${type}`)} {...attr}>
+export const BUTTON_TYPES = [
+  'Primary',
+  'Secondary',
+  'Tertiary',
+  'Ghost',
+  'Danger',
+  'Link'
+]
+
+export const Button = ({ type = 'primary', children, className, ...attr }) => (
+  <button
+    className={classNames('button', `button-${type}`, className)}
+    {...attr}
+  >
     {children}
   </button>
 )
 
 export const ButtonStory = () => {
   const disabled = boolean('Disabled', false)
-  const type = radios(
-    'Type',
-    ['Primary', 'Secondary', 'Tertiary', 'Ghost', 'Link', 'Danger'],
-    'Primary'
-  )
+  const type = radios('Type', BUTTON_TYPES, 'Primary').toLowerCase()
+  const states = ['normal', 'hover', 'active', 'focus', 'disabled']
 
   return (
-    <div style={{ background: '#e9e9e9', padding: '1rem' }}>
-      <Button type={type.toLowerCase()} disabled={disabled} focused>
-        {type === 'Link' ? (
-          <>
-            Type something <span className='fa fa-long-arrow-alt-right' />
-          </>
-        ) : (
-          <>
-            Apply now <span className='fa fa-plus' />
-          </>
-        )}
-      </Button>
+    <div className='sb:buttons'>
+      {states.map(state => (
+        <div className='sb:button-wrapper'>
+          <h4 className='sb:button-title'>{state}</h4>
+
+          <Button
+            type={type}
+            className={classNames(
+              state !== 'normal' && `sb:button-${type}-${state}`
+            )}
+            disabled={state === 'normal' && disabled}
+          >
+            Apply Now
+            <span
+              className={classNames(
+                'fa',
+                type === 'link' ? 'fa-long-arrow-alt-right' : 'fa-plus'
+              )}
+            />
+          </Button>
+        </div>
+      ))}
     </div>
   )
 }

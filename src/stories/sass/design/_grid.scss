@@ -1,9 +1,9 @@
-.ds\:grid {
+.sb\:grid {
   color: color('grey');
   padding: 0 spacing(16);
 }
 
-.ds\:grid-heading {
+.sb\:grid-heading {
   color: color('grey-70');
   margin-bottom: spacing(16);
 
@@ -12,13 +12,13 @@
   }
 }
 
-.ds\:grid-column {
+.sb\:grid-column {
   border: 1px dashed color('grey-70');
   background-color: color('grey-10');
   padding: spacing(4) spacing(12);
 }
 
-.ds\:grid-breakpoints {
+.sb\:grid-breakpoints {
   @include border-radius('base');
   background-color: color('grey-10');
   margin-bottom: spacing(16);

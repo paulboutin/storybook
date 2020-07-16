@@ -2,18 +2,18 @@ import React from 'react'
 import classNames from 'classnames'
 
 const ColorGroup = ({ children }) => (
-  <div className='ds:color-group'>
+  <div className='sb:color-group'>
     <div>{children}</div>
   </div>
 )
 
 const ColorName = ({ children }) => (
-  <h4 className='ds:color-name'>{children}</h4>
+  <h4 className='sb:color-name'>{children}</h4>
 )
 
 const ColorBlock = ({ children, bg, text }) => (
   <div
-    className={classNames('ds:color-block', `ds:color--${bg}`)}
+    className={classNames('sb:color-block', `sb:color--${bg}`)}
     style={{ color: text }}
   >
     {children}
@@ -21,7 +21,7 @@ const ColorBlock = ({ children, bg, text }) => (
 )
 
 export const Colors = () => (
-  <div className='ds:colors'>
+  <div className='sb:colors'>
     <ColorGroup>
       <ColorName>Brand Green</ColorName>
       <ColorBlock bg='green' text='white'>

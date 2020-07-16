@@ -2,14 +2,14 @@ import React from 'react'
 import classNames from 'classnames'
 
 const Column = ({ className }) => (
-  <div className={classNames('ds:grid-column', className)}>
+  <div className={classNames('sb:grid-column', className)}>
     {className.replace(/col/g, '.col')}
   </div>
 )
 
 export const Grid = () => (
-  <div className='ds:grid'>
-    <h2 className='ds:grid-heading'>Bootstrap 3 style grid</h2>
+  <div className='sb:grid'>
+    <h2 className='sb:grid-heading'>Bootstrap 3 style grid</h2>
 
     <div className='row'>
       <Column className='col-xs-4' />
@@ -29,9 +29,9 @@ export const Grid = () => (
       <Column className='col-xs-5' />
     </div>
 
-    <h2 className='ds:grid-heading'>Responsive columns</h2>
+    <h2 className='sb:grid-heading'>Responsive columns</h2>
 
-    <div className='ds:grid-breakpoints'>
+    <div className='sb:grid-breakpoints'>
       <h6>Breakpoints:</h6>
       <ul>
         <li>
@@ -59,7 +59,7 @@ export const Grid = () => (
       <Column className='col-md-6 col-xs-8' />
     </div>
 
-    <h2 className='ds:grid-heading'>Offset columns</h2>
+    <h2 className='sb:grid-heading'>Offset columns</h2>
 
     <div className='row'>
       <Column className='col-xs-4' />

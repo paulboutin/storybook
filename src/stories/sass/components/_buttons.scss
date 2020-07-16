@@ -1,0 +1,30 @@
+.sb\:buttons {
+  display: flex;
+  flex-direction: column;
+  padding: spacing(8);
+  background-color: #f1ecec;
+
+  @include screen('md') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.sb\:button-wrapper {
+  margin: spacing(8);
+}
+
+.sb\:button-title {
+  @include font-size('xs');
+  text-transform: capitalize;
+}
+
+@each $type in (primary, secondary, tertiary, ghost, danger, link) {
+  @each $state in (focus, hover, active, disabled) {
+    .sb\:button-#{$type}-#{$state} {
+      @extend .button:#{$state} !optional;
+      @extend .button-#{$type}:#{$state} !optional;
+      pointer-events: none;
+    }
+  }
+}
