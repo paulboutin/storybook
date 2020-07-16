@@ -61,7 +61,7 @@ export const ListElement = () => {
 
   return (
     <section className='list-element'>
-      <div className='list-element-center'>
+      <div className='container'>
         {isAlt && <ListElementImage src={placeholder} alt='Image' />}
         <ListElementContent
           headerText={headerText}

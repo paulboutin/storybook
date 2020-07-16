@@ -1,21 +1,11 @@
 .list-element {
-  padding: spacing(16);
+  padding: spacing(32) 0;
 
   @include screen('sm') {
-    padding: spacing(32);
+    padding: spacing(64) 0;
   }
 
-  @include screen('md') {
-    padding: spacing(64);
-  }
-
-  @include screen('lg') {
-    padding: spacing(64) spacing(96);
-  }
-
-  .list-element-center {
-    @include container('lg');
-
+  .container {
     @include screen('sm') {
       display: flex;
     }

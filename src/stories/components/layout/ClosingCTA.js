@@ -16,7 +16,7 @@ export const ClosingCTA = () => {
 
   return (
     <div className={classNames('closing-cta', typeMap[type])}>
-      <div className='closing-cta-center'>
+      <div className='container'>
         <img
           className='closing-cta-img'
           src='http://via.placeholder.com/1600/464646/464646'

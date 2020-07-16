@@ -38,7 +38,7 @@ export const PromoElement = () => {
 
   return (
     <div className={classNames('promo-element', classes[type])}>
-      <div className='promo-element-center'>
+      <div className='container'>
         <div className='promo-element-content'>
           <Eyebrow text={eyebrow} inverted={type === 'Accent'} />
           <h2 className='promo-element-heading'>{heading}</h2>
@@ -52,7 +52,7 @@ export const PromoElement = () => {
             alt='Hero image'
           />
         </div>
-        <PromoElementCTAWrapper type={type} />
+        {type === 'Accent' && <PromoElementCTAWrapper type={type} />}
       </div>
     </div>
   )

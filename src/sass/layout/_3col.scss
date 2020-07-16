@@ -1,21 +1,8 @@
 .three-col {
-  padding: spacing(32) spacing(16);
+  padding: spacing(32) 0;
 
   @include screen('sm') {
-    padding: spacing(64) spacing(24);
-  }
-
-  @include screen('md') {
-    padding: spacing(64) spacing(48);
-  }
-
-  @include screen('lg') {
-    padding: spacing(64) spacing(96);
-  }
-
-  .three-col-center {
-    @include container('md');
-    @include container('lg');
+    padding: spacing(64) 0;
   }
 
   .three-col-heading {

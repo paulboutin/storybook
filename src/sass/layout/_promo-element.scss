@@ -1,17 +1,9 @@
 .promo-element {
-  padding: spacing(32) spacing(16);
+  padding: spacing(32) 0;
   color: color('grey');
 
   @include screen('sm') {
-    padding: spacing(32);
-  }
-
-  @include screen('md') {
-    padding: spacing(64);
-  }
-
-  @include screen('lg') {
-    padding: spacing(64) spacing(96);
+    padding: spacing(64) 0;
   }
 
   &.accent {
@@ -25,7 +17,17 @@
       text-align: left;
     }
 
+    .container {
+      flex-direction: column;
+
+      @include screen('sm') {
+        flex-direction: row;
+      }
+    }
+
     .promo-element-content {
+      margin-top: 0;
+
       .eyebrow {
         align-items: center;
 
@@ -42,15 +44,21 @@
       .promo-element-text {
         color: color('white');
       }
+
+      .cta-wrapper {
+        display: none;
+
+        @include screen('sm') {
+          display: block;
+        }
+      }
     }
   }
 
-  .promo-element-center {
+  .container {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     position: relative;
-    @include container('md');
-    @include container('lg');
 
     @include screen('sm') {
       flex-direction: row;
@@ -73,6 +81,7 @@
   }
 
   .promo-element-content {
+    margin-top: spacing(12);
     margin-bottom: spacing(32);
 
     @include screen('sm') {
@@ -98,18 +107,16 @@
     }
 
     .cta-wrapper {
-      display: none;
       align-self: center;
+      margin-top: spacing(24);
 
       @include screen('sm') {
-        margin-top: spacing(24);
-        display: block;
         align-self: flex-start;
       }
     }
   }
 
-  .cta-wrapper {
+  .container > .cta-wrapper {
     margin-top: spacing(32);
 
     @include screen('sm') {

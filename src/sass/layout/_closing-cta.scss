@@ -70,17 +70,22 @@
     }
   }
 
-  .closing-cta-center {
+  .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 
     @include screen('sm') {
+      flex-direction: row;
       height: auto;
     }
 
-    @include container('lg');
+    @include screen('lg') {
+      width: 100%;
+      max-width: 1170px;
+    }
   }
 
   .closing-cta-img {
