@@ -10,131 +10,136 @@
     margin-left: spacing(8);
   }
 
-  &.button-primary,
-  &.button-secondary,
-  &.button-tertiary,
-  &.button-ghost,
-  &.button-link,
-  &.button-danger {
-    &:focus {
-      outline: 1px solid color('blue');
-      outline-offset: 2px;
-    }
-
-    &:disabled,
-    &:disabled:hover {
-      cursor: not-allowed;
-      background-color: color('grey-5');
-      color: color('grey-20');
-    }
+  &:focus {
+    outline: 1px solid color('blue');
+    outline-offset: 2px;
   }
 
-  &.button-primary {
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
+.button-primary {
+  background-color: color('green');
+  color: color('white');
+
+  &:focus {
+    background-color: color('green-light');
+  }
+
+  &:hover,
+  &:active {
+    background-color: color('green-dark');
+  }
+
+  &:disabled {
+    background-color: color('grey-5');
+    color: color('grey-20');
+  }
+}
+
+.button-secondary {
+  background-color: color('white');
+  color: color('green');
+
+  &:focus {
+    background-color: color('grey-10');
+  }
+
+  &:hover,
+  &:active {
+    background-color: color('grey-5');
+  }
+
+  &:disabled {
+    background-color: color('grey-5');
+    color: color('grey-20');
+  }
+}
+
+.button-tertiary {
+  background-color: transparent;
+  color: color('green');
+  border: 1px solid color('green');
+
+  &:focus {
+    background-color: color('green-light');
+    color: color('white');
+  }
+
+  &:hover {
     background-color: color('green');
     color: color('white');
-
-    &:focus {
-      background-color: color('green-light');
-    }
-
-    &:active,
-    &:hover {
-      background-color: color('green-dark');
-    }
   }
 
-  &.button-secondary {
-    background-color: color('white');
-    color: color('green');
-
-    &:focus {
-      background-color: color('grey-10');
-    }
-
-    &:active,
-    &:hover {
-      background-color: color('grey-5');
-    }
-  }
-
-  &.button-tertiary {
-    background-color: transparent;
-    color: color('green');
-    border: 1px solid color('green');
-
-    &:focus {
-      background-color: color('green-light');
-      color: color('white');
-    }
-
-    &:hover {
-      background-color: color('green');
-      color: color('white');
-    }
-
-    &:active {
-      background-color: color('green-dark');
-      color: color('white');
-    }
-
-    &:disabled,
-    &:disabled:hover {
-      background-color: transparent;
-      border: 1px solid color('grey-20');
-    }
-  }
-
-  &.button-ghost {
-    background: transparent;
-    color: color('green');
-
-    &:hover {
-      background-color: color('grey-5');
-    }
-
-    &:active {
-      background-color: color('grey-10');
-    }
-
-    &:disabled,
-    &:disabled:hover {
-      background-color: transparent;
-    }
-  }
-
-  &.button-link {
-    background: transparent;
-    color: color('green');
-
-    &:focus {
-      outline: none;
-      color: color('blue');
-    }
-
-    &:active {
-      color: color('green-dark');
-    }
-
-    &:disabled,
-    &:disabled:hover {
-      background-color: transparent;
-    }
-  }
-
-  &.button-danger {
-    background-color: color('error');
+  &:active {
+    background-color: color('green-dark');
     color: color('white');
+  }
 
-    &:focus {
-      background-color: color('error-light');
-    }
+  &:disabled {
+    background-color: transparent;
+    color: color('grey-20');
+    border: 1px solid color('grey-20');
+  }
+}
 
-    &:hover {
-      background-color: color('error-dark');
-    }
+.button-ghost {
+  background: transparent;
+  color: color('green');
 
-    &:active {
-      background-color: color('error-darker');
-    }
+  &:hover {
+    background-color: color('grey-5');
+  }
+
+  &:active {
+    background-color: color('grey-10');
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: color('grey-20');
+  }
+}
+
+.button-link {
+  background: transparent;
+  color: color('green');
+
+  &:focus {
+    outline: none;
+    color: color('blue');
+  }
+
+  &:active {
+    color: color('green-dark');
+  }
+
+  &:disabled {
+    background-color: transparent;
+    color: color('grey-20');
+  }
+}
+
+.button-danger {
+  background-color: color('error');
+  color: color('white');
+
+  &:focus {
+    background-color: color('error-light');
+  }
+
+  &:hover {
+    background-color: color('error-dark');
+  }
+
+  &:active {
+    background-color: color('error-darker');
+  }
+
+  &:disabled {
+    background-color: color('grey-5');
+    color: color('grey-20');
   }
 }

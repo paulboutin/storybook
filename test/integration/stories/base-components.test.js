@@ -1,7 +1,14 @@
 import { buildSnapshotTests } from '../utils'
+import { BUTTON_TYPES } from '../../../src/stories/components/base/Button'
 
 describe('Base Components', () => {
   const stories = [
+    ...BUTTON_TYPES.map(type => ({
+      title: `button ${type.toLowerCase()}`,
+      component: 'button-story',
+      devices: ['mobile'],
+      'knob-Type': type
+    })),
     {
       title: 'link inline',
       component: 'link-story',
