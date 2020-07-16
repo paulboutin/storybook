@@ -107,11 +107,6 @@
   background: transparent;
   color: color('green');
 
-  &:focus {
-    outline: none;
-    color: color('blue');
-  }
-
   &:active {
     color: color('green-dark');
   }
