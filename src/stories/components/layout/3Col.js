@@ -27,7 +27,7 @@ const items = [
 
 export const ThreeCol = ({ heading, children, bgColor }) => (
   <div className={classNames('three-col', bgColor || '')}>
-    <div className='three-col-center'>
+    <div className='container'>
       <h2 className='three-col-heading'>{heading}</h2>
       <div className='row'>
         {children.map((child, index) => (

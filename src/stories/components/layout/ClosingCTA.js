@@ -16,7 +16,7 @@ export const ClosingCTA = () => {
 
   return (
     <div className={classNames('closing-cta', typeMap[type])}>
-      <div className='closing-cta-center'>
+      <div className='container'>
         <img
           className='closing-cta-img'
           src='http://via.placeholder.com/1600/464646/464646'
@@ -27,8 +27,8 @@ export const ClosingCTA = () => {
           {type !== 'Half' && (
             <p className='closing-cta-text'>Type something</p>
           )}
-          <a className='button button-secondary closing-cta-button' href='#'>
-            Apply now
+          <a className='button button-secondary' href='#'>
+            Call to Action
           </a>
         </div>
       </div>

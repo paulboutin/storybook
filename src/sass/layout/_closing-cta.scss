@@ -70,17 +70,22 @@
     }
   }
 
-  .closing-cta-center {
+  .container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
 
     @include screen('sm') {
+      flex-direction: row;
       height: auto;
     }
 
-    @include container('lg');
+    @include screen('lg') {
+      width: 100%;
+      max-width: 1170px;
+    }
   }
 
   .closing-cta-img {
@@ -127,11 +132,6 @@
       @include screen('lg') {
         margin-bottom: spacing(48);
       }
-    }
-
-    .closing-cta-button {
-      padding-left: spacing(32);
-      padding-right: spacing(32);
     }
   }
 }
