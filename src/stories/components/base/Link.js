@@ -1,25 +1,46 @@
 import React from 'react'
 import classNames from 'classnames'
-import { radios } from '@storybook/addon-knobs'
 
-export const Link = ({ href = '#', inverted, icon, className, children }) => (
+export const Link = ({ href = '#', icon, className, children }) => (
   <a
     href={href}
     className={classNames(
       'link',
-      { 'link-inverted': inverted, 'link-cta': icon },
+      icon ? 'link-standalone' : 'link-inline',
       className
     )}
   >
-    <span className='link-text'>{children}</span>
+    {children}
     {icon && <span className={`fa fa-${icon}`} />}
   </a>
 )
 
 export const LinkStory = () => {
-  const type = radios('Type', ['Inline', 'CTA'], 'Inline')
+  const types = ['inline', 'standalone']
+  const states = ['normal', 'hover', 'active', 'focus', 'visited']
 
-  return <Link icon={type === 'CTA' ? 'long-arrow-alt-right' : null}>Link</Link>
+  return (
+    <div>
+      {types.map(type => {
+        const icon = type === 'standalone' ? 'long-arrow-alt-right' : null
+
+        return (
+          <div key={type} className='sb:link-type'>
+            <h3 className='sb:link-type-name'>{type}</h3>
+
+            {states.map(state => (
+              <div className='sb:link-wrapper'>
+                <h4 className='sb:link-title'>{state}</h4>
+                <Link icon={icon} className={`sb:link-${type}-${state}`}>
+                  Link
+                </Link>
+              </div>
+            ))}
+          </div>
+        )
+      })}
+    </div>
+  )
 }
 
 LinkStory.story = {

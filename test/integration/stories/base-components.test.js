@@ -6,20 +6,18 @@ describe('Base Components', () => {
     ...BUTTON_TYPES.map(type => ({
       title: `button ${type.toLowerCase()}`,
       component: 'button-story',
-      devices: ['mobile'],
+      devices: ['desktop'],
       'knob-Type': type
     })),
     {
-      title: 'link inline',
-      component: 'link-story',
-      devices: ['mobile'],
-      'knob-Type': 'Inline'
+      title: 'checkbox',
+      component: 'checkbox-story',
+      devices: ['mobile', 'desktop']
     },
     {
-      title: 'link cta',
+      title: 'link',
       component: 'link-story',
-      devices: ['mobile'],
-      'knob-Type': 'CTA'
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'card standard',
