@@ -1,56 +1,62 @@
 import React from 'react'
 import classNames from 'classnames'
-import { boolean, radios } from '@storybook/addon-knobs'
+import { radios } from '@storybook/addon-knobs'
 
 export const BUTTON_TYPES = [
   'Primary',
   'Secondary',
   'Tertiary',
   'Ghost',
-  'Danger',
-  'Link'
+  'Danger'
 ]
 
-export const Button = ({ type = 'primary', children, className, ...attr }) => (
+export const Button = ({ type, label, icon, className, ...props }) => (
   <button
-    className={classNames('button', `button-${type}`, className)}
-    {...attr}
+    className={classNames(
+      'button',
+      `button-${type}`,
+      { 'button-icon': icon && !label },
+      className
+    )}
+    {...props}
   >
-    {children}
+    {label && <span>{label}</span>}
+
+    {icon && <span className={classNames('fa', `fa-${icon}`)} />}
   </button>
 )
 
 export const ButtonStory = () => {
-  const disabled = boolean('Disabled', false)
   const type = radios('Type', BUTTON_TYPES, 'Primary').toLowerCase()
   const states = ['normal', 'hover', 'active', 'focus', 'disabled']
 
+  const variants = [
+    { name: 'Text', label: 'Apply Now', icon: null },
+    { name: 'Text + icon', label: 'Apply Now', icon: 'plus' },
+    { name: 'Icon', label: null, icon: 'plus' }
+  ]
+
   return (
-    <div className='sb:buttons'>
-      {states.map(state => {
-        const normal = state === 'normal'
+    <div>
+      {variants.map(({ name, label, icon }) => (
+        <div className='sb:button-variant'>
+          <h3 className='sb:button-variant-name'>{name}</h3>
 
-        return (
-          <div className='sb:button-wrapper'>
-            <h4 className='sb:button-title'>{state}</h4>
+          {states.map(state => (
+            <div className='sb:button-wrapper'>
+              <h4 className='sb:button-title'>{state}</h4>
 
-            <Button
-              type={type}
-              className={classNames(!normal && `sb:button-${type}-${state}`)}
-              disabled={state === 'normal' && disabled}
-              tabIndex={normal ? 1 : -1}
-            >
-              Apply Now
-              <span
-                className={classNames(
-                  'fa',
-                  type === 'link' ? 'fa-long-arrow-alt-right' : 'fa-plus'
-                )}
+              <Button
+                type={type}
+                label={label}
+                icon={icon}
+                className={`sb:button-${type}-${state}`}
+                disabled={state === 'disabled'}
               />
-            </Button>
-          </div>
-        )
-      })}
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   )
 }

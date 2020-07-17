@@ -21,6 +21,16 @@
   }
 }
 
+.button-icon {
+  height: 48px;
+  width: 48px;
+  padding: 0;
+
+  .fa {
+    margin-left: 0;
+  }
+}
+
 .button-primary {
   background-color: color('green');
   color: color('white');
@@ -99,20 +109,6 @@
 
   &:active {
     background-color: color('grey-10');
-  }
-
-  &:disabled {
-    background-color: transparent;
-    color: color('grey-20');
-  }
-}
-
-.button-link {
-  background: transparent;
-  color: color('green');
-
-  &:active {
-    color: color('green-dark');
   }
 
   &:disabled {
