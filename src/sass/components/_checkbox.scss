@@ -10,7 +10,7 @@
 
   &:focus-within {
     .checkbox {
-      outline: 1px solid color('blue');
+      outline: 2px solid color('blue');
       outline-offset: 2px;
     }
   }
