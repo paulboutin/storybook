@@ -33,7 +33,11 @@ export const InputStory = () => {
       </div>
       <div className='sb:input-wrapper'>
         <h3 className='sb:input-title'>Completed</h3>
-        <Input id='address' label='Address' required value='123 Little St.' />
+        <Input id='address-1' label='Address' required value='123 Little St.' />
+      </div>
+      <div className='sb:input-wrapper focus'>
+        <h3 className='sb:input-title'>Active</h3>
+        <Input id='address-2' label='Address' required />
       </div>
       <div className='sb:input-wrapper'>
         <h3 className='sb:input-title'>Password</h3>

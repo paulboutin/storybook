@@ -11,6 +11,12 @@
   display: flex;
   flex-direction: column;
   margin: spacing(8);
+
+  &.focus {
+    input {
+      @extend .input-control:focus;
+    }
+  }
 }
 
 .sb\:input-title {
