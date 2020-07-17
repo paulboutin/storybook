@@ -20,7 +20,7 @@ const PromoElementCTAWrapper = ({ type }) => (
       <button
         className={classNames(
           'button',
-          type === 'Standard' ? 'button-primary' : 'button-secondary'
+          type === 'Standard' ? 'button-primary' : 'button-tertiary'
         )}
       >
         Call to Action

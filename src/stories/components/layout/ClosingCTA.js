@@ -27,7 +27,7 @@ export const ClosingCTA = () => {
           {type !== 'Half' && (
             <p className='closing-cta-text'>Type something</p>
           )}
-          <a className='button button-secondary' href='#'>
+          <a className='button button-tertiary' href='#'>
             Call to Action
           </a>
         </div>
