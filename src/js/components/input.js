@@ -4,6 +4,12 @@ const toggleActive = el => event => {
   }
 }
 
+const passwordToggle = el => event => {
+  const isVisible = el.type === 'text'
+  el.type = isVisible ? 'password' : 'text'
+  event.currentTarget.classList.toggle('visible')
+}
+
 export default () => {
   const inputs = Array.from(document.querySelectorAll('.input-block'))
 
@@ -14,11 +20,7 @@ export default () => {
 
     if (control.type === 'password') {
       const passwordControl = input.querySelector('.input-password-control')
-      passwordControl.addEventListener('click', () => {
-        const isVisible = control.type === 'text'
-        control.type = isVisible ? 'password' : 'text'
-        passwordControl.classList.toggle('visible')
-      })
+      passwordControl.addEventListener('click', passwordToggle(control))
     }
   })
 }
