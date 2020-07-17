@@ -10,6 +10,11 @@ describe('Base Components', () => {
       'knob-Type': type
     })),
     {
+      title: 'checkbox',
+      component: 'checkbox-story',
+      devices: ['mobile', 'desktop']
+    },
+    {
       title: 'link inline',
       component: 'link-story',
       devices: ['mobile'],
