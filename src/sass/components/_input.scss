@@ -25,7 +25,7 @@
     }
 
     .input-control {
-      border-color: color('error');
+      border-color: color('error-light');
     }
   }
 
@@ -34,7 +34,7 @@
     transform-origin: top left;
     transform: translate(#{spacing(16)}, #{spacing(16) + spacing(4)}) scale(1);
     position: absolute;
-    color: color('grey-70');
+    color: color('grey');
     @include font-size('sm');
 
     .input-optional {
@@ -48,7 +48,8 @@
     outline: none;
     width: 100%;
     padding: spacing(16) spacing(16);
-    border: 1px solid color('grey-20');
+    border: 1px solid color('grey-30');
+    color: color('grey');
     @include border-radius('base');
     @include font-size('base');
 
@@ -58,14 +59,15 @@
 
     &:disabled {
       background-color: transparent;
-      color: color('grey-5');
-      border-color: color('grey-5');
+      color: color('grey-20');
+      border-color: color('grey-10');
     }
   }
 
   .input-password-control {
     position: absolute;
     cursor: pointer;
+    color: color('grey');
     top: spacing(16);
     right: spacing(16);
 
@@ -86,7 +88,7 @@
   .input-error {
     margin-top: spacing(8);
     color: color('error-dark');
-    @include font-size('sm');
+    @include font-size('xs');
 
     &:before {
       content: '\f05a';
