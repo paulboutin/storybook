@@ -37,6 +37,11 @@
         visibility: visible;
       }
     }
+
+    &:checked:disabled ~ .checkbox {
+      background-color: color('grey-30');
+      border-color: color('grey-30');
+    }
   }
 
   .checkbox {
