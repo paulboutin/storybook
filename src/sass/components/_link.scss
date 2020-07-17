@@ -1,33 +1,38 @@
 .link {
-  color: color('blue');
+  @include font-size('xs');
+  color: color('green');
   cursor: pointer;
-  text-decoration: underline;
 
-  &:hover {
-    color: color('blue-darker');
+  &:visited {
+    color: color('green-darker');
+  }
+
+  &:focus {
+    color: color('green-light');
+    outline: 1px solid color('blue');
+  }
+
+  &:hover,
+  &:active {
+    color: color('green-dark');
   }
 }
 
-.link-cta {
-  color: color('green');
-  text-decoration: none;
-
-  &:hover {
-    color: color('green-dark');
-
-    .link-text {
-      text-decoration: underline;
-    }
+.link-inline {
+  &:active {
+    text-decoration: underline;
   }
 
-  &.link-inverted {
-    color: color('white');
-
-    &:hover {
-      color: color('grey-20');
-    }
+  @include screen('sm') {
+    @include font-size('sm');
   }
 
+  @include screen('lg') {
+    @include font-size('base');
+  }
+}
+
+.link-standalone {
   .fa {
     margin-left: spacing(8);
   }

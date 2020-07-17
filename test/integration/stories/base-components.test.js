@@ -15,16 +15,9 @@ describe('Base Components', () => {
       devices: ['mobile', 'desktop']
     },
     {
-      title: 'link inline',
+      title: 'link',
       component: 'link-story',
-      devices: ['mobile'],
-      'knob-Type': 'Inline'
-    },
-    {
-      title: 'link cta',
-      component: 'link-story',
-      devices: ['mobile'],
-      'knob-Type': 'CTA'
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'card standard',
