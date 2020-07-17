@@ -1,22 +1,6 @@
 .column-icons {
   color: color('grey');
 
-  .column-icons-section {
-    &:nth-child(1) {
-      background-color: color('grey-5');
-
-      .column-icon-circle {
-        background-color: color('white');
-      }
-    }
-
-    &:nth-child(2) {
-      .column-icon-circle {
-        background-color: color('grey-5');
-      }
-    }
-  }
-
   .container {
     display: flex;
     flex-direction: column;
@@ -25,8 +9,9 @@
 
     @include screen('sm') {
       flex-direction: row;
+      flex-wrap: wrap;
       align-items: flex-start;
-      justify-content: space-evenly;
+      justify-content: center;
     }
   }
 
@@ -50,6 +35,7 @@
     border-radius: 50%;
     align-self: center;
     margin-bottom: spacing(32);
+    background-color: color('grey-5');
   }
 
   .column-icon-img {
@@ -64,5 +50,13 @@
   .column-icon-subtext {
     @include font-size('sm');
     margin-top: spacing(16);
+  }
+}
+
+.column-icons-inverted {
+  background-color: color('grey-5');
+
+  .column-icon-circle {
+    background-color: color('white');
   }
 }
