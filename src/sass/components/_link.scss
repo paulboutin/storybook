@@ -2,6 +2,7 @@
   @include font-size('xs');
   color: color('green');
   cursor: pointer;
+  text-decoration: underline;
 
   &:visited {
     color: color('green-darker');
@@ -20,10 +21,6 @@
 }
 
 .link-inline {
-  &:active {
-    text-decoration: underline;
-  }
-
   @include screen('sm') {
     @include font-size('sm');
   }
@@ -34,6 +31,8 @@
 }
 
 .link-standalone {
+  text-decoration: none;
+
   .fa {
     margin-left: spacing(8);
   }
