@@ -27,6 +27,11 @@ describe('Base Components', () => {
       title: 'card flat',
       component: 'card-story',
       'knob-Type': 'Flat'
+    },
+    {
+      title: 'input',
+      component: 'input-story',
+      devices: ['mobile']
     }
   ]
   buildSnapshotTests('components-base')(stories)

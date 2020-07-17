@@ -44,8 +44,8 @@
     width: 25px;
     height: 25px;
     border: 1px solid color('grey');
-    border-radius: 2px;
     cursor: pointer;
+    @include border-radius('sm');
 
     .fa {
       visibility: hidden;
