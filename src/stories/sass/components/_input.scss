@@ -1,0 +1,19 @@
+.sb\:input {
+  display: flex;
+  flex-direction: column;
+
+  @include screen('sm') {
+    width: 50%;
+  }
+}
+
+.sb\:input-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: spacing(8);
+}
+
+.sb\:input-title {
+  @include font-size('xs');
+  text-transform: capitalize;
+}
