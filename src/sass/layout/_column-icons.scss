@@ -17,6 +17,7 @@
 
   .column-icon {
     display: flex;
+    align-self: stretch;
     flex-direction: column;
     text-align: center;
     padding-bottom: spacing(64);
@@ -47,9 +48,26 @@
     height: 60%;
   }
 
+  .column-icon-text {
+    @include font-size('h5');
+
+    @include screen('md') {
+      @include font-size('h4');
+    }
+  }
+
   .column-icon-subtext {
-    @include font-size('sm');
-    margin-top: spacing(16);
+    @include font-size('xs');
+    margin-top: spacing(8);
+
+    @include screen('sm') {
+      @include font-size('sm');
+    }
+
+    @include screen('md') {
+      @include font-size('base');
+      margin-top: 0;
+    }
   }
 }
 

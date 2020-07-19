@@ -27,7 +27,7 @@ const Column = ({ image, text, subtext }) => (
       <img src={image} alt='Icon description' className='column-icon-img' />
     </div>
 
-    <h4>{text}</h4>
+    <h4 className='column-icon-text'>{text}</h4>
     {subtext && <p className='column-icon-subtext'>{subtext}</p>}
   </div>
 )
