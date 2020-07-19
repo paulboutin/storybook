@@ -3,7 +3,7 @@ import classNames from 'classnames'
 
 export const Checkbox = ({ className, label, checked, disabled }) => (
   <label className={classNames('checkbox-wrapper', className)}>
-    <input type='checkbox' checked={checked} disabled={disabled} />
+    <input type='checkbox' defaultChecked={checked} disabled={disabled} />
 
     <span className='checkbox'>
       <span className='fa fa-check' />
