@@ -14,25 +14,6 @@ const classes = {
   Accent: 'accent'
 }
 
-const PromoElementCTAWrapper = ({ type }) => (
-  <div className='cta-wrapper'>
-    {type === 'Accent' ? (
-      <button
-        className={classNames(
-          'button',
-          type === 'Standard' ? 'button-primary' : 'button-tertiary'
-        )}
-      >
-        Call to Action
-      </button>
-    ) : (
-      <Link href='#' icon='long-arrow-alt-right'>
-        See all you can do in mobile banking
-      </Link>
-    )}
-  </div>
-)
-
 export const PromoElementStory = () => {
   const type = radios('Type', ['Standard', 'Accent'], 'Standard')
 
