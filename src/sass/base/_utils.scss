@@ -1,5 +1,7 @@
-.square:after {
-  content: '';
-  display: block;
-  padding-bottom: 100%;
+.ratio-1\:1 {
+  @include fixed-ratio(1, 1);
+}
+
+.ratio-4\:3 {
+  @include fixed-ratio(4, 3);
 }

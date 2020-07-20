@@ -32,6 +32,23 @@ describe('Base Components', () => {
       title: 'input',
       component: 'input-story',
       devices: ['mobile']
+    },
+    {
+      title: 'image auto ratio',
+      component: 'image-story',
+      devices: ['mobile']
+    },
+    {
+      title: 'image 1:1 ratio',
+      component: 'image-story',
+      devices: ['mobile'],
+      'knob-Ratio': '1:1'
+    },
+    {
+      title: 'image 4:3 ratio',
+      component: 'image-story',
+      devices: ['mobile'],
+      'knob-Ratio': '4:3'
     }
   ]
   buildSnapshotTests('components-base')(stories)
