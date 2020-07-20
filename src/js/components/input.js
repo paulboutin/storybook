@@ -10,6 +10,10 @@ const passwordToggle = el => event => {
   event.currentTarget.classList.toggle('visible')
 }
 
+const textareaCount = el => event => {
+  el.textContent = `${event.currentTarget.textLength}/${event.currentTarget.maxLength}`
+}
+
 export default () => {
   const inputs = Array.from(document.querySelectorAll('.input-block'))
 
@@ -18,9 +22,21 @@ export default () => {
     control.addEventListener('focus', toggleActive(input))
     control.addEventListener('blur', toggleActive(input))
 
-    if (control.type === 'password') {
-      const passwordControl = input.querySelector('.input-password-control')
-      passwordControl.addEventListener('click', passwordToggle(control))
+    switch (control.type) {
+      case 'password':
+        const passwordControl = input.querySelector('.input-password-control')
+        passwordControl.addEventListener('click', passwordToggle(control))
+        break
+
+      case 'textarea':
+        if (control.maxLength) {
+          const textareaControl = document.createElement('span')
+          textareaControl.textContent = `${control.textLength}/${control.maxLength}`
+          textareaControl.classList.add('input-textarea-control')
+          input.appendChild(textareaControl)
+
+          control.addEventListener('input', textareaCount(textareaControl))
+        }
     }
   })
 }

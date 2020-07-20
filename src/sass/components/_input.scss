@@ -3,6 +3,7 @@
 
   &.active {
     .input-label {
+      background: color('white');
       transform: translate(#{spacing(16)}, #{spacing(8)}) scale(0.75);
     }
 
@@ -83,6 +84,15 @@
     & + .input-control {
       padding-right: spacing(48);
     }
+  }
+
+  .input-textarea-control {
+    background: color('white');
+    position: absolute;
+    bottom: spacing(16);
+    right: spacing(16);
+    transform-origin: bottom right;
+    transform: scale(0.5);
   }
 
   .input-error {
