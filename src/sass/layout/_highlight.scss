@@ -4,22 +4,15 @@
   padding: spacing(32) spacing(16);
 
   .highlight-img-container {
-    @extend .square;
-    position: relative;
-
-    img,
-    div {
-      @extend .square;
-      position: absolute;
-    }
-
-    img {
-      object-fit: cover;
-    }
+    @extend .ratio-1\:1;
 
     @include screen('sm') {
       width: 50%;
     }
+  }
+
+  .highlight-square {
+    position: absolute;
   }
 
   .highlight-content-container {
@@ -104,23 +97,21 @@
 }
 
 .highlight-single {
-  .highlight-img-container {
-    img {
-      width: 100%;
-      height: 100%;
-    }
+  .highlight-square {
+    width: 100%;
+    height: 100%;
   }
 }
 
 .highlight-overlap {
   .highlight-img-container {
-    :nth-child(1) {
+    & > :nth-child(1) {
       width: 60%;
       height: 60%;
       top: 0;
     }
 
-    :nth-child(2) {
+    & > :nth-child(2) {
       width: 80%;
       height: 80%;
       bottom: 0;
@@ -130,17 +121,13 @@
 }
 
 .highlight-primary {
-  .highlight-img-container {
-    :nth-child(1) {
-      background-color: color('green');
-    }
+  .highlight-square {
+    background-color: color('green');
   }
 }
 
 .highlight-secondary {
-  .highlight-img-container {
-    :nth-child(1) {
-      background-color: color('yellow');
-    }
+  .highlight-square {
+    background-color: color('yellow');
   }
 }
