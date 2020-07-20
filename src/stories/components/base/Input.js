@@ -1,24 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
-
-export const Input = ({ id, error, label, ...attrs }) => (
-  <div
-    className={classNames(
-      'input-block',
-      error ? 'error' : '',
-      attrs.disabled ? 'disabled' : '',
-      attrs.value ? 'active' : ''
-    )}
-  >
-    <label className='input-label' htmlFor={id}>
-      {label}
-      {!attrs.required && <span className='input-optional'>(Optional)</span>}
-    </label>
-    {attrs.type === 'password' && <span className='input-password-control' />}
-    <input id={id} className='input-control' {...attrs} />
-    {error && <p className='input-error'>{error}</p>}
-  </div>
-)
+import Input from '../../../components/base/Input'
 
 export const InputStory = () => {
   return (

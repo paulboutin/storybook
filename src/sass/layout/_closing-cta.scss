@@ -3,6 +3,7 @@
   color: color('grey');
 
   &.half {
+    padding: spacing(16) 0;
     background: color('green');
 
     @include screen('sm') {

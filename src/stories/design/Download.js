@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from '../components/base/Link'
+import Link from '../../components/base/Link'
 
 export const Download = () => (
   <div>

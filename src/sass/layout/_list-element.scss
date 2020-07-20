@@ -41,7 +41,13 @@
       display: flex;
 
       .list-element-header {
-        padding: 0 spacing(64);
+        width: 50%;
+        padding-right: spacing(32);
+      }
+
+      .list-element-items {
+        width: 50%;
+        padding-left: spacing(32);
       }
     }
   }

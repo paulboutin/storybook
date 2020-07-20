@@ -2,7 +2,7 @@ import React from 'react'
 import { waitFor } from '@testing-library/dom'
 import { mount } from '../utils'
 
-import { Input } from '../../../src/stories/components/base/Input'
+import Input from '../../../src/components/base/Input'
 import fn from '../../../src/js/components/input'
 
 describe('Input component', () => {

@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
+import Button from '../../../components/base/Button'
 import { radios } from '@storybook/addon-knobs'
 
 export const BUTTON_TYPES = [
@@ -9,22 +9,6 @@ export const BUTTON_TYPES = [
   'Ghost',
   'Danger'
 ]
-
-export const Button = ({ type, label, icon, className, ...props }) => (
-  <button
-    className={classNames(
-      'button',
-      `button-${type}`,
-      { 'button-icon': icon && !label },
-      className
-    )}
-    {...props}
-  >
-    {label && <span>{label}</span>}
-
-    {icon && <span className={classNames('fa', `fa-${icon}`)} />}
-  </button>
-)
 
 export const ButtonStory = () => {
   const type = radios('Type', BUTTON_TYPES, 'Primary').toLowerCase()
@@ -38,12 +22,12 @@ export const ButtonStory = () => {
 
   return (
     <div>
-      {variants.map(({ name, label, icon }) => (
-        <div className='sb:button-variant'>
+      {variants.map(({ name, label, icon }, index) => (
+        <div key={index} className='sb:button-variant'>
           <h3 className='sb:button-variant-name'>{name}</h3>
 
           {states.map(state => (
-            <div className='sb:button-wrapper'>
+            <div key={index} className='sb:button-wrapper'>
               <h4 className='sb:button-title'>{state}</h4>
 
               <Button

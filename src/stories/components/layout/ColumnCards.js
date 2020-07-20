@@ -1,6 +1,6 @@
 import React from 'react'
-import classNames from 'classnames'
-import { Card } from '../base/Card'
+import ColumnCards from '../../../components/layout/ColumnCards'
+import Card from '../../../components/base/Card'
 import { text } from '@storybook/addon-knobs'
 
 const defaultPlaceholder = 'http://via.placeholder.com/500x250'
@@ -25,44 +25,43 @@ const items = [
   }
 ]
 
-export const ThreeCol = ({ heading, children, bgColor }) => (
-  <div className={classNames('three-col', bgColor || '')}>
-    <div className='container'>
-      <h2 className='three-col-heading'>{heading}</h2>
-      <div className='row'>
-        {children.map((child, index) => (
-          <div key={index} className='col-sm-4'>
-            {child}
-          </div>
-        ))}
-      </div>
-    </div>
-  </div>
-)
+const linkText = 'Read more'
 
-export const ThreeColCards = () => {
+export const ColumnCardsStory = () => {
   const placeholder = text('Placeholder', defaultPlaceholder)
 
   return (
     <>
-      <ThreeCol heading={heading}>
+      <ColumnCards heading={heading}>
         {items.map((item, index) => (
-          <Card key={index} imageSrc={placeholder} heading={item.heading} flat>
+          <Card
+            key={index}
+            imageSrc={placeholder}
+            heading={item.heading}
+            linkText={linkText}
+            flat
+          >
             {item.text}
           </Card>
         ))}
-      </ThreeCol>
-      <ThreeCol heading={heading} bgColor='grey'>
+      </ColumnCards>
+      <ColumnCards heading={heading} bgColor='grey'>
         {items.map((item, index) => (
-          <Card key={index} imageSrc={placeholder} heading={item.heading} flat>
+          <Card
+            key={index}
+            imageSrc={placeholder}
+            heading={item.heading}
+            linkText={linkText}
+            flat
+          >
             {item.text}
           </Card>
         ))}
-      </ThreeCol>
+      </ColumnCards>
     </>
   )
 }
 
-ThreeColCards.story = {
-  name: '3Col Cards'
+ColumnCardsStory.story = {
+  name: 'Column Cards'
 }

@@ -1,8 +1,7 @@
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
-
-import { ThreeCol } from './3Col'
-import { Card } from '../base/Card'
+import ColumnCards from '../../../components/layout/ColumnCards'
+import Card from '../../../components/base/Card'
 
 const items = [
   {
@@ -21,18 +20,29 @@ const items = [
 
 const defaultPlaceholder = 'http://via.placeholder.com/500'
 
-export const Recommendations = () => {
+export const RecommendationsStory = () => {
   const placeholder = text('Placeholder', defaultPlaceholder)
 
   const heading = 'Recommended for you'
 
+  const linkText = 'Read more'
+
   return (
-    <ThreeCol heading={heading}>
+    <ColumnCards heading={heading}>
       {items.map((item, index) => (
-        <Card key={index} heading={item.heading} imageSrc={placeholder}>
+        <Card
+          key={index}
+          heading={item.heading}
+          linkText={linkText}
+          imageSrc={placeholder}
+        >
           {item.text}
         </Card>
       ))}
-    </ThreeCol>
+    </ColumnCards>
   )
+}
+
+RecommendationsStory.story = {
+  name: 'Recommendations'
 }

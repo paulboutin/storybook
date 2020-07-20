@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
 
-  &.alt {
+  &.eyebrow-alt {
     .eyebrow-text {
       color: color('green');
     }
@@ -12,7 +12,7 @@
     }
   }
 
-  &.inverted {
+  &.eyebrow-inverted {
     .eyebrow-text {
       color: color('white');
     }

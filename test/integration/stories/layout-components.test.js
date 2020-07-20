@@ -4,46 +4,46 @@ describe('Layout Components', () => {
   const stories = [
     {
       title: 'list-element standard',
-      component: 'list-element',
+      component: 'list-element-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Standard'
     },
     {
       title: 'list-element alt',
-      component: 'list-element',
+      component: 'list-element-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Alt'
     },
     {
       title: 'closing-cta standard',
-      component: 'closing-cta',
+      component: 'closing-cta-story',
       'knob-Type': 'Standard'
     },
     {
       title: 'closing-cta alt',
-      component: 'closing-cta',
+      component: 'closing-cta-story',
       'knob-Type': 'Alt'
     },
     {
       title: 'closing-cta half',
-      component: 'closing-cta',
+      component: 'closing-cta-story',
       'knob-Type': 'Half'
     },
     {
       title: 'hero full',
-      component: 'hero',
+      component: 'hero-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Full'
     },
     {
       title: 'hero spaced',
-      component: 'hero',
+      component: 'hero-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Spaced'
     },
     {
       title: 'recommendations',
-      component: 'recommendations',
+      component: 'recommendations-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
@@ -53,12 +53,12 @@ describe('Layout Components', () => {
     },
     {
       title: 'promo-element standard',
-      component: 'promo-element',
+      component: 'promo-element-story',
       'knob-Type': 'Standard'
     },
     {
       title: 'promo-element accent',
-      component: 'promo-element',
+      component: 'promo-element-story',
       'knob-Type': 'Accent'
     },
     {
@@ -82,8 +82,8 @@ describe('Layout Components', () => {
       'knob-Overlap': 'Image'
     },
     {
-      title: '3col cards',
-      component: 'three-col-cards'
+      title: 'column cards',
+      component: 'column-cards-story'
     },
     {
       title: 'column-icons',
