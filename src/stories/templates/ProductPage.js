@@ -1,12 +1,14 @@
 import React from 'react'
-import Hero from '../../components/layout/Hero'
-// import ListElement from '../../components/layout/ListElement'
-import Highlight from '../../components/layout/Highlight'
-// import PromoElement from '../../components/layout/PromoElement'
+import Card from '../../components/base/Card'
+import ClosingCTA from '../../components/layout/ClosingCTA'
+import ColumnCards from '../../components/layout/ColumnCards'
 import ColumnIcons from '../../components/layout/ColumnIcons'
 import FAQ from '../../components/layout/FAQ'
-// import ClosingCTA from '../../components/layout/ClosingCTA'
-// import ThreeCol from '../../components/layout/3Col'
+import Hero from '../../components/layout/Hero'
+import Highlight from '../../components/layout/Highlight'
+import ListElement from '../../components/layout/ListElement/ListElement'
+import ListElementItems from '../../components/layout/ListElement/ListElementItems'
+import PromoElement from '../../components/layout/PromoElement/PromoElement'
 
 const placeholderStyle = {
   display: 'flex',
@@ -24,7 +26,25 @@ export const ProductPage = () => (
 
     <Hero type='Spaced' image='http://via.placeholder.com/1600' />
 
-    <div style={placeholderStyle}>List element</div>
+    <ListElement
+      headerText={{
+        eyebrow: 'Sustainable Banking',
+        heading: 'Find a checking account that’s right for you.',
+        text:
+          'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      }}
+    >
+      <ListElementItems
+        items={[
+          '$0 monthly service charge with any deposit per statement',
+          'No minimum balance',
+          'No direct deposit required',
+          'No fees on checks, money orders, incoming wires, or ATM withdrawals worldwide',
+          'Relationship based service and special rates on CDs and Money Market accounts',
+          'Save on consumer loans with interest rate discounts'
+        ]}
+      />
+    </ListElement>
 
     <Highlight
       contentPosition='Right'
@@ -46,7 +66,14 @@ export const ProductPage = () => (
       ]}
     />
 
-    <div style={placeholderStyle}>Promo element</div>
+    <PromoElement
+      heading='The strongest environmental stance of any major bank.'
+      type='accent'
+      text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+      eyebrow='Sustainable Banking'
+    >
+      <button className='button button-tertiary'>Call to Action</button>
+    </PromoElement>
 
     <ColumnIcons
       columns={[
@@ -71,9 +98,41 @@ export const ProductPage = () => (
 
     <FAQ />
 
-    <div style={placeholderStyle}>Closing CTA</div>
+    <ClosingCTA type='half' heading='Open online in about 10 minutes'>
+      <a className='button button-tertiary' href='#'>
+        Call to Action
+      </a>
+    </ClosingCTA>
 
-    <div style={placeholderStyle}>3 Col Cards</div>
+    <ColumnCards heading='Three more reasons to love your account'>
+      {[
+        {
+          heading: 'Online banking',
+          text:
+            'Manage your finances on your own time. Bank online as you would at a branch.'
+        },
+        {
+          heading: 'Zelle',
+          text:
+            'Zelle lets you send or request money to anyone, regardless of their U.S. bank.'
+        },
+        {
+          heading: 'Bill pay',
+          text:
+            'Pay your bills online, and avoid late fees when you automate your payments.'
+        }
+      ].map((item, index) => (
+        <Card
+          key={index}
+          imageSrc='http://via.placeholder.com/500x250'
+          heading={item.heading}
+          linkText='View all'
+          flat
+        >
+          {item.text}
+        </Card>
+      ))}
+    </ColumnCards>
 
     <footer style={placeholderStyle}>Footer</footer>
   </>
