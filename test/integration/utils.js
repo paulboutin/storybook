@@ -43,10 +43,14 @@ export const buildSnapshotTests = block => stories => {
           // Act
           await page.setViewport(viewport)
           await page.goto(url, { waitUntil: 'networkidle2' })
-          const image = await page.screenshot({ fullPage: true })
+
+          const storybook = await page.$('body')
+          const image = await storybook.screenshot()
 
           // Assert
           expect(image).toMatchImageSnapshot()
+
+          await storybook.dispose()
         })
       })
     })
