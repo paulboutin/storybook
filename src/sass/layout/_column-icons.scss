@@ -30,22 +30,18 @@
   }
 
   .column-icon-circle {
-    @extend .square;
-    position: relative;
     width: 150px;
     border-radius: 50%;
     align-self: center;
     margin-bottom: spacing(32);
     background-color: color('grey-5');
-  }
 
-  .column-icon-img {
-    position: absolute;
-    object-fit: cover;
-    top: 20%;
-    left: 20%;
-    width: 60%;
-    height: 60%;
+    img {
+      top: 20%;
+      left: 20%;
+      width: 60%;
+      height: 60%;
+    }
   }
 
   .column-icon-text {
