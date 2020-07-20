@@ -1,8 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 import { radios } from '@storybook/addon-knobs'
-import PromoElement from '../../../components/layout/PromoElement/PromoElement'
 import Link from '../../../components/base/Link'
+import PromoElement from '../../../components/layout/PromoElement'
 
 const eyebrow = 'Sustainable banking'
 const heading = 'The strongest environmental stance of any major bank.'
@@ -23,6 +23,7 @@ export const PromoElementStory = () => {
       type={classes[type]}
       text={text}
       eyebrow={eyebrow}
+      image={{ src: 'http://via.placeholder.com/640', alt: 'Hero' }}
     >
       {type === 'Accent' ? (
         <button

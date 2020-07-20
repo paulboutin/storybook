@@ -6,9 +6,8 @@ import ColumnIcons from '../../components/layout/ColumnIcons'
 import FAQ from '../../components/layout/FAQ'
 import Hero from '../../components/layout/Hero'
 import Highlight from '../../components/layout/Highlight'
-import ListElement from '../../components/layout/ListElement/ListElement'
-import ListElementItems from '../../components/layout/ListElement/ListElementItems'
-import PromoElement from '../../components/layout/PromoElement/PromoElement'
+import ListElement from '../../components/layout/ListElement'
+import PromoElement from '../../components/layout/PromoElement'
 
 const placeholderStyle = {
   display: 'flex',
@@ -33,18 +32,15 @@ export const ProductPage = () => (
         text:
           'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       }}
-    >
-      <ListElementItems
-        items={[
-          '$0 monthly service charge with any deposit per statement',
-          'No minimum balance',
-          'No direct deposit required',
-          'No fees on checks, money orders, incoming wires, or ATM withdrawals worldwide',
-          'Relationship based service and special rates on CDs and Money Market accounts',
-          'Save on consumer loans with interest rate discounts'
-        ]}
-      />
-    </ListElement>
+      items={[
+        '$0 monthly service charge with any deposit per statement',
+        'No minimum balance',
+        'No direct deposit required',
+        'No fees on checks, money orders, incoming wires, or ATM withdrawals worldwide',
+        'Relationship based service and special rates on CDs and Money Market accounts',
+        'Save on consumer loans with interest rate discounts'
+      ]}
+    />
 
     <Highlight
       contentPosition='Right'
@@ -71,6 +67,7 @@ export const ProductPage = () => (
       type='accent'
       text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       eyebrow='Sustainable Banking'
+      image={{ src: 'http://via.placeholder.com/640', alt: 'Hero' }}
     >
       <button className='button button-tertiary'>Call to Action</button>
     </PromoElement>

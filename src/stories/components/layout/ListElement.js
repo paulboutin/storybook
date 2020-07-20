@@ -1,8 +1,6 @@
 import React from 'react'
 import { array, radios, text } from '@storybook/addon-knobs'
-import ListElement from '../../../components/layout/ListElement/ListElement'
-import ListElementImage from '../../../components/layout/ListElement/ListElementImage'
-import ListElementItems from '../../../components/layout/ListElement/ListElementItems'
+import ListElement from '../../../components/layout/ListElement'
 
 const defaultPlaceholder = 'http://via.placeholder.com/500x400'
 
@@ -25,16 +23,15 @@ export const ListElementStory = () => {
   const type = radios('Type', ['Standard', 'Alt'], 'Standard')
 
   const isAlt = type === 'Alt'
-  const image = isAlt && <ListElementImage src={placeholder} alt='Image' />
+  const image = isAlt && { src: placeholder, alt: 'Hero' }
 
   return (
     <ListElement
       headerText={headerText}
       altLayout={isAlt}
-      imageComponent={image}
-    >
-      <ListElementItems items={items} />
-    </ListElement>
+      image={image}
+      items={items}
+    />
   )
 }
 
