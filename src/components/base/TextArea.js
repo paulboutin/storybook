@@ -14,9 +14,12 @@ const TextArea = ({ id, value, error, label, ...attrs }) => (
       {label}
       {!attrs.required && <span className='input-optional'>(Optional)</span>}
     </label>
-    <textarea id={id} className='input-control' {...attrs}>
-      {value}
-    </textarea>
+    <textarea
+      id={id}
+      className='input-control'
+      defaultValue={value}
+      {...attrs}
+    />
     {error && <p className='input-error'>{error}</p>}
   </div>
 )

@@ -54,7 +54,7 @@ export const InputStory = () => {
 
       <div className='sb:input-wrapper'>
         <h3 className='sb:input-title'>Textarea</h3>
-        <TextArea label='Textarea' maxLength={100} rows={5} value='hello' />
+        <TextArea label='Textarea' maxLength={100} rows={5} />
       </div>
     </div>
   )
