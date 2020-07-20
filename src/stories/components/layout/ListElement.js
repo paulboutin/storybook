@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import { array, radios, text } from '@storybook/addon-knobs'
-import { Eyebrow } from '../base/Eyebrow'
+import Eyebrow from '../../../components/base/Eyebrow'
 
 const defaultPlaceholder = 'http://via.placeholder.com/500x400'
 

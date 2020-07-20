@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { Card } from '../base/Card'
+import Card from '../../../components/base/Card'
 import { text } from '@storybook/addon-knobs'
 
 const defaultPlaceholder = 'http://via.placeholder.com/500x250'
@@ -25,6 +25,8 @@ const items = [
   }
 ]
 
+const linkText = 'Read more'
+
 export const ThreeCol = ({ heading, children, bgColor }) => (
   <div className={classNames('three-col', bgColor || '')}>
     <div className='container'>
@@ -47,14 +49,26 @@ export const ThreeColCards = () => {
     <>
       <ThreeCol heading={heading}>
         {items.map((item, index) => (
-          <Card key={index} imageSrc={placeholder} heading={item.heading} flat>
+          <Card
+            key={index}
+            imageSrc={placeholder}
+            heading={item.heading}
+            linkText={linkText}
+            flat
+          >
             {item.text}
           </Card>
         ))}
       </ThreeCol>
       <ThreeCol heading={heading} bgColor='grey'>
         {items.map((item, index) => (
-          <Card key={index} imageSrc={placeholder} heading={item.heading} flat>
+          <Card
+            key={index}
+            imageSrc={placeholder}
+            heading={item.heading}
+            linkText={linkText}
+            flat
+          >
             {item.text}
           </Card>
         ))}

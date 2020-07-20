@@ -1,8 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
 import { radios } from '@storybook/addon-knobs'
-import { Eyebrow } from '../base/Eyebrow'
-import { Link } from '../base/Link'
+import Eyebrow from '../../../components/base/Eyebrow'
+import Link from '../../../components/base/Link'
 
 const eyebrow = 'Sustainable banking'
 const heading = 'The strongest environmental stance of any major bank.'

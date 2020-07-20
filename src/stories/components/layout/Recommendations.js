@@ -1,8 +1,7 @@
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
-
 import { ThreeCol } from './3Col'
-import { Card } from '../base/Card'
+import Card from '../../../components/base/Card'
 
 const items = [
   {
@@ -26,10 +25,17 @@ export const Recommendations = () => {
 
   const heading = 'Recommended for you'
 
+  const linkText = 'Read more'
+
   return (
     <ThreeCol heading={heading}>
       {items.map((item, index) => (
-        <Card key={index} heading={item.heading} imageSrc={placeholder}>
+        <Card
+          key={index}
+          heading={item.heading}
+          linkText={linkText}
+          imageSrc={placeholder}
+        >
           {item.text}
         </Card>
       ))}

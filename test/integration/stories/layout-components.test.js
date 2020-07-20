@@ -31,13 +31,13 @@ describe('Layout Components', () => {
     },
     {
       title: 'hero full',
-      component: 'hero',
+      component: 'hero-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Full'
     },
     {
       title: 'hero spaced',
-      component: 'hero',
+      component: 'hero-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Spaced'
     },

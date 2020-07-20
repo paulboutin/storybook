@@ -1,19 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
-
-export const Link = ({ href = '#', icon, className, children }) => (
-  <a
-    href={href}
-    className={classNames(
-      'link',
-      icon ? 'link-standalone' : 'link-inline',
-      className
-    )}
-  >
-    {children}
-    {icon && <span className={`fa fa-${icon}`} />}
-  </a>
-)
+import Link from '../../../components/base/Link'
 
 export const LinkStory = () => {
   const types = ['inline', 'standalone']
@@ -29,7 +15,7 @@ export const LinkStory = () => {
             <h3 className='sb:link-type-name'>{type}</h3>
 
             {states.map(state => (
-              <div className='sb:link-wrapper'>
+              <div key={state} className='sb:link-wrapper'>
                 <h4 className='sb:link-title'>{state}</h4>
                 <Link icon={icon} className={`sb:link-${type}-${state}`}>
                   Link
