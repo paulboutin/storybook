@@ -12,7 +12,7 @@
   }
 
   &:focus {
-    outline: 1px solid color('blue');
+    outline: 2px solid color('blue');
     outline-offset: 2px;
   }
 
@@ -51,25 +51,6 @@
 }
 
 .button-secondary {
-  background-color: color('white');
-  color: color('green');
-
-  &:focus {
-    background-color: color('grey-10');
-  }
-
-  &:hover,
-  &:active {
-    background-color: color('grey-5');
-  }
-
-  &:disabled {
-    background-color: color('grey-5');
-    color: color('grey-20');
-  }
-}
-
-.button-tertiary {
   background-color: transparent;
   color: color('green');
   border: 1px solid color('green');
@@ -96,6 +77,25 @@
     background-color: transparent;
     color: color('grey-20');
     border: 1px solid color('grey-20');
+  }
+}
+
+.button-tertiary {
+  background-color: color('white');
+  color: color('green');
+
+  &:focus {
+    background-color: color('grey-10');
+  }
+
+  &:hover,
+  &:active {
+    background-color: color('grey-5');
+  }
+
+  &:disabled {
+    background-color: color('grey-5');
+    color: color('grey-20');
   }
 }
 

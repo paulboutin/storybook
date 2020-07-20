@@ -2,6 +2,7 @@
   @include font-size('xs');
   color: color('green');
   cursor: pointer;
+  text-decoration: underline;
 
   &:visited {
     color: color('green-darker');
@@ -9,7 +10,8 @@
 
   &:focus {
     color: color('green-light');
-    outline: 1px solid color('blue');
+    outline: 2px solid color('blue');
+    outline-offset: 2px;
   }
 
   &:hover,
@@ -19,10 +21,6 @@
 }
 
 .link-inline {
-  &:active {
-    text-decoration: underline;
-  }
-
   @include screen('sm') {
     @include font-size('sm');
   }
@@ -33,6 +31,8 @@
 }
 
 .link-standalone {
+  text-decoration: none;
+
   .fa {
     margin-left: spacing(8);
   }

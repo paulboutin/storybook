@@ -1,10 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
-import { radios } from '@storybook/addon-knobs'
+import { radios, text } from '@storybook/addon-knobs'
 import { Eyebrow } from '../base/Eyebrow'
 
 export const Hero = () => {
   const type = radios('Type', ['Full', 'Spaced'], 'Full')
+  const image = text('Image', 'http://via.placeholder.com/1600')
 
   return (
     <div
@@ -13,11 +14,7 @@ export const Hero = () => {
         type === 'Spaced' ? 'hero-spaced' : 'hero-full'
       )}
     >
-      <img
-        className='hero-img'
-        src='http://via.placeholder.com/1600'
-        alt='Hero image'
-      />
+      <img className='hero-img' src={image} alt='Hero image' />
       <div className='hero-content'>
         <Eyebrow text='Any deposit checking' />
         <h3 className='hero-heading'>

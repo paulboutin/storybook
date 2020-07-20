@@ -10,7 +10,7 @@
 
   &:focus-within {
     .checkbox {
-      outline: 1px solid color('blue');
+      outline: 2px solid color('blue');
       outline-offset: 2px;
     }
   }
@@ -36,6 +36,11 @@
       .fa {
         visibility: visible;
       }
+    }
+
+    &:checked:disabled ~ .checkbox {
+      background-color: color('grey-30');
+      border-color: color('grey-30');
     }
   }
 

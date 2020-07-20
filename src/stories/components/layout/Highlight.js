@@ -1,10 +1,12 @@
 import React from 'react'
 import classNames from 'classnames'
-import { radios } from '@storybook/addon-knobs'
+import { radios, text } from '@storybook/addon-knobs'
 import { Eyebrow } from '../base/Eyebrow'
 import { Link } from '../base/Link'
 
-const Highlight = ({ contentPosition, type, overlap, color }) => (
+const defaultImage = 'http://via.placeholder.com/640'
+
+const Highlight = ({ contentPosition, type, overlap, color, images }) => (
   <div
     className={classNames(
       'highlight container',
@@ -17,23 +19,17 @@ const Highlight = ({ contentPosition, type, overlap, color }) => (
   >
     <div className='highlight-img-container'>
       {type === 'Single' ? (
-        <img src='http://via.placeholder.com/640' alt='Highlight image' />
+        <img src={[images[0]]} alt='Highlight image' />
       ) : overlap === 'Color' ? (
         <>
           <div />
-          <img src='http://via.placeholder.com/640' alt='Highlight image' />
+          <img src={[images[0]]} alt='Highlight image' />
         </>
       ) : (
         <>
-          <img
-            src='http://via.placeholder.com/640'
-            alt='Secondary highlight image'
-          />
+          <img src={[images[0]]} alt='Secondary highlight image' />
 
-          <img
-            src='http://via.placeholder.com/640'
-            alt='Primary highlight image'
-          />
+          <img src={[images[1]]} alt='Primary highlight image' />
         </>
       )}
     </div>
@@ -57,9 +53,19 @@ const Highlight = ({ contentPosition, type, overlap, color }) => (
 export const HighlightStory = () => {
   const type = radios('Type', ['Single', 'Overlap'], 'Overlap')
   let overlap
+  let images
 
   if (type === 'Overlap') {
     overlap = radios('Overlap', ['Color', 'Image'], 'Color')
+  }
+
+  if (type === 'Single' || overlap === 'Color') {
+    images = [text('Image', defaultImage)]
+  } else {
+    images = [
+      text('Background image', defaultImage),
+      text('Foreground image', defaultImage)
+    ]
   }
 
   return (
@@ -69,12 +75,14 @@ export const HighlightStory = () => {
         type={type}
         overlap={overlap}
         color='Primary'
+        images={images}
       />
       <Highlight
         contentPosition='Left'
         type={type}
         overlap={overlap}
         color='Secondary'
+        images={images}
       />
     </div>
   )
