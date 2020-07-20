@@ -1,7 +1,8 @@
 import React from 'react'
-import classNames from 'classnames'
 import { array, radios, text } from '@storybook/addon-knobs'
-import Eyebrow from '../../../components/base/Eyebrow'
+import ListElement from '../../../components/layout/ListElement/ListElement'
+import ListElementImage from '../../../components/layout/ListElement/ListElementImage'
+import ListElementItems from '../../../components/layout/ListElement/ListElementItems'
 
 const defaultPlaceholder = 'http://via.placeholder.com/500x400'
 
@@ -18,57 +19,25 @@ const headerText = {
   text: 'Manage your money while contributing with the planet'
 }
 
-const ListElementItems = ({ items, listClass = 'fa-check-circle' }) => (
-  <ul className='list-element-items'>
-    {items.map((item, index) => (
-      <li key={index} className={classNames('list-element-item fa', listClass)}>
-        {item}
-      </li>
-    ))}
-  </ul>
-)
-
-const ListElementContent = ({
-  headerText,
-  items,
-  altLayout = false,
-  listClass
-}) => (
-  <div className={classNames('list-element-content', altLayout ? 'alt' : '')}>
-    <div className='list-element-header'>
-      <Eyebrow text={headerText.eyebrow} />
-      <div className='list-element-header-text-block'>
-        <h2 className='list-element-heading'>{headerText.heading}</h2>
-        <p className='list-element-header-text'>{headerText.text}</p>
-      </div>
-    </div>
-    <ListElementItems items={items} listClass={listClass} />
-  </div>
-)
-
-const ListElementImage = ({ src, alt }) => (
-  <div className='list-element-image-wrapper'>
-    <img className='list-element-image' src={src} alt={alt} />
-  </div>
-)
-
-export const ListElement = () => {
+export const ListElementStory = () => {
   const items = array('Items', defaultItems)
   const placeholder = text('Placeholder', defaultPlaceholder)
   const type = radios('Type', ['Standard', 'Alt'], 'Standard')
 
   const isAlt = type === 'Alt'
+  const image = isAlt && <ListElementImage src={placeholder} alt='Image' />
 
   return (
-    <section className='list-element'>
-      <div className='container'>
-        {isAlt && <ListElementImage src={placeholder} alt='Image' />}
-        <ListElementContent
-          headerText={headerText}
-          items={items}
-          altLayout={isAlt}
-        />
-      </div>
-    </section>
+    <ListElement
+      headerText={headerText}
+      altLayout={isAlt}
+      imageComponent={image}
+    >
+      <ListElementItems items={items} />
+    </ListElement>
   )
+}
+
+ListElementStory.story = {
+  name: 'List Element'
 }
