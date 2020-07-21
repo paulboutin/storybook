@@ -17,6 +17,14 @@
       text-align: left;
     }
 
+    .container {
+      flex-direction: column;
+
+      @include screen('sm') {
+        flex-direction: row;
+      }
+    }
+
     .promo-element-content {
       margin-top: 0;
 
