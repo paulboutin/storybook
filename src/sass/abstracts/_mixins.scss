@@ -38,7 +38,7 @@
     }
   }
 
-  @media (min-width: $max-screen-width) {
+  @media (min-width: #{$max-screen-width}px) {
     font-size: #{$max-font-size}px;
   }
 }
