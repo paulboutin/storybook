@@ -8,28 +8,26 @@
   .container {
     @include screen('sm') {
       display: flex;
-    }
-  }
 
-  .list-element-image-wrapper {
-    margin-bottom: spacing(24);
-    display: flex;
-    justify-content: center;
+      .image-block {
+        min-width: 50%;
+      }
 
-    @include screen('sm') {
-      margin-bottom: 0;
-      width: 50%;
+      .list-element-content {
+        width: 50%;
+        margin-left: spacing(16);
+      }
     }
 
-    .list-element-image {
-      height: auto;
-      align-self: center;
+    @include screen('md') {
+      .list-element-content {
+        margin-left: spacing(32);
+      }
+    }
 
-      @include screen('sm') {
-        height: 100%;
-        max-height: 100vh;
-        object-fit: cover;
-        padding-right: spacing(32);
+    @include screen('lg') {
+      .list-element-content {
+        margin-left: spacing(64);
       }
     }
   }
@@ -37,6 +35,9 @@
 
 .list-element-content {
   &:not(.alt) {
+    margin-left: 0 !important;
+    width: 100% !important;
+
     @include screen('lg') {
       display: flex;
 

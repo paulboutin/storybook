@@ -19,12 +19,12 @@
     display: flex;
     flex-direction: column;
 
-    @include screen('sm') {
+    @include screen('md') {
       flex-direction: row;
     }
   }
 
-  .col-sm-4 {
+  .col-md-4 {
     margin-bottom: spacing(48);
   }
 

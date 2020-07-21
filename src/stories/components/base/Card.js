@@ -18,8 +18,7 @@ export const CardStory = () => {
     <Card
       heading={heading}
       linkText={linkText}
-      imageSrc={placeholder}
-      imageAlt='Image'
+      image={{ src: placeholder, alt: 'Image' }}
       flat={type === 'Flat'}
     >
       {cardText}
