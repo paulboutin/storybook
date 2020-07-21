@@ -1,12 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
-
-const PromoElementImage = ({ image }) => (
-  <div className='promo-element-img-wrapper'>
-    <img className='promo-element-img' src={image.src} alt={image.alt} />
-  </div>
-)
+import Image from '../base/Image'
 
 const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
   <div className={classNames('promo-element', type)}>
@@ -17,7 +12,7 @@ const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
         <p className='promo-element-text'>{text}</p>
         <div className='cta-wrapper'>{children}</div>
       </div>
-      {image && <PromoElementImage image={image} />}
+      {image && <Image alt={image.alt} src={image.src} ratio='1:1' />}
       {type === 'accent' && <div className='cta-wrapper'>{children}</div>}
     </div>
   </div>
