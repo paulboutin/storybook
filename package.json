@@ -45,6 +45,7 @@
     "autoprefixer": "9.8.0",
     "babel-jest": "26.0.1",
     "babel-loader": "8.1.0",
+    "babel-plugin-inline-react-svg": "1.1.1",
     "cross-env": "7.0.2",
     "husky": "4.2.5",
     "jest": "26.0.1",
