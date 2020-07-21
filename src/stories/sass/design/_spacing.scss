@@ -1,9 +1,9 @@
-.ds\:spacing-heading {
-  color: color('grey-40');
+.sb\:spacing-heading {
+  color: color('grey-70');
   margin-bottom: spacing(12);
 }
 
-.ds\:spacing-block-section {
+.sb\:spacing-block-section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -11,38 +11,38 @@
   margin-bottom: spacing(48);
 }
 
-.ds\:spacing {
+.sb\:spacing {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.ds\:spacing-block {
+.sb\:spacing-block {
   background-color: color('green');
   margin-bottom: spacing(12);
 }
 
-.ds\:spacing-block--padding {
+.sb\:spacing-block--padding {
   width: spacing(16);
   height: spacing(16);
   background-color: color('green-darker');
 }
 
-.ds\:spacing-block--margin {
+.sb\:spacing-block--margin {
   background-color: color('grey-20');
 }
 
 @each $name, $size in $spacings {
-  .ds\:spacing--#{$name} {
+  .sb\:spacing--#{$name} {
     width: $size;
     height: $size;
   }
 
-  .ds\:padding--#{$name} {
+  .sb\:padding--#{$name} {
     padding: $size;
   }
 
-  .ds\:margin--#{$name} {
+  .sb\:margin--#{$name} {
     margin-top: $size;
   }
 }

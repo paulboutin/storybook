@@ -1,0 +1,126 @@
+.promo-element {
+  padding: spacing(32) 0;
+  color: color('grey');
+
+  @include screen('sm') {
+    padding: spacing(64) 0;
+  }
+
+  &.accent {
+    background: color('green');
+    align-items: stretch;
+    text-align: center;
+
+    @include screen('sm') {
+      flex-direction: row;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    .container {
+      flex-direction: column;
+
+      @include screen('sm') {
+        flex-direction: row;
+      }
+    }
+
+    .promo-element-content {
+      margin-top: 0;
+
+      .eyebrow {
+        align-items: center;
+
+        @include screen('sm') {
+          align-items: flex-start;
+
+          .eyebrow-spacer {
+            margin-bottom: spacing(24);
+          }
+        }
+      }
+
+      .promo-element-heading,
+      .promo-element-text {
+        color: color('white');
+      }
+
+      .cta-wrapper {
+        display: none;
+
+        @include screen('sm') {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+
+    @include screen('sm') {
+      flex-direction: row;
+    }
+  }
+
+  .promo-element-img-wrapper {
+    align-self: center;
+
+    .promo-element-img {
+      object-fit: cover;
+    }
+
+    @include screen('sm') {
+      height: 100%;
+      max-height: 100vh;
+      width: 50%;
+      padding-left: spacing(16);
+    }
+  }
+
+  .promo-element-content {
+    margin-top: spacing(12);
+    margin-bottom: spacing(32);
+
+    @include screen('sm') {
+      width: 50%;
+      margin-bottom: 0;
+      padding-right: spacing(16);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .promo-element-heading {
+      @include font-size('h4');
+    }
+
+    .promo-element-heading {
+      margin-bottom: spacing(12);
+    }
+
+    .promo-element-text {
+      color: color('grey-80');
+      @include font-size('sm');
+    }
+
+    .cta-wrapper {
+      align-self: center;
+      margin-top: spacing(24);
+
+      @include screen('sm') {
+        align-self: flex-start;
+      }
+    }
+  }
+
+  .container > .cta-wrapper {
+    margin-top: spacing(32);
+
+    @include screen('sm') {
+      display: none;
+    }
+  }
+}

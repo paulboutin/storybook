@@ -1,33 +1,33 @@
-.ds\:fonts {
+.sb\:fonts {
   display: flex;
 }
 
-.ds\:fonts-section {
+.sb\:fonts-section {
   width: 50%;
 }
 
-.ds\:font--display {
+.sb\:font--display {
   @include font-family('display');
 }
 
-.ds\:font--body {
+.sb\:font--body {
   @include font-family('body');
 }
 
-.ds\:fonts-title {
-  color: color('grey-40');
+.sb\:fonts-title {
+  color: color('grey-70');
 }
 
-.ds\:fonts-divider {
+.sb\:fonts-divider {
   margin-bottom: spacing(8);
 }
 
-.ds\:font--italic {
+.sb\:font--italic {
   font-style: italic;
 }
 
 @each $name, $weight in $font-weights {
-  .ds\:font--#{$name} {
+  .sb\:font--#{$name} {
     font-weight: $weight;
   }
 }

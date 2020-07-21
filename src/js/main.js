@@ -1,4 +1,5 @@
 import accordions from './components/accordion'
+import inputs from './components/input'
 
 function ready(fn) {
   if (
@@ -14,6 +15,7 @@ function ready(fn) {
 function setup() {
   ready(() => {
     accordions()
+    inputs()
   })
 }
 

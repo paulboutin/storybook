@@ -12,12 +12,13 @@ $colors: (
   'blue-dark': #0058e6,
   'blue-darker': #003b99,
   'black': #000000,
-  'grey': #202020,
-  'grey-80': #464646,
-  'grey-40': #b9b9b9,
-  'grey-30': #d2d2d2,
-  'grey-20': #ececec,
-  'grey-15': #f9f9f9,
+  'grey': #1a1a1a,
+  'grey-80': #333333,
+  'grey-70': #4d4d4d,
+  'grey-30': #b3b3b3,
+  'grey-20': #cccccc,
+  'grey-10': #e6e6e6,
+  'grey-5': #f2f2f2,
   'white': #ffffff,
   'success': #00aa55,
   'success-light': #00c362,
@@ -34,7 +35,6 @@ $colors: (
 );
 
 $spacings: (
-  0: 0,
   4: 0.222rem,
   8: 0.444rem,
   12: 0.666rem,
@@ -142,8 +142,7 @@ $box-shadows: (
 );
 
 $border-radius: (
-  none: 0,
   sm: 2px,
-  base: 5px,
+  base: 4px,
   full: 9999px
 );

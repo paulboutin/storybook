@@ -1,0 +1,35 @@
+.eyebrow {
+  display: flex;
+  flex-direction: column;
+
+  &.eyebrow-alt {
+    .eyebrow-text {
+      color: color('green');
+    }
+
+    .eyebrow-spacer {
+      display: none;
+    }
+  }
+
+  &.eyebrow-inverted {
+    .eyebrow-text {
+      color: color('white');
+    }
+  }
+
+  .eyebrow-text {
+    text-transform: uppercase;
+    color: color('grey-80');
+    margin-bottom: spacing(8);
+    letter-spacing: 2px;
+    @include font-size('sm');
+    @include font-weight('semi-bold');
+  }
+
+  .eyebrow-spacer {
+    border-bottom: 4px solid color('yellow');
+    width: spacing(64);
+    margin-bottom: spacing(16);
+  }
+}

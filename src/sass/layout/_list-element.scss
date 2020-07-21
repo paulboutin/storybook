@@ -1,27 +1,35 @@
-.list-element-container {
-  padding: spacing(16);
+.list-element {
+  padding: spacing(32) 0;
 
   @include screen('sm') {
-    display: flex;
-    padding: spacing(32);
+    padding: spacing(64) 0;
+  }
+
+  .container {
+    @include screen('sm') {
+      display: flex;
+    }
   }
 
   .list-element-image-wrapper {
-    margin-bottom: spacing(16);
+    margin-bottom: spacing(24);
     display: flex;
     justify-content: center;
 
     @include screen('sm') {
       margin-bottom: 0;
-      max-width: 50%;
+      width: 50%;
     }
 
     .list-element-image {
-      padding: spacing(16);
+      height: auto;
       align-self: center;
 
       @include screen('sm') {
-        padding: spacing(32);
+        height: 100%;
+        max-height: 100vh;
+        object-fit: cover;
+        padding-right: spacing(32);
       }
     }
   }
@@ -29,57 +37,36 @@
 
 .list-element-content {
   &:not(.alt) {
-    @include screen('sm') {
+    @include screen('lg') {
       display: flex;
 
       .list-element-header {
-        padding: spacing(4) spacing(64);
-        margin-bottom: 0;
+        width: 50%;
+        padding-right: spacing(32);
       }
-    }
-  }
 
-  &.alt {
-    .list-element-header .list-element-header-lead {
-      color: color('green');
+      .list-element-items {
+        width: 50%;
+        padding-left: spacing(32);
+      }
     }
   }
 
   .list-element-header {
     margin-bottom: spacing(24);
 
-    .list-element-header-lead {
-      text-transform: uppercase;
-      margin-bottom: spacing(8);
-      color: color('grey-80');
-      @include font-weight('bold');
-    }
-
-    .list-element-header-spacer {
-      display: block;
-      border: 2px solid color('yellow');
-      width: spacing(48);
-      margin-bottom: calc(#{spacing(16)} - 2px);
-    }
-
     .list-element-heading {
-      @include font-size('h2');
+      @include font-size('h3');
     }
 
     .list-element-header-text {
       color: color('grey-80');
-      display: none;
-
-      @include screen('sm') {
-        display: block;
-      }
+      @include font-size('sm');
     }
   }
 }
 
 .list-element-items {
-  padding-top: spacing(4);
-  padding-bottom: spacing(4);
   @include font-family('display');
 
   .list-element-item {
@@ -92,8 +79,8 @@
       margin-left: -#{spacing(32)};
     }
 
-    &:not(:last-child) {
-      margin-bottom: spacing(24);
+    &:not(:last-of-type) {
+      margin-bottom: spacing(16);
     }
   }
 }

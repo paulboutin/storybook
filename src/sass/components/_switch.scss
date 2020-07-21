@@ -1,0 +1,52 @@
+.switch-wrapper {
+  $width: 48px;
+  $height: 24px;
+  $circle-size: 18px;
+  $circle-margin: ($height - $circle-size) / 2;
+
+  display: inline-flex;
+  align-items: center;
+
+  input[type='checkbox'] {
+    @extend .sr-only;
+
+    &:checked ~ .switch {
+      background-color: color('green-light');
+
+      .switch-circle {
+        left: $width - $circle-size - $circle-margin;
+      }
+    }
+  }
+
+  .switch {
+    position: relative;
+    width: $width;
+    height: $height;
+    border-radius: $height / 2;
+    background-color: color('grey-10');
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .switch-circle {
+    position: absolute;
+    top: $circle-margin;
+    left: $circle-margin;
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+    background-color: color('white');
+    transition: left 0.3s;
+  }
+
+  .switch-label {
+    @include font-size('xs');
+    padding-left: spacing(12);
+    cursor: pointer;
+
+    @include screen('lg') {
+      @include font-size('sm');
+    }
+  }
+}

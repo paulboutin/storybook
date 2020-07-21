@@ -1,0 +1,32 @@
+.sb\:checkboxes {
+  display: flex;
+  flex-direction: column;
+
+  @include screen('sm') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.sb\:checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: spacing(8);
+}
+
+.sb\:checkbox-title {
+  @include font-size('xs');
+  text-transform: capitalize;
+}
+
+.sb\:checkbox {
+  margin: spacing(8) 0;
+}
+
+.sb\:checkbox-hover {
+  @extend .checkbox-wrapper:hover;
+}
+
+.sb\:checkbox-focus {
+  @extend .checkbox-wrapper:focus-within;
+}

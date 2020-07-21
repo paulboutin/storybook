@@ -2,18 +2,18 @@ import React from 'react'
 import classNames from 'classnames'
 
 const ColorGroup = ({ children }) => (
-  <div className='ds:color-group'>
+  <div className='sb:color-group'>
     <div>{children}</div>
   </div>
 )
 
 const ColorName = ({ children }) => (
-  <h4 className='ds:color-name'>{children}</h4>
+  <h4 className='sb:color-name'>{children}</h4>
 )
 
 const ColorBlock = ({ children, bg, text }) => (
   <div
-    className={classNames('ds:color-block', `ds:color--${bg}`)}
+    className={classNames('sb:color-block', `sb:color--${bg}`)}
     style={{ color: text }}
   >
     {children}
@@ -21,7 +21,7 @@ const ColorBlock = ({ children, bg, text }) => (
 )
 
 export const Colors = () => (
-  <div className='ds:colors'>
+  <div className='sb:colors'>
     <ColorGroup>
       <ColorName>Brand Green</ColorName>
       <ColorBlock bg='green' text='white'>
@@ -76,13 +76,13 @@ export const Colors = () => (
         Black
       </ColorBlock>
       <ColorBlock bg='grey' text='white'>
-        Grey
+        90%
       </ColorBlock>
       <ColorBlock bg='grey-80' text='white'>
         80%
       </ColorBlock>
-      <ColorBlock bg='grey-40' text='black'>
-        40%
+      <ColorBlock bg='grey-70' text='white'>
+        70%
       </ColorBlock>
       <ColorBlock bg='grey-30' text='black'>
         30%
@@ -90,8 +90,11 @@ export const Colors = () => (
       <ColorBlock bg='grey-20' text='black'>
         20%
       </ColorBlock>
-      <ColorBlock bg='grey-15' text='black'>
-        15%
+      <ColorBlock bg='grey-10' text='black'>
+        10%
+      </ColorBlock>
+      <ColorBlock bg='grey-5' text='black'>
+        5%
       </ColorBlock>
       <ColorBlock bg='white' text='black'>
         White

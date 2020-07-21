@@ -1,5 +1,5 @@
-.ds\:typography-heading {
-  color: color('grey-40');
+.sb\:typography-heading {
+  color: color('grey-70');
   margin-bottom: spacing(16);
 
   &:not(:first-child) {
@@ -7,18 +7,18 @@
   }
 }
 
-.ds\:typography-title {
+.sb\:typography-title {
   @include font-size('xs');
-  color: color('grey-40');
+  color: color('grey-70');
 }
 
-.ds\:typography-text {
+.sb\:typography-text {
   margin-bottom: spacing(16);
 }
 
 @each $size in (lg, base, sm, xs) {
-  .ds\:typography-text--#{$size} {
-    @extend .ds\:typography-text;
+  .sb\:typography-text--#{$size} {
+    @extend .sb\:typography-text;
     @include font-size($size);
   }
 }

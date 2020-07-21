@@ -2,9 +2,13 @@ export default {
   title: 'Components/Layout'
 }
 
-export { ClosingCTA } from './layout/ClosingCTA'
+export { ClosingCTAStory } from './layout/ClosingCTA'
+export { ColumnCardsStory } from './layout/ColumnCards'
+export { ColumnIconsStory } from './layout/ColumnIcons'
 export { FAQ } from './layout/FAQ'
-export { Hero } from './layout/Hero'
-export { Legal } from './layout/Legal'
-export { ListElement } from './layout/ListElement'
-export { Recommendations } from './layout/Recommendations'
+export { HeroStory } from './layout/Hero'
+export { HighlightStory } from './layout/Highlight'
+export { LegalStory } from './layout/Legal'
+export { ListElementStory } from './layout/ListElement'
+export { PromoElementStory } from './layout/PromoElement'
+export { RecommendationsStory } from './layout/Recommendations'

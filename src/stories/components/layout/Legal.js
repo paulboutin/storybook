@@ -1,4 +1,5 @@
 import React from 'react'
+import Legal from '../../../components/layout/Legal'
 import { array } from '@storybook/addon-knobs'
 
 const defaultItems = [
@@ -8,20 +9,11 @@ const defaultItems = [
     'maxime, perspiciatis possimus quis reiciendis repellendus tenetur voluptatem voluptatum.'
 ]
 
-export const Legal = () => {
+export const LegalStory = () => {
   const items = array('Items', defaultItems, ';')
+  return <Legal items={items} />
+}
 
-  return (
-    <div className='legal'>
-      <div className='legal-spacer' />
-      <h2 className='legal-heading'>All the legal stuff</h2>
-      <ol className='legal-list'>
-        {items.map((item, index) => (
-          <li className='legal-list-item' key={index}>
-            {item}
-          </li>
-        ))}
-      </ol>
-    </div>
-  )
+LegalStory.story = {
+  name: 'Legal'
 }

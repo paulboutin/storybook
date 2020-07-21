@@ -1,8 +1,41 @@
 .link {
-  color: color('blue');
+  @include font-size('xs');
+  color: color('green');
+  cursor: pointer;
+  text-decoration: underline;
 
-  &:hover {
-    color: color('blue-light');
-    text-decoration: underline;
+  &:visited {
+    color: color('green-darker');
+  }
+
+  &:focus {
+    color: color('green-light');
+    outline: 2px solid color('blue');
+    outline-offset: 2px;
+  }
+
+  &:hover,
+  &:active {
+    color: color('green-dark');
+  }
+}
+
+.link-inline {
+  @include screen('sm') {
+    @include font-size('sm');
+  }
+
+  @include screen('lg') {
+    @include font-size('base');
+  }
+}
+
+.link-standalone {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    margin-left: spacing(8);
   }
 }

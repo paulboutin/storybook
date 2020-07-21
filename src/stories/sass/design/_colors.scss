@@ -1,4 +1,4 @@
-.ds\:colors {
+.sb\:colors {
   display: flex;
   flex-wrap: wrap;
 
@@ -7,7 +7,7 @@
   }
 }
 
-.ds\:color-group {
+.sb\:color-group {
   padding: spacing(8);
   width: 100%;
 
@@ -17,14 +17,14 @@
   }
 }
 
-.ds\:color-name {
+.sb\:color-name {
   @include font-size('sm');
   @include font-weight('semi-bold');
   color: color('grey');
   margin-bottom: spacing(4);
 }
 
-.ds\:color-block {
+.sb\:color-block {
   @include font-size('sm');
   @include border-radius('base');
   padding: spacing(4) 0;
@@ -32,12 +32,12 @@
   text-align: center;
 }
 
-.ds\:color--white {
-  border: 1px solid color('grey-40');
+.sb\:color--white {
+  border: 1px solid color('grey-70');
 }
 
 @each $name, $color in $colors {
-  .ds\:color--#{$name} {
+  .sb\:color--#{$name} {
     background-color: #{$color};
   }
 }
