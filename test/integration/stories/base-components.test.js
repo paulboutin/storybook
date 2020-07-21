@@ -21,7 +21,8 @@ describe('Base Components', () => {
     },
     {
       title: 'card standard',
-      component: 'card-story'
+      component: 'card-story',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'card flat',
