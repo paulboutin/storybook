@@ -95,7 +95,11 @@ export const ProductPage = () => (
 
     <FAQ />
 
-    <ClosingCTA type='half' heading='Open online in about 10 minutes'>
+    <ClosingCTA
+      type='half'
+      heading='Open online in about 10 minutes'
+      image='http://via.placeholder.com/640'
+    >
       <a className='button button-tertiary' href='#'>
         Call to Action
       </a>
