@@ -32,8 +32,10 @@
 
 .link-standalone {
   text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 
-  .fa {
+  svg {
     margin-left: spacing(8);
   }
 }

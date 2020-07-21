@@ -11,7 +11,7 @@ const Card = ({ heading, children, linkText, imageSrc, imageAlt, flat }) => {
         <div className='card-text-wrapper'>
           <p className='card-text'>{children}</p>
         </div>
-        <Link icon='long-arrow-alt-right'>{linkText}</Link>
+        <Link standalone>{linkText}</Link>
       </div>
     </div>
   )

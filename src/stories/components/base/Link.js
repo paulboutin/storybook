@@ -7,24 +7,23 @@ export const LinkStory = () => {
 
   return (
     <div>
-      {types.map(type => {
-        const icon = type === 'standalone' ? 'long-arrow-alt-right' : null
+      {types.map(type => (
+        <div key={type} className='sb:link-type'>
+          <h3 className='sb:link-type-name'>{type}</h3>
 
-        return (
-          <div key={type} className='sb:link-type'>
-            <h3 className='sb:link-type-name'>{type}</h3>
-
-            {states.map(state => (
-              <div key={state} className='sb:link-wrapper'>
-                <h4 className='sb:link-title'>{state}</h4>
-                <Link icon={icon} className={`sb:link-${type}-${state}`}>
-                  Link
-                </Link>
-              </div>
-            ))}
-          </div>
-        )
-      })}
+          {states.map(state => (
+            <div key={state} className='sb:link-wrapper'>
+              <h4 className='sb:link-title'>{state}</h4>
+              <Link
+                standalone={type === 'standalone'}
+                className={`sb:link-${type}-${state}`}
+              >
+                Link
+              </Link>
+            </div>
+          ))}
+        </div>
+      ))}
     </div>
   )
 }
