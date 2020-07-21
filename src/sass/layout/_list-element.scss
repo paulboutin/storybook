@@ -10,8 +10,7 @@
       display: flex;
 
       .image-block {
-        width: 50%;
-        margin-right: spacing(16);
+        min-width: 50%;
       }
 
       .list-element-content {
@@ -21,20 +20,12 @@
     }
 
     @include screen('md') {
-      .image-block {
-        margin-right: spacing(32);
-      }
-
       .list-element-content {
         margin-left: spacing(32);
       }
     }
 
     @include screen('lg') {
-      .image-block {
-        margin-right: spacing(64);
-      }
-
       .list-element-content {
         margin-left: spacing(64);
       }

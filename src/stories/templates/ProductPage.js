@@ -121,7 +121,7 @@ export const ProductPage = () => (
       ].map((item, index) => (
         <Card
           key={index}
-          imageSrc='http://via.placeholder.com/500x250'
+          image={{ src: 'http://via.placeholder.com/500x250', alt: 'image' }}
           heading={item.heading}
           linkText='View all'
           flat
