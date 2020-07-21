@@ -1,12 +1,12 @@
 import React from 'react'
-import classNames from 'classnames'
-import { radios } from '@storybook/addon-knobs'
-import Link from '../../../components/base/Link'
 import PromoElement from '../../../components/layout/PromoElement'
+import Link from '../../../components/base/Link'
+import classNames from 'classnames'
+import { radios, text } from '@storybook/addon-knobs'
 
 const eyebrow = 'Sustainable banking'
 const heading = 'The strongest environmental stance of any major bank.'
-const text =
+const defaultText =
   'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
 
 const classes = {
@@ -16,14 +16,15 @@ const classes = {
 
 export const PromoElementStory = () => {
   const type = radios('Type', ['Standard', 'Accent'], 'Standard')
+  const image = text('Image', 'http://via.placeholder.com/640')
 
   return (
     <PromoElement
       heading={heading}
       type={classes[type]}
-      text={text}
+      text={defaultText}
       eyebrow={eyebrow}
-      image={{ src: 'http://via.placeholder.com/640', alt: 'Hero' }}
+      image={{ src: image, alt: 'Promo image' }}
     >
       {type === 'Accent' ? (
         <button

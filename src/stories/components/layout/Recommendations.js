@@ -18,10 +18,10 @@ const items = [
   }
 ]
 
-const defaultPlaceholder = 'http://via.placeholder.com/500'
+const defaultImage = 'http://via.placeholder.com/500'
 
 export const RecommendationsStory = () => {
-  const placeholder = text('Placeholder', defaultPlaceholder)
+  const image = text('Image', defaultImage)
 
   const heading = 'Recommended for you'
 
@@ -34,7 +34,7 @@ export const RecommendationsStory = () => {
           key={index}
           heading={item.heading}
           linkText={linkText}
-          imageSrc={placeholder}
+          imageSrc={image}
         >
           {item.text}
         </Card>
