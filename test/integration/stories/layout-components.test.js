@@ -62,6 +62,12 @@ describe('Layout Components', () => {
       'knob-Type': 'Accent'
     },
     {
+      title: 'promo-element accent dark',
+      component: 'promo-element-story',
+      'knob-Type': 'Accent Dark',
+      'knob-Full': true
+    },
+    {
       title: 'highlight single',
       component: 'highlight-story',
       devices: ['mobile', 'tablet', 'desktop'],
