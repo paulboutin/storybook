@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Link from '../base/Link'
+import Image from '../base/Image'
 
 const Highlight = ({ contentPosition, type, overlap, color, images }) => (
   <div
@@ -16,17 +17,37 @@ const Highlight = ({ contentPosition, type, overlap, color, images }) => (
   >
     <div className='highlight-img-container'>
       {type === 'Single' ? (
-        <img src={[images[0]]} alt='Highlight image' />
+        <Image
+          src={[images[0]]}
+          alt='Highlight image'
+          ratio='1:1'
+          className='highlight-square'
+        />
       ) : overlap === 'Color' ? (
         <>
-          <div />
-          <img src={[images[0]]} alt='Highlight image' />
+          <div className='highlight-square' />
+          <Image
+            src={[images[0]]}
+            alt='Highlight image'
+            ratio='1:1'
+            className='highlight-square'
+          />
         </>
       ) : (
         <>
-          <img src={[images[0]]} alt='Secondary highlight image' />
+          <Image
+            src={[images[0]]}
+            alt='Secondary highlight image'
+            ratio='1:1'
+            className='highlight-square'
+          />
 
-          <img src={[images[1]]} alt='Primary highlight image' />
+          <Image
+            src={[images[1]]}
+            alt='Primary highlight image'
+            ratio='1:1'
+            className='highlight-square'
+          />
         </>
       )}
     </div>
