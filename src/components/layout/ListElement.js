@@ -1,12 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
-
-const ListElementImage = ({ image }) => (
-  <div className='list-element-image-wrapper'>
-    <img className='list-element-image' src={image.src} alt={image.alt} />
-  </div>
-)
+import Image from '../base/Image'
 
 const ListElementItems = ({ items, listClass = 'fa-check-circle' }) => (
   <ul className='list-element-items'>
@@ -21,7 +16,7 @@ const ListElementItems = ({ items, listClass = 'fa-check-circle' }) => (
 const ListElement = ({ image, items, headerText, altLayout }) => (
   <section className='list-element'>
     <div className='container'>
-      {image && <ListElementImage image={image} />}
+      {image && <Image src={image.src} alt={image.alt} ratio='1:1' />}
       <div
         className={classNames('list-element-content', altLayout ? 'alt' : '')}
       >
