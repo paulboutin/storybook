@@ -1,8 +1,8 @@
 import React from 'react'
-import PromoElement from '../../../components/layout/PromoElement'
-import Link from '../../../components/base/Link'
 import classNames from 'classnames'
-import { radios, text } from '@storybook/addon-knobs'
+import { radios, text, boolean } from '@storybook/addon-knobs'
+import Link from '../../../components/base/Link'
+import PromoElement from '../../../components/layout/PromoElement'
 
 const eyebrow = 'Sustainable banking'
 const heading = 'The strongest environmental stance of any major bank.'
@@ -11,17 +11,19 @@ const defaultText =
 
 const classes = {
   Standard: '',
-  Accent: 'accent'
+  Accent: 'accent',
+  'Accent Dark': 'accent dark'
 }
 
 export const PromoElementStory = () => {
-  const type = radios('Type', ['Standard', 'Accent'], 'Standard')
+  const type = radios('Type', ['Standard', 'Accent', 'Accent Dark'], 'Standard')
   const image = text('Image', 'http://via.placeholder.com/640')
+  const full = boolean('Full', false)
 
   return (
     <PromoElement
       heading={heading}
-      type={classes[type]}
+      type={classNames(classes[type], full && 'full')}
       text={defaultText}
       eyebrow={eyebrow}
       image={{ src: image, alt: 'Promo image' }}

@@ -34,7 +34,7 @@ export const RecommendationsStory = () => {
           key={index}
           heading={item.heading}
           linkText={linkText}
-          imageSrc={image}
+          image={{ src: image, alt: 'image' }}
         >
           {item.text}
         </Card>

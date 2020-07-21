@@ -36,7 +36,7 @@ export const ColumnCardsStory = () => {
         {items.map((item, index) => (
           <Card
             key={index}
-            imageSrc={image}
+            image={{ src: image, alt: 'image' }}
             heading={item.heading}
             linkText={linkText}
             flat
@@ -49,7 +49,7 @@ export const ColumnCardsStory = () => {
         {items.map((item, index) => (
           <Card
             key={index}
-            imageSrc={image}
+            image={{ src: image, alt: 'image' }}
             heading={item.heading}
             linkText={linkText}
             flat

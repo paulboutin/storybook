@@ -2,7 +2,7 @@ import React from 'react'
 import { array, radios, text } from '@storybook/addon-knobs'
 import ListElement from '../../../components/layout/ListElement'
 
-const defaultImage = 'http://via.placeholder.com/500x400'
+const defaultImage = 'http://via.placeholder.com/640x480'
 
 const defaultItems = [
   '$0 monthly service charge with any deposit per statement',
