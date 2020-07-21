@@ -6,5 +6,15 @@
         "node": "current"
       }
     }]
+  ],
+  "plugins": [
+    ["inline-react-svg", {
+    "svgo": {
+      "plugins": [
+        {
+          "convertPathData": false
+        }
+      ]
+    }}]
   ]
 }

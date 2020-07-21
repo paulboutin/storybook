@@ -61,7 +61,7 @@ const Highlight = ({ contentPosition, type, overlap, color, images }) => (
         and what we don't.
       </p>
 
-      <Link icon='long-arrow-alt-right' className='highlight-link'>
+      <Link standalone className='highlight-link'>
         Your choice of bank matters
       </Link>
     </div>

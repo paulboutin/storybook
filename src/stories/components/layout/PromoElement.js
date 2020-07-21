@@ -35,9 +35,7 @@ export const PromoElementStory = () => {
           Call to Action
         </button>
       ) : (
-        <Link href='#' icon='long-arrow-alt-right'>
-          See all you can do in mobile banking
-        </Link>
+        <Link standalone>See all you can do in mobile banking</Link>
       )}
     </PromoElement>
   )

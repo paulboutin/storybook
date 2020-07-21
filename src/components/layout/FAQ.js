@@ -58,7 +58,7 @@ const FAQ = () => (
       voluptate?
     </Block>
 
-    <Link icon='long-arrow-alt-right' className='faq-link'>
+    <Link standalone className='faq-link'>
       View All
     </Link>
   </div>

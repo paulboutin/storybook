@@ -1,17 +1,18 @@
 import React from 'react'
 import classNames from 'classnames'
+import LongArrowRight from '../../icons/long-arrow-right.svg'
 
-const Link = ({ href = '#', icon, className, children }) => (
+const Link = ({ href = '#', standalone, className, children }) => (
   <a
     href={href}
     className={classNames(
       'link',
-      icon ? 'link-standalone' : 'link-inline',
+      standalone ? 'link-standalone' : 'link-inline',
       className
     )}
   >
     {children}
-    {icon && <span className={`fa fa-${icon}`} />}
+    {standalone && <LongArrowRight />}
   </a>
 )
 
