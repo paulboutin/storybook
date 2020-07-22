@@ -19,14 +19,14 @@ const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
             className='image-block'
             alt={image.alt}
             src={image.src}
-            ratio='Auto'
+            ratio={type.includes('square') ? '1:1' : 'auto'}
           />
         )}
         {type !== '' && type !== 'full' && <StarBirds />}
       </div>
-      {type.includes('accent') &&
-        !type.includes('full') &&
-        !type.includes('dark') && <div className='cta-wrapper'>{children}</div>}
+      {type.includes('accent') && !type.includes('dark') && (
+        <div className='cta-wrapper'>{children}</div>
+      )}
     </div>
   </div>
 )

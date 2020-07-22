@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import { radios, text, boolean } from '@storybook/addon-knobs'
+import { radios, text } from '@storybook/addon-knobs'
 import AppCTA from '../../../components/base/AppCTA'
 import Link from '../../../components/base/Link'
 import PromoElement from '../../../components/layout/PromoElement'
@@ -10,20 +10,28 @@ const heading = 'The strongest environmental stance of any major bank.'
 const defaultText =
   'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
 
+const defaultPlaceholder = 'http://via.placeholder.com/480x640'
+const defaultSquarePlaceholder = 'http://via.placeholder.com/640'
+
 const classes = {
   Standard: '',
-  Accent: 'accent',
+  Full: 'full',
+  'Accent Square': 'accent square',
   'Accent Dark': 'accent dark'
 }
 
 export const PromoElementStory = () => {
-  const type = radios('Type', ['Standard', 'Accent', 'Accent Dark'], 'Standard')
-  const image = text('Image', 'http://via.placeholder.com/480x640')
-  const full = boolean('Full', false)
+  const type = radios(
+    'Type',
+    ['Standard', 'Full', 'Accent Square', 'Accent Dark'],
+    'Standard'
+  )
+  const placeholder = text('Placeholder', defaultPlaceholder)
+  const squarePlaceholder = text('Square Placeholder', defaultSquarePlaceholder)
   let cta
 
   switch (type) {
-    case 'Accent':
+    case 'Accent Square':
       cta = (
         <button
           className={classNames(
@@ -35,25 +43,25 @@ export const PromoElementStory = () => {
         </button>
       )
       break
-    case 'Accent Dark':
+    default:
       cta = (
         <>
           <Link standalone>See all you can do in mobile banking</Link>
           <AppCTA />
         </>
       )
-      break
-    default:
-      cta = <Link standalone>See all you can do in mobile banking</Link>
   }
 
   return (
     <PromoElement
       heading={heading}
-      type={classNames(classes[type], full && 'full')}
+      type={classes[type]}
       text={defaultText}
       eyebrow={eyebrow}
-      image={{ src: image, alt: 'Promo image' }}
+      image={{
+        src: type === 'Accent Square' ? squarePlaceholder : placeholder,
+        alt: 'Promo image'
+      }}
     >
       {cta}
     </PromoElement>

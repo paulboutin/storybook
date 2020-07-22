@@ -2,37 +2,43 @@
   overflow: hidden;
   color: color('grey');
 
-  &.full {
-    .promo-element-image-wrapper {
-      align-self: flex-end;
-      padding: 0;
-
-      svg {
-        transform: scale(1.25);
-        right: 2rem;
-        top: 0;
-      }
-
-      .image-block {
-        margin: 0;
-      }
-    }
-  }
-
   &.accent {
     background: color('green');
     align-items: stretch;
     text-align: center;
 
+    &:not(.dark) {
+      padding-top: spacing(32);
+      padding-bottom: spacing(32);
+    }
+
     &.dark {
       background: color('green-dark');
 
-      .promo-element-content .cta-wrapper {
-        display: block;
+      .promo-element-image-wrapper {
+        svg {
+          @include screen('sm') {
+            transform: scale(1.5);
+            right: 2rem;
+            top: 0;
+          }
+        }
+      }
 
-        .link {
-          color: color('white');
-          @include font-weight('bold');
+      .promo-element-content {
+        margin-top: spacing(64);
+
+        @include screen('sm') {
+          margin-top: 0;
+        }
+
+        .cta-wrapper {
+          display: block;
+
+          .link {
+            color: color('white');
+            @include font-weight('bold');
+          }
         }
       }
     }
@@ -79,17 +85,6 @@
     }
   }
 
-  .container {
-    display: flex;
-    flex-direction: column-reverse;
-    position: relative;
-
-    @include screen('sm') {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-
   .promo-element-image-wrapper {
     position: relative;
     width: 100%;
@@ -104,7 +99,6 @@
     .image-block {
       z-index: 1;
       position: relative;
-      width: 100%;
 
       @include screen('sm') {
         margin: spacing(32);
@@ -161,11 +155,44 @@
     }
   }
 
-  .container > .cta-wrapper {
-    margin-top: spacing(32);
+  &:not(.accent) {
+    padding: spacing(16);
+
+    .cta-wrapper .app-cta {
+      align-items: flex-start;
+    }
+  }
+
+  &.full,
+  &.accent.dark {
+    .promo-element-image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-self: flex-end;
+      padding: 0;
+    }
+
+    .image-block {
+      margin: 0;
+    }
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+
+    > .cta-wrapper {
+      margin-top: spacing(32);
+
+      @include screen('sm') {
+        display: none;
+      }
+    }
 
     @include screen('sm') {
-      display: none;
+      flex-direction: row;
+      align-items: center;
     }
   }
 }
