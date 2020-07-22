@@ -3,6 +3,7 @@ import classNames from 'classnames'
 
 const Button = ({ type, label, icon, className, ...props }) => (
   <button
+    type='button'
     className={classNames(
       'button',
       `button-${type}`,
