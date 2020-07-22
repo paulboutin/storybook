@@ -126,10 +126,9 @@ export const ProductPage = () => (
       ].map((item, index) => (
         <Card
           key={index}
-          image={{ src: 'http://via.placeholder.com/500x250', alt: 'image' }}
+          image={{ src: 'http://via.placeholder.com/640', alt: 'image' }}
           heading={item.heading}
           linkText='View all'
-          flat
         >
           {item.text}
         </Card>
