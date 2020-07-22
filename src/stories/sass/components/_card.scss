@@ -1,0 +1,12 @@
+.sb\:card {
+  width: 100%;
+  max-width: 3 * spacing(160);
+
+  @include screen('md') {
+    width: percentage(1/3);
+  }
+
+  &.flat {
+    max-width: 2 * spacing(160);
+  }
+}

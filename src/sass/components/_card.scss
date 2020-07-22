@@ -7,7 +7,6 @@
   @include border-radius('sm');
 
   @include screen('md') {
-    max-width: 2 * spacing(160);
     flex-direction: column;
   }
 
@@ -55,7 +54,7 @@
     .card-heading {
       margin-top: spacing(8);
       margin-bottom: spacing(8);
-      @include font-size('base');
+      @include font-size('h5');
     }
 
     .card-text-wrapper {
