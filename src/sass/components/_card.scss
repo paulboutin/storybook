@@ -55,6 +55,7 @@
     .card-heading {
       margin-top: spacing(8);
       margin-bottom: spacing(8);
+      @include font-size('base');
     }
 
     .card-text-wrapper {
@@ -72,6 +73,15 @@
 
       .card-text {
         color: color('grey-80');
+        @include font-size('xs');
+      }
+    }
+
+    .link {
+      @include font-size('base');
+
+      @include screen('sm') {
+        @include font-size('xs');
       }
     }
   }
