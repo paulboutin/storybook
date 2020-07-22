@@ -65,7 +65,7 @@ export const ProductPage = () => (
 
     <PromoElement
       heading='The strongest environmental stance of any major bank.'
-      type='accent'
+      type='accent square'
       text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       eyebrow='Sustainable Banking'
       image={{ src: 'http://via.placeholder.com/640', alt: 'Hero' }}
@@ -126,10 +126,9 @@ export const ProductPage = () => (
       ].map((item, index) => (
         <Card
           key={index}
-          image={{ src: 'http://via.placeholder.com/500x250', alt: 'image' }}
+          image={{ src: 'http://via.placeholder.com/640', alt: 'image' }}
           heading={item.heading}
           linkText='View all'
-          flat
         >
           {item.text}
         </Card>

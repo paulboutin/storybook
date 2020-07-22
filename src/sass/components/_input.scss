@@ -28,6 +28,16 @@
     .input-control {
       border-color: color('error-light');
     }
+
+    .input-help {
+      color: color('error-dark');
+
+      &:before {
+        content: '\f05a';
+        margin-right: spacing(8);
+        @include font-family('font-awesome');
+      }
+    }
   }
 
   .input-label {
@@ -55,6 +65,10 @@
     @include font-size('base');
 
     &:focus {
+      @include focus-outline();
+    }
+
+    &:active {
       border-color: color('success');
     }
 
@@ -63,6 +77,10 @@
       color: color('grey-20');
       border-color: color('grey-10');
     }
+  }
+
+  textarea.input-control {
+    margin-bottom: -#{spacing(8)};
   }
 
   .input-password-control {
@@ -95,16 +113,10 @@
     transform: scale(0.5);
   }
 
-  .input-error {
+  .input-help {
     position: absolute;
     margin-top: spacing(4);
-    color: color('error-dark');
+    color: color('grey-70');
     @include font-size('xs');
-
-    &:before {
-      content: '\f05a';
-      margin-right: spacing(8);
-      @include font-family('font-awesome');
-    }
   }
 }

@@ -13,7 +13,7 @@ const typeMap = {
 
 export const ClosingCTAStory = () => {
   const type = radios('Type', ['Standard', 'Half', 'Alt'], 'Standard')
-  const image = text('Image', 'http://via.placeholder.com/1600/464646/464646')
+  const image = text('Image', 'http://via.placeholder.com/1600')
 
   return (
     <ClosingCTA

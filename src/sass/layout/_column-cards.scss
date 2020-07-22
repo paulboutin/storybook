@@ -7,7 +7,7 @@
 
   .three-col-heading {
     text-align: left;
-    margin-bottom: spacing(48);
+    margin-bottom: spacing(32);
     @include font-size('h4');
 
     @include screen('md') {

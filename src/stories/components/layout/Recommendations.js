@@ -25,7 +25,7 @@ export const RecommendationsStory = () => {
 
   const heading = 'Recommended for you'
 
-  const linkText = 'Read more'
+  const linkText = 'View All'
 
   return (
     <ColumnCards heading={heading}>

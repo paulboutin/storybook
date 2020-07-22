@@ -18,6 +18,12 @@
     }
   }
 
+  &.sb\:input-active {
+    input {
+      @extend .input-control:active;
+    }
+  }
+
   &.sb\:input-error {
     margin-bottom: spacing(32);
   }

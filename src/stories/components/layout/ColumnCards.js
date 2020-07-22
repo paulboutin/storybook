@@ -3,7 +3,7 @@ import ColumnCards from '../../../components/layout/ColumnCards'
 import Card from '../../../components/base/Card'
 import { text } from '@storybook/addon-knobs'
 
-const defaultImage = 'http://via.placeholder.com/500x250'
+const defaultImage = 'http://via.placeholder.com/640x480'
 
 const heading = 'More reasons to love your account'
 

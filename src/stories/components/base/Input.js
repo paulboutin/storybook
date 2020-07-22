@@ -21,8 +21,13 @@ export const InputStory = () => {
       </div>
 
       <div className='sb:input-wrapper sb:input-focus'>
-        <h3 className='sb:input-title'>Active</h3>
+        <h3 className='sb:input-title'>Focus</h3>
         <Input id='address-2' label='Address' required />
+      </div>
+
+      <div className='sb:input-wrapper sb:input-active'>
+        <h3 className='sb:input-title'>Active</h3>
+        <Input id='address-3' label='Address' required />
       </div>
 
       <div className='sb:input-wrapper'>
@@ -42,19 +47,36 @@ export const InputStory = () => {
       </div>
 
       <div className='sb:input-wrapper sb:input-error'>
-        <h3 className='sb:input-title'>Error</h3>
+        <h3 className='sb:input-title'>Help</h3>
         <Input
           id='phone-2'
           label='Phone Number'
           required
           type='tel'
-          error='Please enter a correct phone number'
+          help='Please enter a correct phone number'
+        />
+      </div>
+
+      <div className='sb:input-wrapper sb:input-error'>
+        <h3 className='sb:input-title'>Error</h3>
+        <Input
+          id='phone-3'
+          label='Phone Number'
+          required
+          type='tel'
+          help='Please enter a correct phone number'
+          error='An error has ocurred!'
         />
       </div>
 
       <div className='sb:input-wrapper'>
         <h3 className='sb:input-title'>Textarea</h3>
-        <TextArea label='Textarea' maxLength={100} rows={5} />
+        <TextArea
+          label='Textarea'
+          maxLength={100}
+          rows={5}
+          help='Helper text goes here'
+        />
       </div>
     </div>
   )

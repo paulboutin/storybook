@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Input = ({ id, value, error, label, ...attrs }) => (
+const Input = ({ id, value, error, help, label, ...attrs }) => (
   <div
     className={classNames(
       'input-block',
@@ -16,7 +16,7 @@ const Input = ({ id, value, error, label, ...attrs }) => (
     </label>
     {attrs.type === 'password' && <span className='input-password-control' />}
     <input id={id} className='input-control' defaultValue={value} {...attrs} />
-    {error && <p className='input-error'>{error}</p>}
+    {help && <p className='input-help'>{error || help}</p>}
   </div>
 )
 

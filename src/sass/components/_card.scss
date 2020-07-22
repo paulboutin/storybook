@@ -7,7 +7,6 @@
   @include border-radius('sm');
 
   @include screen('md') {
-    max-width: 2 * spacing(160);
     flex-direction: column;
   }
 
@@ -55,6 +54,7 @@
     .card-heading {
       margin-top: spacing(8);
       margin-bottom: spacing(8);
+      @include font-size('h5');
     }
 
     .card-text-wrapper {
@@ -72,6 +72,15 @@
 
       .card-text {
         color: color('grey-80');
+        @include font-size('xs');
+      }
+    }
+
+    .link {
+      @include font-size('base');
+
+      @include screen('sm') {
+        @include font-size('xs');
       }
     }
   }

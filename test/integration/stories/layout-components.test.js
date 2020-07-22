@@ -57,15 +57,20 @@ describe('Layout Components', () => {
       'knob-Type': 'Standard'
     },
     {
-      title: 'promo-element accent',
+      title: 'promo-element full',
       component: 'promo-element-story',
-      'knob-Type': 'Accent'
+      'knob-Type': 'Full'
+    },
+    {
+      title: 'promo-element accent square',
+      component: 'promo-element-story',
+      'knob-Type': 'Accent Square'
     },
     {
       title: 'promo-element accent dark',
       component: 'promo-element-story',
-      'knob-Type': 'Accent Dark',
-      'knob-Full': true
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Type': 'Accent Dark'
     },
     {
       title: 'highlight single',

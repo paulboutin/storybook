@@ -1,4 +1,5 @@
 .closing-cta {
+  overflow: hidden;
   position: relative;
   color: color('grey');
 
@@ -14,25 +15,32 @@
       padding: 0 spacing(48);
     }
 
-    @include screen('lg') {
-      padding: 0 spacing(96);
-    }
-
-    .closing-cta-center {
-      flex-direction: column;
-
-      @include screen('sm') {
-        flex-direction: row;
-      }
-    }
-
-    .closing-cta-img {
+    .closing-cta-image-wrapper {
+      display: flex;
       position: relative;
-      width: 100%;
 
       @include screen('sm') {
         padding-right: spacing(16);
         width: 50%;
+      }
+
+      .closing-cta-image {
+        z-index: 1;
+        align-self: center;
+        height: auto;
+        padding: spacing(32);
+
+        @include screen('sm') {
+          padding: spacing(16);
+        }
+
+        @include screen('md') {
+          padding: spacing(32);
+        }
+
+        @include screen('lg') {
+          padding: spacing(64);
+        }
       }
     }
 
@@ -52,21 +60,16 @@
   &.alt {
     background: color('green');
 
-    .closing-cta-img {
-      padding: spacing(32) 0;
+    .closing-cta-image-wrapper {
+      left: 0;
 
       @include screen('sm') {
-        width: percentage(2 / 3);
-        left: 0;
-        padding: 0 0 0 spacing(8);
+        width: 50%;
+        justify-content: flex-end;
       }
 
       @include screen('md') {
-        padding: 0 0 0 spacing(64);
-      }
-
-      @include screen('lg') {
-        padding: 0 0 0 spacing(160);
+        margin-left: spacing(32);
       }
     }
   }
@@ -89,11 +92,25 @@
     }
   }
 
-  .closing-cta-img {
+  .closing-cta-image-wrapper {
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+
+    .closing-cta-image {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    svg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+    }
   }
 
   .closing-cta-content {
