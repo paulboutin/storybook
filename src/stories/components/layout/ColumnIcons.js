@@ -17,12 +17,16 @@ const defaultColumns = [
   {
     text: 'Mobile wallet? Yes!',
     subtext: 'Use it anywhere that accepts a Mastercard debit card.'
+  },
+  {
+    text: 'Lorem ipsum? Yes!',
+    subtext: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   }
 ]
 
 export const ColumnIconsStory = () => {
   const columns = []
-  const columnNumber = number('Columns', 3, { min: 2, max: 6 }, 'config')
+  const columnNumber = number('Columns', 3, { min: 2, max: 4 }, 'config')
   const inverted = boolean('Inverted', false, 'config')
 
   for (let i = 0; i < columnNumber; i++) {
