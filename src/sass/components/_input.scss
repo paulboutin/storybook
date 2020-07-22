@@ -96,7 +96,8 @@
   }
 
   .input-error {
-    margin-top: spacing(8);
+    position: absolute;
+    margin-top: spacing(4);
     color: color('error-dark');
     @include font-size('xs');
 

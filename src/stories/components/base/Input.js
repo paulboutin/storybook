@@ -20,7 +20,7 @@ export const InputStory = () => {
         <Input id='address-1' label='Address' required value='123 Little St.' />
       </div>
 
-      <div className='sb:input-wrapper focus'>
+      <div className='sb:input-wrapper sb:input-focus'>
         <h3 className='sb:input-title'>Active</h3>
         <Input id='address-2' label='Address' required />
       </div>
@@ -41,7 +41,7 @@ export const InputStory = () => {
         <Input id='email' label='Email' type='email' />
       </div>
 
-      <div className='sb:input-wrapper'>
+      <div className='sb:input-wrapper sb:input-error'>
         <h3 className='sb:input-title'>Error</h3>
         <Input
           id='phone-2'

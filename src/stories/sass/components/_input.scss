@@ -12,10 +12,14 @@
   flex-direction: column;
   margin: spacing(8);
 
-  &.focus {
+  &.sb\:input-focus {
     input {
       @extend .input-control:focus;
     }
+  }
+
+  &.sb\:input-error {
+    margin-bottom: spacing(32);
   }
 }
 
