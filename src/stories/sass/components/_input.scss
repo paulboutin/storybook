@@ -12,12 +12,6 @@
   flex-direction: column;
   margin: spacing(8);
 
-  &.sb\:input-focus {
-    input {
-      @extend .input-control:focus;
-    }
-  }
-
   &.sb\:input-active {
     input {
       @extend .input-control:active;

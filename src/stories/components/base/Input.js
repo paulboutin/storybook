@@ -20,11 +20,6 @@ export const InputStory = () => {
         <Input id='address-1' label='Address' required value='123 Little St.' />
       </div>
 
-      <div className='sb:input-wrapper sb:input-focus'>
-        <h3 className='sb:input-title'>Focus</h3>
-        <Input id='address-2' label='Address' required />
-      </div>
-
       <div className='sb:input-wrapper sb:input-active'>
         <h3 className='sb:input-title'>Active</h3>
         <Input id='address-3' label='Address' required />

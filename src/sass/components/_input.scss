@@ -64,10 +64,7 @@
     @include border-radius('base');
     @include font-size('base');
 
-    &:focus {
-      @include focus-outline();
-    }
-
+    &:focus,
     &:active {
       border-color: color('success');
     }
@@ -80,7 +77,9 @@
   }
 
   textarea.input-control {
-    margin-bottom: -#{spacing(8)};
+    & ~ .input-help {
+      margin-top: -#{spacing(4) / 2};
+    }
   }
 
   .input-password-control {
