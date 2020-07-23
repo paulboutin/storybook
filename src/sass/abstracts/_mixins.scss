@@ -19,10 +19,10 @@
 }
 
 @mixin fluid-typography() {
-  $min-font-size: 18;
-  $max-font-size: 24.75;
+  $min-font-size: 16;
+  $max-font-size: 24;
   $min-screen-width: 480;
-  $max-screen-width: 1400;
+  $max-screen-width: 1440;
 
   $font-factor: $max-font-size - $min-font-size;
   $screen-factor: $max-screen-width - $min-screen-width;

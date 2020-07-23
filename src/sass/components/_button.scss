@@ -1,5 +1,5 @@
 .button {
-  @include font-size('xs');
+  @include font-size('button');
   @include border-radius('base');
   cursor: pointer;
   padding: spacing(12) spacing(16);
