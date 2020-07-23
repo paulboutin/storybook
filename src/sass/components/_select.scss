@@ -7,6 +7,14 @@
   border: 1px solid color('grey-30');
   cursor: pointer;
 
+  &:focus {
+    outline: none;
+
+    .select-wrapper {
+      @include focus-outline();
+    }
+  }
+
   .select-wrapper {
     display: flex;
     align-items: center;
@@ -58,6 +66,11 @@
     &:hover {
       color: color('green');
     }
+
+    &:focus {
+      outline: none;
+      color: color('green-dark');
+    }
   }
 
   .select-option-selected {
@@ -78,6 +91,12 @@
 .select-open {
   border: none;
 
+  &:focus {
+    .select-wrapper {
+      outline: none;
+    }
+  }
+
   .select-value {
     visibility: hidden;
   }
@@ -88,5 +107,19 @@
 
   .select-options {
     display: block;
+  }
+}
+
+.select-keyboard {
+  &.select-open:focus {
+    .select-placeholder {
+      outline: 2px solid color('blue');
+      outline-offset: -6px;
+    }
+  }
+
+  .select-option:focus {
+    outline: 2px solid color('blue');
+    outline-offset: -6px;
   }
 }

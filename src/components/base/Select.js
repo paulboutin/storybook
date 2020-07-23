@@ -2,7 +2,7 @@ import React from 'react'
 import Chevron from '../../svg/chevron.svg'
 
 const Select = () => (
-  <div className='select'>
+  <div className='select' tabIndex='0'>
     <input type='hidden' className='select-input' />
 
     <div className='select-wrapper'>
@@ -13,13 +13,13 @@ const Select = () => (
     <ul className='select-options'>
       <li className='select-placeholder' />
 
-      <li className='select-option' data-value='option-1'>
+      <li className='select-option' data-value='option-1' tabIndex='0'>
         Option 1
       </li>
-      <li className='select-option' data-value='option-2'>
+      <li className='select-option' data-value='option-2' tabIndex='0'>
         Option 2
       </li>
-      <li className='select-option' data-value='option-3'>
+      <li className='select-option' data-value='option-3' tabIndex='0'>
         Option 3
       </li>
     </ul>

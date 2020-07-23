@@ -9,12 +9,9 @@ export default () => {
 
     placeholder.textContent = value.textContent
 
-    select.addEventListener('click', e => {
-      if (select.classList.contains('select-open')) {
-        select.classList.remove('select-open')
-      } else {
-        select.classList.add('select-open')
-      }
+    const handleSelect = e => {
+      select.classList.toggle('select-open')
+      select.classList.toggle('select-keyboard', e.type === 'keypress')
 
       if (e.target.classList.contains('select-option')) {
         input.value = e.target.dataset.value
@@ -23,6 +20,30 @@ export default () => {
         options.forEach(opt => opt.classList.remove('select-option-selected'))
         e.target.classList.add('select-option-selected')
       }
+
+      select.focus()
+    }
+
+    select.addEventListener('click', handleSelect)
+
+    select.addEventListener('keypress', e => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        handleSelect(e)
+      }
+    })
+
+    select.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        select.classList.remove('select-open')
+      }
+    })
+
+    select.addEventListener('focusout', () => {
+      setTimeout(() => {
+        if (!select.contains(document.activeElement)) {
+          select.classList.remove('select-open')
+        }
+      }, 0)
     })
   })
 }
