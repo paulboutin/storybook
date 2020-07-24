@@ -28,6 +28,10 @@
     }
   }
 
+  .select-value {
+    margin-right: spacing(8);
+  }
+
   .select-icon {
     color: color('green');
   }
@@ -121,5 +125,43 @@
   .select-option:focus {
     outline: 2px solid color('blue');
     outline-offset: -6px;
+  }
+}
+
+.select-inline {
+  display: inline-block;
+  border: none;
+
+  &.select-keyboard.select-open:focus {
+    .select-wrapper {
+      @include focus-outline();
+    }
+  }
+
+  .select-wrapper {
+    padding: 0;
+    margin-bottom: spacing(8);
+  }
+
+  .select-value {
+    visibility: visible;
+  }
+
+  .select-options {
+    top: unset;
+    width: auto;
+  }
+
+  .select-placeholder {
+    display: none;
+  }
+
+  .select-option {
+    white-space: nowrap;
+    padding-right: calc(#{spacing(12)} + 24px);
+
+    &:nth-child(2):before {
+      border-top: none;
+    }
   }
 }

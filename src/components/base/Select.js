@@ -14,13 +14,13 @@ const Select = () => (
       <li className='select-placeholder' />
 
       <li className='select-option' data-value='option-1' tabIndex='0'>
-        Option 1
+        Option number 1
       </li>
       <li className='select-option' data-value='option-2' tabIndex='0'>
-        Option 2
+        Option number 2
       </li>
       <li className='select-option' data-value='option-3' tabIndex='0'>
-        Option 3
+        Option number 3
       </li>
     </ul>
   </div>
