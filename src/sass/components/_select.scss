@@ -221,3 +221,23 @@
     display: none;
   }
 }
+
+.select-disabled {
+  color: color('grey-10');
+  border-color: color('grey-10');
+  cursor: not-allowed;
+
+  &:focus {
+    .select-wrapper {
+      outline: none;
+    }
+  }
+
+  .select-icon {
+    color: color('grey-10') !important;
+  }
+
+  .select-helper-text {
+    color: color('grey-10');
+  }
+}

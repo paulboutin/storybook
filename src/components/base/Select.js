@@ -2,16 +2,28 @@ import React from 'react'
 import Chevron from '../../svg/chevron.svg'
 import classNames from 'classnames'
 
-const Select = ({ label, options, inline, helper, error, className }) => (
+const Select = ({
+  label,
+  options,
+  inline,
+  disabled,
+  helper,
+  error,
+  className
+}) => (
   <div
     className={classNames(
       'select',
-      { 'select-inline': inline, 'select-error': !!error },
+      {
+        'select-inline': inline,
+        'select-disabled': disabled,
+        'select-error': !!error
+      },
       className
     )}
-    tabIndex='0'
+    tabIndex={disabled ? '-1' : '0'}
   >
-    <input type='hidden' className='select-input' />
+    <input type='hidden' className='select-input' disabled={disabled} />
 
     <div className='select-wrapper'>
       <span className='select-value'>{label}</span>

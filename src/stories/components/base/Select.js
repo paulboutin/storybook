@@ -8,6 +8,7 @@ export const SelectStory = () => {
   const inline = boolean('Inline', false)
   const helper = boolean('Helper', false)
   const error = boolean('Error', false)
+  const disabled = boolean('Disabled', false)
 
   return (
     <div className='row'>
@@ -16,6 +17,7 @@ export const SelectStory = () => {
           label={label}
           options={options}
           inline={inline}
+          disabled={disabled}
           helper={helper && 'Helper text'}
           error={error && 'Required field'}
         />

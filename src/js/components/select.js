@@ -10,6 +10,8 @@ export default () => {
     placeholder.textContent = value.textContent
 
     const handleSelect = e => {
+      if (input.disabled) return
+
       select.classList.toggle('select-open')
       select.classList.toggle('select-keyboard', e.type === 'keypress')
 
