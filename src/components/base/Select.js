@@ -1,27 +1,33 @@
 import React from 'react'
 import Chevron from '../../svg/chevron.svg'
+import classNames from 'classnames'
 
-const Select = () => (
-  <div className='select' tabIndex='0'>
+const Select = ({ label, options, inline, className }) => (
+  <div
+    className={classNames('select', { 'select-inline': inline }, className)}
+    tabIndex='0'
+  >
     <input type='hidden' className='select-input' />
 
     <div className='select-wrapper'>
-      <span className='select-value'>Label</span>
+      <span className='select-value'>{label}</span>
       <Chevron className='select-icon' />
     </div>
 
     <ul className='select-options'>
       <li className='select-placeholder' />
 
-      <li className='select-option' data-value='option-1' tabIndex='0'>
-        Option number 1
-      </li>
-      <li className='select-option' data-value='option-2' tabIndex='0'>
-        Option number 2
-      </li>
-      <li className='select-option' data-value='option-3' tabIndex='0'>
-        Option number 3
-      </li>
+      {options.map(option => {
+        const value = option
+          .replace(/[^\w\s]/g, '')
+          .replace(/ /g, '-')
+          .toLowerCase()
+        return (
+          <li className='select-option' tabIndex='0' data-value={value}>
+            {option}
+          </li>
+        )
+      })}
     </ul>
   </div>
 )
