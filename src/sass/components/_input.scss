@@ -1,7 +1,7 @@
 .input-block {
   position: relative;
 
-  &.active {
+  &.input-active {
     .input-label {
       background: color('white');
       transform: translate(#{spacing(16)}, #{spacing(8)}) scale(0.75);
@@ -13,13 +13,13 @@
     }
   }
 
-  &.disabled {
+  &.input-disabled {
     .input-label {
       color: color('grey-20');
     }
   }
 
-  &.error {
+  &.input-error {
     .input-label,
     .input-control {
       color: color('error-dark');
