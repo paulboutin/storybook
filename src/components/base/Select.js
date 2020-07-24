@@ -2,7 +2,7 @@ import React from 'react'
 import Chevron from '../../svg/chevron.svg'
 import classNames from 'classnames'
 
-const Select = ({ label, options, inline, error, className }) => (
+const Select = ({ label, options, inline, helper, error, className }) => (
   <div
     className={classNames(
       'select',
@@ -38,6 +38,8 @@ const Select = ({ label, options, inline, error, className }) => (
         )
       })}
     </ul>
+
+    {helper && <p className='select-helper-text'>{helper}</p>}
 
     {error && (
       <p className='select-error-text'>

@@ -43,7 +43,6 @@
     top: 0;
     width: 100%;
     border: 1px solid color('grey-5');
-    overflow: hidden;
     display: none;
   }
 
@@ -52,6 +51,7 @@
   }
 
   .select-option {
+    @include border-radius('base');
     position: relative;
     color: color('grey-70');
     padding: spacing(8) spacing(12);
@@ -88,6 +88,23 @@
       right: spacing(12);
       color: color('green-light');
       font-size: 12px;
+    }
+  }
+
+  .select-helper-text {
+    @include font-size('xs');
+    position: absolute;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-top: spacing(4);
+    color: color('grey-70');
+  }
+
+  &.select-open,
+  &.select-inline,
+  &.select-error {
+    .select-helper-text {
+      display: none;
     }
   }
 }
@@ -185,6 +202,7 @@
     @include font-size('xs');
     position: absolute;
     white-space: nowrap;
+    pointer-events: none;
     margin-top: spacing(4);
 
     .fa {
@@ -197,5 +215,9 @@
     .select-error-text {
       display: none;
     }
+  }
+
+  .select-helper-text {
+    display: none;
   }
 }
