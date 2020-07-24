@@ -17,13 +17,18 @@ const Select = ({ label, options, inline, className }) => (
     <ul className='select-options'>
       <li className='select-placeholder' />
 
-      {options.map(option => {
+      {options.map((option, idx) => {
         const value = option
           .replace(/[^\w\s]/g, '')
           .replace(/ /g, '-')
           .toLowerCase()
         return (
-          <li className='select-option' tabIndex='0' data-value={value}>
+          <li
+            key={idx}
+            className='select-option'
+            tabIndex='0'
+            data-value={value}
+          >
             {option}
           </li>
         )
