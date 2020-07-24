@@ -32,6 +32,29 @@
   background-color: color('grey-20');
 }
 
+.sb\:spacing-margin-section {
+  margin-bottom: spacing(48);
+}
+
+.sb\:spacing-pixel-section {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.sb\:spacing-block--pixel {
+  display: inline-flex;
+  justify-content: space-between;
+}
+
+.sb\:spacing-pixel-size:after {
+  content: ':';
+  margin-right: spacing(8);
+}
+
+.sb\:spacing-pixel-value:after {
+  content: 'px';
+}
+
 @each $name, $size in $spacings {
   .sb\:spacing--#{$name} {
     width: $size;
