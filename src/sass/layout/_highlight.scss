@@ -25,14 +25,9 @@
   }
 
   .highlight-text {
-    @include font-size('xs');
-    color: color('grey-80');
+    color: color('grey-70');
     margin-top: spacing(12);
     margin-bottom: spacing(24);
-  }
-
-  .highlight-link {
-    @include font-size('sm');
   }
 
   @include screen('sm') {

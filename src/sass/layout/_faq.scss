@@ -19,13 +19,11 @@
   border-bottom: 1px solid color('grey-30');
 
   .faq-question {
-    @include font-size('sm');
-    max-width: 60%;
+    max-width: 75%;
   }
 
   .faq-answer {
-    @include font-size('xs');
-    color: color('grey-80');
+    color: color('grey-70');
     margin-top: 0;
   }
 

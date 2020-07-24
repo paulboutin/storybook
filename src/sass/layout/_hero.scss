@@ -16,8 +16,8 @@
   }
 
   .hero-text {
-    @include font-size('xs');
-    color: color('grey-80');
+    @include font-size('sm');
+    color: color('grey-70');
   }
 
   .hero-button {
@@ -25,13 +25,10 @@
   }
 
   .hero-subtext {
-    @include font-size('xs');
+    @include font-size('sm');
 
-    :last-child {
-      @include font-weight('semi-bold');
-      color: color('green');
+    .link {
       text-decoration: underline;
-      cursor: pointer;
     }
   }
 

@@ -1,4 +1,5 @@
 .list-element {
+  color: color('grey');
   padding: spacing(32) 0;
 
   @include screen('sm') {
@@ -33,8 +34,8 @@
   }
 }
 
-.list-element-content {
-  &:not(.alt) {
+.list-element:not(.list-element-alt) {
+  .list-element-content {
     margin-left: 0 !important;
     width: 100% !important;
 
@@ -52,31 +53,37 @@
       }
     }
   }
+}
 
+.list-element-alt {
+  .list-element-header {
+    margin-top: spacing(24);
+  }
+}
+
+.list-element-content {
   .list-element-header {
     margin-bottom: spacing(24);
 
     .list-element-heading {
-      @include font-size('h3');
+      margin-bottom: spacing(8);
     }
 
     .list-element-header-text {
-      color: color('grey-80');
-      @include font-size('sm');
     }
   }
 }
 
 .list-element-items {
-  @include font-family('display');
-
   .list-element-item {
+    @include font-size('h5');
+    @include font-weight('bold');
     position: relative;
     margin-left: spacing(32);
 
     &:before {
       position: absolute;
-      color: color('green');
+      color: color('green-light');
       margin-left: -#{spacing(32)};
     }
 

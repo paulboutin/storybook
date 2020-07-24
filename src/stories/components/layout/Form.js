@@ -22,13 +22,13 @@ const Form1 = () => (
       <p className='sb:form-description'>Form description</p>
 
       <div className='row'>
-        <div className='col-xs-6'>
+        <div className='col-xs-12 col-sm-6'>
           <Input id='input-1' label='Label' required />
         </div>
       </div>
 
       <div className='row'>
-        <div className='col-xs-6'>
+        <div className='col-xs-12 col-sm-6'>
           <TextArea
             id='textarea'
             label='Label'
@@ -40,19 +40,19 @@ const Form1 = () => (
       </div>
 
       <div className='row'>
-        <div className='col-xs-6'>
+        <div className='col-xs-12 col-sm-6'>
           <Input id='input-2' label='Label' required />
         </div>
       </div>
 
       <div className='row'>
-        <div className='col-xs-6'>
+        <div className='col-xs-12 col-sm-6'>
           <Input id='input-3' label='Label' required />
         </div>
       </div>
 
       <div className='row'>
-        <div className='col-xs-6'>
+        <div className='col-xs-12 col-sm-6'>
           <h6 className='sb:form-title'>Checkbox title</h6>
           <Checkbox label='Checkbox 1' />
           <Checkbox label='Checkbox 2' />
@@ -60,7 +60,7 @@ const Form1 = () => (
       </div>
 
       <div className='row'>
-        <div className='col-xs-6'>
+        <div className='col-xs-12 col-sm-6'>
           <h6 className='sb:form-title'>Switch title</h6>
           <Switch label='Switch' checked />
         </div>

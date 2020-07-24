@@ -26,7 +26,7 @@
   .legal-list {
     list-style: decimal;
     margin-left: spacing(24);
-    color: color('grey-80');
+    color: color('grey-70');
     @include font-size('xs');
 
     .legal-list-item:not(:last-child) {

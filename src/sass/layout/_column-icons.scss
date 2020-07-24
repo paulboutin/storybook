@@ -30,6 +30,7 @@
   }
 
   .column-icon-circle {
+    @include box-shadow('sm');
     width: 150px;
     border-radius: 50%;
     align-self: center;
@@ -45,11 +46,10 @@
   }
 
   .column-icon-text {
-    @include font-size('base');
   }
 
   .column-icon-subtext {
-    @include font-size('xs');
+    @include font-size('sm');
     margin-top: spacing(8);
   }
 }

@@ -51,7 +51,6 @@
 
           .link {
             color: color('white');
-            @include font-weight('bold');
           }
         }
       }
@@ -148,7 +147,6 @@
     }
 
     .promo-element-heading {
-      @include font-size('h4');
     }
 
     .promo-element-heading {
@@ -156,7 +154,7 @@
     }
 
     .promo-element-text {
-      color: color('grey-80');
+      color: color('grey-70');
       @include font-size('sm');
     }
 
@@ -198,7 +196,7 @@
     position: relative;
 
     > .cta-wrapper {
-      margin-top: spacing(32);
+      margin-top: spacing(24);
 
       @include screen('sm') {
         display: none;

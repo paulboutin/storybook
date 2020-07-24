@@ -2,7 +2,7 @@
   @include font-size('button');
   @include border-radius('base');
   cursor: pointer;
-  padding: spacing(12) spacing(16);
+  padding: spacing(16);
   display: inline-block;
   transition-property: color, background-color, border-color;
   transition-duration: 0.3s;

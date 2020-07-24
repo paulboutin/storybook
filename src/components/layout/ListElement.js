@@ -14,7 +14,9 @@ const ListElementItems = ({ items, listClass = 'fa-check-circle' }) => (
 )
 
 const ListElement = ({ image, items, headerText, altLayout }) => (
-  <section className='list-element'>
+  <section
+    className={classNames('list-element', { 'list-element-alt': altLayout })}
+  >
     <div className='container'>
       {image && (
         <Image
@@ -24,9 +26,7 @@ const ListElement = ({ image, items, headerText, altLayout }) => (
           ratio='4:3'
         />
       )}
-      <div
-        className={classNames('list-element-content', altLayout ? 'alt' : '')}
-      >
+      <div className='list-element-content'>
         <div className='list-element-header'>
           <Eyebrow text={headerText.eyebrow} />
           <div className='list-element-header-text-block'>

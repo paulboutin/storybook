@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import StarBirds from '../../svg/star-birds.svg'
 
 const ClosingCTA = ({ type, image, heading, text, children }) => (
-  <div className={classNames('closing-cta', type)}>
+  <div className={classNames('closing-cta', `closing-cta-${type}`)}>
     <div className='container'>
       <div className='closing-cta-image-wrapper'>
         {type !== '' && <StarBirds />}

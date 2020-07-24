@@ -8,11 +8,6 @@
   .three-col-heading {
     text-align: left;
     margin-bottom: spacing(32);
-    @include font-size('h4');
-
-    @include screen('md') {
-      @include font-size('h3');
-    }
   }
 
   .row {

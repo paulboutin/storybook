@@ -5,15 +5,15 @@ import Card from '../../../components/base/Card'
 
 const items = [
   {
-    heading: 'Still not sure about any Deposit Checking?',
+    heading: 'Lorem Ipsum Header',
     text: 'Check out our Premier Checking account'
   },
   {
-    heading: 'Want to start saving instead?',
+    heading: 'Lorem Ipsum Header',
     text: 'Learn about our Money Market Plus account'
   },
   {
-    heading: 'How to pick a checking account?',
+    heading: 'Lorem Ipsum Header',
     text: 'We will help you to decide what is best for you'
   }
 ]

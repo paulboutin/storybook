@@ -54,16 +54,14 @@ const Highlight = ({ contentPosition, type, overlap, color, images }) => (
 
     <div className='highlight-content-container'>
       <Eyebrow text='Bank for the planet' />
-      <h4>The strongest environmental stance of any major bank.</h4>
+      <h2>The strongest environmental stance of any major bank.</h2>
 
       <p className='highlight-text'>
         Our policies are 100% transparent because we're proud of what we finance
         and what we don't.
       </p>
 
-      <Link standalone className='highlight-link'>
-        Your choice of bank matters
-      </Link>
+      <Link standalone>Your choice of bank matters</Link>
     </div>
   </div>
 )

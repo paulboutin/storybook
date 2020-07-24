@@ -12,18 +12,18 @@ const Hero = ({ type, image }) => (
     <img className='hero-img' src={image} alt='Hero image' />
     <div className='hero-content'>
       <Eyebrow text='Any deposit checking' />
-      <h3 className='hero-heading'>
+      <h2 className='hero-heading'>
         No hidden fees.
         <br />
         No hassle.
-      </h3>
+      </h2>
       <p className='hero-text'>Open an account in about 10 minutes</p>
       <a className='button button-primary hero-button' href='#'>
         Apply Now
       </a>
       <p className='hero-subtext'>
         <span>Not in Alabama? </span>
-        <span>Change your state</span>
+        <span className='link link-standalone'>Change your state</span>
       </p>
     </div>
   </div>

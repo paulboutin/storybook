@@ -9,7 +9,7 @@ const Block = ({ children, question, expanded }) => (
     })}
   >
     <div>
-      <h6 className='faq-question'>{question}</h6>
+      <h5 className='faq-question'>{question}</h5>
       <p className='faq-answer accordion-content'>{children}</p>
     </div>
 
@@ -19,16 +19,15 @@ const Block = ({ children, question, expanded }) => (
 
 const FAQ = () => (
   <div className='faq container'>
-    <h4 className='faq-heading'>
+    <h2 className='faq-heading'>
       Still have questions?
       <br />
       We have answers.
-    </h4>
+    </h2>
 
     <Block question="What if I'm under 25?" expanded>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores
-      cupiditate deleniti dolorem eligendi error hic magnam modi omnis quaerat
-      quas quisquam quo sunt totam ullam, unde voluptas. Molestias, ratione.
+      If you’re under 25, we’ll waive your monthly service charge even if you
+      don’t make a deposit that month.
     </Block>
 
     <Block question="What if I don't make a deposit one month?">

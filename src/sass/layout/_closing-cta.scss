@@ -3,7 +3,7 @@
   position: relative;
   color: color('grey');
 
-  &.half {
+  &.closing-cta-half {
     padding: spacing(16) 0;
     background: color('green');
 
@@ -57,7 +57,7 @@
     }
   }
 
-  &.alt {
+  &.closing-cta-alt {
     background: color('green');
 
     .closing-cta-image-wrapper {
@@ -128,13 +128,11 @@
     }
 
     .closing-cta-heading {
-      margin-bottom: spacing(24);
+      margin-bottom: spacing(4);
       color: color('white');
-      @include font-size('h3');
 
       @include screen('sm') {
         margin-bottom: spacing(16);
-        @include font-size('h2');
       }
 
       @include screen('md') {
