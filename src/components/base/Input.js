@@ -5,9 +5,9 @@ const Input = ({ id, value, error, help, label, ...attrs }) => (
   <div
     className={classNames(
       'input-block',
-      value ? 'active' : '',
-      error ? 'error' : '',
-      attrs.disabled ? 'disabled' : ''
+      value ? 'input-active' : '',
+      error ? 'input-error' : '',
+      attrs.disabled ? 'input-disabled' : ''
     )}
   >
     <label className='input-label' htmlFor={id}>
