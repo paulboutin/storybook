@@ -2,9 +2,13 @@ import React from 'react'
 import Chevron from '../../svg/chevron.svg'
 import classNames from 'classnames'
 
-const Select = ({ label, options, inline, className }) => (
+const Select = ({ label, options, inline, error, className }) => (
   <div
-    className={classNames('select', { 'select-inline': inline }, className)}
+    className={classNames(
+      'select',
+      { 'select-inline': inline, 'select-error': !!error },
+      className
+    )}
     tabIndex='0'
   >
     <input type='hidden' className='select-input' />
@@ -34,6 +38,13 @@ const Select = ({ label, options, inline, className }) => (
         )
       })}
     </ul>
+
+    {error && (
+      <p className='select-error-text'>
+        <i className='fa fa-exclamation-circle' />
+        {error}
+      </p>
+    )}
   </div>
 )
 

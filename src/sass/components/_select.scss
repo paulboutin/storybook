@@ -166,3 +166,36 @@
     }
   }
 }
+
+.select-error {
+  color: color('error');
+  border-color: color('error');
+
+  .select-icon {
+    color: color('error');
+  }
+
+  .select-wrapper:hover {
+    .select-icon {
+      color: color('error-dark');
+    }
+  }
+
+  .select-error-text {
+    @include font-size('xs');
+    position: absolute;
+    white-space: nowrap;
+    margin-top: spacing(4);
+
+    .fa {
+      margin-right: spacing(4);
+    }
+  }
+
+  &.select-inline,
+  &.select-open {
+    .select-error-text {
+      display: none;
+    }
+  }
+}
