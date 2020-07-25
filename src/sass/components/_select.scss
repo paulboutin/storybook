@@ -37,12 +37,13 @@
   }
 
   .select-options {
-    @include box-shadow('base');
     @include border-radius('base');
+    @include box-shadow('base');
     position: absolute;
-    top: 0;
+    top: -1px;
     width: 100%;
     border: 1px solid color('grey-5');
+    overflow: hidden;
     display: none;
   }
 
@@ -51,7 +52,6 @@
   }
 
   .select-option {
-    @include border-radius('base');
     position: relative;
     color: color('grey-70');
     padding: spacing(8) spacing(12);
@@ -110,6 +110,7 @@
 }
 
 .select-open {
+  @include border-radius('base', 'base', 'none', 'none');
   border: none;
 
   &:focus {
