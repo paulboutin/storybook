@@ -24,6 +24,7 @@
 
     @include screen('sm') {
       flex: 1;
+      width: 0;
       padding-left: spacing(16);
       padding-right: spacing(16);
     }
