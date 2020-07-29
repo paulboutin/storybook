@@ -107,6 +107,11 @@ describe('Layout Components', () => {
       component: 'column-icons-story',
       devices: ['mobile', 'desktop'],
       'knob-Inverted_config': true
+    },
+    {
+      title: 'infographic',
+      component: 'infographic-story',
+      devices: ['mobile', 'tablet', 'desktop']
     }
   ]
   buildSnapshotTests('components-layout')(stories)
