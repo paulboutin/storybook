@@ -2,13 +2,13 @@ import React from 'react'
 import { waitFor } from '@testing-library/dom'
 import { mount } from '../utils'
 
-import { FAQBlock } from '../../../src/components/layout/FAQ'
+import Accordion from '../../../src/components/base/Accordion'
 import fn from '../../../src/js/components/accordion'
 
-describe('Block component', () => {
+describe('Accordion component', () => {
   it('should be interactive', async () => {
     // Arrange
-    const component = mount(<FAQBlock>Lorem ipsum dolor.</FAQBlock>, fn)
+    const component = mount(<Accordion>Lorem ipsum dolor.</Accordion>, fn)
 
     // Assert
     expect(component).not.toHaveClass('accordion-expanded')
