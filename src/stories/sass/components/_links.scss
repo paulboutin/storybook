@@ -12,7 +12,6 @@
 
 .sb\:link-type-name {
   @include font-size('lg');
-  color: color('grey');
   text-transform: capitalize;
   width: 100%;
 }
@@ -23,7 +22,6 @@
 
 .sb\:link-title {
   @include font-size('xs');
-  color: color('grey');
   text-transform: capitalize;
 }
 

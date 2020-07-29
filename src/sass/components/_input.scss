@@ -45,7 +45,6 @@
     transform-origin: top left;
     transform: translate(#{spacing(16)}, #{spacing(16) + spacing(4)}) scale(1);
     position: absolute;
-    color: color('grey');
     @include font-size('sm');
 
     .input-optional {
@@ -60,7 +59,6 @@
     width: 100%;
     padding: spacing(16) spacing(16);
     border: 1px solid color('grey-30');
-    color: color('grey');
     @include border-radius('base');
     @include font-size('base');
 
@@ -85,7 +83,6 @@
   .input-password-control {
     position: absolute;
     cursor: pointer;
-    color: color('grey');
     top: spacing(16);
     right: spacing(16);
 

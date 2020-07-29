@@ -1,6 +1,7 @@
 html {
   @include fluid-typography();
   @include font-family('body');
+  color: color('grey');
 }
 
 h1 {
