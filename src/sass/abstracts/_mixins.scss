@@ -83,3 +83,9 @@
   outline: 2px solid color('blue');
   outline-offset: 2px;
 }
+
+@mixin star-birds() {
+  background-image: url('/img/star-birds.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}

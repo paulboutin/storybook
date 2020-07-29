@@ -2,7 +2,7 @@
   overflow: hidden;
 
   &.accent {
-    background: color('green');
+    background-color: color('green');
     align-items: stretch;
     text-align: center;
 
@@ -24,7 +24,7 @@
     }
 
     &.dark {
-      background: color('green-dark');
+      background-color: color('green-dark');
 
       .promo-element-image-wrapper {
         svg {
@@ -205,6 +205,19 @@
     @include screen('sm') {
       flex-direction: row;
       align-items: center;
+    }
+  }
+}
+
+.promo-element-starbirds {
+  @include star-birds();
+  background-position: center;
+
+  @include screen('sm') {
+    background: none;
+
+    .promo-element-image-wrapper {
+      @include star-birds();
     }
   }
 }

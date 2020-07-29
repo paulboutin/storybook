@@ -4,7 +4,7 @@
 
   &.closing-cta-half {
     padding: spacing(16) 0;
-    background: color('green');
+    background-color: color('green');
 
     @include screen('sm') {
       padding: 0 spacing(24);
@@ -57,7 +57,7 @@
   }
 
   &.closing-cta-alt {
-    background: color('green');
+    background-color: color('green');
 
     .closing-cta-image-wrapper {
       left: 0;
@@ -149,4 +149,9 @@
       }
     }
   }
+}
+
+.closing-cta-starbirds .closing-cta-image-wrapper {
+  @include star-birds();
+  background-position: center;
 }

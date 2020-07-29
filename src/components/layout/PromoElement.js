@@ -2,10 +2,13 @@ import React from 'react'
 import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
-import StarBirds from '../../svg/star-birds.svg'
 
 const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
-  <div className={classNames('promo-element', type)}>
+  <div
+    className={classNames('promo-element', type, {
+      'promo-element-starbirds': type !== '' && type !== 'full'
+    })}
+  >
     <div className='container'>
       <div className='promo-element-content'>
         <Eyebrow text={eyebrow} inverted={type.includes('accent')} />
@@ -22,7 +25,6 @@ const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
             ratio={type.includes('square') ? '1:1' : 'auto'}
           />
         )}
-        {type !== '' && type !== 'full' && <StarBirds />}
       </div>
       {type.includes('accent') && !type.includes('dark') && (
         <div className='cta-wrapper'>{children}</div>

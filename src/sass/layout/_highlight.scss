@@ -4,7 +4,7 @@
   padding: spacing(32) spacing(16);
 
   .highlight-img-container {
-    @extend .ratio-1\:1;
+    @include fixed-ratio(1, 1);
 
     @include screen('sm') {
       width: 50%;
