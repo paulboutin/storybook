@@ -13,13 +13,6 @@ const defaultText =
 const defaultPlaceholder = 'http://via.placeholder.com/480x640'
 const defaultSquarePlaceholder = 'http://via.placeholder.com/640'
 
-const classes = {
-  Standard: '',
-  Full: 'full',
-  'Accent Square': 'accent square',
-  'Accent Dark': 'accent dark'
-}
-
 export const PromoElementStory = () => {
   const type = radios(
     'Type',
@@ -30,32 +23,30 @@ export const PromoElementStory = () => {
   const squarePlaceholder = text('Square Placeholder', defaultSquarePlaceholder)
   let cta
 
-  switch (type) {
-    case 'Accent Square':
-      cta = (
-        <button
-          className={classNames(
-            'button',
-            type === 'Standard' ? 'button-primary' : 'button-tertiary'
-          )}
-        >
-          Call to Action
-        </button>
-      )
-      break
-    default:
-      cta = (
-        <>
-          <Link standalone>See all you can do in mobile banking</Link>
-          <AppCTA />
-        </>
-      )
+  if (type === 'Accent Square') {
+    cta = (
+      <button
+        className={classNames(
+          'button',
+          type === 'Standard' ? 'button-primary' : 'button-tertiary'
+        )}
+      >
+        Call to Action
+      </button>
+    )
+  } else {
+    cta = (
+      <>
+        <Link standalone>See all you can do in mobile banking</Link>
+        <AppCTA />
+      </>
+    )
   }
 
   return (
     <PromoElement
       heading={heading}
-      type={classes[type]}
+      type={type}
       text={defaultText}
       eyebrow={eyebrow}
       image={{

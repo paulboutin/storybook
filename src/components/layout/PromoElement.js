@@ -5,13 +5,17 @@ import Image from '../base/Image'
 
 const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
   <div
-    className={classNames('promo-element', type, {
-      'promo-element-starbirds': type !== '' && type !== 'full'
+    className={classNames('promo-element', {
+      'promo-full': type === 'Full',
+      'promo-accent': type.includes('Accent'),
+      'promo-square': type.includes('Square'),
+      'promo-dark': type.includes('Dark'),
+      'promo-element-starbirds': type !== '' && type !== 'Full'
     })}
   >
     <div className='container'>
       <div className='promo-element-content'>
-        <Eyebrow text={eyebrow} inverted={type.includes('accent')} />
+        <Eyebrow text={eyebrow} inverted={type.includes('Accent')} />
         <h3 className='promo-element-heading'>{heading}</h3>
         <p className='promo-element-text'>{text}</p>
         <div className='cta-wrapper'>{children}</div>
@@ -22,11 +26,11 @@ const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
             className='image-block'
             alt={image.alt}
             src={image.src}
-            ratio={type.includes('square') ? '1:1' : 'auto'}
+            ratio={type.includes('Square') ? '1:1' : 'auto'}
           />
         )}
       </div>
-      {type.includes('accent') && !type.includes('dark') && (
+      {type.includes('Accent') && !type.includes('Dark') && (
         <div className='cta-wrapper'>{children}</div>
       )}
     </div>

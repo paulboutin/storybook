@@ -1,12 +1,12 @@
 .promo-element {
   overflow: hidden;
 
-  &.accent {
+  &.promo-accent {
     background-color: color('green');
     align-items: stretch;
     text-align: center;
 
-    &:not(.dark) {
+    &:not(.promo-dark) {
       padding-top: spacing(32);
       padding-bottom: spacing(32);
 
@@ -23,7 +23,7 @@
       }
     }
 
-    &.dark {
+    &.promo-dark {
       background-color: color('green-dark');
 
       .promo-element-image-wrapper {
@@ -167,7 +167,7 @@
     }
   }
 
-  &:not(.accent) {
+  &:not(.promo-accent) {
     padding: spacing(16);
 
     .cta-wrapper .app-cta {
@@ -175,8 +175,8 @@
     }
   }
 
-  &.full,
-  &.accent.dark {
+  &.promo-full,
+  &.promo-accent.promo-dark {
     .promo-element-image-wrapper {
       display: flex;
       justify-content: center;

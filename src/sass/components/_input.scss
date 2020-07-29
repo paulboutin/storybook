@@ -3,7 +3,7 @@
 
   &.input-active {
     .input-label {
-      background: color('white');
+      background-color: color('white');
       transform: translate(spacing(12), percentage(1 / 3)) scale(0.75);
     }
 
@@ -104,7 +104,7 @@
   }
 
   .input-textarea-control {
-    background: color('white');
+    background-color: color('white');
     position: absolute;
     bottom: spacing(16);
     right: spacing(16);

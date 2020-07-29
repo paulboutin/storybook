@@ -45,7 +45,7 @@ export const ColumnCardsStory = () => {
           </Card>
         ))}
       </ColumnCards>
-      <ColumnCards heading={heading} bgColor='grey'>
+      <ColumnCards heading={heading} inverted>
         {items.map((item, index) => (
           <Card
             key={index}
