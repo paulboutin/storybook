@@ -24,6 +24,11 @@
   $min-screen-width: 480;
   $max-screen-width: 1440;
 
+  --min-font-size: #{$min-font-size};
+  --max-font-size: #{$max-font-size};
+  --min-screen-width: #{$min-screen-width};
+  --max-screen-width: #{$max-screen-width};
+
   $font-factor: $max-font-size - $min-font-size;
   $screen-factor: $max-screen-width - $min-screen-width;
 

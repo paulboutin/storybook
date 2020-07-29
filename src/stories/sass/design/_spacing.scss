@@ -37,22 +37,32 @@
 }
 
 .sb\:spacing-pixel-section {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-}
+  margin-bottom: spacing(48);
 
-.sb\:spacing-block--pixel {
-  display: inline-flex;
-  justify-content: space-between;
-}
+  .input-block {
+    margin-bottom: spacing(8);
+  }
 
-.sb\:spacing-pixel-size:after {
-  content: ':';
-  margin-right: spacing(8);
-}
+  @include screen('sm') {
+    flex-direction: row;
 
-.sb\:spacing-pixel-value:after {
-  content: 'px';
+    .input-block {
+      margin-bottom: 0;
+      margin-right: spacing(8);
+    }
+
+    p {
+      width: 100%;
+      margin-top: spacing(8);
+
+      &:before {
+        content: 'Result: ';
+      }
+    }
+  }
 }
 
 @each $name, $size in $spacings {

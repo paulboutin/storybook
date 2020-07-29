@@ -1,5 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
+import Input from '../../components/base/Input'
+import Button from '../../components/base/Button'
 import { useEffect } from '@storybook/client-api'
 
 const SpacingBlock = ({ size }) => (
@@ -21,33 +23,67 @@ const MarginBlock = ({ size }) => (
   </p>
 )
 
-const PixelValueBlock = ({ size }) => (
-  <div className='sb:spacing-block--pixel'>
-    <div className='sb:spacing-pixel-size'>{size}</div>
-    <div className='sb:spacing-pixel-value' />
-  </div>
-)
-
-const updatePixelValues = () => {
-  const { fontSize } = getComputedStyle(document.body)
-  const ratio = parseFloat(fontSize) / 16
-
-  document.querySelectorAll('.sb\\:spacing-block--pixel').forEach(element => {
-    const value = parseInt(element.children[0].textContent) * ratio
-    element.children[1].textContent = value.toFixed(0)
-  })
+const getCSSVariables = properties => {
+  const style = getComputedStyle(document.documentElement)
+  return properties.map(property => Number(style.getPropertyValue(property)))
 }
+
+const clamp = (n, min, max) => (n <= min ? min : n >= max ? max : n)
 
 export const Spacing = () => {
   useEffect(() => {
-    window.removeEventListener('resize', updatePixelValues)
-    window.addEventListener('resize', updatePixelValues)
-  })
+    const [
+      minFontSize,
+      maxFontSize,
+      minScreenWidth,
+      maxScreenWidth
+    ] = getCSSVariables([
+      '--min-font-size',
+      '--max-font-size',
+      '--min-screen-width',
+      '--max-screen-width'
+    ])
 
-  setTimeout(updatePixelValues, 0)
+    const fontFactor = maxFontSize - minFontSize
+    const screenFactor = maxScreenWidth - minScreenWidth
+
+    const unitInput = document.getElementById('sb:spacing-unit-input')
+    const widthInput = document.getElementById('sb:spacing-width-input')
+    const button = document.getElementById('sb:spacing-calc-button')
+    const resultText = document.getElementById('sb:spacing-calc-result')
+
+    button.addEventListener('click', () => {
+      resultText.classList.remove('invisible')
+
+      const spacingUnit = parseInt(unitInput.value)
+      const viewportWidth = parseInt(widthInput.value)
+
+      if (Number.isNaN(spacingUnit) || Number.isNaN(viewportWidth)) {
+        resultText.textContent = 'Invalid input'
+        return
+      }
+
+      const fontSize = clamp(
+        minFontSize +
+          fontFactor * ((viewportWidth - minScreenWidth) / screenFactor),
+        minFontSize,
+        maxFontSize
+      )
+      const result = Math.round((fontSize / 16) * spacingUnit)
+      resultText.textContent = `${result}px`
+    })
+  })
 
   return (
     <div>
+      <h2 className='sb:spacing-heading'>Pixel value calculator</h2>
+      <div className='sb:spacing-pixel-section'>
+        <Input id='sb:spacing-unit-input' label='Spacing unit' required />
+        <Input id='sb:spacing-width-input' label='Viewport width' required />
+        <Button id='sb:spacing-calc-button' type='primary' label='Calculate' />
+        <p id='sb:spacing-calc-result' className='invisible' />
+      </div>
+
       <h2 className='sb:spacing-heading'>Spacing scale</h2>
       <div className='sb:spacing-block-section'>
         <SpacingBlock size={4} />
@@ -88,20 +124,6 @@ export const Spacing = () => {
         <MarginBlock size={64} />
         <MarginBlock size={96} />
         <MarginBlock size={160} />
-      </div>
-
-      <h2 className='sb:spacing-heading'>Pixel values</h2>
-      <div className='sb:spacing-pixel-section'>
-        <PixelValueBlock size={4} />
-        <PixelValueBlock size={8} />
-        <PixelValueBlock size={12} />
-        <PixelValueBlock size={16} />
-        <PixelValueBlock size={24} />
-        <PixelValueBlock size={32} />
-        <PixelValueBlock size={48} />
-        <PixelValueBlock size={64} />
-        <PixelValueBlock size={96} />
-        <PixelValueBlock size={160} />
       </div>
     </div>
   )
