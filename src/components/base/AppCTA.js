@@ -1,14 +1,12 @@
 import React from 'react'
-import AppStore from '../../svg/appstore.svg'
-import GooglePlay from '../../svg/googleplay.svg'
 
 const AppCTA = () => (
   <div className='app-cta'>
-    <a href='#'>
-      <AppStore />
+    <a href='#' className='app-cta-download'>
+      <img src='/img/app-store.svg' alt='Download on the App Store' />
     </a>
-    <a href='#'>
-      <GooglePlay />
+    <a href='#' className='app-cta-download'>
+      <img src='/img/google-play.svg' alt='Get it on Google Play' />
     </a>
   </div>
 )

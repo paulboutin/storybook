@@ -9,34 +9,10 @@
     &:not(.promo-dark) {
       padding-top: spacing(32);
       padding-bottom: spacing(32);
-
-      .promo-element-image-wrapper {
-        svg {
-          @include screen('sm') {
-            transform: scale(1.25);
-          }
-
-          @include screen('lg') {
-            transform: scale(1);
-          }
-        }
-      }
     }
 
     &.promo-dark {
       background-color: color('green-dark');
-
-      .promo-element-image-wrapper {
-        svg {
-          top: unset;
-          bottom: spacing(32);
-
-          @include screen('sm') {
-            right: 2rem;
-            top: 0;
-          }
-        }
-      }
 
       .promo-element-content {
         margin-top: spacing(64);
@@ -100,14 +76,6 @@
   .promo-element-image-wrapper {
     position: relative;
     width: 100%;
-
-    svg {
-      position: absolute;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      transform: scale(1.5);
-    }
 
     .image-block {
       z-index: 1;
