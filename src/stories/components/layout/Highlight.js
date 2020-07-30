@@ -25,17 +25,17 @@ export const HighlightStory = () => {
   return (
     <div>
       <Highlight
-        contentPosition='Right'
+        position='right'
         type={type}
         overlap={overlap}
-        color='Primary'
+        color='primary'
         images={images}
       />
       <Highlight
-        contentPosition='Left'
+        position='left'
         type={type}
         overlap={overlap}
-        color='Secondary'
+        color='secondary'
         images={images}
       />
     </div>

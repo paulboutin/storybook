@@ -1,0 +1,52 @@
+.image-overlap {
+  @include fixed-ratio(1, 1);
+
+  .image-overlap-square {
+    position: absolute;
+
+    &:nth-child(1) {
+      width: 60%;
+      height: 60%;
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      width: 80%;
+      height: 80%;
+      bottom: 0;
+      border: 2px solid color('white');
+    }
+  }
+}
+
+.image-overlap-right {
+  :nth-child(1) {
+    left: 0;
+  }
+
+  :nth-child(2) {
+    right: 0;
+  }
+}
+
+.image-overlap-left {
+  :nth-child(1) {
+    right: 0;
+  }
+
+  :nth-child(2) {
+    left: 0;
+  }
+}
+
+.image-overlap-primary {
+  :nth-child(1) {
+    background-color: color('green');
+  }
+}
+
+.image-overlap-secondary {
+  :nth-child(1) {
+    background-color: color('yellow');
+  }
+}
