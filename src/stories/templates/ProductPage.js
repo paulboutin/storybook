@@ -44,7 +44,7 @@ export const ProductPage = () => (
     />
 
     <Highlight
-      contentPosition='Right'
+      position='right'
       type='Overlap'
       overlap='Image'
       images={[
@@ -54,7 +54,7 @@ export const ProductPage = () => (
     />
 
     <Highlight
-      contentPosition='Left'
+      position='left'
       type='Overlap'
       overlap='Image'
       images={[
