@@ -112,6 +112,11 @@ describe('Layout Components', () => {
       title: 'infographic',
       component: 'infographic-story',
       devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'pull-quote',
+      component: 'pull-quote-story',
+      devices: ['mobile']
     }
   ]
   buildSnapshotTests('components-layout')(stories)
