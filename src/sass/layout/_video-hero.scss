@@ -1,0 +1,46 @@
+.video-hero {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+
+  video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  .video-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    color: color('white');
+    text-align: center;
+    text-shadow: color('grey') 0 0 4px;
+
+    @include screen('sm') {
+      padding: 0 spacing(64);
+    }
+
+    @include screen('md') {
+      padding: 0 spacing(96);
+    }
+
+    @include screen('lg') {
+      padding: 0 spacing(160);
+    }
+  }
+
+  .video-hero-text {
+    margin-top: spacing(16);
+    margin-bottom: spacing(32);
+  }
+
+  .button {
+    align-self: center;
+    padding-left: spacing(48);
+    padding-right: spacing(48);
+  }
+}

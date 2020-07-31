@@ -117,6 +117,10 @@ describe('Layout Components', () => {
       title: 'pull-quote',
       component: 'pull-quote-story',
       devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'video-hero',
+      component: 'video-hero-story'
     }
   ]
   buildSnapshotTests('components-layout')(stories)
