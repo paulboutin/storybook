@@ -28,7 +28,7 @@ const getCSSVariables = properties => {
   return properties.map(property => Number(style.getPropertyValue(property)))
 }
 
-const clamp = (n, min, max) => (n <= min ? min : n >= max ? max : n)
+const clamp = (n, min, max) => (n < min ? min : n > max ? max : n)
 
 export const Spacing = () => {
   useEffect(() => {
@@ -63,12 +63,13 @@ export const Spacing = () => {
         return
       }
 
+      /* prettier-ignore */
       const fontSize = clamp(
-        minFontSize +
-          fontFactor * ((viewportWidth - minScreenWidth) / screenFactor),
+        minFontSize + fontFactor * ((viewportWidth - minScreenWidth) / screenFactor),
         minFontSize,
         maxFontSize
       )
+
       const result = Math.round((fontSize / 16) * spacingUnit)
       resultText.textContent = `${result}px`
     })
