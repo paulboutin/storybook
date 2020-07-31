@@ -3,12 +3,20 @@
   width: 100vw;
   height: 100vh;
 
-  video {
+  video,
+  .video-hero-overlay {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
     z-index: -1;
+  }
+
+  video {
+    object-fit: cover;
+  }
+
+  .video-hero-overlay {
+    background-color: rgba(color('black'), 0.5);
   }
 
   .video-hero-content {
@@ -18,7 +26,6 @@
     height: 100%;
     color: color('white');
     text-align: center;
-    text-shadow: color('grey') 0 0 4px;
 
     @include screen('sm') {
       padding: 0 spacing(64);

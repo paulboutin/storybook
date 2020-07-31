@@ -5,6 +5,7 @@ const VideoHero = ({ video, poster }) => {
   return (
     <div className='video-hero'>
       <video src={video} poster={poster} autoPlay loop muted playsInline />
+      <div className='video-hero-overlay' />
 
       <div className='video-hero-content container'>
         <h1>The first bank account designed for climate action</h1>
