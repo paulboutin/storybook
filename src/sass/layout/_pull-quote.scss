@@ -68,7 +68,7 @@
     }
   }
 
-  .fa-quote-left {
+  .icon-help {
     @include font-size('h1');
     display: block;
     color: color('green');
@@ -120,6 +120,10 @@
 
     @include screen('lg') {
       bottom: spacing(32);
+    }
+
+    .icon {
+      @include font-size('lg');
     }
   }
 

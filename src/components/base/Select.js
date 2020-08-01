@@ -1,5 +1,4 @@
 import React from 'react'
-import Chevron from '../../svg/chevron.svg'
 import classNames from 'classnames'
 
 const Select = ({
@@ -27,7 +26,7 @@ const Select = ({
 
     <div className='select-wrapper'>
       <span className='select-value'>{label}</span>
-      <Chevron className='select-icon' />
+      <i className='icon icon-down' />
     </div>
 
     <ul className='select-options'>
@@ -55,7 +54,7 @@ const Select = ({
 
     {error && (
       <p className='select-error-text'>
-        <i className='fa fa-exclamation-circle' />
+        <i className='icon icon-help' />
         {error}
       </p>
     )}

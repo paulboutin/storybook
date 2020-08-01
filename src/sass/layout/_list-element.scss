@@ -80,9 +80,10 @@
     position: relative;
     margin-left: spacing(32);
 
-    &:before {
+    .icon {
       position: absolute;
       color: color('green-light');
+      margin-top: spacing(4);
       margin-left: -#{spacing(32)};
     }
 

@@ -42,7 +42,7 @@ describe('Select component', () => {
 
     // Assert
     await waitFor(() => {
-      expect(firstOption).toHaveClass('select-option-selected')
+      expect(firstOption.querySelector('.icon')).toBeInTheDocument()
       expect(component).not.toHaveClass('select-open')
       expect(value).toHaveTextContent(firstOption.textContent)
     })
@@ -67,7 +67,7 @@ describe('Select component', () => {
 
     // Assert
     await waitFor(() => {
-      expect(firstOption).toHaveClass('select-option-selected')
+      expect(firstOption.querySelector('.icon')).toBeInTheDocument()
       expect(component).not.toHaveClass('select-open')
       expect(value).toHaveTextContent(firstOption.textContent)
     })

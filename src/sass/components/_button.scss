@@ -7,7 +7,8 @@
   transition-property: color, background-color, border-color;
   transition-duration: 0.3s;
 
-  .fa {
+  .icon {
+    vertical-align: middle;
     margin-left: spacing(8);
   }
 
@@ -25,7 +26,7 @@
   width: 48px;
   padding: 0;
 
-  .fa {
+  .icon {
     margin-left: 0;
   }
 }

@@ -28,7 +28,8 @@
   display: inline-flex;
   align-items: center;
 
-  svg {
+  .icon {
+    font-size: 0.625rem;
     margin-left: spacing(8);
   }
 }

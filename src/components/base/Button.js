@@ -14,7 +14,7 @@ const Button = ({ type, label, icon, className, ...props }) => (
   >
     {label && <span>{label}</span>}
 
-    {icon && <span className={classNames('fa', `fa-${icon}`)} />}
+    {icon && <span className={classNames(`icon icon-${icon}`)} />}
   </button>
 )
 

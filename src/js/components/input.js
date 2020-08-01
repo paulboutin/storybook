@@ -7,7 +7,8 @@ const toggleActive = el => event => {
 const passwordToggle = el => event => {
   const isVisible = el.type === 'text'
   el.type = isVisible ? 'password' : 'text'
-  event.currentTarget.classList.toggle('input-visible')
+  event.currentTarget.classList.toggle('icon-show')
+  event.currentTarget.classList.toggle('icon-hide')
 }
 
 const textareaCount = el => event => {

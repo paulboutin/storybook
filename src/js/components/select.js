@@ -5,7 +5,6 @@ export default () => {
     const input = select.querySelector('.select-input')
     const value = select.querySelector('.select-value')
     const placeholder = select.querySelector('.select-placeholder')
-    const options = select.querySelectorAll('.select-option')
 
     placeholder.textContent = value.textContent
 
@@ -19,8 +18,12 @@ export default () => {
         input.value = e.target.dataset.value
         value.textContent = e.target.textContent
 
-        options.forEach(opt => opt.classList.remove('select-option-selected'))
-        e.target.classList.add('select-option-selected')
+        const oldIcon = select.querySelector('.select-option .icon')
+        if (oldIcon) oldIcon.remove()
+
+        const newIcon = document.createElement('i')
+        newIcon.className = 'icon icon-check-solid'
+        e.target.appendChild(newIcon)
       }
 
       select.focus()

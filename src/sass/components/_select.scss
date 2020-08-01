@@ -21,7 +21,7 @@
     padding: spacing(12);
 
     &:hover {
-      .select-icon {
+      .icon-down {
         color: color('green-dark');
       }
     }
@@ -31,7 +31,9 @@
     margin-right: spacing(8);
   }
 
-  .select-icon {
+  .icon-down {
+    @include font-size('lg');
+    line-height: 1;
     color: color('green');
   }
 
@@ -52,6 +54,8 @@
 
   .select-option {
     position: relative;
+    display: flex;
+    align-items: center;
     color: color('grey-70');
     padding: spacing(8) spacing(12);
     background-color: color('white');
@@ -74,19 +78,12 @@
       outline: none;
       color: color('green-dark');
     }
-  }
 
-  .select-option-selected {
-    display: flex;
-    align-items: center;
-
-    &:after {
-      @include font-family('font-awesome');
-      content: '\f00c';
+    .icon {
+      @include font-size('xs');
       position: absolute;
       right: spacing(12);
       color: color('green-light');
-      font-size: 12px;
     }
   }
 
@@ -122,7 +119,7 @@
     visibility: hidden;
   }
 
-  .select-icon {
+  .icon-down {
     transform: rotate(180deg);
   }
 
@@ -188,12 +185,12 @@
   color: color('error');
   border-color: color('error');
 
-  .select-icon {
+  .icon-down {
     color: color('error');
   }
 
   .select-wrapper:hover {
-    .select-icon {
+    .icon-down {
       color: color('error-dark');
     }
   }
@@ -205,7 +202,7 @@
     pointer-events: none;
     margin-top: spacing(4);
 
-    .fa {
+    .icon {
       margin-right: spacing(4);
     }
   }
@@ -233,7 +230,7 @@
     }
   }
 
-  .select-icon {
+  .icon-down {
     color: color('grey-10') !important;
   }
 

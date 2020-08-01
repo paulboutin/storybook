@@ -17,8 +17,8 @@
     transition-duration: 0.3s;
   }
 
-  .fa {
-    @extend .fa-plus;
+  .icon {
+    @extend .icon-plus;
     color: color('green');
   }
 
@@ -28,8 +28,8 @@
       height: auto;
     }
 
-    .fa {
-      @extend .fa-minus;
+    .icon {
+      @extend .icon-minus;
     }
   }
 }

@@ -12,7 +12,7 @@ const PullQuote = ({ image }) => (
       <ImageOverlap images={[image]} position='right' color='primary' />
 
       <div className='pull-quote-middle-wrapper'>
-        <i className='fa fa-quote-left' />
+        <i className='icon icon-help' />
 
         <div className='pull-quote-inner-wrapper'>
           <blockquote>
@@ -26,9 +26,9 @@ const PullQuote = ({ image }) => (
           </p>
 
           <div className='pull-quote-buttons'>
-            <Button type='secondary' icon='angle-left' />
+            <Button type='secondary' icon='left' />
             <span className='pull-quote-pagination'>1 of 8</span>
-            <Button type='secondary' icon='angle-right' />
+            <Button type='secondary' icon='right' />
           </div>
         </div>
       </div>

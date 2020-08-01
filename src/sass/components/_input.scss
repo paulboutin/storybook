@@ -31,12 +31,6 @@
 
     .input-help {
       color: color('error-dark');
-
-      &:before {
-        content: '\f05a';
-        margin-right: spacing(8);
-        @include font-family('font-awesome');
-      }
     }
   }
 
@@ -84,19 +78,11 @@
   }
 
   .input-password-control {
+    @include font-size('lg');
     position: absolute;
     cursor: pointer;
-    top: spacing(16);
-    right: spacing(16);
-
-    &:before {
-      content: '\f06e';
-      @include font-family('font-awesome');
-    }
-
-    &.input-visible:before {
-      content: '\f070';
-    }
+    top: spacing(12);
+    right: spacing(12);
 
     & + .input-control {
       padding-right: spacing(48);
@@ -117,5 +103,9 @@
     margin-top: spacing(4);
     color: color('grey-70');
     @include font-size('xs');
+
+    .icon {
+      margin-right: spacing(4);
+    }
   }
 }

@@ -14,7 +14,7 @@ const Accordion = ({ title, children, expanded, className }) => (
       <p className='accordion-content'>{children}</p>
     </div>
 
-    <i className='fa' />
+    <i className='icon' />
   </div>
 )
 

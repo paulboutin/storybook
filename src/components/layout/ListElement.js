@@ -3,10 +3,11 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
 
-const ListElementItems = ({ items, listClass = 'fa-check-circle' }) => (
+const ListElementItems = ({ items, icon = 'check-circle' }) => (
   <ul className='list-element-items'>
     {items.map((item, index) => (
-      <li key={index} className={classNames('list-element-item fa', listClass)}>
+      <li key={index} className='list-element-item'>
+        <i className={`icon icon-${icon}`} />
         {item}
       </li>
     ))}

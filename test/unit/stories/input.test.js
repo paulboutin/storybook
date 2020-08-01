@@ -40,7 +40,8 @@ describe('Input component', () => {
 
       // Assert
       expect(control.type).toBe('password')
-      expect(pwdControl).not.toHaveClass('input-visible')
+      expect(pwdControl).toHaveClass('icon-show')
+      expect(pwdControl).not.toHaveClass('icon-hide')
 
       // Act
       pwdControl.click()
@@ -48,7 +49,8 @@ describe('Input component', () => {
       // Assert
       await waitFor(() => {
         expect(control.type).toBe('text')
-        expect(pwdControl).toHaveClass('input-visible')
+        expect(pwdControl).toHaveClass('icon-hide')
+        expect(pwdControl).not.toHaveClass('icon-show')
       })
 
       // Act
@@ -57,7 +59,8 @@ describe('Input component', () => {
       // Assert
       await waitFor(() => {
         expect(control.type).toBe('password')
-        expect(pwdControl).not.toHaveClass('input-visible')
+        expect(pwdControl).toHaveClass('icon-show')
+        expect(pwdControl).not.toHaveClass('icon-hide')
       })
     })
   })
