@@ -14,11 +14,16 @@ export default () => {
       select.classList.toggle('select-open')
       select.classList.toggle('select-keyboard', e.type === 'keypress')
 
-      if (e.target.classList.contains('select-option')) {
+      if (e.target.classList.contains('select-item')) {
+        if (e.target.tagName === 'A') {
+          window.top.location.href = e.target.href
+          return
+        }
+
         input.value = e.target.dataset.value
         value.textContent = e.target.textContent
 
-        const oldIcon = select.querySelector('.select-option .icon')
+        const oldIcon = select.querySelector('.select-item .icon')
         if (oldIcon) oldIcon.remove()
 
         const newIcon = document.createElement('i')

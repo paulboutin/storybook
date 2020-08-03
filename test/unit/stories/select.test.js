@@ -7,17 +7,14 @@ import fn from '../../../src/js/components/select'
 
 describe('Select component', () => {
   let component
-  let options
+  let items
   let placeholder
   let value
 
   beforeEach(() => {
     // Arrange
-    component = mount(
-      <Select label='Label' options={['Option 1', 'Option 2']} />,
-      fn
-    )
-    options = component.querySelector('.select-options')
+    component = mount(<Select label='Label' items={['Item 1', 'Item 2']} />, fn)
+    items = component.querySelector('.select-items')
     placeholder = component.querySelector('.select-placeholder')
     value = component.querySelector('.select-value')
   })
@@ -36,15 +33,15 @@ describe('Select component', () => {
     })
 
     // Act
-    const firstOption = options.childNodes[1]
+    const firstItem = items.childNodes[1]
 
-    firstOption.click()
+    firstItem.click()
 
     // Assert
     await waitFor(() => {
-      expect(firstOption.querySelector('.icon')).toBeInTheDocument()
+      expect(firstItem.querySelector('.icon')).toBeInTheDocument()
       expect(component).not.toHaveClass('select-open')
-      expect(value).toHaveTextContent(firstOption.textContent)
+      expect(value).toHaveTextContent(firstItem.textContent)
     })
   })
 
@@ -62,14 +59,14 @@ describe('Select component', () => {
     })
 
     // Act
-    const firstOption = options.childNodes[1]
-    fireEvent.keyPress(firstOption, { key: 'Enter', code: 'Enter' })
+    const firstItem = items.childNodes[1]
+    fireEvent.keyPress(firstItem, { key: 'Enter', code: 'Enter' })
 
     // Assert
     await waitFor(() => {
-      expect(firstOption.querySelector('.icon')).toBeInTheDocument()
+      expect(firstItem.querySelector('.icon')).toBeInTheDocument()
       expect(component).not.toHaveClass('select-open')
-      expect(value).toHaveTextContent(firstOption.textContent)
+      expect(value).toHaveTextContent(firstItem.textContent)
     })
   })
 

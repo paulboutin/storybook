@@ -2,8 +2,9 @@ import React from 'react'
 import classNames from 'classnames'
 
 const Select = ({
+  type,
   label,
-  options,
+  items,
   inline,
   disabled,
   helper,
@@ -29,22 +30,25 @@ const Select = ({
       <i className='icon icon-down' />
     </div>
 
-    <ul className='select-options'>
+    <ul className='select-items'>
       <li className='select-placeholder' />
 
-      {options.map((option, idx) => {
-        const value = option
+      {items.map((item, idx) => {
+        const value = item
           .replace(/[^\w\s]/g, '')
           .replace(/ /g, '-')
           .toLowerCase()
         return (
-          <li
-            key={idx}
-            className='select-option'
-            tabIndex='0'
-            data-value={value}
-          >
-            {option}
+          <li key={idx} data-value={value}>
+            {type === 'links' ? (
+              <a className='select-item' href='/'>
+                {item}
+              </a>
+            ) : (
+              <span className='select-item' tabIndex='0'>
+                {item}
+              </span>
+            )}
           </li>
         )
       })}

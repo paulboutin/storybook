@@ -37,7 +37,7 @@
     color: color('green');
   }
 
-  .select-options {
+  .select-items {
     @include border-radius('base');
     @include box-shadow('base');
     position: absolute;
@@ -52,7 +52,7 @@
     padding: spacing(12);
   }
 
-  .select-option {
+  .select-item {
     position: relative;
     display: flex;
     align-items: center;
@@ -123,7 +123,7 @@
     transform: rotate(180deg);
   }
 
-  .select-options {
+  .select-items {
     display: block;
   }
 }
@@ -136,7 +136,7 @@
     }
   }
 
-  .select-option:focus {
+  .select-item:focus {
     outline: 2px solid color('blue');
     outline-offset: -6px;
   }
@@ -162,22 +162,22 @@
     visibility: visible;
   }
 
-  .select-options {
+  .select-items {
     top: unset;
     width: auto;
+
+    li:nth-child(2) .select-item:before {
+      border-top: none;
+    }
   }
 
   .select-placeholder {
     display: none;
   }
 
-  .select-option {
+  .select-item {
     white-space: nowrap;
     padding-right: calc(#{spacing(12)} + 24px);
-
-    &:nth-child(2):before {
-      border-top: none;
-    }
   }
 }
 
