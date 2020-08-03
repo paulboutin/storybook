@@ -1,4 +1,4 @@
-FROM buildkite/puppeteer:latest
+FROM buildkite/puppeteer:v3.0.4
 
 WORKDIR /app
 
