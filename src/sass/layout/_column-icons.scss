@@ -29,7 +29,6 @@
   }
 
   .column-icon-circle {
-    @include box-shadow('sm');
     width: 150px;
     border-radius: 50%;
     align-self: center;
