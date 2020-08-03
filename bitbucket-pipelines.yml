@@ -21,15 +21,6 @@ definitions:
         artifacts:
           - test/**/__diff_output__/*.png
 
-    - step: &publish-dsm
-        name: Publish Invision DSM
-        image: node:12.18-alpine
-        caches:
-          - node
-        script:
-          - npm install
-          - npm run dsm:publish
-
 pipelines:
   default:
     - parallel: &run-tests
@@ -39,4 +30,3 @@ pipelines:
   branches:
     master:
       - parallel: *run-tests
-      # - step: *publish-dsm

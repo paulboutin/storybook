@@ -1,6 +1,0 @@
-{
-  "dsmHost": "botw.invisionapp.com",
-  "organization": "bank-of-the-west",
-  "outputDir": ".dsm",
-  "storyPath": "src/stories/*.stories.js"
-}

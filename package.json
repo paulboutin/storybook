@@ -11,8 +11,6 @@
     "build:zip:styles": "cd src/sass && zip -r -X ../../public/styles.zip .",
     "build:zip:scripts": "cd src/js && zip -r -X ../../public/scripts.zip .",
     "build:storybook": "build-storybook -s public",
-    "dsm:publish": "dsm-storybook --auth-token ${DSM_TOKEN} publish",
-    "dsm:preview": "dsm-storybook --auth-token ${DSM_TOKEN:-preview} preview -s public --quiet",
     "lint": "pretty-quick",
     "test": "run-s test:unit test:snapshot",
     "test:unit": "jest -c test/unit/jest.config.js --passWithNoTests",
@@ -21,7 +19,6 @@
     "test:snapshot:update": "cross-env UPDATE_SNAPSHOT=true npm run test:snapshot"
   },
   "dependencies": {
-    "@invisionapp/dsm-storybook": "0.0.129",
     "@storybook/addon-backgrounds": "5.3.19",
     "@storybook/addon-knobs": "5.3.19",
     "@storybook/addon-options": "5.3.19",
