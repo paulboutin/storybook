@@ -20,7 +20,7 @@ const Input = ({ id, value, error, help, label, ...attrs }) => (
     <input id={id} className='input-control' defaultValue={value} {...attrs} />
     {help && (
       <p className='input-help'>
-        {error && <i className='icon icon-help' />}
+        {error && <i className='icon icon-error' />}
         {error || help}
       </p>
     )}

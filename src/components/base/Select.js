@@ -27,7 +27,7 @@ const Select = ({
 
     <div className='select-wrapper'>
       <span className='select-value'>{label}</span>
-      <i className='icon icon-down' />
+      <i className='select-arrow icon icon-chevron-down' />
     </div>
 
     <ul className='select-items'>
@@ -58,7 +58,7 @@ const Select = ({
 
     {error && (
       <p className='select-error-text'>
-        <i className='icon icon-help' />
+        <i className='icon icon-error' />
         {error}
       </p>
     )}

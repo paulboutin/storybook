@@ -6,8 +6,7 @@
   font-display: block;
 }
 
-[class^='icon-'],
-[class*=' icon-'] {
+.icon {
   /* Use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
   speak: never;
@@ -23,89 +22,95 @@
 }
 
 .icon-long-arrow-right:before {
-  content: '\e900';
+  content: '\e91e';
 }
 .icon-arrow-down:before {
-  content: '\e901';
+  content: '\e900';
 }
 .icon-arrow-left:before {
-  content: '\e902';
+  content: '\e901';
 }
 .icon-arrow-right:before {
-  content: '\e903';
+  content: '\e902';
 }
 .icon-arrow-up:before {
-  content: '\e904';
+  content: '\e903';
 }
 .icon-check:before {
-  content: '\e905';
+  content: '\e904';
 }
 .icon-check-circle:before {
-  content: '\e906';
+  content: '\e905';
 }
 .icon-check-solid:before {
+  content: '\e906';
+}
+.icon-chevron-down:before {
   content: '\e907';
 }
-.icon-close:before {
+.icon-chevron-left:before {
   content: '\e908';
 }
-.icon-down:before {
+.icon-chevron-right:before {
   content: '\e909';
 }
-.icon-facebook:before {
+.icon-chevron-up:before {
   content: '\e90a';
 }
-.icon-heart:before {
+.icon-close:before {
   content: '\e90b';
 }
-.icon-help:before {
+.icon-error:before {
   content: '\e90c';
 }
-.icon-hide:before {
+.icon-facebook:before {
   content: '\e90d';
 }
-.icon-history:before {
+.icon-heart:before {
   content: '\e90e';
 }
-.icon-instagram:before {
+.icon-help:before {
   content: '\e90f';
 }
-.icon-left:before {
+.icon-hide:before {
   content: '\e910';
 }
-.icon-linkedin:before {
+.icon-history:before {
   content: '\e911';
 }
-.icon-lock:before {
+.icon-instagram:before {
   content: '\e912';
 }
-.icon-minus:before {
+.icon-linkedin:before {
   content: '\e913';
 }
-.icon-plus:before {
+.icon-lock:before {
   content: '\e914';
 }
-.icon-right:before {
+.icon-minus:before {
   content: '\e915';
 }
-.icon-search:before {
+.icon-plus:before {
   content: '\e916';
 }
-.icon-selector:before {
+.icon-quote:before {
   content: '\e917';
 }
-.icon-settings:before {
+.icon-search:before {
   content: '\e918';
 }
-.icon-show:before {
+.icon-selector:before {
   content: '\e919';
 }
-.icon-twitter:before {
+.icon-settings:before {
   content: '\e91a';
 }
-.icon-up:before {
+.icon-show:before {
   content: '\e91b';
 }
-.icon-youtube:before {
+.icon-twitter:before {
   content: '\e91c';
+}
+.icon-youtube:before {
+  content: '\e91d';
 }

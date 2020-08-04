@@ -68,8 +68,8 @@
     }
   }
 
-  .icon-help {
-    @include font-size('h1');
+  .icon-quote {
+    @include font-size('h2');
     display: block;
     color: color('green');
     margin: spacing(32) 0;
