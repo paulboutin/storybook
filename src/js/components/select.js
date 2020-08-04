@@ -1,5 +1,5 @@
 export default () => {
-  const selects = Array.from(document.querySelectorAll('.select'))
+  const selects = document.querySelectorAll('.select')
 
   selects.forEach(select => {
     const input = select.querySelector('.select-input')

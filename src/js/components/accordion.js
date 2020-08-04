@@ -1,5 +1,5 @@
 export default () => {
-  const accordions = Array.from(document.querySelectorAll('.accordion'))
+  const accordions = document.querySelectorAll('.accordion')
 
   accordions.forEach(accordion => {
     accordion.addEventListener('click', () => {

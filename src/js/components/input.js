@@ -16,7 +16,7 @@ const textareaCount = el => event => {
 }
 
 export default () => {
-  const inputs = Array.from(document.querySelectorAll('.input-block'))
+  const inputs = document.querySelectorAll('.input-block')
 
   inputs.forEach(input => {
     const control = input.querySelector('.input-control')
