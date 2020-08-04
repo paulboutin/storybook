@@ -80,10 +80,10 @@
     }
 
     .icon {
-      @include font-size('xs');
       position: absolute;
       right: spacing(12);
       color: color('green-light');
+      font-size: 0.5rem;
     }
   }
 

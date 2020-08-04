@@ -33,7 +33,7 @@ describe('Select component', () => {
     })
 
     // Act
-    const firstItem = items.childNodes[1]
+    const firstItem = items.querySelector('.select-item')
 
     firstItem.click()
 
@@ -59,7 +59,7 @@ describe('Select component', () => {
     })
 
     // Act
-    const firstItem = items.childNodes[1]
+    const firstItem = items.querySelector('.select-item')
     fireEvent.keyPress(firstItem, { key: 'Enter', code: 'Enter' })
 
     // Assert
