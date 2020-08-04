@@ -1,0 +1,51 @@
+.dropdown-hero {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+
+  .dropdown-hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include screen('sm') {
+      padding: 0 spacing(24);
+    }
+
+    @include screen('md') {
+      padding: 0 spacing(32);
+    }
+  }
+
+  .dropdown-hero-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
+  }
+
+  .dropdown-hero-title {
+    color: color('white');
+    text-align: center;
+  }
+
+  .dropdown-hero-select {
+    position: absolute;
+    top: 100%;
+    width: spacing(160) + spacing(64);
+    margin-top: spacing(24);
+
+    @include screen('sm') {
+      position: static;
+    }
+
+    @include screen('md') {
+      margin-top: spacing(32);
+    }
+  }
+}

@@ -121,6 +121,10 @@ describe('Layout Components', () => {
     {
       title: 'video-hero',
       component: 'video-hero-story'
+    },
+    {
+      title: 'dropdown-hero',
+      component: 'dropdown-hero-story'
     }
   ]
   buildSnapshotTests('components-layout')(stories)

@@ -5,6 +5,7 @@ export default {
 export { ClosingCTAStory } from './layout/ClosingCTA'
 export { ColumnCardsStory } from './layout/ColumnCards'
 export { ColumnIconsStory } from './layout/ColumnIcons'
+export { DropdownHeroStory } from './layout/DropdownHero'
 export { FAQ } from './layout/FAQ'
 export { Form } from './layout/Form'
 export { HeroStory } from './layout/Hero'
