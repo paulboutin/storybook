@@ -41,7 +41,7 @@
     margin-top: spacing(24);
 
     @include screen('sm') {
-      position: static;
+      position: relative;
     }
 
     @include screen('md') {
