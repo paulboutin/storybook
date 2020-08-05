@@ -86,21 +86,27 @@
   }
 
   .pull-quote-author {
-    @include font-size('base');
-    margin-top: spacing(24);
-    margin-bottom: spacing(4);
+    padding-top: spacing(24);
 
     @include screen('sm') {
-      margin-top: spacing(48);
-      margin-bottom: spacing(8);
+      padding-top: spacing(48);
     }
 
     @include screen('md') {
-      margin-top: spacing(32);
+      padding-top: spacing(32);
     }
   }
 
-  .pull-quote-description {
+  .pull-quote-author-name {
+    @include font-size('base');
+    margin-bottom: spacing(4);
+
+    @include screen('sm') {
+      margin-bottom: spacing(8);
+    }
+  }
+
+  .pull-quote-author-role {
     @include font-size('sm');
   }
 
@@ -128,6 +134,7 @@
   }
 
   .pull-quote-pagination {
-    margin: 0 spacing(32);
+    width: spacing(96);
+    text-align: center;
   }
 }

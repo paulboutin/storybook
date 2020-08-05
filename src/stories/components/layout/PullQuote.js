@@ -18,7 +18,7 @@ export const PullQuoteStory = () => (
         image:
           'https://www.bankofthewest.com/-/media/Images-responsive/about-us/leadership/xavier-antiglio.png',
         quote:
-          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ducimus eveniet hic.',
+          'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur ducimus.',
         author: {
           name: 'Xavier Antiglio',
           role: 'Chief Financial Officer'
@@ -28,7 +28,7 @@ export const PullQuoteStory = () => (
         image:
           'https://www.bankofthewest.com/-/media/Images-responsive/about-us/leadership/ryan-bailey.png',
         quote:
-          'Dolore magnam mollitia non saepe sequi sit. Animi assumenda distinctio dolorem earum, eos, fuga in.',
+          'Dolore magnam mollitia non saepe sequi sit. Animi assumenda distinctio dolorem earum.',
         author: {
           name: 'Ryan Bailey',
           role: 'Head of Consumer Banking Group'
@@ -38,7 +38,7 @@ export const PullQuoteStory = () => (
         image:
           'https://www.bankofthewest.com/-/media/Images-responsive/about-us/leadership/tracy-brock.png',
         quote:
-          'Ad adipisci animi maxime. Accusantium animi, cum dignissimos dolorem fugit iusto labore mollitia officiis.',
+          'Ad adipisci animi maxime. Accusantium animi, cum dignissimos dolorem fugit iusto labore mollitia.',
         author: {
           name: 'Tracy Brock',
           role: 'Chief Compliance Officer'
@@ -48,7 +48,7 @@ export const PullQuoteStory = () => (
         image:
           'https://www.bankofthewest.com/-/media/Images-responsive/about-us/leadership/michelle-di-gangi.png',
         quote:
-          'Ab alias at eaque quibusdam recusandae tempore veniam. Adipisci architecto at corporis delectus.',
+          'Ab alias at eaque quibusdam recusandae tempore veniam. Adipisci architecto at corporis.',
         author: {
           name: 'Michelle Di Gangi',
           role: 'Head of Small Business & Medium Enterprise'
@@ -68,7 +68,7 @@ export const PullQuoteStory = () => (
         image:
           'https://www.bankofthewest.com/-/media/Images-responsive/about-us/leadership/sheri-paulo.png',
         quote:
-          'Assumenda blanditiis culpa, dicta eos, et fugiat ipsa iste magnam molestiae natus repellendus saepe veritatis.',
+          'Assumenda blanditiis culpa, dicta eos, et fugiat ipsa iste magnam molestiae natus.',
         author: {
           name: 'Sheri Paulo',
           role: 'Chief HR Officer'

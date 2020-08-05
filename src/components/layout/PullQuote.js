@@ -2,32 +2,59 @@ import React from 'react'
 import Eyebrow from '../base/Eyebrow'
 import ImageOverlap from '../base/ImageOverlap'
 import Button from '../base/Button'
+import Slider from '../base/Slider'
 
 const PullQuote = ({ items }) => (
-  <div className='pull-quote container'>
+  <div
+    className='pull-quote container slider-container'
+    data-prev-trigger='.pull-quote-prev-slide'
+    data-next-trigger='.pull-quote-next-slide'
+    data-pagination='.pull-quote-pagination'
+  >
     <Eyebrow text='Bank of the West' />
     <h2 className='pull-quote-title'>From Our Team</h2>
 
     <div className='pull-quote-outer-wrapper'>
       <ImageOverlap
-        images={[items[0].image]}
+        images={items.map(item => item.image)}
         position='right'
         color='primary'
+        slider={{ axis: 'horizontal' }}
       />
 
       <div className='pull-quote-middle-wrapper'>
         <i className='icon icon-quote' />
 
         <div className='pull-quote-inner-wrapper'>
-          <blockquote>{items[0].quote}</blockquote>
+          <Slider axis='horizontal'>
+            {items.map((item, index) => (
+              <blockquote key={index}>{item.quote}</blockquote>
+            ))}
+          </Slider>
 
-          <h6 className='pull-quote-author'>—{items[0].author.name}</h6>
-          <p className='pull-quote-description'>{items[0].author.role}</p>
+          <Slider axis='vertical'>
+            {items.map((item, index) => (
+              <div key={index} className='pull-quote-author'>
+                <h6 className='pull-quote-author-name'>—{item.author.name}</h6>
+                <p className='pull-quote-author-role'>{item.author.role}</p>
+              </div>
+            ))}
+          </Slider>
 
           <div className='pull-quote-buttons'>
-            <Button type='secondary' icon='chevron-left' />
-            <span className='pull-quote-pagination'>1 of 8</span>
-            <Button type='secondary' icon='chevron-right' />
+            <Button
+              type='secondary'
+              icon='chevron-left'
+              className='pull-quote-prev-slide'
+            />
+
+            <span className='pull-quote-pagination' />
+
+            <Button
+              type='secondary'
+              icon='chevron-right'
+              className='pull-quote-next-slide'
+            />
           </div>
         </div>
       </div>
