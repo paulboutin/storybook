@@ -122,7 +122,7 @@ const Form2 = () => (
         <div className='col-xs-12'>
           <Select
             label='Choose an option'
-            options={['Personal Account', 'Business Account']}
+            items={['Personal Account', 'Business Account']}
           />
         </div>
       </div>

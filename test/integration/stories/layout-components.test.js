@@ -109,6 +109,18 @@ describe('Layout Components', () => {
       'knob-Inverted_config': true
     },
     {
+      title: 'form single column',
+      component: 'form',
+      devices: ['mobile'],
+      'knob-Type': '1'
+    },
+    {
+      title: 'form two columns',
+      component: 'form',
+      devices: ['mobile'],
+      'knob-Type': '2'
+    },
+    {
       title: 'infographic',
       component: 'infographic-story',
       devices: ['mobile', 'tablet', 'desktop']
