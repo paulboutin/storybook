@@ -4,12 +4,19 @@
 
   .slider-slide {
     display: none;
-    transform: translateY(-100%);
+    transform: translate(-100%, -100%);
+    transition-duration: 0.5s;
+    transition-property: transform, opacity;
+    transition-timing-function: cubic-bezier(0.5, 0.25, 1, 0.5);
 
     &:first-child {
       display: block;
       transform: none;
     }
+  }
+
+  .slider-slide-disabled {
+    transition: none !important;
   }
 }
 

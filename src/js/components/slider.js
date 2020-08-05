@@ -1,3 +1,33 @@
+function slide(slider, slide, direction) {
+  const axis = slider.dataset.axis
+  const activeSlide = slider.querySelector('.slider-slide-active')
+  const nextSlide = slider.querySelector(`.slider-slide:nth-child(${slide})`)
+
+  nextSlide.classList.add('slider-slide-disabled')
+  nextSlide.style.transform = getTransform(-100, axis)
+  nextSlide.style.opacity = 1
+  nextSlide.offsetHeight // Trigger repaint
+
+  requestAnimationFrame(() => {
+    nextSlide.classList.remove('slider-slide-disabled')
+    nextSlide.style.transform = 'translate(0, 0)'
+    activeSlide.style.transform = getTransform(100 * direction, axis)
+    activeSlide.style.opacity = 0
+
+    nextSlide.classList.add('slider-slide-active')
+    activeSlide.classList.remove('slider-slide-active')
+  })
+}
+
+function updatePagination(pagination, current, total) {
+  pagination.innerText = `${current} of ${total}`
+}
+
+function getTransform(value, axis) {
+  if (axis === 'horizontal') return `translate(${value}%, 0)`
+  if (axis === 'vertical') return `translate(0, ${-value}%)`
+}
+
 export default async () => {
   await new Promise(resolve => requestAnimationFrame(resolve))
   const sliderContainers = document.querySelectorAll('.slider-container')
@@ -9,8 +39,13 @@ export default async () => {
     const nextTrigger = document.querySelector(
       sliderContainer.dataset.nextTrigger
     )
+    const pagination = document.querySelector(
+      sliderContainer.dataset.pagination
+    )
 
     const sliders = sliderContainer.querySelectorAll('.slider')
+    let currentSlide = 1
+    let totalSlides = 0
 
     sliders.forEach(slider => {
       const width = slider.clientWidth
@@ -23,14 +58,23 @@ export default async () => {
 
       slider.classList.add('slider-ready')
       slider.classList.remove('slider-tmp')
+
+      slides[0].classList.add('slider-slide-active')
+      totalSlides = slides.length
     })
 
     prevTrigger.addEventListener('click', () => {
-      alert('prev slide')
+      currentSlide--
+      if (currentSlide < 1) currentSlide = totalSlides
+      updatePagination(pagination, currentSlide, totalSlides)
+      sliders.forEach(slider => slide(slider, currentSlide, -1))
     })
 
     nextTrigger.addEventListener('click', () => {
-      alert('next slide')
+      currentSlide++
+      if (currentSlide > totalSlides) currentSlide = 1
+      updatePagination(pagination, currentSlide, totalSlides)
+      sliders.forEach(slider => slide(slider, currentSlide, 1))
     })
   })
 }
