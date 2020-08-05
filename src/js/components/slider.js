@@ -6,7 +6,7 @@ function slide(slider, slide, direction) {
   nextSlide.classList.add('slider-slide-disabled')
   nextSlide.style.transform = getTransform(-100, axis)
   nextSlide.style.opacity = 1
-  nextSlide.offsetHeight // Trigger repaint
+  triggerRepaint(nextSlide)
 
   requestAnimationFrame(() => {
     nextSlide.classList.remove('slider-slide-disabled')
@@ -26,6 +26,10 @@ function updatePagination(pagination, current, total) {
 function getTransform(value, axis) {
   if (axis === 'horizontal') return `translate(${value}%, 0)`
   if (axis === 'vertical') return `translate(0, ${-value}%)`
+}
+
+function triggerRepaint(element) {
+  element.offsetHeight
 }
 
 export default async () => {
@@ -62,6 +66,8 @@ export default async () => {
       slides[0].classList.add('slider-slide-active')
       totalSlides = slides.length
     })
+
+    updatePagination(pagination, currentSlide, totalSlides)
 
     prevTrigger.addEventListener('click', () => {
       currentSlide--

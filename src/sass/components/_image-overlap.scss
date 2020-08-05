@@ -24,33 +24,33 @@
 }
 
 .image-overlap-right {
-  :nth-child(1) {
+  & > :nth-child(1) {
     left: 0;
   }
 
-  :nth-child(2) {
+  & > :nth-child(2) {
     right: 0;
   }
 }
 
 .image-overlap-left {
-  :nth-child(1) {
+  & > :nth-child(1) {
     right: 0;
   }
 
-  :nth-child(2) {
+  & > :nth-child(2) {
     left: 0;
   }
 }
 
 .image-overlap-primary {
-  :nth-child(1) {
+  & > :nth-child(1) {
     background-color: color('green');
   }
 }
 
 .image-overlap-secondary {
-  :nth-child(1) {
+  & > :nth-child(1) {
     background-color: color('yellow');
   }
 }

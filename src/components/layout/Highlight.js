@@ -9,7 +9,7 @@ const Highlight = ({ position, type, overlap, color, images }) => (
   <div className={classNames('highlight container', `highlight-${position}`)}>
     {type === 'Single' ? (
       <Image
-        src={[images[0]]}
+        src={images[0]}
         alt='Highlight image'
         ratio='1:1'
         className='highlight-img-container'
