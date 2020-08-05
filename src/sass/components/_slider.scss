@@ -1,0 +1,30 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+
+  .slider-slide {
+    display: none;
+    transform: translateY(-100%);
+
+    &:first-child {
+      display: block;
+      transform: none;
+    }
+  }
+}
+
+.slider-tmp {
+  position: absolute;
+
+  .slider-slide {
+    position: relative;
+    display: block;
+  }
+}
+
+.slider-ready {
+  .slider-slide {
+    position: absolute;
+    display: block;
+  }
+}
