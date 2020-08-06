@@ -79,8 +79,19 @@ export const Spacing = () => {
     <div>
       <h2 className='sb:spacing-heading'>Pixel value calculator</h2>
       <div className='sb:spacing-pixel-section'>
-        <Input id='sb:spacing-unit-input' label='Spacing unit' required />
-        <Input id='sb:spacing-width-input' label='Viewport width' required />
+        <Input
+          variant='outline'
+          id='sb:spacing-unit-input'
+          label='Spacing unit'
+          required
+        />
+        <Input
+          variant='outline'
+          id='sb:spacing-width-input'
+          label='Viewport width'
+          required
+        />
+
         <Button id='sb:spacing-calc-button' type='primary' label='Calculate' />
         <p id='sb:spacing-calc-result' className='invisible' />
       </div>

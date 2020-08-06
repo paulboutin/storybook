@@ -24,7 +24,7 @@ const Form1 = () => (
 
       <div className='row'>
         <div className='col-xs-12 col-sm-6'>
-          <Input id='input-1' label='Label' required />
+          <Input variant='outline' id='input-1' label='Label' required />
         </div>
       </div>
 
@@ -42,13 +42,13 @@ const Form1 = () => (
 
       <div className='row'>
         <div className='col-xs-12 col-sm-6'>
-          <Input id='input-2' label='Label' required />
+          <Input variant='outline' id='input-2' label='Label' required />
         </div>
       </div>
 
       <div className='row'>
         <div className='col-xs-12 col-sm-6'>
-          <Input id='input-3' label='Label' required />
+          <Input variant='outline' id='input-3' label='Label' required />
         </div>
       </div>
 
@@ -83,27 +83,33 @@ const Form2 = () => (
 
       <div className='row'>
         <div className='col-xs-12'>
-          <Input id='input-1' label='Label' required />
+          <Input variant='outline' id='input-1' label='Label' required />
         </div>
       </div>
 
       <div className='row'>
         <div className='col-xs-6'>
-          <Input id='input-2' label='Label' error='Required field' required />
+          <Input
+            variant='outline'
+            id='input-2'
+            label='Label'
+            error='Required field'
+            required
+          />
         </div>
 
         <div className='col-xs-6'>
-          <Input id='input-3' label='Label' required />
+          <Input variant='outline' id='input-3' label='Label' required />
         </div>
       </div>
 
       <div className='row'>
         <div className='col-xs-6'>
-          <Input id='input-4' label='Label' required />
+          <Input variant='outline' id='input-4' label='Label' required />
         </div>
 
         <div className='col-xs-6'>
-          <Input id='input-5' label='Label' required />
+          <Input variant='outline' id='input-5' label='Label' required />
         </div>
       </div>
 
@@ -114,7 +120,7 @@ const Form2 = () => (
         </div>
 
         <div className='col-xs-6'>
-          <Input id='input-6' label='Label' />
+          <Input variant='outline' id='input-6' label='Label' />
         </div>
       </div>
 

@@ -1,10 +1,11 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Input = ({ id, value, error, help, label, ...attrs }) => (
+const Input = ({ id, variant, value, error, help, label, ...attrs }) => (
   <div
     className={classNames(
       'input-block',
+      `input-block-${variant}`,
       value ? 'input-active' : '',
       error ? 'input-error' : '',
       attrs.disabled ? 'input-disabled' : ''
@@ -14,10 +15,19 @@ const Input = ({ id, value, error, help, label, ...attrs }) => (
       {label}
       {!attrs.required && <span className='input-optional'>(Optional)</span>}
     </label>
+
     {attrs.type === 'password' && (
       <i className='icon icon-show input-password-control' />
     )}
+
     <input id={id} className='input-control' defaultValue={value} {...attrs} />
+
+    {variant === 'underline' && (
+      <div className='input-underline'>
+        <div className='input-underline-active' />
+      </div>
+    )}
+
     {help && (
       <p className='input-help'>
         {error && <i className='icon icon-error' />}
