@@ -1,0 +1,120 @@
+.carousel {
+  margin: spacing(32) spacing(16);
+  padding-bottom: spacing(64);
+
+  @include screen('sm') {
+    margin: spacing(48) spacing(24);
+    padding-top: spacing(12);
+    padding-bottom: spacing(12);
+  }
+
+  @include screen('md') {
+    margin: spacing(24) spacing(32);
+    padding-top: spacing(16);
+    padding-bottom: spacing(16);
+  }
+
+  @include screen('lg') {
+    max-width: 1200px;
+    margin: spacing(32) auto;
+    padding: spacing(16) spacing(32);
+  }
+
+  .carousel-wrapper {
+    position: relative;
+  }
+
+  .carousel-card {
+    @include box-shadow('base');
+
+    @include screen('sm') {
+      width: 40%;
+    }
+
+    @include screen('lg') {
+      width: 45%;
+    }
+  }
+
+  .carousel-image {
+    @include screen('sm') {
+      position: absolute;
+      top: -#{spacing(12)};
+      bottom: -#{spacing(12)};
+      left: 10%;
+      right: 0;
+      z-index: -1;
+    }
+
+    @include screen('md') {
+      top: -#{spacing(16)};
+      bottom: -#{spacing(16)};
+    }
+
+    @include screen('lg') {
+      left: 20%;
+    }
+  }
+
+  .carousel-card-content {
+    background-color: color('white');
+    padding: spacing(24) spacing(16);
+
+    @include screen('sm') {
+      padding-left: spacing(24);
+      padding-right: spacing(24);
+    }
+
+    @include screen('md') {
+      padding-left: spacing(32);
+      padding-right: spacing(32);
+    }
+  }
+
+  .carousel-card-text {
+    margin: spacing(12) 0;
+  }
+
+  .carousel-pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    padding-top: spacing(16);
+
+    @include screen('sm') {
+      padding-top: spacing(24);
+    }
+
+    @include screen('md') {
+      position: static;
+      transform: none;
+      justify-content: flex-start;
+      padding-top: spacing(16);
+    }
+
+    .button {
+      @include screen('md') {
+        width: auto;
+        height: auto;
+      }
+    }
+
+    .icon {
+      @include font-size('lg');
+    }
+  }
+
+  .carousel-pagination {
+    width: spacing(96);
+    text-align: center;
+
+    @include screen('md') {
+      width: spacing(64);
+    }
+  }
+}
