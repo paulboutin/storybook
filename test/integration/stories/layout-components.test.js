@@ -137,6 +137,11 @@ describe('Layout Components', () => {
     {
       title: 'dropdown-hero',
       component: 'dropdown-hero-story'
+    },
+    {
+      title: 'helpful-links',
+      component: 'helpful-links',
+      devices: ['mobile', 'tablet', 'desktop']
     }
   ]
   buildSnapshotTests('components-layout')(stories)
