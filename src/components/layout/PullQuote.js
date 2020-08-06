@@ -41,7 +41,7 @@ const PullQuote = ({ items }) => (
             ))}
           </Slider>
 
-          <div className='pull-quote-buttons'>
+          <div className='pull-quote-pagination-container'>
             <Button
               type='secondary'
               icon='chevron-left'
