@@ -93,7 +93,9 @@ export default async () => {
     const nextTrigger = document.querySelector(container.dataset.nextTrigger)
     const pagination = document.querySelector(container.dataset.pagination)
     const sliders = container.querySelectorAll('.slider')
-    const totalSlides = sliders[0].querySelectorAll('.slider-slide').length
+    const totalSlides = sliders.length
+      ? sliders[0].querySelectorAll('.slider-slide').length
+      : 0
     let currentSlide = 1
 
     updatePagination(pagination, currentSlide, totalSlides)

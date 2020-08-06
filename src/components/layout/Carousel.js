@@ -3,28 +3,41 @@ import Button from '../base/Button'
 import Image from '../base/Image'
 import Eyebrow from '../base/Eyebrow'
 import Link from '../base/Link'
+import Slider from '../base/Slider'
 
-const Carousel = () => (
-  <div className='carousel'>
+const Carousel = ({ items }) => (
+  <div
+    className='carousel slider-container'
+    data-prev-trigger='.carousel-prev-slide'
+    data-next-trigger='.carousel-next-slide'
+    data-pagination='.carousel-pagination'
+  >
     <div className='carousel-wrapper'>
       <div className='carousel-card'>
-        <Image
-          src='http://via.placeholder.com/640/eee'
-          alt='Carousel image'
-          ratio='16:9'
-          className='carousel-image'
-        />
+        <Slider axis='horizontal' className='carousel-image-slider'>
+          {items.map((item, index) => (
+            <Image
+              key={index}
+              src={item.image}
+              alt={`Carousel image ${index + 1}`}
+              ratio='16:9'
+              className='carousel-image'
+            />
+          ))}
+        </Slider>
 
         <div className='carousel-card-content'>
           <Eyebrow text='Recommended' />
-          <h2>Investment Services</h2>
 
-          <p className='carousel-card-text'>
-            Investing doesn’t have to be so complicated. Start on your own
-            terms.
-          </p>
-
-          <Link standalone>Learn more</Link>
+          <Slider axis='horizontal'>
+            {items.map((item, index) => (
+              <div key={index} className='carousel-slide-content'>
+                <h2>{item.title}</h2>
+                <p className='carousel-card-text'>{item.text}</p>
+                <Link standalone>Learn more</Link>
+              </div>
+            ))}
+          </Slider>
 
           <div className='carousel-pagination-container'>
             <Button
@@ -33,7 +46,7 @@ const Carousel = () => (
               className='carousel-prev-slide'
             />
 
-            <span className='carousel-pagination'>1 of 8</span>
+            <span className='carousel-pagination' />
 
             <Button
               type='ghost'
