@@ -2,13 +2,13 @@ import React from 'react'
 import Eyebrow from '../base/Eyebrow'
 import Link from '../base/Link'
 
-const HelpfulLinks = () => (
-  <div className='helpful-links container'>
+const ResourceLinks = () => (
+  <div className='resource-links container'>
     <div className='row'>
       <div className='col-xs-12 col-sm-6 col-md-4'>
         <Eyebrow text='Resources' />
-        <h2 className='helpful-links-title'>Useful links</h2>
-        <p className='helpful-links-text'>
+        <h2 className='resource-links-title'>Useful links</h2>
+        <p className='resource-links-text'>
           Bank of the West has the strongest environment stance of any major
           bank.
         </p>
@@ -48,4 +48,4 @@ const HelpfulLinks = () => (
   </div>
 )
 
-export default HelpfulLinks
+export default ResourceLinks

@@ -1,4 +1,4 @@
-.helpful-links {
+.resource-links {
   position: relative;
   padding: spacing(48) spacing(16);
 
@@ -21,7 +21,7 @@
     }
   }
 
-  .helpful-links-title {
+  .resource-links-title {
     margin-bottom: spacing(8);
 
     @include screen('md') {
@@ -30,7 +30,7 @@
     }
   }
 
-  .helpful-links-text {
+  .resource-links-text {
     margin-bottom: spacing(12);
   }
 

@@ -139,8 +139,8 @@ describe('Layout Components', () => {
       component: 'dropdown-hero-story'
     },
     {
-      title: 'helpful-links',
-      component: 'helpful-links',
+      title: 'resource-links',
+      component: 'resource-links',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
