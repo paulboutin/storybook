@@ -72,16 +72,20 @@
 
   .carousel-card-content {
     background-color: color('white');
-    padding: spacing(24) spacing(16);
+    padding: spacing(24) 0;
+  }
+
+  .eyebrow,
+  .carousel-slide-content,
+  .carousel-pagination-container {
+    margin: 0 spacing(16);
 
     @include screen('sm') {
-      padding-left: spacing(24);
-      padding-right: spacing(24);
+      margin: 0 spacing(24);
     }
 
     @include screen('md') {
-      padding-left: spacing(32);
-      padding-right: spacing(32);
+      margin: 0 spacing(32);
     }
   }
 
