@@ -2,6 +2,7 @@ export default {
   title: 'Components/Layout'
 }
 
+export { Articles } from './layout/Articles'
 export { CarouselStory } from './layout/Carousel'
 export { ClosingCTAStory } from './layout/ClosingCTA'
 export { ColumnCardsStory } from './layout/ColumnCards'

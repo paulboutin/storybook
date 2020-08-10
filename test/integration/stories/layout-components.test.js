@@ -147,6 +147,11 @@ describe('Layout Components', () => {
       title: 'carousel',
       component: 'carousel-story',
       devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'articles',
+      component: 'articles',
+      devices: ['mobile', 'tablet', 'desktop']
     }
   ]
   buildSnapshotTests('components-layout')(stories)
