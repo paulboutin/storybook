@@ -21,9 +21,11 @@
     flex-direction: column;
     padding: 0;
     margin-top: spacing(24);
+    max-width: 300px;
 
     @include screen('sm') {
       flex-direction: row;
+      max-width: unset;
       margin-top: spacing(48);
     }
 
@@ -46,10 +48,6 @@
       margin-left: spacing(8);
       margin-right: spacing(8);
       text-align: left;
-
-      &:after {
-        display: none;
-      }
     }
 
     @include screen('md') {
@@ -68,11 +66,15 @@
   }
 
   .infographic-box-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
+    height: 100%;
     padding: spacing(64) spacing(16);
 
     @include screen('sm') {
-      position: static;
+      justify-content: flex-start;
       padding: spacing(24) spacing(16);
     }
 
@@ -89,8 +91,15 @@
     @include font-size('lg');
     margin-top: spacing(4);
 
-    @include screen('lg') {
+    @include screen('sm') {
+      @include font-size('sm');
+    }
+
+    @include screen('md') {
       @include font-size('base');
+    }
+
+    @include screen('lg') {
       margin-top: spacing(16);
     }
   }
