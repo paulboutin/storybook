@@ -13,9 +13,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-long-arrow-right:before {
-  content: '\e91e';
-}
 .icon-arrow-down:before {
   content: '\e900';
 }
@@ -85,6 +82,9 @@
 .icon-plus:before {
   content: '\e916';
 }
+.icon-play:before {
+  content: '\e91f';
+}
 .icon-quote:before {
   content: '\e917';
 }
@@ -105,4 +105,7 @@
 }
 .icon-youtube:before {
   content: '\e91d';
+}
+.icon-long-arrow-right:before {
+  content: '\e91e';
 }
