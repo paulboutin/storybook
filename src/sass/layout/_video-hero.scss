@@ -16,7 +16,7 @@
   }
 
   .video-hero-overlay {
-    background-color: rgba(color('black'), 0.5);
+    @include overlay('medium');
   }
 
   .video-hero-content {
