@@ -29,7 +29,7 @@ const Carousel = ({ items }) => (
         <div className='carousel-card-content'>
           <Eyebrow text='Recommended' />
 
-          <Slider axis='horizontal'>
+          <Slider axis='horizontal' transitionOpacity>
             {items.map((item, index) => (
               <div key={index} className='carousel-slide-content'>
                 <h2>{item.title}</h2>

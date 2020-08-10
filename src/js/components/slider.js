@@ -35,19 +35,20 @@ function setup() {
 
 function slide(slider, slide, direction) {
   const axis = slider.dataset.axis
+  const transitionOpacity = slider.dataset.transitionOpacity === 'true'
   const activeSlide = slider.querySelector('.slider-slide-active')
   const nextSlide = slider.querySelector(`.slider-slide:nth-child(${slide})`)
 
   nextSlide.classList.add('slider-slide-disabled')
   nextSlide.style.transform = getTransform(-100, axis)
-  nextSlide.style.opacity = 1
+  if (transitionOpacity) nextSlide.style.opacity = 1
   triggerRepaint(nextSlide)
 
   requestAnimationFrame(() => {
     nextSlide.classList.remove('slider-slide-disabled')
     nextSlide.style.transform = 'translate(0, 0)'
     activeSlide.style.transform = getTransform(100 * direction, axis)
-    activeSlide.style.opacity = 0
+    if (transitionOpacity) activeSlide.style.opacity = 0
 
     nextSlide.classList.add('slider-slide-active')
     activeSlide.classList.remove('slider-slide-active')

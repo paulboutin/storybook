@@ -26,13 +26,13 @@ const PullQuote = ({ items }) => (
         <i className='icon icon-quote' />
 
         <div className='pull-quote-inner-wrapper'>
-          <Slider axis='horizontal'>
+          <Slider axis='horizontal' transitionOpacity>
             {items.map((item, index) => (
               <blockquote key={index}>{item.quote}</blockquote>
             ))}
           </Slider>
 
-          <Slider axis='vertical'>
+          <Slider axis='vertical' transitionOpacity>
             {items.map((item, index) => (
               <div key={index} className='pull-quote-author'>
                 <h6 className='pull-quote-author-name'>—{item.author.name}</h6>
