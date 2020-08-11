@@ -1,31 +1,37 @@
 .accordion {
-  display: flex;
-  align-items: baseline;
   cursor: pointer;
   padding: spacing(16) 0;
   border-bottom: 1px solid color('grey-30');
 
-  .accordion-title {
+  .accordion-summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .accordion-title,
+  .accordion-content {
     max-width: 75%;
   }
 
   .accordion-content {
-    color: color('grey-70');
-    margin-top: 0;
     height: 0;
+    margin-top: 0;
     overflow: hidden;
     transition-duration: 0.3s;
   }
 
   .icon {
     @extend .icon-plus;
+    @include font-size('lg');
+    @include font-weight('bold');
     color: color('green');
   }
 
   &.accordion-expanded {
     .accordion-content {
-      margin-top: spacing(8);
       height: auto;
+      margin-top: spacing(8);
     }
 
     .icon {

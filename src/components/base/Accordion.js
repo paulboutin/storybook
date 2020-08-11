@@ -10,12 +10,12 @@ const Accordion = ({ title, children, expanded, inverted, className }) => (
       className
     )}
   >
-    <div>
+    <div className='accordion-summary'>
       <h5 className='accordion-title'>{title}</h5>
-      <p className='accordion-content'>{children}</p>
+      <i className='icon' />
     </div>
 
-    <i className='icon' />
+    <div className='accordion-content'>{children}</div>
   </div>
 )
 
