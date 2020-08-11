@@ -33,3 +33,11 @@
     }
   }
 }
+
+.accordion-inverted {
+  border-bottom-color: color('white');
+
+  .icon {
+    color: color('white');
+  }
+}
