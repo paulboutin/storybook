@@ -1,12 +1,12 @@
 .legal {
-  padding: spacing(16);
+  padding: spacing(64) spacing(16) spacing(32);
 
   @include screen('sm') {
-    padding: spacing(32);
+    padding: spacing(48) spacing(24) spacing(64);
   }
 
   @include screen('md') {
-    padding: spacing(64);
+    padding: spacing(48) spacing(32) spacing(64);
   }
 
   @include screen('lg') {
@@ -20,17 +20,37 @@
   }
 
   .legal-heading {
-    margin-bottom: spacing(16);
+    margin-bottom: spacing(32);
   }
 
   .legal-list {
-    list-style: decimal;
-    margin-left: spacing(24);
-    color: color('grey-70');
-    @include font-size('xs');
+    list-style-type: none;
+    counter-reset: item;
+  }
 
-    .legal-list-item:not(:last-child) {
-      margin-bottom: spacing(16);
+  .legal-list-item {
+    position: relative;
+
+    &:before {
+      @include font-size('xs');
+      content: counter(item);
+      counter-increment: item;
+      position: absolute;
+      left: -#{spacing(12)};
+      top: 0.2rem;
+      color: color('grey-70');
+    }
+
+    &:not(:last-child) {
+      margin-bottom: spacing(24);
+    }
+
+    @include screen('sm') {
+      padding-left: spacing(16);
+
+      &:before {
+        left: 0;
+      }
     }
   }
 }
