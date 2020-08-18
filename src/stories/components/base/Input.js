@@ -82,7 +82,7 @@ export const InputStory = () => {
           required
           type='tel'
           help='Please enter a correct phone number'
-          error='An error has ocurred!'
+          error='An error has occurred!'
         />
       </div>
 
