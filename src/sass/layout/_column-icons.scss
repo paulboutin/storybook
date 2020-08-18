@@ -5,6 +5,10 @@
     align-items: center;
     padding: spacing(64) spacing(16) 0;
 
+    &:before {
+      display: none;
+    }
+
     @include screen('sm') {
       flex-direction: row;
       flex-wrap: wrap;
@@ -21,8 +25,7 @@
     padding-bottom: spacing(64);
 
     @include screen('sm') {
-      flex: 1;
-      width: 0;
+      width: 33%;
       padding-left: spacing(16);
       padding-right: spacing(16);
     }
@@ -57,5 +60,22 @@
 
   .column-icon-circle {
     background-color: color('white');
+  }
+}
+
+.column-icons-2,
+.column-icons-4 {
+  .column-icon {
+    @include screen('sm') {
+      width: 50%;
+    }
+  }
+}
+
+.column-icons-4 {
+  .column-icon {
+    @include screen('md') {
+      width: 25%;
+    }
   }
 }

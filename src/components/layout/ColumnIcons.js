@@ -8,14 +8,14 @@ const Column = ({ image, text, subtext }) => (
       <Image src={image} alt='Icon description' ratio='1:1' />
     </div>
 
-    <h4 className='column-icon-text'>{text}</h4>
+    <h6 className='column-icon-text'>{text}</h6>
     {subtext && <p className='column-icon-subtext'>{subtext}</p>}
   </div>
 )
 
 const ColumnIcons = ({ columns, inverted }) => (
   <div
-    className={classNames('column-icons', {
+    className={classNames('column-icons', `column-icons-${columns.length}`, {
       'column-icons-inverted': inverted
     })}
   >

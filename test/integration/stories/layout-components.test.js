@@ -97,15 +97,17 @@ describe('Layout Components', () => {
       component: 'column-cards-story'
     },
     {
-      title: 'column-icons',
+      title: 'column-icons normal',
       component: 'column-icons-story',
-      devices: ['mobile', 'desktop'],
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Columns_config': 4,
       'knob-Inverted_config': false
     },
     {
       title: 'column-icons inverted',
       component: 'column-icons-story',
-      devices: ['mobile', 'desktop'],
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Columns_config': 5,
       'knob-Inverted_config': true
     },
     {
