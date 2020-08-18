@@ -2,9 +2,10 @@ export default () => {
   const accordions = document.querySelectorAll('.accordion')
 
   accordions.forEach(accordion => {
-    accordion.addEventListener('click', () => {
-      const content = accordion.querySelector('.accordion-content')
+    const summary = accordion.querySelector('.accordion-summary')
+    const content = accordion.querySelector('.accordion-content')
 
+    summary.addEventListener('click', () => {
       if (accordion.classList.contains('accordion-expanded')) {
         content.style.height = getComputedStyle(content).height
         content.style.transitionProperty = 'all'

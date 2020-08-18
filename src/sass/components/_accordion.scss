@@ -1,9 +1,9 @@
 .accordion {
-  cursor: pointer;
   padding: spacing(16) 0;
   border-bottom: 1px solid color('grey-30');
 
   .accordion-summary {
+    cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
