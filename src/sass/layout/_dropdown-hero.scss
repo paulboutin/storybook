@@ -6,6 +6,11 @@
   width: 100vw;
   height: 100vh;
 
+  @include screen('sm') {
+    @include fixed-ratio(16, 9);
+    height: unset;
+  }
+
   .dropdown-hero-content {
     display: flex;
     flex-direction: column;
