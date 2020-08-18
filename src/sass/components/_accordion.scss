@@ -3,10 +3,19 @@
   border-bottom: 1px solid color('grey-30');
 
   .accordion-summary {
+    position: relative;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: -#{spacing(16)};
+      bottom: -#{spacing(16)};
+      width: 100%;
+    }
   }
 
   .accordion-title,
