@@ -1,4 +1,5 @@
 .legal {
+  @include font-size('xs');
   padding: spacing(64) spacing(16) spacing(32);
 
   @include screen('sm') {
@@ -32,13 +33,13 @@
     position: relative;
 
     &:before {
-      @include font-size('xs');
       content: counter(item);
       counter-increment: item;
       position: absolute;
       left: -#{spacing(12)};
-      top: 0.2rem;
       color: color('grey-70');
+      font-size: 0.5rem;
+      line-height: 1.625;
     }
 
     &:not(:last-child) {

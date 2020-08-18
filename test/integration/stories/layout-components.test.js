@@ -3,6 +3,10 @@ import { buildSnapshotTests } from '../utils'
 describe('Layout Components', () => {
   const stories = [
     {
+      title: 'legal',
+      component: 'legal'
+    },
+    {
       title: 'list-element standard',
       component: 'list-element-story',
       devices: ['mobile', 'tablet', 'desktop'],
