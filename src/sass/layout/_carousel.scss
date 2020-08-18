@@ -28,11 +28,15 @@
     @include box-shadow('base');
 
     @include screen('sm') {
-      width: 40%;
+      width: 350px;
+    }
+
+    @include screen('md') {
+      width: 400px;
     }
 
     @include screen('lg') {
-      width: 45%;
+      width: 450px;
     }
   }
 
