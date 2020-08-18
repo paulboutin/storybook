@@ -2,6 +2,7 @@ export default {
   title: 'Components/Base'
 }
 
+export { AccordionStory } from './base/Accordion'
 export { ButtonStory } from './base/Button'
 export { CardStory } from './base/Card'
 export { CheckboxStory } from './base/Checkbox'
