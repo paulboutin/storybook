@@ -8,20 +8,20 @@ import fn from '../../../src/js/components/accordion'
 describe('Accordion component', () => {
   it('should be interactive', async () => {
     // Arrange
-    const component = mount(<Accordion>Lorem ipsum dolor.</Accordion>, fn)
+    const accordion = mount(<Accordion>Lorem ipsum dolor.</Accordion>, fn)
+    const summary = accordion.querySelector('.accordion-summary')
+    const content = accordion.querySelector('.accordion-content')
 
     // Assert
-    expect(component).not.toHaveClass('accordion-expanded')
+    expect(accordion).not.toHaveClass('accordion-expanded')
 
     // Act
-    component.click()
+    summary.click()
 
     // Assert
     await waitFor(() => {
-      expect(component).toHaveClass('accordion-expanded')
-      expect(component.querySelector('.accordion-content')).not.toHaveStyle({
-        height: 0
-      })
+      expect(accordion).toHaveClass('accordion-expanded')
+      expect(content).not.toHaveStyle({ height: 0 })
     })
   })
 })
