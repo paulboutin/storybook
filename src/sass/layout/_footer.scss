@@ -1,0 +1,148 @@
+.footer {
+  color: color('white');
+
+  .link {
+    color: color('white');
+    text-decoration: none;
+  }
+
+  .footer-links-mobile {
+    background-color: color('green');
+    padding: spacing(32) spacing(16);
+
+    .footer-starbirds {
+      height: spacing(32);
+      margin-bottom: spacing(16);
+    }
+
+    .accordion-title {
+      @include font-family('body');
+      @include font-size('base');
+      @include font-weight('semi-bold');
+    }
+
+    .accordion-content {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      .link {
+        @include font-size('base');
+        margin-top: spacing(16);
+        margin-bottom: spacing(8);
+        margin-left: spacing(16);
+      }
+    }
+
+    .app-cta {
+      align-items: flex-start;
+    }
+  }
+
+  .footer-links {
+    background-color: color('green');
+    padding: spacing(48) spacing(12);
+
+    @include screen('md') {
+      padding: spacing(48) spacing(32) spacing(64);
+    }
+
+    .row > :last-child {
+      margin-top: spacing(64);
+
+      @include screen('md') {
+        margin-top: 0;
+      }
+
+      .app-cta {
+        margin-top: spacing(8);
+        margin-bottom: 0;
+
+        @include screen('md') {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-top: spacing(4);
+
+          .app-cta-download {
+            margin: spacing(12) 0 0;
+          }
+        }
+      }
+    }
+
+    .footer-column {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .footer-column-title {
+      @include font-size('base');
+      margin-bottom: spacing(8);
+    }
+
+    .link {
+      margin-top: spacing(16);
+    }
+  }
+
+  .footer-bottom {
+    @include font-size('sm');
+    background-color: color('green-dark');
+    padding: spacing(32) spacing(16);
+    text-align: center;
+
+    @include screen('sm') {
+      padding: spacing(48) spacing(16);
+    }
+
+    @include screen('lg') {
+      padding: spacing(32) spacing(16);
+    }
+
+    & > :not(:last-child) {
+      margin-bottom: spacing(32);
+
+      @include screen('sm') {
+        margin-bottom: spacing(24);
+      }
+
+      @include screen('lg') {
+        @include font-size('xs');
+        margin-bottom: spacing(16);
+      }
+    }
+
+    .link {
+      @include font-weight('semi-bold');
+      font-size: inherit;
+      line-height: inherit;
+    }
+  }
+
+  .footer-social {
+    a {
+      display: inline-block;
+
+      &:not(:first-child) {
+        margin-left: spacing(32);
+      }
+    }
+
+    .icon {
+      @include font-size('h2');
+
+      @include screen('md') {
+        @include font-size('h4');
+      }
+
+      @include screen('lg') {
+        @include font-size('h5');
+      }
+    }
+  }
+
+  .footer-dot:before {
+    content: '·';
+    margin: 0 spacing(12);
+  }
+}

@@ -158,6 +158,11 @@ describe('Layout Components', () => {
       title: 'articles',
       component: 'articles',
       devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'footer',
+      component: 'footer',
+      devices: ['mobile', 'tablet', 'desktop']
     }
   ]
   buildSnapshotTests('components-layout')(stories)
