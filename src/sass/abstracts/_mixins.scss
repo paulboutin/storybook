@@ -19,10 +19,15 @@
 }
 
 @mixin fluid-typography() {
-  $min-font-size: 18;
-  $max-font-size: 24.75;
+  $min-font-size: 16;
+  $max-font-size: 24;
   $min-screen-width: 480;
-  $max-screen-width: 1400;
+  $max-screen-width: 1440;
+
+  --min-font-size: #{$min-font-size};
+  --max-font-size: #{$max-font-size};
+  --min-screen-width: #{$min-screen-width};
+  --max-screen-width: #{$max-screen-width};
 
   $font-factor: $max-font-size - $min-font-size;
   $screen-factor: $max-screen-width - $min-screen-width;
@@ -38,7 +43,7 @@
     }
   }
 
-  @media (min-width: $max-screen-width) {
+  @media (min-width: #{$max-screen-width}px) {
     font-size: #{$max-font-size}px;
   }
 }
@@ -77,4 +82,30 @@
     height: 100%;
     object-fit: cover;
   }
+}
+
+@mixin focus-outline() {
+  outline: 2px solid color('blue');
+  outline-offset: 2px;
+}
+
+@mixin star-birds() {
+  background-image: url('/img/star-birds.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin sr-only() {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@mixin overlay($opacity) {
+  background-color: rgba(color('black'), map-get($overlays, $opacity));
 }

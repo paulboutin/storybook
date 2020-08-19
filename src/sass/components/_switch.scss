@@ -1,17 +1,17 @@
 .switch-wrapper {
-  $width: 48px;
-  $height: 24px;
-  $circle-size: 18px;
+  $width: 51px;
+  $height: 31px;
+  $circle-size: 27px;
   $circle-margin: ($height - $circle-size) / 2;
 
   display: inline-flex;
   align-items: center;
 
   input[type='checkbox'] {
-    @extend .sr-only;
+    @include sr-only();
 
     &:checked ~ .switch {
-      background-color: color('green-light');
+      background-color: color('green');
 
       .switch-circle {
         left: $width - $circle-size - $circle-margin;
@@ -41,12 +41,8 @@
   }
 
   .switch-label {
-    @include font-size('xs');
-    padding-left: spacing(12);
+    @include font-size('sm');
+    padding-right: spacing(4);
     cursor: pointer;
-
-    @include screen('lg') {
-      @include font-size('sm');
-    }
   }
 }

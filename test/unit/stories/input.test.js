@@ -12,14 +12,14 @@ describe('Input component', () => {
     const component = mount(<Input />, fn)
 
     // Assert
-    expect(component).not.toHaveClass('active')
+    expect(component).not.toHaveClass('input-active')
 
     // Act
     component.querySelector('.input-control').focus()
 
     // Assert
     await waitFor(() => {
-      expect(component).toHaveClass('active')
+      expect(component).toHaveClass('input-active')
     })
 
     // Act
@@ -27,7 +27,7 @@ describe('Input component', () => {
 
     // Assert
     await waitFor(() => {
-      expect(component).not.toHaveClass('active')
+      expect(component).not.toHaveClass('input-active')
     })
   })
 
@@ -40,7 +40,8 @@ describe('Input component', () => {
 
       // Assert
       expect(control.type).toBe('password')
-      expect(pwdControl).not.toHaveClass('visible')
+      expect(pwdControl).toHaveClass('icon-show')
+      expect(pwdControl).not.toHaveClass('icon-hide')
 
       // Act
       pwdControl.click()
@@ -48,7 +49,8 @@ describe('Input component', () => {
       // Assert
       await waitFor(() => {
         expect(control.type).toBe('text')
-        expect(pwdControl).toHaveClass('visible')
+        expect(pwdControl).toHaveClass('icon-hide')
+        expect(pwdControl).not.toHaveClass('icon-show')
       })
 
       // Act
@@ -57,7 +59,8 @@ describe('Input component', () => {
       // Assert
       await waitFor(() => {
         expect(control.type).toBe('password')
-        expect(pwdControl).not.toHaveClass('visible')
+        expect(pwdControl).toHaveClass('icon-show')
+        expect(pwdControl).not.toHaveClass('icon-hide')
       })
     })
   })

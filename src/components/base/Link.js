@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from 'classnames'
-import LongArrowRight from '../../icons/long-arrow-right.svg'
 
 const Link = ({ href = '#', standalone, className, children }) => (
   <a
@@ -12,7 +11,7 @@ const Link = ({ href = '#', standalone, className, children }) => (
     )}
   >
     {children}
-    {standalone && <LongArrowRight />}
+    {standalone && <i className='icon icon-long-arrow-right' />}
   </a>
 )
 

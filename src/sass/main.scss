@@ -3,27 +3,40 @@
 @import 'abstracts/functions';
 
 @import 'lib/bootstrap-grid';
-@import 'lib/fontawesome';
+@import 'lib/icomoon';
 
 @import 'base/reset';
 @import 'base/fonts';
 @import 'base/typography';
-@import 'base/utils';
 
+@import 'components/accordion';
+@import 'components/app-cta';
 @import 'components/button';
 @import 'components/checkbox';
 @import 'components/card';
 @import 'components/eyebrow';
+@import 'components/image';
+@import 'components/image-overlap';
 @import 'components/input';
 @import 'components/link';
+@import 'components/select';
+@import 'components/slider';
 @import 'components/switch';
 
-@import 'layout/column-cards';
+@import 'layout/articles';
+@import 'layout/carousel';
 @import 'layout/closing-cta';
+@import 'layout/column-cards';
+@import 'layout/column-icons';
+@import 'layout/dropdown-hero';
 @import 'layout/faq';
+@import 'layout/footer';
 @import 'layout/hero';
+@import 'layout/highlight';
+@import 'layout/infographic';
 @import 'layout/legal';
 @import 'layout/list-element';
 @import 'layout/promo-element';
-@import 'layout/highlight';
-@import 'layout/column-icons';
+@import 'layout/pull-quote';
+@import 'layout/resource-links';
+@import 'layout/video-hero';

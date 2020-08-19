@@ -13,3 +13,5 @@ const toMatchImageSnapshot = configureToMatchImageSnapshot({
 })
 
 expect.extend({ toMatchImageSnapshot })
+
+jest.setTimeout(30000)

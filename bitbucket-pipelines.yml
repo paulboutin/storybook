@@ -11,7 +11,7 @@ definitions:
 
     - step: &snapshot-tests
         name: Snapshot tests
-        image: buildkite/puppeteer:latest
+        image: buildkite/puppeteer:v3.0.4
         caches:
           - node
         script:
@@ -20,15 +20,6 @@ definitions:
           - npm run test:snapshot
         artifacts:
           - test/**/__diff_output__/*.png
-
-    - step: &publish-dsm
-        name: Publish Invision DSM
-        image: node:12.18-alpine
-        caches:
-          - node
-        script:
-          - npm install
-          - npm run dsm:publish
 
 pipelines:
   default:
@@ -39,4 +30,3 @@ pipelines:
   branches:
     master:
       - parallel: *run-tests
-      # - step: *publish-dsm

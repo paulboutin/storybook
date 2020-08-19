@@ -35,16 +35,16 @@ $colors: (
 );
 
 $spacings: (
-  4: 0.222rem,
-  8: 0.444rem,
-  12: 0.666rem,
-  16: 0.888rem,
-  24: 1.333rem,
-  32: 1.777rem,
-  48: 2.666rem,
-  64: 3.555rem,
-  96: 5.333rem,
-  160: 8.888rem
+  4: 0.25rem,
+  8: 0.5rem,
+  12: 0.75rem,
+  16: 1rem,
+  24: 1.5rem,
+  32: 2rem,
+  48: 3rem,
+  64: 4rem,
+  96: 6rem,
+  160: 10rem
 );
 
 $screens: (
@@ -56,44 +56,48 @@ $screens: (
 
 $font-sizes: (
   xs: (
-    font-size: 0.777rem,
-    line-height: 1.5
+    font-size: 0.75rem,
+    line-height: 1.333
   ),
   sm: (
-    font-size: 0.888rem,
-    line-height: 1.5
+    font-size: 0.875rem,
+    line-height: 1.429
   ),
   base: (
     font-size: 1rem,
     line-height: 1.5
   ),
   lg: (
-    font-size: 1.166rem,
-    line-height: 1.5
-  ),
-  h1: (
-    font-size: 2.5rem,
-    line-height: 1.18
-  ),
-  h2: (
-    font-size: 2.055rem,
-    line-height: 1.15
-  ),
-  h3: (
-    font-size: 1.777rem,
+    font-size: 1.125rem,
     line-height: 1.333
   ),
+  h1: (
+    font-size: 2.25rem,
+    line-height: 1.225
+  ),
+  h2: (
+    font-size: 2rem,
+    line-height: 1.25
+  ),
+  h3: (
+    font-size: 1.75rem,
+    line-height: 1.285
+  ),
   h4: (
-    font-size: 1.555rem,
+    font-size: 1.5rem,
     line-height: 1.333
   ),
   h5: (
-    font-size: 1.166rem,
-    line-height: 1.5
+    font-size: 1.25rem,
+    line-height: 1.4
   ),
   h6: (
-    font-size: 1rem,
-    line-height: 1.5
+    font-size: 1.125rem,
+    line-height: 1.333
+  ),
+  button: (
+    font-size: 16px,
+    line-height: 1
   )
 );
 
@@ -105,9 +109,6 @@ $font-families: (
   body: (
     'Public Sans',
     sans-serif
-  ),
-  font-awesome: (
-    'Font Awesome 5 Free'
   )
 );
 
@@ -120,29 +121,23 @@ $font-weights: (
 );
 
 $box-shadows: (
-  sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05),
-  base: (
-    0 1px 3px 0 rgba(0, 0, 0, 0.1),
-    0 1px 2px 0 rgba(0, 0, 0, 0.06)
-  ),
-  md: (
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06)
-  ),
-  lg: (
-    0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05)
-  ),
-  xl: (
-    0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04)
-  ),
-  inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06),
+  sm: 4px 4px 20px 0 rgba(0, 0, 0, 0.1),
+  base: 8px 8px 20px 0 rgba(0, 0, 0, 0.1),
+  lg: 12px 12px 20px 0 rgba(0, 0, 0, 0.1),
   none: none
 );
 
 $border-radius: (
   sm: 2px,
   base: 4px,
-  full: 9999px
+  lg: 8px,
+  full: 9999px,
+  none: 0
+);
+
+$overlays: (
+  extra-light: 0.15,
+  light: 0.3,
+  medium: 0.5,
+  strong: 0.75
 );

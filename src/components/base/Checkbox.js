@@ -6,7 +6,7 @@ const Checkbox = ({ className, label, checked, disabled }) => (
     <input type='checkbox' defaultChecked={checked} disabled={disabled} />
 
     <span className='checkbox'>
-      <span className='fa fa-check' />
+      <i className='icon icon-check-solid' />
     </span>
 
     <span className='checkbox-label'>{label}</span>

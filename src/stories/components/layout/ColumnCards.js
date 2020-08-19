@@ -3,7 +3,7 @@ import ColumnCards from '../../../components/layout/ColumnCards'
 import Card from '../../../components/base/Card'
 import { text } from '@storybook/addon-knobs'
 
-const defaultPlaceholder = 'http://via.placeholder.com/500x250'
+const defaultImage = 'http://via.placeholder.com/640x480'
 
 const heading = 'More reasons to love your account'
 
@@ -28,7 +28,7 @@ const items = [
 const linkText = 'Read more'
 
 export const ColumnCardsStory = () => {
-  const placeholder = text('Placeholder', defaultPlaceholder)
+  const image = text('Image', defaultImage)
 
   return (
     <>
@@ -36,7 +36,7 @@ export const ColumnCardsStory = () => {
         {items.map((item, index) => (
           <Card
             key={index}
-            imageSrc={placeholder}
+            image={{ src: image, alt: 'image' }}
             heading={item.heading}
             linkText={linkText}
             flat
@@ -45,11 +45,11 @@ export const ColumnCardsStory = () => {
           </Card>
         ))}
       </ColumnCards>
-      <ColumnCards heading={heading} bgColor='grey'>
+      <ColumnCards heading={heading} inverted>
         {items.map((item, index) => (
           <Card
             key={index}
-            imageSrc={placeholder}
+            image={{ src: image, alt: 'image' }}
             heading={item.heading}
             linkText={linkText}
             flat

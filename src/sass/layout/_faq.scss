@@ -1,60 +1,15 @@
 .faq {
-  color: color('grey');
   padding: spacing(32) spacing(16);
 
   @include screen('md') {
     padding: spacing(48) spacing(64);
   }
-}
 
-.faq-heading {
-  margin-bottom: spacing(16);
-}
-
-.faq-block {
-  display: flex;
-  align-items: baseline;
-  cursor: pointer;
-  padding: spacing(16) 0;
-  border-bottom: 1px solid color('grey-30');
-
-  .faq-question {
-    @include font-size('sm');
-    max-width: 60%;
+  .faq-heading {
+    margin-bottom: spacing(16);
   }
 
-  .faq-answer {
-    @include font-size('xs');
-    color: color('grey-80');
-    margin-top: 0;
+  .faq-link {
+    margin-top: spacing(32);
   }
-
-  .accordion-content {
-    height: 0;
-    overflow: hidden;
-    transition-duration: 0.3s;
-  }
-
-  .faq-icon {
-    @extend .fa-plus;
-    color: color('green');
-  }
-
-  &.accordion-expanded {
-    .faq-answer {
-      margin-top: spacing(8);
-    }
-
-    .accordion-content {
-      height: auto;
-    }
-
-    .faq-icon {
-      @extend .fa-minus;
-    }
-  }
-}
-
-.faq-link {
-  margin-top: spacing(32);
 }

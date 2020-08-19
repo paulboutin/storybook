@@ -1,5 +1,5 @@
 import React from 'react'
-import { radios } from '@storybook/addon-knobs'
+import { radios, text } from '@storybook/addon-knobs'
 import ClosingCTA from '../../../components/layout/ClosingCTA'
 
 const heading =
@@ -13,9 +13,15 @@ const typeMap = {
 
 export const ClosingCTAStory = () => {
   const type = radios('Type', ['Standard', 'Half', 'Alt'], 'Standard')
+  const image = text('Image', 'http://via.placeholder.com/1600')
 
   return (
-    <ClosingCTA type={typeMap[type]} heading={heading} text='Type Something'>
+    <ClosingCTA
+      type={typeMap[type]}
+      image={image}
+      heading={heading}
+      text='Type Something'
+    >
       <a className='button button-tertiary' href='#'>
         Call to Action
       </a>

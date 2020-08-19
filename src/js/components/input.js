@@ -1,13 +1,14 @@
 const toggleActive = el => event => {
   if (!event.currentTarget.value.length) {
-    el.classList.toggle('active')
+    el.classList.toggle('input-active')
   }
 }
 
 const passwordToggle = el => event => {
   const isVisible = el.type === 'text'
   el.type = isVisible ? 'password' : 'text'
-  event.currentTarget.classList.toggle('visible')
+  event.currentTarget.classList.toggle('icon-show')
+  event.currentTarget.classList.toggle('icon-hide')
 }
 
 const textareaCount = el => event => {
@@ -15,7 +16,7 @@ const textareaCount = el => event => {
 }
 
 export default () => {
-  const inputs = Array.from(document.querySelectorAll('.input-block'))
+  const inputs = document.querySelectorAll('.input-block')
 
   inputs.forEach(input => {
     const control = input.querySelector('.input-control')

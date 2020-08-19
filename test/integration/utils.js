@@ -1,6 +1,6 @@
 const viewports = {
   mobile: { width: 480, height: 800, isMobile: true },
-  tablet: { width: 992, height: 558 },
+  tablet: { width: 990, height: 558 },
   desktop: { width: 1600, height: 900 }
 }
 

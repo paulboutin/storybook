@@ -20,7 +20,6 @@
 .sb\:color-name {
   @include font-size('sm');
   @include font-weight('semi-bold');
-  color: color('grey');
   margin-bottom: spacing(4);
 }
 

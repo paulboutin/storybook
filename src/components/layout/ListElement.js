@@ -1,17 +1,13 @@
 import React from 'react'
 import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
+import Image from '../base/Image'
 
-const ListElementImage = ({ image }) => (
-  <div className='list-element-image-wrapper'>
-    <img className='list-element-image' src={image.src} alt={image.alt} />
-  </div>
-)
-
-const ListElementItems = ({ items, listClass = 'fa-check-circle' }) => (
+const ListElementItems = ({ items, icon = 'check-circle' }) => (
   <ul className='list-element-items'>
     {items.map((item, index) => (
-      <li key={index} className={classNames('list-element-item fa', listClass)}>
+      <li key={index} className='list-element-item'>
+        <i className={`icon icon-${icon}`} />
         {item}
       </li>
     ))}
@@ -19,12 +15,19 @@ const ListElementItems = ({ items, listClass = 'fa-check-circle' }) => (
 )
 
 const ListElement = ({ image, items, headerText, altLayout }) => (
-  <section className='list-element'>
+  <section
+    className={classNames('list-element', { 'list-element-alt': altLayout })}
+  >
     <div className='container'>
-      {image && <ListElementImage image={image} />}
-      <div
-        className={classNames('list-element-content', altLayout ? 'alt' : '')}
-      >
+      {image && (
+        <Image
+          className='image-block'
+          src={image.src}
+          alt={image.alt}
+          ratio='4:3'
+        />
+      )}
+      <div className='list-element-content'>
         <div className='list-element-header'>
           <Eyebrow text={headerText.eyebrow} />
           <div className='list-element-header-text-block'>

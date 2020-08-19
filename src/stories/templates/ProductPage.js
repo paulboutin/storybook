@@ -8,6 +8,7 @@ import Hero from '../../components/layout/Hero'
 import Highlight from '../../components/layout/Highlight'
 import ListElement from '../../components/layout/ListElement'
 import PromoElement from '../../components/layout/PromoElement'
+import Legal from '../../components/layout/Legal'
 
 const placeholderStyle = {
   display: 'flex',
@@ -43,7 +44,7 @@ export const ProductPage = () => (
     />
 
     <Highlight
-      contentPosition='Right'
+      position='right'
       type='Overlap'
       overlap='Image'
       images={[
@@ -53,7 +54,7 @@ export const ProductPage = () => (
     />
 
     <Highlight
-      contentPosition='Left'
+      position='left'
       type='Overlap'
       overlap='Image'
       images={[
@@ -64,7 +65,7 @@ export const ProductPage = () => (
 
     <PromoElement
       heading='The strongest environmental stance of any major bank.'
-      type='accent'
+      type='accent square'
       text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       eyebrow='Sustainable Banking'
       image={{ src: 'http://via.placeholder.com/640', alt: 'Hero' }}
@@ -95,7 +96,11 @@ export const ProductPage = () => (
 
     <FAQ />
 
-    <ClosingCTA type='half' heading='Open online in about 10 minutes'>
+    <ClosingCTA
+      type='half'
+      heading='Open online in about 10 minutes'
+      image='http://via.placeholder.com/640'
+    >
       <a className='button button-tertiary' href='#'>
         Call to Action
       </a>
@@ -121,15 +126,23 @@ export const ProductPage = () => (
       ].map((item, index) => (
         <Card
           key={index}
-          imageSrc='http://via.placeholder.com/500x250'
+          image={{ src: 'http://via.placeholder.com/640', alt: 'image' }}
           heading={item.heading}
           linkText='View all'
-          flat
         >
           {item.text}
         </Card>
       ))}
     </ColumnCards>
+
+    <Legal
+      items={[
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, architecto.',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta eius, magni molestias nihil repellat.',
+        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam consectetur dolorum eos ipsam ipsum magnam ' +
+          'maxime, perspiciatis possimus quis reiciendis repellendus tenetur voluptatem voluptatum.'
+      ]}
+    />
 
     <footer style={placeholderStyle}>Footer</footer>
   </>

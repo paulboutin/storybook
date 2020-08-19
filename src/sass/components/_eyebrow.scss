@@ -20,11 +20,10 @@
 
   .eyebrow-text {
     text-transform: uppercase;
-    color: color('grey-80');
+    color: color('grey-70');
     margin-bottom: spacing(8);
     letter-spacing: 2px;
-    @include font-size('sm');
-    @include font-weight('semi-bold');
+    @include font-weight('bold');
   }
 
   .eyebrow-spacer {

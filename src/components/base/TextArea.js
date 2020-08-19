@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const TextArea = ({ id, value, error, label, ...attrs }) => (
+const TextArea = ({ id, value, error, help, label, ...attrs }) => (
   <div
     className={classNames(
       'input-block',
@@ -20,7 +20,7 @@ const TextArea = ({ id, value, error, label, ...attrs }) => (
       defaultValue={value}
       {...attrs}
     />
-    {error && <p className='input-error'>{error}</p>}
+    {help && <p className='input-help'>{help}</p>}
   </div>
 )
 

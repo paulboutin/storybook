@@ -2,7 +2,7 @@ import React from 'react'
 import { array, radios, text } from '@storybook/addon-knobs'
 import ListElement from '../../../components/layout/ListElement'
 
-const defaultPlaceholder = 'http://via.placeholder.com/500x400'
+const defaultImage = 'http://via.placeholder.com/640x480'
 
 const defaultItems = [
   '$0 monthly service charge with any deposit per statement',
@@ -18,18 +18,20 @@ const headerText = {
 }
 
 export const ListElementStory = () => {
-  const items = array('Items', defaultItems)
-  const placeholder = text('Placeholder', defaultPlaceholder)
   const type = radios('Type', ['Standard', 'Alt'], 'Standard')
-
+  const items = array('Items', defaultItems)
   const isAlt = type === 'Alt'
-  const image = isAlt && { src: placeholder, alt: 'Hero' }
+  let image
+
+  if (isAlt) {
+    image = text('Image', defaultImage)
+  }
 
   return (
     <ListElement
       headerText={headerText}
       altLayout={isAlt}
-      image={image}
+      image={isAlt ? { src: image, alt: 'List image' } : null}
       items={items}
     />
   )

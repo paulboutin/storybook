@@ -3,6 +3,10 @@ import { buildSnapshotTests } from '../utils'
 describe('Layout Components', () => {
   const stories = [
     {
+      title: 'legal',
+      component: 'legal'
+    },
+    {
       title: 'list-element standard',
       component: 'list-element-story',
       devices: ['mobile', 'tablet', 'desktop'],
@@ -57,9 +61,20 @@ describe('Layout Components', () => {
       'knob-Type': 'Standard'
     },
     {
-      title: 'promo-element accent',
+      title: 'promo-element full',
       component: 'promo-element-story',
-      'knob-Type': 'Accent'
+      'knob-Type': 'Full'
+    },
+    {
+      title: 'promo-element accent square',
+      component: 'promo-element-story',
+      'knob-Type': 'Accent Square'
+    },
+    {
+      title: 'promo-element accent dark',
+      component: 'promo-element-story',
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Type': 'Accent Dark'
     },
     {
       title: 'highlight single',
@@ -86,16 +101,68 @@ describe('Layout Components', () => {
       component: 'column-cards-story'
     },
     {
-      title: 'column-icons',
+      title: 'column-icons normal',
       component: 'column-icons-story',
-      devices: ['mobile', 'desktop'],
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Columns_config': 4,
       'knob-Inverted_config': false
     },
     {
       title: 'column-icons inverted',
       component: 'column-icons-story',
-      devices: ['mobile', 'desktop'],
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Columns_config': 5,
       'knob-Inverted_config': true
+    },
+    {
+      title: 'form single column',
+      component: 'form',
+      devices: ['mobile'],
+      'knob-Type': '1'
+    },
+    {
+      title: 'form two columns',
+      component: 'form',
+      devices: ['mobile'],
+      'knob-Type': '2'
+    },
+    {
+      title: 'infographic',
+      component: 'infographic-story',
+      devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'pull-quote',
+      component: 'pull-quote-story',
+      devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'video-hero',
+      component: 'video-hero-story'
+    },
+    {
+      title: 'dropdown-hero',
+      component: 'dropdown-hero-story'
+    },
+    {
+      title: 'resource-links',
+      component: 'resource-links',
+      devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'carousel',
+      component: 'carousel-story',
+      devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'articles',
+      component: 'articles',
+      devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'footer',
+      component: 'footer',
+      devices: ['mobile', 'tablet', 'desktop']
     }
   ]
   buildSnapshotTests('components-layout')(stories)

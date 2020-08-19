@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24"
+     xmlns:v="https://vecta.io/nano">
+    <defs>
+        <path d="M12.706 3.706c-.4-.4-1.027-.385-1.407-.006l-.186.186a1 1 0 0 0 .008 1.41l5.57 5.58H4.007c-.556 0-1.007.455-1.007.993v.263c0 .55.456.993 1.007.993H16.69l-5.57 5.58c-.39.392-.387 1.03-.008 1.4l.186.186a1 1 0 0 0 1.407-.006l7.94-7.94c.195-.195.197-.51 0-.706l-7.94-7.94z"
+              id="A"/>
+    </defs>
+    <use fill="#000" xlink:href="#A" fill-rule="evenodd"/>
+</svg>

@@ -9,14 +9,6 @@ module.exports = {
     '@storybook/addon-viewport/register'
   ],
   webpackFinal: async config => {
-    const svgRule = config.module.rules.find(rule => rule.test.test('.svg'))
-    svgRule.exclude = /\.svg$/
-
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ['@svgr/webpack']
-    })
-
     config.module.rules.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],

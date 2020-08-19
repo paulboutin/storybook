@@ -32,6 +32,39 @@
   background-color: color('grey-20');
 }
 
+.sb\:spacing-margin-section {
+  margin-bottom: spacing(48);
+}
+
+.sb\:spacing-pixel-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: spacing(48);
+
+  .input-block {
+    margin-bottom: spacing(8);
+  }
+
+  @include screen('sm') {
+    flex-direction: row;
+
+    .input-block {
+      margin-bottom: 0;
+      margin-right: spacing(8);
+    }
+
+    p {
+      width: 100%;
+      margin-top: spacing(8);
+
+      &:before {
+        content: 'Result: ';
+      }
+    }
+  }
+}
+
 @each $name, $size in $spacings {
   .sb\:spacing--#{$name} {
     width: $size;

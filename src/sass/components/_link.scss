@@ -1,5 +1,5 @@
 .link {
-  @include font-size('xs');
+  @include font-size('sm');
   color: color('green');
   cursor: pointer;
   text-decoration: underline;
@@ -10,8 +10,7 @@
 
   &:focus {
     color: color('green-light');
-    outline: 2px solid color('blue');
-    outline-offset: 2px;
+    @include focus-outline();
   }
 
   &:hover,
@@ -21,21 +20,16 @@
 }
 
 .link-inline {
-  @include screen('sm') {
-    @include font-size('sm');
-  }
-
-  @include screen('lg') {
-    @include font-size('base');
-  }
 }
 
 .link-standalone {
+  @include font-weight('semi-bold');
   text-decoration: none;
   display: inline-flex;
   align-items: center;
 
-  svg {
+  .icon {
+    font-size: 0.625rem;
     margin-left: spacing(8);
   }
 }

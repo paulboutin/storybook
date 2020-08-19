@@ -11,8 +11,6 @@
     "build:zip:styles": "cd src/sass && zip -r -X ../../public/styles.zip .",
     "build:zip:scripts": "cd src/js && zip -r -X ../../public/scripts.zip .",
     "build:storybook": "build-storybook -s public",
-    "dsm:publish": "dsm-storybook --auth-token ${DSM_TOKEN} publish",
-    "dsm:preview": "dsm-storybook --auth-token ${DSM_TOKEN:-preview} preview -s public --quiet",
     "lint": "pretty-quick",
     "test": "run-s test:unit test:snapshot",
     "test:unit": "jest -c test/unit/jest.config.js --passWithNoTests",
@@ -21,7 +19,6 @@
     "test:snapshot:update": "cross-env UPDATE_SNAPSHOT=true npm run test:snapshot"
   },
   "dependencies": {
-    "@invisionapp/dsm-storybook": "0.0.129",
     "@storybook/addon-backgrounds": "5.3.19",
     "@storybook/addon-knobs": "5.3.19",
     "@storybook/addon-options": "5.3.19",
@@ -31,21 +28,19 @@
     "@storybook/html": "5.3.19",
     "@whitespace/storybook-addon-html": "1.2.1",
     "classnames": "2.2.6",
-    "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react": "16.13.0",
+    "react-dom": "16.13.0"
   },
   "devDependencies": {
     "@babel/core": "7.10.2",
     "@babel/preset-env": "7.10.2",
     "@babel/preset-react": "7.10.4",
-    "@svgr/webpack": "5.4.0",
     "@testing-library/dom": "7.20.0",
     "@testing-library/jest-dom": "5.11.0",
     "@types/jest": "26.0.0",
     "autoprefixer": "9.8.0",
     "babel-jest": "26.0.1",
     "babel-loader": "8.1.0",
-    "babel-plugin-inline-react-svg": "1.1.1",
     "cross-env": "7.0.2",
     "husky": "4.2.5",
     "jest": "26.0.1",

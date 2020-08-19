@@ -1,5 +1,7 @@
 import accordions from './components/accordion'
 import inputs from './components/input'
+import selects from './components/select'
+import sliders from './components/slider'
 
 function ready(fn) {
   if (
@@ -16,6 +18,8 @@ function setup() {
   ready(() => {
     accordions()
     inputs()
+    selects()
+    sliders()
   })
 }
 

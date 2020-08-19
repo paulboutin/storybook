@@ -1,0 +1,19 @@
+.app-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: spacing(16) 0;
+
+  .app-cta-download:first-child {
+    margin-bottom: spacing(16);
+  }
+
+  @include screen('sm') {
+    flex-direction: row;
+
+    .app-cta-download:first-child {
+      margin-bottom: 0;
+      margin-right: spacing(16);
+    }
+  }
+}

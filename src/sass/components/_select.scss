@@ -1,0 +1,241 @@
+.select {
+  @include font-size('sm');
+  @include border-radius('base');
+  position: relative;
+  background-color: color('white');
+  border: 1px solid color('grey-30');
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+
+    .select-wrapper {
+      @include focus-outline();
+    }
+  }
+
+  .select-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: spacing(12);
+
+    &:hover {
+      .select-arrow {
+        color: color('green-dark');
+      }
+    }
+  }
+
+  .select-value {
+    margin-right: spacing(8);
+  }
+
+  .select-arrow {
+    @include font-size('lg');
+    line-height: 1;
+    color: color('green');
+  }
+
+  .select-items {
+    @include border-radius('base');
+    @include box-shadow('base');
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    border: 1px solid color('grey-5');
+    overflow: hidden;
+    display: none;
+  }
+
+  .select-placeholder {
+    padding: spacing(12);
+  }
+
+  .select-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: color('grey-70');
+    padding: spacing(8) spacing(12);
+    background-color: color('white');
+
+    &:before {
+      content: '';
+      display: block;
+      border-top: 1px solid color('grey-10');
+      position: absolute;
+      top: 0;
+      left: spacing(12);
+      right: spacing(12);
+    }
+
+    &:hover {
+      color: color('green');
+    }
+
+    &:focus {
+      outline: none;
+      color: color('green-dark');
+    }
+
+    .icon {
+      position: absolute;
+      right: spacing(12);
+      color: color('green-light');
+      font-size: 0.5rem;
+    }
+  }
+
+  .select-helper-text {
+    @include font-size('xs');
+    position: absolute;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-top: spacing(4);
+    color: color('grey-70');
+  }
+
+  &.select-open,
+  &.select-inline,
+  &.select-error {
+    .select-helper-text {
+      display: none;
+    }
+  }
+}
+
+.select-open {
+  @include border-radius('base', 'base', 'none', 'none');
+
+  &:focus {
+    .select-wrapper {
+      outline: none;
+    }
+  }
+
+  .select-value {
+    visibility: hidden;
+  }
+
+  .select-arrow {
+    transform: rotate(180deg);
+  }
+
+  .select-items {
+    display: block;
+  }
+}
+
+.select-keyboard {
+  &.select-open:focus {
+    .select-placeholder {
+      outline: 2px solid color('blue');
+      outline-offset: -6px;
+    }
+  }
+
+  .select-item:focus {
+    outline: 2px solid color('blue');
+    outline-offset: -6px;
+  }
+}
+
+.select-inline {
+  display: inline-block;
+  border: none;
+  margin: 0 spacing(4);
+
+  &.select-keyboard.select-open:focus {
+    .select-wrapper {
+      @include focus-outline();
+    }
+  }
+
+  .select-wrapper {
+    padding: 0;
+    margin-bottom: spacing(8);
+  }
+
+  .select-value {
+    visibility: visible;
+  }
+
+  .select-items {
+    top: unset;
+    right: unset;
+
+    li:nth-child(2) .select-item:before {
+      border-top: none;
+    }
+  }
+
+  .select-placeholder {
+    display: none;
+  }
+
+  .select-item {
+    white-space: nowrap;
+    padding-right: calc(#{spacing(12)} + 24px);
+  }
+}
+
+.select-error {
+  color: color('error');
+  border-color: color('error');
+
+  .select-arrow {
+    color: color('error');
+  }
+
+  .select-wrapper:hover {
+    .select-arrow {
+      color: color('error-dark');
+    }
+  }
+
+  .select-error-text {
+    @include font-size('xs');
+    position: absolute;
+    white-space: nowrap;
+    pointer-events: none;
+    margin-top: spacing(4);
+
+    .icon {
+      vertical-align: middle;
+      margin-right: spacing(4);
+    }
+  }
+
+  &.select-inline,
+  &.select-open {
+    .select-error-text {
+      display: none;
+    }
+  }
+
+  .select-helper-text {
+    display: none;
+  }
+}
+
+.select-disabled {
+  color: color('grey-10');
+  border-color: color('grey-10');
+  cursor: not-allowed;
+
+  &:focus {
+    .select-wrapper {
+      outline: none;
+    }
+  }
+
+  .select-arrow {
+    color: color('grey-10') !important;
+  }
+
+  .select-helper-text {
+    color: color('grey-10');
+  }
+}

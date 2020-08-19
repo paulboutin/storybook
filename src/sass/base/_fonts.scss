@@ -106,12 +106,12 @@
   src: url('/fonts/public-sans/bold.woff') format('woff');
 }
 
-/* Font Awesome */
+/* IcoMoon */
 
 @font-face {
-  font-family: 'Font Awesome 5 Free';
+  font-family: 'icomoon';
+  src: url('/fonts/icomoon/icomoon.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-weight: 900;
   font-display: block;
-  src: url('/fonts/font-awesome/fa-solid-900.woff') format('woff');
 }

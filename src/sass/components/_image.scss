@@ -1,0 +1,19 @@
+.ratio-auto {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.ratio-1\:1 {
+  @include fixed-ratio(1, 1);
+}
+
+.ratio-4\:3 {
+  @include fixed-ratio(4, 3);
+}
+
+.ratio-16\:9 {
+  @include fixed-ratio(16, 9);
+}

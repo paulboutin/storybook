@@ -21,7 +21,8 @@ describe('Base Components', () => {
     },
     {
       title: 'card standard',
-      component: 'card-story'
+      component: 'card-story',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'card flat',
@@ -29,9 +30,16 @@ describe('Base Components', () => {
       'knob-Type': 'Flat'
     },
     {
-      title: 'input',
+      title: 'input outline',
       component: 'input-story',
-      devices: ['mobile']
+      devices: ['mobile'],
+      'knob-Type': 'Outline'
+    },
+    {
+      title: 'input underline',
+      component: 'input-story',
+      devices: ['mobile'],
+      'knob-Type': 'Underline'
     },
     {
       title: 'image auto ratio',

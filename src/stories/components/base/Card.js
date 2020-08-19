@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import Card from '../../../components/base/Card'
 import { radios, text } from '@storybook/addon-knobs'
 
@@ -15,15 +16,16 @@ export const CardStory = () => {
   const type = radios('Type', ['Standard', 'Flat'], 'Standard')
 
   return (
-    <Card
-      heading={heading}
-      linkText={linkText}
-      imageSrc={placeholder}
-      imageAlt='Image'
-      flat={type === 'Flat'}
-    >
-      {cardText}
-    </Card>
+    <div className={classNames('sb:card', type === 'Flat' && 'flat')}>
+      <Card
+        heading={heading}
+        linkText={linkText}
+        image={{ src: placeholder, alt: 'Image' }}
+        flat={type === 'Flat'}
+      >
+        {cardText}
+      </Card>
+    </div>
   )
 }
 
