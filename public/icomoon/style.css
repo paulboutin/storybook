@@ -81,6 +81,9 @@
 .icon-linkedin:before {
   content: '\e913';
 }
+.icon-location:before {
+  content: '\e920';
+}
 .icon-lock:before {
   content: '\e914';
 }
