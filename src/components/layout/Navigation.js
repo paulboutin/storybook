@@ -200,54 +200,56 @@ const Navigation = () => {
 
       <header className='navigation-subheader'></header>
 
-      <aside className='navigation-menu'>
-        <div className='navigation-buttons'>
-          <Button type='secondary' label='Apply Now' />
-          <Button type='primary' label='Sign In' />
-        </div>
-
-        {menu.categories.map((category, index) => (
-          <div
-            key={index}
-            className='navigation-menu-category'
-            data-menu={`#${category.id}`}
-          >
-            <span>{category.name}</span>
-            <i className='icon icon-chevron-right' />
-          </div>
-        ))}
-
-        <div className='navigation-divider' />
-
-        {menu.links.map((link, index) => (
-          <div key={index} className='navigation-menu-link'>
-            <a href='#'>{link}</a>
-          </div>
-        ))}
-      </aside>
-
-      {menu.categories.map((category, categoryIndex) => (
-        <aside
-          key={categoryIndex}
-          id={category.id}
-          className='navigation-category-menu'
-        >
-          <div className='navigation-category-menu-header'>
-            <i className='navigation-category-menu-back icon icon-chevron-left' />
-            <div>{category.name}</div>
+      <div className='navigation-menus'>
+        <aside className='navigation-menu navigation-main-menu'>
+          <div className='navigation-buttons'>
+            <Button type='secondary' label='Apply Now' />
+            <Button type='primary' label='Sign In' />
           </div>
 
-          {category.products.map((product, productIndex) => (
-            <Accordion key={productIndex} title={product.name}>
-              {product.items.map((item, itemIndex) => (
-                <div key={itemIndex}>
-                  <a href='#'>{item}</a>
-                </div>
-              ))}
-            </Accordion>
+          {menu.categories.map((category, index) => (
+            <div
+              key={index}
+              className='navigation-main-menu-category'
+              data-menu={`#menu-${category.id}`}
+            >
+              <span>{category.name}</span>
+              <i className='icon icon-chevron-right' />
+            </div>
+          ))}
+
+          <div className='navigation-divider' />
+
+          {menu.links.map((link, index) => (
+            <div key={index} className='navigation-main-menu-link'>
+              <a href='#'>{link}</a>
+            </div>
           ))}
         </aside>
-      ))}
+
+        {menu.categories.map((category, categoryIndex) => (
+          <aside
+            key={categoryIndex}
+            id={`menu-${category.id}`}
+            className='navigation-menu navigation-category-menu'
+          >
+            <div className='navigation-category-menu-header'>
+              <i className='navigation-category-menu-back icon icon-chevron-left' />
+              <div>{category.name}</div>
+            </div>
+
+            {category.products.map((product, productIndex) => (
+              <Accordion key={productIndex} title={product.name}>
+                {product.items.map((item, itemIndex) => (
+                  <div key={itemIndex}>
+                    <a href='#'>{item}</a>
+                  </div>
+                ))}
+              </Accordion>
+            ))}
+          </aside>
+        ))}
+      </div>
     </nav>
   )
 }

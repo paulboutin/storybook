@@ -1,40 +1,42 @@
 export default () => {
   const navigation = document.querySelector('.navigation')
+  const menusWrapper = navigation.querySelector('.navigation-menus')
   const hamburger = navigation.querySelector('.hamburger')
-  const menu = navigation.querySelector('.navigation-menu')
-  const categories = menu.querySelectorAll('.navigation-menu-category')
-  const categoryMenus = navigation.querySelectorAll('.navigation-category-menu')
+  const mainMenu = navigation.querySelector('.navigation-main-menu')
+  const categories = navigation.querySelectorAll(
+    '.navigation-main-menu-category'
+  )
 
-  menu.style.top = `${navigation.clientHeight}px`
-
-  categoryMenus.forEach(categoryMenu => {
-    categoryMenu.style.top = `${navigation.clientHeight}px`
-  })
+  menusWrapper.style.top = `${navigation.clientHeight}px`
 
   hamburger.addEventListener('click', () => {
-    const categoryMenu = navigation.querySelector(
-      '.navigation-category-menu-open'
-    )
-    hamburger.classList.toggle('is-active')
-    menu.classList.toggle('navigation-menu-open')
+    if (mainMenu.classList.contains('navigation-menu-open')) {
+      const openCategoryMenu = navigation.querySelector(
+        '.navigation-category-menu.navigation-menu-open'
+      )
 
-    if (categoryMenu) {
-      categoryMenu.classList.remove('navigation-category-menu-open')
+      hamburger.classList.remove('is-active')
+      mainMenu.classList.remove('navigation-menu-open')
+
+      if (openCategoryMenu) {
+        openCategoryMenu.classList.remove('navigation-menu-open')
+      }
+    } else {
+      hamburger.classList.add('is-active')
+      mainMenu.classList.add('navigation-menu-open')
     }
   })
 
   categories.forEach(category => {
-    const categoryMenu = navigation.querySelector(category.dataset.menu)
-    const categoryMenuBack = categoryMenu.querySelector(
-      '.navigation-category-menu-back'
-    )
+    const menu = navigation.querySelector(category.dataset.menu)
+    const back = menu.querySelector('.navigation-category-menu-back')
 
     category.addEventListener('click', () => {
-      categoryMenu.classList.add('navigation-category-menu-open')
+      menu.classList.add('navigation-menu-open')
     })
 
-    categoryMenuBack.addEventListener('click', () => {
-      categoryMenu.classList.remove('navigation-category-menu-open')
+    back.addEventListener('click', () => {
+      menu.classList.remove('navigation-menu-open')
     })
   })
 }

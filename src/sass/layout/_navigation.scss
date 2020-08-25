@@ -63,12 +63,18 @@
     }
   }
 
-  .navigation-menu,
-  .navigation-category-menu {
+  .navigation-menus {
     position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .navigation-menu {
+    position: absolute;
+    height: 100%;
     width: 100%;
     left: -100%;
-    bottom: 0;
     padding: spacing(16);
     background-color: color('white');
     border-top: 1px solid color('grey-20');
@@ -81,7 +87,7 @@
     }
   }
 
-  .navigation-menu {
+  .navigation-main-menu {
     .navigation-buttons {
       display: flex;
       margin-bottom: spacing(24);
@@ -95,14 +101,14 @@
       }
     }
 
-    .navigation-menu-category,
-    .navigation-menu-link {
+    .navigation-main-menu-category,
+    .navigation-main-menu-link {
       padding: spacing(16) 0;
       border-bottom: 1px solid color('grey-20');
       cursor: pointer;
     }
 
-    .navigation-menu-category {
+    .navigation-main-menu-category {
       display: flex;
       align-items: center;
 
@@ -178,7 +184,6 @@
   }
 }
 
-.navigation-menu-open,
-.navigation-category-menu-open {
+.navigation-menu-open {
   left: 0 !important;
 }
