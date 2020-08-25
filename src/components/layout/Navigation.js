@@ -177,9 +177,16 @@ const Navigation = () => {
 
       <header className='navigation-header'>
         <div className='container'>
-          <div className='navigation-hamburger'>
-            <i className='icon icon-close' />
-          </div>
+          <button
+            className='hamburger hamburger--spring'
+            type='button'
+            aria-label='Menu'
+            aria-controls='navigation'
+          >
+            <span className='hamburger-box'>
+              <span className='hamburger-inner' />
+            </span>
+          </button>
 
           <a href='/'>
             <img

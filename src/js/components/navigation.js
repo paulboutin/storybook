@@ -1,6 +1,6 @@
 export default () => {
   const navigation = document.querySelector('.navigation')
-  const hamburger = navigation.querySelector('.navigation-hamburger')
+  const hamburger = navigation.querySelector('.hamburger')
   const menu = navigation.querySelector('.navigation-menu')
   const categories = menu.querySelectorAll('.navigation-menu-category')
   const categoryMenus = navigation.querySelectorAll('.navigation-category-menu')
@@ -15,6 +15,7 @@ export default () => {
     const categoryMenu = navigation.querySelector(
       '.navigation-category-menu-open'
     )
+    hamburger.classList.toggle('is-active')
     menu.classList.toggle('navigation-menu-open')
 
     if (categoryMenu) {

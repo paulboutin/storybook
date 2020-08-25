@@ -45,15 +45,9 @@
       align-items: center;
     }
 
-    .navigation-hamburger {
-      @include font-size('h1');
+    .hamburger {
       position: absolute;
       left: spacing(12);
-      cursor: pointer;
-
-      .icon {
-        line-height: 2;
-      }
     }
 
     .navigation-logo {
@@ -79,6 +73,12 @@
     background-color: color('white');
     border-top: 1px solid color('grey-20');
     transition: left 0.3s;
+
+    &:after {
+      content: '';
+      display: block;
+      height: spacing(32);
+    }
   }
 
   .navigation-menu {
