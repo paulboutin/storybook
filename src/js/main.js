@@ -1,5 +1,6 @@
 import accordions from './components/accordion'
 import inputs from './components/input'
+import navigation from './components/navigation'
 import selects from './components/select'
 import sliders from './components/slider'
 
@@ -18,6 +19,7 @@ function setup() {
   ready(() => {
     accordions()
     inputs()
+    navigation()
     selects()
     sliders()
   })
