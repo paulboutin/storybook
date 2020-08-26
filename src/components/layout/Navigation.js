@@ -161,43 +161,39 @@ const Navigation = () => {
   return (
     <nav className='navigation'>
       <header className='navigation-banner'>
-        <div className='container'>
-          <div className='navigation-banner-location hidden-xs'>
-            <i className='icon icon-location' />
-            California
-          </div>
+        <div className='navigation-banner-location hidden-xs'>
+          <i className='icon icon-location' />
+          California
+        </div>
 
-          <div className='navigation-banner-notice'>
-            Learn about our new 1% for the planet account
-          </div>
+        <div className='navigation-banner-notice'>
+          Learn about our new 1% for the planet account
+        </div>
 
-          <div className='navigation-banner-links hidden-xs hidden-sm'>
-            Help Center | Locations | Search
-          </div>
+        <div className='navigation-banner-links hidden-xs hidden-sm'>
+          Help Center | Locations | Search
         </div>
       </header>
 
       <header className='navigation-header'>
-        <div className='container'>
-          <button
-            className='hamburger hamburger--spring'
-            type='button'
-            aria-label='Menu'
-            aria-controls='navigation'
-          >
-            <span className='hamburger-box'>
-              <span className='hamburger-inner' />
-            </span>
-          </button>
+        <button
+          className='hamburger hamburger--spring'
+          type='button'
+          aria-label='Menu'
+          aria-controls='navigation'
+        >
+          <span className='hamburger-box'>
+            <span className='hamburger-inner' />
+          </span>
+        </button>
 
-          <a href='/'>
-            <img
-              src='/img/logo.svg'
-              alt='Bank of the West logo'
-              className='navigation-logo'
-            />
-          </a>
-        </div>
+        <a href='/'>
+          <img
+            src='/img/logo.svg'
+            alt='Bank of the West logo'
+            className='navigation-logo'
+          />
+        </a>
       </header>
 
       <header className='navigation-subheader'></header>
@@ -234,27 +230,29 @@ const Navigation = () => {
         </aside>
 
         <aside className='navigation-menu navigation-login-menu'>
-          <h2 className='navigation-login-title'>Sign In</h2>
+          <div className='navigation-login-menu-wrapper'>
+            <h2 className='navigation-login-title'>Sign In</h2>
 
-          <Input
-            id='navigation-login-username'
-            variant='outline'
-            type='text'
-            label='Username'
-            required
-          />
-          <Input
-            id='navigation-login-password'
-            variant='outline'
-            type='password'
-            label='Password'
-            required
-          />
+            <Input
+              id='navigation-login-username'
+              variant='outline'
+              type='text'
+              label='Username'
+              required
+            />
+            <Input
+              id='navigation-login-password'
+              variant='outline'
+              type='password'
+              label='Password'
+              required
+            />
 
-          <Link>Forgot password</Link>
-          <Button type='primary' label='Sign In' />
-          <div className='navigation-divider' />
-          <Link standalone>Open an Account</Link>
+            <Link>Forgot password</Link>
+            <Button type='primary' label='Sign In' />
+            <div className='navigation-divider' />
+            <Link standalone>Open an Account</Link>
+          </div>
         </aside>
 
         {menu.categories.map((category, categoryIndex) => (

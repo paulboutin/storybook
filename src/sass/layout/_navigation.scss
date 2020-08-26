@@ -1,17 +1,14 @@
 .navigation {
   .navigation-banner {
     @include font-size('xs');
+    display: flex;
+    justify-content: space-between;
     background-color: color('green-dark');
     color: color('white');
     padding: spacing(8) 0;
 
-    .container {
-      display: flex;
-      justify-content: space-between;
-
-      & > div {
-        flex-grow: 1;
-      }
+    @include screen('sm') {
+      padding: spacing(8) spacing(24);
     }
 
     .navigation-banner-location {
@@ -22,6 +19,7 @@
 
     .navigation-banner-notice {
       @include font-weight('bold');
+      flex-grow: 1;
       text-align: center;
 
       @include screen('sm') {
@@ -37,17 +35,18 @@
   }
 
   .navigation-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: spacing(16) 0;
-
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
 
     .hamburger {
       position: absolute;
       left: spacing(12);
+
+      @include screen('sm') {
+        left: spacing(48);
+      }
     }
 
     .navigation-logo {
@@ -84,6 +83,10 @@
     border-top: 1px solid color('grey-20');
     overflow: auto;
     transition: left 0.3s;
+
+    @include screen('sm') {
+      padding: spacing(16) spacing(48);
+    }
   }
 
   .navigation-main-menu {
@@ -124,6 +127,13 @@
   }
 
   .navigation-login-menu {
+    .navigation-login-menu-wrapper {
+      @include screen('sm') {
+        max-width: 350px;
+        margin: 0 auto;
+      }
+    }
+
     .navigation-login-title {
       margin-top: spacing(8);
     }
