@@ -95,15 +95,11 @@
       }
     }
 
-    .navigation-header-category,
-    .navigation-header-product {
+    .navigation-header-category {
       @include font-size('xs');
+      @include font-weight('semi-bold');
       margin: 0 spacing(8);
       cursor: pointer;
-    }
-
-    .navigation-header-category {
-      @include font-weight('semi-bold');
     }
 
     .navigation-header-category-active {
@@ -114,12 +110,30 @@
       position: absolute;
       bottom: 0;
       transform: translateY(100%);
-      align-items: center;
       display: none;
     }
 
     .navigation-header-products-active {
       display: flex;
+    }
+
+    .navigation-header-product {
+      @include font-size('xs');
+      display: flex;
+      align-items: center;
+      padding: 0 spacing(8);
+      cursor: pointer;
+    }
+
+    .navigation-header-product-active {
+      .navigation-header-product-name {
+        border-bottom-color: color('green');
+      }
+    }
+
+    .navigation-header-product-name {
+      border-bottom: 2px solid transparent;
+      margin-top: 2px;
     }
 
     .navigation-header-buttons {
@@ -151,6 +165,79 @@
     @include screen('md') {
       display: block;
     }
+  }
+
+  .navigation-dropdowns {
+    @include box-shadow('lg');
+    position: absolute;
+    left: 0;
+    right: 0;
+    border-top: 1px solid color('grey-20');
+    justify-content: flex-end;
+    display: none;
+
+    .navigation-dropdown {
+      width: 25%;
+      background-color: color('white');
+      padding: spacing(24) 0;
+      display: none;
+    }
+
+    .navigation-dropdown-active {
+      display: block;
+    }
+
+    .navigation-dropdown-item {
+      @include font-size('xs');
+      display: block;
+      padding: spacing(8) spacing(32);
+
+      &:hover {
+        background-color: color('grey-5');
+      }
+    }
+
+    .navigation-promo {
+      display: flex;
+      width: 75%;
+      background-color: color('green');
+      color: color('white');
+    }
+
+    .navigation-promo-content {
+      width: 55%;
+      padding: spacing(24) spacing(48);
+      padding-right: 0;
+
+      .app-cta {
+        margin-bottom: 0;
+      }
+    }
+
+    .navigation-promo-text {
+      @include font-size('xs');
+      margin-top: spacing(4);
+    }
+
+    .navigation-promo-image {
+      @include star-birds('dark');
+      position: relative;
+      background-size: cover;
+      background-position: right;
+      flex-grow: 1;
+
+      img {
+        position: absolute;
+        height: 100%;
+        width: calc(100% - #{spacing(96)});
+        left: spacing(48);
+        right: spacing(48);
+      }
+    }
+  }
+
+  .navigation-dropdowns-active {
+    display: flex;
   }
 
   .navigation-divider {

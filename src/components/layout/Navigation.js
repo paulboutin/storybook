@@ -4,6 +4,7 @@ import Button from '../base/Button'
 import Input from '../base/Input'
 import Link from '../base/Link'
 import Accordion from '../base/Accordion'
+import AppCTA from '../base/AppCTA'
 
 const Navigation = () => {
   const menu = {
@@ -219,8 +220,14 @@ const Navigation = () => {
                 })}
               >
                 {category.products.map((product, productIndex) => (
-                  <div key={productIndex} className='navigation-header-product'>
-                    {product.name}
+                  <div
+                    key={productIndex}
+                    data-dropdown={`#dropdown-${category.id}-${productIndex}`}
+                    className='navigation-header-product'
+                  >
+                    <span className='navigation-header-product-name'>
+                      {product.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -235,6 +242,43 @@ const Navigation = () => {
       </header>
 
       <header className='navigation-subheader' />
+
+      <div className='navigation-dropdowns'>
+        {menu.categories.map((category, categoryIndex) =>
+          category.products.map((product, productIndex) => (
+            <div
+              key={`${categoryIndex}-${productIndex}`}
+              id={`dropdown-${category.id}-${productIndex}`}
+              className='navigation-dropdown'
+            >
+              {product.items.map((item, itemIndex) => (
+                <a
+                  key={itemIndex}
+                  href='#'
+                  className='navigation-dropdown-item'
+                >
+                  {item}
+                </a>
+              ))}
+            </div>
+          ))
+        )}
+
+        <div className='navigation-promo'>
+          <div className='navigation-promo-content'>
+            <h3>Bank Whenever, Wherever</h3>
+            <p className='navigation-promo-text'>
+              The Bank of the West website and app offer 24/7 access to your
+              accounts and balances. With just a few clicks you can sign up.
+            </p>
+            <AppCTA />
+          </div>
+
+          <div className='navigation-promo-image'>
+            <img src='http://via.placeholder.com/640' alt='Promo image' />
+          </div>
+        </div>
+      </div>
 
       <div className='navigation-menus'>
         <aside className='navigation-menu navigation-main-menu'>

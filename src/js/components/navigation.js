@@ -55,8 +55,16 @@ function mobileSetup(navigation) {
   })
 }
 
+function hideDropdown(dropdowns, dropdown, product) {
+  product.classList.remove('navigation-header-product-active')
+  dropdown.classList.remove('navigation-dropdown-active')
+  dropdowns.classList.remove('navigation-dropdowns-active')
+}
+
 function desktopSetup(navigation) {
   const categories = navigation.querySelectorAll('.navigation-header-category')
+  const products = navigation.querySelectorAll('.navigation-header-product')
+  const dropdowns = navigation.querySelector('.navigation-dropdowns')
 
   categories.forEach(category => {
     const subheader = navigation.querySelector(category.dataset.subheader)
@@ -73,6 +81,42 @@ function desktopSetup(navigation) {
       activeSubheader.classList.remove('navigation-header-products-active')
       category.classList.add('navigation-header-category-active')
       subheader.classList.add('navigation-header-products-active')
+    })
+  })
+
+  products.forEach(product => {
+    const dropdown = navigation.querySelector(product.dataset.dropdown)
+
+    product.addEventListener('mouseenter', () => {
+      const activeDropdown = document.querySelector(
+        '.navigation-dropdown-active'
+      )
+      if (activeDropdown) {
+        const activeProduct = document.querySelector(
+          '.navigation-header-product-active'
+        )
+        hideDropdown(dropdowns, activeDropdown, activeProduct)
+      }
+
+      product.classList.add('navigation-header-product-active')
+      dropdown.classList.add('navigation-dropdown-active')
+      dropdowns.classList.add('navigation-dropdowns-active')
+    })
+
+    product.addEventListener('mouseleave', e => {
+      if (!dropdowns.contains(e.relatedTarget)) {
+        hideDropdown(dropdowns, dropdown, product)
+      }
+    })
+
+    dropdowns.addEventListener('mouseleave', e => {
+      const activeSubheader = document.querySelector(
+        '.navigation-header-products-active'
+      )
+      if (!activeSubheader.contains(e.relatedTarget)) {
+        product.classList.remove('navigation-header-product-active')
+        hideDropdown(dropdowns, dropdown, product)
+      }
     })
   })
 }
