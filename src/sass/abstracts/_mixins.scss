@@ -89,8 +89,8 @@
   outline-offset: 2px;
 }
 
-@mixin star-birds() {
-  background-image: url('/img/star-birds.svg');
+@mixin star-birds($color) {
+  background-image: url('/img/star-birds-#{$color}.svg');
   background-repeat: no-repeat;
   background-size: contain;
 }

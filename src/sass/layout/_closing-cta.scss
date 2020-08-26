@@ -146,6 +146,6 @@
 }
 
 .closing-cta-starbirds .closing-cta-image-wrapper {
-  @include star-birds();
+  @include star-birds('light');
   background-position: center;
 }

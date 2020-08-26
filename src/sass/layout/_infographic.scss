@@ -1,5 +1,5 @@
 .infographic {
-  @include star-birds();
+  @include star-birds('light');
   color: color('white');
   background-color: color('green-dark');
   text-align: center;

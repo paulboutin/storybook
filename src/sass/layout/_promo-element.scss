@@ -186,14 +186,14 @@
 }
 
 .promo-element-starbirds {
-  @include star-birds();
+  @include star-birds('light');
   background-position: center;
 
   @include screen('sm') {
     background: none;
 
     .promo-element-image-wrapper {
-      @include star-birds();
+      @include star-birds('light');
     }
   }
 }
