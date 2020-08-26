@@ -8,10 +8,12 @@
     padding: spacing(8) 0;
 
     @include screen('sm') {
-      padding: spacing(8) spacing(24);
+      padding: spacing(8) spacing(48);
     }
 
     .navigation-banner-location {
+      z-index: 1;
+
       .icon {
         margin-right: spacing(8);
       }
@@ -30,7 +32,16 @@
     }
 
     .navigation-banner-links {
-      text-align: right;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+
+      .navigation-link-separator {
+        display: inline-block;
+        height: calc(100% + #{spacing(4)});
+        border-right: 1px solid color('white');
+        margin: 0 spacing(8);
+      }
     }
   }
 

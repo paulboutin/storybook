@@ -171,7 +171,11 @@ const Navigation = () => {
         </div>
 
         <div className='navigation-banner-links hidden-xs hidden-sm'>
-          Help Center | Locations | Search
+          <a href='#'>Help Center</a>
+          <span className='navigation-link-separator' />
+          <a href='#'>Locations</a>
+          <span className='navigation-link-separator' />
+          <a href='#'>Search</a>
         </div>
       </header>
 
