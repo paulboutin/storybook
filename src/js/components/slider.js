@@ -1,3 +1,5 @@
+import { debounce } from '../utils'
+
 function setup() {
   const containers = document.querySelectorAll('.slider-container')
 
@@ -66,20 +68,6 @@ function getTransform(value, axis) {
 
 function triggerRepaint(element) {
   element.offsetHeight
-}
-
-function debounce(fn, delay) {
-  let timeout
-
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout)
-      fn(...args)
-    }
-
-    clearTimeout(timeout)
-    timeout = setTimeout(later, delay)
-  }
 }
 
 export default async () => {
