@@ -1,8 +1,15 @@
+import { debounce } from '../utils'
+
+function setup() {
+  const navigation = document.querySelector('.navigation')
+  const menusWrapper = navigation.querySelector('.navigation-menus')
+  menusWrapper.style.top = `${navigation.clientHeight}px`
+}
+
 export default () => {
   const navigation = document.querySelector('.navigation')
   if (!navigation) return
 
-  const menusWrapper = navigation.querySelector('.navigation-menus')
   const hamburger = navigation.querySelector('.hamburger')
   const mainMenu = navigation.querySelector('.navigation-main-menu')
   const loginButton = navigation.querySelector('#navigation-login-button')
@@ -11,7 +18,8 @@ export default () => {
     '.navigation-main-menu-category'
   )
 
-  menusWrapper.style.top = `${navigation.clientHeight}px`
+  setup()
+  window.addEventListener('resize', debounce(setup, 50))
 
   hamburger.addEventListener('click', () => {
     if (mainMenu.classList.contains('navigation-menu-open')) {
