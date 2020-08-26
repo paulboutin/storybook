@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import Button from '../base/Button'
 import Input from '../base/Input'
 import Link from '../base/Link'
@@ -198,13 +199,46 @@ const Navigation = () => {
             className='navigation-logo'
           />
         </a>
+
+        <div className='navigation-header-categories'>
+          {menu.categories.map((category, categoryIndex) => (
+            <React.Fragment key={categoryIndex}>
+              <div
+                data-subheader={`#subheader-${category.id}`}
+                className={classNames('navigation-header-category', {
+                  'navigation-header-category-active': categoryIndex === 0
+                })}
+              >
+                {category.name}
+              </div>
+
+              <div
+                id={`subheader-${category.id}`}
+                className={classNames('navigation-header-products', {
+                  'navigation-header-products-active': categoryIndex === 0
+                })}
+              >
+                {category.products.map((product, productIndex) => (
+                  <div key={productIndex} className='navigation-header-product'>
+                    {product.name}
+                  </div>
+                ))}
+              </div>
+            </React.Fragment>
+          ))}
+        </div>
+
+        <div className='navigation-header-buttons'>
+          <Button type='secondary' label='Apply Now' />
+          <Button type='primary' label='Sign In' />
+        </div>
       </header>
 
-      <header className='navigation-subheader'></header>
+      <header className='navigation-subheader' />
 
       <div className='navigation-menus'>
         <aside className='navigation-menu navigation-main-menu'>
-          <div className='navigation-buttons'>
+          <div className='navigation-main-menu-buttons'>
             <Button type='secondary' label='Apply Now' />
             <Button
               type='primary'
@@ -216,8 +250,8 @@ const Navigation = () => {
           {menu.categories.map((category, index) => (
             <div
               key={index}
-              className='navigation-main-menu-category'
               data-menu={`#menu-${category.id}`}
+              className='navigation-main-menu-category'
             >
               <span>{category.name}</span>
               <i className='icon icon-chevron-right' />

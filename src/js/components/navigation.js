@@ -1,15 +1,12 @@
 import { debounce } from '../utils'
 
-function setup() {
+function positionMenus() {
   const navigation = document.querySelector('.navigation')
   const menusWrapper = navigation.querySelector('.navigation-menus')
   menusWrapper.style.top = `${navigation.clientHeight}px`
 }
 
-export default () => {
-  const navigation = document.querySelector('.navigation')
-  if (!navigation) return
-
+function mobileSetup(navigation) {
   const hamburger = navigation.querySelector('.hamburger')
   const mainMenu = navigation.querySelector('.navigation-main-menu')
   const loginButton = navigation.querySelector('#navigation-login-button')
@@ -18,8 +15,8 @@ export default () => {
     '.navigation-main-menu-category'
   )
 
-  setup()
-  window.addEventListener('resize', debounce(setup, 50))
+  positionMenus()
+  window.addEventListener('resize', debounce(positionMenus, 50))
 
   hamburger.addEventListener('click', () => {
     if (mainMenu.classList.contains('navigation-menu-open')) {
@@ -56,4 +53,34 @@ export default () => {
       menu.classList.remove('navigation-menu-open')
     })
   })
+}
+
+function desktopSetup(navigation) {
+  const categories = navigation.querySelectorAll('.navigation-header-category')
+
+  categories.forEach(category => {
+    const subheader = navigation.querySelector(category.dataset.subheader)
+
+    category.addEventListener('click', () => {
+      const activeCategory = navigation.querySelector(
+        '.navigation-header-category-active'
+      )
+      const activeSubheader = navigation.querySelector(
+        '.navigation-header-products-active'
+      )
+
+      activeCategory.classList.remove('navigation-header-category-active')
+      activeSubheader.classList.remove('navigation-header-products-active')
+      category.classList.add('navigation-header-category-active')
+      subheader.classList.add('navigation-header-products-active')
+    })
+  })
+}
+
+export default () => {
+  const navigation = document.querySelector('.navigation')
+  if (!navigation) return
+
+  mobileSetup(navigation)
+  desktopSetup(navigation)
 }
