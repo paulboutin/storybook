@@ -3,6 +3,8 @@ export default () => {
   const menusWrapper = navigation.querySelector('.navigation-menus')
   const hamburger = navigation.querySelector('.hamburger')
   const mainMenu = navigation.querySelector('.navigation-main-menu')
+  const loginButton = navigation.querySelector('#navigation-login-button')
+  const loginMenu = navigation.querySelector('.navigation-login-menu')
   const categories = navigation.querySelectorAll(
     '.navigation-main-menu-category'
   )
@@ -17,6 +19,7 @@ export default () => {
 
       hamburger.classList.remove('is-active')
       mainMenu.classList.remove('navigation-menu-open')
+      loginMenu.classList.remove('navigation-menu-open')
 
       if (openCategoryMenu) {
         openCategoryMenu.classList.remove('navigation-menu-open')
@@ -25,6 +28,10 @@ export default () => {
       hamburger.classList.add('is-active')
       mainMenu.classList.add('navigation-menu-open')
     }
+  })
+
+  loginButton.addEventListener('click', () => {
+    loginMenu.classList.add('navigation-menu-open')
   })
 
   categories.forEach(category => {

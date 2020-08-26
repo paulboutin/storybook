@@ -1,5 +1,7 @@
 import React from 'react'
 import Button from '../base/Button'
+import Input from '../base/Input'
+import Link from '../base/Link'
 import Accordion from '../base/Accordion'
 
 const Navigation = () => {
@@ -204,7 +206,11 @@ const Navigation = () => {
         <aside className='navigation-menu navigation-main-menu'>
           <div className='navigation-buttons'>
             <Button type='secondary' label='Apply Now' />
-            <Button type='primary' label='Sign In' />
+            <Button
+              type='primary'
+              label='Sign In'
+              id='navigation-login-button'
+            />
           </div>
 
           {menu.categories.map((category, index) => (
@@ -225,6 +231,30 @@ const Navigation = () => {
               <a href='#'>{link}</a>
             </div>
           ))}
+        </aside>
+
+        <aside className='navigation-menu navigation-login-menu'>
+          <h2 className='navigation-login-title'>Sign In</h2>
+
+          <Input
+            id='navigation-login-username'
+            variant='outline'
+            type='text'
+            label='Username'
+            required
+          />
+          <Input
+            id='navigation-login-password'
+            variant='outline'
+            type='password'
+            label='Password'
+            required
+          />
+
+          <Link>Forgot password</Link>
+          <Button type='primary' label='Sign In' />
+          <div className='navigation-divider' />
+          <Link standalone>Open an Account</Link>
         </aside>
 
         {menu.categories.map((category, categoryIndex) => (

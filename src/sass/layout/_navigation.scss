@@ -63,6 +63,10 @@
     }
   }
 
+  .navigation-divider {
+    border-bottom: 1px solid color('grey-20');
+  }
+
   .navigation-menus {
     position: absolute;
     left: 0;
@@ -122,9 +126,36 @@
         color: color('green');
       }
     }
+  }
 
-    .navigation-divider {
-      border-bottom: 1px solid color('grey-20');
+  .navigation-login-menu {
+    .navigation-login-title {
+      margin-top: spacing(8);
+    }
+
+    .input-block {
+      margin-top: spacing(16);
+    }
+
+    .link {
+      @include font-weight('semi-bold');
+      display: inline-block;
+
+      &:nth-of-type(1) {
+        margin-top: spacing(24);
+      }
+
+      &:nth-of-type(2) {
+        margin-top: spacing(32);
+      }
+    }
+
+    .button {
+      display: block;
+      margin-top: spacing(24);
+      margin-bottom: spacing(32);
+      padding-left: spacing(48);
+      padding-right: spacing(48);
     }
   }
 
