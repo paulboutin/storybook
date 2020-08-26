@@ -1,5 +1,7 @@
 export default () => {
   const navigation = document.querySelector('.navigation')
+  if (!navigation) return
+
   const menusWrapper = navigation.querySelector('.navigation-menus')
   const hamburger = navigation.querySelector('.hamburger')
   const mainMenu = navigation.querySelector('.navigation-main-menu')
