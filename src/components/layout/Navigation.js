@@ -163,13 +163,13 @@ const Navigation = () => {
   return (
     <nav className='navigation'>
       <header className='navigation-banner'>
-        <div className='navigation-banner-location hidden-xs'>
+        <div className='navigation-banner-location'>
           <i className='icon icon-location' />
           California
         </div>
 
-        <div className='navigation-banner-notice'>
-          Learn about our new 1% for the planet account
+        <div className='navigation-banner-notice hidden-xs'>
+          <a href='#'>Learn about our new 1% for the planet account</a>
         </div>
 
         <div className='navigation-banner-links hidden-xs hidden-sm'>
@@ -236,7 +236,7 @@ const Navigation = () => {
         </div>
 
         <div className='navigation-header-buttons'>
-          <Button type='secondary' label='Apply Now' />
+          <Button type='ghost' label='Apply Now' />
           <Button type='primary' label='Sign In' />
         </div>
       </header>
@@ -283,7 +283,7 @@ const Navigation = () => {
       <div className='navigation-menus'>
         <aside className='navigation-menu navigation-main-menu'>
           <div className='navigation-main-menu-buttons'>
-            <Button type='secondary' label='Apply Now' />
+            <Button type='ghost' label='Apply Now' />
             <Button
               type='primary'
               label='Sign In'

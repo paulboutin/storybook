@@ -5,7 +5,7 @@
     justify-content: space-between;
     background-color: color('green-dark');
     color: color('white');
-    padding: spacing(8) 0;
+    padding: spacing(8) spacing(12);
 
     @include screen('sm') {
       padding: spacing(8) spacing(48);
@@ -17,6 +17,7 @@
 
     .navigation-banner-location {
       z-index: 1;
+      cursor: pointer;
 
       .icon {
         margin-right: spacing(8);
@@ -321,7 +322,7 @@
     }
 
     .input-block {
-      margin-top: spacing(16);
+      margin-top: spacing(24);
     }
 
     .link {

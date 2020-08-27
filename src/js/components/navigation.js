@@ -1,5 +1,13 @@
 import { debounce } from '../utils'
 
+function setup(navigation) {
+  const location = navigation.querySelector('.navigation-banner-location')
+
+  location.addEventListener('click', () => {
+    alert('Not implemented')
+  })
+}
+
 function positionMenus() {
   const navigation = document.querySelector('.navigation')
   const menusWrapper = navigation.querySelector('.navigation-menus')
@@ -125,6 +133,7 @@ export default () => {
   const navigation = document.querySelector('.navigation')
   if (!navigation) return
 
+  setup(navigation)
   mobileSetup(navigation)
   desktopSetup(navigation)
 }
