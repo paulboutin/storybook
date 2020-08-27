@@ -6,6 +6,15 @@ const viewports = {
 
 const defaultDevices = ['mobile', 'tablet']
 
+page.waitForTransition = async selector => {
+  await page.evaluate(selector => {
+    return new Promise(resolve => {
+      const element = document.querySelector(selector)
+      element.addEventListener('transitionend', resolve)
+    })
+  }, selector)
+}
+
 export const getStoryUrl = ({ block, component, ...extra }) => {
   const BASE_URL = `http://localhost:${process.env.PORT}/iframe.html`
 
@@ -43,14 +52,21 @@ export const buildSnapshotTests = block => stories => {
           // Act
           await page.setViewport(viewport)
           await page.goto(url, { waitUntil: 'networkidle2' })
+          if (story.callback) {
+            await story.callback()
+          }
 
-          const storybook = await page.$('body')
-          const image = await storybook.screenshot()
+          let image
+          if (story.fullPage) {
+            image = await page.screenshot({ fullPage: true })
+          } else {
+            const body = await page.$('body')
+            image = await body.screenshot()
+            await body.dispose()
+          }
 
           // Assert
           expect(image).toMatchImageSnapshot()
-
-          await storybook.dispose()
         })
       })
     })
