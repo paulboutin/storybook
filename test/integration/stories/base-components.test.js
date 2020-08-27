@@ -71,6 +71,44 @@ describe('Base Components', () => {
         await page.click('.switch')
         await page.waitForTransition('.switch-circle')
       }
+    },
+    {
+      title: 'select helper',
+      component: 'select-story',
+      devices: ['mobile'],
+      'knob-Helper': true
+    },
+    {
+      title: 'select error',
+      component: 'select-story',
+      devices: ['mobile'],
+      'knob-Error': true
+    },
+    {
+      title: 'select disabled',
+      component: 'select-story',
+      devices: ['mobile'],
+      'knob-Disabled': true
+    },
+    {
+      title: 'select inline',
+      component: 'select-story',
+      devices: ['mobile'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.select')
+      },
+      'knob-Inline': true
+    },
+    {
+      title: 'select',
+      component: 'select-story',
+      devices: ['mobile'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.select')
+        await page.hover('.select-item')
+      }
     }
   ]
   buildSnapshotTests('components-base')(stories)

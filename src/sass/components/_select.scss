@@ -210,6 +210,8 @@
 
   &.select-inline,
   &.select-open {
+    border-color: transparent;
+
     .select-error-text {
       display: none;
     }
