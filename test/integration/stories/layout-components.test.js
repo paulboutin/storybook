@@ -162,7 +162,17 @@ describe('Layout Components', () => {
     {
       title: 'footer',
       component: 'footer',
-      devices: ['mobile', 'tablet', 'desktop']
+      devices: ['tablet', 'desktop']
+    },
+    {
+      title: 'footer',
+      component: 'footer',
+      devices: ['mobile'],
+      callback: async () => {
+        await page.click('.accordion:first-of-type')
+        await page.click('.accordion:last-of-type')
+        await page.waitForTransition('.accordion-content')
+      }
     }
   ]
   buildSnapshotTests('components-layout')(stories)
