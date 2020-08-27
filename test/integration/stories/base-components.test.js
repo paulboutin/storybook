@@ -57,6 +57,20 @@ describe('Base Components', () => {
       component: 'image-story',
       devices: ['mobile'],
       'knob-Ratio': '4:3'
+    },
+    {
+      title: 'switch off',
+      component: 'switch-story',
+      devices: ['mobile']
+    },
+    {
+      title: 'switch on',
+      component: 'switch-story',
+      devices: ['mobile'],
+      callback: async () => {
+        await page.click('.switch')
+        await page.waitForTransition('.switch-circle')
+      }
     }
   ]
   buildSnapshotTests('components-base')(stories)
