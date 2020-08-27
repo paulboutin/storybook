@@ -12,7 +12,7 @@ const Footer = () => (
         className='footer-starbirds'
       />
 
-      <Accordion title='Get to know us' inverted expanded>
+      <Accordion title='Get to know us' inverted>
         <Link>About Us</Link>
         <Link>Press</Link>
         <Link>Careers</Link>
@@ -44,7 +44,7 @@ const Footer = () => (
     <div className='footer-links hidden-xs'>
       <div className='container'>
         <div className='row'>
-          <div className='footer-column col-sm-4 col-md-3'>
+          <div className='footer-column col-sm-6 col-sm-offset-1 col-md-3 col-md-offset-0'>
             <h6 className='footer-column-title'>About us</h6>
             <Link>What we believe</Link>
             <Link>Press Center</Link>
@@ -54,7 +54,7 @@ const Footer = () => (
             <Link>Feedback</Link>
           </div>
 
-          <div className='footer-column col-sm-4 col-md-3'>
+          <div className='footer-column col-sm-5 col-md-3'>
             <h6 className='footer-column-title'>Need help?</h6>
             <Link>FAQs</Link>
             <Link>Customer service</Link>
@@ -62,7 +62,7 @@ const Footer = () => (
             <Link>Branch Locator</Link>
           </div>
 
-          <div className='footer-column col-sm-4 col-md-3'>
+          <div className='footer-column col-sm-6 col-sm-offset-1 col-md-3 col-md-offset-0'>
             <h6 className='footer-column-title'>Products & Services</h6>
             <Link>Checking</Link>
             <Link>Savings</Link>
@@ -71,7 +71,7 @@ const Footer = () => (
             <Link>Mortgages</Link>
           </div>
 
-          <div className='footer-column col-sm-12 col-md-3'>
+          <div className='footer-column col-sm-5 col-md-3'>
             <h6 className='footer-column-title'>Download the app</h6>
             <AppCTA />
           </div>
@@ -95,6 +95,9 @@ const Footer = () => (
         </a>
         <a href='#'>
           <i className='icon icon-youtube' />
+        </a>
+        <a href='#'>
+          <i className='icon icon-help' />
         </a>
       </div>
 
