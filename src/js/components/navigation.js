@@ -32,6 +32,7 @@ function mobileSetup(navigation) {
         '.navigation-category-menu.navigation-menu-open'
       )
 
+      document.body.classList.remove('navigation-open')
       hamburger.classList.remove('is-active')
       mainMenu.classList.remove('navigation-menu-open')
       loginMenu.classList.remove('navigation-menu-open')
@@ -40,6 +41,7 @@ function mobileSetup(navigation) {
         openCategoryMenu.classList.remove('navigation-menu-open')
       }
     } else {
+      document.body.classList.add('navigation-open')
       hamburger.classList.add('is-active')
       mainMenu.classList.add('navigation-menu-open')
     }

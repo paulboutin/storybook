@@ -1,3 +1,9 @@
+body.navigation-open {
+  @include screen('md', 'down') {
+    overflow: hidden;
+  }
+}
+
 .navigation {
   .navigation-container {
     @include screen('lg') {
@@ -186,6 +192,7 @@
     position: absolute;
     left: 0;
     right: 0;
+    z-index: 1000;
     border-top: 1px solid color('grey-20');
     background-image: linear-gradient(
       to right,
@@ -285,6 +292,7 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 1000;
 
     @include screen('md') {
       display: none;
