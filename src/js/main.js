@@ -1,6 +1,7 @@
 import accordions from './components/accordion'
 import inputs from './components/input'
 import navigation from './components/navigation'
+import popupVideo from './components/popup-video'
 import selects from './components/select'
 import sliders from './components/slider'
 
@@ -20,6 +21,7 @@ function setup() {
     accordions()
     inputs()
     navigation()
+    popupVideo()
     selects()
     sliders()
   })

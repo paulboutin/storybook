@@ -137,6 +137,10 @@ describe('Layout Components', () => {
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
+      title: 'popup-video',
+      component: 'popup-video-story'
+    },
+    {
       title: 'video-hero',
       component: 'video-hero-story'
     },
