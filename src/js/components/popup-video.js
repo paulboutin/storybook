@@ -3,7 +3,7 @@ export default () => {
   if (!popupVideo) return
 
   const play = popupVideo.querySelector('.button')
-  const close = popupVideo.querySelector('.popup-video-modal')
+  const close = popupVideo.querySelector('.icon-close')
   const iframe = popupVideo.querySelector('iframe')
   const player = new Vimeo.Player(iframe)
 
