@@ -163,119 +163,125 @@ const Navigation = () => {
   return (
     <nav className='navigation'>
       <header className='navigation-banner'>
-        <div className='navigation-banner-location'>
-          <i className='icon icon-location' />
-          California
-        </div>
+        <div className='navigation-container'>
+          <div className='navigation-banner-location'>
+            <i className='icon icon-location' />
+            California
+          </div>
 
-        <div className='navigation-banner-notice hidden-xs'>
-          <a href='#'>Learn about our new 1% for the planet account</a>
-        </div>
+          <div className='navigation-banner-notice hidden-xs'>
+            <a href='#'>Learn about our new 1% for the planet account</a>
+          </div>
 
-        <div className='navigation-banner-links hidden-xs hidden-sm'>
-          <a href='#'>Help Center</a>
-          <span className='navigation-link-separator' />
-          <a href='#'>Locations</a>
-          <span className='navigation-link-separator' />
-          <a href='#'>Search</a>
+          <div className='navigation-banner-links hidden-xs hidden-sm'>
+            <a href='#'>Help Center</a>
+            <span className='navigation-link-separator' />
+            <a href='#'>Locations</a>
+            <span className='navigation-link-separator' />
+            <a href='#'>Search</a>
+          </div>
         </div>
       </header>
 
       <header className='navigation-header'>
-        <button
-          className='hamburger hamburger--spring'
-          type='button'
-          aria-label='Menu'
-          aria-controls='navigation'
-        >
-          <span className='hamburger-box'>
-            <span className='hamburger-inner' />
-          </span>
-        </button>
+        <div className='navigation-container'>
+          <button
+            className='hamburger hamburger--spring'
+            type='button'
+            aria-label='Menu'
+            aria-controls='navigation'
+          >
+            <span className='hamburger-box'>
+              <span className='hamburger-inner' />
+            </span>
+          </button>
 
-        <a href='/'>
-          <img
-            src='/img/logo.svg'
-            alt='Bank of the West logo'
-            className='navigation-logo'
-          />
-        </a>
+          <a href='/'>
+            <img
+              src='/img/logo.svg'
+              alt='Bank of the West logo'
+              className='navigation-logo'
+            />
+          </a>
 
-        <div className='navigation-header-categories'>
-          {menu.categories.map((category, categoryIndex) => (
-            <React.Fragment key={categoryIndex}>
-              <div
-                data-subheader={`#subheader-${category.id}`}
-                className={classNames('navigation-header-category', {
-                  'navigation-header-category-active': categoryIndex === 0
-                })}
-              >
-                {category.name}
-              </div>
+          <div className='navigation-header-categories'>
+            {menu.categories.map((category, categoryIndex) => (
+              <React.Fragment key={categoryIndex}>
+                <div
+                  data-subheader={`#subheader-${category.id}`}
+                  className={classNames('navigation-header-category', {
+                    'navigation-header-category-active': categoryIndex === 0
+                  })}
+                >
+                  {category.name}
+                </div>
 
-              <div
-                id={`subheader-${category.id}`}
-                className={classNames('navigation-header-products', {
-                  'navigation-header-products-active': categoryIndex === 0
-                })}
-              >
-                {category.products.map((product, productIndex) => (
-                  <div
-                    key={productIndex}
-                    data-dropdown={`#dropdown-${category.id}-${productIndex}`}
-                    className='navigation-header-product'
-                  >
-                    <span className='navigation-header-product-name'>
-                      {product.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </React.Fragment>
-          ))}
-        </div>
+                <div
+                  id={`subheader-${category.id}`}
+                  className={classNames('navigation-header-products', {
+                    'navigation-header-products-active': categoryIndex === 0
+                  })}
+                >
+                  {category.products.map((product, productIndex) => (
+                    <div
+                      key={productIndex}
+                      data-dropdown={`#dropdown-${category.id}-${productIndex}`}
+                      className='navigation-header-product'
+                    >
+                      <span className='navigation-header-product-name'>
+                        {product.name}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </React.Fragment>
+            ))}
+          </div>
 
-        <div className='navigation-header-buttons'>
-          <Button type='ghost' label='Apply Now' />
-          <Button type='primary' label='Sign In' />
+          <div className='navigation-header-buttons'>
+            <Button type='ghost' label='Apply Now' />
+            <Button type='primary' label='Sign In' />
+          </div>
         </div>
       </header>
 
       <header className='navigation-subheader' />
 
       <div className='navigation-dropdowns'>
-        {menu.categories.map((category, categoryIndex) =>
-          category.products.map((product, productIndex) => (
-            <div
-              key={`${categoryIndex}-${productIndex}`}
-              id={`dropdown-${category.id}-${productIndex}`}
-              className='navigation-dropdown'
-            >
-              {product.items.map((item, itemIndex) => (
-                <a
-                  key={itemIndex}
-                  href='#'
-                  className='navigation-dropdown-item'
-                >
-                  {item}
-                </a>
-              ))}
+        <div className='navigation-container'>
+          {menu.categories.map((category, categoryIndex) =>
+            category.products.map((product, productIndex) => (
+              <div
+                key={`${categoryIndex}-${productIndex}`}
+                id={`dropdown-${category.id}-${productIndex}`}
+                className='navigation-dropdown'
+              >
+                {product.items.map((item, itemIndex) => (
+                  <a
+                    key={itemIndex}
+                    href='#'
+                    className='navigation-dropdown-item'
+                  >
+                    {item}
+                  </a>
+                ))}
+              </div>
+            ))
+          )}
+
+          <div className='navigation-promo'>
+            <div className='navigation-promo-content'>
+              <h3>Bank Whenever, Wherever</h3>
+              <p className='navigation-promo-text'>
+                The Bank of the West website and app offer 24/7 access to your
+                accounts and balances. With just a few clicks you can sign up.
+              </p>
+              <AppCTA />
             </div>
-          ))
-        )}
 
-        <div className='navigation-promo'>
-          <div className='navigation-promo-content'>
-            <h3>Bank Whenever, Wherever</h3>
-            <p className='navigation-promo-text'>
-              The Bank of the West website and app offer 24/7 access to your
-              accounts and balances. With just a few clicks you can sign up.
-            </p>
-            <AppCTA />
-          </div>
-
-          <div className='navigation-promo-image'>
-            <img src='http://via.placeholder.com/640' alt='Promo image' />
+            <div className='navigation-promo-image'>
+              <img src='http://via.placeholder.com/640' alt='Promo image' />
+            </div>
           </div>
         </div>
       </div>

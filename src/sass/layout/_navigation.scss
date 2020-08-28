@@ -1,18 +1,29 @@
 .navigation {
+  .navigation-container {
+    @include screen('lg') {
+      width: 1200px !important;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
   .navigation-banner {
     @include font-size('xs');
-    display: flex;
-    justify-content: space-between;
     background-color: color('green-dark');
     color: color('white');
-    padding: spacing(8) spacing(12);
 
-    @include screen('sm') {
-      padding: spacing(8) spacing(48);
-    }
+    .navigation-container {
+      display: flex;
+      justify-content: space-between;
+      padding: spacing(8) spacing(12);
 
-    @include screen('md') {
-      padding: spacing(8) spacing(32);
+      @include screen('sm') {
+        padding: spacing(8) spacing(48);
+      }
+
+      @include screen('md') {
+        padding: spacing(8) spacing(32);
+      }
     }
 
     .navigation-banner-location {
@@ -51,14 +62,16 @@
   }
 
   .navigation-header {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: spacing(16) 0;
+    .navigation-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: spacing(16) 0;
 
-    @include screen('md') {
-      padding: spacing(16) spacing(32);
+      @include screen('md') {
+        padding: spacing(16) spacing(32);
+      }
     }
 
     .hamburger {
@@ -144,8 +157,8 @@
         display: block;
       }
 
-      .button:first-child {
-        margin-right: spacing(12);
+      .button {
+        margin-right: spacing(16);
       }
     }
   }
@@ -174,12 +187,20 @@
     left: 0;
     right: 0;
     border-top: 1px solid color('grey-20');
-    justify-content: flex-end;
+    background-image: linear-gradient(
+      to right,
+      color('white') 50%,
+      color('green') 50%
+    );
     display: none;
+
+    .navigation-container {
+      display: flex;
+      width: 100%;
+    }
 
     .navigation-dropdown {
       width: 25%;
-      background-color: color('white');
       padding: spacing(24) 0;
       display: none;
     }
@@ -210,6 +231,10 @@
       padding: spacing(24) spacing(48);
       padding-right: 0;
 
+      @include screen('lg') {
+        width: 50%;
+      }
+
       .app-cta {
         margin-bottom: 0;
       }
@@ -227,18 +252,28 @@
       background-position: right;
       flex-grow: 1;
 
+      @include screen('lg') {
+        background-size: contain;
+        background-position: center;
+      }
+
       img {
         position: absolute;
         height: 100%;
         width: calc(100% - #{spacing(96)});
         left: spacing(48);
-        right: spacing(48);
+        object-fit: cover;
+
+        @include screen('lg') {
+          width: calc(100% - #{spacing(64)} - #{spacing(64)});
+          left: spacing(64);
+        }
       }
     }
   }
 
   .navigation-dropdowns-active {
-    display: flex;
+    display: block;
   }
 
   .navigation-divider {
