@@ -1,6 +1,14 @@
-@mixin screen($size) {
-  @media (min-width: map-get($screens, $size)) {
-    @content;
+@mixin screen($size, $direction: 'up') {
+  $width: map-get($screens, $size);
+
+  @if $direction == 'up' {
+    @media (min-width: $width) {
+      @content;
+    }
+  } @else if $direction == 'down' {
+    @media (max-width: $width - 1px) {
+      @content;
+    }
   }
 }
 
