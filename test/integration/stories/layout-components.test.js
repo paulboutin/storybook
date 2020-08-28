@@ -173,6 +173,52 @@ describe('Layout Components', () => {
         await page.click('.accordion:last-of-type')
         await page.waitForTransition('.accordion-content')
       }
+    },
+    {
+      title: 'navigation main menu',
+      component: 'navigation',
+      devices: ['mobile', 'tablet'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.hamburger')
+        await page.waitForTransition('.navigation-main-menu')
+      }
+    },
+    {
+      title: 'navigation login menu',
+      component: 'navigation',
+      devices: ['mobile', 'tablet'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.hamburger')
+        await page.waitForTransition('.navigation-main-menu')
+        await page.click('#navigation-login-button')
+        await page.waitForTransition('.navigation-login-menu')
+      }
+    },
+    {
+      title: 'navigation category menu',
+      component: 'navigation',
+      devices: ['mobile', 'tablet'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.hamburger')
+        await page.waitForTransition('.navigation-main-menu')
+        await page.click('.navigation-main-menu-category')
+        await page.waitForTransition('.navigation-category-menu')
+        await page.click('.accordion')
+        await page.waitForTransition('.accordion-content')
+      }
+    },
+    {
+      title: 'navigation',
+      component: 'navigation',
+      devices: ['desktop'],
+      fullPage: true,
+      callback: async () => {
+        await page.hover('.navigation-header-product')
+        await page.hover('.navigation-dropdown-item')
+      }
     }
   ]
   buildSnapshotTests('components-layout')(stories)
