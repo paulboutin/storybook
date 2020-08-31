@@ -57,7 +57,7 @@
 
   .popup-video-modal {
     @include overlay('medium');
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -86,13 +86,15 @@
   }
 }
 
-.popup-video-playing {
+body.popup-video-playing {
+  overflow: hidden;
+
   .popup-video-modal {
     opacity: 1;
     pointer-events: auto;
   }
 
   .popup-video-iframe {
-    transform: scale(0.8);
+    transform: scale(0.9);
   }
 }

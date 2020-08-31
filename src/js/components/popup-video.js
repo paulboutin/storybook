@@ -8,12 +8,14 @@ export default () => {
   const player = new Vimeo.Player(iframe)
 
   play.addEventListener('click', () => {
-    popupVideo.classList.add('popup-video-playing')
+    popupVideo.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    document.body.classList.add('popup-video-playing')
     player.play()
   })
 
   close.addEventListener('click', () => {
+    popupVideo.scrollIntoView({ behavior: 'smooth', block: 'center' })
     player.pause()
-    popupVideo.classList.remove('popup-video-playing')
+    document.body.classList.remove('popup-video-playing')
   })
 }
