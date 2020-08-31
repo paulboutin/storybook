@@ -10,6 +10,8 @@ function setup(navigation) {
 
 function positionMenus() {
   const navigation = document.querySelector('.navigation')
+  if (!navigation) return
+
   const menusWrapper = navigation.querySelector('.navigation-menus')
   menusWrapper.style.top = `${navigation.clientHeight}px`
 }
