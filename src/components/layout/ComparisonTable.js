@@ -6,9 +6,15 @@ import { ListElementItems } from './ListElement'
 const ComparisonTable = () => (
   <div className='comparison-table'>
     <div className='comparison-table-column'>
-      <h4 className='comparison-table-title'>Any Deposit Checking</h4>
-      <p>An account that makes it easy to waive the monthly service charge</p>
-      <Button type='primary' label='Apply Now' />
+      <div className='comparison-table-wrapper'>
+        <div>
+          <h4 className='comparison-table-title'>Any Deposit Checking</h4>
+          <p>
+            An account that makes it easy to waive the monthly service charge
+          </p>
+        </div>
+        <Button type='primary' label='Apply Now' />
+      </div>
       <div className='comparison-table-divider' />
 
       <ListElementItems
@@ -19,13 +25,19 @@ const ComparisonTable = () => (
         ]}
       />
 
-      <Link standalone>View account details</Link>
+      <div className='comparison-table-link-container'>
+        <Link standalone>View account details</Link>
+      </div>
     </div>
 
     <div className='comparison-table-column'>
-      <h4 className='comparison-table-title'>1% for the Planet</h4>
-      <p>An account that helps the planet (at no cost to you)</p>
-      <Button type='primary' label='Apply Now' />
+      <div className='comparison-table-wrapper'>
+        <div>
+          <h4 className='comparison-table-title'>1% for the Planet</h4>
+          <p>An account that helps the planet (at no cost to you)</p>
+        </div>
+        <Button type='primary' label='Apply Now' />
+      </div>
       <div className='comparison-table-divider' />
       <p className='comparison-table-extra'>
         All the benefits of our Any Deposit Checking account, plus:
@@ -39,13 +51,21 @@ const ComparisonTable = () => (
         ]}
       />
 
-      <Link standalone>View account details</Link>
+      <div className='comparison-table-link-container'>
+        <Link standalone>View account details</Link>
+      </div>
     </div>
 
     <div className='comparison-table-column'>
-      <h4 className='comparison-table-title'>Premier Checking</h4>
-      <p>An account with the highest level of service and travel benefits</p>
-      <Button type='primary' label='Apply Now' />
+      <div className='comparison-table-wrapper'>
+        <div>
+          <h4 className='comparison-table-title'>Premier Checking</h4>
+          <p>
+            An account with the highest level of service and travel benefits
+          </p>
+        </div>
+        <Button type='primary' label='Apply Now' />
+      </div>
       <div className='comparison-table-divider' />
 
       <ListElementItems
@@ -57,7 +77,9 @@ const ComparisonTable = () => (
         ]}
       />
 
-      <Link standalone>View account details</Link>
+      <div className='comparison-table-link-container'>
+        <Link standalone>View account details</Link>
+      </div>
     </div>
   </div>
 )
