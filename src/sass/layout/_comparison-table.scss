@@ -1,21 +1,40 @@
 .comparison-table {
+  display: flex;
+  flex-direction: column;
   padding: spacing(32) spacing(16);
 
   @include screen('sm') {
     padding: spacing(32) spacing(24);
   }
 
+  @include screen('md') {
+    padding: spacing(32);
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
   .comparison-table-column {
+    @include font-size('sm');
     @include box-shadow('sm');
     padding: spacing(24);
     text-align: center;
+    flex: 1;
 
     &:not(:first-child) {
       margin-top: spacing(24);
+
+      @include screen('md') {
+        margin-top: 0;
+        margin-left: spacing(24);
+      }
     }
 
     @include screen('sm') {
       padding: spacing(32) spacing(24);
+    }
+
+    @include screen('md') {
+      padding: spacing(24) spacing(16);
     }
 
     .comparison-table-wrapper {
@@ -30,11 +49,21 @@
         justify-content: space-between;
         text-align: left;
       }
+
+      @include screen('md') {
+        flex-direction: column;
+        padding: 0 spacing(8);
+        min-height: 12.5rem;
+      }
     }
 
     .comparison-table-title {
       color: color('green');
       margin-bottom: spacing(8);
+
+      @include screen('md') {
+        @include font-size('h3');
+      }
     }
 
     .button {
@@ -44,6 +73,11 @@
       @include screen('sm') {
         margin-top: 0;
         margin-left: spacing(24);
+      }
+
+      @include screen('md') {
+        margin-top: spacing(24);
+        margin-left: 0;
       }
     }
 
@@ -58,6 +92,11 @@
       @include screen('sm') {
         text-align: left;
       }
+
+      @include screen('md') {
+        margin-top: spacing(24);
+        margin-bottom: -#{spacing(8)};
+      }
     }
 
     .list-element-items {
@@ -66,8 +105,9 @@
     }
 
     .list-element-item {
-      @include font-size('base');
       @include font-weight('normal');
+      font-size: inherit;
+      line-height: inherit;
 
       .icon {
         @include font-size('lg');
@@ -78,6 +118,14 @@
       @include screen('sm') {
         text-align: right;
       }
+
+      @include screen('md') {
+        text-align: left;
+      }
+    }
+
+    .link {
+      @include font-size('xs');
     }
   }
 }
