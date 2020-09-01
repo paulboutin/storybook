@@ -1,0 +1,44 @@
+.comparison-table {
+  padding: spacing(32) spacing(16);
+
+  .comparison-table-column {
+    @include box-shadow('sm');
+    padding: spacing(24);
+    text-align: center;
+
+    &:not(:first-child) {
+      margin-top: spacing(24);
+    }
+
+    .comparison-table-title {
+      color: color('green');
+      margin-bottom: spacing(8);
+    }
+
+    .button {
+      margin: spacing(24) 0;
+    }
+
+    .comparison-table-divider {
+      border-top: 1px solid color('grey-30');
+    }
+
+    .comparison-table-extra {
+      margin-top: spacing(8);
+    }
+
+    .list-element-items {
+      margin: spacing(24) 0;
+      text-align: left;
+    }
+
+    .list-element-item {
+      @include font-size('base');
+      @include font-weight('normal');
+
+      .icon {
+        @include font-size('lg');
+      }
+    }
+  }
+}
