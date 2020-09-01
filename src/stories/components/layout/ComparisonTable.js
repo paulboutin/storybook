@@ -1,8 +1,11 @@
 import React from 'react'
-import ComparisonTable from '../../../components/layout/ComparisonTable'
+import * as tables from '../../../components/layout/ComparisonTable'
+import { radios } from '@storybook/addon-knobs'
 
 export const ComparisonTableStory = () => {
-  return <ComparisonTable />
+  const type = radios('Type', ['A', 'B'], 'A')
+  const Table = tables['ComparisonTable' + type]
+  return <Table />
 }
 
 ComparisonTableStory.story = {

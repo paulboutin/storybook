@@ -1,4 +1,4 @@
-.comparison-table {
+.comparison-table-a {
   display: flex;
   flex-direction: column;
   padding: spacing(32) spacing(16);
@@ -165,4 +165,7 @@
       @include font-size('xs');
     }
   }
+}
+
+.comparison-table-b {
 }

@@ -3,8 +3,8 @@ import Button from '../base/Button'
 import Link from '../base/Link'
 import { ListElementItems } from './ListElement'
 
-const ComparisonTable = () => (
-  <div className='comparison-table'>
+export const ComparisonTableA = () => (
+  <div className='comparison-table-a'>
     <div className='comparison-table-column'>
       <div className='comparison-table-wrapper'>
         <div>
@@ -84,4 +84,4 @@ const ComparisonTable = () => (
   </div>
 )
 
-export default ComparisonTable
+export const ComparisonTableB = () => <div>Comparison Table B</div>
