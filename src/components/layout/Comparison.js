@@ -3,19 +3,19 @@ import Button from '../base/Button'
 import Link from '../base/Link'
 import { ListElementItems } from './ListElement'
 
-export const ComparisonTableA = () => (
-  <div className='comparison-table-a'>
-    <div className='comparison-table-column'>
-      <div className='comparison-table-wrapper'>
+export const ComparisonA = () => (
+  <div className='comparison-a'>
+    <div className='comparison-column'>
+      <div className='comparison-column-wrapper'>
         <div>
-          <h4 className='comparison-table-title'>Any Deposit Checking</h4>
+          <h4 className='comparison-column-title'>Any Deposit Checking</h4>
           <p>
             An account that makes it easy to waive the monthly service charge
           </p>
         </div>
         <Button type='primary' label='Apply Now' />
       </div>
-      <div className='comparison-table-divider' />
+      <div className='comparison-column-divider' />
 
       <ListElementItems
         items={[
@@ -25,21 +25,21 @@ export const ComparisonTableA = () => (
         ]}
       />
 
-      <div className='comparison-table-link-container'>
+      <div className='comparison-link-container'>
         <Link standalone>View account details</Link>
       </div>
     </div>
 
-    <div className='comparison-table-column'>
-      <div className='comparison-table-wrapper'>
+    <div className='comparison-column'>
+      <div className='comparison-column-wrapper'>
         <div>
-          <h4 className='comparison-table-title'>1% for the Planet</h4>
+          <h4 className='comparison-column-title'>1% for the Planet</h4>
           <p>An account that helps the planet (at no cost to you)</p>
         </div>
         <Button type='primary' label='Apply Now' />
       </div>
-      <div className='comparison-table-divider' />
-      <p className='comparison-table-extra'>
+      <div className='comparison-column-divider' />
+      <p className='comparison-column-extra'>
         All the benefits of our Any Deposit Checking account, plus:
       </p>
 
@@ -51,22 +51,22 @@ export const ComparisonTableA = () => (
         ]}
       />
 
-      <div className='comparison-table-link-container'>
+      <div className='comparison-link-container'>
         <Link standalone>View account details</Link>
       </div>
     </div>
 
-    <div className='comparison-table-column'>
-      <div className='comparison-table-wrapper'>
+    <div className='comparison-column'>
+      <div className='comparison-column-wrapper'>
         <div>
-          <h4 className='comparison-table-title'>Premier Checking</h4>
+          <h4 className='comparison-column-title'>Premier Checking</h4>
           <p>
             An account with the highest level of service and travel benefits
           </p>
         </div>
         <Button type='primary' label='Apply Now' />
       </div>
-      <div className='comparison-table-divider' />
+      <div className='comparison-column-divider' />
 
       <ListElementItems
         items={[
@@ -77,11 +77,13 @@ export const ComparisonTableA = () => (
         ]}
       />
 
-      <div className='comparison-table-link-container'>
+      <div className='comparison-link-container'>
         <Link standalone>View account details</Link>
       </div>
     </div>
   </div>
 )
 
-export const ComparisonTableB = () => <div>Comparison Table B</div>
+export const ComparisonB = () => (
+  <div className='comparison-b'>Comparison B</div>
+)
