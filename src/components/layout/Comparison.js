@@ -85,5 +85,145 @@ export const ComparisonA = () => (
 )
 
 export const ComparisonB = () => (
-  <div className='comparison-b'>Comparison B</div>
+  <div className='comparison-b'>
+    <div className='comparison-cta'>
+      <div className='comparison-row-wrapper'>
+        <div className='comparison-column'>
+          <div className='comparison-column-card'>
+            <div className='comparison-column-image'>
+              <img src='http://via.placeholder.com/800x500' alt='Credit Card' />
+            </div>
+            <h4 className='comparison-column-title'>
+              Cash Back World Credit Card
+            </h4>
+            <p className='comparison-column-subtitle'>
+              For generous cash rewards
+            </p>
+            <Button type='primary' label='Apply Now' />
+            <Link>Account details</Link>
+          </div>
+        </div>
+
+        <div className='comparison-column'>
+          <div className='comparison-column-card'>
+            <div className='comparison-column-image'>
+              <img src='http://via.placeholder.com/800x500' alt='Credit Card' />
+            </div>
+            <h4 className='comparison-column-title'>Platinum Credit Card</h4>
+            <p className='comparison-column-subtitle'>
+              For our lowest interest rate
+            </p>
+            <Button type='primary' label='Apply Now' />
+            <Link>Account details</Link>
+          </div>
+        </div>
+
+        <div className='comparison-column'>
+          <div className='comparison-column-card'>
+            <div className='comparison-column-image'>
+              <img src='http://via.placeholder.com/800x500' alt='Credit Card' />
+            </div>
+            <h4 className='comparison-column-title'>Secured Credit Card</h4>
+            <p className='comparison-column-subtitle'>
+              For establishing or rebuilding credit
+            </p>
+            <Button type='primary' label='Apply Now' />
+            <Link>Account details</Link>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header className='comparison-header'>Features</header>
+
+    <div className='comparison-row'>
+      <div className='comparison-row-wrapper'>
+        <div className='comparison-column'>
+          <ul className='comparison-list'>
+            <li>3% cash back on dining, gas and groceries</li>
+            <li>
+              Unlimited 1% cash back on other qualifying purchases with no
+              annual cap
+            </li>
+          </ul>
+        </div>
+
+        <div className='comparison-column'>
+          <ul className='comparison-list'>
+            <li>Competitive rates</li>
+            <li>The perfect choice if you carry a balance</li>
+          </ul>
+        </div>
+
+        <div className='comparison-column'>
+          <ul className='comparison-list'>
+            <li>No length of credit history or credit score required</li>
+            <li>
+              Deposit from $300 up to $12,000 to secure the credit limit you
+              want
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <header className='comparison-header'>APR</header>
+
+    <div className='comparison-row'>
+      <div className='comparison-row-wrapper'>
+        <div className='comparison-column'>
+          <h6 className='comparison-column-title'>0% APR</h6>
+          <p>
+            for first 6 months on all purchases then 15.99% - 22.99% variable
+            APR
+          </p>
+        </div>
+
+        <div className='comparison-column'>
+          <h6 className='comparison-column-title'>0% APR</h6>
+          <p>
+            for first 6 months on all purchases then 14.99% - 22.99% variable
+            APR for purchases
+          </p>
+        </div>
+
+        <div className='comparison-column'>
+          <h6 className='comparison-column-title'>21.99% APR</h6>
+          <p>variable APR for purchases</p>
+        </div>
+      </div>
+    </div>
+
+    <header className='comparison-header'>Special offer</header>
+
+    <div className='comparison-row'>
+      <div className='comparison-row-wrapper'>
+        <div className='comparison-column'>
+          <p>Save with a low intro APR and earn $150 bonus cash</p>
+        </div>
+
+        <div className='comparison-column' />
+
+        <div className='comparison-column' />
+      </div>
+    </div>
+
+    <header className='comparison-header'>Annual fee</header>
+
+    <div className='comparison-row'>
+      <div className='comparison-row-wrapper'>
+        <div className='comparison-column'>
+          <h6 className='comparison-column-title'>$0</h6>
+        </div>
+
+        <div className='comparison-column'>
+          <h6 className='comparison-column-title'>$0</h6>
+        </div>
+
+        <div className='comparison-column'>
+          <h6 className='comparison-column-title'>$25</h6>
+        </div>
+      </div>
+    </div>
+  </div>
 )

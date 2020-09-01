@@ -168,4 +168,129 @@
 }
 
 .comparison-b {
+  @include font-size('sm');
+  color: color('grey-70');
+  padding: spacing(32) spacing(16);
+  overflow: hidden;
+
+  .comparison-cta {
+    margin: 0 -#{spacing(8)};
+
+    .comparison-column {
+      display: flex;
+      padding: 0 spacing(8);
+      border: none;
+    }
+
+    .comparison-column-card {
+      @include box-shadow('sm');
+      @include border-radius('sm');
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: spacing(24) spacing(16) spacing(8);
+      text-align: center;
+    }
+
+    .comparison-column-image {
+      padding: 0 spacing(8);
+    }
+
+    .comparison-column-title {
+      @include font-size('base');
+      display: flex;
+      justify-content: center;
+      color: color('green');
+      margin-top: spacing(16);
+      flex-grow: 1;
+    }
+
+    .comparison-column-subtitle {
+      color: color('grey');
+    }
+
+    .button {
+      margin: spacing(16) 0;
+    }
+
+    .link {
+      @include font-weight('semi-bold');
+      text-decoration: none;
+    }
+  }
+
+  .comparison-row {
+    position: relative;
+    overflow: hidden;
+
+    &:last-child {
+      .comparison-column-title {
+        margin-bottom: 0;
+      }
+    }
+
+    &:before,
+    &:after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      border-left: 1px solid color('white');
+      border-right: 1px solid color('white');
+      z-index: 1;
+    }
+
+    &:before {
+      left: 0;
+      right: 0;
+    }
+  }
+
+  .comparison-row-wrapper {
+    display: flex;
+    transition: transform 0.3s;
+  }
+
+  .comparison-column {
+    position: relative;
+    width: 50%;
+    flex-shrink: 0;
+    padding: spacing(8) spacing(16);
+    border-left: 1px solid color('grey-10');
+    border-right: 1px solid color('grey-10');
+  }
+
+  .comparison-column-title {
+    @include font-weight('normal');
+    margin-bottom: spacing(8);
+  }
+
+  .comparison-header {
+    @include font-weight('semi-bold');
+    background-color: color('grey-5');
+    padding: spacing(8) spacing(16);
+    margin: spacing(16) 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .comparison-list {
+    li {
+      position: relative;
+      padding-left: spacing(16);
+
+      &:not(:last-child) {
+        margin-bottom: spacing(16);
+      }
+
+      &:before {
+        @include font-size('lg');
+        content: '•';
+        position: absolute;
+        left: 0;
+        color: color('green-light');
+        font-size: 2rem;
+        line-height: 0.625;
+      }
+    }
+  }
 }
