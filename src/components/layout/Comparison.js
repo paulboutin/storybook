@@ -112,45 +112,49 @@ export const ComparisonB = () => (
       <div className='comparison-row-wrapper'>
         <div className='comparison-column'>
           <div className='comparison-column-card'>
-            <div className='comparison-column-image'>
+            <div className='comparison-column-card-image'>
               <img src='http://via.placeholder.com/800x500' alt='Credit Card' />
             </div>
-            <h4 className='comparison-column-title'>
-              Cash Back World Credit Card
+            <h4 className='comparison-column-card-title'>
+              Cash Back World <br /> Credit Card
             </h4>
-            <p className='comparison-column-subtitle'>
+            <p className='comparison-column-card-subtitle'>
               For generous cash rewards
             </p>
             <Button type='primary' label='Apply Now' />
-            <Link>Account details</Link>
+            <Link standalone>Account details</Link>
           </div>
         </div>
 
         <div className='comparison-column'>
           <div className='comparison-column-card'>
-            <div className='comparison-column-image'>
+            <div className='comparison-column-card-image'>
               <img src='http://via.placeholder.com/800x500' alt='Credit Card' />
             </div>
-            <h4 className='comparison-column-title'>Platinum Credit Card</h4>
-            <p className='comparison-column-subtitle'>
+            <h4 className='comparison-column-card-title'>
+              Platinum <br /> Credit Card
+            </h4>
+            <p className='comparison-column-card-subtitle'>
               For our lowest interest rate
             </p>
             <Button type='primary' label='Apply Now' />
-            <Link>Account details</Link>
+            <Link standalone>Account details</Link>
           </div>
         </div>
 
         <div className='comparison-column'>
           <div className='comparison-column-card'>
-            <div className='comparison-column-image'>
+            <div className='comparison-column-card-image'>
               <img src='http://via.placeholder.com/800x500' alt='Credit Card' />
             </div>
-            <h4 className='comparison-column-title'>Secured Credit Card</h4>
-            <p className='comparison-column-subtitle'>
+            <h4 className='comparison-column-card-title'>
+              Secured <br /> Credit Card
+            </h4>
+            <p className='comparison-column-card-subtitle'>
               For establishing or rebuilding credit
             </p>
             <Button type='primary' label='Apply Now' />
-            <Link>Account details</Link>
+            <Link standalone>Account details</Link>
           </div>
         </div>
       </div>

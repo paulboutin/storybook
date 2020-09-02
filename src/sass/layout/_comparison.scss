@@ -163,6 +163,10 @@
   padding: spacing(32) spacing(16);
   overflow: hidden;
 
+  @include screen('sm') {
+    padding: spacing(32);
+  }
+
   .comparison-pagination-container {
     display: flex;
     justify-content: center;
@@ -176,16 +180,26 @@
 
     .button {
       @include font-size('lg');
+      line-height: 0.5;
     }
   }
 
   .comparison-cta {
     margin: 0 -#{spacing(8)};
 
+    @include screen('sm') {
+      margin: 0 -#{spacing(16)};
+      margin-bottom: spacing(32);
+    }
+
     .comparison-column {
       display: flex;
       padding: 0 spacing(8);
       border: none;
+
+      @include screen('sm') {
+        padding: 0 spacing(16);
+      }
     }
 
     .comparison-column-card {
@@ -196,32 +210,55 @@
       align-items: center;
       padding: spacing(24) spacing(16) spacing(8);
       text-align: center;
+
+      @include screen('sm') {
+        padding: spacing(32) spacing(24);
+      }
     }
 
-    .comparison-column-image {
+    .comparison-column-card-image {
       padding: 0 spacing(8);
+
+      @include screen('sm') {
+        padding: 0 spacing(32);
+      }
     }
 
-    .comparison-column-title {
+    .comparison-column-card-title {
       @include font-size('base');
       display: flex;
       justify-content: center;
       color: color('green');
       margin-top: spacing(16);
+      margin-bottom: spacing(8);
       flex-grow: 1;
+
+      @include screen('sm') {
+        @include font-size('h4');
+        margin-top: spacing(24);
+      }
     }
 
-    .comparison-column-subtitle {
+    .comparison-column-card-subtitle {
       color: color('grey');
     }
 
     .button {
       margin: spacing(16) 0;
+
+      @include screen('sm') {
+        margin: spacing(24) 0;
+        padding-left: spacing(48);
+        padding-right: spacing(48);
+      }
     }
 
     .link {
-      @include font-weight('semi-bold');
-      text-decoration: none;
+      .icon {
+        @include screen('sm', 'down') {
+          display: none;
+        }
+      }
     }
   }
 
@@ -242,6 +279,7 @@
       border-left: 2px solid color('white');
       border-right: 2px solid color('white');
       z-index: 1;
+      pointer-events: none;
     }
 
     &:before {
@@ -267,6 +305,10 @@
   .comparison-column-title {
     @include font-weight('normal');
     margin-bottom: spacing(8);
+
+    @include screen('sm') {
+      @include font-weight('semi-bold');
+    }
   }
 
   .comparison-header {
