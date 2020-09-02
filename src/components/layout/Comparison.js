@@ -86,6 +86,22 @@ export const ComparisonA = () => (
 
 export const ComparisonB = () => (
   <div className='comparison-b'>
+    <div className='comparison-pagination-container'>
+      <Button
+        type='ghost'
+        icon='chevron-left'
+        className='comparison-prev-column'
+      />
+
+      <div className='comparison-pagination' />
+
+      <Button
+        type='ghost'
+        icon='chevron-right'
+        className='comparison-next-column'
+      />
+    </div>
+
     <div className='comparison-cta'>
       <div className='comparison-row-wrapper'>
         <div className='comparison-column'>

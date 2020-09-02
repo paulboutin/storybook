@@ -173,6 +173,22 @@
   padding: spacing(32) spacing(16);
   overflow: hidden;
 
+  .comparison-pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: spacing(16);
+
+    .comparison-pagination {
+      width: spacing(64) * 2;
+      text-align: center;
+    }
+
+    .button {
+      @include font-size('lg');
+    }
+  }
+
   .comparison-cta {
     margin: 0 -#{spacing(8)};
 
@@ -229,13 +245,12 @@
       }
     }
 
-    &:before,
-    &:after {
+    &:before {
       content: '';
       position: absolute;
       height: 100%;
-      border-left: 1px solid color('white');
-      border-right: 1px solid color('white');
+      border-left: 2px solid color('white');
+      border-right: 2px solid color('white');
       z-index: 1;
     }
 

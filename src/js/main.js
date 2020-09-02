@@ -1,4 +1,5 @@
 import accordions from './components/accordion'
+import comparison from './components/comparison'
 import inputs from './components/input'
 import navigation from './components/navigation'
 import popupVideo from './components/popup-video'
@@ -19,6 +20,7 @@ function ready(fn) {
 function setup() {
   ready(() => {
     accordions()
+    comparison()
     inputs()
     navigation()
     popupVideo()
