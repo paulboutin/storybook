@@ -5,7 +5,7 @@ import Button from '../base/Button'
 const PopupVideo = () => (
   <div className='popup-video'>
     <img
-      src='https://i.vimeocdn.com/video/936265353.webp'
+      src='https://i.vimeocdn.com/video/936265353.jpg'
       alt='Popup video poster'
       className='popup-video-poster'
     />

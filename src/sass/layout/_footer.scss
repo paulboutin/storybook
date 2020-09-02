@@ -50,6 +50,10 @@
     .row {
       display: flex;
       flex-wrap: wrap;
+
+      &:before {
+        display: none;
+      }
     }
 
     .footer-column {
