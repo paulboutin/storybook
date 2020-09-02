@@ -4,10 +4,13 @@ import FAQ from '../../components/layout/FAQ'
 import Footer from '../../components/layout/Footer'
 import Hero from '../../components/layout/Hero'
 import Legal from '../../components/layout/Legal'
+import Navigation from '../../components/layout/Navigation'
 import PromoElement from '../../components/layout/PromoElement'
 
 export const ComparisonPage = () => (
   <>
+    <Navigation />
+
     <Hero type='Full' image='http://via.placeholder.com/1600' />
 
     <ComparisonCards />
