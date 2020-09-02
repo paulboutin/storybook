@@ -57,10 +57,10 @@ export const ProductPage = () => (
 
     <PromoElement
       heading='The strongest environmental stance of any major bank.'
-      type='accent square'
+      type='Accent Square'
       text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       eyebrow='Sustainable Banking'
-      image={{ src: 'http://via.placeholder.com/640', alt: 'Hero' }}
+      image={{ src: 'http://via.placeholder.com/640', alt: 'Promo image' }}
     >
       <button className='button button-tertiary'>Call to Action</button>
     </PromoElement>
