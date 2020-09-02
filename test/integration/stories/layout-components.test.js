@@ -223,6 +223,18 @@ describe('Layout Components', () => {
         await page.hover('.navigation-header-product')
         await page.hover('.navigation-dropdown-item')
       }
+    },
+    {
+      title: 'comparison a',
+      component: 'comparison-story',
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Type': 'A'
+    },
+    {
+      title: 'comparison b',
+      component: 'comparison-story',
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Type': 'B'
     }
   ]
   buildSnapshotTests('components-layout')(stories)
