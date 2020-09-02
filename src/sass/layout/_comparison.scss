@@ -131,20 +131,10 @@
       }
     }
 
-    .list-element-items {
+    .comparison-list {
       margin: spacing(24) 0;
       text-align: left;
       flex-grow: 1;
-    }
-
-    .list-element-item {
-      @include font-weight('normal');
-      font-size: inherit;
-      line-height: inherit;
-
-      .icon {
-        @include font-size('lg');
-      }
     }
 
     .comparison-link-container {
@@ -289,22 +279,38 @@
   }
 
   .comparison-list {
-    li {
-      position: relative;
-      padding-left: spacing(16);
+    .list-element-item {
+      @include screen('sm', 'down') {
+        padding-left: spacing(16);
+        margin-left: 0;
 
-      &:not(:last-child) {
-        margin-bottom: spacing(16);
+        &:before {
+          content: '•';
+          position: absolute;
+          left: 0;
+          color: color('green-light');
+          font-size: 2rem;
+          line-height: 0.625;
+        }
+
+        .icon {
+          display: none;
+        }
       }
+    }
+  }
+}
 
-      &:before {
+.comparison-list {
+  .list-element-items {
+    .list-element-item {
+      @include font-weight('normal');
+      font-size: inherit;
+      line-height: inherit;
+
+      .icon {
         @include font-size('lg');
-        content: '•';
-        position: absolute;
-        left: 0;
-        color: color('green-light');
-        font-size: 2rem;
-        line-height: 0.625;
+        line-height: 1;
       }
     }
   }

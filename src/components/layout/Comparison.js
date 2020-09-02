@@ -17,13 +17,15 @@ export const ComparisonA = () => (
       </div>
       <div className='comparison-column-divider' />
 
-      <ListElementItems
-        items={[
-          '$0 monthly service charge with any deposit per statement',
-          'No minimum balance',
-          'No direct deposit required'
-        ]}
-      />
+      <div className='comparison-list'>
+        <ListElementItems
+          items={[
+            '$0 monthly service charge with any deposit per statement',
+            'No minimum balance',
+            'No direct deposit required'
+          ]}
+        />
+      </div>
 
       <div className='comparison-link-container'>
         <Link standalone>View account details</Link>
@@ -43,13 +45,15 @@ export const ComparisonA = () => (
         All the benefits of our Any Deposit Checking account, plus:
       </p>
 
-      <ListElementItems
-        items={[
-          "We'll donate 1% of our revenue on this account to 1% for the Planet—at no cost to you",
-          'CO2 tracking for your debit card purchases, right in the app',
-          'Compostable debit card'
-        ]}
-      />
+      <div className='comparison-list'>
+        <ListElementItems
+          items={[
+            "We'll donate 1% of our revenue on this account to 1% for the Planet—at no cost to you",
+            'CO2 tracking for your debit card purchases, right in the app',
+            'Compostable debit card'
+          ]}
+        />
+      </div>
 
       <div className='comparison-link-container'>
         <Link standalone>View account details</Link>
@@ -68,14 +72,16 @@ export const ComparisonA = () => (
       </div>
       <div className='comparison-column-divider' />
 
-      <ListElementItems
-        items={[
-          'No fees on checks, money orders, incoming wires, or ATM withdrawals worldwide',
-          'Relationship-based service and special rates on CDs and Money Market accounts',
-          'Save on consumer loans with interest rate discounts',
-          '$0 monthly service charge with minimum balance of $25,000'
-        ]}
-      />
+      <div className='comparison-list'>
+        <ListElementItems
+          items={[
+            'No fees on checks, money orders, incoming wires, or ATM withdrawals worldwide',
+            'Relationship-based service and special rates on CDs and Money Market accounts',
+            'Save on consumer loans with interest rate discounts',
+            '$0 monthly service charge with minimum balance of $25,000'
+          ]}
+        />
+      </div>
 
       <div className='comparison-link-container'>
         <Link standalone>View account details</Link>
@@ -155,30 +161,36 @@ export const ComparisonB = () => (
     <div className='comparison-row'>
       <div className='comparison-row-wrapper'>
         <div className='comparison-column'>
-          <ul className='comparison-list'>
-            <li>3% cash back on dining, gas and groceries</li>
-            <li>
-              Unlimited 1% cash back on other qualifying purchases with no
-              annual cap
-            </li>
-          </ul>
+          <div className='comparison-list'>
+            <ListElementItems
+              items={[
+                '3% cash back on dining, gas and groceries',
+                'Unlimited 1% cash back on other qualifying purchases with no annual cap'
+              ]}
+            />
+          </div>
         </div>
 
         <div className='comparison-column'>
-          <ul className='comparison-list'>
-            <li>Competitive rates</li>
-            <li>The perfect choice if you carry a balance</li>
-          </ul>
+          <div className='comparison-list'>
+            <ListElementItems
+              items={[
+                'Competitive rates',
+                'The perfect choice if you carry a balance'
+              ]}
+            />
+          </div>
         </div>
 
         <div className='comparison-column'>
-          <ul className='comparison-list'>
-            <li>No length of credit history or credit score required</li>
-            <li>
-              Deposit from $300 up to $12,000 to secure the credit limit you
-              want
-            </li>
-          </ul>
+          <div className='comparison-list'>
+            <ListElementItems
+              items={[
+                'No length of credit history or credit score required',
+                'Deposit from $300 up to $12,000 to secure the credit limit you want'
+              ]}
+            />
+          </div>
         </div>
       </div>
     </div>
