@@ -65,7 +65,7 @@
       @include screen('md') {
         flex-direction: column;
         padding: 0 spacing(8);
-        min-height: 12.5rem;
+        min-height: 9.5rem;
       }
 
       @include screen('lg') {
@@ -76,16 +76,9 @@
     }
 
     .comparison-column-title {
+      @include font-size('lg');
       color: color('green');
       margin-bottom: spacing(8);
-
-      @include screen('md') {
-        @include font-size('h3');
-      }
-
-      @include screen('lg') {
-        @include font-size('lg');
-      }
     }
 
     .button {
@@ -100,9 +93,6 @@
       @include screen('md') {
         margin-top: spacing(24);
         margin-left: 0;
-      }
-
-      @include screen('lg') {
         padding-left: spacing(32);
         padding-right: spacing(32);
       }
@@ -123,11 +113,6 @@
       @include screen('md') {
         margin-top: spacing(24);
         margin-bottom: -#{spacing(8)};
-      }
-
-      @include screen('lg') {
-        @include font-weight('semi-bold');
-        color: color('grey-70');
       }
     }
 
