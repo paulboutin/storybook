@@ -1,4 +1,4 @@
-.comparison-a {
+.comparison-cards {
   display: flex;
   flex-direction: column;
   padding: spacing(32) spacing(16);
@@ -157,7 +157,7 @@
   }
 }
 
-.comparison-b {
+.comparison-table {
   @include font-size('sm');
   color: color('grey-70');
   padding: spacing(32) spacing(16);

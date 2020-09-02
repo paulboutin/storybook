@@ -225,16 +225,16 @@ describe('Layout Components', () => {
       }
     },
     {
-      title: 'comparison a',
+      title: 'comparison cards',
       component: 'comparison-story',
       devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'A'
+      'knob-Type': 'Cards'
     },
     {
-      title: 'comparison b',
+      title: 'comparison table',
       component: 'comparison-story',
       devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'B'
+      'knob-Type': 'Table'
     }
   ]
   buildSnapshotTests('components-layout')(stories)

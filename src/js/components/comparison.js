@@ -9,7 +9,7 @@ function updatePagination(pagination, prev, next, current, total) {
 }
 
 export default () => {
-  const comparison = document.querySelector('.comparison-b')
+  const comparison = document.querySelector('.comparison-table')
   if (!comparison) return
 
   const rows = comparison.querySelectorAll('.comparison-row-wrapper')

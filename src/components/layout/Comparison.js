@@ -3,8 +3,8 @@ import Button from '../base/Button'
 import Link from '../base/Link'
 import { ListElementItems } from './ListElement'
 
-export const ComparisonA = () => (
-  <div className='comparison-a'>
+export const ComparisonCards = () => (
+  <div className='comparison-cards'>
     <div className='comparison-column'>
       <div className='comparison-column-wrapper'>
         <div>
@@ -90,8 +90,8 @@ export const ComparisonA = () => (
   </div>
 )
 
-export const ComparisonB = () => (
-  <div className='comparison-b'>
+export const ComparisonTable = () => (
+  <div className='comparison-table'>
     <div className='comparison-pagination-container'>
       <Button
         type='ghost'

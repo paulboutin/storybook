@@ -1,5 +1,5 @@
 import React from 'react'
-import { ComparisonA } from '../../components/layout/Comparison'
+import { ComparisonCards } from '../../components/layout/Comparison'
 import FAQ from '../../components/layout/FAQ'
 import Footer from '../../components/layout/Footer'
 import Hero from '../../components/layout/Hero'
@@ -10,7 +10,7 @@ export const ComparisonPage = () => (
   <>
     <Hero type='Full' image='http://via.placeholder.com/1600' />
 
-    <ComparisonA />
+    <ComparisonCards />
 
     <PromoElement
       heading='The strongest environmental stance of any major bank.'
