@@ -109,6 +109,11 @@ describe('Base Components', () => {
         await page.click('.select')
         await page.hover('.select-item')
       }
+    },
+    {
+      title: 'breadcrumbs',
+      component: 'breadcrumbs-story',
+      devices: ['mobile']
     }
   ]
   buildSnapshotTests('components-base')(stories)

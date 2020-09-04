@@ -3,6 +3,7 @@ export default {
 }
 
 export { AccordionStory } from './base/Accordion'
+export { BreadcrumbsStory } from './base/Breadcrumbs'
 export { ButtonStory } from './base/Button'
 export { CardStory } from './base/Card'
 export { CheckboxStory } from './base/Checkbox'
