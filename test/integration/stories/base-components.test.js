@@ -114,6 +114,11 @@ describe('Base Components', () => {
       title: 'breadcrumbs',
       component: 'breadcrumbs-story',
       devices: ['mobile']
+    },
+    {
+      title: 'table',
+      component: 'table-story',
+      devices: ['mobile', 'desktop']
     }
   ]
   buildSnapshotTests('components-base')(stories)
