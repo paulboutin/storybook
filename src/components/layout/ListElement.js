@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
 
-const ListElementItems = ({ items, icon = 'check-circle' }) => (
+export const ListElementItems = ({ items, icon = 'check-circle' }) => (
   <ul className='list-element-items'>
     {items.map((item, index) => (
       <li key={index} className='list-element-item'>

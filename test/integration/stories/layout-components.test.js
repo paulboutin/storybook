@@ -137,6 +137,10 @@ describe('Layout Components', () => {
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
+      title: 'popup-video',
+      component: 'popup-video-story'
+    },
+    {
       title: 'video-hero',
       component: 'video-hero-story'
     },
@@ -162,7 +166,75 @@ describe('Layout Components', () => {
     {
       title: 'footer',
       component: 'footer',
-      devices: ['mobile', 'tablet', 'desktop']
+      devices: ['tablet', 'desktop']
+    },
+    {
+      title: 'footer',
+      component: 'footer',
+      devices: ['mobile'],
+      callback: async () => {
+        await page.click('.accordion:first-of-type')
+        await page.click('.accordion:last-of-type')
+        await page.waitForTransition('.accordion-content')
+      }
+    },
+    {
+      title: 'navigation main menu',
+      component: 'navigation',
+      devices: ['mobile', 'tablet'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.hamburger')
+        await page.waitForTransition('.navigation-main-menu')
+      }
+    },
+    {
+      title: 'navigation login menu',
+      component: 'navigation',
+      devices: ['mobile', 'tablet'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.hamburger')
+        await page.waitForTransition('.navigation-main-menu')
+        await page.click('#navigation-login-button')
+        await page.waitForTransition('.navigation-login-menu')
+      }
+    },
+    {
+      title: 'navigation category menu',
+      component: 'navigation',
+      devices: ['mobile', 'tablet'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.hamburger')
+        await page.waitForTransition('.navigation-main-menu')
+        await page.click('.navigation-main-menu-category')
+        await page.waitForTransition('.navigation-category-menu')
+        await page.click('.accordion')
+        await page.waitForTransition('.accordion-content')
+      }
+    },
+    {
+      title: 'navigation',
+      component: 'navigation',
+      devices: ['desktop'],
+      fullPage: true,
+      callback: async () => {
+        await page.hover('.navigation-header-product')
+        await page.hover('.navigation-dropdown-item')
+      }
+    },
+    {
+      title: 'comparison cards',
+      component: 'comparison-story',
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Type': 'Cards'
+    },
+    {
+      title: 'comparison table',
+      component: 'comparison-story',
+      devices: ['mobile', 'tablet', 'desktop'],
+      'knob-Type': 'Table'
     }
   ]
   buildSnapshotTests('components-layout')(stories)

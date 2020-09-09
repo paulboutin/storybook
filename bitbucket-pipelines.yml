@@ -3,8 +3,6 @@ definitions:
     - step: &unit-tests
         name: Unit tests
         image: node:12.18-alpine
-        caches:
-          - node
         script:
           - npm install
           - npm run test:unit
@@ -12,8 +10,6 @@ definitions:
     - step: &snapshot-tests
         name: Snapshot tests
         image: buildkite/puppeteer:v3.0.4
-        caches:
-          - node
         script:
           - apt-get update && apt-get -y install procps
           - npm install

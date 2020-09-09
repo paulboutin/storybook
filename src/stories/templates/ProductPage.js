@@ -4,25 +4,17 @@ import ClosingCTA from '../../components/layout/ClosingCTA'
 import ColumnCards from '../../components/layout/ColumnCards'
 import ColumnIcons from '../../components/layout/ColumnIcons'
 import FAQ from '../../components/layout/FAQ'
+import Footer from '../../components/layout/Footer'
 import Hero from '../../components/layout/Hero'
 import Highlight from '../../components/layout/Highlight'
 import ListElement from '../../components/layout/ListElement'
+import Navigation from '../../components/layout/Navigation'
 import PromoElement from '../../components/layout/PromoElement'
 import Legal from '../../components/layout/Legal'
 
-const placeholderStyle = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  border: '2px dashed grey',
-  color: 'grey',
-  backgroundColor: 'whitesmoke',
-  height: 100
-}
-
 export const ProductPage = () => (
   <>
-    <header style={placeholderStyle}>Header</header>
+    <Navigation />
 
     <Hero type='Spaced' image='http://via.placeholder.com/1600' />
 
@@ -65,10 +57,10 @@ export const ProductPage = () => (
 
     <PromoElement
       heading='The strongest environmental stance of any major bank.'
-      type='accent square'
+      type='Accent Square'
       text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
       eyebrow='Sustainable Banking'
-      image={{ src: 'http://via.placeholder.com/640', alt: 'Hero' }}
+      image={{ src: 'http://via.placeholder.com/640', alt: 'Promo image' }}
     >
       <button className='button button-tertiary'>Call to Action</button>
     </PromoElement>
@@ -135,15 +127,8 @@ export const ProductPage = () => (
       ))}
     </ColumnCards>
 
-    <Legal
-      items={[
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, architecto.',
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta eius, magni molestias nihil repellat.',
-        'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias aliquam consectetur dolorum eos ipsam ipsum magnam ' +
-          'maxime, perspiciatis possimus quis reiciendis repellendus tenetur voluptatem voluptatum.'
-      ]}
-    />
+    <Legal />
 
-    <footer style={placeholderStyle}>Footer</footer>
+    <Footer />
   </>
 )

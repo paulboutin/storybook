@@ -57,6 +57,68 @@ describe('Base Components', () => {
       component: 'image-story',
       devices: ['mobile'],
       'knob-Ratio': '4:3'
+    },
+    {
+      title: 'switch off',
+      component: 'switch-story',
+      devices: ['mobile']
+    },
+    {
+      title: 'switch on',
+      component: 'switch-story',
+      devices: ['mobile'],
+      callback: async () => {
+        await page.click('.switch')
+        await page.waitForTransition('.switch-circle')
+      }
+    },
+    {
+      title: 'select helper',
+      component: 'select-story',
+      devices: ['mobile'],
+      'knob-Helper': true
+    },
+    {
+      title: 'select error',
+      component: 'select-story',
+      devices: ['mobile'],
+      'knob-Error': true
+    },
+    {
+      title: 'select disabled',
+      component: 'select-story',
+      devices: ['mobile'],
+      'knob-Disabled': true
+    },
+    {
+      title: 'select inline',
+      component: 'select-story',
+      devices: ['mobile'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.select')
+      },
+      'knob-Inline': true
+    },
+    {
+      title: 'select',
+      component: 'select-story',
+      devices: ['mobile'],
+      fullPage: true,
+      callback: async () => {
+        await page.click('.select')
+        await page.hover('.select-item')
+      }
+    },
+    {
+      title: 'breadcrumbs',
+      component: 'breadcrumbs-story',
+      devices: ['mobile']
+    },
+    {
+      title: 'table',
+      component: 'table-story',
+      devices: ['mobile', 'desktop']
     }
   ]
   buildSnapshotTests('components-base')(stories)

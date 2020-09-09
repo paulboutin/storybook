@@ -81,6 +81,9 @@
 .icon-linkedin:before {
   content: '\e913';
 }
+.icon-location:before {
+  content: '\e920';
+}
 .icon-lock:before {
   content: '\e914';
 }
@@ -95,6 +98,9 @@
 }
 .icon-quote:before {
   content: '\e917';
+}
+.icon-rotate-phone:before {
+  content: '\e921';
 }
 .icon-search:before {
   content: '\e918';

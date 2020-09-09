@@ -81,7 +81,6 @@ export const InputStory = () => {
           label='Phone Number'
           required
           type='tel'
-          help='Please enter a correct phone number'
           error='An error has occurred!'
         />
       </div>
