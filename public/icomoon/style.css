@@ -99,6 +99,9 @@
 .icon-quote:before {
   content: '\e917';
 }
+.icon-rotate-phone:before {
+  content: '\e921';
+}
 .icon-search:before {
   content: '\e918';
 }
