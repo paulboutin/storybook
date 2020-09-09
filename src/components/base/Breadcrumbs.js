@@ -6,13 +6,13 @@ const Breadcrumbs = ({ items }) => (
     {items.map((item, index) => {
       if (index < items.length - 1) {
         return (
-          <>
+          <React.Fragment key={index}>
             <Link>{item}</Link>
             <i className='icon icon-chevron-right' />
-          </>
+          </React.Fragment>
         )
       } else {
-        return <span>{item}</span>
+        return <span key={index}>{item}</span>
       }
     })}
   </div>
