@@ -356,207 +356,216 @@ export const RatesAndFees = () => {
   ]
 
   return (
-    <div className='rates-and-fees'>
+    <>
       <Navigation />
 
-      <div className='raf-intro container'>
-        <Breadcrumbs
-          items={[
-            'Banking',
-            'Savings',
-            'Schedule of Fees and Changes for Personal Deposit Accounts'
-          ]}
-        />
+      <div className='rates-and-fees'>
+        <div className='raf-intro container'>
+          <Breadcrumbs
+            items={[
+              'Banking',
+              'Savings',
+              'Schedule of Fees and Changes for Personal Deposit Accounts'
+            ]}
+          />
 
-        <p className='raf-rotate-hint visible-xs'>
-          <i className='icon icon-rotate-phone' />
-          <span>Rotate device for best view</span>
-        </p>
-
-        <Eyebrow text='Personal deposit accounts' />
-        <h3 className='raf-title'>Schedule of Fees and Charges</h3>
-
-        <div className='raf-intro-text-wrapper'>
-          <p className='raf-intro-text'>
-            <i className='icon icon-location' /> Arizona, California, Colorado,
-            Idaho, Iowa, Kansas, Missouri, Nebraska, New Mexico, North Dakota,
-            Oklahoma, Oregon, South Dakota*, Utah, Washington, Wisconsin,
-            Wyoming Branches
-            <br />
-            <br />
-            Please keep these important documents with your Deposit Account
-            Disclosure and Safe Deposit Box Rental Agreement Terms and
-            Conditions for Personal Accounts booklet and retain them for future
-            reference.
-            <br />
-            <br />
-            Effective February 1, 2020
-            <br />
-            <br />
-            This Schedule applies to personal Accounts opened in the states
-            referenced above. This Schedule, along with the Deposit Account
-            Disclosure and Safe Deposit Box Rental Agreement Terms and
-            Conditions for Personal Accounts, current rate sheet, your current
-            signature card, and any other addenda that may be provided to you at
-            Account opening or from time to time thereafter form the Agreement
-            between you and Bank of the West (“Bank”) as to your checking, money
-            market, savings, certificates of deposit, and retirement Accounts
-            (collectively, the “Agreement”). The Bank reserves the right to add
-            to, delete from, discontinue, or otherwise amend any product,
-            service, fee or charge, package or program offering at any time with
-            such notice as is required by law. To the extent that any of the
-            terms or provisions of this Schedule of Fees and Charges conflict
-            with those contained in any other document in the Agreement, the
-            terms and provisions contained herein shall control. Capitalized
-            terms shall have the same meaning as in the Agreement, unless
-            otherwise defined herein. We regret that this document is not
-            available in languages other than English. Please make sure that you
-            understand all terms and conditions applicable to your deposit
-            Account(s) and services.
+          <p className='raf-rotate-hint visible-xs'>
+            <i className='icon icon-rotate-phone' />
+            <span>Rotate device for best view</span>
           </p>
 
-          <Link>
-            <i className='icon icon-arrow-down' /> Download
-          </Link>
+          <Eyebrow text='Personal deposit accounts' />
+          <h3 className='raf-title'>Schedule of Fees and Charges</h3>
+
+          <div className='raf-intro-text-wrapper'>
+            <p className='raf-intro-text'>
+              <i className='icon icon-location' /> Arizona, California,
+              Colorado, Idaho, Iowa, Kansas, Missouri, Nebraska, New Mexico,
+              North Dakota, Oklahoma, Oregon, South Dakota*, Utah, Washington,
+              Wisconsin, Wyoming Branches
+              <br />
+              <br />
+              Please keep these important documents with your Deposit Account
+              Disclosure and Safe Deposit Box Rental Agreement Terms and
+              Conditions for Personal Accounts booklet and retain them for
+              future reference.
+              <br />
+              <br />
+              Effective February 1, 2020
+              <br />
+              <br />
+              This Schedule applies to personal Accounts opened in the states
+              referenced above. This Schedule, along with the Deposit Account
+              Disclosure and Safe Deposit Box Rental Agreement Terms and
+              Conditions for Personal Accounts, current rate sheet, your current
+              signature card, and any other addenda that may be provided to you
+              at Account opening or from time to time thereafter form the
+              Agreement between you and Bank of the West (“Bank”) as to your
+              checking, money market, savings, certificates of deposit, and
+              retirement Accounts (collectively, the “Agreement”). The Bank
+              reserves the right to add to, delete from, discontinue, or
+              otherwise amend any product, service, fee or charge, package or
+              program offering at any time with such notice as is required by
+              law. To the extent that any of the terms or provisions of this
+              Schedule of Fees and Charges conflict with those contained in any
+              other document in the Agreement, the terms and provisions
+              contained herein shall control. Capitalized terms shall have the
+              same meaning as in the Agreement, unless otherwise defined herein.
+              We regret that this document is not available in languages other
+              than English. Please make sure that you understand all terms and
+              conditions applicable to your deposit Account(s) and services.
+            </p>
+
+            <Link>
+              <i className='icon icon-arrow-down' /> Download
+            </Link>
+          </div>
+        </div>
+
+        <div className='raf-accordions container'>
+          {accordions.map((accordion, index) => (
+            <Accordion key={index} title={accordion.title}>
+              <Table data={accordion.table} />
+            </Accordion>
+          ))}
+        </div>
+
+        <Legal />
+
+        <div className='raf-legal-addendum container'>
+          <b>
+            Addendum to the Deposit Account Disclosure and Safe Deposit Box
+            Rental Agreement Terms and Conditions For Personal Accounts (All
+            States)
+          </b>
+          <br />
+          <br />
+          Effective June 29, 2020
+          <br />
+          <br />
+          The following information reflects changes to your current Deposit
+          Account Disclosure and Safe Deposit Box Rental Agreement Terms and
+          Conditions for Personal Accounts (Effective December 1, 2019). The
+          following changes to the Bank's Funds Availability Policy have been
+          made to the sections below and are bolded and highlighted in grey. All
+          other sections of the Policy remain unchanged.
+          <br />
+          This Addendum, together with the applicable Schedule of Fees and
+          Charges, Deposit Account Disclosure and Safe Deposit Box Rental
+          Agreement Terms and Conditions for Personal Accounts, current Rate
+          Sheet, your signature card and any other addenda that were provided to
+          you at Account opening or from time to time thereafter with reference
+          to your deposit Account(s), form the agreement (“Agreement”) between
+          you and Bank of the West (“Bank,” “we,” or “us”). Except as expressly
+          stated below, all other terms and conditions in our Agreement with you
+          continue in full force and effect. We reserve the right to add to,
+          delete from, discontinue or otherwise amend any product, service, fee
+          or charge, program or package offering at any time with such notice as
+          is required by law. Maintaining your Account after the effective date
+          of this addendum constitutes your acceptance of the revised terms and
+          conditions. Unless otherwise defined herein, the capitalized terms
+          contained in this Addendum shall have the same meaning as the terms
+          defined in the Agreement.
+          <br />
+          <br />
+          <b>Longer Delays May Apply (Pages 24/25)</b>
+          <br />
+          <br />
+          In some cases, we will not make all of the funds that you deposit by
+          check available to you on the first Business Day after the day of your
+          deposit. Depending on the type of check that you deposit, funds may
+          not be available until the second Business Day after the day of your
+          deposit. The first <b>$225</b> of your deposits, however, will be
+          available on the first Business Day after the day of your deposit.
+          <br />
+          <br />
+          If we are not going to make all of the funds from your deposit
+          available on the first Business Day after the day of your deposit, we
+          will notify you at the time you make your deposit. We will also tell
+          you when the funds will be available. If your deposit is not made
+          directly to one of our employees, or if we decide to take this action
+          after you have left the premises, we will mail you the notice by the
+          day after we receive your deposit. If you will need the funds from a
+          deposit right away, you should ask us when the funds will be
+          available.
+          <br />
+          <br />
+          In addition, some or all of the funds you deposit by check may be
+          delayed for a longer period under the following circumstances:
+          <br />
+          <br />
+          <ul>
+            <li>We believe a check you deposit will not be paid.</li>
+            <li>
+              You deposit checks totaling more than <b>$5,525</b> on any one
+              day.
+            </li>
+            <li>You redeposit a check that has been returned unpaid.</li>
+            <li>
+              You have overdrawn your Account repeatedly in the last six months.
+            </li>
+            <li>
+              There is an emergency, such as failure of computer or
+              communications equipment.
+            </li>
+          </ul>
+          <br />
+          We will notify you if we delay your ability to withdraw funds for any
+          of these reasons, and we will tell you when the funds will be
+          available. They will generally be available no later than the seventh
+          Business Day after the day of your deposit.
+          <br />
+          We are under no obligation to pay any Items you have authorized
+          against funds that are not yet available. The Bank may pay such items
+          at our discretion and overdraw your Account or they may be returned
+          due to an insufficient Available Balance. Refer to the OVERDRAWN
+          ACCOUNTS AND PAYMENT OF OVERDRAFTS section of this Agreement for
+          further details.
+          <br />
+          <br />
+          <b>Special Rules for New Accounts (Page 25)</b>
+          <br />
+          <br />
+          If you are a new customer, the following special rules will apply
+          during the first 30 days your Account is open.
+          <br />
+          Funds from electronic Direct Deposits and wire transfers to your
+          Account will be available on the day we receive the deposit (excluding
+          the opening deposit to a certificate of deposit using our Online
+          Banking). Funds from deposits of cash and the first <b>$5,525</b> of a
+          day's total deposits of cashier's, certified, teller's, traveler's,
+          and federal, state and local government checks will be available on
+          the first Business Day after the day of your deposit if the deposit
+          meets certain conditions. For example, the checks must be payable to
+          you. The excess amount over <b>$5,525</b> will be available on the
+          ninth Business Day after the day of your deposit. If your deposit of
+          these checks (other than a U.S. Treasury check) is not made in person
+          to one of our employees, the first $5,525 will not be available until
+          the second Business Day after the day of your deposit. Funds from all
+          other check deposits will be available on the ninth Business Day after
+          the day of your deposit.
+          <br />
+          <br />
+          <b>
+            Deposits at Automated Teller Machines and Cut-Off Times (Page 25)
+          </b>
+          <br />
+          <br />
+          If you make a deposit at one of our ATMs before 4:30 PM Pacific Time
+          (PT) on a Business Day we are open, we will consider that day to be
+          the day of your deposit. However, if you make the deposit after 4:30
+          PM PT, or on a non-Business Day, or on a day we are not open, we will
+          consider the next Business Day we are open to be the day of your
+          deposit.
+          <br />
+          <br />
+          The first <b>$225</b> of funds from any deposit (cash or checks) made
+          at ATMs we own or operate will be available on the first Business Day
+          after the day of your deposit, unless a longer hold applies.
         </div>
       </div>
 
-      <div className='raf-accordions container'>
-        {accordions.map((accordion, index) => (
-          <Accordion key={index} title={accordion.title}>
-            <Table data={accordion.table} />
-          </Accordion>
-        ))}
-      </div>
-
-      <Legal />
-
-      <div className='raf-legal-addendum container'>
-        <b>
-          Addendum to the Deposit Account Disclosure and Safe Deposit Box Rental
-          Agreement Terms and Conditions For Personal Accounts (All States)
-        </b>
-        <br />
-        <br />
-        Effective June 29, 2020
-        <br />
-        <br />
-        The following information reflects changes to your current Deposit
-        Account Disclosure and Safe Deposit Box Rental Agreement Terms and
-        Conditions for Personal Accounts (Effective December 1, 2019). The
-        following changes to the Bank's Funds Availability Policy have been made
-        to the sections below and are bolded and highlighted in grey. All other
-        sections of the Policy remain unchanged.
-        <br />
-        This Addendum, together with the applicable Schedule of Fees and
-        Charges, Deposit Account Disclosure and Safe Deposit Box Rental
-        Agreement Terms and Conditions for Personal Accounts, current Rate
-        Sheet, your signature card and any other addenda that were provided to
-        you at Account opening or from time to time thereafter with reference to
-        your deposit Account(s), form the agreement (“Agreement”) between you
-        and Bank of the West (“Bank,” “we,” or “us”). Except as expressly stated
-        below, all other terms and conditions in our Agreement with you continue
-        in full force and effect. We reserve the right to add to, delete from,
-        discontinue or otherwise amend any product, service, fee or charge,
-        program or package offering at any time with such notice as is required
-        by law. Maintaining your Account after the effective date of this
-        addendum constitutes your acceptance of the revised terms and
-        conditions. Unless otherwise defined herein, the capitalized terms
-        contained in this Addendum shall have the same meaning as the terms
-        defined in the Agreement.
-        <br />
-        <br />
-        <b>Longer Delays May Apply (Pages 24/25)</b>
-        <br />
-        <br />
-        In some cases, we will not make all of the funds that you deposit by
-        check available to you on the first Business Day after the day of your
-        deposit. Depending on the type of check that you deposit, funds may not
-        be available until the second Business Day after the day of your
-        deposit. The first <b>$225</b> of your deposits, however, will be
-        available on the first Business Day after the day of your deposit.
-        <br />
-        <br />
-        If we are not going to make all of the funds from your deposit available
-        on the first Business Day after the day of your deposit, we will notify
-        you at the time you make your deposit. We will also tell you when the
-        funds will be available. If your deposit is not made directly to one of
-        our employees, or if we decide to take this action after you have left
-        the premises, we will mail you the notice by the day after we receive
-        your deposit. If you will need the funds from a deposit right away, you
-        should ask us when the funds will be available.
-        <br />
-        <br />
-        In addition, some or all of the funds you deposit by check may be
-        delayed for a longer period under the following circumstances:
-        <br />
-        <br />
-        <ul>
-          <li>We believe a check you deposit will not be paid.</li>
-          <li>
-            You deposit checks totaling more than <b>$5,525</b> on any one day.
-          </li>
-          <li>You redeposit a check that has been returned unpaid.</li>
-          <li>
-            You have overdrawn your Account repeatedly in the last six months.
-          </li>
-          <li>
-            There is an emergency, such as failure of computer or communications
-            equipment.
-          </li>
-        </ul>
-        <br />
-        We will notify you if we delay your ability to withdraw funds for any of
-        these reasons, and we will tell you when the funds will be available.
-        They will generally be available no later than the seventh Business Day
-        after the day of your deposit.
-        <br />
-        We are under no obligation to pay any Items you have authorized against
-        funds that are not yet available. The Bank may pay such items at our
-        discretion and overdraw your Account or they may be returned due to an
-        insufficient Available Balance. Refer to the OVERDRAWN ACCOUNTS AND
-        PAYMENT OF OVERDRAFTS section of this Agreement for further details.
-        <br />
-        <br />
-        <b>Special Rules for New Accounts (Page 25)</b>
-        <br />
-        <br />
-        If you are a new customer, the following special rules will apply during
-        the first 30 days your Account is open.
-        <br />
-        Funds from electronic Direct Deposits and wire transfers to your Account
-        will be available on the day we receive the deposit (excluding the
-        opening deposit to a certificate of deposit using our Online Banking).
-        Funds from deposits of cash and the first <b>$5,525</b> of a day's total
-        deposits of cashier's, certified, teller's, traveler's, and federal,
-        state and local government checks will be available on the first
-        Business Day after the day of your deposit if the deposit meets certain
-        conditions. For example, the checks must be payable to you. The excess
-        amount over <b>$5,525</b> will be available on the ninth Business Day
-        after the day of your deposit. If your deposit of these checks (other
-        than a U.S. Treasury check) is not made in person to one of our
-        employees, the first $5,525 will not be available until the second
-        Business Day after the day of your deposit. Funds from all other check
-        deposits will be available on the ninth Business Day after the day of
-        your deposit.
-        <br />
-        <br />
-        <b>Deposits at Automated Teller Machines and Cut-Off Times (Page 25)</b>
-        <br />
-        <br />
-        If you make a deposit at one of our ATMs before 4:30 PM Pacific Time
-        (PT) on a Business Day we are open, we will consider that day to be the
-        day of your deposit. However, if you make the deposit after 4:30 PM PT,
-        or on a non-Business Day, or on a day we are not open, we will consider
-        the next Business Day we are open to be the day of your deposit.
-        <br />
-        <br />
-        The first <b>$225</b> of funds from any deposit (cash or checks) made at
-        ATMs we own or operate will be available on the first Business Day after
-        the day of your deposit, unless a longer hold applies.
-      </div>
-
       <Footer />
-    </div>
+    </>
   )
 }
