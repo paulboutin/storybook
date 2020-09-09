@@ -1,6 +1,10 @@
 body.navigation-open {
   @include screen('md', 'down') {
     overflow: hidden;
+
+    .navigation-menus {
+      pointer-events: auto;
+    }
   }
 }
 
@@ -68,6 +72,12 @@ body.navigation-open {
   }
 
   .navigation-header {
+    border-bottom: 1px solid color('grey-20');
+
+    @include screen('md') {
+      border-bottom: none;
+    }
+
     .navigation-container {
       position: relative;
       display: flex;
@@ -293,6 +303,7 @@ body.navigation-open {
     right: 0;
     bottom: 0;
     z-index: 1000;
+    pointer-events: none;
 
     @include screen('md') {
       display: none;
@@ -306,7 +317,6 @@ body.navigation-open {
     left: -100%;
     padding: spacing(16);
     background-color: color('white');
-    border-top: 1px solid color('grey-20');
     overflow: auto;
     transition: left 0.3s;
 

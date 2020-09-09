@@ -1,7 +1,5 @@
 .table {
   @include font-size('sm');
-  border-top: 2px solid color('grey-10');
-  border-bottom: 2px solid color('grey-10');
   overflow: auto;
 
   table {
@@ -62,6 +60,8 @@
 
   th,
   td {
+    min-width: 200px;
+
     &:not(:first-child) {
       border-left: 8px solid color('white');
     }
@@ -73,12 +73,11 @@
 
   th {
     @include font-weight('normal');
-    padding: spacing(12) spacing(8);
+    padding: spacing(12) spacing(16);
   }
 
   td {
-    padding: spacing(4) spacing(8);
-    min-width: 200px;
+    padding: spacing(4) spacing(16);
     vertical-align: top;
   }
 }
