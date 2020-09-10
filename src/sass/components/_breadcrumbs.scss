@@ -1,6 +1,8 @@
 .breadcrumbs {
   @include font-size('sm');
   color: color('grey-70');
+  margin-top: spacing(16);
+  margin-bottom: spacing(32);
 
   .icon {
     @include font-size('lg');
