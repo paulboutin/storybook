@@ -13,7 +13,7 @@ const Card = ({ heading, children, linkText, image, flat }) => {
         ratio={flat ? '4:3' : '1:1'}
       />
       <div className='card-content'>
-        <h6 className='card-heading'>{heading}</h6>
+        <h5 className='card-heading'>{heading}</h5>
         <div className='card-text-wrapper'>
           <p className='card-text'>{children}</p>
         </div>

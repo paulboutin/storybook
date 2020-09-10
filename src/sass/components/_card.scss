@@ -55,12 +55,6 @@
     .card-heading {
       margin-top: spacing(8);
       margin-bottom: spacing(8);
-
-      @include screen('sm') {
-        @include font-family('display');
-        @include font-size('h3');
-        @include font-weight('normal');
-      }
     }
 
     .card-text-wrapper {
