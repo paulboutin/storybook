@@ -11,6 +11,15 @@
     &:nth-child(odd) {
       background-color: color('grey-5');
     }
+
+    &:hover {
+      background-color: color('yellow-light');
+
+      th,
+      td {
+        border-color: color('yellow-light') !important;
+      }
+    }
   }
 
   thead {
@@ -32,15 +41,6 @@
   }
 
   tr {
-    &:hover {
-      background-color: color('yellow-light');
-
-      th,
-      td {
-        border-color: color('yellow-light');
-      }
-    }
-
     &:first-child {
       td {
         padding-top: spacing(12);
@@ -60,7 +60,7 @@
 
   th,
   td {
-    min-width: 200px;
+    min-width: 160px;
 
     &:not(:first-child) {
       border-left: 8px solid color('white');
