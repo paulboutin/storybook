@@ -5,3 +5,4 @@ export default {
 export { ComparisonPage } from './ComparisonPage'
 export { ProductPage } from './ProductPage'
 export { RatesAndFees } from './RatesAndFees'
+export { TermsOfUse } from './TermsOfUse'
