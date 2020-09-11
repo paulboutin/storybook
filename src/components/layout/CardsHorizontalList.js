@@ -2,8 +2,8 @@ import React from 'react'
 import Image from '../base/Image'
 import Link from '../base/Link'
 
-const Articles = () => {
-  const articles = [
+const CardsHorizontalList = () => {
+  const cards = [
     {
       title: 'Personal Checking',
       text:
@@ -28,12 +28,12 @@ const Articles = () => {
   ]
 
   return (
-    <div className='articles container'>
-      <h3 className='articles-heading'>
+    <div className='cards-horizontal-list container'>
+      <h3 className='cards-horizontal-list-heading'>
         Solutions that finance a better tomorrow
       </h3>
 
-      {articles.map((article, index) => (
+      {cards.map((card, index) => (
         <article key={index} className='article-card'>
           <Image
             src='http://via.placeholder.com/640'
@@ -42,8 +42,8 @@ const Articles = () => {
           />
 
           <div className='article-card-content'>
-            <h4 className='article-title'>{article.title}</h4>
-            <p>{article.text}</p>
+            <h4 className='article-title'>{card.title}</h4>
+            <p>{card.text}</p>
             <Link standalone>Learn more</Link>
           </div>
         </article>
@@ -52,4 +52,4 @@ const Articles = () => {
   )
 }
 
-export default Articles
+export default CardsHorizontalList

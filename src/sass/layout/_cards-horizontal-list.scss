@@ -1,11 +1,11 @@
-.articles {
+.cards-horizontal-list {
   padding: spacing(24) spacing(16);
 
   @include screen('sm') {
     padding: spacing(32) spacing(24);
   }
 
-  .articles-heading {
+  .cards-horizontal-list-heading {
     margin: spacing(16) 0;
     text-align: center;
   }

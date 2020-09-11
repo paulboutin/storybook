@@ -159,8 +159,8 @@ describe('Layout Components', () => {
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
-      title: 'articles',
-      component: 'articles',
+      title: 'cards-horizontal-list',
+      component: 'cards-horizontal-list',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
