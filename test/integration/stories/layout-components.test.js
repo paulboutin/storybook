@@ -46,8 +46,8 @@ describe('Layout Components', () => {
       'knob-Type': 'Spaced'
     },
     {
-      title: 'recommendations',
-      component: 'recommendations-story',
+      title: 'cards-three-column',
+      component: 'cards-three-column-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
