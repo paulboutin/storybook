@@ -43,5 +43,5 @@ export const HighlightStory = () => {
 }
 
 HighlightStory.story = {
-  name: 'Highlight'
+  name: 'Content Highlight'
 }

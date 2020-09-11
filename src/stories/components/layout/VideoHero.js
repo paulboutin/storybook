@@ -8,5 +8,5 @@ export const VideoHeroStory = () => {
 }
 
 VideoHeroStory.story = {
-  name: 'Video Hero'
+  name: 'Hero Video'
 }

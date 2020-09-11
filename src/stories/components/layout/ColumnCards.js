@@ -63,5 +63,5 @@ export const ColumnCardsStory = () => {
 }
 
 ColumnCardsStory.story = {
-  name: 'Column Cards'
+  name: 'Column Content'
 }

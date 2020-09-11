@@ -20,7 +20,7 @@ const items = [
 
 const defaultImage = 'http://via.placeholder.com/500'
 
-export const RecommendationsStory = () => {
+export const CardsThreeColumnStory = () => {
   const image = text('Image', defaultImage)
 
   const heading = 'Recommended for you'
@@ -43,6 +43,6 @@ export const RecommendationsStory = () => {
   )
 }
 
-RecommendationsStory.story = {
-  name: 'Recommendations'
+CardsThreeColumnStory.story = {
+  name: 'Cards Three Column'
 }

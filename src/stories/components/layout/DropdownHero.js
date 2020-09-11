@@ -9,5 +9,5 @@ export const DropdownHeroStory = () => {
 }
 
 DropdownHeroStory.story = {
-  name: 'Dropdown Hero'
+  name: 'Hero Dropdown'
 }
