@@ -231,6 +231,20 @@ describe('Layout Components', () => {
       'knob-Type': 'Cards'
     },
     {
+      title: 'comparison cards highlight',
+      component: 'comparison-story',
+      devices: ['desktop'],
+      'knob-Type': 'Cards',
+      'knob-Style': 'Highlight'
+    },
+    {
+      title: 'comparison cards branded',
+      component: 'comparison-story',
+      devices: ['desktop'],
+      'knob-Type': 'Cards',
+      'knob-Style': 'Branded'
+    },
+    {
       title: 'comparison table',
       component: 'comparison-story',
       devices: ['mobile', 'tablet', 'desktop'],
