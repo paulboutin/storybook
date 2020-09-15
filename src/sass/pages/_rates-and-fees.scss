@@ -86,11 +86,6 @@
     }
   }
 
-  .accordion-title {
-    @include font-size('base');
-    @include font-weight('semi-bold');
-  }
-
   .accordion-content {
     max-width: none;
   }

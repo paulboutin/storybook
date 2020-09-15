@@ -12,4 +12,9 @@
   .faq-link {
     margin-top: spacing(32);
   }
+
+  .accordion-title {
+    @include font-size('h5');
+    @include font-weight('bold');
+  }
 }

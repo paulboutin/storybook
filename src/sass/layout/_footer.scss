@@ -15,12 +15,6 @@
       margin-bottom: spacing(16);
     }
 
-    .accordion-title {
-      @include font-family('body');
-      @include font-size('base');
-      @include font-weight('semi-bold');
-    }
-
     .accordion-content {
       display: flex;
       flex-direction: column;

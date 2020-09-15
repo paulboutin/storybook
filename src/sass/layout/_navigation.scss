@@ -433,11 +433,6 @@ body.navigation-open {
       border-bottom-color: color('grey-20');
     }
 
-    .accordion-title {
-      @include font-size('base');
-      @include font-weight('semi-bold');
-    }
-
     .accordion-content {
       padding-left: spacing(16);
 
