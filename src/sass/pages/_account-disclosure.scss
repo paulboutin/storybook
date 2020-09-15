@@ -1,0 +1,39 @@
+.account-disclosure {
+  padding-bottom: spacing(32);
+
+  .account-disclosure-title {
+    margin-top: spacing(32);
+    padding-bottom: spacing(8);
+    border-bottom: 1px solid #b3b3b3;
+  }
+
+  .accordion-title {
+    @include font-weight('normal');
+  }
+
+  .accordion-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .link {
+      margin: spacing(4) 0;
+    }
+  }
+
+  .account-disclosure-header {
+    background-color: color('grey-5');
+    padding: spacing(8) spacing(16);
+    margin-top: spacing(48);
+
+    @include screen('sm', 'down') {
+      margin-left: -15px;
+      margin-right: -15px;
+    }
+  }
+
+  .account-disclosure-section-title {
+    margin-top: spacing(24);
+    margin-bottom: spacing(8);
+  }
+}
