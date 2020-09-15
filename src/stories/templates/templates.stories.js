@@ -3,6 +3,7 @@ export default {
 }
 
 export { ComparisonPage } from './ComparisonPage'
+export { InterestRates } from './InterestRates'
 export { ProductPage } from './ProductPage'
 export { RatesAndFees } from './RatesAndFees'
 export { TermsOfUse } from './TermsOfUse'
