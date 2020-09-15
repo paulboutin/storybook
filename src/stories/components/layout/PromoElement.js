@@ -4,6 +4,7 @@ import { radios, text } from '@storybook/addon-knobs'
 import AppCTA from '../../../components/base/AppCTA'
 import Link from '../../../components/base/Link'
 import PromoElement from '../../../components/layout/PromoElement'
+import Button from '../../../components/base/Button'
 
 const eyebrow = 'Sustainable banking'
 const heading = 'The strongest environmental stance of any major bank.'
@@ -24,16 +25,7 @@ export const PromoElementStory = () => {
   let cta
 
   if (type === 'Accent Square') {
-    cta = (
-      <button
-        className={classNames(
-          'button',
-          type === 'Standard' ? 'button-primary' : 'button-tertiary'
-        )}
-      >
-        Call to Action
-      </button>
-    )
+    cta = <Button type='tertiary' label='Call to Action' link />
   } else {
     cta = (
       <>

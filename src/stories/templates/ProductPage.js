@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../../components/base/Button'
 import Card from '../../components/base/Card'
 import ClosingCTA from '../../components/layout/ClosingCTA'
 import ColumnCards from '../../components/layout/ColumnCards'
@@ -7,10 +8,10 @@ import FAQ from '../../components/layout/FAQ'
 import Footer from '../../components/layout/Footer'
 import Hero from '../../components/layout/Hero'
 import Highlight from '../../components/layout/Highlight'
+import Legal from '../../components/layout/Legal'
 import ListElement from '../../components/layout/ListElement'
 import Navigation from '../../components/layout/Navigation'
 import PromoElement from '../../components/layout/PromoElement'
-import Legal from '../../components/layout/Legal'
 
 export const ProductPage = () => (
   <>
@@ -62,7 +63,7 @@ export const ProductPage = () => (
       eyebrow='Sustainable Banking'
       image={{ src: 'http://via.placeholder.com/640', alt: 'Promo image' }}
     >
-      <button className='button button-tertiary'>Call to Action</button>
+      <Button type='tertiary' label='Call to Action' link />
     </PromoElement>
 
     <ColumnIcons

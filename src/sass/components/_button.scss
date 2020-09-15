@@ -3,8 +3,9 @@
   @include border-radius('md');
   cursor: pointer;
   padding: 16px;
-  display: inline-block;
-  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   transition-property: color, background-color, border-color;
   transition-duration: 0.3s;
 

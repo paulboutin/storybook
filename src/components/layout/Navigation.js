@@ -239,8 +239,8 @@ const Navigation = () => {
           </div>
 
           <div className='navigation-header-buttons'>
-            <Button type='ghost' label='Apply Now' />
-            <Button type='primary' label='Sign In' />
+            <Button type='ghost' label='Apply Now' link />
+            <Button type='primary' label='Sign In' link />
           </div>
         </div>
       </header>
@@ -289,7 +289,7 @@ const Navigation = () => {
       <div className='navigation-menus'>
         <aside className='navigation-menu navigation-main-menu'>
           <div className='navigation-main-menu-buttons'>
-            <Button type='ghost' label='Apply Now' />
+            <Button type='ghost' label='Apply Now' link />
             <Button
               type='primary'
               label='Sign In'

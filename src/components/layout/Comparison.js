@@ -14,7 +14,7 @@ export const ComparisonCards = ({ style, image }) => (
             An account that makes it easy to waive the monthly service charge
           </p>
         </div>
-        <Button type='primary' label='Apply Now' />
+        <Button type='primary' label='Apply Now' link />
       </div>
 
       <div className='comparison-column-divider' />
@@ -66,6 +66,7 @@ export const ComparisonCards = ({ style, image }) => (
         <Button
           type={style === 'branded' ? 'tertiary' : 'primary'}
           label='Apply Now'
+          link
         />
       </div>
 
@@ -100,7 +101,7 @@ export const ComparisonCards = ({ style, image }) => (
             An account with the highest level of service and travel benefits
           </p>
         </div>
-        <Button type='primary' label='Apply Now' />
+        <Button type='primary' label='Apply Now' link />
       </div>
 
       <div className='comparison-column-divider' />
@@ -156,7 +157,7 @@ export const ComparisonTable = () => (
             <p className='comparison-column-card-subtitle'>
               For generous cash rewards
             </p>
-            <Button type='primary' label='Apply Now' />
+            <Button type='primary' label='Apply Now' link />
             <Link standalone>Account details</Link>
           </div>
         </div>
@@ -172,7 +173,7 @@ export const ComparisonTable = () => (
             <p className='comparison-column-card-subtitle'>
               For our lowest interest rate
             </p>
-            <Button type='primary' label='Apply Now' />
+            <Button type='primary' label='Apply Now' link />
             <Link standalone>Account details</Link>
           </div>
         </div>
@@ -188,7 +189,7 @@ export const ComparisonTable = () => (
             <p className='comparison-column-card-subtitle'>
               For establishing or rebuilding credit
             </p>
-            <Button type='primary' label='Apply Now' />
+            <Button type='primary' label='Apply Now' link />
             <Link standalone>Account details</Link>
           </div>
         </div>

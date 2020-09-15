@@ -15,7 +15,7 @@ const VideoHero = ({ video, poster }) => (
           a non-profit partner
         </p>
 
-        <Button type='tertiary' label='Learn more' />
+        <Button type='tertiary' label='Learn more' link />
       </div>
     </div>
   </div>

@@ -1,21 +1,30 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Button = ({ type, label, icon, className, ...props }) => (
-  <button
-    type='button'
-    className={classNames(
-      'button',
-      `button-${type}`,
-      { 'button-icon': icon && !label },
-      className
-    )}
-    {...props}
-  >
-    {label && <span>{label}</span>}
+const Button = ({ type, label, icon, className, link, ...props }) => {
+  const classes = classNames(
+    'button',
+    `button-${type}`,
+    { 'button-icon': icon && !label },
+    className
+  )
 
-    {icon && <span className={classNames(`icon icon-${icon}`)} />}
-  </button>
-)
+  const children = (
+    <>
+      {label && <span>{label}</span>}
+      {icon && <span className={classNames(`icon icon-${icon}`)} />}
+    </>
+  )
+
+  return link ? (
+    <a href='#' className={classes} {...props}>
+      {children}
+    </a>
+  ) : (
+    <button type='button' className={classes} {...props}>
+      {children}
+    </button>
+  )
+}
 
 export default Button

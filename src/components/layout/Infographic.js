@@ -34,6 +34,7 @@ const Infographic = () => {
         type='tertiary'
         label='Learn more'
         className='infographic-button'
+        link
       />
     </div>
   )

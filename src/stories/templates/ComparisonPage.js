@@ -6,6 +6,7 @@ import Hero from '../../components/layout/Hero'
 import Legal from '../../components/layout/Legal'
 import Navigation from '../../components/layout/Navigation'
 import PromoElement from '../../components/layout/PromoElement'
+import Button from '../../components/base/Button'
 
 export const ComparisonPage = () => (
   <>
@@ -22,7 +23,7 @@ export const ComparisonPage = () => (
       eyebrow='Sustainable Banking'
       image={{ src: 'http://via.placeholder.com/480x640', alt: 'Promo image' }}
     >
-      <button className='button button-tertiary'>Call to Action</button>
+      <Button type='tertiary' label='Call to Action' link />
     </PromoElement>
 
     <FAQ />
