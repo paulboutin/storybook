@@ -25,7 +25,7 @@
 
 .sb\:color-block {
   @include font-size('sm');
-  @include border-radius('base');
+  @include border-radius('md');
   padding: spacing(4) 0;
   margin-bottom: spacing(4);
   text-align: center;

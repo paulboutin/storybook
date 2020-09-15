@@ -1,6 +1,6 @@
 .select {
   @include font-size('sm');
-  @include border-radius('base');
+  @include border-radius('md');
   position: relative;
   background-color: color('white');
   border: 1px solid color('grey-30');
@@ -38,8 +38,8 @@
   }
 
   .select-items {
-    @include border-radius('base');
-    @include box-shadow('base');
+    @include border-radius('md');
+    @include box-shadow('md');
     position: absolute;
     top: -1px;
     left: -1px;
@@ -107,7 +107,7 @@
 }
 
 .select-open {
-  @include border-radius('base', 'base', 'none', 'none');
+  @include border-radius('md', 'md', 'none', 'none');
 
   &:focus {
     .select-wrapper {

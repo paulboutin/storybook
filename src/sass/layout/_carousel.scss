@@ -25,7 +25,7 @@
   }
 
   .carousel-card {
-    @include box-shadow('base');
+    @include box-shadow('md');
 
     @include screen('sm') {
       width: 350px;

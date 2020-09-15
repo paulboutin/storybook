@@ -18,7 +18,7 @@
 }
 
 .sb\:grid-breakpoints {
-  @include border-radius('base');
+  @include border-radius('md');
   background-color: color('grey-10');
   margin-bottom: spacing(16);
   padding: spacing(12);
