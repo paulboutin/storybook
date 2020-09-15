@@ -16,7 +16,7 @@ const defaultSquarePlaceholder = 'http://via.placeholder.com/640'
 export const PromoElementStory = () => {
   const type = radios(
     'Type',
-    ['Standard', 'Full', 'Accent Square', 'Accent Dark'],
+    ['Standard', 'Alt', 'Accent Square', 'Accent Dark'],
     'Standard'
   )
   const placeholder = text('Placeholder', defaultPlaceholder)

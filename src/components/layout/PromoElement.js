@@ -6,11 +6,11 @@ import Image from '../base/Image'
 const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
   <div
     className={classNames('promo-element', {
-      'promo-full': type === 'Full',
+      'promo-alt': type === 'Alt',
       'promo-accent': type.includes('Accent'),
       'promo-square': type.includes('Square'),
       'promo-dark': type.includes('Dark'),
-      'promo-element-starbirds': type !== '' && type !== 'Full'
+      'promo-element-starbirds': type !== '' && type !== 'Alt'
     })}
   >
     <div className='container'>

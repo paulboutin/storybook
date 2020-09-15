@@ -151,7 +151,10 @@
     }
   }
 
-  &.promo-full,
+  &.promo-alt {
+    background-color: color('grey-5');
+  }
+
   &.promo-accent.promo-dark {
     .promo-element-image-wrapper {
       display: flex;
