@@ -22,17 +22,15 @@ body.navigation-open {
     background-color: color('green-dark');
     color: color('white');
 
-    .navigation-container {
+    .container {
       display: flex;
       justify-content: space-between;
-      padding: spacing(8) spacing(12);
+      padding-top: spacing(8);
+      padding-bottom: spacing(8);
 
-      @include screen('sm') {
-        padding: spacing(8) spacing(48);
-      }
-
-      @include screen('md') {
-        padding: spacing(8) spacing(32);
+      &:before,
+      &:after {
+        display: none;
       }
     }
 
@@ -78,25 +76,18 @@ body.navigation-open {
       border-bottom: none;
     }
 
-    .navigation-container {
+    .container {
       position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
-      padding: spacing(16) 0;
-
-      @include screen('md') {
-        padding: spacing(16) spacing(32);
-      }
+      padding-top: spacing(16);
+      padding-bottom: spacing(16);
     }
 
     .hamburger {
       position: absolute;
-      left: spacing(12);
-
-      @include screen('sm') {
-        left: spacing(48);
-      }
+      left: 12px;
 
       @include screen('md') {
         display: none;
@@ -173,7 +164,7 @@ body.navigation-open {
         display: block;
       }
 
-      .button {
+      .button:first-child {
         margin-right: spacing(16);
       }
     }
@@ -315,14 +306,11 @@ body.navigation-open {
     height: 100%;
     width: 100%;
     left: -100%;
-    padding: spacing(16);
+    padding-top: spacing(16);
+    padding-bottom: spacing(16);
     background-color: color('white');
     overflow: auto;
     transition: left 0.3s;
-
-    @include screen('sm') {
-      padding: spacing(16) spacing(48);
-    }
   }
 
   .navigation-main-menu {
@@ -363,13 +351,6 @@ body.navigation-open {
   }
 
   .navigation-login-menu {
-    .navigation-login-menu-wrapper {
-      @include screen('sm') {
-        max-width: 350px;
-        margin: 0 auto;
-      }
-    }
-
     .navigation-login-title {
       margin-top: spacing(8);
     }
