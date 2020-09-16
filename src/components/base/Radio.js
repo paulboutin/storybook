@@ -10,9 +10,7 @@ const Radio = ({ className, label, name, checked, disabled }) => (
       disabled={disabled}
     />
 
-    <span className='radio'>
-      <span className='radio-circle' />
-    </span>
+    <span className='radio' />
 
     <span className='radio-label'>{label}</span>
   </label>

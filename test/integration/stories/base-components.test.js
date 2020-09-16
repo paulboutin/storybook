@@ -12,7 +12,7 @@ describe('Base Components', () => {
     {
       title: 'checkbox',
       component: 'checkbox-story',
-      devices: ['mobile', 'desktop']
+      devices: ['desktop']
     },
     {
       title: 'link',
@@ -123,7 +123,7 @@ describe('Base Components', () => {
     {
       title: 'radio',
       component: 'radio-story',
-      devices: ['mobile', 'desktop']
+      devices: ['desktop']
     }
   ]
   buildSnapshotTests('components-base')(stories)

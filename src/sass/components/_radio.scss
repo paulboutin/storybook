@@ -30,55 +30,27 @@
 
     &:checked ~ .radio {
       background-color: transparent;
-      border: 2px solid color('green');
-
-      .radio-circle {
-        transform: scale(0.75);
-      }
+      border: 6px solid color('green');
     }
 
     &:checked:disabled ~ .radio {
       border-color: color('grey-30');
-
-      .radio-circle {
-        background-color: color('grey-30');
-      }
     }
   }
 
   .radio {
     position: relative;
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     border: 1px solid color('grey');
     cursor: pointer;
     border-radius: 50%;
-
-    @include screen('lg') {
-      height: 21px;
-      width: 21px;
-    }
-
-    .radio-circle {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: color('green');
-      border-radius: inherit;
-      transform: scale(0);
-      transition: 0.3s;
-    }
+    transition: border 0.1s;
   }
 
   .radio-label {
     @include font-size('xs');
-    padding-left: spacing(12);
+    padding-left: spacing(8);
     cursor: pointer;
-
-    @include screen('lg') {
-      @include font-size('sm');
-    }
   }
 }
