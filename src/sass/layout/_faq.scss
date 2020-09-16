@@ -1,8 +1,10 @@
 .faq {
-  padding: spacing(32) spacing(16);
+  padding-top: spacing(32);
+  padding-bottom: spacing(32);
 
   @include screen('md') {
-    padding: spacing(48) spacing(64);
+    padding-top: spacing(48);
+    padding-bottom: spacing(48);
   }
 
   .faq-heading {

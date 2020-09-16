@@ -1,7 +1,20 @@
 .highlight {
   display: flex;
   flex-direction: column;
-  padding: spacing(32) spacing(16);
+  padding-top: spacing(32);
+  padding-bottom: spacing(32);
+
+  @include screen('sm') {
+    padding-top: spacing(64);
+    padding-bottom: spacing(64);
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @include screen('md') {
+    padding-top: spacing(48);
+    padding-bottom: spacing(48);
+  }
 
   .highlight-img-container {
     @include screen('sm') {
@@ -22,16 +35,6 @@
     color: color('grey-70');
     margin-top: spacing(12);
     margin-bottom: spacing(24);
-  }
-
-  @include screen('sm') {
-    padding: spacing(64) spacing(24);
-    flex-direction: row;
-    align-items: center;
-  }
-
-  @include screen('md') {
-    padding: spacing(48);
   }
 }
 

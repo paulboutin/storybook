@@ -1,27 +1,24 @@
 .comparison-cards {
   display: flex;
   flex-direction: column;
-  padding: spacing(32) spacing(16);
-
-  @include screen('sm') {
-    padding: spacing(32) spacing(24);
-  }
+  padding-top: spacing(32);
+  padding-bottom: spacing(32);
 
   @include screen('md') {
-    padding: spacing(32);
     flex-direction: row;
     align-items: flex-start;
   }
 
   @include screen('lg') {
     align-items: stretch;
-    justify-content: center;
   }
 
   .comparison-column {
     @include font-size('sm');
     @include box-shadow('sm');
     position: relative;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     flex: 1;
 
@@ -32,13 +29,6 @@
         margin-top: 0;
         margin-left: spacing(24);
       }
-    }
-
-    @include screen('lg') {
-      display: flex;
-      flex-direction: column;
-      max-width: 360px;
-      box-sizing: content-box;
     }
 
     .comparison-column-top-wrapper,
@@ -76,6 +66,12 @@
         align-items: center;
         text-align: center;
       }
+    }
+
+    .comparison-column-bottom-wrapper {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .comparison-column-title {
@@ -186,15 +182,6 @@
   color: color('grey-70');
   padding: spacing(32) spacing(16);
   overflow: hidden;
-
-  @include screen('sm') {
-    padding: spacing(32);
-  }
-
-  @include screen('lg') {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
 
   .comparison-pagination-container {
     display: flex;

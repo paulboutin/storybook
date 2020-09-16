@@ -12,15 +12,18 @@ const PopupVideo = () => (
 
     <div className='popup-video-overlay' />
 
-    <div className='container'>
-      <Eyebrow text='Success stories' inverted />
-      <h1>A to Z Wineworks</h1>
-      <Button type='primary' icon='play' />
+    <div className='popup-video-content'>
+      <div className='container'>
+        <Eyebrow text='Success stories' inverted />
+        <h1>A to Z Wineworks</h1>
+        <Button type='primary' icon='play' />
 
-      <p className='popup-video-text'>
-        Bill and Deb Hatcher came west to follow their dream of being in the
-        wine industry. See how Bank of the West has helped to make that happen.
-      </p>
+        <p className='popup-video-text'>
+          Bill and Deb Hatcher came west to follow their dream of being in the
+          wine industry. See how Bank of the West has helped to make that
+          happen.
+        </p>
+      </div>
     </div>
 
     <div className='popup-video-modal'>

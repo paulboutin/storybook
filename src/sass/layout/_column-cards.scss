@@ -1,8 +1,10 @@
 .column-cards {
-  padding: spacing(32) 0;
+  padding-top: spacing(32);
+  padding-bottom: spacing(32);
 
   @include screen('sm') {
-    padding: spacing(64) 0;
+    padding-top: spacing(64);
+    padding-bottom: spacing(64);
   }
 
   .column-cards-heading {

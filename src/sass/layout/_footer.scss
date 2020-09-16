@@ -35,11 +35,8 @@
 
   .footer-links {
     background-color: color('green');
-    padding: spacing(48) spacing(12);
-
-    @include screen('md') {
-      padding: spacing(48) spacing(32) spacing(64);
-    }
+    padding-top: spacing(48);
+    padding-bottom: spacing(48);
 
     .row {
       display: flex;
@@ -89,18 +86,11 @@
   .footer-bottom {
     @include font-size('sm');
     background-color: color('green-dark');
-    padding: spacing(32) spacing(16);
+    padding-top: spacing(32);
+    padding-bottom: spacing(32);
     text-align: center;
 
-    @include screen('sm') {
-      padding: spacing(48) spacing(16);
-    }
-
-    @include screen('lg') {
-      padding: spacing(32) spacing(16);
-    }
-
-    & > :not(:last-child) {
+    .container > :not(:last-child) {
       margin-bottom: spacing(32);
 
       @include screen('sm') {

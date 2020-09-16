@@ -7,7 +7,7 @@ import Slider from '../base/Slider'
 
 const Carousel = ({ items }) => (
   <div
-    className='carousel slider-container'
+    className='carousel slider-container container'
     data-prev-trigger='.carousel-prev-slide'
     data-next-trigger='.carousel-next-slide'
     data-pagination='.carousel-pagination'

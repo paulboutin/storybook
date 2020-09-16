@@ -6,7 +6,7 @@ import Slider from '../base/Slider'
 
 const PullQuote = ({ items }) => (
   <div
-    className='pull-quote container slider-container'
+    className='pull-quote slider-container container'
     data-prev-trigger='.pull-quote-prev-slide'
     data-next-trigger='.pull-quote-next-slide'
     data-pagination='.pull-quote-pagination'

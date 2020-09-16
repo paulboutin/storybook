@@ -80,41 +80,43 @@ const Footer = () => (
     </div>
 
     <div className='footer-bottom'>
-      <div className='footer-social'>
-        <a href='#'>
-          <i className='icon icon-facebook' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-instagram' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-linkedin' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-twitter' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-youtube' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-help' />
-        </a>
+      <div className='container'>
+        <div className='footer-social'>
+          <a href='#'>
+            <i className='icon icon-facebook' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-instagram' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-linkedin' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-twitter' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-youtube' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-help' />
+          </a>
+        </div>
+
+        <div>
+          <Link>Terms of Use</Link>
+          <span className='footer-dot' />
+          <Link>Security</Link>
+          <span className='footer-dot' />
+          <Link>Privacy</Link>
+        </div>
+
+        <p>
+          © 2020 Bank of the West | NMLS# 19116 | Member FDIC | Equal Housing
+          Lender
+        </p>
+
+        <p>Doing business in South Dakota as Bank of the West California</p>
       </div>
-
-      <div>
-        <Link>Terms of Use</Link>
-        <span className='footer-dot' />
-        <Link>Security</Link>
-        <span className='footer-dot' />
-        <Link>Privacy</Link>
-      </div>
-
-      <p>
-        © 2020 Bank of the West | NMLS# 19116 | Member FDIC | Equal Housing
-        Lender
-      </p>
-
-      <p>Doing business in South Dakota as Bank of the West California</p>
     </div>
   </footer>
 )

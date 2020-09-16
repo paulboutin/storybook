@@ -5,7 +5,7 @@ import Link from '../base/Link'
 import { ListElementItems } from './ListElement'
 
 export const ComparisonCards = ({ style, image }) => (
-  <div className='comparison-cards'>
+  <div className='comparison-cards container'>
     <div className='comparison-column'>
       <div className='comparison-column-top-wrapper'>
         <div>
@@ -127,7 +127,7 @@ export const ComparisonCards = ({ style, image }) => (
 )
 
 export const ComparisonTable = () => (
-  <div className='comparison-table'>
+  <div className='comparison-table container'>
     <div className='comparison-pagination-container'>
       <Button
         type='ghost'

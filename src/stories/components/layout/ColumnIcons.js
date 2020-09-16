@@ -6,29 +6,29 @@ const defaultImage = 'http://via.placeholder.com/256'
 
 const defaultColumns = [
   {
-    text: 'Debit card? Yes!',
-    subtext: 'Use it anywhere that accepts a Mastercard debit card.'
+    title: 'Debit card? Yes!',
+    text: 'Use it anywhere that accepts a Mastercard debit card.'
   },
   {
-    text: 'Overdraft protection? Yes!',
-    subtext:
+    title: 'Overdraft protection? Yes!',
+    text:
       'We can all lose track of our spending. Check out our overdraft programs.'
   },
   {
-    text: 'Mobile wallet? Yes!',
-    subtext: 'Use it anywhere that accepts a Mastercard debit card.'
+    title: 'Mobile wallet? Yes!',
+    text: 'Use it anywhere that accepts a Mastercard debit card.'
   },
   {
-    text: 'Lorem ipsum? Yes!',
-    subtext: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+    title: 'Lorem ipsum? Yes!',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   },
   {
-    text: 'Lorem ipsum? Yes!',
-    subtext: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+    title: 'Lorem ipsum? Yes!',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   },
   {
-    text: 'Lorem ipsum? Yes!',
-    subtext: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+    title: 'Lorem ipsum? Yes!',
+    text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   }
 ]
 
@@ -45,8 +45,8 @@ export const ColumnIconsStory = () => {
 
     columns.push({
       image: text(`${prefix} Image`, defaultImage, 'content'),
-      text: text(`${prefix} Text`, defaultColumn.text, 'content'),
-      subtext: text(`${prefix} Subtext`, defaultColumn.subtext, 'content')
+      title: text(`${prefix} Title`, defaultColumn.title, 'content'),
+      text: text(`${prefix} Text`, defaultColumn.text, 'content')
     })
   }
 

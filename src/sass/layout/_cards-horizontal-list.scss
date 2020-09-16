@@ -1,8 +1,10 @@
 .cards-horizontal-list {
-  padding: spacing(24) spacing(16);
+  padding-top: spacing(24);
+  padding-bottom: spacing(24);
 
   @include screen('sm') {
-    padding: spacing(32) spacing(24);
+    padding-top: spacing(32);
+    padding-bottom: spacing(32);
   }
 
   .cards-horizontal-list-heading {
