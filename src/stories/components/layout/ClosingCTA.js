@@ -1,32 +1,25 @@
 import React from 'react'
-import { radios, text } from '@storybook/addon-knobs'
 import ClosingCTA from '../../../components/layout/ClosingCTA'
-
-const heading =
-  'Together, we can safeguard the environment and the future of our planet.'
-
-const typeMap = {
-  Standard: '',
-  Half: 'half',
-  Alt: 'alt'
-}
+import { radios, text } from '@storybook/addon-knobs'
 
 export const ClosingCTAStory = () => {
-  const type = radios('Type', ['Standard', 'Half', 'Alt'], 'Standard')
-  const image = text('Image', 'http://via.placeholder.com/1600')
-
-  return (
-    <ClosingCTA
-      type={typeMap[type]}
-      image={image}
-      heading={heading}
-      text='Type Something'
-    >
-      <a className='button button-tertiary' href='#'>
-        Call to Action
-      </a>
-    </ClosingCTA>
+  const type = radios(
+    'Type',
+    {
+      Standard: 'standard',
+      'Background image': 'bgi',
+      'Two columns': '2col'
+    },
+    'standard'
   )
+
+  let image
+
+  if (type !== 'standard') {
+    image = text('Image', 'http://via.placeholder.com/1600x1000')
+  }
+
+  return <ClosingCTA type={type} image={image} />
 }
 
 ClosingCTAStory.story = {

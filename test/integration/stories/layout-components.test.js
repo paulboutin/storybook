@@ -21,17 +21,17 @@ describe('Layout Components', () => {
     {
       title: 'closing-cta standard',
       component: 'closing-cta-story',
-      'knob-Type': 'Standard'
+      'knob-Type': 'standard'
     },
     {
-      title: 'closing-cta alt',
+      title: 'closing-cta background-image',
       component: 'closing-cta-story',
-      'knob-Type': 'Alt'
+      'knob-Type': 'bgi'
     },
     {
-      title: 'closing-cta half',
+      title: 'closing-cta two-columns',
       component: 'closing-cta-story',
-      'knob-Type': 'Half'
+      'knob-Type': '2col'
     },
     {
       title: 'hero full',
