@@ -15,7 +15,7 @@ const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
   >
     <div className='container'>
       <div className='promo-element-content'>
-        <Eyebrow text={eyebrow} inverted={type.includes('Accent')} />
+        <Eyebrow>{eyebrow}</Eyebrow>
         <h3 className='promo-element-heading'>{heading}</h3>
         <p className='promo-element-text'>{text}</p>
         <div className='cta-wrapper'>{children}</div>

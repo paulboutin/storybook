@@ -29,7 +29,7 @@ const ListElement = ({ image, items, headerText, altLayout }) => (
       )}
       <div className='list-element-content'>
         <div className='list-element-header'>
-          <Eyebrow text={headerText.eyebrow} />
+          <Eyebrow>{headerText.eyebrow}</Eyebrow>
           <div className='list-element-header-text-block'>
             <h2 className='list-element-heading'>{headerText.heading}</h2>
             <p className='list-element-header-text'>{headerText.text}</p>

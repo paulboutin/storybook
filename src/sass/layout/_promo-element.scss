@@ -47,14 +47,11 @@
 
     .promo-element-content {
       .eyebrow {
+        color: color('white');
         align-items: center;
 
         @include screen('sm') {
           align-items: flex-start;
-
-          .eyebrow-spacer {
-            margin-bottom: spacing(24);
-          }
         }
       }
 

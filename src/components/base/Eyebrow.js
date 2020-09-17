@@ -1,16 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
 
-const Eyebrow = ({ text, alt = false, inverted = false }) => (
-  <div
-    className={classNames('eyebrow', {
-      'eyebrow-alt': alt,
-      'eyebrow-inverted': inverted
-    })}
-  >
-    <p className='eyebrow-text'>{text}</p>
-    <div className='eyebrow-spacer' />
-  </div>
-)
+const Eyebrow = ({ children }) => <h6 className='eyebrow'>{children}</h6>
 
 export default Eyebrow

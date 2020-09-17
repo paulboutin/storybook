@@ -11,7 +11,7 @@ const Hero = ({ type, image }) => (
   >
     <img className='hero-img' src={image} alt='Hero image' />
     <div className='hero-content'>
-      <Eyebrow text='Any deposit checking' />
+      <Eyebrow>Any deposit checking</Eyebrow>
       <h2 className='hero-heading'>
         No hidden fees.
         <br />

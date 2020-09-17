@@ -11,7 +11,7 @@ const PullQuote = ({ items }) => (
     data-next-trigger='.pull-quote-next-slide'
     data-pagination='.pull-quote-pagination'
   >
-    <Eyebrow text='Bank of the West' />
+    <Eyebrow>Bank of the West</Eyebrow>
     <h2 className='pull-quote-title'>From Our Team</h2>
 
     <div className='pull-quote-outer-wrapper'>

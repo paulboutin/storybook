@@ -24,7 +24,7 @@ const Highlight = ({ position, type, overlap, color, images }) => (
     )}
 
     <div className='highlight-content-container'>
-      <Eyebrow text='Bank for the planet' />
+      <Eyebrow>Bank for the planet</Eyebrow>
       <h2>The strongest environmental stance of any major bank.</h2>
 
       <p className='highlight-text'>

@@ -1,14 +1,10 @@
 import React from 'react'
 import Eyebrow from '../../../components/base/Eyebrow'
-import { text, radios } from '@storybook/addon-knobs'
-
-const defaultText = 'Mobile banking'
+import { text } from '@storybook/addon-knobs'
 
 export const EyebrowStory = () => {
-  const placeholder = text('Text', defaultText)
-  const type = radios('Type', ['Standard', 'Alt'], 'Standard')
-
-  return <Eyebrow text={placeholder} alt={type === 'Alt'} />
+  const txt = text('Text', 'Eyebrow Text')
+  return <Eyebrow>{txt}</Eyebrow>
 }
 
 EyebrowStory.story = {

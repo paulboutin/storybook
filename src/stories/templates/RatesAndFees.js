@@ -374,7 +374,7 @@ export const RatesAndFees = () => {
             <span>Rotate device for best view</span>
           </p>
 
-          <Eyebrow text='Personal deposit accounts' />
+          <Eyebrow>Personal deposit accounts</Eyebrow>
           <h3 className='raf-title'>Schedule of Fees and Charges</h3>
 
           <div className='raf-intro-text-wrapper'>
