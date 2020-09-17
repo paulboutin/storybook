@@ -1,5 +1,4 @@
 import React from 'react'
-import classNames from 'classnames'
 import { radios, text } from '@storybook/addon-knobs'
 import AppCTA from '../../../components/base/AppCTA'
 import Link from '../../../components/base/Link'

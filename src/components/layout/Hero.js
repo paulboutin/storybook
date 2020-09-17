@@ -1,6 +1,6 @@
 import React from 'react'
-import Eyebrow from '../base/Eyebrow'
 import classNames from 'classnames'
+import Eyebrow from '../base/Eyebrow'
 
 const Hero = ({ type, image }) => (
   <div

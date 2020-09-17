@@ -1,6 +1,6 @@
 import React from 'react'
-import Image from '../base/Image'
 import classNames from 'classnames'
+import Image from '../base/Image'
 
 const Column = ({ columns, image, title, text }) => (
   <div
