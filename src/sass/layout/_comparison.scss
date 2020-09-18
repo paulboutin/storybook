@@ -197,11 +197,6 @@
       width: spacing(64) * 2;
       text-align: center;
     }
-
-    .button {
-      @include font-size('lg');
-      line-height: 0.5;
-    }
   }
 
   .comparison-cta {

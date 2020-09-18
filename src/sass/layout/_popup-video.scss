@@ -50,8 +50,7 @@
       border-radius: 0;
 
       .icon {
-        @include font-size('lg');
-        margin-left: spacing(4);
+        transform: translateX(10%);
       }
     }
 

@@ -120,10 +120,6 @@
     @include screen('lg') {
       bottom: spacing(32);
     }
-
-    .icon {
-      @include font-size('lg');
-    }
   }
 
   .pull-quote-pagination {
