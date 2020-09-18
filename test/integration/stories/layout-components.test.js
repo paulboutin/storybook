@@ -249,6 +249,10 @@ describe('Layout Components', () => {
       component: 'comparison-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Table'
+    },
+    {
+      title: 'help intro',
+      component: 'help-intro-story'
     }
   ]
   buildSnapshotTests('components-layout')(stories)

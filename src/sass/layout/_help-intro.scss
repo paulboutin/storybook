@@ -1,0 +1,48 @@
+.help-intro {
+  background-color: color('green');
+  color: color('white');
+  padding-top: spacing(32);
+  padding-bottom: spacing(48);
+
+  .eyebrow {
+    color: color('white');
+    align-items: center;
+  }
+
+  .help-intro-search {
+    display: flex;
+    align-items: flex-end;
+    margin-top: spacing(32);
+
+    .input-block {
+      flex-grow: 1;
+      margin-right: spacing(16);
+
+      &.input-active .input-label {
+        color: color('white') !important;
+      }
+
+      .input-underline,
+      .input-underline-active {
+        background-color: color('white');
+      }
+    }
+  }
+
+  .help-intro-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: spacing(32);
+
+    .help-intro-links-title {
+      @include font-weight('normal');
+      margin-bottom: spacing(4);
+    }
+
+    .link {
+      color: color('white');
+      margin-top: spacing(4);
+    }
+  }
+}
