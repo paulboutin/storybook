@@ -6,7 +6,7 @@ export const InterestRates = () => (
   <>
     <Navigation />
 
-    <div className='interest-rates container'>
+    <main className='interest-rates container'>
       <Breadcrumbs
         items={['Home', 'Credit Cards', 'Cash Back Card', 'Interest Rates']}
       />
@@ -17,9 +17,9 @@ export const InterestRates = () => (
         Cash Back World Mastercard® Card
       </h2>
 
-      <div className='interest-rates-header'>
-        <h4>Interest Rates and Interest Charges</h4>
-      </div>
+      <h4 className='interest-rates-header'>
+        Interest Rates and Interest Charges
+      </h4>
 
       <table className='interest-rates-table'>
         <tbody>
@@ -71,9 +71,7 @@ export const InterestRates = () => (
         </tbody>
       </table>
 
-      <div className='interest-rates-header'>
-        <h4>Fees</h4>
-      </div>
+      <h4 className='interest-rates-header'>Fees</h4>
 
       <table className='interest-rates-table'>
         <tbody>
@@ -184,7 +182,7 @@ export const InterestRates = () => (
         protections provided to them by calling 1-866-761-2689 (TTY users call
         1-800-659-5495).
       </p>
-    </div>
+    </main>
   </>
 )
 

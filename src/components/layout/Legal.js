@@ -8,7 +8,7 @@ const Legal = () => {
   ]
 
   return (
-    <div className='legal container'>
+    <section className='legal container'>
       <h5 className='legal-heading'>All the legal stuff</h5>
       <ol className='legal-list'>
         {items.map((item, index) => (
@@ -17,7 +17,7 @@ const Legal = () => {
           </li>
         ))}
       </ol>
-    </div>
+    </section>
   )
 }
 

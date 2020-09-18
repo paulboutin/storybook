@@ -3,13 +3,12 @@ import Eyebrow from '../base/Eyebrow'
 import Button from '../base/Button'
 
 const PopupVideo = () => (
-  <div className='popup-video'>
+  <section className='popup-video'>
     <img
       src='https://i.vimeocdn.com/video/936265353.jpg'
       alt='Popup video poster'
       className='popup-video-poster'
     />
-
     <div className='popup-video-overlay' />
 
     <div className='popup-video-content'>
@@ -26,7 +25,7 @@ const PopupVideo = () => (
       </div>
     </div>
 
-    <div className='popup-video-modal'>
+    <aside className='popup-video-modal'>
       <iframe
         src='https://player.vimeo.com/video/445351154'
         className='popup-video-iframe'
@@ -35,8 +34,8 @@ const PopupVideo = () => (
       />
 
       <i className='icon icon-close' />
-    </div>
-  </div>
+    </aside>
+  </section>
 )
 
 export default PopupVideo

@@ -216,7 +216,7 @@ const Navigation = () => {
                   {category.name}
                 </div>
 
-                <div
+                <header
                   id={`subheader-${category.id}`}
                   className={classNames('navigation-header-products', {
                     'navigation-header-products-active': categoryIndex === 0
@@ -233,7 +233,7 @@ const Navigation = () => {
                       </span>
                     </div>
                   ))}
-                </div>
+                </header>
               </React.Fragment>
             ))}
           </div>
@@ -245,7 +245,7 @@ const Navigation = () => {
         </div>
       </header>
 
-      <header className='navigation-subheader' />
+      <div className='navigation-subheader' />
 
       <div className='navigation-dropdowns'>
         <div className='navigation-container'>
@@ -269,7 +269,7 @@ const Navigation = () => {
             ))
           )}
 
-          <div className='navigation-promo'>
+          <article className='navigation-promo'>
             <div className='navigation-promo-content'>
               <h3>Bank Whenever, Wherever</h3>
               <p className='navigation-promo-text'>
@@ -282,7 +282,7 @@ const Navigation = () => {
             <div className='navigation-promo-image'>
               <img src='http://via.placeholder.com/640' alt='Promo image' />
             </div>
-          </div>
+          </article>
         </div>
       </div>
 

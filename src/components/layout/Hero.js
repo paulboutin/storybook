@@ -3,14 +3,14 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 
 const Hero = ({ type, image }) => (
-  <div
+  <section
     className={classNames(
       'hero',
       type === 'Spaced' ? 'hero-spaced' : 'hero-full'
     )}
   >
     <img className='hero-img' src={image} alt='Hero image' />
-    <div className='hero-content'>
+    <article className='hero-content'>
       <Eyebrow>Any deposit checking</Eyebrow>
       <h2 className='hero-heading'>
         No hidden fees.
@@ -25,8 +25,8 @@ const Hero = ({ type, image }) => (
         <span>Not in Alabama? </span>
         <span className='link link-standalone'>Change your state</span>
       </p>
-    </div>
-  </div>
+    </article>
+  </section>
 )
 
 export default Hero

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Table = ({ data }) => (
-  <div className='table'>
+  <div className='table-wrapper'>
     <table>
       {data.header && (
         <thead>

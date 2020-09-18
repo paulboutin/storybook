@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 const ColumnCards = ({ heading, children, inverted }) => (
-  <div
+  <section
     className={classNames('column-cards container', {
       'column-cards-inverted': inverted
     })}
@@ -15,7 +15,7 @@ const ColumnCards = ({ heading, children, inverted }) => (
         </div>
       ))}
     </div>
-  </div>
+  </section>
 )
 
 export default ColumnCards

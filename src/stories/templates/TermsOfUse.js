@@ -7,20 +7,20 @@ export const TermsOfUse = () => (
   <>
     <Navigation />
 
-    <div className='terms-of-use container'>
+    <main className='terms-of-use container'>
       <Breadcrumbs
         items={['Home', 'Credit Cards', 'Cash Back Card', 'Terms of Use']}
       />
 
-      <div className='tos-wrapper'>
-        <div className='tos-contents'>
-          <p>Content</p>
+      <section className='tos-wrapper'>
+        <aside className='tos-contents'>
+          <h6 className='tos-contents-title'>Content</h6>
           <Link href='#agreement'>The Agreement</Link>
           <Link href='#liability'>Liability</Link>
           <Link href='#relationship'>Our Relationship</Link>
           <Link href='#rights'>Reservation of Rights</Link>
           <Link href='#compliance'>Compliance with Law and Governing Law</Link>
-        </div>
+        </aside>
 
         <div>
           <h2 className='tos-title'>Terms of Use</h2>
@@ -139,7 +139,7 @@ export const TermsOfUse = () => (
             affirm that you are over the age of 13.
           </p>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   </>
 )

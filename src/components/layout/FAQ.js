@@ -3,7 +3,7 @@ import Accordion from '../base/Accordion'
 import Link from '../base/Link'
 
 const FAQ = () => (
-  <div className='faq container'>
+  <section className='faq container'>
     <h2 className='faq-heading'>
       Still have questions?
       <br />
@@ -45,7 +45,7 @@ const FAQ = () => (
     <Link standalone className='faq-link'>
       View All
     </Link>
-  </div>
+  </section>
 )
 
 export default FAQ

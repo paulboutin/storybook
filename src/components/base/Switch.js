@@ -6,9 +6,9 @@ const Switch = ({ className, label, checked, disabled }) => (
     <input type='checkbox' defaultChecked={checked} disabled={disabled} />
     <span className='switch-label'>{label}</span>
 
-    <div className='switch'>
-      <div className='switch-circle' />
-    </div>
+    <span className='switch'>
+      <span className='switch-circle' />
+    </span>
   </label>
 )
 

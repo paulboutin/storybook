@@ -5,7 +5,7 @@ import Link from './Link'
 
 const Card = ({ heading, children, linkText, image, flat }) => {
   return (
-    <div className={classNames('card', { 'card-flat': flat })}>
+    <article className={classNames('card', { 'card-flat': flat })}>
       <Image
         className='image-block'
         src={image.src}
@@ -19,7 +19,7 @@ const Card = ({ heading, children, linkText, image, flat }) => {
         </div>
         <Link standalone>{linkText}</Link>
       </div>
-    </div>
+    </article>
   )
 }
 

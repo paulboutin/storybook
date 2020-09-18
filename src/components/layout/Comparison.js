@@ -5,9 +5,9 @@ import Link from '../base/Link'
 import { ListElementItems } from './ListElement'
 
 export const ComparisonCards = ({ style, image }) => (
-  <div className='comparison-cards container'>
-    <div className='comparison-column'>
-      <div className='comparison-column-top-wrapper'>
+  <section className='comparison-cards container'>
+    <article className='comparison-column'>
+      <section className='comparison-column-top-wrapper'>
         <div>
           <h4 className='comparison-column-title'>Any Deposit Checking</h4>
           <p className='comparison-column-description'>
@@ -15,11 +15,11 @@ export const ComparisonCards = ({ style, image }) => (
           </p>
         </div>
         <Button type='primary' label='Apply Now' link />
-      </div>
+      </section>
 
       <div className='comparison-column-divider' />
 
-      <div className='comparison-column-bottom-wrapper'>
+      <section className='comparison-column-bottom-wrapper'>
         <div className='comparison-list'>
           <ListElementItems
             items={[
@@ -33,10 +33,10 @@ export const ComparisonCards = ({ style, image }) => (
         <div className='comparison-link-container'>
           <Link standalone>View account details</Link>
         </div>
-      </div>
-    </div>
+      </section>
+    </article>
 
-    <div
+    <article
       className={classNames(
         'comparison-column',
         style === 'branded' && 'comparison-column-branded'
@@ -48,7 +48,7 @@ export const ComparisonCards = ({ style, image }) => (
         </span>
       )}
 
-      <div className='comparison-column-top-wrapper'>
+      <section className='comparison-column-top-wrapper'>
         {style === 'branded' && (
           <img
             src={image}
@@ -68,11 +68,11 @@ export const ComparisonCards = ({ style, image }) => (
           label='Apply Now'
           link
         />
-      </div>
+      </section>
 
       <div className='comparison-column-divider' />
 
-      <div className='comparison-column-bottom-wrapper'>
+      <section className='comparison-column-bottom-wrapper'>
         <p className='comparison-column-extra'>
           All the benefits of our Any Deposit Checking account, plus:
         </p>
@@ -90,11 +90,11 @@ export const ComparisonCards = ({ style, image }) => (
         <div className='comparison-link-container'>
           <Link standalone>View account details</Link>
         </div>
-      </div>
-    </div>
+      </section>
+    </article>
 
-    <div className='comparison-column'>
-      <div className='comparison-column-top-wrapper'>
+    <article className='comparison-column'>
+      <section className='comparison-column-top-wrapper'>
         <div>
           <h4 className='comparison-column-title'>Premier Checking</h4>
           <p className='comparison-column-description'>
@@ -102,11 +102,11 @@ export const ComparisonCards = ({ style, image }) => (
           </p>
         </div>
         <Button type='primary' label='Apply Now' link />
-      </div>
+      </section>
 
       <div className='comparison-column-divider' />
 
-      <div className='comparison-column-bottom-wrapper'>
+      <section className='comparison-column-bottom-wrapper'>
         <div className='comparison-list'>
           <ListElementItems
             items={[
@@ -121,9 +121,9 @@ export const ComparisonCards = ({ style, image }) => (
         <div className='comparison-link-container'>
           <Link standalone>View account details</Link>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
+    </article>
+  </section>
 )
 
 export const ComparisonTable = () => (

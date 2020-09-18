@@ -2,17 +2,17 @@ import React from 'react'
 import Button from '../base/Button'
 
 const InfographicBox = ({ title, children }) => (
-  <div className='infographic-box'>
+  <article className='infographic-box'>
     <div className='infographic-box-wrapper'>
       <h1 className='infographic-box-title'>{title}</h1>
       <p className='infographic-box-text'>{children}</p>
     </div>
-  </div>
+  </article>
 )
 
 const Infographic = () => {
   return (
-    <div className='infographic'>
+    <section className='infographic'>
       <h2 className='infographic-title'>We invest in what we believe</h2>
 
       <div className='infographic-boxes container'>
@@ -36,7 +36,7 @@ const Infographic = () => {
         className='infographic-button'
         link
       />
-    </div>
+    </section>
   )
 }
 

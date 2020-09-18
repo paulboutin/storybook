@@ -5,7 +5,7 @@ import AppCTA from '../base/AppCTA'
 
 const Footer = () => (
   <footer className='footer'>
-    <div className='footer-links-mobile visible-xs'>
+    <section className='footer-links-mobile visible-xs'>
       <img
         src='/img/star-birds-white.svg'
         alt='Starbirds'
@@ -39,9 +39,9 @@ const Footer = () => (
       <Accordion title='Download the App' inverted>
         <AppCTA />
       </Accordion>
-    </div>
+    </section>
 
-    <div className='footer-links hidden-xs'>
+    <section className='footer-links hidden-xs'>
       <div className='container'>
         <div className='row'>
           <div className='footer-column col-sm-6 col-sm-offset-1 col-md-3 col-md-offset-0'>
@@ -77,9 +77,9 @@ const Footer = () => (
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div className='footer-bottom'>
+    <section className='footer-bottom'>
       <div className='container'>
         <div className='footer-social'>
           <a href='#'>
@@ -117,7 +117,7 @@ const Footer = () => (
 
         <p>Doing business in South Dakota as Bank of the West California</p>
       </div>
-    </div>
+    </section>
   </footer>
 )
 

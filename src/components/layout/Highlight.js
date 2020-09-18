@@ -6,7 +6,9 @@ import Image from '../base/Image'
 import ImageOverlap from '../base/ImageOverlap'
 
 const Highlight = ({ position, type, overlap, color, images }) => (
-  <div className={classNames('highlight container', `highlight-${position}`)}>
+  <section
+    className={classNames('highlight container', `highlight-${position}`)}
+  >
     {type === 'Single' ? (
       <Image
         src={images[0]}
@@ -23,7 +25,7 @@ const Highlight = ({ position, type, overlap, color, images }) => (
       />
     )}
 
-    <div className='highlight-content-container'>
+    <article className='highlight-content-container'>
       <Eyebrow>Bank for the planet</Eyebrow>
       <h2>The strongest environmental stance of any major bank.</h2>
 
@@ -33,8 +35,8 @@ const Highlight = ({ position, type, overlap, color, images }) => (
       </p>
 
       <Link standalone>Your choice of bank matters</Link>
-    </div>
-  </div>
+    </article>
+  </section>
 )
 
 export default Highlight

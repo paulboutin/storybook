@@ -27,7 +27,7 @@ export const AccountDisclosure = () => {
     <>
       <Navigation />
 
-      <div className='account-disclosure container'>
+      <main className='account-disclosure container'>
         <Breadcrumbs
           items={[
             'Home',
@@ -59,13 +59,11 @@ export const AccountDisclosure = () => {
         ))}
 
         {sections.map((section, sectionIndex) => (
-          <div key={sectionIndex}>
-            <div className='account-disclosure-header'>
-              <h4>{section}</h4>
-            </div>
+          <section key={sectionIndex}>
+            <h4 className='account-disclosure-header'>{section}</h4>
 
             {subSections.map((subSection, subSectionIndex) => (
-              <div key={subSectionIndex}>
+              <section key={subSectionIndex}>
                 <h6
                   className='account-disclosure-section-title'
                   id={`section-${sectionIndex}-${subSectionIndex}`}
@@ -91,11 +89,11 @@ export const AccountDisclosure = () => {
                   access or use this Site if you are under 13 years of age. By
                   using this Site, you affirm that you are over the age of 13.
                 </p>
-              </div>
+              </section>
             ))}
-          </div>
+          </section>
         ))}
-      </div>
+      </main>
     </>
   )
 }

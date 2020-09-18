@@ -4,7 +4,7 @@ import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
 
 const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
-  <div
+  <section
     className={classNames('promo-element', {
       'promo-alt': type === 'Alt',
       'promo-accent': type.includes('Accent'),
@@ -34,7 +34,7 @@ const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
         <div className='cta-wrapper'>{children}</div>
       )}
     </div>
-  </div>
+  </section>
 )
 
 export default PromoElement

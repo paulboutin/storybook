@@ -2,7 +2,7 @@ import React from 'react'
 import Select from '../base/Select'
 
 const DropdownHero = ({ image, items }) => (
-  <div className='dropdown-hero'>
+  <section className='dropdown-hero'>
     <img src={image} alt='Hero image' className='dropdown-hero-img' />
     <div className='dropdown-hero-overlay' />
 
@@ -15,7 +15,7 @@ const DropdownHero = ({ image, items }) => (
         items={items}
       />
     </div>
-  </div>
+  </section>
 )
 
 export default DropdownHero

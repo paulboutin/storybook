@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import Button from '../base/Button'
 
 const ClosingCTA = ({ type, image }) => (
-  <div className={classNames('closing-cta', `closing-cta-${type}`)}>
+  <section className={classNames('closing-cta', `closing-cta-${type}`)}>
     <div className='container'>
       {type === '2col' && (
         <img
@@ -34,7 +34,7 @@ const ClosingCTA = ({ type, image }) => (
         <Button type='tertiary' label='Call to Action' link />
       </div>
     </div>
-  </div>
+  </section>
 )
 
 export default ClosingCTA

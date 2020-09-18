@@ -28,7 +28,7 @@ const CardsHorizontalList = () => {
   ]
 
   return (
-    <div className='cards-horizontal-list container'>
+    <section className='cards-horizontal-list container'>
       <h3 className='cards-horizontal-list-heading'>
         Solutions that finance a better tomorrow
       </h3>
@@ -48,7 +48,7 @@ const CardsHorizontalList = () => {
           </div>
         </article>
       ))}
-    </div>
+    </section>
   )
 }
 

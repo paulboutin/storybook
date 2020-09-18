@@ -12,23 +12,28 @@ export const ComparisonPage = () => (
   <>
     <Navigation />
 
-    <Hero type='Full' image='http://via.placeholder.com/1600' />
+    <main>
+      <Hero type='Full' image='http://via.placeholder.com/1600' />
 
-    <ComparisonCards />
+      <ComparisonCards />
 
-    <PromoElement
-      heading='The strongest environmental stance of any major bank.'
-      type='Accent Dark'
-      text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-      eyebrow='Sustainable Banking'
-      image={{ src: 'http://via.placeholder.com/480x640', alt: 'Promo image' }}
-    >
-      <Button type='tertiary' label='Call to Action' link />
-    </PromoElement>
+      <PromoElement
+        heading='The strongest environmental stance of any major bank.'
+        type='Accent Dark'
+        text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+        eyebrow='Sustainable Banking'
+        image={{
+          src: 'http://via.placeholder.com/480x640',
+          alt: 'Promo image'
+        }}
+      >
+        <Button type='tertiary' label='Call to Action' link />
+      </PromoElement>
 
-    <FAQ />
+      <FAQ />
 
-    <Legal />
+      <Legal />
+    </main>
 
     <Footer />
   </>

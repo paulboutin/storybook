@@ -20,7 +20,7 @@ const Column = ({ columns, image, title, text }) => (
 )
 
 const ColumnIcons = ({ columns, inverted }) => (
-  <div
+  <section
     className={classNames('column-icons', {
       'column-icons-inverted': inverted
     })}
@@ -32,7 +32,7 @@ const ColumnIcons = ({ columns, inverted }) => (
         ))}
       </div>
     </div>
-  </div>
+  </section>
 )
 
 export default ColumnIcons

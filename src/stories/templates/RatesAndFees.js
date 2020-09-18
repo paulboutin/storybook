@@ -359,8 +359,8 @@ export const RatesAndFees = () => {
     <>
       <Navigation />
 
-      <div className='rates-and-fees'>
-        <div className='raf-intro container'>
+      <main className='rates-and-fees'>
+        <section className='raf-intro container'>
           <Breadcrumbs
             items={[
               'Banking',
@@ -420,19 +420,19 @@ export const RatesAndFees = () => {
               <i className='icon icon-arrow-down' /> Download
             </Link>
           </div>
-        </div>
+        </section>
 
-        <div className='raf-accordions container'>
+        <section className='raf-accordions container'>
           {accordions.map((accordion, index) => (
             <Accordion key={index} title={accordion.title}>
               <Table data={accordion.table} />
             </Accordion>
           ))}
-        </div>
+        </section>
 
         <Legal />
 
-        <div className='raf-legal-addendum container'>
+        <section className='raf-legal-addendum container'>
           <b>
             Addendum to the Deposit Account Disclosure and Safe Deposit Box
             Rental Agreement Terms and Conditions For Personal Accounts (All
@@ -562,8 +562,8 @@ export const RatesAndFees = () => {
           The first <b>$225</b> of funds from any deposit (cash or checks) made
           at ATMs we own or operate will be available on the first Business Day
           after the day of your deposit, unless a longer hold applies.
-        </div>
-      </div>
+        </section>
+      </main>
 
       <Footer />
     </>
