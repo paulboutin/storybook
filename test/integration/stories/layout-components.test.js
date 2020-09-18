@@ -253,6 +253,10 @@ describe('Layout Components', () => {
     {
       title: 'help intro',
       component: 'help-intro-story'
+    },
+    {
+      title: 'help outro',
+      component: 'help-outro'
     }
   ]
   buildSnapshotTests('components-layout')(stories)
