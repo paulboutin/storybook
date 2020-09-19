@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import { slugify } from '../../utils'
 
 const Select = ({
   type,
@@ -33,25 +34,19 @@ const Select = ({
     <ul className='select-items'>
       <li className='select-placeholder' />
 
-      {items.map((item, idx) => {
-        const value = item
-          .replace(/[^\w\s]/g, '')
-          .replace(/ /g, '-')
-          .toLowerCase()
-        return (
-          <li key={idx} data-value={value}>
-            {type === 'links' ? (
-              <a className='select-item' href='/'>
-                {item}
-              </a>
-            ) : (
-              <span className='select-item' tabIndex='0'>
-                {item}
-              </span>
-            )}
-          </li>
-        )
-      })}
+      {items.map((item, idx) => (
+        <li key={idx} data-value={slugify(item)}>
+          {type === 'links' ? (
+            <a className='select-item' href='/'>
+              {item}
+            </a>
+          ) : (
+            <span className='select-item' tabIndex='0'>
+              {item}
+            </span>
+          )}
+        </li>
+      ))}
     </ul>
 
     {helper && <p className='select-helper-text'>{helper}</p>}

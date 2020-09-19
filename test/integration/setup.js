@@ -1,14 +1,12 @@
 const { configureToMatchImageSnapshot } = require('jest-image-snapshot')
+const { slugify } = require('../../src/utils')
 
 const toMatchImageSnapshot = configureToMatchImageSnapshot({
   customDiffConfig: {
     threshold: 0
   },
   customSnapshotIdentifier: ({ currentTestName }) => {
-    return currentTestName
-      .replace(/\s/g, '-')
-      .toLowerCase()
-      .replace('matches-snapshot-on-', '')
+    return slugify(currentTestName).replace('matches-snapshot-on-', '')
   }
 })
 
