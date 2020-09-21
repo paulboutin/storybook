@@ -47,13 +47,13 @@ describe('Base Components', () => {
       devices: ['mobile']
     },
     {
-      title: 'image 1:1 ratio',
+      title: 'image 1-1 ratio',
       component: 'image-story',
       devices: ['mobile'],
       'knob-Ratio': '1:1'
     },
     {
-      title: 'image 4:3 ratio',
+      title: 'image 4-3 ratio',
       component: 'image-story',
       devices: ['mobile'],
       'knob-Ratio': '4:3'
