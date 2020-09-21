@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="58px" viewBox="0 0 64 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI Elements/Icon / Payments / Bill Pay</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="37.125" height="23.25" rx="1"></rect>
+    </defs>
+    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-624.000000, -479.000000)">
+            <g id="UI-Elements/Icon-/-Payments-/-Bill-Pay" transform="translate(620.000000, 477.000000)">
+                <rect id="Rectangle" x="0" y="0" width="72" height="62"></rect>
+                <g id="Group-2" transform="translate(4.500000, 2.214286)">
+                    <g id="Triangle" transform="translate(18.562500, 45.946429) scale(1, -1) translate(-18.562500, -45.946429) translate(0.000000, 34.321429)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#007E4E" xlink:href="#path-1"></use>
+                        <path d="M18.5625,0.284051966 C19.4220625,0.284051966 20.2816249,0.529884988 21.0310191,1.02155103 L21.0310191,1.02155103 L38.7985744,12.6785714 L-1.67357442,12.6785714 L16.0939809,1.02155103 C16.8433751,0.529884988 17.7029375,0.284051966 18.5625,0.284051966 Z" id="Triangle-Copy" stroke="#004B2E" mask="url(#mask-2)" transform="translate(18.562500, 6.089286) scale(1, -1) translate(-18.562500, -6.089286) "></path>
+                        <path d="M20.9479102,6.25949289 L37.125,18.2776523 L37.125,18.2776523 L37.125,21.0357143 L0,21.0357143 L0,18.2776523 L16.1770898,6.25949289 C17.5933349,5.20734699 19.5316651,5.20734699 20.9479102,6.25949289 Z" id="Triangle-Copy-3" fill-opacity="0.5" fill="#000000" opacity="0.25" mask="url(#mask-2)"></path>
+                        <path d="M20.7567392,10.2967495 L37.125,21.0357143 L37.125,21.0357143 L0,21.0357143 L16.3682608,10.2967495 C17.7005171,9.42267658 19.4244829,9.42267658 20.7567392,10.2967495 Z" fill="#007E4E" mask="url(#mask-2)"></path>
+                        <path d="M18.5625,8.91868877 C19.643579,8.91868877 20.7246579,9.26823479 21.6262785,9.96732681 L21.6262785,9.96732681 L40.046674,24.25 L-2.921674,24.25 L15.4987215,9.96732681 C16.4003421,9.26823479 17.481421,8.91868877 18.5625,8.91868877 Z" id="Triangle-Copy-2" stroke="#004B2E" stroke-width="2" fill="#007E4E" mask="url(#mask-2)"></path>
+                    </g>
+                    <g id="Group" transform="translate(24.750000, 0.000000)">
+                        <g id="Bill-Pay-Icon" fill="#00B16E">
+                            <path d="M1,0 L29.25,0 L29.25,0 L38.25,8.85714286 L38.25,56.5714286 C38.25,57.1237133 37.8022847,57.5714286 37.25,57.5714286 L1,57.5714286 C0.44771525,57.5714286 6.76353751e-17,57.1237133 0,56.5714286 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z" id="Rectangle"></path>
+                        </g>
+                        <path d="M29.25,0 L38.25,8.85714286 L31.25,8.85714286 C30.1454305,8.85714286 29.25,7.96171236 29.25,6.85714286 L29.25,0 L29.25,0 Z" id="Path" fill="#007E4E"></path>
+                        <rect id="Rectangle-Copy-37" fill="#FFFFFF" x="4.5" y="31" width="29.25" height="2.21428571"></rect>
+                        <rect id="Rectangle-Copy-38" fill="#FFFFFF" x="4.5" y="46.5" width="29.25" height="2.21428571"></rect>
+                        <rect id="Rectangle-Copy-40" fill="#FFFFFF" x="4.5" y="38.75" width="29.25" height="2.21428571"></rect>
+                        <text id="DUE-Copy" font-family="PublicSans-Thin_Bold, Public Sans" font-size="10" font-weight="bold" letter-spacing="0.4166666" fill="#FFFFFF">
+                            <tspan x="8.10640635" y="23.9821429">DUE</tspan>
+                        </text>
+                    </g>
+                    <rect id="Rectangle" fill-opacity="0.15" fill="#000000" x="22.5" y="34.3214286" width="2.25" height="23.25"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

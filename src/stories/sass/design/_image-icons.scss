@@ -1,0 +1,29 @@
+.sb\:image-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  .sb\:image-icon,
+  .sb\:image-icon-filler {
+    width: 300px;
+    margin: spacing(8);
+  }
+
+  .sb\:image-icon {
+    @include box-shadow('md');
+    @include border-radius('md');
+    @include font-size('xs');
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid color('grey-10');
+    padding: spacing(16);
+
+    img {
+      margin-bottom: spacing(8);
+    }
+  }
+}

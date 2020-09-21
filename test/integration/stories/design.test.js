@@ -27,9 +27,14 @@ describe('Design System', () => {
       component: 'grid'
     },
     {
-      title: 'icons',
-      component: 'icons',
+      title: 'font-icons',
+      component: 'font-icons',
       devices: ['mobile']
+    },
+    {
+      title: 'image-icons',
+      component: 'image-icons',
+      devices: ['desktop']
     }
   ]
   buildSnapshotTests('design-system')(stories)

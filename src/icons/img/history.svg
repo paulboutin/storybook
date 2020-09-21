@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="49px" viewBox="0 0 50 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI Elements/Icon / Account Settings / History</title>
+    <defs>
+        <circle id="path-1" cx="36" cy="31.5" r="22.5"></circle>
+        <filter x="-6.7%" y="-6.7%" width="113.3%" height="113.3%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-626.000000, -268.000000)">
+            <g id="UI-Elements/Icon-/-Account-Settings-/-History" transform="translate(615.000000, 261.000000)">
+                <g id="Oval">
+                    <use fill="#00B16E" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <circle stroke="#004B2E" stroke-width="2" cx="36" cy="31.5" r="23.5"></circle>
+                </g>
+                <rect id="Rectangle" fill="#004B2E" x="34.875" y="11.25" width="2.25" height="5.625" rx="1"></rect>
+                <rect id="Rectangle" fill="#004B2E" x="34.875" y="46.125" width="2.25" height="5.625" rx="1"></rect>
+                <path d="M29.6311891,14.625 C30.2525095,14.625 30.7561891,15.1286797 30.7561891,15.75 L30.7561891,30.375 L37.5061891,30.375 C38.1275095,30.375 38.6311891,30.8786797 38.6311891,31.5 C38.6311891,32.1213203 38.1275095,32.625 37.5061891,32.625 L29.6311891,32.625 L29.6311891,32.625 C29.0098688,32.625 28.5061891,32.1213203 28.5061891,31.5 L28.5061891,15.75 C28.5061891,15.1286797 29.0098688,14.625 29.6311891,14.625 Z" id="Combined-Shape-Copy" fill="#FFFFFF" transform="translate(33.568689, 23.625000) rotate(-45.000000) translate(-33.568689, -23.625000) "></path>
+                <path d="M29.6311891,16.875 C30.2525095,16.875 30.7561891,17.3786797 30.7561891,18 L30.7561891,32.625 L37.5061891,32.625 C38.1275095,32.625 38.6311891,33.1286797 38.6311891,33.75 C38.6311891,34.3713203 38.1275095,34.875 37.5061891,34.875 L29.6311891,34.875 L29.6311891,34.875 C29.0098688,34.875 28.5061891,34.3713203 28.5061891,33.75 L28.5061891,18 C28.5061891,17.3786797 29.0098688,16.875 29.6311891,16.875 Z" id="Combined-Shape" fill-opacity="0.1" fill="#000000" transform="translate(33.568689, 25.875000) rotate(-45.000000) translate(-33.568689, -25.875000) "></path>
+                <g id="Group-2" transform="translate(36.000000, 31.500000) rotate(-90.000000) translate(-36.000000, -31.500000) translate(34.875000, 11.250000)">
+                    <rect id="Rectangle" fill="#015B44" x="0" y="0" width="2.25" height="5.625" rx="1"></rect>
+                    <rect id="Rectangle" fill="#004B2E" x="0" y="34.875" width="2.25" height="5.625" rx="1"></rect>
+                </g>
+                <rect id="Rectangle" x="0" y="0" width="72" height="63"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

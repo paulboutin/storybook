@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="63px" viewBox="0 0 68 63" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI Elements/Icon / Account Settings / Account Statements</title>
+    <defs>
+        <path d="M2,0 L53.8571429,0 C54.9617124,-4.2495073e-16 55.8571429,0.8954305 55.8571429,2 L55.8571429,33.1346154 C55.8571429,34.2391849 54.9617124,35.1346154 53.8571429,35.1346154 L2,35.1346154 C0.8954305,35.1346154 -8.67738547e-17,34.2391849 0,33.1346154 L0,2 C-3.57315355e-16,0.8954305 0.8954305,-1.91384796e-17 2,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-1290.000000, -261.000000)">
+            <g id="Group" transform="translate(1290.000000, 261.000000)">
+                <path d="M1,-4.30424926e-15 L32.7857143,-4.30424926e-15 L32.7857143,-4.30424926e-15 L41.2857143,8.48403516 L41.2857143,57.1538462 C41.2857143,57.7061309 40.837999,58.1538462 40.2857143,58.1538462 L1,58.1538462 C0.44771525,58.1538462 7.91607372e-15,57.7061309 0,57.1538462 L0,1 C-6.76353751e-17,0.44771525 0.44771525,-4.2027962e-15 1,-4.30424926e-15 Z" id="Rectangle" fill="#004B2E"></path>
+                <path d="M12.7142857,25.4423077 L41.2857143,25.4423077 L41.2857143,25.4423077 L41.2857143,57.1538462 C41.2857143,57.7061309 40.837999,58.1538462 40.2857143,58.1538462 L9.71428571,58.1538462 L9.71428571,58.1538462 L9.71428571,28.4423077 C9.71428571,26.7854534 11.0574315,25.4423077 12.7142857,25.4423077 Z" id="Rectangle" fill-opacity="0.1" fill="#000000"></path>
+                <g id="Group-6" transform="translate(12.142857, 27.865385)">
+                    <g id="Group-5" transform="translate(27.928571, 17.567308) rotate(-360.000000) translate(-27.928571, -17.567308) ">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Rectangle" fill="#00B16E" xlink:href="#path-1"></use>
+                        <polygon id="Rectangle-Copy" fill="#004B2E" opacity="0.25" mask="url(#mask-2)" points="55.8571429 -2.90856228e-12 55.8571429 35.1346154 1.77635684e-15 35.1346154"></polygon>
+                    </g>
+                    <g id="Group-2" transform="translate(27.928571, 27.865385) rotate(-360.000000) translate(-27.928571, -27.865385) translate(3.642857, 26.653846)" fill="#004B2E">
+                        <rect id="Rectangle" x="0" y="0" width="7.28571429" height="2.42307692"></rect>
+                        <rect id="Rectangle" x="13.3571429" y="0" width="7.28571429" height="2.42307692"></rect>
+                        <rect id="Rectangle" x="27.9285714" y="0" width="7.28571429" height="2.42307692"></rect>
+                        <rect id="Rectangle" x="41.2857143" y="0" width="7.28571429" height="2.42307692"></rect>
+                    </g>
+                    <g id="Group-4" transform="translate(9.107143, 9.086538) rotate(-360.000000) translate(-9.107143, -9.086538) translate(3.642857, 4.846154)" fill="#004B2E">
+                        <rect id="Rectangle" x="0" y="-3.76621811e-15" width="10.9285714" height="8.48076923" rx="1"></rect>
+                    </g>
+                </g>
+                <path d="M32.7857143,-6.99440506e-15 L41.2857143,8.48403516 L34.7857143,8.48403516 C33.6811448,8.48403516 32.7857143,7.58860466 32.7857143,6.48403516 L32.7857143,-6.99440506e-15 L32.7857143,-6.99440506e-15 Z" id="Path" fill="#007E4E"></path>
+            </g>
+        </g>
+    </g>
+</svg>

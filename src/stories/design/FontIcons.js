@@ -7,7 +7,7 @@ function resize() {
   iframe.parentNode.style.height = `${body.scrollHeight}px`
 }
 
-export const Icons = () => {
+export const FontIcons = () => {
   useEffect(() => {
     document.querySelector('iframe').onload = resize
     window.addEventListener('resize', resize)
