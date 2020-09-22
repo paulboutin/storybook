@@ -11,6 +11,7 @@
     "build:zip:styles": "cp -R src/sass tmp/sass",
     "build:zip:scripts": "cp -R src/js tmp/js",
     "build:zip:fonts": "cp -R public/fonts tmp/fonts",
+    "build:zip:icons": "cp -R public/icons tmp/icons",
     "build:zip:images": "mkdir tmp/img && cp public/img/*.svg tmp/img",
     "build:zip": "cd tmp && zip -r -X ../public/lib.zip . && cd .. && rm -rf tmp",
     "build:storybook": "build-storybook -s public",

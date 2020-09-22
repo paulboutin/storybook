@@ -1,7 +1,9 @@
 import React from 'react'
 
-const req = require.context('../../icons/img')
-const icons = req.keys().map(key => ({ name: key.slice(2, -4), src: req(key) }))
+const req = require.context('../../../public/icons/img')
+const icons = req
+  .keys()
+  .map(key => ({ name: key.slice(2, -4), src: `/icons/img/${key}` }))
 
 export const ImageIcons = () => (
   <div className='sb:image-icons'>

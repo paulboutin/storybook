@@ -1,39 +1,36 @@
 import React from 'react'
 import ColumnIcons from '../../../components/layout/ColumnIcons'
 import { radios, boolean, text } from '@storybook/addon-knobs'
-import icon1 from '../../../icons/img/lock-card.svg'
-import icon2 from '../../../icons/img/cc-options.svg'
-import icon3 from '../../../icons/img/card-services.svg'
 
 const defaultColumns = [
   {
-    icon: icon1,
+    icon: '/icons/img/lock-card.svg',
     title: 'Debit card? Yes!',
     text: 'Use it anywhere that accepts a Mastercard debit card.'
   },
   {
-    icon: icon2,
+    icon: '/icons/img/cc-options.svg',
     title: 'Overdraft protection? Yes!',
     text:
       'We can all lose track of our spending. Check out our overdraft programs.'
   },
   {
-    icon: icon3,
+    icon: '/icons/img/card-services.svg',
     title: 'Mobile wallet? Yes!',
     text: 'Use it anywhere that accepts a Mastercard debit card.'
   },
   {
-    icon: icon1,
+    icon: '/icons/img/lock-card.svg',
     title: 'Lorem ipsum? Yes!',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   },
   {
-    icon: icon2,
+    icon: '/icons/img/cc-options.svg',
     title: 'Lorem ipsum? Yes!',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   },
   {
-    icon: icon3,
+    icon: '/icons/img/card-services.svg',
     title: 'Lorem ipsum? Yes!',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
   }

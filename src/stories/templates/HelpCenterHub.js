@@ -5,11 +5,10 @@ import FAQ from '../../components/layout/FAQ'
 import HelpOutro from '../../components/layout/HelpOutro'
 import Legal from '../../components/layout/Legal'
 import Footer from '../../components/layout/Footer'
-import icon from '../../icons/img/card-services.svg'
 
 export const HelpCenterHub = () => {
   const topic = {
-    icon: 'card-services',
+    icon: '/icons/img/card-services.svg',
     title: 'Accounts',
     description: 'Find answers to frequently asked questions grouped by topic'
   }
