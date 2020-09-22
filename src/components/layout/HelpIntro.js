@@ -7,25 +7,20 @@ import Link from '../base/Link'
 const HelpIntro = ({ showLinks }) => (
   <section className='help-intro'>
     <div className='container'>
-      <Eyebrow>Help Center</Eyebrow>
+      <h1 className='help-intro-title'>How can we help you today?</h1>
 
       <div className='help-intro-search'>
-        <Input
-          variant='underline'
-          label='How can we help you today?'
-          required
-        />
-        <Button type='tertiary' label='Search' icon='search' />
+        <Input variant='outline' label='Search by topic or category' required />
+        <Button type='tertiary' label='Search' />
       </div>
 
       {showLinks && (
         <div className='help-intro-links'>
-          <h5 className='help-intro-links-title'>Popular Topics</h5>
-          <Link>Credit cards</Link>
-          <Link>Online banking</Link>
-          <Link>Check a balance</Link>
-          <Link>Make a payment</Link>
-          <Link>Find a branch</Link>
+          <Eyebrow>Popular Topics</Eyebrow>
+          <Link>Frequently asked questions</Link>
+          <Link>Latest updates related to COVID</Link>
+          <Link>Useful documents and forms</Link>
+          <Link>Mobile banking</Link>
         </div>
       )}
     </div>
