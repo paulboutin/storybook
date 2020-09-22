@@ -2,9 +2,9 @@
   "name": "botw-component-library",
   "version": "1.0.0",
   "scripts": {
-    "start": "start-storybook -p ${PORT:-6006} -s public",
-    "start:ci": "npm start -- --ci --quiet",
-    "build": "mkdir tmp && run-s build:**",
+    "start": "dsm-storybook preview -s public",
+    "dsm:publish": "dsm-storybook publish -s public",
+    "build": "monskdir tmp && run-s build:**",
     "build:sass": "node-sass src/sass/main.scss build/styles.css --output-style compressed",
     "build:postcss": "postcss build/styles.css -r",
     "build:scripts": "webpack src/js/main.js -o build/scripts.js --mode production",
@@ -19,10 +19,13 @@
     "test": "run-s test:unit test:snapshot",
     "test:unit": "jest -c test/unit/jest.config.js --passWithNoTests",
     "test:integration": "jest -c test/integration/jest.config.js --max-workers 2 --updateSnapshot=${UPDATE_SNAPSHOT:-false}",
-    "test:snapshot": "cross-env PORT=${PORT:-6006} JEST_PUPPETEER_CONFIG=test/integration/jest-puppeteer.config.js start-server-and-test start:ci http://localhost:${PORT:-6006} test:integration",
+    "test:start": "start-storybook -p 6006 -s public --ci --quiet",
+    "test:snapshot": "cross-env PORT=6006 JEST_PUPPETEER_CONFIG=test/integration/jest-puppeteer.config.js start-server-and-test test:start http://localhost:6006 test:integration",
+    "test:snapshot:new": "cross-env JEST_PUPPETEER_CONFIG=test/integration/jest-puppeteer.config.js start-server-and-test test:start http://localhost:6006 test:integration",
     "test:snapshot:update": "cross-env UPDATE_SNAPSHOT=true npm run test:snapshot"
   },
   "dependencies": {
+    "@invisionapp/dsm-storybook": "0.0.134",
     "@storybook/addon-backgrounds": "5.3.19",
     "@storybook/addon-knobs": "5.3.19",
     "@storybook/addon-options": "5.3.19",
@@ -30,7 +33,7 @@
     "@storybook/addons": "5.3.19",
     "@storybook/client-api": "5.3.19",
     "@storybook/html": "5.3.19",
-    "@whitespace/storybook-addon-html": "1.2.1",
+    "@whitespace/storybook-addon-html": "2.0.1",
     "classnames": "2.2.6",
     "react": "16.13.0",
     "react-dom": "16.13.0"

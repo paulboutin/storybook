@@ -2,6 +2,7 @@
 .idea/
 public/*.zip
 storybook-static/
+.dsm/
 build/
 __diff_output__/
 node_modules/
