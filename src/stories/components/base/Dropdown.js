@@ -1,8 +1,8 @@
 import React from 'react'
-import Select from '../../../components/base/Select'
+import Dropdown from '../../../components/base/Dropdown'
 import { text, array, radios, boolean } from '@storybook/addon-knobs'
 
-export const SelectStory = () => {
+export const DropdownStory = () => {
   const label = text('Label', 'Label')
   const inline = boolean('Inline', false)
   const helper = boolean('Helper', false)
@@ -18,7 +18,7 @@ export const SelectStory = () => {
   return (
     <div className='row'>
       <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
-        <Select
+        <Dropdown
           label={label}
           type={type}
           items={items}
@@ -32,6 +32,6 @@ export const SelectStory = () => {
   )
 }
 
-SelectStory.story = {
-  name: 'Select'
+DropdownStory.story = {
+  name: 'Dropdown'
 }

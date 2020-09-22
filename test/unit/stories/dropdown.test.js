@@ -2,10 +2,10 @@ import React from 'react'
 import { fireEvent, waitFor } from '@testing-library/dom'
 import { mount } from '../utils'
 
-import Select from '../../../src/components/base/Select'
-import fn from '../../../src/js/components/select'
+import Dropdown from '../../../src/components/base/Dropdown'
+import fn from '../../../src/js/components/dropdown'
 
-describe('Select component', () => {
+describe('Dropdown component', () => {
   let component
   let items
   let placeholder
@@ -13,15 +13,18 @@ describe('Select component', () => {
 
   beforeEach(() => {
     // Arrange
-    component = mount(<Select label='Label' items={['Item 1', 'Item 2']} />, fn)
-    items = component.querySelector('.select-items')
-    placeholder = component.querySelector('.select-placeholder')
-    value = component.querySelector('.select-value')
+    component = mount(
+      <Dropdown label='Label' items={['Item 1', 'Item 2']} />,
+      fn
+    )
+    items = component.querySelector('.dropdown-items')
+    placeholder = component.querySelector('.dropdown-placeholder')
+    value = component.querySelector('.dropdown-value')
   })
 
   it('should have mouse interactivity', async () => {
     // Assert
-    expect(component).not.toHaveClass('select-open')
+    expect(component).not.toHaveClass('dropdown-open')
     expect(placeholder).toHaveTextContent('Label')
 
     // Act
@@ -29,25 +32,25 @@ describe('Select component', () => {
 
     // Assert
     await waitFor(() => {
-      expect(component).toHaveClass('select-open')
+      expect(component).toHaveClass('dropdown-open')
     })
 
     // Act
-    const firstItem = items.querySelector('.select-item')
+    const firstItem = items.querySelector('.dropdown-item')
 
     firstItem.click()
 
     // Assert
     await waitFor(() => {
       expect(firstItem.querySelector('.icon')).toBeInTheDocument()
-      expect(component).not.toHaveClass('select-open')
+      expect(component).not.toHaveClass('dropdown-open')
       expect(value).toHaveTextContent(firstItem.textContent)
     })
   })
 
   it('should have keyboard interactivity', async () => {
     // Assert
-    expect(component).not.toHaveClass('select-keyboard')
+    expect(component).not.toHaveClass('dropdown-keyboard')
     expect(placeholder).toHaveTextContent('Label')
 
     // Act
@@ -55,24 +58,24 @@ describe('Select component', () => {
 
     // Assert
     await waitFor(() => {
-      expect(component).toHaveClass('select-keyboard')
+      expect(component).toHaveClass('dropdown-keyboard')
     })
 
     // Act
-    const firstItem = items.querySelector('.select-item')
+    const firstItem = items.querySelector('.dropdown-item')
     fireEvent.keyPress(firstItem, { key: 'Enter', code: 'Enter' })
 
     // Assert
     await waitFor(() => {
       expect(firstItem.querySelector('.icon')).toBeInTheDocument()
-      expect(component).not.toHaveClass('select-open')
+      expect(component).not.toHaveClass('dropdown-open')
       expect(value).toHaveTextContent(firstItem.textContent)
     })
   })
 
   it('should close on Esc keypress', async () => {
     // Assert
-    expect(component).not.toHaveClass('select-open')
+    expect(component).not.toHaveClass('dropdown-open')
     expect(placeholder).toHaveTextContent('Label')
 
     // Act
@@ -80,7 +83,7 @@ describe('Select component', () => {
 
     // Assert
     await waitFor(() => {
-      expect(component).toHaveClass('select-open')
+      expect(component).toHaveClass('dropdown-open')
     })
 
     // Act
@@ -88,7 +91,7 @@ describe('Select component', () => {
 
     // Assert
     await waitFor(() => {
-      expect(component).not.toHaveClass('select-open')
+      expect(component).not.toHaveClass('dropdown-open')
     })
   })
 })

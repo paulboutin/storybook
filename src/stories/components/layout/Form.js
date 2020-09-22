@@ -4,7 +4,7 @@ import TextArea from '../../../components/base/TextArea'
 import Checkbox from '../../../components/base/Checkbox'
 import Switch from '../../../components/base/Switch'
 import Button from '../../../components/base/Button'
-import Select from '../../../components/base/Select'
+import Dropdown from '../../../components/base/Dropdown'
 import { radios } from '@storybook/addon-knobs'
 
 export const Form = () => {
@@ -126,7 +126,7 @@ const Form2 = () => (
 
       <div className='row'>
         <div className='col-xs-12'>
-          <Select
+          <Dropdown
             label='Choose an option'
             items={['Personal Account', 'Business Account']}
           />

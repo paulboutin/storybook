@@ -73,41 +73,41 @@ describe('Base Components', () => {
       }
     },
     {
-      title: 'select helper',
-      component: 'select-story',
+      title: 'dropdown helper',
+      component: 'dropdown-story',
       devices: ['mobile'],
       'knob-Helper': true
     },
     {
-      title: 'select error',
-      component: 'select-story',
+      title: 'dropdown error',
+      component: 'dropdown-story',
       devices: ['mobile'],
       'knob-Error': true
     },
     {
-      title: 'select disabled',
-      component: 'select-story',
+      title: 'dropdown disabled',
+      component: 'dropdown-story',
       devices: ['mobile'],
       'knob-Disabled': true
     },
     {
-      title: 'select inline',
-      component: 'select-story',
+      title: 'dropdown inline',
+      component: 'dropdown-story',
       devices: ['mobile'],
       fullPage: true,
       callback: async () => {
-        await page.click('.select')
+        await page.click('.dropdown')
       },
       'knob-Inline': true
     },
     {
-      title: 'select',
-      component: 'select-story',
+      title: 'dropdown',
+      component: 'dropdown-story',
       devices: ['mobile'],
       fullPage: true,
       callback: async () => {
-        await page.click('.select')
-        await page.hover('.select-item')
+        await page.click('.dropdown')
+        await page.hover('.dropdown-item')
       }
     },
     {

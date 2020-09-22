@@ -1,5 +1,5 @@
 import React from 'react'
-import Select from '../base/Select'
+import Dropdown from '../base/Dropdown'
 
 const DropdownHero = ({ image, items }) => (
   <section className='dropdown-hero'>
@@ -8,8 +8,8 @@ const DropdownHero = ({ image, items }) => (
 
     <div className='dropdown-hero-content container'>
       <h1 className='dropdown-hero-title'>We stand with your small business</h1>
-      <Select
-        className='dropdown-hero-select'
+      <Dropdown
+        className='dropdown-hero-dropdown'
         type='links'
         label='How can we help you?'
         items={items}

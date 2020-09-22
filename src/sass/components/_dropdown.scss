@@ -1,4 +1,4 @@
-.select {
+.dropdown {
   @include font-size('sm');
   @include border-radius('md');
   position: relative;
@@ -9,35 +9,35 @@
   &:focus {
     outline: none;
 
-    .select-wrapper {
+    .dropdown-wrapper {
       @include focus-outline();
     }
   }
 
-  .select-wrapper {
+  .dropdown-wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: spacing(12);
 
     &:hover {
-      .select-arrow {
+      .dropdown-arrow {
         color: color('green-dark');
       }
     }
   }
 
-  .select-value {
+  .dropdown-value {
     margin-right: spacing(8);
   }
 
-  .select-arrow {
+  .dropdown-arrow {
     @include font-size('lg');
     line-height: 1;
     color: color('green');
   }
 
-  .select-items {
+  .dropdown-items {
     @include border-radius('md');
     @include box-shadow('md');
     position: absolute;
@@ -49,11 +49,11 @@
     display: none;
   }
 
-  .select-placeholder {
+  .dropdown-placeholder {
     padding: spacing(12);
   }
 
-  .select-item {
+  .dropdown-item {
     position: relative;
     display: flex;
     align-items: center;
@@ -88,7 +88,7 @@
     }
   }
 
-  .select-helper-text {
+  .dropdown-helper-text {
     @include font-size('xs');
     position: absolute;
     white-space: nowrap;
@@ -97,105 +97,105 @@
     color: color('grey-70');
   }
 
-  &.select-open,
-  &.select-inline,
-  &.select-error {
-    .select-helper-text {
+  &.dropdown-open,
+  &.dropdown-inline,
+  &.dropdown-error {
+    .dropdown-helper-text {
       display: none;
     }
   }
 }
 
-.select-open {
+.dropdown-open {
   @include border-radius('md', 'md', 'none', 'none');
 
   &:focus {
-    .select-wrapper {
+    .dropdown-wrapper {
       outline: none;
     }
   }
 
-  .select-value {
+  .dropdown-value {
     visibility: hidden;
   }
 
-  .select-arrow {
+  .dropdown-arrow {
     transform: rotate(180deg);
   }
 
-  .select-items {
+  .dropdown-items {
     display: block;
   }
 }
 
-.select-keyboard {
-  &.select-open:focus {
-    .select-placeholder {
+.dropdown-keyboard {
+  &.dropdown-open:focus {
+    .dropdown-placeholder {
       outline: 2px solid color('blue');
       outline-offset: -6px;
     }
   }
 
-  .select-item:focus {
+  .dropdown-item:focus {
     outline: 2px solid color('blue');
     outline-offset: -6px;
   }
 }
 
-.select-inline {
+.dropdown-inline {
   display: inline-block;
   border: none;
   margin: 0 spacing(4);
 
-  &.select-keyboard.select-open:focus {
-    .select-wrapper {
+  &.dropdown-keyboard.dropdown-open:focus {
+    .dropdown-wrapper {
       @include focus-outline();
     }
   }
 
-  .select-wrapper {
+  .dropdown-wrapper {
     padding: 0;
     margin-bottom: spacing(8);
   }
 
-  .select-value {
+  .dropdown-value {
     visibility: visible;
   }
 
-  .select-items {
+  .dropdown-items {
     top: unset;
     right: unset;
 
-    li:nth-child(2) .select-item:before {
+    li:nth-child(2) .dropdown-item:before {
       border-top: none;
     }
   }
 
-  .select-placeholder {
+  .dropdown-placeholder {
     display: none;
   }
 
-  .select-item {
+  .dropdown-item {
     white-space: nowrap;
     padding-right: calc(#{spacing(12)} + 24px);
   }
 }
 
-.select-error {
+.dropdown-error {
   color: color('error');
   border-color: color('error');
 
-  .select-arrow {
+  .dropdown-arrow {
     color: color('error');
   }
 
-  .select-wrapper:hover {
-    .select-arrow {
+  .dropdown-wrapper:hover {
+    .dropdown-arrow {
       color: color('error-dark');
     }
   }
 
-  .select-error-text {
+  .dropdown-error-text {
     @include font-size('xs');
     position: absolute;
     white-space: nowrap;
@@ -208,36 +208,36 @@
     }
   }
 
-  &.select-inline,
-  &.select-open {
+  &.dropdown-inline,
+  &.dropdown-open {
     border-color: transparent;
 
-    .select-error-text {
+    .dropdown-error-text {
       display: none;
     }
   }
 
-  .select-helper-text {
+  .dropdown-helper-text {
     display: none;
   }
 }
 
-.select-disabled {
+.dropdown-disabled {
   color: color('grey-10');
   border-color: color('grey-10');
   cursor: not-allowed;
 
   &:focus {
-    .select-wrapper {
+    .dropdown-wrapper {
       outline: none;
     }
   }
 
-  .select-arrow {
+  .dropdown-arrow {
     color: color('grey-10') !important;
   }
 
-  .select-helper-text {
+  .dropdown-helper-text {
     color: color('grey-10');
   }
 }
