@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import Image from '../base/Image'
 
-const Column = ({ columns, image, title, text }) => (
+const Column = ({ columns, icon, title, text }) => (
   <div
     className={classNames('column-icon col-xs-12', {
       'col-sm-4': [3, 5, 6].includes(columns),
@@ -11,7 +11,7 @@ const Column = ({ columns, image, title, text }) => (
     })}
   >
     <div className='column-icon-circle'>
-      <Image src={image} alt='Icon description' ratio='1:1' />
+      <img src={icon} alt={title} />
     </div>
 
     <h6 className='column-icon-title'>{title}</h6>
