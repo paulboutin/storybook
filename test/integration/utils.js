@@ -15,12 +15,12 @@ page.waitForTransition = async selector => {
   }, selector)
 }
 
-export const getStoryUrl = ({ block, component, ...extra }) => {
+export const getStoryUrl = ({ path, ...extra }) => {
   const BASE_URL = `http://localhost:${process.env.PORT}/iframe.html`
 
   const searchParams = new URLSearchParams()
 
-  searchParams.append('id', [block, component].join('--'))
+  searchParams.append('id', path)
   Object.entries(extra).forEach(([key, value]) => {
     searchParams.append(key, String(value))
   })
@@ -28,13 +28,9 @@ export const getStoryUrl = ({ block, component, ...extra }) => {
   return BASE_URL + '?' + searchParams.toString()
 }
 
-export const buildSnapshotTests = block => stories => {
+export const buildSnapshotTests = stories => {
   stories.forEach(story => {
-    if (typeof story === 'string') {
-      story = { title: story, component: story }
-    }
-
-    const { title, devices = defaultDevices, ...params } = story
+    const { title, path, devices = defaultDevices, ...params } = story
     const testViewports = devices.reduce(
       (currentViewports, device) => ({
         ...currentViewports,
@@ -47,7 +43,7 @@ export const buildSnapshotTests = block => stories => {
       Object.entries(testViewports).forEach(([device, viewport]) => {
         it(`matches snapshot on ${device}`, async () => {
           // Arrange
-          const url = getStoryUrl({ block, ...params })
+          const url = getStoryUrl({ path, ...params })
 
           // Act
           await page.setViewport(viewport)

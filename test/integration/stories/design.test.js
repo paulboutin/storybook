@@ -4,38 +4,38 @@ describe('Design System', () => {
   const stories = [
     {
       title: 'colors',
-      component: 'colors',
+      path: 'design-system--colors',
       devices: ['mobile', 'desktop']
     },
     {
       title: 'typography',
-      component: 'typography',
+      path: 'design-system--typography',
       devices: ['mobile', 'desktop']
     },
     {
       title: 'fonts',
-      component: 'fonts',
+      path: 'design-system--fonts',
       devices: ['mobile']
     },
     {
       title: 'spacing',
-      component: 'spacing',
+      path: 'design-system--spacing',
       devices: ['desktop']
     },
     {
       title: 'grid',
-      component: 'grid'
+      path: 'design-system--grid'
     },
     {
       title: 'font-icons',
-      component: 'font-icons',
+      path: 'design-system--font-icons',
       devices: ['mobile']
     },
     {
       title: 'image-icons',
-      component: 'image-icons',
+      path: 'design-system--image-icons',
       devices: ['desktop']
     }
   ]
-  buildSnapshotTests('design-system')(stories)
+  buildSnapshotTests(stories)
 })

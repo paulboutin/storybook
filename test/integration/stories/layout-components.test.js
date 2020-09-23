@@ -4,173 +4,173 @@ describe('Layout Components', () => {
   const stories = [
     {
       title: 'legal',
-      component: 'legal'
+      path: 'layout-components--legal'
     },
     {
       title: 'list-element standard',
-      component: 'list-element-story',
+      path: 'layout-components--list-element-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Standard'
     },
     {
       title: 'list-element alt',
-      component: 'list-element-story',
+      path: 'layout-components--list-element-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Alt'
     },
     {
       title: 'closing-cta standard',
-      component: 'closing-cta-story',
+      path: 'layout-components--closing-cta-story',
       'knob-Type': 'standard'
     },
     {
       title: 'closing-cta background-image',
-      component: 'closing-cta-story',
+      path: 'layout-components--closing-cta-story',
       'knob-Type': 'bgi'
     },
     {
       title: 'closing-cta two-columns',
-      component: 'closing-cta-story',
+      path: 'layout-components--closing-cta-story',
       'knob-Type': '2col'
     },
     {
       title: 'hero full',
-      component: 'hero-story',
+      path: 'layout-components--hero-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Full'
     },
     {
       title: 'hero spaced',
-      component: 'hero-story',
+      path: 'layout-components--hero-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Spaced'
     },
     {
       title: 'cards-three-column',
-      component: 'cards-three-column-story',
+      path: 'layout-components--cards-three-column-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'faq',
-      component: 'faq',
+      path: 'layout-components--faq',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'promo-element standard',
-      component: 'promo-element-story',
+      path: 'layout-components--promo-element-story',
       'knob-Type': 'Standard'
     },
     {
       title: 'promo-element alt',
-      component: 'promo-element-story',
+      path: 'layout-components--promo-element-story',
       'knob-Type': 'Alt'
     },
     {
       title: 'promo-element accent square',
-      component: 'promo-element-story',
+      path: 'layout-components--promo-element-story',
       'knob-Type': 'Accent Square'
     },
     {
       title: 'promo-element accent dark',
-      component: 'promo-element-story',
+      path: 'layout-components--promo-element-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Accent Dark'
     },
     {
       title: 'highlight single',
-      component: 'highlight-story',
+      path: 'layout-components--highlight-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Single'
     },
     {
       title: 'highlight overlap color',
-      component: 'highlight-story',
+      path: 'layout-components--highlight-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Overlap',
       'knob-Overlap': 'Color'
     },
     {
       title: 'highlight overlap image',
-      component: 'highlight-story',
+      path: 'layout-components--highlight-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Overlap',
       'knob-Overlap': 'Image'
     },
     {
       title: 'column cards',
-      component: 'column-cards-story'
+      path: 'layout-components--column-cards-story'
     },
     {
       title: 'column-icons normal',
-      component: 'column-icons-story',
+      path: 'layout-components--column-icons-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Columns_config': 4,
       'knob-Inverted_config': false
     },
     {
       title: 'column-icons inverted',
-      component: 'column-icons-story',
+      path: 'layout-components--column-icons-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Columns_config': 5,
       'knob-Inverted_config': true
     },
     {
       title: 'form single column',
-      component: 'form',
+      path: 'layout-components--form',
       devices: ['mobile'],
       'knob-Type': '1'
     },
     {
       title: 'form two columns',
-      component: 'form',
+      path: 'layout-components--form',
       devices: ['mobile'],
       'knob-Type': '2'
     },
     {
       title: 'infographic',
-      component: 'infographic-story',
+      path: 'layout-components--infographic-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'pull-quote',
-      component: 'pull-quote-story',
+      path: 'layout-components--pull-quote-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'popup-video',
-      component: 'popup-video-story'
+      path: 'layout-components--popup-video-story'
     },
     {
       title: 'video-hero',
-      component: 'video-hero-story'
+      path: 'layout-components--video-hero-story'
     },
     {
       title: 'dropdown-hero',
-      component: 'dropdown-hero-story'
+      path: 'layout-components--dropdown-hero-story'
     },
     {
       title: 'resource-links',
-      component: 'resource-links',
+      path: 'layout-components--resource-links',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'carousel',
-      component: 'carousel-story',
+      path: 'layout-components--carousel-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'cards-horizontal-list',
-      component: 'cards-horizontal-list',
+      path: 'layout-components--cards-horizontal-list',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'footer',
-      component: 'footer',
+      path: 'layout-components--footer',
       devices: ['tablet', 'desktop']
     },
     {
       title: 'footer',
-      component: 'footer',
+      path: 'layout-components--footer',
       devices: ['mobile'],
       callback: async () => {
         await page.click('.accordion:first-of-type')
@@ -180,7 +180,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'navigation main menu',
-      component: 'navigation',
+      path: 'layout-components--navigation',
       devices: ['mobile', 'tablet'],
       fullPage: true,
       callback: async () => {
@@ -190,7 +190,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'navigation login menu',
-      component: 'navigation',
+      path: 'layout-components--navigation',
       devices: ['mobile', 'tablet'],
       fullPage: true,
       callback: async () => {
@@ -202,7 +202,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'navigation category menu',
-      component: 'navigation',
+      path: 'layout-components--navigation',
       devices: ['mobile', 'tablet'],
       fullPage: true,
       callback: async () => {
@@ -216,7 +216,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'navigation',
-      component: 'navigation',
+      path: 'layout-components--navigation',
       devices: ['desktop'],
       fullPage: true,
       callback: async () => {
@@ -226,38 +226,38 @@ describe('Layout Components', () => {
     },
     {
       title: 'comparison cards',
-      component: 'comparison-story',
+      path: 'layout-components--comparison-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Cards'
     },
     {
       title: 'comparison cards highlight',
-      component: 'comparison-story',
+      path: 'layout-components--comparison-story',
       devices: ['desktop'],
       'knob-Type': 'Cards',
       'knob-Style': 'Highlight'
     },
     {
       title: 'comparison cards branded',
-      component: 'comparison-story',
+      path: 'layout-components--comparison-story',
       devices: ['desktop'],
       'knob-Type': 'Cards',
       'knob-Style': 'Branded'
     },
     {
       title: 'comparison table',
-      component: 'comparison-story',
+      path: 'layout-components--comparison-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Type': 'Table'
     },
     {
       title: 'help intro',
-      component: 'help-intro-story'
+      path: 'layout-components--help-intro-story'
     },
     {
       title: 'help outro',
-      component: 'help-outro'
+      path: 'layout-components--help-outro'
     }
   ]
-  buildSnapshotTests('components-layout')(stories)
+  buildSnapshotTests(stories)
 })

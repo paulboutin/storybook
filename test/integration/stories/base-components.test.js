@@ -1,71 +1,74 @@
 import { buildSnapshotTests } from '../utils'
-import { BUTTON_TYPES } from '../../../src/stories/components/base/Button'
 
 describe('Base Components', () => {
   const stories = [
-    ...BUTTON_TYPES.map(type => ({
-      title: `button ${type.toLowerCase()}`,
-      component: 'button-story',
-      devices: ['desktop'],
-      'knob-Type': type
+    ...['primary', 'secondary', 'tertiary', 'ghost', 'danger'].map(type => ({
+      title: `button ${type}`,
+      path: `base-components-button--${type}`,
+      devices: ['desktop']
     })),
     {
       title: 'checkbox',
-      component: 'checkbox-story',
+      path: 'base-components--checkbox-story',
       devices: ['desktop']
     },
     {
-      title: 'link',
-      component: 'link-story',
+      title: 'link inline',
+      path: 'base-components-link--inline',
+      devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'link standalone',
+      path: 'base-components-link--standalone',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'card standard',
-      component: 'card-story',
+      path: 'base-components--card-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'card flat',
-      component: 'card-story',
+      path: 'base-components--card-story',
       'knob-Type': 'Flat'
     },
     {
       title: 'input outline',
-      component: 'input-story',
+      path: 'base-components-input--outline',
       devices: ['mobile'],
       'knob-Type': 'Outline'
     },
     {
       title: 'input underline',
-      component: 'input-story',
+      path: 'base-components-input--underline',
       devices: ['mobile'],
       'knob-Type': 'Underline'
     },
     {
       title: 'image auto ratio',
-      component: 'image-story',
+      path: 'base-components--image-story',
       devices: ['mobile']
     },
     {
       title: 'image 1-1 ratio',
-      component: 'image-story',
+      path: 'base-components--image-story',
       devices: ['mobile'],
       'knob-Ratio': '1:1'
     },
     {
       title: 'image 4-3 ratio',
-      component: 'image-story',
+      path: 'base-components--image-story',
       devices: ['mobile'],
       'knob-Ratio': '4:3'
     },
     {
       title: 'switch off',
-      component: 'switch-story',
+      path: 'base-components--switch-story',
       devices: ['mobile']
     },
     {
       title: 'switch on',
-      component: 'switch-story',
+      path: 'base-components--switch-story',
       devices: ['mobile'],
       callback: async () => {
         await page.click('.switch')
@@ -74,25 +77,25 @@ describe('Base Components', () => {
     },
     {
       title: 'dropdown helper',
-      component: 'dropdown-story',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       'knob-Helper': true
     },
     {
       title: 'dropdown error',
-      component: 'dropdown-story',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       'knob-Error': true
     },
     {
       title: 'dropdown disabled',
-      component: 'dropdown-story',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       'knob-Disabled': true
     },
     {
       title: 'dropdown inline',
-      component: 'dropdown-story',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       fullPage: true,
       callback: async () => {
@@ -102,7 +105,7 @@ describe('Base Components', () => {
     },
     {
       title: 'dropdown',
-      component: 'dropdown-story',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       fullPage: true,
       callback: async () => {
@@ -112,19 +115,19 @@ describe('Base Components', () => {
     },
     {
       title: 'breadcrumbs',
-      component: 'breadcrumbs-story',
+      path: 'base-components--breadcrumbs-story',
       devices: ['mobile']
     },
     {
       title: 'table',
-      component: 'table-story',
+      path: 'base-components--table-story',
       devices: ['mobile', 'desktop']
     },
     {
       title: 'radio',
-      component: 'radio-story',
+      path: 'base-components--radio-story',
       devices: ['desktop']
     }
   ]
-  buildSnapshotTests('components-base')(stories)
+  buildSnapshotTests(stories)
 })
