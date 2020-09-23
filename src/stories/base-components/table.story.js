@@ -30,5 +30,10 @@ TableStory.story = {
 }
 
 export default {
-  title: 'Base Components'
+  title: 'Base Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ba2f8230daff5869b8fa6'
+    }
+  }
 }

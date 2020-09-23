@@ -41,5 +41,10 @@ AccordionStory.story = {
 }
 
 export default {
-  title: 'Base Components'
+  title: 'Base Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ba2aac55519e1650671aa'
+    }
+  }
 }

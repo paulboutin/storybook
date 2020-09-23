@@ -26,7 +26,12 @@ export const RadioStory = () => {
 }
 
 RadioStory.story = {
-  name: 'Radio'
+  name: 'Radio',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ba2edc555198fd70671ae'
+    }
+  }
 }
 
 export default {

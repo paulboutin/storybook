@@ -37,5 +37,10 @@ DropdownStory.story = {
 }
 
 export default {
-  title: 'Base Components'
+  title: 'Base Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ba2df230daf008f9b8fa4'
+    }
+  }
 }

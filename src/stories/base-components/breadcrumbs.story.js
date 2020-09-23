@@ -12,5 +12,10 @@ BreadcrumbsStory.story = {
 }
 
 export default {
-  title: 'Base Components'
+  title: 'Base Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ba2b0c555194cdf0671ac'
+    }
+  }
 }

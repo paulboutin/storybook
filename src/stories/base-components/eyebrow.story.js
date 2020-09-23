@@ -12,5 +12,10 @@ EyebrowStory.story = {
 }
 
 export default {
-  title: 'Base Components'
+  title: 'Base Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ba2e434518485174a7d61'
+    }
+  }
 }

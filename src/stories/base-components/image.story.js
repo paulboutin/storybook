@@ -20,5 +20,10 @@ ImageStory.story = {
 }
 
 export default {
-  title: 'Base Components'
+  title: 'Base Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ba2ea345184338c4a7d63'
+    }
+  }
 }

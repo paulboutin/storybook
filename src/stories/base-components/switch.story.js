@@ -8,5 +8,10 @@ SwitchStory.story = {
 }
 
 export default {
-  title: 'Base Components'
+  title: 'Base Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ba2f3c5551927db0671b0'
+    }
+  }
 }
