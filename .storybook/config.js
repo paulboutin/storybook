@@ -6,7 +6,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import renderHTML from '../src/decorators/renderHTML'
 import toggleBodyClass from '../src/decorators/toggleBodyClass'
 import runScripts from '../src/decorators/runScripts'
-import '../src/stories/sass/main.scss'
+import '../src/sass/stories/main.scss'
 
 addDecorator(renderHTML)
 addDecorator(toggleBodyClass)
