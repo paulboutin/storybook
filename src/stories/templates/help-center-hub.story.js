@@ -55,5 +55,10 @@ export const HelpCenterHub = () => {
 }
 
 export default {
-  title: 'Templates'
+  title: 'Templates',
+  parameters: {
+    'in-dsm': {
+      id: '5f6bae76c555192fd50673aa'
+    }
+  }
 }

@@ -99,5 +99,10 @@ export const AccountDisclosure = () => {
 }
 
 export default {
-  title: 'Templates'
+  title: 'Templates',
+  parameters: {
+    'in-dsm': {
+      id: '5f6a4f479bb12c477da2efbe'
+    }
+  }
 }
