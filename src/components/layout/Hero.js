@@ -3,12 +3,7 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 
 const Hero = ({ type, image }) => (
-  <section
-    className={classNames(
-      'hero',
-      type === 'Spaced' ? 'hero-spaced' : 'hero-full'
-    )}
-  >
+  <section className={classNames('hero', `hero-${type}`)}>
     <img className='hero-img' src={image} alt='Hero image' />
     <article className='hero-content'>
       <Eyebrow>Any deposit checking</Eyebrow>

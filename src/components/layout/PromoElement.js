@@ -3,14 +3,14 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
 
-const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
+const PromoElement = ({ type, image, eyebrow, heading, text, children }) => (
   <section
     className={classNames('promo-element', {
-      'promo-alt': type === 'Alt',
-      'promo-accent': type.includes('Accent'),
-      'promo-square': type.includes('Square'),
-      'promo-dark': type.includes('Dark'),
-      'promo-element-starbirds': type !== '' && type !== 'Alt'
+      'promo-alt': type === 'alt',
+      'promo-accent': type.includes('accent'),
+      'promo-square': type.includes('square'),
+      'promo-dark': type.includes('dark'),
+      'promo-element-starbirds': type !== '' && type !== 'alt'
     })}
   >
     <div className='container'>
@@ -26,11 +26,11 @@ const PromoElement = ({ image, type, eyebrow, heading, text, children }) => (
             className='image-block'
             alt={image.alt}
             src={image.src}
-            ratio={type.includes('Square') ? '1:1' : 'auto'}
+            ratio={type.includes('square') ? '1:1' : 'auto'}
           />
         )}
       </div>
-      {type.includes('Accent') && !type.includes('Dark') && (
+      {type.includes('accent') && !type.includes('dark') && (
         <div className='cta-wrapper'>{children}</div>
       )}
     </div>

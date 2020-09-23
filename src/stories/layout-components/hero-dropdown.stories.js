@@ -1,5 +1,5 @@
 import React from 'react'
-import DropdownHero from '../../../components/layout/DropdownHero'
+import DropdownHero from '../../components/layout/DropdownHero'
 import { text, array } from '@storybook/addon-knobs'
 
 export const DropdownHeroStory = () => {
@@ -10,4 +10,8 @@ export const DropdownHeroStory = () => {
 
 DropdownHeroStory.story = {
   name: 'Hero Dropdown'
+}
+
+export default {
+  title: 'Layout Components'
 }

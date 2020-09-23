@@ -1,6 +1,6 @@
 import React from 'react'
 import { array, radios, text } from '@storybook/addon-knobs'
-import ListElement from '../../../components/layout/ListElement'
+import ListElement from '../../components/layout/ListElement'
 
 const defaultImage = 'http://via.placeholder.com/640x480'
 
@@ -17,10 +17,9 @@ const headerText = {
   text: 'Manage your money while contributing with the planet'
 }
 
-export const ListElementStory = () => {
-  const type = radios('Type', ['Standard', 'Alt'], 'Standard')
+const ListElementStory = ({ type }) => {
   const items = array('Items', defaultItems)
-  const isAlt = type === 'Alt'
+  const isAlt = type === 'alt'
   let image
 
   if (isAlt) {
@@ -37,6 +36,9 @@ export const ListElementStory = () => {
   )
 }
 
-ListElementStory.story = {
-  name: 'List Element'
+export const Standard = () => <ListElementStory type='standard' />
+export const Image = () => <ListElementStory type='alt' />
+
+export default {
+  title: 'Layout Components/List Element'
 }

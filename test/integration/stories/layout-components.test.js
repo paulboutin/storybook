@@ -8,42 +8,35 @@ describe('Layout Components', () => {
     },
     {
       title: 'list-element standard',
-      path: 'layout-components--list-element-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Standard'
+      path: 'layout-components-list-element--standard',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'list-element alt',
-      path: 'layout-components--list-element-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Alt'
+      path: 'layout-components-list-element--image',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'closing-cta standard',
-      path: 'layout-components--closing-cta-story',
-      'knob-Type': 'standard'
+      path: 'layout-components-closing-cta--standard'
     },
     {
       title: 'closing-cta background-image',
-      path: 'layout-components--closing-cta-story',
-      'knob-Type': 'bgi'
+      path: 'layout-components-closing-cta--background-image'
     },
     {
       title: 'closing-cta two-columns',
-      path: 'layout-components--closing-cta-story',
-      'knob-Type': '2col'
+      path: 'layout-components-closing-cta--two-columns'
     },
     {
       title: 'hero full',
-      path: 'layout-components--hero-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Full'
+      path: 'layout-components-hero--full',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'hero spaced',
-      path: 'layout-components--hero-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Spaced'
+      path: 'layout-components-hero--spaced',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'cards-three-column',
@@ -57,44 +50,34 @@ describe('Layout Components', () => {
     },
     {
       title: 'promo-element standard',
-      path: 'layout-components--promo-element-story',
-      'knob-Type': 'Standard'
+      path: 'layout-components-promo-element--standard'
     },
     {
       title: 'promo-element alt',
-      path: 'layout-components--promo-element-story',
-      'knob-Type': 'Alt'
+      path: 'layout-components-promo-element--alt'
     },
     {
       title: 'promo-element accent square',
-      path: 'layout-components--promo-element-story',
-      'knob-Type': 'Accent Square'
+      path: 'layout-components-promo-element--accent-square'
     },
     {
       title: 'promo-element accent dark',
-      path: 'layout-components--promo-element-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Accent Dark'
+      path: 'layout-components-promo-element--accent-dark'
     },
     {
       title: 'highlight single',
-      path: 'layout-components--highlight-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Single'
-    },
-    {
-      title: 'highlight overlap color',
-      path: 'layout-components--highlight-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Overlap',
-      'knob-Overlap': 'Color'
+      path: 'layout-components-content-highlight--single',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'highlight overlap image',
-      path: 'layout-components--highlight-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Overlap',
-      'knob-Overlap': 'Image'
+      path: 'layout-components-content-highlight--overlap-image',
+      devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'highlight overlap color',
+      path: 'layout-components-content-highlight--overlap-color',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'column cards',
@@ -116,15 +99,13 @@ describe('Layout Components', () => {
     },
     {
       title: 'form single column',
-      path: 'layout-components--form',
-      devices: ['mobile'],
-      'knob-Type': '1'
+      path: 'layout-components-form--single-column',
+      devices: ['mobile']
     },
     {
       title: 'form two columns',
-      path: 'layout-components--form',
-      devices: ['mobile'],
-      'knob-Type': '2'
+      path: 'layout-components-form--two-column-background',
+      devices: ['mobile']
     },
     {
       title: 'infographic',
@@ -226,29 +207,25 @@ describe('Layout Components', () => {
     },
     {
       title: 'comparison cards',
-      path: 'layout-components--comparison-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Cards'
+      path: 'layout-components-comparison--cards',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'comparison cards highlight',
-      path: 'layout-components--comparison-story',
+      path: 'layout-components-comparison--cards',
       devices: ['desktop'],
-      'knob-Type': 'Cards',
       'knob-Style': 'Highlight'
     },
     {
       title: 'comparison cards branded',
-      path: 'layout-components--comparison-story',
+      path: 'layout-components-comparison--cards',
       devices: ['desktop'],
-      'knob-Type': 'Cards',
       'knob-Style': 'Branded'
     },
     {
       title: 'comparison table',
-      path: 'layout-components--comparison-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Type': 'Table'
+      path: 'layout-components-comparison--table',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'help intro',

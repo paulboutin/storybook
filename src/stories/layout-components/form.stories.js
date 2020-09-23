@@ -1,22 +1,12 @@
 import React from 'react'
-import Input from '../../../components/base/Input'
-import TextArea from '../../../components/base/TextArea'
-import Checkbox from '../../../components/base/Checkbox'
-import Switch from '../../../components/base/Switch'
-import Button from '../../../components/base/Button'
-import Dropdown from '../../../components/base/Dropdown'
-import { radios } from '@storybook/addon-knobs'
+import Input from '../../components/base/Input'
+import TextArea from '../../components/base/TextArea'
+import Checkbox from '../../components/base/Checkbox'
+import Switch from '../../components/base/Switch'
+import Button from '../../components/base/Button'
+import Dropdown from '../../components/base/Dropdown'
 
-export const Form = () => {
-  const type = radios(
-    'Type',
-    { 'Single column': '1', 'Two column background': '2' },
-    '1'
-  )
-  return type === '1' ? <Form1 /> : <Form2 />
-}
-
-const Form1 = () => (
+export const SingleColumn = () => (
   <div className='sb:form-wrapper sb:form-1'>
     <form className='container'>
       <h4>Form title</h4>
@@ -75,7 +65,7 @@ const Form1 = () => (
   </div>
 )
 
-const Form2 = () => (
+export const TwoColumnBackground = () => (
   <div className='sb:form-wrapper sb:form-2'>
     <form className='container'>
       <h4>Form title</h4>
@@ -140,3 +130,7 @@ const Form2 = () => (
     </form>
   </div>
 )
+
+export default {
+  title: 'Layout Components/Form'
+}

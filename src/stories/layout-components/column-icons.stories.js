@@ -1,5 +1,5 @@
 import React from 'react'
-import ColumnIcons from '../../../components/layout/ColumnIcons'
+import ColumnIcons from '../../components/layout/ColumnIcons'
 import { radios, boolean, text } from '@storybook/addon-knobs'
 
 const defaultColumns = [
@@ -59,4 +59,8 @@ export const ColumnIconsStory = () => {
 
 ColumnIconsStory.story = {
   name: 'Column Icons'
+}
+
+export default {
+  title: 'Layout Components'
 }

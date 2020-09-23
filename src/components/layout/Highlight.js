@@ -5,11 +5,11 @@ import Link from '../base/Link'
 import Image from '../base/Image'
 import ImageOverlap from '../base/ImageOverlap'
 
-const Highlight = ({ position, type, overlap, color, images }) => (
+const Highlight = ({ type, images, position, color }) => (
   <section
     className={classNames('highlight container', `highlight-${position}`)}
   >
-    {type === 'Single' ? (
+    {type === 'single' ? (
       <Image
         src={images[0]}
         alt='Highlight image'
@@ -20,7 +20,7 @@ const Highlight = ({ position, type, overlap, color, images }) => (
       <ImageOverlap
         images={images}
         position={position}
-        color={overlap === 'Color' && color}
+        color={type === 'overlap-color' && color}
         className='highlight-img-container'
       />
     )}

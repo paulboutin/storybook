@@ -1,6 +1,6 @@
 import React from 'react'
-import ColumnCards from '../../../components/layout/ColumnCards'
-import Card from '../../../components/base/Card'
+import ColumnCards from '../../components/layout/ColumnCards'
+import Card from '../../components/base/Card'
 import { text } from '@storybook/addon-knobs'
 
 const defaultImage = 'http://via.placeholder.com/640x480'
@@ -64,4 +64,8 @@ export const ColumnCardsStory = () => {
 
 ColumnCardsStory.story = {
   name: 'Column Content'
+}
+
+export default {
+  title: 'Layout Components'
 }

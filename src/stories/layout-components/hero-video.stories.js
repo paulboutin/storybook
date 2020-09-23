@@ -1,5 +1,5 @@
 import React from 'react'
-import VideoHero from '../../../components/layout/VideoHero'
+import VideoHero from '../../components/layout/VideoHero'
 import { text } from '@storybook/addon-knobs'
 
 export const VideoHeroStory = () => {
@@ -9,4 +9,8 @@ export const VideoHeroStory = () => {
 
 VideoHeroStory.story = {
   name: 'Hero Video'
+}
+
+export default {
+  title: 'Layout Components'
 }

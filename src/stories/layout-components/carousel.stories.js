@@ -1,5 +1,5 @@
 import React from 'react'
-import Carousel from '../../../components/layout/Carousel'
+import Carousel from '../../components/layout/Carousel'
 
 export const CarouselStory = () => (
   <Carousel
@@ -54,4 +54,8 @@ export const CarouselStory = () => (
 
 CarouselStory.story = {
   name: 'Carousel'
+}
+
+export default {
+  title: 'Layout Components'
 }

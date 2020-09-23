@@ -1,5 +1,5 @@
 import React from 'react'
-import PullQuote from '../../../components/layout/PullQuote'
+import PullQuote from '../../components/layout/PullQuote'
 
 export const PullQuoteStory = () => (
   <PullQuote
@@ -90,4 +90,8 @@ export const PullQuoteStory = () => (
 
 PullQuoteStory.story = {
   name: 'Pull Quote'
+}
+
+export default {
+  title: 'Layout Components'
 }

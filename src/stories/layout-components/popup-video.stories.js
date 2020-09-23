@@ -1,5 +1,5 @@
 import React from 'react'
-import PopupVideo from '../../../components/layout/PopupVideo'
+import PopupVideo from '../../components/layout/PopupVideo'
 import { text } from '@storybook/addon-knobs'
 
 export const PopupVideoStory = () => {
@@ -9,4 +9,8 @@ export const PopupVideoStory = () => {
 
 PopupVideoStory.story = {
   name: 'Popup Video'
+}
+
+export default {
+  title: 'Layout Components'
 }

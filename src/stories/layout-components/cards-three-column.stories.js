@@ -1,7 +1,7 @@
 import React from 'react'
 import { text } from '@storybook/addon-knobs'
-import ColumnCards from '../../../components/layout/ColumnCards'
-import Card from '../../../components/base/Card'
+import ColumnCards from '../../components/layout/ColumnCards'
+import Card from '../../components/base/Card'
 
 const items = [
   {
@@ -45,4 +45,8 @@ export const CardsThreeColumnStory = () => {
 
 CardsThreeColumnStory.story = {
   name: 'Cards Three Column'
+}
+
+export default {
+  title: 'Layout Components'
 }

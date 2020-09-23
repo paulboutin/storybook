@@ -24,25 +24,23 @@ describe('Base Components', () => {
     },
     {
       title: 'card standard',
-      path: 'base-components--card-story',
+      path: 'base-components-card--standard',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'card flat',
-      path: 'base-components--card-story',
-      'knob-Type': 'Flat'
+      path: 'base-components-card--flat',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'input outline',
       path: 'base-components-input--outline',
-      devices: ['mobile'],
-      'knob-Type': 'Outline'
+      devices: ['mobile']
     },
     {
       title: 'input underline',
       path: 'base-components-input--underline',
-      devices: ['mobile'],
-      'knob-Type': 'Underline'
+      devices: ['mobile']
     },
     {
       title: 'image auto ratio',
