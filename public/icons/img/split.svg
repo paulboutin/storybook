@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="68px" height="50px" viewBox="0 0 68 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI Elements/Icon / Payments / Split</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="72" height="62"></rect>
+        <rect id="path-3" x="0" y="0" width="54" height="31" rx="2"></rect>
+        <rect id="path-5" x="0" y="0" width="54" height="31" rx="2"></rect>
+    </defs>
+    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-785.000000, -483.000000)">
+            <g id="ID-Card-Copy-3" transform="translate(783.000000, 477.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <g mask="url(#mask-2)" id="icon-add-funds-copy">
+                    <g transform="translate(2.250000, 6.642857)">
+                        <g id="Rectangle-3">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="Mask" fill="#004B2E" xlink:href="#path-3"></use>
+                            <rect id="Rectangle-Copy-13" fill="#007E4E" mask="url(#mask-4)" x="0" y="5.53571429" width="54" height="5.53571429"></rect>
+                        </g>
+                        <path d="M17.125,14.3928571 L54,14.3928571 L54,14.3928571 L54,31 L10.125,31 L10.125,21.3928571 C10.125,17.5268639 13.2590068,14.3928571 17.125,14.3928571 Z" id="Rectangle" fill-opacity="0.5" fill="#000000" opacity="0.25"></path>
+                        <g id="Rectangle-3" transform="translate(13.500000, 17.714286)">
+                            <mask id="mask-6" fill="white">
+                                <use xlink:href="#path-5"></use>
+                            </mask>
+                            <use id="Mask" fill="#00B16E" xlink:href="#path-5"></use>
+                            <rect id="Rectangle-Copy-13" fill="#007E4E" mask="url(#mask-6)" x="0" y="5.53571429" width="54" height="5.53571429"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

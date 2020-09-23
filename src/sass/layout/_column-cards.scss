@@ -1,11 +1,13 @@
-.three-col {
-  padding: spacing(32) 0;
+.column-cards {
+  padding-top: spacing(32);
+  padding-bottom: spacing(32);
 
   @include screen('sm') {
-    padding: spacing(64) 0;
+    padding-top: spacing(64);
+    padding-bottom: spacing(64);
   }
 
-  .three-col-heading {
+  .column-cards-heading {
     text-align: left;
     margin-bottom: spacing(32);
   }
@@ -23,7 +25,7 @@
     margin-bottom: spacing(48);
   }
 
-  &.three-col-inverted {
+  &.column-cards-inverted {
     background-color: color('grey-5');
   }
 }

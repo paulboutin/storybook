@@ -1,0 +1,57 @@
+.interest-rates {
+  padding-bottom: spacing(32);
+
+  .interest-rates-title {
+    margin-bottom: spacing(24);
+  }
+
+  .interest-rates-header {
+    background-color: color('grey-5');
+    padding: spacing(8) spacing(16);
+
+    @include screen('sm', 'down') {
+      margin: 0 -15px;
+    }
+  }
+
+  .interest-rates-table {
+    width: calc(100% + 60px);
+    border-collapse: separate;
+    border-spacing: 30px 0;
+    margin-left: -30px;
+    margin-bottom: spacing(48);
+
+    @include screen('sm', 'down') {
+      table-layout: fixed;
+    }
+
+    tbody {
+      tr:first-child > td {
+        padding-top: spacing(24);
+        padding-bottom: spacing(12);
+      }
+
+      tr:last-child > td {
+        border-bottom: 1px solid color('grey-30');
+        padding-bottom: spacing(24);
+      }
+
+      tr:not(:first-child) > td:first-child {
+        @include font-size('sm');
+      }
+    }
+
+    td {
+      vertical-align: top;
+      padding-bottom: spacing(8);
+
+      &:last-child {
+        @include font-size('xs');
+      }
+    }
+  }
+
+  .interest-rates-legal {
+    @include font-size('xs');
+  }
+}

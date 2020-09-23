@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="58px" height="35px" viewBox="0 0 58 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI Elements/Icon / Account Settings / Request Increase Limit</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="56.8888889" height="35" rx="2"></rect>
+        <path d="M28.7866683,8.16619473 L28.7866683,12.5366683 L28.7866683,12.5366683 L16.6616683,12.5366683 C16.1093836,12.5366683 15.6616683,12.9843836 15.6616683,13.5366683 L15.6616683,18.6477795 C15.6616683,19.2000642 16.1093836,19.6477795 16.6616683,19.6477795 L28.7866683,19.6477795 L28.7866683,19.6477795 L28.7866683,24.0611859 C28.7866683,24.3373283 29.010526,24.5611859 29.2866683,24.5611859 C29.3916929,24.5611859 29.4940509,24.5281149 29.5792213,24.4666644 L40.0553419,16.9081374 C40.5032211,16.5849923 40.604338,15.9599537 40.281193,15.5120746 C40.2180885,15.4246118 40.1412507,15.3479333 40.0536571,15.2850106 L29.5783789,7.76010979 C29.3541043,7.59900252 29.0416907,7.65020969 28.8805834,7.87448421 C28.8195167,7.95949402 28.7866683,8.06152474 28.7866683,8.16619473 Z" id="path-3"></path>
+        <filter x="-11.8%" y="-2.9%" width="112.9%" height="105.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="-2" dy="0" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-1126.000000, -714.000000)">
+            <g id="UI-Elements/Icon-/-Account-Settings-/-Request-Increase-Limit" transform="translate(1123.000000, 700.000000)">
+                <rect id="Rectangle" x="0" y="0" width="64" height="63"></rect>
+                <g id="Group" transform="translate(3.555556, 14.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#00B16E" xlink:href="#path-1"></use>
+                    <polygon id="Mask-Copy" fill="#007E4E" opacity="0.25" mask="url(#mask-2)" points="56.8888889 2.49134047e-13 56.8888889 36.75 -3.55555556 36.75"></polygon>
+                    <rect id="Rectangle-Copy-13" fill="#004B2E" mask="url(#mask-2)" x="-1.77777778" y="5.25" width="60.4444444" height="7"></rect>
+                    <g id="Path-Copy-4" mask="url(#mask-2)" transform="translate(28.421730, 16.114939) scale(-1, 1) rotate(-90.000000) translate(-28.421730, -16.114939) ">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

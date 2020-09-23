@@ -1,27 +1,24 @@
 .comparison-cards {
   display: flex;
   flex-direction: column;
-  padding: spacing(32) spacing(16);
-
-  @include screen('sm') {
-    padding: spacing(32) spacing(24);
-  }
+  padding-top: spacing(32);
+  padding-bottom: spacing(32);
 
   @include screen('md') {
-    padding: spacing(32);
     flex-direction: row;
     align-items: flex-start;
   }
 
   @include screen('lg') {
     align-items: stretch;
-    justify-content: center;
   }
 
   .comparison-column {
     @include font-size('sm');
     @include box-shadow('sm');
-    padding: spacing(24);
+    position: relative;
+    display: flex;
+    flex-direction: column;
     text-align: center;
     flex: 1;
 
@@ -34,26 +31,24 @@
       }
     }
 
-    @include screen('sm') {
-      padding: spacing(32) spacing(24);
+    .comparison-column-top-wrapper,
+    .comparison-column-bottom-wrapper {
+      padding: spacing(24);
+
+      @include screen('sm') {
+        padding: spacing(32) spacing(24);
+      }
+
+      @include screen('md') {
+        padding: spacing(24) spacing(16);
+      }
     }
 
-    @include screen('md') {
-      padding: spacing(24) spacing(16);
-    }
-
-    @include screen('lg') {
-      display: flex;
-      flex-direction: column;
-      max-width: 360px;
-      box-sizing: content-box;
-    }
-
-    .comparison-column-wrapper {
+    .comparison-column-top-wrapper {
+      position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: spacing(24);
 
       @include screen('sm') {
         flex-direction: row;
@@ -64,15 +59,19 @@
 
       @include screen('md') {
         flex-direction: column;
-        padding: 0 spacing(8);
-        min-height: 9.5rem;
+        min-height: 12.5rem;
       }
 
       @include screen('lg') {
         align-items: center;
         text-align: center;
-        min-height: auto;
       }
+    }
+
+    .comparison-column-bottom-wrapper {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
     }
 
     .comparison-column-title {
@@ -100,24 +99,24 @@
 
     .comparison-column-divider {
       border-top: 1px solid color('grey-30');
+      margin: 0 spacing(24);
+
+      @include screen('md') {
+        margin: 0 spacing(16);
+      }
     }
 
     .comparison-column-extra {
       @include font-weight('bold');
-      margin-top: spacing(8);
+      margin-bottom: spacing(16);
 
       @include screen('sm') {
         text-align: left;
       }
-
-      @include screen('md') {
-        margin-top: spacing(24);
-        margin-bottom: -#{spacing(8)};
-      }
     }
 
     .comparison-list {
-      margin: spacing(24) 0;
+      margin-bottom: spacing(24);
       text-align: left;
       flex-grow: 1;
     }
@@ -140,6 +139,42 @@
       @include font-size('xs');
     }
   }
+
+  .comparison-column-highlight {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    background-color: color('yellow');
+    padding: spacing(4);
+  }
+
+  .comparison-column-branded {
+    .comparison-branded-image {
+      @include border-radius('sm');
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .comparison-column-top-wrapper {
+      @include overlay('light');
+    }
+
+    .comparison-column-title,
+    .comparison-column-description {
+      color: color('white');
+    }
+
+    .comparison-column-divider {
+      display: none;
+    }
+  }
 }
 
 .comparison-table {
@@ -147,15 +182,6 @@
   color: color('grey-70');
   padding: spacing(32) spacing(16);
   overflow: hidden;
-
-  @include screen('sm') {
-    padding: spacing(32);
-  }
-
-  @include screen('lg') {
-    max-width: 1400px;
-    margin: 0 auto;
-  }
 
   .comparison-pagination-container {
     display: flex;
@@ -170,11 +196,6 @@
     .comparison-pagination {
       width: spacing(64) * 2;
       text-align: center;
-    }
-
-    .button {
-      @include font-size('lg');
-      line-height: 0.5;
     }
   }
 

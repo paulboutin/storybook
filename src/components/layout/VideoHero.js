@@ -2,7 +2,7 @@ import React from 'react'
 import Button from '../base/Button'
 
 const VideoHero = ({ video, poster }) => (
-  <div className='video-hero'>
+  <section className='video-hero'>
     <div className='video-hero-wrapper'>
       <video src={video} poster={poster} autoPlay loop muted playsInline />
       <div className='video-hero-overlay' />
@@ -15,10 +15,10 @@ const VideoHero = ({ video, poster }) => (
           a non-profit partner
         </p>
 
-        <Button type='tertiary' label='Learn more' />
+        <Button type='tertiary' label='Learn more' link />
       </div>
     </div>
-  </div>
+  </section>
 )
 
 export default VideoHero

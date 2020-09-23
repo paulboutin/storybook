@@ -5,13 +5,13 @@ import Button from '../base/Button'
 import Slider from '../base/Slider'
 
 const PullQuote = ({ items }) => (
-  <div
-    className='pull-quote container slider-container'
+  <section
+    className='pull-quote slider-container container'
     data-prev-trigger='.pull-quote-prev-slide'
     data-next-trigger='.pull-quote-next-slide'
     data-pagination='.pull-quote-pagination'
   >
-    <Eyebrow text='Bank of the West' />
+    <Eyebrow>Bank of the West</Eyebrow>
     <h2 className='pull-quote-title'>From Our Team</h2>
 
     <div className='pull-quote-outer-wrapper'>
@@ -41,7 +41,7 @@ const PullQuote = ({ items }) => (
             ))}
           </Slider>
 
-          <div className='pull-quote-pagination-container'>
+          <nav className='pull-quote-pagination-container'>
             <Button
               type='secondary'
               icon='chevron-left'
@@ -55,11 +55,11 @@ const PullQuote = ({ items }) => (
               icon='chevron-right'
               className='pull-quote-next-slide'
             />
-          </div>
+          </nav>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 )
 
 export default PullQuote

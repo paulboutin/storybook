@@ -122,16 +122,16 @@ $font-weights: (
 
 $box-shadows: (
   sm: 4px 4px 20px 0 rgba(0, 0, 0, 0.1),
-  base: 8px 8px 20px 0 rgba(0, 0, 0, 0.1),
+  md: 8px 8px 20px 0 rgba(0, 0, 0, 0.1),
   lg: 12px 12px 20px 0 rgba(0, 0, 0, 0.1),
   none: none
 );
 
 $border-radius: (
   sm: 2px,
-  base: 4px,
+  md: 4px,
   lg: 8px,
-  full: 9999px,
+  round: 50%,
   none: 0
 );
 

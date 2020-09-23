@@ -1,71 +1,72 @@
 import { buildSnapshotTests } from '../utils'
-import { BUTTON_TYPES } from '../../../src/stories/components/base/Button'
 
 describe('Base Components', () => {
   const stories = [
-    ...BUTTON_TYPES.map(type => ({
-      title: `button ${type.toLowerCase()}`,
-      component: 'button-story',
-      devices: ['desktop'],
-      'knob-Type': type
+    ...['primary', 'secondary', 'tertiary', 'ghost', 'danger'].map(type => ({
+      title: `button ${type}`,
+      path: `base-components-button--${type}`,
+      devices: ['desktop']
     })),
     {
       title: 'checkbox',
-      component: 'checkbox-story',
-      devices: ['mobile', 'desktop']
+      path: 'base-components--checkbox-story',
+      devices: ['desktop']
     },
     {
-      title: 'link',
-      component: 'link-story',
+      title: 'link inline',
+      path: 'base-components-link--inline',
+      devices: ['mobile', 'tablet', 'desktop']
+    },
+    {
+      title: 'link standalone',
+      path: 'base-components-link--standalone',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'card standard',
-      component: 'card-story',
+      path: 'base-components-card--standard',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'card flat',
-      component: 'card-story',
-      'knob-Type': 'Flat'
+      path: 'base-components-card--flat',
+      devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'input outline',
-      component: 'input-story',
-      devices: ['mobile'],
-      'knob-Type': 'Outline'
-    },
-    {
-      title: 'input underline',
-      component: 'input-story',
-      devices: ['mobile'],
-      'knob-Type': 'Underline'
-    },
-    {
-      title: 'image auto ratio',
-      component: 'image-story',
+      path: 'base-components-input--outline',
       devices: ['mobile']
     },
     {
-      title: 'image 1:1 ratio',
-      component: 'image-story',
+      title: 'input underline',
+      path: 'base-components-input--underline',
+      devices: ['mobile']
+    },
+    {
+      title: 'image auto ratio',
+      path: 'base-components--image-story',
+      devices: ['mobile']
+    },
+    {
+      title: 'image 1-1 ratio',
+      path: 'base-components--image-story',
       devices: ['mobile'],
       'knob-Ratio': '1:1'
     },
     {
-      title: 'image 4:3 ratio',
-      component: 'image-story',
+      title: 'image 4-3 ratio',
+      path: 'base-components--image-story',
       devices: ['mobile'],
       'knob-Ratio': '4:3'
     },
     {
       title: 'switch off',
-      component: 'switch-story',
+      path: 'base-components--switch-story',
       devices: ['mobile']
     },
     {
       title: 'switch on',
-      component: 'switch-story',
+      path: 'base-components--switch-story',
       devices: ['mobile'],
       callback: async () => {
         await page.click('.switch')
@@ -73,53 +74,58 @@ describe('Base Components', () => {
       }
     },
     {
-      title: 'select helper',
-      component: 'select-story',
+      title: 'dropdown helper',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       'knob-Helper': true
     },
     {
-      title: 'select error',
-      component: 'select-story',
+      title: 'dropdown error',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       'knob-Error': true
     },
     {
-      title: 'select disabled',
-      component: 'select-story',
+      title: 'dropdown disabled',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       'knob-Disabled': true
     },
     {
-      title: 'select inline',
-      component: 'select-story',
+      title: 'dropdown inline',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       fullPage: true,
       callback: async () => {
-        await page.click('.select')
+        await page.click('.dropdown')
       },
       'knob-Inline': true
     },
     {
-      title: 'select',
-      component: 'select-story',
+      title: 'dropdown',
+      path: 'base-components--dropdown-story',
       devices: ['mobile'],
       fullPage: true,
       callback: async () => {
-        await page.click('.select')
-        await page.hover('.select-item')
+        await page.click('.dropdown')
+        await page.hover('.dropdown-item')
       }
     },
     {
       title: 'breadcrumbs',
-      component: 'breadcrumbs-story',
+      path: 'base-components--breadcrumbs-story',
       devices: ['mobile']
     },
     {
       title: 'table',
-      component: 'table-story',
+      path: 'base-components--table-story',
       devices: ['mobile', 'desktop']
+    },
+    {
+      title: 'radio',
+      path: 'base-components--radio-story',
+      devices: ['desktop']
     }
   ]
-  buildSnapshotTests('components-base')(stories)
+  buildSnapshotTests(stories)
 })

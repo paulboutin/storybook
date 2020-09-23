@@ -1,0 +1,29 @@
+.sb\:grid {
+  padding: 0 spacing(16);
+}
+
+.sb\:grid-heading {
+  color: color('grey-70');
+  margin-bottom: spacing(16);
+
+  &:not(:first-child) {
+    margin-top: spacing(32);
+  }
+}
+
+.sb\:grid-column {
+  border: 1px dashed color('grey-70');
+  background-color: color('grey-10');
+  padding: spacing(4) spacing(12);
+}
+
+.sb\:grid-breakpoints {
+  @include border-radius('md');
+  background-color: color('grey-10');
+  margin-bottom: spacing(16);
+  padding: spacing(12);
+
+  ul {
+    padding-left: spacing(16);
+  }
+}

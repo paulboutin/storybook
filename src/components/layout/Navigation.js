@@ -163,7 +163,7 @@ const Navigation = () => {
   return (
     <nav className='navigation'>
       <header className='navigation-banner'>
-        <div className='navigation-container'>
+        <div className='container'>
           <div className='navigation-banner-location'>
             <i className='icon icon-location' />
             California
@@ -184,7 +184,7 @@ const Navigation = () => {
       </header>
 
       <header className='navigation-header'>
-        <div className='navigation-container'>
+        <div className='container'>
           <button
             className='hamburger hamburger--spring'
             type='button'
@@ -216,7 +216,7 @@ const Navigation = () => {
                   {category.name}
                 </div>
 
-                <div
+                <header
                   id={`subheader-${category.id}`}
                   className={classNames('navigation-header-products', {
                     'navigation-header-products-active': categoryIndex === 0
@@ -233,19 +233,19 @@ const Navigation = () => {
                       </span>
                     </div>
                   ))}
-                </div>
+                </header>
               </React.Fragment>
             ))}
           </div>
 
           <div className='navigation-header-buttons'>
-            <Button type='ghost' label='Apply Now' />
-            <Button type='primary' label='Sign In' />
+            <Button type='ghost' label='Apply Now' link />
+            <Button type='primary' label='Sign In' link />
           </div>
         </div>
       </header>
 
-      <header className='navigation-subheader' />
+      <div className='navigation-subheader' />
 
       <div className='navigation-dropdowns'>
         <div className='navigation-container'>
@@ -269,7 +269,7 @@ const Navigation = () => {
             ))
           )}
 
-          <div className='navigation-promo'>
+          <article className='navigation-promo'>
             <div className='navigation-promo-content'>
               <h3>Bank Whenever, Wherever</h3>
               <p className='navigation-promo-text'>
@@ -282,43 +282,45 @@ const Navigation = () => {
             <div className='navigation-promo-image'>
               <img src='http://via.placeholder.com/640' alt='Promo image' />
             </div>
-          </div>
+          </article>
         </div>
       </div>
 
       <div className='navigation-menus'>
         <aside className='navigation-menu navigation-main-menu'>
-          <div className='navigation-main-menu-buttons'>
-            <Button type='ghost' label='Apply Now' />
-            <Button
-              type='primary'
-              label='Sign In'
-              id='navigation-login-button'
-            />
+          <div className='container'>
+            <div className='navigation-main-menu-buttons'>
+              <Button type='ghost' label='Apply Now' link />
+              <Button
+                type='primary'
+                label='Sign In'
+                id='navigation-login-button'
+              />
+            </div>
+
+            {menu.categories.map((category, index) => (
+              <div
+                key={index}
+                data-menu={`#menu-${category.id}`}
+                className='navigation-main-menu-category'
+              >
+                <span>{category.name}</span>
+                <i className='icon icon-chevron-right' />
+              </div>
+            ))}
+
+            <div className='navigation-divider' />
+
+            {menu.links.map((link, index) => (
+              <div key={index} className='navigation-main-menu-link'>
+                <a href='#'>{link}</a>
+              </div>
+            ))}
           </div>
-
-          {menu.categories.map((category, index) => (
-            <div
-              key={index}
-              data-menu={`#menu-${category.id}`}
-              className='navigation-main-menu-category'
-            >
-              <span>{category.name}</span>
-              <i className='icon icon-chevron-right' />
-            </div>
-          ))}
-
-          <div className='navigation-divider' />
-
-          {menu.links.map((link, index) => (
-            <div key={index} className='navigation-main-menu-link'>
-              <a href='#'>{link}</a>
-            </div>
-          ))}
         </aside>
 
         <aside className='navigation-menu navigation-login-menu'>
-          <div className='navigation-login-menu-wrapper'>
+          <div className='container'>
             <h2 className='navigation-login-title'>Sign In</h2>
 
             <Input
@@ -349,20 +351,22 @@ const Navigation = () => {
             id={`menu-${category.id}`}
             className='navigation-menu navigation-category-menu'
           >
-            <div className='navigation-category-menu-header'>
-              <i className='navigation-category-menu-back icon icon-chevron-left' />
-              <div>{category.name}</div>
-            </div>
+            <div className='container'>
+              <div className='navigation-category-menu-header'>
+                <i className='navigation-category-menu-back icon icon-chevron-left' />
+                <div>{category.name}</div>
+              </div>
 
-            {category.products.map((product, productIndex) => (
-              <Accordion key={productIndex} title={product.name}>
-                {product.items.map((item, itemIndex) => (
-                  <div key={itemIndex}>
-                    <a href='#'>{item}</a>
-                  </div>
-                ))}
-              </Accordion>
-            ))}
+              {category.products.map((product, productIndex) => (
+                <Accordion key={productIndex} title={product.name}>
+                  {product.items.map((item, itemIndex) => (
+                    <div key={itemIndex}>
+                      <a href='#'>{item}</a>
+                    </div>
+                  ))}
+                </Accordion>
+              ))}
+            </div>
           </aside>
         ))}
       </div>

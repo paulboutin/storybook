@@ -1,0 +1,86 @@
+.help-center {
+  .help-center-breadcrumbs {
+    background-color: color('grey-5');
+
+    .breadcrumbs {
+      margin-bottom: spacing(16);
+    }
+  }
+
+  .help-center-articles {
+    padding-bottom: spacing(48);
+
+    @include screen('sm') {
+      padding-top: spacing(16);
+    }
+
+    .container {
+      display: flex;
+
+      @include screen('sm', 'down') {
+        flex-direction: column;
+      }
+    }
+
+    .help-center-topics {
+      flex-shrink: 0;
+
+      @include screen('sm') {
+        width: 40%;
+      }
+
+      @include screen('md') {
+        width: 35%;
+      }
+
+      @include screen('lg') {
+        width: 30%;
+      }
+
+      .accordion {
+        @include screen('sm', 'down') {
+          margin: 0 -15px;
+          padding-left: spacing(16);
+          padding-right: spacing(16);
+        }
+      }
+
+      .accordion-content {
+        max-width: none;
+        padding-left: spacing(12);
+      }
+
+      .help-center-article-link {
+        &:not(:first-child) {
+          margin-top: spacing(12);
+        }
+      }
+    }
+
+    .help-center-article {
+      display: none;
+      padding-top: spacing(32);
+
+      @include screen('sm') {
+        padding-top: spacing(16);
+        padding-left: spacing(64);
+      }
+
+      .help-center-article-heading {
+        @include font-size('xs');
+        color: color('grey-70');
+        text-transform: uppercase;
+        letter-spacing: 2px;
+      }
+
+      .help-center-article-title {
+        margin-top: spacing(8);
+        margin-bottom: spacing(12);
+      }
+    }
+
+    .help-center-article-selected {
+      display: block;
+    }
+  }
+}

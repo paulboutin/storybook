@@ -29,13 +29,12 @@ const ListElement = ({ image, items, headerText, altLayout }) => (
       )}
       <div className='list-element-content'>
         <div className='list-element-header'>
-          <Eyebrow text={headerText.eyebrow} />
-          <div className='list-element-header-text-block'>
-            <h2 className='list-element-heading'>{headerText.heading}</h2>
-            <p className='list-element-header-text'>{headerText.text}</p>
-          </div>
+          <Eyebrow>{headerText.eyebrow}</Eyebrow>
+          <h2 className='list-element-heading'>{headerText.heading}</h2>
+          <p className='list-element-header-text'>{headerText.text}</p>
         </div>
-        {items && <ListElementItems items={items} />}
+
+        <ListElementItems items={items} />
       </div>
     </div>
   </section>

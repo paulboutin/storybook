@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="49px" viewBox="0 0 53 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI Elements/Icon / Payments / Send</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="71" height="64"></rect>
+    </defs>
+    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-1295.000000, -379.000000)">
+            <g id="Triangle-+-Path-3-+-Path-10-Mask" transform="translate(1288.000000, 368.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Mask"></g>
+                <polygon id="Triangle" fill="#00B16E" mask="url(#mask-2)" transform="translate(41.881696, 25.760045) rotate(-315.000000) translate(-41.881696, -25.760045) " points="44.6951291 3.0829092 67.4519719 47.8042564 16.311421 48.4371801"></polygon>
+                <polygon id="Path-3" fill="#007E4E" mask="url(#mask-2)" points="59.90625 11.7142857 19.96875 35.7142857 17.75 49.1428571 29.9428329 45.430385"></polygon>
+                <polygon id="Path-10" fill="#004B2E" mask="url(#mask-2)" points="17.75 48.8571429 59.90625 11.4285714 29.9428329 45.1446708"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

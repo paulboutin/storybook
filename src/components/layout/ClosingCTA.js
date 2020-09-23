@@ -1,25 +1,40 @@
 import React from 'react'
 import classNames from 'classnames'
+import Button from '../base/Button'
 
-const ClosingCTA = ({ type, image, heading, text, children }) => (
-  <div
-    className={classNames('closing-cta', `closing-cta-${type}`, {
-      'closing-cta-starbirds': type !== ''
-    })}
-  >
+const ClosingCTA = ({ type, image }) => (
+  <section className={classNames('closing-cta', `closing-cta-${type}`)}>
     <div className='container'>
-      <div className='closing-cta-image-wrapper'>
-        {type !== 'alt' && (
-          <img src={image} alt='CTA image' className='closing-cta-image' />
-        )}
-      </div>
+      {type === '2col' && (
+        <img
+          src={image}
+          alt='Closing CTA image'
+          className='closing-cta-image'
+        />
+      )}
+
+      {type === 'bgi' && (
+        <>
+          <img
+            src={image}
+            alt='Closing CTA background image'
+            className='closing-cta-background-image'
+          />
+          <div className='closing-cta-overlay' />
+        </>
+      )}
+
       <div className='closing-cta-content'>
-        <h2 className='closing-cta-heading'>{heading}</h2>
-        {type !== 'half' && text && <p className='closing-cta-text'>{text}</p>}
-        {children}
+        <h1>
+          {type === '2col'
+            ? 'Open online in about 10 minutes'
+            : 'Together, we can safeguard the environment and the future of our planet.'}
+        </h1>
+        {type !== '2col' && <p className='closing-cta-text'>Type something</p>}
+        <Button type='tertiary' label='Call to Action' link />
       </div>
     </div>
-  </div>
+  </section>
 )
 
 export default ClosingCTA

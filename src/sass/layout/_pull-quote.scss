@@ -1,15 +1,8 @@
 .pull-quote {
   position: relative;
   text-align: center;
-  padding: spacing(48) spacing(16);
-
-  @include screen('sm') {
-    padding: spacing(48) spacing(24);
-  }
-
-  @include screen('sm') {
-    padding: spacing(64) spacing(24);
-  }
+  padding-top: spacing(48);
+  padding-bottom: spacing(48);
 
   .pull-quote-outer-wrapper {
     display: flex;
@@ -126,10 +119,6 @@
 
     @include screen('lg') {
       bottom: spacing(32);
-    }
-
-    .icon {
-      @include font-size('lg');
     }
   }
 

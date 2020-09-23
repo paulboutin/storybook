@@ -5,7 +5,7 @@ import AppCTA from '../base/AppCTA'
 
 const Footer = () => (
   <footer className='footer'>
-    <div className='footer-links-mobile visible-xs'>
+    <section className='footer-links-mobile visible-xs'>
       <img
         src='/img/star-birds-white.svg'
         alt='Starbirds'
@@ -39,9 +39,9 @@ const Footer = () => (
       <Accordion title='Download the App' inverted>
         <AppCTA />
       </Accordion>
-    </div>
+    </section>
 
-    <div className='footer-links hidden-xs'>
+    <section className='footer-links hidden-xs'>
       <div className='container'>
         <div className='row'>
           <div className='footer-column col-sm-6 col-sm-offset-1 col-md-3 col-md-offset-0'>
@@ -77,45 +77,47 @@ const Footer = () => (
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
-    <div className='footer-bottom'>
-      <div className='footer-social'>
-        <a href='#'>
-          <i className='icon icon-facebook' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-instagram' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-linkedin' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-twitter' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-youtube' />
-        </a>
-        <a href='#'>
-          <i className='icon icon-help' />
-        </a>
+    <section className='footer-bottom'>
+      <div className='container'>
+        <div className='footer-social'>
+          <a href='#'>
+            <i className='icon icon-facebook' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-instagram' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-linkedin' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-twitter' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-youtube' />
+          </a>
+          <a href='#'>
+            <i className='icon icon-help' />
+          </a>
+        </div>
+
+        <div>
+          <Link>Terms of Use</Link>
+          <span className='footer-dot' />
+          <Link>Security</Link>
+          <span className='footer-dot' />
+          <Link>Privacy</Link>
+        </div>
+
+        <p>
+          © 2020 Bank of the West | NMLS# 19116 | Member FDIC | Equal Housing
+          Lender
+        </p>
+
+        <p>Doing business in South Dakota as Bank of the West California</p>
       </div>
-
-      <div>
-        <Link>Terms of Use</Link>
-        <span className='footer-dot' />
-        <Link>Security</Link>
-        <span className='footer-dot' />
-        <Link>Privacy</Link>
-      </div>
-
-      <p>
-        © 2020 Bank of the West | NMLS# 19116 | Member FDIC | Equal Housing
-        Lender
-      </p>
-
-      <p>Doing business in South Dakota as Bank of the West California</p>
-    </div>
+    </section>
   </footer>
 )
 

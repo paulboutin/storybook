@@ -1,0 +1,42 @@
+.sb\:colors {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include screen('lg') {
+    flex-wrap: nowrap;
+  }
+}
+
+.sb\:color-group {
+  padding: spacing(8);
+  width: 100%;
+
+  & > div {
+    margin: auto;
+    max-width: 20rem;
+  }
+}
+
+.sb\:color-name {
+  @include font-size('sm');
+  @include font-weight('semi-bold');
+  margin-bottom: spacing(4);
+}
+
+.sb\:color-block {
+  @include font-size('sm');
+  @include border-radius('md');
+  padding: spacing(4) 0;
+  margin-bottom: spacing(4);
+  text-align: center;
+}
+
+.sb\:color--white {
+  border: 1px solid color('grey-70');
+}
+
+@each $name, $color in $colors {
+  .sb\:color--#{$name} {
+    background-color: #{$color};
+  }
+}

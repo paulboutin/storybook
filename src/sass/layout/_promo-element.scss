@@ -47,14 +47,11 @@
 
     .promo-element-content {
       .eyebrow {
+        color: color('white');
         align-items: center;
 
         @include screen('sm') {
           align-items: flex-start;
-
-          .eyebrow-spacer {
-            margin-bottom: spacing(24);
-          }
         }
       }
 
@@ -94,7 +91,8 @@
   .promo-element-content {
     z-index: 1;
     width: 100%;
-    padding: spacing(16) 0;
+    padding-top: spacing(16);
+    padding-bottom: spacing(16);
 
     @include screen('sm') {
       margin-top: 0;
@@ -144,14 +142,17 @@
   }
 
   &:not(.promo-accent) {
-    padding: spacing(16);
+    padding-top: spacing(16);
 
     .cta-wrapper .app-cta {
       align-items: flex-start;
     }
   }
 
-  &.promo-full,
+  &.promo-alt {
+    background-color: color('grey-5');
+  }
+
   &.promo-accent.promo-dark {
     .promo-element-image-wrapper {
       display: flex;

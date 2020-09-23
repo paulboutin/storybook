@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="59px" viewBox="0 0 64 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI Elements/Icon / Account Settings / Paperless</title>
+    <defs>
+        <path d="M4.8765018,47.1475412 C13.6700902,38.401423 18.3229493,34.289525 21.6192019,23.0051433 C17.2209036,33.3256368 11.8937524,36.8240841 2.92897659,45.3094117 C-8.8249361,13.6455743 17.982007,12.5950029 27.1981919,0 C39.2937632,18.6317137 36.1658328,49.2457205 4.8765018,47.1475412 Z" id="path-1"></path>
+    </defs>
+    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-951.000000, -263.000000)">
+            <g id="UI-Elements/Icon-/-Account-Settings-/-Paperless" transform="translate(947.000000, 261.000000)">
+                <rect id="Rectangle" x="0" y="0" width="72" height="63"></rect>
+                <g id="Group-7" transform="translate(4.500000, 2.250000)">
+                    <g id="Fill-1" transform="translate(0.000000, 4.500000)">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <use id="Mask" fill="#004B2E" transform="translate(16.875000, 23.625000) scale(-1, 1) translate(-16.875000, -23.625000) " xlink:href="#path-1"></use>
+                        <path d="M24.7101689,52.2961947 C35.4578881,41.3010747 41.1447158,36.1318314 45.173469,21.9457515 C39.797771,34.9200863 33.2868085,39.3181343 22.3298603,49.9854033 C7.96396698,10.1794363 40.7280086,8.85871796 51.9922346,-6.975 C66.7757105,16.4477258 62.9526846,54.9339058 24.7101689,52.2961947 Z" fill-opacity="0.5" fill="#000000" opacity="0.25" mask="url(#mask-2)"></path>
+                    </g>
+                    <path d="M27.3893522,58.3731463 C38.2347779,47.544619 43.9733041,42.4536976 48.0386824,28.4825583 C42.6141144,41.2603123 36.0439613,45.5917232 24.9874045,56.0973668 C10.4909121,16.8945206 43.5528086,15.5938131 54.9194367,0 C69.8373079,23.0678361 65.9795272,60.9708921 27.3893522,58.3731463 Z" id="Fill-1" fill="#00B16E"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

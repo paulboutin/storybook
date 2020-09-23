@@ -1,0 +1,29 @@
+.sb\:link {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-bottom: spacing(12);
+
+  @include screen('xs') {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.sb\:link-wrapper {
+  margin: spacing(8);
+}
+
+.sb\:link-title {
+  @include font-size('xs');
+  text-transform: capitalize;
+}
+
+@each $type in (inline, standalone) {
+  @each $state in (hover, active, focus, visited) {
+    .sb\:link-#{$type}-#{$state} {
+      @extend .link:#{$state} !optional;
+      @extend .link-#{$type}:#{$state} !optional;
+    }
+  }
+}

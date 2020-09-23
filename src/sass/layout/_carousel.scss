@@ -1,23 +1,27 @@
 .carousel {
-  margin: spacing(32) spacing(16);
+  margin-top: spacing(32);
+  margin-bottom: spacing(32);
   padding-bottom: spacing(64);
 
   @include screen('sm') {
-    margin: spacing(48) spacing(24);
+    margin-top: spacing(48);
+    margin-bottom: spacing(48);
     padding-top: spacing(12);
     padding-bottom: spacing(12);
   }
 
   @include screen('md') {
-    margin: spacing(24) spacing(32);
+    margin-top: spacing(24);
+    margin-bottom: spacing(24);
     padding-top: spacing(16);
     padding-bottom: spacing(16);
   }
 
   @include screen('lg') {
-    max-width: 1170px;
-    margin: spacing(32) auto;
-    padding: spacing(24) spacing(32);
+    margin-top: spacing(32);
+    margin-bottom: spacing(32);
+    padding-top: spacing(24);
+    padding-bottom: spacing(24);
   }
 
   .carousel-wrapper {
@@ -25,7 +29,7 @@
   }
 
   .carousel-card {
-    @include box-shadow('base');
+    @include box-shadow('md');
 
     @include screen('sm') {
       width: 350px;
@@ -131,10 +135,6 @@
         width: auto;
         height: auto;
       }
-    }
-
-    .icon {
-      @include font-size('lg');
     }
   }
 

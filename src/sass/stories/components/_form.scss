@@ -1,0 +1,43 @@
+.sb\:form-wrapper {
+  padding-top: spacing(48);
+  padding-bottom: spacing(48);
+
+  .row {
+    margin-top: spacing(32);
+  }
+
+  .sb\:form-description {
+    @include font-size('xs');
+  }
+
+  .sb\:form-title {
+    @include font-size('xs');
+    margin-bottom: spacing(16);
+  }
+
+  .sb\:form-buttons {
+    margin-top: spacing(32);
+
+    button:first-child {
+      margin-right: spacing(32);
+    }
+  }
+}
+
+.sb\:form-1 {
+  .checkbox-wrapper {
+    display: flex;
+
+    &:last-child {
+      margin-top: spacing(16);
+    }
+  }
+
+  .switch-wrapper {
+    margin-bottom: spacing(32);
+  }
+}
+
+.sb\:form-2 {
+  background-color: color('grey-5');
+}

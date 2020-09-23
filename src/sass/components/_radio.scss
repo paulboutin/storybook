@@ -1,0 +1,56 @@
+.radio-wrapper {
+  display: inline-flex;
+  align-items: center;
+
+  &:hover {
+    .radio {
+      background-color: color('grey-5');
+    }
+  }
+
+  &:focus-within {
+    .radio {
+      @include focus-outline();
+    }
+  }
+
+  input[type='radio'] {
+    @include sr-only();
+
+    &:disabled ~ .radio {
+      background-color: transparent;
+      border-color: color('grey-20');
+      cursor: not-allowed;
+    }
+
+    &:disabled ~ .radio-label {
+      color: color('grey-70');
+      cursor: not-allowed;
+    }
+
+    &:checked ~ .radio {
+      background-color: transparent;
+      border: 6px solid color('green');
+    }
+
+    &:checked:disabled ~ .radio {
+      border-color: color('grey-30');
+    }
+  }
+
+  .radio {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid color('grey');
+    cursor: pointer;
+    border-radius: 50%;
+    transition: border 0.1s;
+  }
+
+  .radio-label {
+    @include font-size('xs');
+    padding-left: spacing(8);
+    cursor: pointer;
+  }
+}

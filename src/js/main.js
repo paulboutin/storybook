@@ -1,9 +1,10 @@
 import accordions from './components/accordion'
+import helpCenter from './components/help-center'
 import comparison from './components/comparison'
 import inputs from './components/input'
 import navigation from './components/navigation'
 import popupVideo from './components/popup-video'
-import selects from './components/select'
+import dropdowns from './components/dropdown'
 import sliders from './components/slider'
 
 function ready(fn) {
@@ -20,11 +21,12 @@ function ready(fn) {
 function setup() {
   ready(() => {
     accordions()
+    helpCenter()
     comparison()
     inputs()
     navigation()
     popupVideo()
-    selects()
+    dropdowns()
     sliders()
   })
 }

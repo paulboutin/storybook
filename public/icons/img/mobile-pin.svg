@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="42px" height="55px" viewBox="0 0 42 55" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI Elements/Icon / Account Settings / Mobile PIN</title>
+    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-1134.000000, -265.000000)">
+            <g id="UI-Elements/Icon-/-Account-Settings-/-Mobile-PIN" transform="translate(1119.000000, 261.000000)">
+                <g id="Account-Statements">
+                    <rect id="Rectangle" x="0" y="0" width="72" height="63"></rect>
+                </g>
+                <g id="Group" transform="translate(15.750000, 4.500000)">
+                    <circle id="Oval" fill="#004B2E" cx="4.5" cy="4.5" r="4.5"></circle>
+                    <circle id="Oval-Copy-10" fill="#004B2E" cx="4.5" cy="21.375" r="4.5"></circle>
+                    <circle id="Oval-Copy-13" fill="#00B16E" cx="4.5" cy="37.125" r="4.5"></circle>
+                    <circle id="Oval-Copy-8" fill="#00B16E" cx="20.25" cy="4.5" r="4.5"></circle>
+                    <circle id="Oval-Copy-11" fill="#004B2E" cx="20.25" cy="20.25" r="4.5"></circle>
+                    <circle id="Oval-Copy-14" fill="#004B2E" cx="20.25" cy="34.875" r="4.5"></circle>
+                    <circle id="Oval-Copy-16" fill="#00B16E" cx="20.25" cy="49.5" r="4.5"></circle>
+                    <circle id="Oval-Copy-9" fill="#00B16E" cx="36" cy="4.5" r="4.5"></circle>
+                    <circle id="Oval-Copy-12" fill="#00B16E" cx="36" cy="21.375" r="4.5"></circle>
+                    <circle id="Oval-Copy-15" fill="#00B16E" cx="36" cy="37.125" r="4.5"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

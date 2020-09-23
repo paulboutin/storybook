@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="35px" viewBox="0 0 56 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>UI Elements/Icon / Account Settings / Lost Card</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="55.1111111" height="35" rx="2"></rect>
+        <path d="M27.5527072,25.7578125 L27.6256782,25.7578125 C28.9895356,25.7578125 30.0951606,26.8634374 30.0951606,28.2272949 C30.0951606,29.5911524 28.9895356,30.6967773 27.6256782,30.6967773 L27.5527072,30.6967773 C26.1888498,30.6967773 25.0832248,29.5911524 25.0832248,28.2272949 C25.0832248,26.8634374 26.1888498,25.7578125 27.5527072,25.7578125 Z M18.9444444,13.453125 C19.0789937,10.2060385 20.1946148,7.90462917 22.2913411,6.54882812 C23.6144091,5.68293838 25.2401886,5.25 27.1687283,5.25 C29.7027398,5.25 31.8078439,5.86522822 33.4841037,7.09570312 C35.1603636,8.32617803 35.9984809,10.1490765 35.9984809,12.5644531 C35.9984809,14.0455803 35.6340821,15.2931264 34.9052734,16.3071289 C34.4792007,16.9223664 33.6607048,17.7084913 32.4497613,18.6655273 L31.2556424,19.6054688 C30.6053208,20.1181666 30.1736483,20.7163052 29.960612,21.3999023 C29.8260627,21.8328472 29.7531829,22.505041 29.7419705,23.4165039 L25.2009549,23.4165039 C25.2682295,21.4910385 25.4476259,20.1608923 25.7391493,19.4260254 C26.0306728,18.6911584 26.781895,17.8452196 27.9928385,16.8881836 L29.2205946,15.9140625 C29.6242425,15.6064438 29.9493984,15.2703469 30.196072,14.9057617 C30.6445697,14.279131 30.8688151,13.5898475 30.8688151,12.8378906 C30.8688151,11.9720009 30.619342,11.1830276 30.1203885,10.4709473 C29.6214349,9.75886688 28.7104377,9.40283203 27.3873698,9.40283203 C26.0867267,9.40283203 25.1645173,9.84146697 24.620714,10.71875 C24.2581784,11.3036054 23.9862781,12.2150637 23.805013,13.453125 L18.9444444,13.453125 Z" id="path-3"></path>
+        <filter x="-5.9%" y="-3.9%" width="111.7%" height="115.7%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Icons" transform="translate(-623.000000, -714.000000)">
+            <g id="UI-Elements/Icon-/-Account-Settings-/-Lost-Card" transform="translate(620.000000, 700.000000)">
+                <rect id="Rectangle" x="0" y="0" width="62" height="63"></rect>
+                <g id="Group" transform="translate(3.444444, 14.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Mask" fill="#00B16E" xlink:href="#path-1"></use>
+                    <polygon id="Mask-Copy" fill="#007E4E" opacity="0.25" mask="url(#mask-2)" points="55.1111111 2.49134047e-13 55.1111111 36.75 -3.44444444 36.75"></polygon>
+                    <rect id="Rectangle-Copy-13" fill="#004B2E" mask="url(#mask-2)" x="-1.72222222" y="5.25" width="58.5555556" height="7"></rect>
+                    <g id="?" fill-rule="nonzero" mask="url(#mask-2)">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
+                        <use fill="#FFFFFF" xlink:href="#path-3"></use>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

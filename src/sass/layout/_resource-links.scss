@@ -1,17 +1,11 @@
 .resource-links {
   position: relative;
-  padding: spacing(48) spacing(16);
+  padding-top: spacing(48);
+  padding-bottom: spacing(48);
 
   @include screen('md') {
-    padding-left: spacing(24);
-    padding-right: spacing(24);
     margin-top: spacing(48);
-  }
-
-  @include screen('lg') {
     padding-top: spacing(64);
-    padding-bottom: spacing(64);
-    margin-top: spacing(64);
   }
 
   .eyebrow {

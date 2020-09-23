@@ -6,8 +6,8 @@ import Link from '../base/Link'
 import Slider from '../base/Slider'
 
 const Carousel = ({ items }) => (
-  <div
-    className='carousel slider-container'
+  <section
+    className='carousel slider-container container'
     data-prev-trigger='.carousel-prev-slide'
     data-next-trigger='.carousel-next-slide'
     data-pagination='.carousel-pagination'
@@ -26,8 +26,8 @@ const Carousel = ({ items }) => (
           ))}
         </Slider>
 
-        <div className='carousel-card-content'>
-          <Eyebrow text='Recommended' />
+        <article className='carousel-card-content'>
+          <Eyebrow>Recommended</Eyebrow>
 
           <Slider axis='horizontal' transitionOpacity>
             {items.map((item, index) => (
@@ -39,7 +39,7 @@ const Carousel = ({ items }) => (
             ))}
           </Slider>
 
-          <div className='carousel-pagination-container'>
+          <nav className='carousel-pagination-container'>
             <Button
               type='ghost'
               icon='chevron-left'
@@ -53,11 +53,11 @@ const Carousel = ({ items }) => (
               icon='chevron-right'
               className='carousel-next-slide'
             />
-          </div>
-        </div>
+          </nav>
+        </article>
       </div>
     </div>
-  </div>
+  </section>
 )
 
 export default Carousel

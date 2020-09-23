@@ -1,151 +1,81 @@
 .closing-cta {
-  overflow: hidden;
   position: relative;
-
-  &.closing-cta-half {
-    padding: spacing(16) 0;
-    background-color: color('green');
-
-    @include screen('sm') {
-      padding: 0 spacing(24);
-    }
-
-    @include screen('md') {
-      padding: 0 spacing(48);
-    }
-
-    .closing-cta-image-wrapper {
-      display: flex;
-      position: relative;
-
-      @include screen('sm') {
-        padding-right: spacing(16);
-        width: 50%;
-      }
-
-      .closing-cta-image {
-        z-index: 1;
-        align-self: center;
-        height: auto;
-        padding: spacing(32);
-
-        @include screen('sm') {
-          padding: spacing(16);
-        }
-
-        @include screen('md') {
-          padding: spacing(32);
-        }
-
-        @include screen('lg') {
-          padding: spacing(64);
-        }
-      }
-    }
-
-    .closing-cta-content {
-      .closing-cta-heading {
-        margin-bottom: spacing(32);
-      }
-
-      @include screen('sm') {
-        padding: spacing(64) 0 spacing(64) spacing(16);
-        width: 50%;
-        text-align: left;
-      }
-    }
-  }
-
-  &.closing-cta-alt {
-    background-color: color('green');
-
-    .closing-cta-image-wrapper {
-      left: 0;
-
-      @include screen('sm') {
-        width: 50%;
-        justify-content: flex-end;
-      }
-
-      @include screen('md') {
-        margin-left: spacing(32);
-      }
-    }
-  }
+  color: color('white');
+  text-align: center;
 
   .container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding-top: spacing(64);
+    padding-bottom: spacing(64);
+  }
 
-    @include screen('sm') {
-      flex-direction: row;
-      height: auto;
-    }
+  .closing-cta-text {
+    @include font-size('h5');
+    margin-top: spacing(8);
+  }
 
-    @include screen('lg') {
-      width: 100%;
-      max-width: 1170px;
+  .button {
+    margin-top: spacing(24);
+  }
+}
+
+.closing-cta-standard {
+  background-color: color('green');
+
+  .container {
+    @include star-birds('light');
+    background-position: left center;
+  }
+}
+
+.closing-cta-bgi {
+  .closing-cta-background-image,
+  .closing-cta-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  .closing-cta-background-image {
+    object-fit: cover;
+  }
+
+  .closing-cta-overlay {
+    @include overlay('light');
+  }
+}
+
+.closing-cta-2col {
+  background-color: color('green');
+
+  .container {
+    @include star-birds('light');
+
+    @include screen('sm', 'down') {
+      flex-direction: column;
     }
   }
 
-  .closing-cta-image-wrapper {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    width: 100%;
+  .closing-cta-image {
+    margin-bottom: spacing(48);
 
-    .closing-cta-image {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
+    @include screen('sm') {
+      width: 50%;
+      margin-bottom: 0;
+      padding-right: spacing(32);
     }
   }
 
   .closing-cta-content {
-    position: relative;
-    padding: spacing(64) spacing(16);
-    text-align: center;
-
     @include screen('sm') {
-      display: inline-block;
-      padding: spacing(48) spacing(96);
-    }
-
-    @include screen('lg') {
-      padding: spacing(64) spacing(96);
-    }
-
-    .closing-cta-heading {
-      margin-bottom: spacing(4);
-      color: color('white');
-
-      @include screen('sm') {
-        margin-bottom: spacing(16);
-      }
-
-      @include screen('md') {
-        margin-bottom: spacing(8);
-      }
-    }
-
-    .closing-cta-text {
-      margin-bottom: spacing(32);
-      color: color('white');
-      @include font-size('lg');
-
-      @include screen('lg') {
-        margin-bottom: spacing(48);
-      }
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      text-align: left;
     }
   }
-}
-
-.closing-cta-starbirds .closing-cta-image-wrapper {
-  @include star-birds('light');
-  background-position: center;
 }

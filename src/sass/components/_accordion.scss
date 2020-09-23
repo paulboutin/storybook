@@ -24,6 +24,11 @@
     max-width: 75%;
   }
 
+  .accordion-title {
+    @include font-size('base');
+    @include font-weight('semi-bold');
+  }
+
   .accordion-content {
     height: 0;
     margin-top: 0;
