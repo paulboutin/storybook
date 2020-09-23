@@ -20,3 +20,7 @@ export const FontIcons = () => {
     </div>
   )
 }
+
+export default {
+  title: 'Design System'
+}

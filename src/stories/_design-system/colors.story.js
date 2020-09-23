@@ -150,3 +150,7 @@ export const Colors = () => (
     </ColorGroup>
   </div>
 )
+
+export default {
+  title: 'Design System'
+}

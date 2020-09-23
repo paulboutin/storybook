@@ -569,3 +569,7 @@ export const RatesAndFees = () => {
     </>
   )
 }
+
+export default {
+  title: 'Templates'
+}

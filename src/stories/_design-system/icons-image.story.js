@@ -21,3 +21,7 @@ export const ImageIcons = () => (
     <div className='sb:image-icon-filler' />
   </div>
 )
+
+export default {
+  title: 'Design System'
+}

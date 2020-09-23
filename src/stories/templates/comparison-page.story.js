@@ -13,13 +13,13 @@ export const ComparisonPage = () => (
     <Navigation />
 
     <main>
-      <Hero type='Full' image='http://via.placeholder.com/1600' />
+      <Hero type='full' image='http://via.placeholder.com/1600' />
 
       <ComparisonCards />
 
       <PromoElement
         heading='The strongest environmental stance of any major bank.'
-        type='Accent Dark'
+        type='accent dark'
         text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         eyebrow='Sustainable Banking'
         image={{
@@ -38,3 +38,7 @@ export const ComparisonPage = () => (
     <Footer />
   </>
 )
+
+export default {
+  title: 'Templates'
+}

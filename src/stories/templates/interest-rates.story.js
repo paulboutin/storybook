@@ -186,4 +186,6 @@ export const InterestRates = () => (
   </>
 )
 
-export default InterestRates
+export default {
+  title: 'Templates'
+}

@@ -18,7 +18,7 @@ export const ProductPage = () => (
     <Navigation />
 
     <main>
-      <Hero type='Spaced' image='http://via.placeholder.com/1600' />
+      <Hero type='spaced' image='http://via.placeholder.com/1600' />
 
       <ListElement
         headerText={{
@@ -39,8 +39,7 @@ export const ProductPage = () => (
 
       <Highlight
         position='right'
-        type='Overlap'
-        overlap='Image'
+        type='overlap-image'
         images={[
           'http://via.placeholder.com/640',
           'http://via.placeholder.com/640'
@@ -49,8 +48,7 @@ export const ProductPage = () => (
 
       <Highlight
         position='left'
-        type='Overlap'
-        overlap='Image'
+        type='overlap-image'
         images={[
           'http://via.placeholder.com/640',
           'http://via.placeholder.com/640'
@@ -70,20 +68,20 @@ export const ProductPage = () => (
       <ColumnIcons
         columns={[
           {
-            image: 'http://via.placeholder.com/256',
-            text: 'Debit card? Yes!',
-            subtext: 'Use it anywhere that accepts a Mastercard debit card.'
+            icon: '/icons/img/lock-card.svg',
+            title: 'Debit card? Yes!',
+            text: 'Use it anywhere that accepts a Mastercard debit card.'
           },
           {
-            image: 'http://via.placeholder.com/256',
-            text: 'Overdraft protection? Yes!',
-            subtext:
+            icon: '/icons/img/cc-options.svg',
+            title: 'Overdraft protection? Yes!',
+            text:
               'We can all lose track of our spending. Check out our overdraft programs.'
           },
           {
-            image: 'http://via.placeholder.com/256',
-            text: 'Mobile wallet? Yes!',
-            subtext: 'Use it anywhere that accepts a Mastercard debit card.'
+            icon: '/icons/img/card-services.svg',
+            title: 'Mobile wallet? Yes!',
+            text: 'Use it anywhere that accepts a Mastercard debit card.'
           }
         ]}
       />
@@ -127,3 +125,7 @@ export const ProductPage = () => (
     <Footer />
   </>
 )
+
+export default {
+  title: 'Templates'
+}

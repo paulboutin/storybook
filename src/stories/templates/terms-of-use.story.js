@@ -143,3 +143,7 @@ export const TermsOfUse = () => (
     </main>
   </>
 )
+
+export default {
+  title: 'Templates'
+}

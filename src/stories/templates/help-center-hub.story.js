@@ -12,6 +12,7 @@ export const HelpCenterHub = () => {
     title: 'Accounts',
     description: 'Find answers to frequently asked questions grouped by topic'
   }
+
   const topics = new Array(6).fill(topic)
 
   return (
@@ -29,7 +30,7 @@ export const HelpCenterHub = () => {
                   <a href='#'>
                     <article className='help-center-topic'>
                       <div className='help-center-topic-circle'>
-                        <img src={icon} alt={topic.title} />
+                        <img src={topic.icon} alt={topic.title} />
                       </div>
                       <h5 className='help-center-topic-title'>{topic.title}</h5>
                       <p>{topic.description}</p>
@@ -51,4 +52,8 @@ export const HelpCenterHub = () => {
       </main>
     </>
   )
+}
+
+export default {
+  title: 'Templates'
 }

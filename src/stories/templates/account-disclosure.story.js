@@ -98,4 +98,6 @@ export const AccountDisclosure = () => {
   )
 }
 
-export default AccountDisclosure
+export default {
+  title: 'Templates'
+}

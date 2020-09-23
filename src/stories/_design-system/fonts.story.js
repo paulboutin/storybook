@@ -33,3 +33,7 @@ export const Fonts = () => (
     </div>
   </div>
 )
+
+export default {
+  title: 'Design System'
+}

@@ -204,3 +204,7 @@ export const HelpCenter = () => {
     </>
   )
 }
+
+export default {
+  title: 'Templates'
+}

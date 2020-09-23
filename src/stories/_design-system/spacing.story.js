@@ -140,3 +140,7 @@ export const Spacing = () => {
     </div>
   )
 }
+
+export default {
+  title: 'Design System'
+}

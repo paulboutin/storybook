@@ -72,3 +72,7 @@ export const Grid = () => (
     </div>
   </div>
 )
+
+export default {
+  title: 'Design System'
+}
