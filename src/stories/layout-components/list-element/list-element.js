@@ -1,6 +1,6 @@
 import React from 'react'
-import { array, radios, text } from '@storybook/addon-knobs'
-import ListElement from '../../components/layout/ListElement'
+import { array, text } from '@storybook/addon-knobs'
+import ListElement from '../../../components/layout/ListElement'
 
 const defaultImage = 'http://via.placeholder.com/640x480'
 
@@ -17,7 +17,7 @@ const headerText = {
   text: 'Manage your money while contributing with the planet'
 }
 
-const ListElementStory = ({ type }) => {
+export const ListElementStory = ({ type }) => {
   const items = array('Items', defaultItems)
   const isAlt = type === 'alt'
   let image
@@ -34,11 +34,4 @@ const ListElementStory = ({ type }) => {
       items={items}
     />
   )
-}
-
-export const Standard = () => <ListElementStory type='standard' />
-export const Image = () => <ListElementStory type='alt' />
-
-export default {
-  title: 'Layout Components/List Element'
 }

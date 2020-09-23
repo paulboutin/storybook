@@ -1,7 +1,7 @@
 import React from 'react'
-import Button from '../../components/base/Button'
+import Button from '../../../components/base/Button'
 
-const ButtonStory = ({ type }) => {
+export const ButtonStory = ({ type }) => {
   const states = ['normal', 'hover', 'active', 'focus', 'disabled']
 
   const variants = [
@@ -33,14 +33,4 @@ const ButtonStory = ({ type }) => {
       ))}
     </div>
   )
-}
-
-export const Primary = () => <ButtonStory type='primary' />
-export const Secondary = () => <ButtonStory type='secondary' />
-export const Tertiary = () => <ButtonStory type='tertiary' />
-export const Ghost = () => <ButtonStory type='ghost' />
-export const Danger = () => <ButtonStory type='danger' />
-
-export default {
-  title: 'Base Components/Button'
 }

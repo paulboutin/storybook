@@ -1,8 +1,8 @@
 import React from 'react'
-import Input from '../../components/base/Input'
-import TextArea from '../../components/base/TextArea'
+import Input from '../../../components/base/Input'
+import TextArea from '../../../components/base/TextArea'
 
-const InputStory = ({ variant }) => (
+export const InputStory = ({ variant }) => (
   <div className='sb:input'>
     <div className='sb:input-wrapper'>
       <h3 className='sb:input-title'>Enabled</h3>
@@ -91,10 +91,3 @@ const InputStory = ({ variant }) => (
     )}
   </div>
 )
-
-export const Outline = () => <InputStory variant='outline' />
-export const Underline = () => <InputStory variant='underline' />
-
-export default {
-  title: 'Base Components/Input'
-}

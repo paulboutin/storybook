@@ -1,7 +1,7 @@
 import React from 'react'
-import Link from '../../components/base/Link'
+import Link from '../../../components/base/Link'
 
-const LinkStory = ({ type }) => {
+export const LinkStory = ({ type }) => {
   const states = ['normal', 'hover', 'active', 'focus', 'visited']
 
   return (
@@ -19,11 +19,4 @@ const LinkStory = ({ type }) => {
       ))}
     </div>
   )
-}
-
-export const Inline = () => <LinkStory type='inline' />
-export const Standalone = () => <LinkStory type='standalone' />
-
-export default {
-  title: 'Base Components/Link'
 }

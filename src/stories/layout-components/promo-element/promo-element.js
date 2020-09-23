@@ -1,8 +1,8 @@
 import React from 'react'
-import AppCTA from '../../components/base/AppCTA'
-import Link from '../../components/base/Link'
-import PromoElement from '../../components/layout/PromoElement'
-import Button from '../../components/base/Button'
+import AppCTA from '../../../components/base/AppCTA'
+import Link from '../../../components/base/Link'
+import PromoElement from '../../../components/layout/PromoElement'
+import Button from '../../../components/base/Button'
 import { text } from '@storybook/addon-knobs'
 
 const defaultImage = 'http://via.placeholder.com/480x640'
@@ -11,7 +11,7 @@ const heading = 'The strongest environmental stance of any major bank.'
 const defaultText =
   'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
 
-const PromoElementStory = ({ type }) => {
+export const PromoElementStory = ({ type }) => {
   const image = text('Image', defaultImage)
   let cta
 
@@ -40,13 +40,4 @@ const PromoElementStory = ({ type }) => {
       {cta}
     </PromoElement>
   )
-}
-
-export const Standard = () => <PromoElementStory type='standard' />
-export const Alt = () => <PromoElementStory type='alt' />
-export const AccentSquare = () => <PromoElementStory type='accent square' />
-export const AccentDark = () => <PromoElementStory type='accent dark' />
-
-export default {
-  title: 'Layout Components/Promo Element'
 }
