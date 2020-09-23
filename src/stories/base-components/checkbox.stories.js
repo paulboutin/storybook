@@ -1,5 +1,5 @@
 import React from 'react'
-import Checkbox from '../../../components/base/Checkbox'
+import Checkbox from '../../components/base/Checkbox'
 
 export const CheckboxStory = () => {
   const states = ['normal', 'hover', 'focus', 'disabled']
@@ -26,4 +26,8 @@ export const CheckboxStory = () => {
 
 CheckboxStory.story = {
   name: 'Checkbox'
+}
+
+export default {
+  title: 'Base Components'
 }

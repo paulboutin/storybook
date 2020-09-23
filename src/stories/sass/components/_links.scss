@@ -1,4 +1,4 @@
-.sb\:link-type {
+.sb\:link {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -8,12 +8,6 @@
     flex-direction: row;
     justify-content: space-between;
   }
-}
-
-.sb\:link-type-name {
-  @include font-size('lg');
-  text-transform: capitalize;
-  width: 100%;
 }
 
 .sb\:link-wrapper {

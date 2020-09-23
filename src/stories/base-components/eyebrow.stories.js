@@ -1,5 +1,5 @@
 import React from 'react'
-import Eyebrow from '../../../components/base/Eyebrow'
+import Eyebrow from '../../components/base/Eyebrow'
 import { text } from '@storybook/addon-knobs'
 
 export const EyebrowStory = () => {
@@ -9,4 +9,8 @@ export const EyebrowStory = () => {
 
 EyebrowStory.story = {
   name: 'Eyebrow'
+}
+
+export default {
+  title: 'Base Components'
 }

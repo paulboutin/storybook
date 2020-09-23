@@ -1,5 +1,5 @@
 import React from 'react'
-import Breadcrumbs from '../../../components/base/Breadcrumbs'
+import Breadcrumbs from '../../components/base/Breadcrumbs'
 import { array } from '@storybook/addon-knobs'
 
 export const BreadcrumbsStory = () => {
@@ -9,4 +9,8 @@ export const BreadcrumbsStory = () => {
 
 BreadcrumbsStory.story = {
   name: 'Breadcrumbs'
+}
+
+export default {
+  title: 'Base Components'
 }

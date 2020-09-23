@@ -1,17 +1,7 @@
 import React from 'react'
-import Button from '../../../components/base/Button'
-import { radios } from '@storybook/addon-knobs'
+import Button from '../../components/base/Button'
 
-export const BUTTON_TYPES = [
-  'Primary',
-  'Secondary',
-  'Tertiary',
-  'Ghost',
-  'Danger'
-]
-
-export const ButtonStory = () => {
-  const type = radios('Type', BUTTON_TYPES, 'Primary').toLowerCase()
+const ButtonStory = ({ type }) => {
   const states = ['normal', 'hover', 'active', 'focus', 'disabled']
 
   const variants = [
@@ -45,6 +35,12 @@ export const ButtonStory = () => {
   )
 }
 
-ButtonStory.story = {
-  name: 'Button'
+export const Primary = () => <ButtonStory type='primary' />
+export const Secondary = () => <ButtonStory type='secondary' />
+export const Tertiary = () => <ButtonStory type='tertiary' />
+export const Ghost = () => <ButtonStory type='ghost' />
+export const Danger = () => <ButtonStory type='danger' />
+
+export default {
+  title: 'Base Components/Button'
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Dropdown from '../../../components/base/Dropdown'
+import Dropdown from '../../components/base/Dropdown'
 import { text, array, radios, boolean } from '@storybook/addon-knobs'
 
 export const DropdownStory = () => {
@@ -34,4 +34,8 @@ export const DropdownStory = () => {
 
 DropdownStory.story = {
   name: 'Dropdown'
+}
+
+export default {
+  title: 'Base Components'
 }

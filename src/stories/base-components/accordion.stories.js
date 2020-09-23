@@ -1,5 +1,5 @@
 import React from 'react'
-import Accordion from '../../../components/base/Accordion'
+import Accordion from '../../components/base/Accordion'
 import { number, text } from '@storybook/addon-knobs'
 
 const defaultContent = [
@@ -38,4 +38,8 @@ export const AccordionStory = () => {
 
 AccordionStory.story = {
   name: 'Accordion'
+}
+
+export default {
+  title: 'Base Components'
 }

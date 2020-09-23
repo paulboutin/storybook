@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '../../../components/base/Image'
+import Image from '../../components/base/Image'
 import { text, radios } from '@storybook/addon-knobs'
 
 export const ImageStory = () => {
@@ -17,4 +17,8 @@ export const ImageStory = () => {
 
 ImageStory.story = {
   name: 'Image'
+}
+
+export default {
+  title: 'Base Components'
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import Table from '../../../components/base/Table'
+import Table from '../../components/base/Table'
 
 export const TableStory = () => {
   const data = {
@@ -27,4 +27,8 @@ export const TableStory = () => {
 
 TableStory.story = {
   name: 'Table'
+}
+
+export default {
+  title: 'Base Components'
 }

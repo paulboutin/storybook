@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import Card from '../../../components/base/Card'
+import Card from '../../components/base/Card'
 import { radios, text } from '@storybook/addon-knobs'
 
 const defaultHeading = 'How to pick a checking account'
@@ -31,4 +31,8 @@ export const CardStory = () => {
 
 CardStory.story = {
   name: 'Card'
+}
+
+export default {
+  title: 'Base Components'
 }
