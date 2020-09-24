@@ -4,7 +4,7 @@ describe('Layout Components', () => {
   const stories = [
     {
       title: 'legal',
-      path: 'layout-components--legal'
+      path: 'layout-components--legal-story'
     },
     {
       title: 'list-element standard',
@@ -45,7 +45,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'faq',
-      path: 'layout-components--faq',
+      path: 'layout-components--faq-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
@@ -131,7 +131,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'resource-links',
-      path: 'layout-components--resource-links',
+      path: 'layout-components--resource-links-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
@@ -141,17 +141,17 @@ describe('Layout Components', () => {
     },
     {
       title: 'cards-horizontal-list',
-      path: 'layout-components--cards-horizontal-list',
+      path: 'layout-components--cards-horizontal-list-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'footer',
-      path: 'layout-components--footer',
+      path: 'layout-components--footer-story',
       devices: ['tablet', 'desktop']
     },
     {
       title: 'footer',
-      path: 'layout-components--footer',
+      path: 'layout-components--footer-story',
       devices: ['mobile'],
       callback: async () => {
         await page.click('.accordion:first-of-type')
@@ -161,7 +161,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'navigation main menu',
-      path: 'layout-components--navigation',
+      path: 'layout-components--navigation-story',
       devices: ['mobile', 'tablet'],
       fullPage: true,
       callback: async () => {
@@ -171,7 +171,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'navigation login menu',
-      path: 'layout-components--navigation',
+      path: 'layout-components--navigation-story',
       devices: ['mobile', 'tablet'],
       fullPage: true,
       callback: async () => {
@@ -183,7 +183,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'navigation category menu',
-      path: 'layout-components--navigation',
+      path: 'layout-components--navigation-story',
       devices: ['mobile', 'tablet'],
       fullPage: true,
       callback: async () => {
@@ -197,7 +197,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'navigation',
-      path: 'layout-components--navigation',
+      path: 'layout-components--navigation-story',
       devices: ['desktop'],
       fullPage: true,
       callback: async () => {
@@ -233,7 +233,11 @@ describe('Layout Components', () => {
     },
     {
       title: 'help outro',
-      path: 'layout-components--help-outro'
+      path: 'layout-components--help-outro-story'
+    },
+    {
+      title: 'callout',
+      path: 'layout-components--callout-story'
     }
   ]
   buildSnapshotTests(stories)

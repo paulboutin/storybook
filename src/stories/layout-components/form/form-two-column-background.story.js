@@ -71,5 +71,10 @@ export const TwoColumnBackground = () => (
 )
 
 export default {
-  title: 'Layout Components/Form'
+  title: 'Layout Components/Form',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ce02d230daf48a39b932c'
+    }
+  }
 }

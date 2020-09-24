@@ -67,5 +67,10 @@ ColumnCardsStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d2b85418d5594fb90c98'
+    }
+  }
 }

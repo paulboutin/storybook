@@ -1,8 +1,13 @@
 import React from 'react'
 import Footer from '../../components/layout/Footer'
 
-export { Footer }
+export const FooterStory = () => <Footer />
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d47d914d5c4fe31ba094'
+    }
+  }
 }

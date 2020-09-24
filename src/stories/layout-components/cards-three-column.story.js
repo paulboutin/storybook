@@ -48,5 +48,10 @@ CardsThreeColumnStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d31ab0d2dea9c17d82a0'
+    }
+  }
 }

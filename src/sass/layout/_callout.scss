@@ -1,0 +1,13 @@
+.callout {
+  padding-top: spacing(48);
+  padding-bottom: spacing(48);
+  text-align: center;
+
+  .callout-title {
+    margin-bottom: spacing(16);
+  }
+
+  .callout-text {
+    @include font-size('h5');
+  }
+}

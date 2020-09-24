@@ -12,5 +12,10 @@ VideoHeroStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d50e914d5c330e1ba096'
+    }
+  }
 }

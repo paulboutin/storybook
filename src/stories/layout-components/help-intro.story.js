@@ -12,5 +12,10 @@ HelpIntroStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f6ce0a4c5551906690680a9'
+    }
+  }
 }

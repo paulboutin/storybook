@@ -13,18 +13,25 @@ addDecorator(runScripts)
 addDecorator(withKnobs({ escapeHTML: false }))
 
 const customViewports = {
+  laptop: {
+    name: 'Laptop',
+    styles: {
+      width: '1440px',
+      height: '900px'
+    }
+  },
   desktop: {
     name: 'Desktop',
     styles: {
-      width: '100%',
-      height: '100%'
+      width: '1920px',
+      height: '1080px'
     }
   }
 }
 
 addParameters({
   viewport: {
-    viewports: { ...INITIAL_VIEWPORTS, ...customViewports }
+    viewports: { ...customViewports, ...INITIAL_VIEWPORTS }
   }
 })
 
@@ -34,8 +41,14 @@ function loadStories() {
   req.keys().forEach(filename => req(filename))
 }
 
-initDsm({
-  addDecorator,
-  addParameters,
-  callback: () => configure(req, loadStories)
-})
+if (process.env.STORYBOOK_DSM) {
+  initDsm({
+    addDecorator,
+    addParameters,
+    callback: () => configure(req, loadStories)
+  })
+} else {
+  const { withHTML } = require('@whitespace/storybook-addon-html/html')
+  addDecorator(withHTML)
+  configure(req, loadStories)
+}

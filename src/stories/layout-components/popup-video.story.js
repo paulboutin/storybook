@@ -12,5 +12,10 @@ PopupVideoStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d647914d5c524e1ba0a6'
+    }
+  }
 }

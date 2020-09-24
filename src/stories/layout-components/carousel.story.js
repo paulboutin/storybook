@@ -57,5 +57,10 @@ CarouselStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d6055418d54690b90ce3'
+    }
+  }
 }

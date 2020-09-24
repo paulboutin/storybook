@@ -1,29 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="49px" height="57px" viewBox="0 0 49 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>UI Elements/Icon / Account Settings / Online Service Agreement</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="49" height="57"
+     xmlns:v="https://vecta.io/nano">
     <defs>
-        <polygon id="path-1" points="43.7669246 19.25 44.6586376 20.3004913 45.5 21.2916667 36.8346228 31.5 31.5 27.6800551 33.109103 25.375 36.8346228 27.6800551"></polygon>
-        <filter x="-7.1%" y="-8.2%" width="114.3%" height="132.7%" filterUnits="objectBoundingBox" id="filter-2">
-            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        <path id="A" d="M43.767 19.25l1.733 2.042L36.835 31.5 31.5 27.68l1.61-2.305 3.726 2.305z"/>
+        <filter x="-7.1%" y="-8.2%" width="114.3%" height="132.7%" id="B">
+            <feOffset dy="2" in="SourceAlpha"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
         </filter>
     </defs>
-    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icons" transform="translate(-795.000000, -703.000000)">
-            <g id="UI-Elements/Icon-/-Account-Settings-/-Online-Service-Agreement" transform="translate(788.000000, 700.000000)">
-                <rect id="Rectangle" x="0" y="0" width="63" height="63"></rect>
-                <path d="M8,3.5 L42.75,3.5 C43.3022847,3.5 43.75,3.94771525 43.75,4.5 L43.75,51.5 C43.75,52.0522847 43.3022847,52.5 42.75,52.5 L8,52.5 C7.44771525,52.5 7,52.0522847 7,51.5 L7,4.5 C7,3.94771525 7.44771525,3.5 8,3.5 Z" id="Rectangle-Copy" fill="#004B2E"></path>
-                <path d="M18.75,7 L43.75,7 L43.75,7 L43.75,52.5 L15.75,52.5 L15.75,10 C15.75,8.34314575 17.0931458,7 18.75,7 Z" id="Rectangle" fill-opacity="0.1" fill="#000000"></path>
-                <path d="M20.3628601,10.5 L45.3752223,10.5 L45.3752223,10.5 L55.9331574,21 L56.0045924,58.498095 C56.0056446,59.0503787 55.558783,59.4989461 55.0064993,59.4999982 C55.0058643,59.4999994 55.0052293,59.5 55.0045943,59.5 L20.2524288,59.5 C19.700144,59.5 19.2524288,59.0522847 19.2524288,58.5 C19.2524288,58.4992168 19.2524297,58.4984336 19.2524316,58.4976504 L19.3628629,11.4976504 C19.3641583,10.9462845 19.8114927,10.5 20.3628601,10.5 Z" id="Rectangle" fill="#00B16E"></path>
-                <g id="Path" fill-rule="nonzero">
-                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
-                    <use fill="#FFFFFF" xlink:href="#path-1"></use>
-                </g>
-                <rect id="Rectangle" fill="#FFFFFF" x="22.75" y="38.5" width="29.75" height="1.75" rx="0.875"></rect>
-                <rect id="Rectangle" fill="#FFFFFF" x="22.75" y="45.5" width="29.75" height="1.75" rx="0.875"></rect>
-                <rect id="Rectangle" fill="#FFFFFF" x="22.75" y="52.5" width="29.75" height="1.75" rx="0.875"></rect>
-                <path d="M45.5,10.5 L56,21 L47.5,21 C46.3954305,21 45.5,20.1045695 45.5,19 L45.5,10.5 L45.5,10.5 Z" id="Path" fill="#007E4E"></path>
-            </g>
+    <g transform="translate(-7 -3)" fill="none" fill-rule="evenodd">
+        <path d="M8 3.5h34.75a1 1 0 0 1 1 1v47a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-47a1 1 0 0 1 1-1z" fill="#004b2e"/>
+        <path d="M18.75 7h25v45.5h-28V10a3 3 0 0 1 3-3z" fill-opacity=".1" fill="#000"/>
+        <path d="M20.363 10.5h25.012L55.933 21l.07 37.498a1 1 0 0 1-.998 1.002H20.252a1 1 0 0 1-1-1l.1-47.002a1 1 0 0 1 1-.998z"
+              fill="#00b16e"/>
+        <g fill-rule="nonzero">
+            <use fill="#000" filter="url(#B)" xlink:href="#A"/>
+            <use fill="#fff" xlink:href="#A"/>
         </g>
+        <g fill="#fff">
+            <rect x="22.75" y="38.5" width="29.75" height="1.75" rx=".875"/>
+            <rect x="22.75" y="45.5" width="29.75" height="1.75" rx=".875"/>
+            <rect x="22.75" y="52.5" width="29.75" height="1.75" rx=".875"/>
+        </g>
+        <path d="M45.5 10.5L56 21h-8.5a2 2 0 0 1-2-2v-8.5z" fill="#007e4e"/>
     </g>
 </svg>

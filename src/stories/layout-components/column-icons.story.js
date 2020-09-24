@@ -39,7 +39,7 @@ const defaultColumns = [
 export const ColumnIconsStory = () => {
   const columns = []
   const columnNumber = Number(
-    radios('Columns', ['2', '3', '4', '5', '6'], '2', 'config')
+    radios('Columns', ['2', '3', '4', '5', '6'], '3', 'config')
   )
   const inverted = boolean('Inverted', false, 'config')
 
@@ -62,5 +62,10 @@ ColumnIconsStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d237b0d2de8f867d826d'
+    }
+  }
 }

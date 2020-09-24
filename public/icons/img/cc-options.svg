@@ -1,43 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="50px" height="59px" viewBox="0 0 50 59" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>UI Elements/Icon / Account Settings / CC Options</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="59"
+     xmlns:v="https://vecta.io/nano">
     <defs>
-        <path d="M2,0 L45.25,0 C46.3545695,-4.2495073e-16 47.25,0.8954305 47.25,2 L47.25,29.5 C47.25,30.6045695 46.3545695,31.5 45.25,31.5 L2,31.5 C0.8954305,31.5 1.87533573e-15,30.6045695 0,29.5 L0,2 C-3.57315355e-16,0.8954305 0.8954305,-1.91384796e-17 2,0 Z" id="path-1"></path>
-        <path d="M2,0 L47.5,0 C48.6045695,-2.02906125e-16 49.5,0.8954305 49.5,2 L49.5,31.75 C49.5,32.8545695 48.6045695,33.75 47.5,33.75 L2,33.75 C0.8954305,33.75 1.3527075e-16,32.8545695 0,31.75 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="path-3"></path>
+        <path d="M2 0h43.25a2 2 0 0 1 2 2v27.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" id="A"/>
+        <path d="M2 0h45.5a2 2 0 0 1 2 2v29.75a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" id="B"/>
     </defs>
-    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icons" transform="translate(-958.000000, -155.000000)">
-            <g id="UI-Elements/Icon-/-Account-Settings-/-CC-Options" transform="translate(947.000000, 153.000000)">
-                <rect id="Rectangle" x="0" y="0" width="72" height="63"></rect>
-                <g id="Group-3" transform="translate(11.250000, 2.250000)">
-                    <g id="Card-Services" transform="translate(24.750000, 23.625000) rotate(-270.000000) translate(-24.750000, -23.625000) translate(1.125000, 7.875000)">
-                        <g id="Group" transform="translate(23.625000, 15.750000) rotate(-360.000000) translate(-23.625000, -15.750000) ">
-                            <g id="Group-5">
-                                <mask id="mask-2" fill="white">
-                                    <use xlink:href="#path-1"></use>
-                                </mask>
-                                <use id="Rectangle" fill="#004B2E" xlink:href="#path-1"></use>
-                            </g>
-                            <g id="Group-2" transform="translate(2.509615, 22.036765)" fill="#00B16E">
-                                <polygon id="Rectangle" points="0.895361985 0.463235294 7.60852878 0.463235294 7.60852878 2.71323529 0.895361985 2.71323529"></polygon>
-                                <polygon id="Rectangle" points="13.2403846 0.463235294 19.9903846 0.463235294 19.9903846 2.71323529 13.2403846 2.71323529"></polygon>
-                                <rect id="Rectangle" x="23.6141827" y="1.125" width="6.24699519" height="1.85294118"></rect>
-                                <rect id="Rectangle" x="34.858774" y="1.125" width="6.24699519" height="1.85294118"></rect>
-                            </g>
-                            <rect id="Rectangle" fill="#00B16E" x="3.63461538" y="3.70588235" width="8.17788462" height="6.48529412" rx="1"></rect>
-                        </g>
-                    </g>
-                    <g id="Path-4" transform="translate(0.000000, 24.750000)">
-                        <mask id="mask-4" fill="white">
-                            <use xlink:href="#path-3"></use>
-                        </mask>
-                        <use id="Mask" fill="#00B16E" xlink:href="#path-3"></use>
-                    </g>
-                    <path d="M36.75,38.25 L49.5,38.25 L49.5,38.25 L49.5,45 L36.75,45 C35.0931458,45 33.75,43.6568542 33.75,42 L33.75,41.25 C33.75,39.5931458 35.0931458,38.25 36.75,38.25 Z" id="Rectangle" fill="#007E4E"></path>
-                    <circle id="Oval" fill="#FFFFFF" cx="37.125" cy="41.625" r="2.25"></circle>
-                    <polygon id="Rectangle" fill-opacity="0.2" fill="#000000" points="9 22.5 40.5 22.5 40.5 24.75 9 24.75"></polygon>
-                </g>
+    <g transform="translate(.25 .25)" fill="none" fill-rule="evenodd">
+        <g transform="matrix(0 1 -1 0 40.5 0)">
+            <use fill="#004b2e" xlink:href="#A"/>
+            <g fill="#00b16e">
+                <path d="M3.405 22.5h6.713v2.25H3.405zm12.345 0h6.75v2.25h-6.75zm10.374.662h6.247v1.853h-6.247zm11.246 0h6.247v1.853H37.37z"/>
+                <rect x="3.635" y="3.706" width="8.178" height="6.485" rx="1"/>
             </g>
         </g>
+        <use fill="#00b16e" xlink:href="#B" transform="translate(0 24.75)"/>
+        <path d="M36.75 38.25H49.5V45H36.75a3 3 0 0 1-3-3v-.75a3 3 0 0 1 3-3z" fill="#007e4e"/>
+        <circle fill="#fff" cx="37.125" cy="41.625" r="2.25"/>
+        <path fill-opacity=".2" fill="#000" d="M9 22.5h31.5v2.25H9z"/>
     </g>
 </svg>
