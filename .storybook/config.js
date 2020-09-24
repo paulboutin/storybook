@@ -41,8 +41,12 @@ function loadStories() {
   req.keys().forEach(filename => req(filename))
 }
 
-initDsm({
-  addDecorator,
-  addParameters,
-  callback: () => configure(req, loadStories)
-})
+if (process.env.STORYBOOK_DSM) {
+  initDsm({
+    addDecorator,
+    addParameters,
+    callback: () => configure(req, loadStories)
+  })
+} else {
+  configure(req, loadStories)
+}
