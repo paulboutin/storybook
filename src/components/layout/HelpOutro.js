@@ -8,7 +8,7 @@ const HelpOutro = () => (
         Haven't found what you're looking for?
       </h2>
       <p className='help-outro-text'>Feel free to get in touch.</p>
-      <Button type='primary' label='Contact Us' />
+      <Button type='tertiary' label='Contact Us' />
     </div>
   </section>
 )
