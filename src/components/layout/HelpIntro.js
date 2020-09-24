@@ -10,7 +10,11 @@ const HelpIntro = ({ showLinks }) => (
       <h1 className='help-intro-title'>How can we help you today?</h1>
 
       <div className='help-intro-search'>
-        <Input variant='outline' label='Search by topic or category' required />
+        <Input
+          variant='outline'
+          placeholder='Search by topic or category'
+          required
+        />
         <Button type='tertiary' label='Search' />
       </div>
 

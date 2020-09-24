@@ -8,13 +8,16 @@ const Input = ({ id, variant, value, error, help, label, ...attrs }) => (
       `input-block-${variant}`,
       value ? 'input-active' : '',
       error ? 'input-error' : '',
-      attrs.disabled ? 'input-disabled' : ''
+      attrs.disabled ? 'input-disabled' : '',
+      attrs.placeholder ? 'input-placeholder' : ''
     )}
   >
-    <label className='input-label' htmlFor={id}>
-      {label}
-      {!attrs.required && <span className='input-optional'>(Optional)</span>}
-    </label>
+    {label && (
+      <label className='input-label' htmlFor={id}>
+        {label}
+        {!attrs.required && <span className='input-optional'>(Optional)</span>}
+      </label>
+    )}
 
     {attrs.type === 'password' && (
       <i className='icon icon-show input-password-control' />
