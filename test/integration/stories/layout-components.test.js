@@ -234,6 +234,10 @@ describe('Layout Components', () => {
     {
       title: 'help outro',
       path: 'layout-components--help-outro'
+    },
+    {
+      title: 'callout',
+      path: 'layout-components--callout-story'
     }
   ]
   buildSnapshotTests(stories)
