@@ -13,18 +13,25 @@ addDecorator(runScripts)
 addDecorator(withKnobs({ escapeHTML: false }))
 
 const customViewports = {
+  laptop: {
+    name: 'Laptop',
+    styles: {
+      width: '1440px',
+      height: '900px'
+    }
+  },
   desktop: {
     name: 'Desktop',
     styles: {
-      width: '100%',
-      height: '100%'
+      width: '1920px',
+      height: '1080px'
     }
   }
 }
 
 addParameters({
   viewport: {
-    viewports: { ...INITIAL_VIEWPORTS, ...customViewports }
+    viewports: { ...customViewports, ...INITIAL_VIEWPORTS }
   }
 })
 
