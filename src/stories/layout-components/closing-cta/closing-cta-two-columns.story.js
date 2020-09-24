@@ -8,5 +8,10 @@ export const TwoColumns = () => {
 }
 
 export default {
-  title: 'Layout Components/Closing CTA'
+  title: 'Layout Components/Closing CTA',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d43d5418d50192b90ca9'
+    }
+  }
 }

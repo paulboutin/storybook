@@ -19,5 +19,10 @@ CalloutStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d35c914d5c57b21ba08a'
+    }
+  }
 }

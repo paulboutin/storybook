@@ -93,5 +93,10 @@ PullQuoteStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d798b0d2de1f1c7d82e5'
+    }
+  }
 }

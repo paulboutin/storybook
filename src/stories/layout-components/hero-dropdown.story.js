@@ -13,5 +13,10 @@ DropdownHeroStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '5f29d587914d5c164c1ba09c'
+    }
+  }
 }
