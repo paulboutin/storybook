@@ -18,10 +18,10 @@
     "lint": "pretty-quick",
     "test": "run-s test:unit test:snapshot",
     "test:unit": "jest -c test/unit/jest.config.js --passWithNoTests",
-    "test:integration": "jest -c test/integration/jest.config.js --max-workers 2 --updateSnapshot=${UPDATE_SNAPSHOT:-false}",
+    "test:integration": "jest -c test/snapshot/jest.config.js --max-workers 2 --updateSnapshot=${UPDATE_SNAPSHOT:-false}",
     "test:start": "start-storybook -p 6006 -s public --ci --quiet",
-    "test:snapshot": "cross-env PORT=6006 JEST_PUPPETEER_CONFIG=test/integration/jest-puppeteer.config.js start-server-and-test test:start http://localhost:6006 test:integration",
-    "test:snapshot:new": "cross-env JEST_PUPPETEER_CONFIG=test/integration/jest-puppeteer.config.js start-server-and-test test:start http://localhost:6006 test:integration",
+    "test:snapshot": "cross-env PORT=6006 JEST_PUPPETEER_CONFIG=test/snapshot/jest-puppeteer.config.js start-server-and-test test:start http://localhost:6006 test:integration",
+    "test:snapshot:new": "cross-env JEST_PUPPETEER_CONFIG=test/snapshot/jest-puppeteer.config.js start-server-and-test test:start http://localhost:6006 test:integration",
     "test:snapshot:update": "cross-env UPDATE_SNAPSHOT=true npm run test:snapshot"
   },
   "dependencies": {
