@@ -1,39 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="64px" height="58px" viewBox="0 0 64 58" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>UI Elements/Icon / Payments / Bill Pay</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="58"
+     xmlns:v="https://vecta.io/nano">
     <defs>
-        <rect id="path-1" x="0" y="0" width="37.125" height="23.25" rx="1"></rect>
+        <style>
+            @font-face{font-family:"PublicSans-Thin_Bold";src:url(data:application/font-woff;charset=utf-8;base64,d09GRgABAAAAAAUwAAwAAAAAB5AAAQHLAAAAAAAAAAAAAAAAAAAAAAAAAABHUE9TAAABHAAAAGgAAACQ6q/klk9TLzIAAAGEAAAATAAAAGByHDrAY21hcAAAAdAAAABEAAABSgB5AvJnYXNwAAACFAAAAAgAAAAIAAAAEGdseWYAAAIcAAAA3AAAANwxtwhHaGVhZAAAAvgAAAA2AAAANhhB2EFoaGVhAAADMAAAACAAAAAkDVAES2htdHgAAANQAAAAEAAAABAV0wLCbG9jYQAAA2AAAAAKAAAACgCcAEhtYXhwAAADbAAAABgAAAAgAAcAG25hbWUAAAOEAAABlQAAAut21H9GcG9zdAAABRwAAAAUAAAAIP6RAJB4nD2Kuw5AUBBEz14KkVCpRdRK0RNRKe8PiKiIQjS+nnU9djOTs7ODACElDV7b9ZZ0PLaFZBn2lVR/YmubEeMrc57cfZmnbSW4ycnH6CUqQ+6aBRWe7jfRT6KpaO9x41zeVPkCoXsLDXicY2BhzWTaw8DKwMAqwrKBgYFhGoQGivUw5TAggQUMDP8FkPh+/n6uQEEXhlD2nH92DAyc3IzvFRgYJ4PkWLhYlwEpBQZ2AI1YDX14nGNgYGBmgGAZBkYGEHAB8hjBfBYGDSDNBqQZGZgYXBlC//8HywPp/3v/r4OqBwJGNgaqAEYmNAFm6phLDwAAQiYJZwABAAH//wAPAAIAogAABUAFpgAOABkAABM6AhYXDAESFRQCBCkBAREzMj4BNTQuASOiC2WJiS4BBwFMm6T+r/79/loBJoZ8y3psyIkFpgEBBrD+xNjh/rmyBLr8MmDatqnTYgAAAQCiAAAEjQWmAAsAADcRIQchESEVIREFFaID4QH9RQJf/Z8CyAAFpvb+ofH+mQH4AAAAAAEAov/sBScFpgAUAAABFAIGIyImAjURIREUFjMyPgE1ESEFJ3L/0tP+cQEpnH1TgEkBJwInr/7/i40BBLQDdfx1opVBiW0DiwAAAAABAAAAAQHLdhGkO18PPPUAAwfQAAAAANlx6FwAAAAA2dWjvQCi/+wFQAWmAAEABgACAAAAAAAAeJxjYGRgYM/5Z8fAwLqCYRFDAqsDA1AEBbAAAF+WA6oFlgDcBaAAogT1AKIFqACiAAAAAAAuAEgAbgAAeJxjYGRgYGBhkGJgYgABRgY0AAADdAAjeJyNkt9KAkEUxr9Ri7ooguimixgIQkPXVUohu0oM+oMGSve2iTsw7i67K+JF10Hv0EN01Rt009P0Bn2jY4UEtcPs/OY75ztnZ1gAW3iDwPypcc5ZUK9ZziCHc8tZ7OHScg478C2vYAMPllexjSfLm9jFM10it86dxqtlASn2LWewJpqWszgVV5ZzOBSPllewK14sr+JAvFvexJH4aIbRNFZDP5V5ryCrbuW4KC9GUV/rfqxkbxoNZH4ymThqoTleOCrcjO+08mS3HySy56vgLNT3Fcd16412p91qzMMmaoIlE112SCPeDuJEhYGcWX8x+WkanZTLiRerKE2cRGknjIflzvk1mggRYYoYCkNeZQqJPDwUuFbhooJjFMkXGDGvz+vTfJtsiR59EQYzx2Q2HOrLeQ6rhVQLuMEYd9QVFYku4wGSWR2fWoAz5mncs6fDzi7qaKCNDmeL9NO98C6cpS/vXz3kV+YtvzxmTHFv9O+u/+tk7irlWU9Q5kiYa04bUUtYydTVXEOqQ8Y7/H2vPwHNfYm3AAAAeJxjYGYAg399DD0MmIAFADCPAiA=)
+            format("woff"); font-weight:bold;font-style:normal;}
+        </style>
+        <rect id="A" width="37.125" height="23.25" rx="1"/>
     </defs>
-    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icons" transform="translate(-624.000000, -479.000000)">
-            <g id="UI-Elements/Icon-/-Payments-/-Bill-Pay" transform="translate(620.000000, 477.000000)">
-                <rect id="Rectangle" x="0" y="0" width="72" height="62"></rect>
-                <g id="Group-2" transform="translate(4.500000, 2.214286)">
-                    <g id="Triangle" transform="translate(18.562500, 45.946429) scale(1, -1) translate(-18.562500, -45.946429) translate(0.000000, 34.321429)">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
-                        <use id="Mask" fill="#007E4E" xlink:href="#path-1"></use>
-                        <path d="M18.5625,0.284051966 C19.4220625,0.284051966 20.2816249,0.529884988 21.0310191,1.02155103 L21.0310191,1.02155103 L38.7985744,12.6785714 L-1.67357442,12.6785714 L16.0939809,1.02155103 C16.8433751,0.529884988 17.7029375,0.284051966 18.5625,0.284051966 Z" id="Triangle-Copy" stroke="#004B2E" mask="url(#mask-2)" transform="translate(18.562500, 6.089286) scale(1, -1) translate(-18.562500, -6.089286) "></path>
-                        <path d="M20.9479102,6.25949289 L37.125,18.2776523 L37.125,18.2776523 L37.125,21.0357143 L0,21.0357143 L0,18.2776523 L16.1770898,6.25949289 C17.5933349,5.20734699 19.5316651,5.20734699 20.9479102,6.25949289 Z" id="Triangle-Copy-3" fill-opacity="0.5" fill="#000000" opacity="0.25" mask="url(#mask-2)"></path>
-                        <path d="M20.7567392,10.2967495 L37.125,21.0357143 L37.125,21.0357143 L0,21.0357143 L16.3682608,10.2967495 C17.7005171,9.42267658 19.4244829,9.42267658 20.7567392,10.2967495 Z" fill="#007E4E" mask="url(#mask-2)"></path>
-                        <path d="M18.5625,8.91868877 C19.643579,8.91868877 20.7246579,9.26823479 21.6262785,9.96732681 L21.6262785,9.96732681 L40.046674,24.25 L-2.921674,24.25 L15.4987215,9.96732681 C16.4003421,9.26823479 17.481421,8.91868877 18.5625,8.91868877 Z" id="Triangle-Copy-2" stroke="#004B2E" stroke-width="2" fill="#007E4E" mask="url(#mask-2)"></path>
-                    </g>
-                    <g id="Group" transform="translate(24.750000, 0.000000)">
-                        <g id="Bill-Pay-Icon" fill="#00B16E">
-                            <path d="M1,0 L29.25,0 L29.25,0 L38.25,8.85714286 L38.25,56.5714286 C38.25,57.1237133 37.8022847,57.5714286 37.25,57.5714286 L1,57.5714286 C0.44771525,57.5714286 6.76353751e-17,57.1237133 0,56.5714286 L0,1 C-6.76353751e-17,0.44771525 0.44771525,1.01453063e-16 1,0 Z" id="Rectangle"></path>
-                        </g>
-                        <path d="M29.25,0 L38.25,8.85714286 L31.25,8.85714286 C30.1454305,8.85714286 29.25,7.96171236 29.25,6.85714286 L29.25,0 L29.25,0 Z" id="Path" fill="#007E4E"></path>
-                        <rect id="Rectangle-Copy-37" fill="#FFFFFF" x="4.5" y="31" width="29.25" height="2.21428571"></rect>
-                        <rect id="Rectangle-Copy-38" fill="#FFFFFF" x="4.5" y="46.5" width="29.25" height="2.21428571"></rect>
-                        <rect id="Rectangle-Copy-40" fill="#FFFFFF" x="4.5" y="38.75" width="29.25" height="2.21428571"></rect>
-                        <text id="DUE-Copy" font-family="PublicSans-Thin_Bold, Public Sans" font-size="10" font-weight="bold" letter-spacing="0.4166666" fill="#FFFFFF">
-                            <tspan x="8.10640635" y="23.9821429">DUE</tspan>
-                        </text>
-                    </g>
-                    <rect id="Rectangle" fill-opacity="0.15" fill="#000000" x="22.5" y="34.3214286" width="2.25" height="23.25"></rect>
-                </g>
+    <g transform="translate(.5 .214)" fill="none" fill-rule="evenodd">
+        <g transform="matrix(1 0 0 -1 0 57.571429)">
+            <mask id="B" fill="#fff">
+                <use xlink:href="#A"/>
+            </mask>
+            <use fill="#007e4e" xlink:href="#A"/>
+            <path d="M18.563.284c.86 0 1.72.246 2.47.737h0L38.8 12.68H-1.674L16.094 1.022c.75-.492 1.61-.737 2.47-.737z"
+                  stroke="#004b2e" mask="url(#B)" transform="matrix(1 0 0 -1 0 12.178572)"/>
+            <path d="M20.948 6.26l16.177 12.018v2.758H0v-2.758L16.177 6.26a4 4 0 0 1 4.771 0z" fill-opacity=".5"
+                  fill="#000" opacity=".25" mask="url(#B)"/>
+            <g fill="#007e4e">
+                <path d="M20.757 10.297l16.368 10.74H0l16.368-10.74a4 4 0 0 1 4.388 0z" mask="url(#B)"/>
+                <path d="M18.563 8.92a4.99 4.99 0 0 1 3.064 1.049h0l18.42 14.283H-2.922L15.5 9.967a4.99 4.99 0 0 1 3.064-1.049z"
+                      stroke="#004b2e" stroke-width="2" mask="url(#B)"/>
             </g>
         </g>
+        <path d="M25.75 0H54l9 8.857V56.57a1 1 0 0 1-1 1H25.75a1 1 0 0 1-1-1V1a1 1 0 0 1 1-1z" fill="#00b16e"/>
+        <path d="M54 0l9 8.857h-7a2 2 0 0 1-2-2V0z" fill="#007e4e"/>
+        <path d="M29.25 31H58.5v2.214H29.25zm0 15.5H58.5v2.214H29.25zm0-7.75H58.5v2.214H29.25z" fill="#fff"/>
+        <text font-family="PublicSans-Thin_Bold, Public Sans" font-size="10" font-weight="bold" letter-spacing=".417"
+              fill="#fff">
+            <tspan x="32.856" y="23.982">DUE</tspan>
+        </text>
+        <path fill-opacity=".15" fill="#000" d="M22.5 34.32h2.25v23.25H22.5z"/>
     </g>
 </svg>

@@ -1,32 +1,21 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="57px" height="43px" viewBox="0 0 57 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>UI Elements/Icon / Payments / Make External Transfer</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="43"
+     xmlns:v="https://vecta.io/nano">
     <defs>
-        <path d="M2,0 L47,0 C48.1045695,-2.02906125e-16 49,0.8954305 49,2 L49,29.5 C49,30.6045695 48.1045695,31.5 47,31.5 L2,31.5 C0.8954305,31.5 1.3527075e-16,30.6045695 0,29.5 L0,2 C-3.57315355e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="path-1"></path>
+        <path d="M2 0h45a2 2 0 0 1 2 2v27.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" id="A"/>
     </defs>
-    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icons" transform="translate(-1295.000000, -818.000000)">
-            <g id="UI-Elements/Icon-/-Payments-/-Make-External-Transfer" transform="translate(1292.000000, 808.000000)">
-                <rect id="Rectangle" x="0" y="0" width="63" height="63"></rect>
-                <g id="Group" transform="translate(3.500000, 10.500000)">
-                    <g id="Group-5">
-                        <path d="M2,0 L47,0 C48.1045695,-2.02906125e-16 49,0.8954305 49,2 L49,29.5 C49,30.6045695 48.1045695,31.5 47,31.5 L2,31.5 C0.8954305,31.5 1.3527075e-16,30.6045695 0,29.5 L0,2 C-3.57315355e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="Rectangle" fill="#004B2E"></path>
-                        <g id="Group-4" transform="translate(5.250000, 3.500000)" fill="#007E4E">
-                            <rect id="Rectangle" x="0" y="0" width="10.5" height="7" rx="1"></rect>
-                        </g>
-                    </g>
-                    <path d="M8.5,7 L49,7 L49,7 L49,27.5 C49,29.709139 47.209139,31.5 45,31.5 L3.5,31.5 L3.5,31.5 L3.5,12 C3.5,9.23857625 5.73857625,7 8.5,7 Z" id="Mask" fill-opacity="0.1" fill="#000000"></path>
-                    <g id="Path-2" transform="translate(7.007994, 10.500000)">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
-                        <use id="Mask" fill="#00B16E" xlink:href="#path-1"></use>
-                        <polygon fill="#007E4E" opacity="0.252604167" mask="url(#mask-2)" points="0 31.5 49 0 48.9920065 31.5"></polygon>
-                    </g>
-                    <rect id="Rectangle" fill="#007E4E" x="7" y="15.75" width="49" height="5.25"></rect>
-                    <path d="M32.6148662,19.5886932 L32.6148662,23.6007836 L21.4334059,23.6007836 C21.1950445,23.6019846 21.001585,23.7519634 21,23.9367524 L21,28.5729866 C21.0015493,28.7577602 21.1950247,28.9077268 21.4334059,28.9089554 L32.6148662,28.9089554 L32.6148662,32.9210457 C32.6195101,33.0554271 32.7263083,33.1754089 32.8888296,33.2258043 C33.0498015,33.2761965 33.2339891,33.2462026 33.3578177,33.1514138 L41.87695,26.4897835 C42.0410167,26.359002 42.0410167,26.1502209 41.87695,26.019464 L33.3578177,19.3483118 C33.2634019,19.2751224 33.1302895,19.2403276 32.9987264,19.2523251 C32.7789328,19.2731228 32.6148662,19.4171028 32.6148662,19.5886932 Z" id="Path" fill="#FFFFFF"></path>
-                </g>
-            </g>
+    <g transform="translate(.5 .5)" fill="none" fill-rule="evenodd">
+        <path d="M2 0h45a2 2 0 0 1 2 2v27.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2z" fill="#004b2e"/>
+        <rect x="5.25" y="3.5" width="10.5" height="7" rx="1" fill="#007e4e"/>
+        <path d="M8.5 7H49v20.5a4 4 0 0 1-4 4H3.5V12a5 5 0 0 1 5-5z" fill-opacity=".1" fill="#000"/>
+        <g transform="translate(7.008 10.5)">
+            <mask id="B" fill="#fff">
+                <use xlink:href="#A"/>
+            </mask>
+            <use fill="#00b16e" xlink:href="#A"/>
+            <path fill="#007e4e" opacity=".253" mask="url(#B)" d="M0 31.5L49 0l-.008 31.5z"/>
         </g>
+        <path fill="#007e4e" d="M7 15.75h49V21H7z"/>
+        <path d="M32.615 19.59V23.6h-11.18c-.238.001-.432.15-.433.336v4.636c.002.185.195.335.433.336h11.18v4.012c.005.134.11.254.274.305s.345.02.47-.074l8.52-6.662c.164-.13.164-.34 0-.47l-8.52-6.67c-.094-.073-.228-.108-.36-.096-.22.02-.384.165-.384.336z"
+              fill="#fff"/>
     </g>
 </svg>

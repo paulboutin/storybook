@@ -1,31 +1,24 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="57px" height="36px" viewBox="0 0 57 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>UI Elements/Icon / Account Settings / Lock Card</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="36"
+     xmlns:v="https://vecta.io/nano">
     <defs>
-        <rect id="path-1" x="0" y="0" width="56" height="35.5555556" rx="2"></rect>
-        <path d="M33.8623645,10.5781499 L33.8623645,15.9215427 C35.4571616,15.9215427 36.75,17.0707325 36.75,18.4883298 L36.75,27.6296296 L36.75,27.6296296 C36.75,29.061479 35.4441639,30.2222222 33.8333333,30.2222222 L22.1666667,30.2222222 C20.5558361,30.2222222 19.25,29.061479 19.25,27.6296296 L19.25,18.4874492 C19.25,17.0703382 20.5423949,15.9215427 22.1366448,15.9215427 L22.1366448,10.5781499 C22.1366448,3.58506114 33.8623645,3.58506114 33.8623645,10.5781499 Z M27.9861715,19.5555556 C26.1677467,19.5555556 25.375,20.7528227 25.375,21.9951393 C25.375,23.095396 26.0157617,24.0138022 26.9082082,24.4830035 L26.3974332,27.6591064 C26.3950302,27.6805052 26.393827,27.7019748 26.393827,27.7234545 C26.393827,28.1331252 26.5591431,28.4444444 27.0874574,28.4444444 L28.9521733,28.4444444 C28.9798737,28.4444444 29.007561,28.4435115 29.035157,28.4416481 C29.5614796,28.4061097 29.6159411,28.0672328 29.5701105,27.6591064 L29.1362219,24.4830035 C30.1777398,24.0138022 30.625,23.1701732 30.625,21.9951393 C30.625,20.473267 29.459561,19.5555556 27.9861715,19.5555556 Z M24.71875,10.2053851 L24.71875,15.7037037 L31.28125,15.7037037 L31.28125,10.2053851 C31.28125,6.47474819 24.71875,6.47474819 24.71875,10.2053851 Z" id="path-3"></path>
-        <filter x="-5.7%" y="-4.0%" width="111.4%" height="116.1%" filterUnits="objectBoundingBox" id="filter-4">
-            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1"></feColorMatrix>
+        <rect id="A" width="56" height="35.556" rx="2"/>
+        <path d="M33.862 10.578v5.343c1.595 0 2.888 1.15 2.888 2.567v9.14c0 1.432-1.306 2.593-2.917 2.593H22.167c-1.61 0-2.917-1.16-2.917-2.593v-9.142c0-1.417 1.292-2.566 2.887-2.566v-5.343c0-6.993 11.726-6.993 11.726 0zm-5.876 8.977c-1.818 0-2.61 1.197-2.61 2.44 0 1.1.64 2.02 1.533 2.488l-.51 3.176c-.002.02-.004.043-.004.064 0 .4.165.72.694.72h1.865a1.23 1.23 0 0 0 .083-.003c.526-.036.58-.374.535-.783l-.434-3.176c1.042-.47 1.49-1.313 1.49-2.488 0-1.522-1.165-2.44-2.64-2.44zm-3.267-9.35v5.498h6.563v-5.498c0-3.73-6.562-3.73-6.562 0z"
+              id="B"/>
+        <filter x="-5.7%" y="-4.0%" width="111.4%" height="116.1%" id="C">
+            <feOffset dy="2" in="SourceAlpha"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
         </filter>
     </defs>
-    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icons" transform="translate(-1295.000000, -606.000000)">
-            <g id="UI-Elements/Icon-/-Account-Settings-/-Lock-Card" transform="translate(1292.000000, 592.000000)">
-                <rect id="Rectangle" x="0" y="0" width="63" height="64"></rect>
-                <g id="Group" transform="translate(3.500000, 14.222222)">
-                    <mask id="mask-2" fill="white">
-                        <use xlink:href="#path-1"></use>
-                    </mask>
-                    <use id="Mask" fill="#00B16E" xlink:href="#path-1"></use>
-                    <polygon id="Mask-Copy" fill="#007E4E" opacity="0.25" mask="url(#mask-2)" points="56 2.52637417e-13 56 35.5555556 1.1812773e-13 35.5555556"></polygon>
-                    <rect id="Rectangle-Copy-13" fill="#004B2E" mask="url(#mask-2)" x="-1.75" y="5.33333333" width="59.5" height="7.11111111"></rect>
-                    <g id="Combined-Shape" mask="url(#mask-2)">
-                        <use fill="black" fill-opacity="1" filter="url(#filter-4)" xlink:href="#path-3"></use>
-                        <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-3"></use>
-                    </g>
-                </g>
-            </g>
+    <g transform="translate(.5 .222)" fill="none" fill-rule="evenodd">
+        <mask id="D" fill="#fff">
+            <use xlink:href="#A"/>
+        </mask>
+        <use fill="#00b16e" xlink:href="#A"/>
+        <path fill="#007e4e" opacity=".25" mask="url(#D)" d="M56 0v35.556H0z"/>
+        <path fill="#004b2e" mask="url(#D)" d="M-1.75 5.333h59.5v7.11h-59.5z"/>
+        <g mask="url(#D)">
+            <use fill="#000" filter="url(#C)" xlink:href="#B"/>
+            <use fill="#fff" xlink:href="#B"/>
         </g>
     </g>
 </svg>

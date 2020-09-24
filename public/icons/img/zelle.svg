@@ -1,38 +1,27 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="67px" height="34px" viewBox="0 0 67 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>UI Elements/Icon / Payments / Zelle®</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="67" height="34"
+     xmlns:v="https://vecta.io/nano">
     <defs>
-        <rect id="path-1" x="0" y="0" width="21.078125" height="3.32142857" rx="1.66071429"></rect>
+        <rect id="A" width="21.078" height="3.321" rx="1.661"/>
     </defs>
-    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icons" transform="translate(-1290.000000, -490.000000)">
-            <g id="UI-Elements/Icon-/-Payments-/-Zelle®" transform="translate(1288.000000, 477.000000)">
-                <rect id="Rectangle" x="0" y="0" width="71" height="62"></rect>
-                <g id="Group-2" transform="translate(2.218750, 13.285714)">
-                    <g id="Group" transform="translate(0.000000, 0.000000)">
-                        <rect id="Rectangle" fill="#00B16E" x="21.078125" y="5.53571429" width="39.9375" height="22.1428571"></rect>
-                        <path d="M17.75,0 L64.34375,0 C65.5691318,0 66.5625,0.991369483 66.5625,2.21428571 L66.5625,31 C66.5625,32.2229162 65.5691318,33.2142857 64.34375,33.2142857 L17.75,33.2142857 C16.5246182,33.2142857 15.53125,32.2229162 15.53125,31 L15.53125,2.21428571 C15.53125,0.991369483 16.5246182,0 17.75,0 Z M21.078125,5.53571429 L21.078125,27.6785714 L61.015625,27.6785714 L61.015625,5.53571429 L21.078125,5.53571429 Z" id="Rectangle-Copy-3" fill="#004B2E"></path>
-                        <ellipse id="Oval" fill="#004B2E" cx="61.015625" cy="5.53571429" rx="4.4375" ry="4.42857143"></ellipse>
-                        <ellipse id="Oval" fill="#004B2E" cx="61.015625" cy="27.6785714" rx="4.4375" ry="4.42857143"></ellipse>
-                        <ellipse id="Oval" fill="#004B2E" cx="21.078125" cy="5.53571429" rx="4.4375" ry="4.42857143"></ellipse>
-                        <ellipse id="Oval" fill="#004B2E" cx="21.078125" cy="27.6785714" rx="4.4375" ry="4.42857143"></ellipse>
-                        <ellipse id="Oval" fill="#004B2E" cx="41.046875" cy="16.6071429" rx="5.546875" ry="5.53571429"></ellipse>
-                        <rect id="Mask-Copy-7" fill="#FFFFFF" x="2.21875" y="9.96428571" width="16.640625" height="3.32142857" rx="1.66071429"></rect>
-                        <rect id="Mask-Copy-5" fill="#00B16E" x="0" y="9.96428571" width="13.3125" height="3.32142857" rx="1.66071429"></rect>
-                        <rect id="Mask-Copy-6" fill="#00B16E" x="8.875" y="17.7142857" width="11.09375" height="3.32142857" rx="1.66071429"></rect>
-                        <rect id="Mask-Copy-2" fill="#FFFFFF" x="2.21875" y="25.4642857" width="19.96875" height="3.32142857" rx="1.66071429"></rect>
-                        <rect id="Mask-Copy-3" fill="#00B16E" x="0" y="25.4642857" width="12.203125" height="3.32142857" rx="1.66071429"></rect>
-                        <g id="Rectangle-Copy-17" transform="translate(7.765625, 2.214286)">
-                            <mask id="mask-2" fill="white">
-                                <use xlink:href="#path-1"></use>
-                            </mask>
-                            <use id="Mask" fill="#004B2E" xlink:href="#path-1"></use>
-                        </g>
-                        <rect id="Mask" fill="#00B16E" x="0" y="2.21428571" width="4.4375" height="3.32142857" rx="1.66071429"></rect>
-                        <rect id="Mask-Copy-9" fill="#004B2E" x="0" y="17.7142857" width="5.546875" height="3.32142857" rx="1.66071429"></rect>
-                    </g>
-                </g>
-            </g>
+    <g transform="translate(.219 .286)" fill-rule="evenodd">
+        <path fill="#00b16e" d="M21.078 5.536h39.938V27.68H21.078z"/>
+        <g fill="#004b2e">
+            <path d="M17.75 0h46.594c1.225 0 2.22.99 2.22 2.214V31c0 1.223-.993 2.214-2.22 2.214H17.75c-1.225 0-2.22-.99-2.22-2.214V2.214C15.53.99 16.525 0 17.75 0zm3.328 5.536V27.68h39.938V5.536H21.078z"/>
+            <ellipse cx="61.016" cy="5.536" rx="4.438" ry="4.429"/>
+            <ellipse cx="61.016" cy="27.679" rx="4.438" ry="4.429"/>
+            <ellipse cx="21.078" cy="5.536" rx="4.438" ry="4.429"/>
+            <ellipse cx="21.078" cy="27.679" rx="4.438" ry="4.429"/>
+            <ellipse cx="41.047" cy="16.607" rx="5.547" ry="5.536"/>
         </g>
+        <rect fill="#fff" x="2.219" y="9.964" width="16.641" height="3.321" rx="1.661"/>
+        <g fill="#00b16e">
+            <rect y="9.964" width="13.313" height="3.321" rx="1.661"/>
+            <rect x="8.875" y="17.714" width="11.094" height="3.321" rx="1.661"/>
+        </g>
+        <rect fill="#fff" x="2.219" y="25.464" width="19.969" height="3.321" rx="1.661"/>
+        <rect fill="#00b16e" y="25.464" width="12.203" height="3.321" rx="1.661"/>
+        <use fill="#004b2e" xlink:href="#A" transform="translate(7.766 2.214)"/>
+        <rect fill="#00b16e" y="2.214" width="4.438" height="3.321" rx="1.661"/>
+        <rect fill="#004b2e" y="17.714" width="5.547" height="3.321" rx="1.661"/>
     </g>
 </svg>

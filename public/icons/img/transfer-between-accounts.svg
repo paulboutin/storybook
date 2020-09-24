@@ -1,54 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="58px" height="43px" viewBox="0 0 58 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>UI Elements/Icon / Payments / Transfer Between Accounts</title>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="43"
+     xmlns:v="https://vecta.io/nano">
     <defs>
-        <rect id="path-1" x="0" y="0" width="49.7777778" height="31.5" rx="4"></rect>
-        <filter x="-22.5%" y="-32.7%" width="146.3%" height="171.4%" filterUnits="objectBoundingBox" id="filter-3">
-            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1" result="shadowMatrixOuter1"></feColorMatrix>
+        <rect id="A" width="49.778" height="31.5" rx="4"/>
+        <filter x="-22.5%" y="-32.7%" width="146.3%" height="171.4%" id="B">
+            <feOffset dy="2" in="SourceAlpha"/>
+            <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" result="B"/>
             <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
+                <feMergeNode in="B"/>
+                <feMergeNode in="SourceGraphic"/>
             </feMerge>
         </filter>
-        <filter x="-22.5%" y="-32.7%" width="146.3%" height="171.4%" filterUnits="objectBoundingBox" id="filter-4">
-            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.1 0" type="matrix" in="shadowOffsetOuter1" result="shadowMatrixOuter1"></feColorMatrix>
-            <feMerge>
-                <feMergeNode in="shadowMatrixOuter1"></feMergeNode>
-                <feMergeNode in="SourceGraphic"></feMergeNode>
-            </feMerge>
-        </filter>
+        <path id="C"
+              d="M9.833.296v3.51H.367C.165 3.808.001 3.94 0 4.1v4.057c.001.162.165.293.367.294h9.466v3.51c.004.118.094.223.232.267s.292.018.397-.065l7.212-5.83c.14-.114.14-.297 0-.412L10.462.086c-.08-.064-.193-.094-.304-.084-.186.018-.325.144-.325.294z"/>
     </defs>
-    <g id="Iconography-&amp;-Interface-Details" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Icons" transform="translate(-954.000000, -818.000000)">
-            <g id="Group-3" transform="translate(951.000000, 808.000000)">
-                <rect id="Rectangle" x="0" y="0" width="64" height="63"></rect>
-                <g id="Group-5" transform="translate(3.555556, 10.500000)">
-                    <path d="M2,0 L47.7777778,0 C48.8823473,-4.1271253e-15 49.7777778,0.8954305 49.7777778,2 L49.7777778,29.5 C49.7777778,30.6045695 48.8823473,31.5 47.7777778,31.5 L2,31.5 C0.8954305,31.5 2.09738034e-15,30.6045695 0,29.5 L0,2 C-1.3527075e-16,0.8954305 0.8954305,2.02906125e-16 2,0 Z" id="Rectangle" fill="#004B2E"></path>
-                    <g id="Group-4" transform="translate(5.333333, 3.500000)" fill="#007E4E">
-                        <path d="M1,0 L9,0 C9.55228475,-1.01453063e-16 10,0.44771525 10,1 L10,6 C10,6.55228475 9.55228475,7 9,7 L1,7 C0.44771525,7 -3.87982427e-15,6.55228475 -3.94745964e-15,6 L-3.94745964e-15,1 C-4.01509502e-15,0.44771525 0.44771525,1.01453063e-16 1,0 Z" id="Rectangle"></path>
-                    </g>
-                </g>
-                <g id="Rectangle-3" transform="translate(7.111111, 17.500000)">
-                    <path d="M5,0 L46.2222222,0 L46.2222222,0 L46.2222222,20.5 C46.2222222,22.709139 44.4313612,24.5 42.2222222,24.5 L0,24.5 L0,24.5 L0,5 C-3.38176876e-16,2.23857625 2.23857625,-3.80913106e-16 5,0 Z" id="Mask" fill-opacity="0.1" fill="#000000"></path>
-                    <g id="Path-2" transform="translate(3.555556, 3.500000)">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
-                        <use id="Mask" fill="#00B16E" xlink:href="#path-1"></use>
-                        <polygon fill="#007E4E" opacity="0.254022507" mask="url(#mask-2)" points="0 31.5 49.7777778 -1.99340544e-13 49.7777778 31.5"></polygon>
-                    </g>
-                </g>
-                <rect id="Rectangle" fill="#004B2E" x="10.6666667" y="26.25" width="49.7777778" height="5.25"></rect>
-                <g id="Group-2" transform="translate(33.777778, 35.875000) rotate(-270.000000) translate(-33.777778, -35.875000) translate(22.222222, 21.875000)" fill="#FFFFFF">
-                    <g id="Group" filter="url(#filter-3)" transform="translate(6.222222, 8.750000) rotate(-270.000000) translate(-6.222222, -8.750000) translate(-2.666667, 2.625000)">
-                        <path d="M9.83269093,0.296356586 L9.83269093,3.80693563 L0.36690447,3.80693563 C0.165117075,3.80798649 0.00134176072,3.93921797 0,4.10090832 L0,8.15761327 C0.00131157111,8.31929019 0.165100303,8.45051092 0.36690447,8.45158597 L9.83269093,8.45158597 L9.83269093,11.962165 C9.83662229,12.0797487 9.92703348,12.1847328 10.0646176,12.2288287 C10.2008902,12.2729219 10.3568162,12.2466773 10.4616446,12.1637371 L17.6736085,6.33481055 C17.8125009,6.22037675 17.8125009,6.03769333 17.6736085,5.92328103 L10.4616446,0.0860228573 C10.3817159,0.0219820692 10.2690282,-0.00846337513 10.157652,0.00203449789 C9.97158329,0.0202324237 9.83269093,0.146214963 9.83269093,0.296356586 Z" id="Path" transform="translate(8.888889, 6.125000) rotate(-180.000000) translate(-8.888889, -6.125000) "></path>
-                    </g>
-                    <g id="Group" filter="url(#filter-4)" transform="translate(16.888889, 19.250000) rotate(-90.000000) translate(-16.888889, -19.250000) translate(8.000000, 13.125000)">
-                        <path d="M9.83269093,0.296356586 L9.83269093,3.80693563 L0.36690447,3.80693563 C0.165117075,3.80798649 0.00134176072,3.93921797 0,4.10090832 L0,8.15761327 C0.00131157111,8.31929019 0.165100303,8.45051092 0.36690447,8.45158597 L9.83269093,8.45158597 L9.83269093,11.962165 C9.83662229,12.0797487 9.92703348,12.1847328 10.0646176,12.2288287 C10.2008902,12.2729219 10.3568162,12.2466773 10.4616446,12.1637371 L17.6736085,6.33481055 C17.8125009,6.22037675 17.8125009,6.03769333 17.6736085,5.92328103 L10.4616446,0.0860228573 C10.3817159,0.0219820692 10.2690282,-0.00846337513 10.157652,0.00203449789 C9.97158329,0.0202324237 9.83269093,0.146214963 9.83269093,0.296356586 Z" id="Path" transform="translate(8.888889, 6.125000) rotate(-180.000000) translate(-8.888889, -6.125000) "></path>
-                    </g>
-                </g>
+    <g transform="translate(-3 -10)" fill="none" fill-rule="evenodd">
+        <path d="M5.556 10.5h45.778a2 2 0 0 1 2 2V40a2 2 0 0 1-2 2H5.556a2 2 0 0 1-2-2V12.5a2 2 0 0 1 2-2z"
+              fill="#004b2e"/>
+        <path d="M9.89 14h8a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-8a1 1 0 0 1-1-1v-5a1 1 0 0 1 1-1z" fill="#007e4e"/>
+        <g transform="translate(7.111 17.5)">
+            <path d="M5 0h41.222v20.5a4 4 0 0 1-4 4H0V5a5 5 0 0 1 5-5z" fill-opacity=".1" fill="#000"/>
+            <g transform="translate(3.556 3.5)">
+                <mask id="D" fill="#fff">
+                    <use xlink:href="#A"/>
+                </mask>
+                <use fill="#00b16e" xlink:href="#A"/>
+                <path fill="#007e4e" opacity=".254" mask="url(#D)" d="M0 31.5L49.778 0v31.5z"/>
+            </g>
+        </g>
+        <path fill="#004b2e" d="M10.667 26.25h49.778v5.25H10.667z"/>
+        <g transform="matrix(0 1 -1 0 47.777778 24.319444)" fill="#fff">
+            <g filter="url(#B)" transform="matrix(0 1 -1 0 12.347222 -.138889)">
+                <use xlink:href="#C" transform="matrix(-1 0 0 -1 17.777778 12.25)"/>
+            </g>
+            <g filter="url(#B)" transform="matrix(0 -1 1 0 10.763889 28.138889)">
+                <use xlink:href="#C" transform="matrix(-1 0 0 -1 17.777778 12.25)"/>
             </g>
         </g>
     </g>
