@@ -48,5 +48,7 @@ if (process.env.STORYBOOK_DSM) {
     callback: () => configure(req, loadStories)
   })
 } else {
+  const { withHTML } = require('@whitespace/storybook-addon-html/html')
+  addDecorator(withHTML)
   configure(req, loadStories)
 }
