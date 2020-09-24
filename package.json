@@ -4,7 +4,7 @@
   "scripts": {
     "start": "dsm-storybook preview -s public",
     "dsm:publish": "dsm-storybook publish -s public",
-    "build": "monskdir tmp && run-s build:**",
+    "build": "mkdir tmp && run-s build:**",
     "build:sass": "node-sass src/sass/main.scss build/styles.css --output-style compressed",
     "build:postcss": "postcss build/styles.css -r",
     "build:scripts": "webpack src/js/main.js -o build/scripts.js --mode production",
