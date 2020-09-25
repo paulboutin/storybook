@@ -1,7 +1,7 @@
 import React from 'react'
-import Table from '../../components/base/Table'
+import Table from '../../../components/base/Table'
 
-export const TableStory = () => {
+export const Standard = () => {
   const data = {
     header: [
       [
@@ -22,15 +22,11 @@ export const TableStory = () => {
       ]
     ]
   }
-  return <Table data={data} />
-}
-
-TableStory.story = {
-  name: 'Table'
+  return <Table type='standard' data={data} />
 }
 
 export default {
-  title: 'Base Components',
+  title: 'Base Components/Table',
   parameters: {
     'in-dsm': {
       id: '5f6ba2f8230daff5869b8fa6'

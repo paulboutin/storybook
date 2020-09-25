@@ -117,8 +117,13 @@ describe('Base Components', () => {
       devices: ['mobile']
     },
     {
-      title: 'table',
-      path: 'base-components--table-story',
+      title: 'table standard',
+      path: 'base-components-table--standard',
+      devices: ['mobile', 'desktop']
+    },
+    {
+      title: 'table alt',
+      path: 'base-components-table--alt',
       devices: ['mobile', 'desktop']
     },
     {

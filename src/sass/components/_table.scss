@@ -6,22 +6,6 @@
     width: 100%;
   }
 
-  thead,
-  tbody {
-    &:nth-child(odd) {
-      background-color: color('grey-5');
-    }
-
-    &:hover {
-      background-color: color('yellow-light');
-
-      th,
-      td {
-        border-color: color('yellow-light') !important;
-      }
-    }
-  }
-
   thead {
     text-align: left;
 
@@ -61,14 +45,6 @@
   th,
   td {
     min-width: 160px;
-
-    &:not(:first-child) {
-      border-left: 8px solid color('white');
-    }
-
-    &:not(:last-child) {
-      border-right: 8px solid color('white');
-    }
   }
 
   th {
@@ -79,5 +55,79 @@
   td {
     padding: spacing(4) spacing(16);
     vertical-align: top;
+  }
+}
+
+.table-standard {
+  thead,
+  tbody {
+    &:nth-child(odd) {
+      background-color: color('grey-5');
+    }
+
+    &:hover {
+      background-color: color('yellow-light');
+
+      th,
+      td {
+        border-color: color('yellow-light') !important;
+      }
+    }
+  }
+
+  th,
+  td {
+    &:not(:first-child) {
+      border-left: 8px solid color('white');
+    }
+
+    &:not(:last-child) {
+      border-right: 8px solid color('white');
+    }
+  }
+}
+
+.table-alt {
+  table {
+    border-bottom: 1px solid color('grey-20');
+  }
+
+  thead {
+    color: color('white');
+
+    tr {
+      border-left: 1px solid color('green');
+      border-right: 1px solid color('green-dark');
+    }
+
+    th:first-child {
+      @include font-size('base');
+      background-color: color('green');
+    }
+
+    th:not(:first-child) {
+      background-color: color('green-dark');
+    }
+  }
+
+  tbody {
+    tr {
+      border-left: 1px solid color('grey-20');
+      border-right: 1px solid color('grey-20');
+    }
+
+    &:nth-child(even) {
+      background-color: color('grey-5');
+    }
+  }
+
+  td {
+    &:not(:first-child) {
+      border-left: 1px solid color('grey-20');
+    }
+
+    &:not(:last-child) {
+      border-right: 1px solid color('grey-20');
+    }
   }
 }
