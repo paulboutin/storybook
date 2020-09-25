@@ -1,17 +1,16 @@
-.sb\:image-icons {
+.sb\:icons {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1440px;
   margin: 0 auto;
 
-  .sb\:image-icon,
-  .sb\:image-icon-filler {
-    width: 300px;
+  .sb\:icon,
+  .sb\:icon-filler {
     margin: spacing(8);
   }
 
-  .sb\:image-icon {
+  .sb\:icon {
     @include box-shadow('md');
     @include border-radius('md');
     @include font-size('xs');
@@ -21,9 +20,29 @@
     align-items: center;
     border: 1px solid color('grey-10');
     padding: spacing(16);
+  }
+}
 
-    img {
-      margin-bottom: spacing(8);
-    }
+.sb\:font-icons {
+  .sb\:icon,
+  .sb\:icon-filler {
+    width: 200px;
+  }
+
+  .icon {
+    @include font-size('h1');
+    margin-bottom: spacing(8);
+    color: color('green');
+  }
+}
+
+.sb\:image-icons {
+  .sb\:icon,
+  .sb\:icon-filler {
+    width: 300px;
+  }
+
+  img {
+    margin-bottom: spacing(8);
   }
 }

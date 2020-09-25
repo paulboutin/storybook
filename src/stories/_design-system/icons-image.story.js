@@ -144,19 +144,19 @@ const icons = [
 ]
 
 export const ImageIcons = () => (
-  <div className='sb:image-icons'>
+  <div className='sb:icons sb:image-icons'>
     {icons.map((icon, index) => (
-      <div key={index} className='sb:image-icon'>
+      <div key={index} className='sb:icon'>
         <img src={icon.src} alt={icon.name} />
         <p>{icon.name}</p>
       </div>
     ))}
 
     {/* Align last row to the left */}
-    <div className='sb:image-icon-filler' />
-    <div className='sb:image-icon-filler' />
-    <div className='sb:image-icon-filler' />
-    <div className='sb:image-icon-filler' />
+    <div className='sb:icon-filler' />
+    <div className='sb:icon-filler' />
+    <div className='sb:icon-filler' />
+    <div className='sb:icon-filler' />
   </div>
 )
 
