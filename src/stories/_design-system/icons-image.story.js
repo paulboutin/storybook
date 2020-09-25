@@ -164,7 +164,7 @@ export default {
   title: 'Design System',
   parameters: {
     'in-dsm': {
-      id: '5f6b9e66230daf00809b8f67'
+      id: '5f6bb1f0230daf01ab9b9130'
     }
   }
 }
