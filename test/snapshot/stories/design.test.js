@@ -29,7 +29,7 @@ describe('Design System', () => {
     {
       title: 'font-icons',
       path: 'design-system--font-icons',
-      devices: ['mobile']
+      devices: ['desktop']
     },
     {
       title: 'image-icons',

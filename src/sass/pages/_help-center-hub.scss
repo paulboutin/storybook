@@ -12,6 +12,7 @@
   }
 
   .help-center-topic-wrapper {
+    margin: 0 auto;
     padding: spacing(12);
 
     @include screen('sm') {

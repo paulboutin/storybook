@@ -42,8 +42,6 @@ export const HelpCenterHub = () => {
           </div>
         </section>
 
-        <FAQ />
-
         <HelpOutro />
 
         <Legal />

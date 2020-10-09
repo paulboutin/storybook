@@ -25,8 +25,8 @@ describe('Layout Components', () => {
       path: 'layout-components-closing-cta--background-image'
     },
     {
-      title: 'closing-cta two-columns',
-      path: 'layout-components-closing-cta--two-columns'
+      title: 'closing-cta two-column',
+      path: 'layout-components-closing-cta--two-column'
     },
     {
       title: 'hero full',
@@ -85,14 +85,14 @@ describe('Layout Components', () => {
     },
     {
       title: 'column-icons normal',
-      path: 'layout-components--column-icons-story',
+      path: 'layout-components-content-highlight--column-icons-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Columns_config': 4,
       'knob-Inverted_config': false
     },
     {
       title: 'column-icons inverted',
-      path: 'layout-components--column-icons-story',
+      path: 'layout-components-content-highlight--column-icons-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Columns_config': 5,
       'knob-Inverted_config': true
@@ -103,7 +103,7 @@ describe('Layout Components', () => {
       devices: ['mobile']
     },
     {
-      title: 'form two columns',
+      title: 'form two column',
       path: 'layout-components-form--two-column-background',
       devices: ['mobile']
     },
@@ -123,11 +123,11 @@ describe('Layout Components', () => {
     },
     {
       title: 'video-hero',
-      path: 'layout-components--video-hero-story'
+      path: 'layout-components-hero--video-hero-story'
     },
     {
       title: 'dropdown-hero',
-      path: 'layout-components--dropdown-hero-story'
+      path: 'layout-components-hero--dropdown-hero-story'
     },
     {
       title: 'resource-links',

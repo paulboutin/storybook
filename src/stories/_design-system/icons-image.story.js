@@ -144,19 +144,19 @@ const icons = [
 ]
 
 export const ImageIcons = () => (
-  <div className='sb:image-icons'>
+  <div className='sb:icons sb:image-icons'>
     {icons.map((icon, index) => (
-      <div key={index} className='sb:image-icon'>
+      <div key={index} className='sb:icon'>
         <img src={icon.src} alt={icon.name} />
         <p>{icon.name}</p>
       </div>
     ))}
 
     {/* Align last row to the left */}
-    <div className='sb:image-icon-filler' />
-    <div className='sb:image-icon-filler' />
-    <div className='sb:image-icon-filler' />
-    <div className='sb:image-icon-filler' />
+    <div className='sb:icon-filler' />
+    <div className='sb:icon-filler' />
+    <div className='sb:icon-filler' />
+    <div className='sb:icon-filler' />
   </div>
 )
 
@@ -164,7 +164,7 @@ export default {
   title: 'Design System',
   parameters: {
     'in-dsm': {
-      id: '5f6b9e66230daf00809b8f67'
+      id: '5f6bb1f0230daf01ab9b9130'
     }
   }
 }

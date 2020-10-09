@@ -1,7 +1,8 @@
 import React from 'react'
+import classNames from 'classnames'
 
-const Table = ({ data }) => (
-  <div className='table-wrapper'>
+const Table = ({ type, data }) => (
+  <div className={classNames('table-wrapper', `table-${type}`)}>
     <table>
       {data.header && (
         <thead>
