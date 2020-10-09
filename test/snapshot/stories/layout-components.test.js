@@ -119,7 +119,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'popup-video',
-      path: 'layout-components-hero--popup-video-story'
+      path: 'layout-components--popup-video-story'
     },
     {
       title: 'video-hero',
