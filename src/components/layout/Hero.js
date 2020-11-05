@@ -1,8 +1,9 @@
 import React from 'react'
 import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
+import Dropdown from '../base/Dropdown'
 
-const Hero = ({ type, image }) => (
+const Hero = ({ type, image, items }) => (
   <section className={classNames('hero', `hero-${type}`)}>
     <img className='hero-img' src={image} alt='Hero image' />
     <article className='hero-content'>
@@ -17,8 +18,13 @@ const Hero = ({ type, image }) => (
         Apply Now
       </a>
       <p className='hero-subtext'>
-        <span>Not in Alabama? </span>
-        <span className='link link-standalone'>Change your state</span>
+        <Dropdown
+          className='dropdown-hero-dropdown'
+          type='options'
+          label='Not in Alabama?'
+          items={items}
+          inline={true}
+        />
       </p>
     </article>
   </section>
