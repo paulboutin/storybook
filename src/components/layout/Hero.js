@@ -3,6 +3,28 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Dropdown from '../base/Dropdown'
 
+const states = [
+  'Arizona',
+  'California',
+  'Colorado',
+  'Idaho',
+  'Iowa',
+  'Kansas',
+  'Minnesota',
+  'Missouri',
+  'Nebraska',
+  'Nevada',
+  'New Mexico',
+  'North Dakota',
+  'Oklahoma',
+  'Oregon',
+  'South Dakota',
+  'Utah',
+  'Washington',
+  'Wisconsin',
+  'Wyoming'
+]
+
 const Hero = ({ type, image, items }) => (
   <section className={classNames('hero', `hero-${type}`)}>
     <img className='hero-img' src={image} alt='Hero image' />
@@ -22,7 +44,7 @@ const Hero = ({ type, image, items }) => (
           className='dropdown-hero-dropdown'
           type='options'
           label='Not in Alabama?'
-          items={items}
+          items={items || states}
           inline={true}
         />
       </p>
