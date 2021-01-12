@@ -10,7 +10,7 @@ const DropdownHero = ({ image, items }) => (
       <h1 className='dropdown-hero-title'>We stand with your small business</h1>
       <Dropdown
         className='dropdown-hero-dropdown'
-        type='links'
+        type='Options'
         label='How can we help you?'
         items={items}
       />

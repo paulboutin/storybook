@@ -27,10 +27,6 @@
     }
   }
 
-  .dropdown-value {
-    margin-right: spacing(8);
-  }
-
   .dropdown-arrow {
     @include font-size('lg');
     line-height: 1;
@@ -45,8 +41,10 @@
     left: -1px;
     right: -1px;
     border: 1px solid color('grey-5');
-    overflow: hidden;
     display: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+    max-height: spacing(128);
   }
 
   .dropdown-placeholder {
@@ -61,7 +59,7 @@
     padding: spacing(8) spacing(12);
     background-color: color('white');
 
-    &:before {
+    &:not(:first-of-type):before {
       content: '';
       display: block;
       border-top: 1px solid color('grey-10');
@@ -85,6 +83,12 @@
       right: spacing(12);
       color: color('green-light');
       font-size: 0.5rem;
+    }
+
+    .dropdown-target {
+      // used for maximizing click target
+      width: 100%;
+      height: 100%;
     }
   }
 
@@ -160,6 +164,10 @@
 
   .dropdown-value {
     visibility: visible;
+
+    &.primary {
+      color: color('green');
+    }
   }
 
   .dropdown-items {

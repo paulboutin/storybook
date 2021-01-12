@@ -5,6 +5,7 @@ import { slugify } from '../../utils'
 const Dropdown = ({
   type,
   label,
+  labelTheme,
   items,
   inline,
   disabled,
@@ -27,23 +28,30 @@ const Dropdown = ({
     <input type='hidden' className='dropdown-input' disabled={disabled} />
 
     <div className='dropdown-wrapper'>
-      <span className='dropdown-value'>{label}</span>
+      <span
+        className={classNames('dropdown-value', {
+          [labelTheme]: labelTheme
+        })}
+      >
+        {label}
+      </span>
       <i className='dropdown-arrow icon icon-chevron-down' />
     </div>
 
     <ul className='dropdown-items'>
-      <li className='dropdown-placeholder' />
-
       {items.map((item, idx) => (
-        <li key={idx} data-value={slugify(item)}>
+        <li
+          className='dropdown-item'
+          key={idx}
+          data-value={slugify(item)}
+          tabIndex='0'
+        >
           {type === 'links' ? (
-            <a className='dropdown-item' href='/'>
+            <a className='dropdown-target' href='/'>
               {item}
             </a>
           ) : (
-            <span className='dropdown-item' tabIndex='0'>
-              {item}
-            </span>
+            <div className='dropdown-target'>{item}</div>
           )}
         </li>
       ))}
