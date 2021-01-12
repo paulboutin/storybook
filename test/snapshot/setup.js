@@ -1,9 +1,13 @@
+const env = require('env-var')
 const { configureToMatchImageSnapshot } = require('jest-image-snapshot')
 const { slugify } = require('../../src/utils')
 
 const toMatchImageSnapshot = configureToMatchImageSnapshot({
   customDiffConfig: {
-    threshold: 0
+    threshold: env
+      .get('SNAPSHOT_DIFF_THRESHOLD')
+      .default('0')
+      .asFloatPositive()
   },
   customSnapshotIdentifier: ({ currentTestName }) => {
     return slugify(currentTestName).replace('matches-snapshot-on-', '')
