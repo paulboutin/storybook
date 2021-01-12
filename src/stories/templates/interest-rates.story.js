@@ -187,7 +187,7 @@ export const InterestRates = () => (
 )
 
 export default {
-  title: 'Templates/Interest Rates',
+  title: 'Templates',
   parameters: {
     'in-dsm': {
       id: '5f6bae80c555199c570673ac'

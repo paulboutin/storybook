@@ -4,7 +4,7 @@ describe('Base Components', () => {
   const stories = [
     ...['primary', 'secondary', 'tertiary', 'ghost', 'danger'].map(type => ({
       title: `button ${type}`,
-      path: `base-components-button-${type}--${type}`,
+      path: `base-components-button--${type}`,
       devices: ['desktop']
     })),
     {
@@ -14,17 +14,17 @@ describe('Base Components', () => {
     },
     ...['inline', 'standalone'].map(type => ({
       title: `link ${type}`,
-      path: `base-components-link-${type}--${type}`,
+      path: `base-components-link--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
     ...['standard', 'flat'].map(type => ({
       title: `card ${type}`,
-      path: `base-components-card-${type}--${type}`,
+      path: `base-components-card--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
     ...['outline', 'underline'].map(type => ({
       title: `input ${type}`,
-      path: `base-components-input-${type}--${type}`,
+      path: `base-components-input--${type}`,
       devices: ['mobile']
     })),
     {
@@ -60,35 +60,34 @@ describe('Base Components', () => {
     },
     {
       title: 'dropdown helper',
-      path: 'base-components--dropdown-story',
+      path: 'base-components-dropdown--dropdown-story',
       devices: ['mobile'],
       'knob-Helper': true
     },
     {
       title: 'dropdown error',
-      path: 'base-components--dropdown-story',
+      path: 'base-components-dropdown--dropdown-story',
       devices: ['mobile'],
       'knob-Error': true
     },
     {
       title: 'dropdown disabled',
-      path: 'base-components--dropdown-story',
+      path: 'base-components-dropdown--dropdown-story',
       devices: ['mobile'],
       'knob-Disabled': true
     },
     {
       title: 'dropdown inline',
-      path: 'base-components--dropdown-story',
+      path: 'base-components-dropdown--dropdown-inline-story',
       devices: ['mobile'],
       fullPage: true,
       callback: async () => {
         await page.click('.dropdown')
-      },
-      'knob-Inline': true
+      }
     },
     {
       title: 'dropdown',
-      path: 'base-components--dropdown-story',
+      path: 'base-components-dropdown--dropdown-story',
       devices: ['mobile'],
       fullPage: true,
       callback: async () => {
@@ -103,7 +102,7 @@ describe('Base Components', () => {
     },
     ...['standard', 'alt'].map(type => ({
       title: `table ${type}`,
-      path: `base-components-table-${type}--${type}`,
+      path: `base-components-table--${type}`,
       devices: ['mobile', 'desktop']
     })),
     {

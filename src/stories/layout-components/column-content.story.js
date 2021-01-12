@@ -62,7 +62,9 @@ export const ColumnCardsStory = () => {
   )
 }
 
-ColumnCardsStory.storyName = 'Column Content'
+ColumnCardsStory.story = {
+  name: 'Column Content'
+}
 
 export default {
   title: 'Layout Components',

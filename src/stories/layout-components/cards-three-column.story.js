@@ -20,7 +20,7 @@ const items = [
 
 const defaultImage = 'http://via.placeholder.com/500'
 
-export const CardsThreeColumnStory = () => {
+export const CardsThreeColumn = () => {
   const image = text('Image', defaultImage)
 
   const heading = 'Recommended for you'
@@ -42,8 +42,6 @@ export const CardsThreeColumnStory = () => {
     </ColumnCards>
   )
 }
-
-CardsThreeColumnStory.storyName = 'Cards Three Column'
 
 export default {
   title: 'Layout Components',

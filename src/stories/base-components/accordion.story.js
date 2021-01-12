@@ -36,7 +36,9 @@ export const AccordionStory = () => {
   )
 }
 
-AccordionStory.storyName = 'Accordion'
+AccordionStory.story = {
+  name: 'Accordion'
+}
 
 export default {
   title: 'Base Components',

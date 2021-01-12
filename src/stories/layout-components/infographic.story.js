@@ -3,7 +3,9 @@ import Infographic from '../../components/layout/Infographic'
 
 export const InfographicStory = () => <Infographic />
 
-InfographicStory.storyName = 'Infographic'
+InfographicStory.story = {
+  name: 'Infographic'
+}
 
 export default {
   title: 'Layout Components',

@@ -26,7 +26,7 @@ export const Standard = () => {
 }
 
 export default {
-  title: 'Base Components/Table/Standard',
+  title: 'Base Components/Table',
   parameters: {
     'in-dsm': {
       id: '5f6ba2f8230daff5869b8fa6'

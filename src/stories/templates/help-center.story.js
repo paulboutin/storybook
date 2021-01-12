@@ -206,7 +206,7 @@ export const HelpCenter = () => {
 }
 
 export default {
-  title: 'Templates/Help Center',
+  title: 'Templates',
   parameters: {
     'in-dsm': {
       id: '5f6baea034518453f84a7d70'

@@ -31,10 +31,12 @@ export const DropdownInlineStory = () => {
   )
 }
 
-DropdownInlineStory.storyName = 'Dropdown Inline'
+DropdownInlineStory.story = {
+  name: 'Dropdown Inline'
+}
 
 export default {
-  title: 'Base Components/Dropdown/Dropdown Inline',
+  title: 'Base Components/Dropdown',
   parameters: {
     'in-dsm': {
       id: '5f7b66fa333d218186ba5f73'

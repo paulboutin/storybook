@@ -12,7 +12,9 @@ export const DropdownHeroStory = () => {
   return <DropdownHero image={image} items={items} />
 }
 
-DropdownHeroStory.storyName = 'Dropdown'
+DropdownHeroStory.story = {
+  name: 'Dropdown'
+}
 
 export default {
   title: 'Layout Components/Hero',

@@ -3,7 +3,9 @@ import Switch from '../../components/base/Switch'
 
 export const SwitchStory = () => <Switch label='Switch' />
 
-SwitchStory.storyName = 'Switch'
+SwitchStory.story = {
+  name: 'Switch'
+}
 
 export default {
   title: 'Base Components',

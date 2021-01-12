@@ -3,7 +3,9 @@ import FAQ from '../../components/layout/FAQ'
 
 export const FAQStory = () => <FAQ />
 
-FAQStory.storyName = 'FAQ'
+FAQStory.story = {
+  name: 'FAQ'
+}
 
 export default {
   title: 'Layout Components',

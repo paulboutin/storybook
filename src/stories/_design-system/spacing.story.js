@@ -142,5 +142,5 @@ export const Spacing = () => {
 }
 
 export default {
-  title: 'Design System/Spacing'
+  title: 'Design System'
 }

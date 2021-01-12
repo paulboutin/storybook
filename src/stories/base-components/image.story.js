@@ -15,7 +15,9 @@ export const ImageStory = () => {
   )
 }
 
-ImageStory.storyName = 'Image'
+ImageStory.story = {
+  name: 'Image'
+}
 
 export default {
   title: 'Base Components',
