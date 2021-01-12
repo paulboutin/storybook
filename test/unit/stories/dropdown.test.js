@@ -8,7 +8,6 @@ import fn from '../../../src/js/components/dropdown'
 describe('Dropdown component', () => {
   let component
   let items
-  let placeholder
   let value
 
   beforeEach(() => {
@@ -18,14 +17,12 @@ describe('Dropdown component', () => {
       fn
     )
     items = component.querySelector('.dropdown-items')
-    placeholder = component.querySelector('.dropdown-placeholder')
     value = component.querySelector('.dropdown-value')
   })
 
   it('should have mouse interactivity', async () => {
     // Assert
     expect(component).not.toHaveClass('dropdown-open')
-    expect(placeholder).toHaveTextContent('Label')
 
     // Act
     component.click()
@@ -36,7 +33,7 @@ describe('Dropdown component', () => {
     })
 
     // Act
-    const firstItem = items.querySelector('.dropdown-item')
+    const firstItem = items.querySelector('.dropdown-target')
 
     firstItem.click()
 
@@ -51,7 +48,6 @@ describe('Dropdown component', () => {
   it('should have keyboard interactivity', async () => {
     // Assert
     expect(component).not.toHaveClass('dropdown-keyboard')
-    expect(placeholder).toHaveTextContent('Label')
 
     // Act
     fireEvent.keyPress(component, { key: 'Enter', code: 'Enter' })
@@ -62,7 +58,7 @@ describe('Dropdown component', () => {
     })
 
     // Act
-    const firstItem = items.querySelector('.dropdown-item')
+    const firstItem = items.querySelector('.dropdown-target')
     fireEvent.keyPress(firstItem, { key: 'Enter', code: 'Enter' })
 
     // Assert
@@ -76,7 +72,6 @@ describe('Dropdown component', () => {
   it('should close on Esc keypress', async () => {
     // Assert
     expect(component).not.toHaveClass('dropdown-open')
-    expect(placeholder).toHaveTextContent('Label')
 
     // Act
     component.click()
