@@ -25,15 +25,13 @@ export const RadioStory = () => {
   )
 }
 
-RadioStory.story = {
-  name: 'Radio',
+RadioStory.storyName = 'Radio'
+
+export default {
+  title: 'Base Components',
   parameters: {
     'in-dsm': {
       id: '5f6ba2edc555198fd70671ae'
     }
   }
-}
-
-export default {
-  title: 'Base Components'
 }

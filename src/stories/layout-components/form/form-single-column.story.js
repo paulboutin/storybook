@@ -65,7 +65,7 @@ export const SingleColumn = () => (
 )
 
 export default {
-  title: 'Layout Components/Form',
+  title: 'Layout Components/Form/Single Column',
   parameters: {
     'in-dsm': {
       id: '5f6ce028c5551921670680a5'

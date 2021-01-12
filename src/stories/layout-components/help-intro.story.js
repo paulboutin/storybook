@@ -7,9 +7,7 @@ export const HelpIntroStory = () => {
   return <HelpIntro showLinks={showLinks} />
 }
 
-HelpIntroStory.story = {
-  name: 'Help Intro'
-}
+HelpIntroStory.storyName = 'Help Intro'
 
 export default {
   title: 'Layout Components',

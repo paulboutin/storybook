@@ -3,9 +3,7 @@ import Footer from '../../components/layout/Footer'
 
 export const FooterStory = () => <Footer />
 
-FooterStory.story = {
-  name: 'Footer'
-}
+FooterStory.storyName = 'Footer'
 
 export default {
   title: 'Layout Components',

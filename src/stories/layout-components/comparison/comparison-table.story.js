@@ -4,7 +4,7 @@ import { ComparisonTable } from '../../../components/layout/Comparison'
 export const Table = () => <ComparisonTable />
 
 export default {
-  title: 'Layout Components/Comparison',
+  title: 'Layout Components/Comparison/Table',
   parameters: {
     'in-dsm': {
       id: '5f6a4ea24be36e0b01bda909'

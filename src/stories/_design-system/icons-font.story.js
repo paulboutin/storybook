@@ -56,7 +56,7 @@ export const FontIcons = () => (
 )
 
 export default {
-  title: 'Design System',
+  title: 'Design System/Icons/Font Icons',
   parameters: {
     'in-dsm': {
       id: '5f6bb23dc555199b9e0675c6'

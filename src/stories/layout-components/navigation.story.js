@@ -3,9 +3,7 @@ import Navigation from '../../components/layout/Navigation'
 
 export const NavigationStory = () => <Navigation />
 
-NavigationStory.story = {
-  name: 'Navigation'
-}
+NavigationStory.storyName = 'Navigation'
 
 export default {
   title: 'Layout Components',

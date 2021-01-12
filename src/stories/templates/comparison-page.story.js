@@ -40,7 +40,7 @@ export const ComparisonPage = () => (
 )
 
 export default {
-  title: 'Templates',
+  title: 'Templates/Comparison Page',
   parameters: {
     'in-dsm': {
       id: '5f6a4f524be36eea37bda90b'

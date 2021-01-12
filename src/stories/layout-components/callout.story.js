@@ -14,9 +14,7 @@ export const CalloutStory = () => {
   return <Callout title={title} text={txt} />
 }
 
-CalloutStory.story = {
-  name: 'Callout'
-}
+CalloutStory.storyName = 'Callout'
 
 export default {
   title: 'Layout Components',

@@ -152,5 +152,5 @@ export const Colors = () => (
 )
 
 export default {
-  title: 'Design System'
+  title: 'Design System/Colors'
 }

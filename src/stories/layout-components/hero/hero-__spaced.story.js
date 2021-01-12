@@ -9,7 +9,7 @@ export const Spaced = () => {
 }
 
 export default {
-  title: 'Layout Components/Hero',
+  title: 'Layout Components/Hero/Spaced',
   parameters: {
     'in-dsm': {
       id: '5f29ccfd914d5caffd1ba077'

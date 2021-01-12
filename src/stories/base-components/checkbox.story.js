@@ -29,7 +29,7 @@ CheckboxStory.story = {
 }
 
 export default {
-  title: 'Base Components',
+  title: 'Base Components/Checkbox',
   parameters: {
     'in-dsm': {
       id: '5f6ba2d7230dafd7c39b8fa2'

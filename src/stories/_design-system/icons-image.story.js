@@ -161,7 +161,7 @@ export const ImageIcons = () => (
 )
 
 export default {
-  title: 'Design System',
+  title: 'Design System/Icons/Image Icons',
   parameters: {
     'in-dsm': {
       id: '5f6bb1f0230daf01ab9b9130'
