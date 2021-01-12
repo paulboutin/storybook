@@ -7,7 +7,9 @@ export const PopupVideoStory = () => {
   return <PopupVideo video={video} poster='/img/hero-background.jpg' />
 }
 
-PopupVideoStory.storyName = 'Popup Video'
+PopupVideoStory.story = {
+  name: 'Popup Video'
+}
 
 export default {
   title: 'Layout Components',

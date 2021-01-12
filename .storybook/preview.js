@@ -1,3 +1,4 @@
+import { addDecorator, addParameters } from '@storybook/html'
 import { withDsm } from '@invisionapp/dsm-storybook'
 import { withKnobs } from '@storybook/addon-knobs'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
@@ -6,10 +7,17 @@ import toggleBodyClass from '../src/decorators/toggleBodyClass'
 import runScripts from '../src/decorators/runScripts'
 import '../src/sass/stories/main.scss'
 
-export const parameters = {
-  knobs: {
-    escapeHTML: false
-  },
+const decorators = [
+  renderHTML,
+  toggleBodyClass,
+  runScripts,
+  withKnobs({ escapeHTML: false }),
+  withDsm
+]
+
+decorators.forEach(decorator => addDecorator(decorator))
+
+addParameters({
   viewport: {
     viewports: {
       ...INITIAL_VIEWPORTS,
@@ -31,12 +39,4 @@ export const parameters = {
       }
     }
   }
-}
-
-export const decorators = [
-  renderHTML,
-  toggleBodyClass,
-  runScripts,
-  withKnobs,
-  withDsm
-]
+})

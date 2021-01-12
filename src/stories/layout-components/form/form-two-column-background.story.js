@@ -3,7 +3,6 @@ import Input from '../../../components/base/Input'
 import Checkbox from '../../../components/base/Checkbox'
 import Button from '../../../components/base/Button'
 import Dropdown from '../../../components/base/Dropdown'
-import { DropdownHeroStory } from '../hero/hero-dropdown.story'
 
 export const TwoColumnBackground = () => (
   <div className='sb:form-wrapper sb:form-2'>
@@ -74,7 +73,7 @@ export const TwoColumnBackground = () => (
 TwoColumnBackground.storyName = 'Two Column'
 
 export default {
-  title: 'Layout Components/Form/Two Column',
+  title: 'Layout Components/Form',
   parameters: {
     'in-dsm': {
       id: '5f6ce02d230daf48a39b932c'

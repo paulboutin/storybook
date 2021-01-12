@@ -25,7 +25,9 @@ export const RadioStory = () => {
   )
 }
 
-RadioStory.storyName = 'Radio'
+RadioStory.story = {
+  name: 'Radio'
+}
 
 export default {
   title: 'Base Components',

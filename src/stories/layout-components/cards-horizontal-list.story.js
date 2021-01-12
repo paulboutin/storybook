@@ -3,7 +3,9 @@ import CardsHorizontalList from '../../components/layout/CardsHorizontalList'
 
 export const CardsHorizontalListStory = () => <CardsHorizontalList />
 
-CardsHorizontalListStory.storyName = 'Cards Horizontal List'
+CardsHorizontalListStory.story = {
+  name: 'Cards Horizontal List'
+}
 
 export default {
   title: 'Layout Components',

@@ -571,7 +571,7 @@ export const RatesAndFees = () => {
 }
 
 export default {
-  title: 'Templates/Rates And Fees',
+  title: 'Templates',
   parameters: {
     'in-dsm': {
       id: '5f6bae8f34518443724a7d6e'

@@ -145,7 +145,7 @@ export const TermsOfUse = () => (
 )
 
 export default {
-  title: 'Templates/Terms Of Use',
+  title: 'Templates',
   parameters: {
     'in-dsm': {
       id: '5f6bae94230daf96799b912e'

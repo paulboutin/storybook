@@ -9,7 +9,7 @@ export const Full = () => {
 }
 
 export default {
-  title: 'Layout Components/Hero/Full',
+  title: 'Layout Components/Hero',
   parameters: {
     'in-dsm': {
       id: '5f29cd5d914d5c53721ba079'

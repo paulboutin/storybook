@@ -1,10 +1,9 @@
 import React from 'react'
-import Dropdown from '../../components/base/Dropdown'
-import { text, array, radios, boolean } from '@storybook/addon-knobs'
+import { array, boolean, radios, text } from '@storybook/addon-knobs'
+import Dropdown from '../../../components/base/Dropdown'
 
-export const DropdownStory = () => {
+export const DropdownInlineStory = () => {
   const label = text('Label', 'Label')
-  const inline = boolean('Inline', false)
   const helper = boolean('Helper', false)
   const error = boolean('Error', false)
   const disabled = boolean('Disabled', false)
@@ -22,7 +21,7 @@ export const DropdownStory = () => {
           label={label}
           type={type}
           items={items}
-          inline={inline}
+          inline
           disabled={disabled}
           helper={helper && 'Helper text'}
           error={error && 'Required field'}
@@ -32,13 +31,15 @@ export const DropdownStory = () => {
   )
 }
 
-DropdownStory.storyName = 'Dropdown'
+DropdownInlineStory.story = {
+  name: 'Dropdown Inline'
+}
 
 export default {
-  title: 'Base Components',
+  title: 'Base Components/Dropdown',
   parameters: {
     'in-dsm': {
-      id: '5f6ba2df230daf008f9b8fa4'
+      id: '5f7b66fa333d218186ba5f73'
     }
   }
 }

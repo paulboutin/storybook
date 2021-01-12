@@ -3,7 +3,9 @@ import HelpOutro from '../../components/layout/HelpOutro'
 
 export const HelpOutroStory = () => <HelpOutro />
 
-HelpOutroStory.storyName = 'Help Outro'
+HelpOutroStory.story = {
+  name: 'Help Outro'
+}
 
 export default {
   title: 'Layout Components',

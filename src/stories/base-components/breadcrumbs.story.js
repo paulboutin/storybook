@@ -7,7 +7,9 @@ export const BreadcrumbsStory = () => {
   return <Breadcrumbs items={items} />
 }
 
-BreadcrumbsStory.storyName = 'Breadcrumbs'
+BreadcrumbsStory.story = {
+  name: 'Breadcrumbs'
+}
 
 export default {
   title: 'Base Components',

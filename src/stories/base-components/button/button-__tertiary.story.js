@@ -4,7 +4,7 @@ import { ButtonStory } from './button'
 export const Tertiary = () => <ButtonStory type='tertiary' />
 
 export default {
-  title: 'Base Components/Button/Tertiary',
+  title: 'Base Components/Button',
   parameters: {
     'in-dsm': {
       id: '5f0c88cd5b094d10df89d7d4'

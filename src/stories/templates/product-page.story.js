@@ -127,7 +127,7 @@ export const ProductPage = () => (
 )
 
 export default {
-  title: 'Templates/Product Page',
+  title: 'Templates',
   parameters: {
     'in-dsm': {
       id: '5f6bae89c5551957130673ae'

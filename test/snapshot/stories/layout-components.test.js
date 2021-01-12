@@ -8,22 +8,22 @@ describe('Layout Components', () => {
     },
     ...['standard', 'alt'].map(type => ({
       title: `list-element ${type}`,
-      path: `layout-components-list-element-${type}--${type}`,
+      path: `layout-components-list-element--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
     ...['standard', 'background-image', 'two-column'].map(type => ({
       title: `closing-cta ${type}`,
-      path: `layout-components-closing-cta-${type}--${type}`,
+      path: `layout-components-closing-cta--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
     ...['spaced', 'full'].map(type => ({
       title: `hero ${type}`,
-      path: `layout-components-hero-${type}--${type}`,
+      path: `layout-components-hero--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
     {
       title: 'cards-three-column',
-      path: 'layout-components--cards-three-column-story',
+      path: 'layout-components--cards-three-column',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
@@ -33,12 +33,12 @@ describe('Layout Components', () => {
     },
     ...['standard', 'alt', 'accent-square', 'accent-dark'].map(type => ({
       title: `promo-element ${type}`,
-      path: `layout-components-promo-element-${type}--${type}`,
+      path: `layout-components-promo-element--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
     ...['single', 'overlap-image', 'overlap-color'].map(type => ({
       title: `highlight ${type}`,
-      path: `layout-components-content-highlight-${type}--${type}`,
+      path: `layout-components-content-highlight--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
     {
@@ -47,23 +47,21 @@ describe('Layout Components', () => {
     },
     {
       title: 'column-icons normal',
-      path:
-        'layout-components-content-highlight-column-icons--column-icons-story',
+      path: 'layout-components-content-highlight--column-icons-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Columns_config': 4,
       'knob-Inverted_config': false
     },
     {
       title: 'column-icons inverted',
-      path:
-        'layout-components-content-highlight-column-icons--column-icons-story',
+      path: 'layout-components-content-highlight--column-icons-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Columns_config': 5,
       'knob-Inverted_config': true
     },
-    ...['single-column', 'two-column'].map(type => ({
+    ...['single-column', 'two-column-background'].map(type => ({
       title: `form ${type}`,
-      path: `layout-components-form-${type}--${type}`,
+      path: `layout-components-form--${type}`,
       devices: ['mobile']
     })),
     {
@@ -82,11 +80,11 @@ describe('Layout Components', () => {
     },
     {
       title: 'video-hero',
-      path: 'layout-components-hero-video--video-hero-story'
+      path: 'layout-components-hero--video'
     },
     {
       title: 'dropdown-hero',
-      path: 'layout-components-hero-dropdown--dropdown-hero-story'
+      path: 'layout-components-hero--dropdown-hero-story'
     },
     {
       title: 'resource-links',
@@ -166,24 +164,24 @@ describe('Layout Components', () => {
     },
     {
       title: 'comparison cards',
-      path: 'layout-components-comparison-cards--cards',
+      path: 'layout-components-comparison--cards',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'comparison cards highlight',
-      path: 'layout-components-comparison-cards--cards',
+      path: 'layout-components-comparison--cards',
       devices: ['desktop'],
       'knob-Style': 'Highlight'
     },
     {
       title: 'comparison cards branded',
-      path: 'layout-components-comparison-cards--cards',
+      path: 'layout-components-comparison--cards',
       devices: ['desktop'],
       'knob-Style': 'Branded'
     },
     {
       title: 'comparison table',
-      path: 'layout-components-comparison-table--table',
+      path: 'layout-components-comparison--table',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {

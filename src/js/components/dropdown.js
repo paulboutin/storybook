@@ -4,9 +4,6 @@ export default () => {
   dropdowns.forEach(dropdown => {
     const input = dropdown.querySelector('.dropdown-input')
     const value = dropdown.querySelector('.dropdown-value')
-    const placeholder = dropdown.querySelector('.dropdown-placeholder')
-
-    placeholder.textContent = value.textContent
 
     const handleEvent = e => {
       if (input.disabled) return
@@ -14,7 +11,7 @@ export default () => {
       dropdown.classList.toggle('dropdown-open')
       dropdown.classList.toggle('dropdown-keyboard', e.type === 'keypress')
 
-      if (e.target.classList.contains('dropdown-item')) {
+      if (e.target.classList.contains('dropdown-target')) {
         if (e.target.tagName === 'A') {
           window.top.location.href = e.target.href
           return

@@ -8,7 +8,7 @@ export const BackgroundImage = () => {
 }
 
 export default {
-  title: 'Layout Components/Closing CTA/Background Image',
+  title: 'Layout Components/Closing CTA',
   parameters: {
     'in-dsm': {
       id: '5f29d405914d5c4ebf1ba091'

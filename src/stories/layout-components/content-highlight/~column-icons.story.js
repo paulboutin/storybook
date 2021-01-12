@@ -62,7 +62,7 @@ ColumnIconsStory.story = {
 }
 
 export default {
-  title: 'Layout Components/Content Highlight/Column Icons',
+  title: 'Layout Components/Content Highlight',
   parameters: {
     'in-dsm': {
       id: '5f29d237b0d2de8f867d826d'

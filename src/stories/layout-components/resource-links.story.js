@@ -3,7 +3,9 @@ import ResourceLinks from '../../components/layout/ResourceLinks'
 
 export const ResourceLinksStory = () => <ResourceLinks />
 
-ResourceLinksStory.storyName = 'Resource Links'
+ResourceLinksStory.story = {
+  name: 'Resource Links'
+}
 
 export default {
   title: 'Layout Components',
