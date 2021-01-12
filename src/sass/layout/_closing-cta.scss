@@ -21,11 +21,6 @@
 
 .closing-cta-standard {
   background-color: color('green');
-
-  .container {
-    @include star-birds('light');
-    background-position: left center;
-  }
 }
 
 .closing-cta-bgi {
