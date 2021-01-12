@@ -7,12 +7,10 @@ export const VideoHeroStory = () => {
   return <VideoHero video={video} poster='/img/hero-background.jpg' />
 }
 
-VideoHeroStory.story = {
-  name: 'Video'
-}
+VideoHeroStory.storyName = 'Video'
 
 export default {
-  title: 'Layout Components/Hero',
+  title: 'Layout Components/Hero/Video',
   parameters: {
     'in-dsm': {
       id: '5f29d50e914d5c330e1ba096'

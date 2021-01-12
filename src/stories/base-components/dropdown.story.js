@@ -32,9 +32,7 @@ export const DropdownStory = () => {
   )
 }
 
-DropdownStory.story = {
-  name: 'Dropdown'
-}
+DropdownStory.storyName = 'Dropdown'
 
 export default {
   title: 'Base Components',

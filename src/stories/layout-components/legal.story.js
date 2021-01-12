@@ -3,9 +3,7 @@ import Legal from '../../components/layout/Legal'
 
 export const LegalStory = () => <Legal />
 
-LegalStory.story = {
-  name: 'Legal'
-}
+LegalStory.storyName = 'Legal'
 
 export default {
   title: 'Layout Components',

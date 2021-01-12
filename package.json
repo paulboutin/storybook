@@ -1,6 +1,9 @@
 {
   "name": "botw-component-library",
   "version": "1.0.0",
+  "engines": {
+    "node": "12"
+  },
   "scripts": {
     "start": "start-storybook -p 6006 -s public",
     "start:ci": "npm start -- --ci --quiet",
@@ -23,39 +26,40 @@
     "test:snapshot:update": "cross-env UPDATE_SNAPSHOT=true npm run test:snapshot"
   },
   "dependencies": {
-    "@invisionapp/dsm-storybook": "0.0.134",
-    "@storybook/addon-backgrounds": "5.3.19",
-    "@storybook/addon-knobs": "5.3.19",
-    "@storybook/addon-options": "5.3.19",
-    "@storybook/addon-viewport": "5.3.19",
-    "@storybook/addons": "5.3.19",
-    "@storybook/client-api": "5.3.19",
-    "@storybook/html": "5.3.19",
-    "@whitespace/storybook-addon-html": "2.0.1",
+    "@invisionapp/dsm-storybook": "0.0.139",
+    "@storybook/addon-backgrounds": "6.1.11",
+    "@storybook/addon-knobs": "6.1.11",
+    "@storybook/addon-options": "5.3.21",
+    "@storybook/addon-viewport": "6.1.11",
+    "@storybook/addons": "6.1.11",
+    "@storybook/client-api": "6.1.11",
+    "@storybook/html": "6.1.11",
+    "@whitespace/storybook-addon-html": "4.2.0",
     "classnames": "2.2.6",
-    "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "devDependencies": {
-    "@babel/core": "7.10.2",
-    "@babel/preset-env": "7.10.2",
-    "@babel/preset-react": "7.10.4",
-    "@testing-library/dom": "7.20.0",
-    "@testing-library/jest-dom": "5.11.0",
-    "@types/jest": "26.0.0",
-    "babel-jest": "26.0.1",
-    "babel-loader": "8.1.0",
-    "cross-env": "7.0.2",
-    "husky": "4.2.5",
-    "jest": "26.0.1",
-    "jest-image-snapshot": "4.0.2",
+    "@babel/core": "7.12.10",
+    "@babel/preset-env": "7.12.11",
+    "@babel/preset-react": "7.12.10",
+    "@testing-library/dom": "7.29.2",
+    "@testing-library/jest-dom": "5.11.8",
+    "@types/jest": "26.0.20",
+    "babel-jest": "26.6.3",
+    "babel-loader": "8.2.2",
+    "cross-env": "7.0.3",
+    "env-var": "7.0.0",
+    "husky": "4.3.7",
+    "jest": "26.6.3",
+    "jest-image-snapshot": "4.3.0",
     "jest-puppeteer": "4.4.0",
-    "node-sass": "4.14.1",
+    "node-sass": "5.0.0",
     "npm-run-all": "4.1.5",
-    "pretty-quick": "2.0.1",
-    "puppeteer": "4.0.0",
-    "sass-loader": "9.0.1",
-    "start-server-and-test": "1.11.0"
+    "pretty-quick": "3.1.0",
+    "puppeteer": "5.5.0",
+    "sass-loader": "10.1.0",
+    "start-server-and-test": "1.11.7"
   },
   "husky": {
     "hooks": {

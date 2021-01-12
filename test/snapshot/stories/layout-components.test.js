@@ -6,38 +6,21 @@ describe('Layout Components', () => {
       title: 'legal',
       path: 'layout-components--legal-story'
     },
-    {
-      title: 'list-element standard',
-      path: 'layout-components-list-element--standard',
+    ...['standard', 'alt'].map(type => ({
+      title: `list-element ${type}`,
+      path: `layout-components-list-element-${type}--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'list-element alt',
-      path: 'layout-components-list-element--image',
+    })),
+    ...['standard', 'background-image', 'two-column'].map(type => ({
+      title: `closing-cta ${type}`,
+      path: `layout-components-closing-cta-${type}--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'closing-cta standard',
-      path: 'layout-components-closing-cta--standard'
-    },
-    {
-      title: 'closing-cta background-image',
-      path: 'layout-components-closing-cta--background-image'
-    },
-    {
-      title: 'closing-cta two-column',
-      path: 'layout-components-closing-cta--two-column'
-    },
-    {
-      title: 'hero full',
-      path: 'layout-components-hero--full',
+    })),
+    ...['spaced', 'full'].map(type => ({
+      title: `hero ${type}`,
+      path: `layout-components-hero-${type}--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'hero spaced',
-      path: 'layout-components-hero--spaced',
-      devices: ['mobile', 'tablet', 'desktop']
-    },
+    })),
     {
       title: 'cards-three-column',
       path: 'layout-components--cards-three-column-story',
@@ -48,65 +31,41 @@ describe('Layout Components', () => {
       path: 'layout-components--faq-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
-    {
-      title: 'promo-element standard',
-      path: 'layout-components-promo-element--standard'
-    },
-    {
-      title: 'promo-element alt',
-      path: 'layout-components-promo-element--alt'
-    },
-    {
-      title: 'promo-element accent square',
-      path: 'layout-components-promo-element--accent-square'
-    },
-    {
-      title: 'promo-element accent dark',
-      path: 'layout-components-promo-element--accent-dark'
-    },
-    {
-      title: 'highlight single',
-      path: 'layout-components-content-highlight--single',
+    ...['standard', 'alt', 'accent-square', 'accent-dark'].map(type => ({
+      title: `promo-element ${type}`,
+      path: `layout-components-promo-element-${type}--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'highlight overlap image',
-      path: 'layout-components-content-highlight--overlap-image',
+    })),
+    ...['single', 'overlap-image', 'overlap-color'].map(type => ({
+      title: `highlight ${type}`,
+      path: `layout-components-content-highlight-${type}--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'highlight overlap color',
-      path: 'layout-components-content-highlight--overlap-color',
-      devices: ['mobile', 'tablet', 'desktop']
-    },
+    })),
     {
       title: 'column cards',
       path: 'layout-components--column-cards-story'
     },
     {
       title: 'column-icons normal',
-      path: 'layout-components-content-highlight--column-icons-story',
+      path:
+        'layout-components-content-highlight-column-icons--column-icons-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Columns_config': 4,
       'knob-Inverted_config': false
     },
     {
       title: 'column-icons inverted',
-      path: 'layout-components-content-highlight--column-icons-story',
+      path:
+        'layout-components-content-highlight-column-icons--column-icons-story',
       devices: ['mobile', 'tablet', 'desktop'],
       'knob-Columns_config': 5,
       'knob-Inverted_config': true
     },
-    {
-      title: 'form single column',
-      path: 'layout-components-form--single-column',
+    ...['single-column', 'two-column'].map(type => ({
+      title: `form ${type}`,
+      path: `layout-components-form-${type}--${type}`,
       devices: ['mobile']
-    },
-    {
-      title: 'form two column',
-      path: 'layout-components-form--two-column-background',
-      devices: ['mobile']
-    },
+    })),
     {
       title: 'infographic',
       path: 'layout-components--infographic-story',
@@ -123,11 +82,11 @@ describe('Layout Components', () => {
     },
     {
       title: 'video-hero',
-      path: 'layout-components-hero--video-hero-story'
+      path: 'layout-components-hero-video--video-hero-story'
     },
     {
       title: 'dropdown-hero',
-      path: 'layout-components-hero--dropdown-hero-story'
+      path: 'layout-components-hero-dropdown--dropdown-hero-story'
     },
     {
       title: 'resource-links',
@@ -207,24 +166,24 @@ describe('Layout Components', () => {
     },
     {
       title: 'comparison cards',
-      path: 'layout-components-comparison--cards',
+      path: 'layout-components-comparison-cards--cards',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
       title: 'comparison cards highlight',
-      path: 'layout-components-comparison--cards',
+      path: 'layout-components-comparison-cards--cards',
       devices: ['desktop'],
       'knob-Style': 'Highlight'
     },
     {
       title: 'comparison cards branded',
-      path: 'layout-components-comparison--cards',
+      path: 'layout-components-comparison-cards--cards',
       devices: ['desktop'],
       'knob-Style': 'Branded'
     },
     {
       title: 'comparison table',
-      path: 'layout-components-comparison--table',
+      path: 'layout-components-comparison-table--table',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {

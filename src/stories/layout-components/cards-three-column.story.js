@@ -43,9 +43,7 @@ export const CardsThreeColumnStory = () => {
   )
 }
 
-CardsThreeColumnStory.story = {
-  name: 'Cards Three Column'
-}
+CardsThreeColumnStory.storyName = 'Cards Three Column'
 
 export default {
   title: 'Layout Components',

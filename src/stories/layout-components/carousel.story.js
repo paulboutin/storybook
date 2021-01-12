@@ -52,9 +52,7 @@ export const CarouselStory = () => (
   />
 )
 
-CarouselStory.story = {
-  name: 'Carousel'
-}
+CarouselStory.storyName = 'Carousel'
 
 export default {
   title: 'Layout Components',

@@ -16,7 +16,7 @@ export const Alt = () => {
 }
 
 export default {
-  title: 'Base Components/Table',
+  title: 'Base Components/Table/Alt',
   parameters: {
     'in-dsm': {
       id: '5f6e640cc55519cb19068937'

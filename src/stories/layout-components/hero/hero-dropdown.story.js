@@ -8,12 +8,10 @@ export const DropdownHeroStory = () => {
   return <DropdownHero image={image} items={items} />
 }
 
-DropdownHeroStory.story = {
-  name: 'Dropdown'
-}
+DropdownHeroStory.storyName = 'Dropdown'
 
 export default {
-  title: 'Layout Components/Hero',
+  title: 'Layout Components/Hero/Dropdown',
   parameters: {
     'in-dsm': {
       id: '5f29d587914d5c164c1ba09c'

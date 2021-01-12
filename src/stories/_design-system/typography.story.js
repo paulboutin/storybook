@@ -53,5 +53,5 @@ export const Typography = () => {
 }
 
 export default {
-  title: 'Design System'
+  title: 'Design System/Typography'
 }

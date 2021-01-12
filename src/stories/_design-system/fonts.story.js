@@ -35,5 +35,5 @@ export const Fonts = () => (
 )
 
 export default {
-  title: 'Design System'
+  title: 'Design System/Fonts'
 }

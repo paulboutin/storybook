@@ -4,7 +4,7 @@ import { LinkStory } from './link'
 export const Standalone = () => <LinkStory type='standalone' />
 
 export default {
-  title: 'Base Components/Link',
+  title: 'Base Components/Link/Standalone',
   parameters: {
     'in-dsm': {
       id: '5f6ba451230daf84459b8fab'

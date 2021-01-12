@@ -7,9 +7,7 @@ export const EyebrowStory = () => {
   return <Eyebrow>{txt}</Eyebrow>
 }
 
-EyebrowStory.story = {
-  name: 'Eyebrow'
-}
+EyebrowStory.storyName = 'Eyebrow'
 
 export default {
   title: 'Base Components',

@@ -88,9 +88,7 @@ export const PullQuoteStory = () => (
   />
 )
 
-PullQuoteStory.story = {
-  name: 'Pull Quote'
-}
+PullQuoteStory.storyName = 'Pull Quote'
 
 export default {
   title: 'Layout Components',

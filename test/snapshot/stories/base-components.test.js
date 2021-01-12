@@ -4,44 +4,29 @@ describe('Base Components', () => {
   const stories = [
     ...['primary', 'secondary', 'tertiary', 'ghost', 'danger'].map(type => ({
       title: `button ${type}`,
-      path: `base-components-button--${type}`,
+      path: `base-components-button-${type}--${type}`,
       devices: ['desktop']
     })),
     {
       title: 'checkbox',
-      path: 'base-components--checkbox-story',
+      path: 'base-components-checkbox--checkbox-story',
       devices: ['desktop']
     },
-    {
-      title: 'link inline',
-      path: 'base-components-link--inline',
+    ...['inline', 'standalone'].map(type => ({
+      title: `link ${type}`,
+      path: `base-components-link-${type}--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'link standalone',
-      path: 'base-components-link--standalone',
+    })),
+    ...['standard', 'flat'].map(type => ({
+      title: `card ${type}`,
+      path: `base-components-card-${type}--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'card standard',
-      path: 'base-components-card--standard',
-      devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'card flat',
-      path: 'base-components-card--flat',
-      devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'input outline',
-      path: 'base-components-input--outline',
+    })),
+    ...['outline', 'underline'].map(type => ({
+      title: `input ${type}`,
+      path: `base-components-input-${type}--${type}`,
       devices: ['mobile']
-    },
-    {
-      title: 'input underline',
-      path: 'base-components-input--underline',
-      devices: ['mobile']
-    },
+    })),
     {
       title: 'image auto ratio',
       path: 'base-components--image-story',
@@ -116,16 +101,11 @@ describe('Base Components', () => {
       path: 'base-components--breadcrumbs-story',
       devices: ['mobile']
     },
-    {
-      title: 'table standard',
-      path: 'base-components-table--standard',
+    ...['standard', 'alt'].map(type => ({
+      title: `table ${type}`,
+      path: `base-components-table-${type}--${type}`,
       devices: ['mobile', 'desktop']
-    },
-    {
-      title: 'table alt',
-      path: 'base-components-table--alt',
-      devices: ['mobile', 'desktop']
-    },
+    })),
     {
       title: 'radio',
       path: 'base-components--radio-story',

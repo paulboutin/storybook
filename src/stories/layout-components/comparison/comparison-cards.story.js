@@ -15,7 +15,7 @@ export const Cards = () => {
 }
 
 export default {
-  title: 'Layout Components/Comparison',
+  title: 'Layout Components/Comparison/Cards',
   parameters: {
     'in-dsm': {
       id: '5f29d7ed914d5cd6a81ba0af'
