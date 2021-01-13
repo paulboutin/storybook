@@ -65,6 +65,12 @@
   }
 
   .closing-cta-content {
+    padding-right: spacing(16);
+
+    @include screen('sm', 'down') {
+      padding: 0;
+    }
+
     @include screen('sm') {
       display: flex;
       flex-direction: column;
