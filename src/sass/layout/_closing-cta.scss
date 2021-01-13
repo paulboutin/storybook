@@ -47,7 +47,7 @@
   background-color: color('green');
 
   .container {
-    @include star-birds('light');
+    flex-direction: row-reverse;
 
     @include screen('sm', 'down') {
       flex-direction: column;
