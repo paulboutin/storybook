@@ -47,7 +47,7 @@
   background-color: color('green');
 
   .container {
-    @include star-birds('light');
+    flex-direction: row-reverse;
 
     @include screen('sm', 'down') {
       flex-direction: column;
@@ -65,6 +65,12 @@
   }
 
   .closing-cta-content {
+    padding-right: spacing(16);
+
+    @include screen('sm', 'down') {
+      padding: 0;
+    }
+
     @include screen('sm') {
       display: flex;
       flex-direction: column;

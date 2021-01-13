@@ -1,9 +1,11 @@
 import React from 'react'
 import { array, boolean, radios, text } from '@storybook/addon-knobs'
-import Dropdown from '../../../components/base/Dropdown'
+import DropdownNative from '../../../components/base/DropdownNative'
 
-export const DropdownInlineStory = () => {
+export const DropdownNativeStory = () => {
   const label = text('Label', 'Label')
+  const helper = boolean('Helper', false)
+  const inline = boolean('Inline', false)
   const error = boolean('Error', false)
   const disabled = boolean('Disabled', false)
   const type = radios('Type', ['Normal', 'Links'], 'Normal').toLowerCase()
@@ -16,21 +18,22 @@ export const DropdownInlineStory = () => {
   return (
     <div className='row'>
       <div className='col-xs-12 col-sm-6 col-md-4 col-lg-3'>
-        <Dropdown
+        <DropdownNative
           label={label}
           type={type}
           items={items}
-          inline
+          inline={inline}
           disabled={disabled}
-          error={error}
+          helper={helper && 'Helper text'}
+          error={error && 'Required field'}
         />
       </div>
     </div>
   )
 }
 
-DropdownInlineStory.story = {
-  name: 'Dropdown Inline'
+DropdownNativeStory.story = {
+  name: 'Dropdown Native (Experimental)'
 }
 
 export default {

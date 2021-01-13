@@ -36,7 +36,7 @@ describe('Layout Components', () => {
       path: `layout-components-promo-element--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    ...['single', 'overlap-image', 'overlap-color'].map(type => ({
+    ...['single', 'overlap-color'].map(type => ({
       title: `highlight ${type}`,
       path: `layout-components-content-highlight--${type}`,
       devices: ['mobile', 'tablet', 'desktop']

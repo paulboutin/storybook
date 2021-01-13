@@ -12,16 +12,7 @@ const ImageOverlap = ({ images, position, color, slider, className }) => (
       className
     )}
   >
-    {color ? (
-      <div className='image-overlap-square' />
-    ) : (
-      <Image
-        src={images[1]}
-        alt='Secondary image'
-        ratio='1:1'
-        className='image-overlap-square'
-      />
-    )}
+    <div className='image-overlap-square' />
 
     {slider ? (
       <Slider className='image-overlap-square' {...slider}>

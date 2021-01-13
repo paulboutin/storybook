@@ -36,7 +36,7 @@
   .dropdown-items {
     @include border-radius('md');
     @include box-shadow('md');
-    position: absolute;
+    position: relative;
     top: -1px;
     left: -1px;
     right: -1px;
@@ -84,12 +84,6 @@
       color: color('green-light');
       font-size: 0.5rem;
     }
-
-    .dropdown-target {
-      // used for maximizing click target
-      width: 100%;
-      height: 100%;
-    }
   }
 
   .dropdown-helper-text {
@@ -117,10 +111,6 @@
     .dropdown-wrapper {
       outline: none;
     }
-  }
-
-  .dropdown-value {
-    visibility: hidden;
   }
 
   .dropdown-arrow {
@@ -163,14 +153,13 @@
   }
 
   .dropdown-value {
-    visibility: visible;
-
     &.primary {
       color: color('green');
     }
   }
 
   .dropdown-items {
+    position: absolute;
     top: unset;
     right: unset;
 

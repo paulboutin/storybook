@@ -20,7 +20,7 @@ const Highlight = ({ type, images, position, color }) => (
       <ImageOverlap
         images={images}
         position={position}
-        color={type === 'overlap-color' && color}
+        color={color}
         className='highlight-img-container'
       />
     )}
