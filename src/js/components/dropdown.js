@@ -4,14 +4,24 @@ export default () => {
   dropdowns.forEach(dropdown => {
     const input = dropdown.querySelector('.dropdown-input')
     const value = dropdown.querySelector('.dropdown-value')
+    const placeholder = value.textContent
 
     const handleEvent = e => {
       if (input.disabled) return
 
       dropdown.classList.toggle('dropdown-open')
       dropdown.classList.toggle('dropdown-keyboard', e.type === 'keypress')
+      value.textContent = placeholder
 
-      if (e.target.classList.contains('dropdown-target')) {
+      let target
+
+      if (e.target.classList.contains('dropdown-item')) {
+        target = e.target
+      } else if (e.target.parentElement.classList.contains('dropdown-item')) {
+        target = e.target.parentElement
+      }
+
+      if (target) {
         if (e.target.tagName === 'A') {
           window.top.location.href = e.target.href
           return
@@ -26,9 +36,9 @@ export default () => {
         const newIcon = document.createElement('i')
         newIcon.className = 'icon icon-check-solid'
         e.target.appendChild(newIcon)
-      }
 
-      dropdown.focus()
+        dropdown.focus()
+      }
     }
 
     dropdown.addEventListener('click', handleEvent)

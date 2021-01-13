@@ -33,7 +33,7 @@ describe('Dropdown component', () => {
     })
 
     // Act
-    const firstItem = items.querySelector('.dropdown-target')
+    const firstItem = items.querySelector('.dropdown-item')
 
     firstItem.click()
 
@@ -58,7 +58,7 @@ describe('Dropdown component', () => {
     })
 
     // Act
-    const firstItem = items.querySelector('.dropdown-target')
+    const firstItem = items.querySelector('.dropdown-item')
     fireEvent.keyPress(firstItem, { key: 'Enter', code: 'Enter' })
 
     // Assert

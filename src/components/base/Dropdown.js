@@ -46,13 +46,7 @@ const Dropdown = ({
           data-value={slugify(item)}
           tabIndex='0'
         >
-          {type === 'links' ? (
-            <a className='dropdown-target' href='/'>
-              {item}
-            </a>
-          ) : (
-            <div className='dropdown-target'>{item}</div>
-          )}
+          {type === 'links' ? <a href='/'>{item}</a> : <div>{item}</div>}
         </li>
       ))}
     </ul>
