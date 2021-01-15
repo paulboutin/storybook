@@ -1,0 +1,18 @@
+.sb\:shadows {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include screen('lg') {
+    flex-wrap: nowrap;
+  }
+}
+
+.sb\:shadow-block {
+  @include font-size('sm');
+  @include border-radius('md');
+  background-color: color('grey-5');
+  margin: spacing(16) spacing(32);
+  padding: spacing(8);
+  min-width: spacing(160);
+  min-height: spacing(160);
+}
