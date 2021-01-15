@@ -1,0 +1,13 @@
+@each $size, $def in $box-shadows {
+  .shadow-#{$size} {
+    box-shadow: $def;
+  }
+
+  .hover\:shadow-#{$size} {
+    transition: box-shadow map-get($transitions, 'sm');
+
+    &:hover {
+      box-shadow: $def;
+    }
+  }
+}
