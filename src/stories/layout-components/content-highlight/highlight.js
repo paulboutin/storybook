@@ -1,30 +1,62 @@
 import React from 'react'
+import { text, radios } from '@storybook/addon-knobs'
 import Highlight from '../../../components/layout/Highlight'
-import { text } from '@storybook/addon-knobs'
+import Link from '../../../components/base/Link'
+import Button from '../../../components/base/Button'
 
 const defaultImage = 'http://via.placeholder.com/640'
+const defaultTitle = 'The strongest environmental stance of any major bank.'
+const defaultText =
+  "Our policies are 100% transparent because we're proud of what we finance and what we don't"
+
+const CTAOptions = {
+  Link: 'link',
+  Button: 'button',
+  Off: 'off'
+}
+
+const CTAContent = ({ type = 'link' }) => {
+  switch (type) {
+    case 'link':
+      return <Link standalone>Your choice of bank matters</Link>
+    case 'button':
+      return <Button type='primary' label='Apply Now' />
+    case 'off':
+    default:
+      return null
+  }
+}
 
 export const HighlightStory = ({ type }) => {
-  let images
-
-  if (type === 'overlap-image') {
-    images = [
-      text('Background image', defaultImage),
-      text('Foreground image', defaultImage)
-    ]
-  } else {
-    images = [text('Image', defaultImage)]
-  }
+  const images = [text('Image', defaultImage)]
+  const eyebrow = text('Eyebrow', 'Bank for the planet')
+  const title = text('Title', defaultTitle)
+  const textContent = text('Text', defaultText)
+  const cta = radios('CTA Content', CTAOptions, CTAOptions.Link)
 
   return (
     <div>
-      <Highlight type={type} images={images} color='primary' />
       <Highlight
+        title={title}
+        text={textContent}
         type={type}
         images={images}
-        position='reverse'
+        color='primary'
+        eyebrow={eyebrow}
+      >
+        <CTAContent type={cta} />
+      </Highlight>
+      <Highlight
+        title={title}
+        text={textContent}
+        type={type}
+        images={images}
         color='secondary'
-      />
+        eyebrow={eyebrow}
+        reverse
+      >
+        <CTAContent type={cta} />
+      </Highlight>
     </div>
   )
 }
