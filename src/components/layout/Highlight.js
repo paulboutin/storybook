@@ -6,9 +6,7 @@ import Image from '../base/Image'
 import ImageOverlap from '../base/ImageOverlap'
 
 const Highlight = ({ type, images, position, color }) => (
-  <section
-    className={classNames('highlight container', `highlight-${position}`)}
-  >
+  <section className={classNames('highlight container', position)}>
     {type === 'single' ? (
       <Image
         src={images[0]}
@@ -19,7 +17,7 @@ const Highlight = ({ type, images, position, color }) => (
     ) : (
       <ImageOverlap
         images={images}
-        position={position}
+        position={position === 'reverse' ? 'left' : 'right'}
         color={color}
         className='highlight-img-container'
       />

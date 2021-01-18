@@ -18,11 +18,11 @@ export const HighlightStory = ({ type }) => {
 
   return (
     <div>
-      <Highlight type={type} images={images} position='right' color='primary' />
+      <Highlight type={type} images={images} color='primary' />
       <Highlight
         type={type}
         images={images}
-        position='left'
+        position='reverse'
         color='secondary'
       />
     </div>

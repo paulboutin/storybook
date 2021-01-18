@@ -16,17 +16,10 @@
     padding-bottom: spacing(48);
   }
 
-  .highlight-img-container {
-    @include screen('sm') {
-      width: 50%;
-    }
-  }
-
   .highlight-content-container {
     margin-top: spacing(24);
 
     @include screen('sm') {
-      width: 50%;
       margin-top: 0;
     }
   }
@@ -36,31 +29,40 @@
     margin-top: spacing(12);
     margin-bottom: spacing(24);
   }
-}
 
-.highlight-right {
-  @include screen('sm') {
-    .highlight-img-container {
-      order: 0;
+  > :nth-child(even) {
+    @include screen('sm') {
+      width: 50%;
+      margin-left: spacing(32);
+      margin-right: 0;
+    }
+  }
+
+  > :nth-child(odd) {
+    @include screen('sm') {
+      width: 50%;
+      margin-left: 0;
       margin-right: spacing(32);
     }
   }
-}
 
-.highlight-left {
-  @include screen('sm') {
-    .highlight-img-container {
-      order: 1;
-      margin-left: spacing(32);
+  &.reverse {
+    @include screen('sm') {
+      flex-direction: row-reverse;
     }
-  }
-}
 
-.highlight-right,
-.highlight-left {
-  @include screen('lg') {
-    .highlight-img-container {
-      margin: 0 spacing(64);
+    > :nth-child(even) {
+      @include screen('sm') {
+        margin-left: 0;
+        margin-right: spacing(32);
+      }
+    }
+
+    > :nth-child(odd) {
+      @include screen('sm') {
+        margin-left: spacing(32);
+        margin-right: 0;
+      }
     }
   }
 }
