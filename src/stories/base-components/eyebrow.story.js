@@ -1,10 +1,12 @@
 import React from 'react'
 import Eyebrow from '../../components/base/Eyebrow'
-import { text } from '@storybook/addon-knobs'
+import { text, boolean } from '@storybook/addon-knobs'
 
 export const EyebrowStory = () => {
   const txt = text('Text', 'Eyebrow Text')
-  return <Eyebrow>{txt}</Eyebrow>
+  const underline = boolean('With underline', true)
+
+  return <Eyebrow noUnderline={!underline}>{txt}</Eyebrow>
 }
 
 EyebrowStory.story = {

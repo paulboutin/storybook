@@ -6,7 +6,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  &:after {
+  &:not(.no-underline):after {
     display: block;
     content: '';
     border-bottom: 4px solid color('yellow');
