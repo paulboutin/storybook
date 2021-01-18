@@ -7,7 +7,7 @@ export default {
   title: 'Base Components/Card',
   parameters: {
     'in-dsm': {
-      id: '5f6ba4aa230daf69289b8fad'
+      id: '60055161fd695b08bcf8dfc1'
     }
   }
 }

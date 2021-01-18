@@ -40,7 +40,7 @@ export default {
   title: 'Base Components/Dropdown',
   parameters: {
     'in-dsm': {
-      id: '5f7b66fa333d218186ba5f73'
+      id: '600551d2fd695b4215f8dfc3'
     }
   }
 }

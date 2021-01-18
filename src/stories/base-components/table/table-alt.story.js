@@ -19,7 +19,7 @@ export default {
   title: 'Base Components/Table',
   parameters: {
     'in-dsm': {
-      id: '5f6e640cc55519cb19068937'
+      id: '600556613f39cc2fd024a14f'
     }
   }
 }
