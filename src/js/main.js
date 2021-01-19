@@ -6,6 +6,7 @@ import navigation from './components/navigation'
 import popupVideo from './components/popup-video'
 import dropdowns from './components/dropdown'
 import sliders from './components/slider'
+import alerts from './components/alert'
 
 function ready(fn) {
   if (
@@ -28,6 +29,7 @@ function setup() {
     popupVideo()
     dropdowns()
     sliders()
+    alerts()
   })
 }
 

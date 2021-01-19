@@ -12,8 +12,10 @@ function positionMenus() {
   const navigation = document.querySelector('.navigation')
   if (!navigation) return
 
+  const { y } = navigation.getBoundingClientRect()
+
   const menusWrapper = navigation.querySelector('.navigation-menus')
-  menusWrapper.style.top = `${navigation.clientHeight}px`
+  menusWrapper.style.top = `${navigation.clientHeight + y}px`
 }
 
 function mobileSetup(navigation) {
@@ -43,6 +45,7 @@ function mobileSetup(navigation) {
         openCategoryMenu.classList.remove('navigation-menu-open')
       }
     } else {
+      positionMenus()
       document.body.classList.add('navigation-open')
       hamburger.classList.add('is-active')
       mainMenu.classList.add('navigation-menu-open')
