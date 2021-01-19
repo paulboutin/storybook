@@ -55,5 +55,5 @@ AlertStory.story = {
 }
 
 export default {
-  title: 'Base Components'
+  title: 'Layout Components'
 }
