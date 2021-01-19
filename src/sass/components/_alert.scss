@@ -4,9 +4,11 @@
   overflow: hidden;
   max-height: 300px;
   transition: max-height 300ms;
+  margin-bottom: spacing(4);
 
   &.alert-closed {
     max-height: 0;
+    margin-bottom: 0;
   }
 
   .container {
