@@ -16,10 +16,13 @@
     padding-top: spacing(16);
     padding-bottom: spacing(16);
 
-    > .icon {
-      @include font-size('lg');
+    > .icon-wrapper {
       margin-right: spacing(8);
-      color: color('error');
+      height: spacing(24);
+
+      > img {
+        height: 100%;
+      }
     }
   }
 

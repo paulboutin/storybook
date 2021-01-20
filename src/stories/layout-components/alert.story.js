@@ -31,7 +31,7 @@ export const AlertStory = () => {
   const handleAddAlert = () => {
     const count = Array.from(document.querySelectorAll('.alert')).length
 
-    alerts = alerts.slice(0, count) // maintain current count
+    alerts = alerts.slice(-count) // maintain current count
 
     alerts.push(
       <Alert key={alerts.length} type={type} title={title} text={textContent} />
