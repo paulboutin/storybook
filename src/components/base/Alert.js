@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 
 const icons = {
-  danger: '/icons/img/alert-yellow.png',
+  danger: '/icons/img/alert-red.png',
   success: '/icons/img/alert-green.png',
   info: '/icons/img/alert-blue.png',
   warning: '/icons/img/alert-yellow.png'
