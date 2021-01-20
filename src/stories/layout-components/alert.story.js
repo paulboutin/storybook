@@ -51,7 +51,7 @@ export const AlertStory = () => {
 }
 
 AlertStory.story = {
-  name: 'Alert'
+  name: 'Alert (WIP)'
 }
 
 export default {

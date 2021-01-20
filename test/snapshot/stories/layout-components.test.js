@@ -195,6 +195,11 @@ describe('Layout Components', () => {
     {
       title: 'callout',
       path: 'layout-components--callout-story'
+    },
+    {
+      title: 'alert',
+      path: 'layout-components--alert-story',
+      devices: ['mobile', 'desktop']
     }
   ]
   buildSnapshotTests(stories)
