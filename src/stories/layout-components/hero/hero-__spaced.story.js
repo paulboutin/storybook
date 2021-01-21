@@ -1,11 +1,26 @@
 import React from 'react'
-import Hero from '../../../components/layout/Hero'
+import Hero, {
+  defaultEyebrow,
+  defaultTitle,
+  defaultText
+} from '../../../components/layout/Hero'
 import { text } from '@storybook/addon-knobs'
 
 export const Spaced = () => {
   const image = text('Image', 'http://via.placeholder.com/1600')
+  const eyebrow = text('Eyebrow', defaultEyebrow)
+  const title = text('Title', defaultTitle)
+  const textContent = text('Text', defaultText)
 
-  return <Hero type='spaced' image={image} />
+  return (
+    <Hero
+      type='spaced'
+      image={image}
+      eyebrow={eyebrow}
+      title={title}
+      text={textContent}
+    />
+  )
 }
 
 export default {

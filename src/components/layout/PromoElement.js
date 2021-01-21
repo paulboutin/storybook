@@ -15,9 +15,17 @@ const PromoElement = ({ type, image, eyebrow, heading, text, children }) => (
   >
     <div className='container'>
       <div className='promo-element-content'>
-        <Eyebrow>{eyebrow}</Eyebrow>
-        <h3 className='promo-element-heading'>{heading}</h3>
-        <p className='promo-element-text'>{text}</p>
+        {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+        <h3
+          className='promo-element-heading'
+          dangerouslySetInnerHTML={{ __html: heading }}
+        />
+        {text && (
+          <p
+            className='promo-element-text'
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )}
         <div className='cta-wrapper'>{children}</div>
       </div>
       <div className='promo-element-image-wrapper'>

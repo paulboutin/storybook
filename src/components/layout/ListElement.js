@@ -29,9 +29,17 @@ const ListElement = ({ image, items, headerText, altLayout }) => (
       )}
       <div className='list-element-content'>
         <div className='list-element-header'>
-          <Eyebrow>{headerText.eyebrow}</Eyebrow>
-          <h2 className='list-element-heading'>{headerText.heading}</h2>
-          <p className='list-element-header-text'>{headerText.text}</p>
+          {headerText.eyebrow && <Eyebrow>{headerText.eyebrow}</Eyebrow>}
+          <h2
+            className='list-element-heading'
+            dangerouslySetInnerHTML={{ __html: headerText.heading }}
+          />
+          {headerText.text && (
+            <p
+              className='list-element-header-text'
+              dangerouslySetInnerHTML={{ __html: headerText.text }}
+            />
+          )}
         </div>
 
         <ListElementItems items={items} />

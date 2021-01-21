@@ -1,11 +1,26 @@
 import React from 'react'
-import Hero from '../../../components/layout/Hero'
+import Hero, {
+  defaultEyebrow,
+  defaultText,
+  defaultTitle
+} from '../../../components/layout/Hero'
 import { text } from '@storybook/addon-knobs'
 
 export const Full = () => {
   const image = text('Image', 'http://via.placeholder.com/1600')
+  const eyebrow = text('Eyebrow', defaultEyebrow)
+  const title = text('Title', defaultTitle)
+  const textContent = text('Text', defaultText)
 
-  return <Hero type='full' image={image} />
+  return (
+    <Hero
+      type='full'
+      image={image}
+      eyebrow={eyebrow}
+      text={textContent}
+      title={title}
+    />
+  )
 }
 
 export default {

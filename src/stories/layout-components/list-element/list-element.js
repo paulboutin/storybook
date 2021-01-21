@@ -19,6 +19,10 @@ const headerText = {
 
 export const ListElementStory = ({ type }) => {
   const items = array('Items', defaultItems)
+  const eyebrow = text('Eyebrow', headerText.eyebrow)
+  const heading = text('Title', headerText.heading)
+  const textContent = text('Text', headerText.text)
+
   const isAlt = type === 'alt'
   let image
 
@@ -28,7 +32,7 @@ export const ListElementStory = ({ type }) => {
 
   return (
     <ListElement
-      headerText={headerText}
+      headerText={{ heading, eyebrow, text: textContent }}
       altLayout={isAlt}
       image={isAlt ? { src: image, alt: 'List image' } : null}
       items={items}

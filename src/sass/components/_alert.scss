@@ -1,0 +1,48 @@
+.alert {
+  @include font-size('sm');
+  background-color: color('grey-5');
+  overflow: hidden;
+  max-height: 300px;
+  transition: max-height 300ms;
+  margin-bottom: spacing(4);
+
+  &.alert-closed {
+    max-height: 0;
+    margin-bottom: 0;
+  }
+
+  .container {
+    display: flex;
+    padding-top: spacing(16);
+    padding-bottom: spacing(16);
+
+    > .icon-wrapper {
+      margin-right: spacing(8);
+      height: spacing(24);
+
+      > img {
+        height: 100%;
+      }
+    }
+  }
+
+  .alert-content-wrapper {
+    width: 100%;
+  }
+
+  .alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .alert-title {
+      @include font-weight('bold');
+      margin-bottom: spacing(8);
+      line-height: 1.714; // to match icon line-height
+    }
+
+    .icon-close {
+      @include font-size('lg');
+    }
+  }
+}
