@@ -1,7 +1,7 @@
 import React from 'react'
-import ClosingCTA from '../../../components/layout/ClosingCTA'
+import ClosingCTAStory from './closing-cta'
 
-export const Standard = () => <ClosingCTA type='standard' />
+export const Standard = () => <ClosingCTAStory type='standard' />
 
 export default {
   title: 'Layout Components/Closing CTA',

@@ -2,7 +2,17 @@ import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
 
-const ClosingCTA = ({ type, image }) => (
+export const defaultTitle =
+  'Together, we can safeguard the environment and the future of our planet.'
+export const altTitle = 'Open online in about 10 minutes'
+export const defaultText = 'Type something'
+
+const ClosingCTA = ({
+  type,
+  image,
+  title = defaultTitle,
+  text = defaultText
+}) => (
   <section className={classNames('closing-cta', `closing-cta-${type}`)}>
     <div className='container'>
       {type === '2col' && (
@@ -25,12 +35,13 @@ const ClosingCTA = ({ type, image }) => (
       )}
 
       <div className='closing-cta-content'>
-        <h1>
-          {type === '2col'
-            ? 'Open online in about 10 minutes'
-            : 'Together, we can safeguard the environment and the future of our planet.'}
-        </h1>
-        {type !== '2col' && <p className='closing-cta-text'>Type something</p>}
+        <h1 dangerouslySetInnerHTML={{ __html: title }} />
+        {type !== '2col' && text && (
+          <p
+            className='closing-cta-text'
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )}
         <Button type='tertiary' label='Call to Action' link />
       </div>
     </div>
