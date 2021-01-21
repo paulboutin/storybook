@@ -48,7 +48,9 @@ const DefaultHeroContent = ({
   <>
     {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
     <h2 className='hero-heading' dangerouslySetInnerHTML={{ __html: title }} />
-    {text && <p className='hero-text'>{text}</p>}
+    {text && (
+      <p className='hero-text' dangerouslySetInnerHTML={{ __html: text }} />
+    )}
     <a className='button button-primary hero-button' href='#'>
       Apply Now
     </a>

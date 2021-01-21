@@ -6,13 +6,17 @@ import Button from '../../../components/base/Button'
 import { text } from '@storybook/addon-knobs'
 
 const defaultImage = 'http://via.placeholder.com/480x640'
-const eyebrow = 'Sustainable banking'
-const heading = 'The strongest environmental stance of any major bank.'
+const defaultEyebrow = 'Sustainable banking'
+const defaultHeading = 'The strongest environmental stance of any major bank.'
 const defaultText =
   'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
 
 export const PromoElementStory = ({ type }) => {
   const image = text('Image', defaultImage)
+  const eyebrow = text('Eyebrow', defaultEyebrow)
+  const heading = text('Heading', defaultHeading)
+  const textContent = text('Text', defaultText)
+
   let cta
 
   if (type === 'accent square') {
@@ -31,7 +35,7 @@ export const PromoElementStory = ({ type }) => {
       type={type}
       eyebrow={eyebrow}
       heading={heading}
-      text={defaultText}
+      text={textContent}
       image={{
         src: image,
         alt: 'Promo image'
