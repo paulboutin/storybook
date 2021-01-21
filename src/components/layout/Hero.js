@@ -3,6 +3,14 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Dropdown from '../base/Dropdown'
 
+export const defaultEyebrow = 'Any deposit checking'
+export const defaultText = 'Open an account in about 10 minutes'
+export const defaultTitle = `
+  No hidden fees.
+  <br />
+  No hassle.
+`
+
 const states = [
   'Arizona',
   'California',
@@ -32,15 +40,15 @@ export const Hero = ({ type, image, children }) => (
   </section>
 )
 
-const DefaultHeroContent = () => (
+const DefaultHeroContent = ({
+  eyebrow = defaultEyebrow,
+  text = defaultText,
+  title = defaultTitle
+}) => (
   <>
-    <Eyebrow>Any deposit checking</Eyebrow>
-    <h2 className='hero-heading'>
-      No hidden fees.
-      <br />
-      No hassle.
-    </h2>
-    <p className='hero-text'>Open an account in about 10 minutes</p>
+    {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+    <h2 className='hero-heading' dangerouslySetInnerHTML={{ __html: title }} />
+    {text && <p className='hero-text'>{text}</p>}
     <a className='button button-primary hero-button' href='#'>
       Apply Now
     </a>
@@ -56,9 +64,9 @@ const DefaultHeroContent = () => (
   </>
 )
 
-const DefaultHero = ({ type, image }) => (
+const DefaultHero = ({ type, image, eyebrow, text, title }) => (
   <Hero type={type} image={image}>
-    <DefaultHeroContent />
+    <DefaultHeroContent eyebrow={eyebrow} text={text} title={title} />
   </Hero>
 )
 

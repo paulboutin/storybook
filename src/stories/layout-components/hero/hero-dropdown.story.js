@@ -1,15 +1,18 @@
 import React from 'react'
-import DropdownHero from '../../../components/layout/DropdownHero'
+import DropdownHero, {
+  defaultTitle
+} from '../../../components/layout/DropdownHero'
 import { text, array } from '@storybook/addon-knobs'
 
 export const DropdownHeroStory = () => {
   const image = text('Image', 'http://via.placeholder.com/1600')
+  const title = text('Title', defaultTitle)
   const items = array(
     'Options',
     ['Link 1', 'Link 2', 'Link 3', 'Link 4', 'Link 5'],
     '\n'
   )
-  return <DropdownHero image={image} items={items} />
+  return <DropdownHero image={image} items={items} title={title} />
 }
 
 DropdownHeroStory.story = {
