@@ -1,6 +1,6 @@
 import React from 'react'
 import { text, radios, boolean, button } from '@storybook/addon-knobs'
-import Alert from '../../components/base/Alert'
+import Alert from '../../components/layout/Alert'
 import ProductPage from '../templates/product-page'
 
 const options = {
@@ -12,7 +12,7 @@ const options = {
 
 const defaultTitle = 'Alert Title Placeholder'
 const defaultText =
-  'Your current browser may not be able to run our content. To update to the latest version <a class="link" href="">click here</a>.'
+  'Your current browser may not be able to run our content. To update to the latest version <a class="link dark" href="">click here</a>.'
 
 let alerts = [
   <Alert

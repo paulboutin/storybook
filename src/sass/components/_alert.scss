@@ -18,10 +18,10 @@
 
     > .icon-wrapper {
       margin-right: spacing(8);
-      height: spacing(24);
 
       > img {
-        height: 100%;
+        height: spacing(24);
+        width: spacing(24);
       }
     }
   }

@@ -17,9 +17,15 @@
   &:active {
     color: color('green-dark');
   }
-}
 
-.link-inline {
+  &.dark {
+    color: color('green-dark');
+
+    &:hover,
+    &:active {
+      color: color('green-darker');
+    }
+  }
 }
 
 .link-standalone {
