@@ -15,7 +15,7 @@ export const CardsHorizontalListStory = () => {
     const prefix = `Item ${i + 1} -`
 
     items.push({
-      title: text(`${prefix} Title`, defaultColumn.heading, 'content'),
+      title: text(`${prefix} Title`, defaultColumn.title, 'content'),
       text: text(`${prefix} Text`, defaultColumn.text, 'content')
     })
   }
