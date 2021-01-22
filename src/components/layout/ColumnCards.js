@@ -1,7 +1,8 @@
 import React from 'react'
 import classNames from 'classnames'
+import Column, { columnThreeColConfig } from '../base/Column'
 
-const ColumnCards = ({ heading, children, inverted }) => (
+const ColumnCards = ({ columns, heading, children, inverted }) => (
   <section
     className={classNames('column-cards container', {
       'column-cards-inverted': inverted
@@ -10,9 +11,9 @@ const ColumnCards = ({ heading, children, inverted }) => (
     <h2 className='column-cards-heading'>{heading}</h2>
     <div className='row'>
       {children.map((child, index) => (
-        <div key={index} className='col-md-4'>
+        <Column columns={columns} key={index} configFn={columnThreeColConfig}>
           {child}
-        </div>
+        </Column>
       ))}
     </div>
   </section>
