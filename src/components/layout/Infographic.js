@@ -2,7 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
 import Image from '../base/Image'
-import Column, { columnThreeColConfig } from '../base/Column'
+import Column, { columnInfographicConfig } from '../base/Column'
 
 export const defaultItems = [
   {
@@ -42,7 +42,7 @@ export const Infographic = ({ columns, className, children }) => {
 
       <div className='container'>
         {children.map(child => (
-          <Column columns={columns} configFn={columnThreeColConfig}>
+          <Column columns={columns} configFn={columnInfographicConfig}>
             {child}
           </Column>
         ))}
