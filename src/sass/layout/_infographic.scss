@@ -1,5 +1,4 @@
 .infographic {
-  @include star-birds('light');
   color: color('white');
   background-color: color('green-dark');
   text-align: center;
@@ -11,6 +10,10 @@
 
   @include screen('md') {
     padding: spacing(48) 0;
+  }
+
+  &.infographic-star-birds {
+    @include star-birds('light');
   }
 
   .infographic-title {

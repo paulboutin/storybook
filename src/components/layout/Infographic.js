@@ -1,4 +1,5 @@
 import React from 'react'
+import classNames from 'classnames'
 import Button from '../base/Button'
 
 const InfographicBox = ({ title, children }) => (
@@ -10,9 +11,9 @@ const InfographicBox = ({ title, children }) => (
   </article>
 )
 
-const Infographic = () => {
+const Infographic = ({ className }) => {
   return (
-    <section className='infographic'>
+    <section className={classNames('infographic', className)}>
       <h2 className='infographic-title'>We invest in what we believe</h2>
 
       <div className='infographic-boxes container'>
