@@ -1,24 +1,29 @@
 import React from 'react'
-import { radios, text } from '@storybook/addon-knobs'
+import { text, number } from '@storybook/addon-knobs'
 import ColumnCards from '../../components/layout/ColumnCards'
 import Card, { defaultItems } from '../../components/base/Card'
 
 const defaultImage = 'http://via.placeholder.com/500'
 
+const options = {
+  range: true,
+  min: 2,
+  max: 6,
+  step: 1
+}
+
 export const CardsThreeColumn = () => {
   const items = []
-  const image = text('Image', defaultImage)
-  const cards = Number(
-    radios('Cards', ['2', '3', '4', '5', '6'], '3', 'config')
-  )
+  const cards = number('Cards', 3, options, 'config')
 
   for (let i = 0; i < cards; i++) {
     const defaultColumn = defaultItems[i] || defaultItems[0]
-    const prefix = `Card ${i + 1} -`
+    const prefix = `Card ${i + 1}`
 
     items.push({
-      heading: text(`${prefix} Heading`, defaultColumn.heading, 'content'),
-      text: text(`${prefix} Text`, defaultColumn.text, 'content')
+      heading: text('Heading', defaultColumn.heading, prefix),
+      text: text('Text', defaultColumn.text, prefix),
+      image: text('Image', defaultImage, prefix)
     })
   }
 
@@ -32,7 +37,7 @@ export const CardsThreeColumn = () => {
           key={index}
           heading={item.heading}
           linkText={linkText}
-          image={{ src: image, alt: 'image' }}
+          image={{ src: item.image, alt: 'image' }}
         >
           {item.text}
         </Card>

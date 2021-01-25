@@ -1,6 +1,6 @@
 import React from 'react'
 import ColumnIcons from '../../../components/layout/ColumnIcons'
-import { radios, boolean, text } from '@storybook/addon-knobs'
+import { boolean, text, number } from '@storybook/addon-knobs'
 
 const defaultColumns = [
   {
@@ -36,21 +36,27 @@ const defaultColumns = [
   }
 ]
 
+const options = {
+  range: true,
+  min: 2,
+  max: 6,
+  step: 1
+}
+
 export const ColumnIconsStory = () => {
   const columns = []
-  const columnNumber = Number(
-    radios('Columns', ['2', '3', '4', '5', '6'], '3', 'config')
-  )
+
+  const columnNumber = number('Items', 3, options, 'config')
   const inverted = boolean('Inverted', false, 'config')
 
   for (let i = 0; i < columnNumber; i++) {
     const defaultColumn = defaultColumns[i] || {}
-    const prefix = `Column ${i + 1} -`
+    const prefix = `Item ${i + 1}`
 
     columns.push({
-      icon: text(`${prefix} Icon`, defaultColumn.icon, 'content'),
-      title: text(`${prefix} Title`, defaultColumn.title, 'content'),
-      text: text(`${prefix} Text`, defaultColumn.text, 'content')
+      icon: text('Icon', defaultColumn.icon, prefix),
+      title: text('Title', defaultColumn.title, prefix),
+      text: text('Text', defaultColumn.text, prefix)
     })
   }
 
