@@ -131,3 +131,14 @@
     }
   }
 }
+
+.hero-full,
+.hero-spaced {
+  .hero-subtext {
+    padding-right: spacing(4);
+  }
+
+  .dropdown-inline {
+    margin: 0;
+  }
+}
