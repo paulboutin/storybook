@@ -22,10 +22,14 @@
       border: none;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
+
+      &::placeholder {
+        color: color('grey-70');
+      }
     }
 
     .button {
-      @include font-weight('bold');
+      @include font-weight('normal');
       font-size: 18px;
       background-color: color('grey-5');
       border-top-left-radius: 0;
