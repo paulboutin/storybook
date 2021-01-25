@@ -21,7 +21,8 @@ export const CardsHorizontalListStory = () => {
 
     items.push({
       title: text('Title', defaultColumn.title, prefix),
-      text: text('Text', defaultColumn.text, prefix)
+      text: text('Text', defaultColumn.text, prefix),
+      image: text('Image', defaultColumn.image, prefix)
     })
   }
 
