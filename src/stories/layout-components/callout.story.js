@@ -1,8 +1,15 @@
 import React from 'react'
 import Callout from '../../components/layout/Callout'
-import { text } from '@storybook/addon-knobs'
+import { text, radios } from '@storybook/addon-knobs'
+
+const options = {
+  Standard: '',
+  Green: 'callout-green'
+}
 
 export const CalloutStory = () => {
+  const bg = radios('Background Color', options, options.Standard)
+
   const title = text(
     'Title',
     'Together, we can safeguard the environment and the future of our planet.'
@@ -11,7 +18,7 @@ export const CalloutStory = () => {
     'Text',
     'It is a long established fact that a reader will be distracted by the readable.'
   )
-  return <Callout title={title} text={txt} />
+  return <Callout title={title} text={txt} className={bg} />
 }
 
 CalloutStory.story = {
