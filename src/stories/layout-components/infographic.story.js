@@ -9,7 +9,7 @@ import {
 
 const numberOptions = {
   range: true,
-  min: 3,
+  min: 2,
   max: 6,
   step: 1
 }
@@ -22,8 +22,8 @@ const typeOptions = {
 export const InfographicStory = () => {
   const items = []
 
+  const cards = number('Cards', 3, numberOptions, 'config')
   const starBirds = boolean('Starbirds', true, 'config')
-  const cards = 3 // number('Items', 3, numberOptions, 'config')
 
   for (let i = 0; i < cards; i++) {
     const defaultColumn = defaultItems[i] || defaultItems[0]
@@ -52,7 +52,10 @@ export const InfographicStory = () => {
   }
 
   return (
-    <Infographic className={starBirds ? 'infographic-star-birds' : ''}>
+    <Infographic
+      columns={cards}
+      className={starBirds ? 'infographic-star-birds' : ''}
+    >
       {items.map(({ type, title, content }) => {
         switch (type) {
           case typeOptions.Text:

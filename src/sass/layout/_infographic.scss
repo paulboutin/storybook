@@ -16,10 +16,7 @@
     @include star-birds('light');
   }
 
-  .infographic-title {
-  }
-
-  .infographic-boxes {
+  .container {
     display: flex;
     flex-direction: column;
     padding: 0;
@@ -27,6 +24,8 @@
     max-width: 300px;
 
     @include screen('sm') {
+      justify-content: center;
+      flex-wrap: wrap;
       flex-direction: row;
       max-width: unset;
       margin-top: spacing(48);
@@ -39,29 +38,22 @@
     @include screen('lg') {
       margin-top: spacing(48);
     }
+
+    .column {
+      padding-bottom: spacing(32);
+    }
   }
 
   .infographic-box {
     @include fixed-ratio(1, 1);
-    flex: 1;
     background-color: color('green');
     margin-bottom: spacing(16);
 
     @include screen('sm') {
-      margin-left: spacing(8);
-      margin-right: spacing(8);
       text-align: left;
     }
 
-    @include screen('md') {
-      margin-left: spacing(16);
-      margin-right: spacing(16);
-    }
-
     @include screen('lg') {
-      margin-left: spacing(8);
-      margin-right: spacing(8);
-
       &:after {
         display: block;
       }
@@ -87,9 +79,6 @@
     }
   }
 
-  .infographic-box-title {
-  }
-
   .infographic-box-text {
     @include font-size('lg');
     margin-top: spacing(4);
@@ -108,16 +97,7 @@
   }
 
   .infographic-button {
-    margin-top: spacing(16);
     padding-left: spacing(48);
     padding-right: spacing(48);
-
-    @include screen('sm') {
-      margin-top: spacing(32);
-    }
-
-    @include screen('md') {
-      margin-top: spacing(16);
-    }
   }
 }

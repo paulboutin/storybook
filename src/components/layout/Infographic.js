@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
 import Image from '../base/Image'
+import Column, { columnThreeColConfig } from '../base/Column'
 
 export const defaultItems = [
   {
@@ -34,12 +35,20 @@ export const InfographicBoxImage = ({ src }) => (
   </article>
 )
 
-export const Infographic = ({ className, children }) => {
+export const Infographic = ({ columns, className, children }) => {
   return (
     <section className={classNames('infographic', className)}>
-      <h2 className='infographic-title'>We invest in what we believe</h2>
+      <h2 className='infographic-title'>
+        We invest in what we believe {columns}
+      </h2>
 
-      <div className='infographic-boxes container'>{children}</div>
+      <div className='container'>
+        {children.map(child => (
+          <Column columns={columns} configFn={columnThreeColConfig}>
+            {child}
+          </Column>
+        ))}
+      </div>
 
       <Button
         type='tertiary'
@@ -53,7 +62,7 @@ export const Infographic = ({ className, children }) => {
 
 const DefaultInfographic = ({ className }) => {
   return (
-    <Infographic className={className}>
+    <Infographic className={className} columns={defaultItems.length}>
       {defaultItems.map(({ title, content }) => (
         <InfographicBox title={title}>{content}</InfographicBox>
       ))}
