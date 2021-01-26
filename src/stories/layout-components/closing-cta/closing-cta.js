@@ -1,5 +1,5 @@
 import React from 'react'
-import { text } from '@storybook/addon-knobs'
+import { text, boolean } from '@storybook/addon-knobs'
 import ClosingCTA, {
   defaultText,
   defaultTitle,
@@ -7,11 +7,27 @@ import ClosingCTA, {
 } from '../../../components/layout/ClosingCTA'
 
 const ClosingCTAStory = ({ type, image }) => {
-  const title = text('Title', type === '2col' ? altTitle : defaultTitle)
-  const textContent = text('Text', defaultText)
+  let starBirds
+
+  const title = text(
+    'Title',
+    type === '2col' ? altTitle : defaultTitle,
+    'content'
+  )
+  const textContent = text('Text', defaultText, 'content')
+
+  if (['standard', '2col'].includes(type)) {
+    starBirds = boolean('Starbirds', false, 'config')
+  }
 
   return (
-    <ClosingCTA type={type} image={image} text={textContent} title={title} />
+    <ClosingCTA
+      className={starBirds && 'closing-cta-star-birds'}
+      type={type}
+      image={image}
+      text={textContent}
+      title={title}
+    />
   )
 }
 

@@ -11,9 +11,12 @@ const ClosingCTA = ({
   type,
   image,
   title = defaultTitle,
-  text = defaultText
+  text = defaultText,
+  className
 }) => (
-  <section className={classNames('closing-cta', `closing-cta-${type}`)}>
+  <section
+    className={classNames('closing-cta', `closing-cta-${type}`, className)}
+  >
     <div className='container'>
       {type === '2col' && (
         <img

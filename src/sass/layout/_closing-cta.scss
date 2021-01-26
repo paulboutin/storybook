@@ -21,6 +21,13 @@
 
 .closing-cta-standard {
   background-color: color('green');
+
+  &.closing-cta-star-birds {
+    .container {
+      @include star-birds('light');
+      background-position: left center;
+    }
+  }
 }
 
 .closing-cta-bgi {
@@ -51,6 +58,12 @@
 
     @include screen('sm', 'down') {
       flex-direction: column;
+    }
+  }
+
+  &.closing-cta-star-birds {
+    .container {
+      @include star-birds('light');
     }
   }
 
