@@ -64,6 +64,7 @@
   &.closing-cta-star-birds {
     .container {
       @include star-birds('light');
+      background-position: right center;
     }
   }
 
@@ -73,18 +74,13 @@
     @include screen('sm') {
       width: 50%;
       margin-bottom: 0;
-      padding-right: spacing(32);
+      padding-left: spacing(16);
     }
   }
 
   .closing-cta-content {
-    padding-right: spacing(16);
-
-    @include screen('sm', 'down') {
-      padding: 0;
-    }
-
     @include screen('sm') {
+      padding-right: spacing(16);
       display: flex;
       flex-direction: column;
       justify-content: center;
