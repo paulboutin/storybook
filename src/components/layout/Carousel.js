@@ -5,7 +5,7 @@ import Eyebrow from '../base/Eyebrow'
 import Link from '../base/Link'
 import Slider from '../base/Slider'
 
-const Carousel = ({ items }) => (
+const Carousel = ({ eyebrow, items }) => (
   <section
     className='carousel slider-container container'
     data-prev-trigger='.carousel-prev-slide'
@@ -27,14 +27,19 @@ const Carousel = ({ items }) => (
         </Slider>
 
         <article className='carousel-card-content'>
-          <Eyebrow>Recommended</Eyebrow>
+          {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
 
           <Slider axis='horizontal' transitionOpacity>
             {items.map((item, index) => (
               <div key={index} className='carousel-slide-content'>
-                <h2>{item.title}</h2>
-                <p className='carousel-card-text'>{item.text}</p>
-                <Link standalone>Learn more</Link>
+                <h2 className='carousel-card-title'>{item.title}</h2>
+                {item.text && <p className='carousel-card-text'>{item.text}</p>}
+                {item.type === 'link' && (
+                  <Link standalone>{item.linkText}</Link>
+                )}
+                {item.type === 'button' && (
+                  <Button type='primary' label={item.linkText} />
+                )}
               </div>
             ))}
           </Slider>
