@@ -41,11 +41,13 @@ export const Infographic = ({ columns, className, children }) => {
       <h2 className='infographic-title'>We invest in what we believe</h2>
 
       <div className='container'>
-        {children.map(child => (
-          <Column columns={columns} configFn={columnInfographicConfig}>
-            {child}
-          </Column>
-        ))}
+        <div className='row'>
+          {children.map(child => (
+            <Column columns={columns} configFn={columnInfographicConfig}>
+              {child}
+            </Column>
+          ))}
+        </div>
       </div>
 
       <Button
