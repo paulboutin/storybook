@@ -9,27 +9,32 @@ export const defaultItems = [
     title: 'Personal Checking',
     text:
       'Convenience, flexibility and value for your day to day banking needs.',
-    image: defaultImage
+    image: defaultImage,
+    linkText: 'Learn more'
   },
   {
     title: 'Savings Accounts',
     text: 'We can help put extra funds to work earning interest.',
-    image: defaultImage
+    image: defaultImage,
+    linkText: 'Learn more'
   },
   {
     title: 'Credit Cards',
     text: 'Discover credit cards that can help you manage your cash flow.',
-    image: defaultImage
+    image: defaultImage,
+    linkText: 'Learn more'
   },
   {
     title: 'Loans and Mortgages',
     text: 'We offer loans, financing, and flexible financing lines of credit.',
-    image: defaultImage
+    image: defaultImage,
+    linkText: 'Learn more'
   },
   {
     title: 'Personal Investing',
     text: 'Invest in the future you want, the way you want.',
-    image: defaultImage
+    image: defaultImage,
+    linkText: 'Learn more'
   }
 ]
 
@@ -51,7 +56,7 @@ const CardsHorizontalList = ({ items = defaultItems }) => {
           <div className='article-card-content'>
             <h4 className='article-title'>{card.title}</h4>
             <p>{card.text}</p>
-            <Link standalone>Learn more</Link>
+            <Link standalone>{card.linkText}</Link>
           </div>
         </article>
       ))}
