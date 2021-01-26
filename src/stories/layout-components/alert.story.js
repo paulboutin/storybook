@@ -40,7 +40,7 @@ export const AlertStory = () => {
 
   button('Add New Alert', handleAddAlert, 'new alert')
 
-  const withProductPage = boolean('Show Product Page', false)
+  const withProductPage = boolean('Show Product Page', false, 'config')
 
   return (
     <>
