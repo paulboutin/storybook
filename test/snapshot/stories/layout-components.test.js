@@ -31,7 +31,7 @@ describe('Layout Components', () => {
       path: 'layout-components--faq-story',
       devices: ['mobile', 'tablet', 'desktop']
     },
-    ...['standard', 'alt', 'accent-square', 'accent-dark'].map(type => ({
+    ...['standard', 'accent-square', 'accent-dark'].map(type => ({
       title: `promo-element ${type}`,
       path: `layout-components-promo-element--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
