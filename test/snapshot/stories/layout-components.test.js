@@ -189,10 +189,6 @@ describe('Layout Components', () => {
       path: 'layout-components--help-intro-story'
     },
     {
-      title: 'help outro',
-      path: 'layout-components--help-outro-story'
-    },
-    {
       title: 'callout',
       path: 'layout-components--callout-story'
     },
