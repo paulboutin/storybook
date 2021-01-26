@@ -17,6 +17,11 @@ export const columnInfographicConfig = columns => ({
   'col-sm-4': [3, 5, 6].includes(columns)
 })
 
+export const columnContentConfig = columns => ({
+  'col-md-6': [2, 4].includes(columns),
+  'col-md-4': [3, 5, 6].includes(columns)
+})
+
 const Column = ({
   columns,
   className,

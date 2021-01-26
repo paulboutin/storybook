@@ -1,6 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
-import Column, { columnThreeColConfig } from '../base/Column'
+import Column, { columnContentConfig } from '../base/Column'
 
 const ColumnCards = ({ columns, heading, children, inverted }) => (
   <section
@@ -11,7 +11,7 @@ const ColumnCards = ({ columns, heading, children, inverted }) => (
     <h2 className='column-cards-heading'>{heading}</h2>
     <div className='row'>
       {children.map((child, index) => (
-        <Column columns={columns} key={index} configFn={columnThreeColConfig}>
+        <Column columns={columns} key={index} configFn={columnContentConfig}>
           {child}
         </Column>
       ))}
