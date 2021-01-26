@@ -4,11 +4,18 @@
   text-align: center;
 
   .callout-title {
-    margin-bottom: spacing(32);
+    margin-bottom: spacing(16);
   }
 
   .callout-text {
     @include font-size('h5');
+  }
+
+  &.callout-centered {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &.callout-green {
