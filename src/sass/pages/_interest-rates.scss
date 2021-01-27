@@ -54,4 +54,9 @@
   .interest-rates-legal {
     @include font-size('xs');
   }
+
+  .breadcrumbs {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
 }
