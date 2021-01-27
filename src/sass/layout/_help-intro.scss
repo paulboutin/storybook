@@ -13,9 +13,14 @@
     justify-content: center;
     margin-top: spacing(24);
 
+    &.help-intro-search-small {
+      .input-block {
+        max-width: 500px;
+      }
+    }
+
     .input-block {
       flex: 1;
-      max-width: 500px;
     }
 
     .input-control {

@@ -1,15 +1,20 @@
 import React from 'react'
+import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Input from '../base/Input'
 import Button from '../base/Button'
 import Link from '../base/Link'
 
-const HelpIntro = ({ showLinks }) => (
+const HelpIntro = ({ showLinks, fullWidth }) => (
   <section className='help-intro'>
     <div className='container'>
       <h1 className='help-intro-title'>How can we help you today?</h1>
 
-      <div className='help-intro-search'>
+      <div
+        className={classNames('help-intro-search', {
+          'help-intro-search-small': !fullWidth
+        })}
+      >
         <Input
           variant='outline'
           placeholder='Search by topic or category'
