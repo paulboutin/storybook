@@ -14,7 +14,7 @@ const options = {
 
 export const CalloutStory = () => {
   const bg = radios('Background Color', options, options.Standard, 'config')
-  const centered = boolean('Centered', false, 'config')
+  const centered = boolean('Centered', true, 'config')
 
   const title = text('Title', defaultTitle, 'content')
   const txt = text('Text', defaultText, 'content')
