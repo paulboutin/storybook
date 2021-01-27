@@ -359,16 +359,8 @@ export const RatesAndFees = () => {
     <>
       <Navigation />
 
-      <main className='rates-and-fees'>
-        <section className='raf-intro container'>
-          <Breadcrumbs
-            items={[
-              'Banking',
-              'Savings',
-              'Schedule of Fees and Changes for Personal Deposit Accounts'
-            ]}
-          />
-
+      <main className='rates-and-fees container'>
+        <section className='raf-intro'>
           <p className='raf-rotate-hint visible-xs'>
             <i className='icon icon-rotate-phone' />
             <span>Rotate device for best view</span>
@@ -563,6 +555,14 @@ export const RatesAndFees = () => {
           at ATMs we own or operate will be available on the first Business Day
           after the day of your deposit, unless a longer hold applies.
         </section>
+
+        <Breadcrumbs
+          items={[
+            'Banking',
+            'Savings',
+            'Schedule of Fees and Changes for Personal Deposit Accounts'
+          ]}
+        />
       </main>
 
       <Footer />

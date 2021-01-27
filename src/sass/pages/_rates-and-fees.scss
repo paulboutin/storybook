@@ -1,5 +1,5 @@
 .rates-and-fees {
-  padding-bottom: spacing(32);
+  padding-top: spacing(32);
 
   .raf-rotate-hint {
     .icon {
@@ -88,5 +88,10 @@
       list-style: initial;
       padding-left: spacing(16);
     }
+  }
+
+  .breadcrumbs {
+    margin-top: spacing(32);
+    margin-bottom: spacing(16);
   }
 }

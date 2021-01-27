@@ -94,9 +94,9 @@ export const AccountDisclosure = () => {
             'Deposit Account Disclosure'
           ]}
         />
-
-        <Footer />
       </main>
+
+      <Footer />
     </>
   )
 }

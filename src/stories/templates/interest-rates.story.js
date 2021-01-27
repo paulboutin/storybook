@@ -183,9 +183,9 @@ export const InterestRates = () => (
       <Breadcrumbs
         items={['Home', 'Credit Cards', 'Cash Back Card', 'Interest Rates']}
       />
-
-      <Footer />
     </main>
+
+    <Footer />
   </>
 )
 
