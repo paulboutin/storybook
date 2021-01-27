@@ -1,6 +1,7 @@
 {
   "name": "botw-component-library",
   "version": "1.0.0",
+  "private": true,
   "engines": {
     "node": "12"
   },
