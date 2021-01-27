@@ -6,12 +6,14 @@ export const defaultTitle =
   'Together, we can safeguard the environment and the future of our planet.'
 export const altTitle = 'Open online in about 10 minutes'
 export const defaultText = 'Type something'
+export const defaultLabel = 'Call to Action'
 
 const ClosingCTA = ({
   type,
   image,
   title = defaultTitle,
   text = defaultText,
+  label = defaultLabel,
   className
 }) => (
   <section
@@ -45,7 +47,7 @@ const ClosingCTA = ({
             dangerouslySetInnerHTML={{ __html: text }}
           />
         )}
-        <Button type='tertiary' label='Call to Action' link />
+        <Button type='tertiary' label={label} link />
       </div>
     </div>
   </section>

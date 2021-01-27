@@ -1,86 +1,58 @@
 .help-center {
-  .help-center-breadcrumbs {
+  .help-center-topics {
     background-color: color('grey-5');
+    padding-top: spacing(32);
+    padding-bottom: spacing(32);
+  }
 
-    .breadcrumbs {
-      margin-bottom: spacing(16);
+  .help-center-topics-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -#{spacing(12)};
+  }
+
+  .help-center-topic-wrapper {
+    margin: 0 auto;
+    padding: spacing(12);
+
+    @include screen('sm') {
+      width: 50%;
+    }
+
+    @include screen('md') {
+      width: percentage(1 / 3);
     }
   }
 
-  .help-center-articles {
-    padding-bottom: spacing(48);
+  .help-center-topic {
+    @include box-shadow('sm');
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: color('white');
+    padding: spacing(24) spacing(16);
+    transition-duration: 0.5s;
+    transition-property: transform, box-shadow;
 
-    @include screen('sm') {
-      padding-top: spacing(16);
+    &:hover {
+      @include box-shadow('lg');
+      transform: scale(1.05);
     }
+  }
 
-    .container {
-      display: flex;
+  .help-center-topic-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: color('grey-5');
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+  }
 
-      @include screen('sm', 'down') {
-        flex-direction: column;
-      }
-    }
-
-    .help-center-topics {
-      flex-shrink: 0;
-
-      @include screen('sm') {
-        width: 40%;
-      }
-
-      @include screen('md') {
-        width: 35%;
-      }
-
-      @include screen('lg') {
-        width: 30%;
-      }
-
-      .accordion {
-        @include screen('sm', 'down') {
-          margin: 0 -15px;
-          padding-left: spacing(16);
-          padding-right: spacing(16);
-        }
-      }
-
-      .accordion-content {
-        max-width: none;
-        padding-left: spacing(12);
-      }
-
-      .help-center-article-link {
-        &:not(:first-child) {
-          margin-top: spacing(12);
-        }
-      }
-    }
-
-    .help-center-article {
-      display: none;
-      padding-top: spacing(32);
-
-      @include screen('sm') {
-        padding-top: spacing(16);
-        padding-left: spacing(64);
-      }
-
-      .help-center-article-heading {
-        @include font-size('xs');
-        color: color('grey-70');
-        text-transform: uppercase;
-        letter-spacing: 2px;
-      }
-
-      .help-center-article-title {
-        margin-top: spacing(8);
-        margin-bottom: spacing(12);
-      }
-    }
-
-    .help-center-article-selected {
-      display: block;
-    }
+  .help-center-topic-title {
+    margin-top: spacing(16);
+    margin-bottom: spacing(4);
   }
 }
