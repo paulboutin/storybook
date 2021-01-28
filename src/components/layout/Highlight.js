@@ -36,7 +36,7 @@ const Highlight = ({
     )}
 
     <article className='highlight-content-container'>
-      {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+      {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
       <h2>{title}</h2>
 
       {text && <p className='highlight-text'>{text}</p>}

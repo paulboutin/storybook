@@ -1,7 +1,25 @@
 import React from 'react'
-import ResourceLinks from '../../components/layout/ResourceLinks'
+import ResourceLinks, {
+  defaultEyebrow,
+  defaultText,
+  defaultTitle
+} from '../../components/layout/ResourceLinks'
+import { boolean, text } from '@storybook/addon-knobs'
 
-export const ResourceLinksStory = () => <ResourceLinks />
+export const ResourceLinksStory = () => {
+  const enableEyebrow = boolean('Eyebrow Enable', true)
+  const eyebrow = text('Eyebrow Text', defaultEyebrow)
+  const title = text('Title', defaultTitle)
+  const textContent = text('Text', defaultText)
+
+  return (
+    <ResourceLinks
+      eyebrow={{ enable: enableEyebrow, text: eyebrow }}
+      title={title}
+      text={textContent}
+    />
+  )
+}
 
 ResourceLinksStory.story = {
   name: 'Resource Links'

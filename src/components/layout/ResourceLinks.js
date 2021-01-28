@@ -2,16 +2,26 @@ import React from 'react'
 import Eyebrow from '../base/Eyebrow'
 import Link from '../base/Link'
 
-const ResourceLinks = () => (
+export const defaultEyebrow = 'Resources'
+export const defaultTitle = 'Useful links'
+export const defaultText =
+  'Bank of the West has the strongest environment stance of any major bank.'
+
+const ResourceLinks = ({ eyebrow = {}, title, text }) => (
   <section className='resource-links container'>
     <div className='row'>
       <div className='col-xs-12 col-sm-6 col-md-4'>
-        <Eyebrow>Resources</Eyebrow>
-        <h2 className='resource-links-title'>Useful links</h2>
-        <p className='resource-links-text'>
-          Bank of the West has the strongest environment stance of any major
-          bank.
-        </p>
+        {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
+        <h2
+          className='resource-links-title'
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
+        {text && (
+          <p
+            className='resource-links-text'
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
+        )}
       </div>
 
       <div className='col-xs-12 col-sm-5 col-sm-offset-1 col-md-7'>

@@ -29,7 +29,9 @@ const ListElement = ({ image, items, headerText, altLayout }) => (
       )}
       <div className='list-element-content'>
         <div className='list-element-header'>
-          {headerText.eyebrow && <Eyebrow>{headerText.eyebrow}</Eyebrow>}
+          {headerText.eyebrow.enable && (
+            <Eyebrow>{headerText.eyebrow.text}</Eyebrow>
+          )}
           <h2
             className='list-element-heading'
             dangerouslySetInnerHTML={{ __html: headerText.heading }}

@@ -3,6 +3,12 @@
   padding-bottom: spacing(48);
   text-align: center;
 
+  .callout-eyebrow-wrapper {
+    text-align: left;
+    display: flex;
+    justify-content: center;
+  }
+
   .callout-title {
     margin-bottom: spacing(16);
   }
@@ -21,5 +27,9 @@
   &.callout-green {
     background-color: color('green');
     color: color('white');
+
+    .eyebrow {
+      color: inherit;
+    }
   }
 }
