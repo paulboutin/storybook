@@ -19,7 +19,7 @@ describe('Base Components', () => {
     })),
     ...['standard', 'flat'].map(type => ({
       title: `card ${type}`,
-      path: `base-components-card--${type}`,
+      path: `base-components-card-standard--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
     ...['outline', 'underline'].map(type => ({
@@ -108,6 +108,11 @@ describe('Base Components', () => {
     {
       title: 'radio',
       path: 'base-components--radio-story',
+      devices: ['desktop']
+    },
+    {
+      title: 'aside',
+      path: 'base-components--aside-story',
       devices: ['desktop']
     }
   ]
