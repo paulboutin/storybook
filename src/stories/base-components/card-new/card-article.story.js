@@ -4,7 +4,8 @@ import { radios, text } from '@storybook/addon-knobs'
 
 const options = {
   Standard: 'standard',
-  Text: 'text-only'
+  Text: 'text-only',
+  Video: 'video'
 }
 
 export const Article = () => {
@@ -16,7 +17,7 @@ export const Article = () => {
     'Real-Time Business: Are Your Payments Prepared?'
   )
 
-  if (type === options.Standard) {
+  if ([options.Standard, options.Video].includes(type)) {
     tag = text('Tag', 'Global Finance')
     subtext = text('Subtext', '9min read')
     image = text('Image', 'http://via.placeholder.com/640')
