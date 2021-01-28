@@ -18,7 +18,7 @@
     padding: spacing(16);
 
     .link {
-      @include font-size('h4');
+      @include font-size('h5');
       @include font-weight('bold');
       color: color('black');
       flex-grow: 1;
@@ -65,6 +65,7 @@
   &.card-new-video {
     .popup-video {
       @include fixed-ratio(2, 1);
+      height: auto;
       width: 100%;
 
       .popup-video-content {

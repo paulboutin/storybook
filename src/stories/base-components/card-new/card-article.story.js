@@ -20,6 +20,9 @@ export const Article = () => {
   if ([options.Standard, options.Video].includes(type)) {
     tag = text('Tag', 'Global Finance')
     subtext = text('Subtext', '9min read')
+  }
+
+  if (type === options.Standard) {
     image = text('Image', 'http://via.placeholder.com/640')
   }
 
