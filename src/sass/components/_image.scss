@@ -17,3 +17,7 @@
 .ratio-16\:9 {
   @include fixed-ratio(16, 9);
 }
+
+.ratio-2\:1 {
+  @include fixed-ratio(2, 1);
+}
