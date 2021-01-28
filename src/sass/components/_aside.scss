@@ -1,0 +1,36 @@
+.aside {
+  @include box-shadow('sm');
+  position: sticky;
+  top: spacing(16);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 25%;
+  flex-shrink: 0;
+  background-color: color('white');
+  border: 1px solid color('grey-5');
+  margin-right: spacing(32);
+  padding: spacing(16) spacing(12) spacing(32);
+
+  @include screen('md', 'down') {
+    display: none;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 8px solid color('green');
+  }
+
+  .aside-title {
+    @include font-size('base');
+    @include font-weight('normal');
+  }
+
+  .link {
+    margin-top: spacing(12);
+  }
+}
