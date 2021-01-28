@@ -18,7 +18,7 @@
     padding: spacing(16);
 
     .link {
-      @include font-size('lg');
+      @include font-size('h4');
       @include font-weight('bold');
       color: color('black');
       flex-grow: 1;
@@ -91,6 +91,7 @@
       padding-bottom: spacing(32);
 
       .link {
+        text-align: center;
         flex-grow: 0;
         color: inherit;
       }
