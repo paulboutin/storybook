@@ -4,11 +4,7 @@ import Eyebrow from '../base/Eyebrow'
 
 const Callout = ({ eyebrow = {}, title, text, className }) => (
   <div className={classNames('callout container', className)}>
-    {eyebrow.enable && (
-      <div className='callout-eyebrow-wrapper'>
-        <Eyebrow>{eyebrow.text}</Eyebrow>
-      </div>
-    )}
+    {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
     <h1 className='callout-title'>{title}</h1>
     <p className='callout-text'>{text}</p>
   </div>

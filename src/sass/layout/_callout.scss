@@ -3,10 +3,8 @@
   padding-bottom: spacing(48);
   text-align: center;
 
-  .callout-eyebrow-wrapper {
-    text-align: left;
-    display: flex;
-    justify-content: center;
+  .eyebrow {
+    align-items: center;
   }
 
   .callout-title {
