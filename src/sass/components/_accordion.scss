@@ -53,6 +53,32 @@
       @extend .icon-minus;
     }
   }
+
+  &.accordion-table {
+    border-bottom: none;
+
+    .accordion-summary {
+      padding: 0 spacing(16);
+
+      &:before {
+        border-bottom: 2px solid color('grey-10');
+      }
+    }
+
+    .accordion-content {
+      max-width: unset;
+
+      .table-wrapper {
+        margin-top: spacing(8);
+      }
+    }
+
+    &.accordion-expanded {
+      padding-bottom: 0;
+      margin-bottom: spacing(16);
+      border-bottom: 2px solid color('grey-10');
+    }
+  }
 }
 
 .accordion-inverted {
