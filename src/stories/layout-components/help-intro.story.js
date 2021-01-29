@@ -4,7 +4,8 @@ import { boolean } from '@storybook/addon-knobs'
 
 export const HelpIntroStory = () => {
   const showLinks = boolean('Show links', true)
-  return <HelpIntro showLinks={showLinks} />
+  const fullwidth = boolean('Full-width', true)
+  return <HelpIntro showLinks={showLinks} fullWidth={fullwidth} />
 }
 
 HelpIntroStory.story = {

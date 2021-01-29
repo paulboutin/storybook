@@ -2,10 +2,10 @@ import React from 'react'
 import classNames from 'classnames'
 
 const icons = {
-  danger: '/icons/img/alert-red.png',
-  success: '/icons/img/alert-green.png',
-  info: '/icons/img/alert-blue.png',
-  warning: '/icons/img/alert-yellow.png'
+  danger: '/icons/img/alert-red.svg',
+  success: '/icons/img/alert-green.svg',
+  info: '/icons/img/alert-blue.svg',
+  warning: '/icons/img/alert-yellow.svg'
 }
 
 const Alert = ({ type, title, text }) => {

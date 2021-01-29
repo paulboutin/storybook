@@ -1,5 +1,5 @@
 .rates-and-fees {
-  padding-bottom: spacing(32);
+  padding-top: spacing(32);
 
   .raf-rotate-hint {
     .icon {
@@ -55,32 +55,6 @@
     }
   }
 
-  .accordion {
-    border-bottom: none;
-  }
-
-  .accordion-expanded {
-    padding-bottom: 0;
-    margin-bottom: spacing(16);
-    border-bottom: 2px solid color('grey-10');
-  }
-
-  .accordion-summary {
-    padding: 0 spacing(16);
-
-    &:before {
-      border-bottom: 2px solid color('grey-10');
-    }
-  }
-
-  .accordion-content {
-    max-width: none;
-  }
-
-  .table-wrapper {
-    margin-top: spacing(8);
-  }
-
   .raf-legal-addendum {
     @include font-size('xs');
 
@@ -88,5 +62,10 @@
       list-style: initial;
       padding-left: spacing(16);
     }
+  }
+
+  .breadcrumbs {
+    margin-top: spacing(32);
+    margin-bottom: spacing(16);
   }
 }

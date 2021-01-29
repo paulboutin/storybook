@@ -1,5 +1,5 @@
 .account-disclosure {
-  padding-bottom: spacing(32);
+  padding-top: spacing(32);
 
   .account-disclosure-title {
     margin-top: spacing(32);
@@ -35,5 +35,10 @@
   .account-disclosure-section-title {
     margin-top: spacing(24);
     margin-bottom: spacing(8);
+  }
+
+  .breadcrumbs {
+    margin-top: spacing(32);
+    margin-bottom: spacing(16);
   }
 }

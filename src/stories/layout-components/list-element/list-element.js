@@ -1,5 +1,5 @@
 import React from 'react'
-import { array, text } from '@storybook/addon-knobs'
+import { array, text, boolean } from '@storybook/addon-knobs'
 import ListElement from '../../../components/layout/ListElement'
 
 const defaultImage = 'http://via.placeholder.com/640x480'
@@ -18,8 +18,9 @@ const headerText = {
 }
 
 export const ListElementStory = ({ type }) => {
+  const enableEyebrow = boolean('Eyebrow Enable', true)
+  const eyebrow = text('Eyebrow Text', headerText.eyebrow)
   const items = array('Items', defaultItems)
-  const eyebrow = text('Eyebrow', headerText.eyebrow)
   const heading = text('Title', headerText.heading)
   const textContent = text('Text', headerText.text)
 
@@ -32,7 +33,11 @@ export const ListElementStory = ({ type }) => {
 
   return (
     <ListElement
-      headerText={{ heading, eyebrow, text: textContent }}
+      headerText={{
+        heading,
+        eyebrow: { enable: enableEyebrow, text: eyebrow },
+        text: textContent
+      }}
       altLayout={isAlt}
       image={isAlt ? { src: image, alt: 'List image' } : null}
       items={items}

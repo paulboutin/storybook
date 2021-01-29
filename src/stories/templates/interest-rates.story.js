@@ -1,16 +1,13 @@
 import React from 'react'
 import Navigation from '../../components/layout/Navigation'
 import Breadcrumbs from '../../components/base/Breadcrumbs'
+import Footer from '../../components/layout/Footer'
 
 export const InterestRates = () => (
   <>
     <Navigation />
 
     <main className='interest-rates container'>
-      <Breadcrumbs
-        items={['Home', 'Credit Cards', 'Cash Back Card', 'Interest Rates']}
-      />
-
       <h2 className='interest-rates-title'>
         Interest Rates, Interest Charges, and Fees
         <br />
@@ -182,7 +179,13 @@ export const InterestRates = () => (
         protections provided to them by calling 1-866-761-2689 (TTY users call
         1-800-659-5495).
       </p>
+
+      <Breadcrumbs
+        items={['Home', 'Credit Cards', 'Cash Back Card', 'Interest Rates']}
+      />
     </main>
+
+    <Footer />
   </>
 )
 

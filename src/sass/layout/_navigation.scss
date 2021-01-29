@@ -95,14 +95,18 @@ body.navigation-open {
     }
 
     .navigation-logo {
+      object-fit: contain;
       height: 32px;
+      width: 144px;
 
       @include screen('sm') {
         height: 40px;
+        width: 180px;
       }
 
       @include screen('lg') {
         height: 48px;
+        width: 216px;
       }
     }
 

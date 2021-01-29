@@ -1,40 +1,43 @@
 import React from 'react'
-import { text } from '@storybook/addon-knobs'
+import { text, number } from '@storybook/addon-knobs'
 import ColumnCards from '../../components/layout/ColumnCards'
-import Card from '../../components/base/Card'
-
-const items = [
-  {
-    heading: 'Lorem Ipsum Header',
-    text: 'Check out our Premier Checking account'
-  },
-  {
-    heading: 'Lorem Ipsum Header',
-    text: 'Learn about our Money Market Plus account'
-  },
-  {
-    heading: 'Lorem Ipsum Header',
-    text: 'We will help you to decide what is best for you'
-  }
-]
+import Card, { defaultItems } from '../../components/base/Card'
 
 const defaultImage = 'http://via.placeholder.com/500'
 
+const options = {
+  range: true,
+  min: 2,
+  max: 6,
+  step: 1
+}
+
 export const CardsThreeColumn = () => {
-  const image = text('Image', defaultImage)
+  const items = []
+  const cards = number('Cards', 3, options, 'config')
+
+  for (let i = 0; i < cards; i++) {
+    const defaultColumn = defaultItems[i] || defaultItems[0]
+    const prefix = `Card ${i + 1}`
+
+    items.push({
+      heading: text('Heading', defaultColumn.heading, prefix),
+      text: text('Text', defaultColumn.text, prefix),
+      image: text('Image', defaultImage, prefix)
+    })
+  }
 
   const heading = 'Recommended for you'
-
   const linkText = 'View All'
 
   return (
-    <ColumnCards heading={heading}>
+    <ColumnCards columns={cards} heading={heading}>
       {items.map((item, index) => (
         <Card
           key={index}
           heading={item.heading}
           linkText={linkText}
-          image={{ src: image, alt: 'image' }}
+          image={{ src: item.image, alt: 'image' }}
         >
           {item.text}
         </Card>

@@ -3,7 +3,14 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
 
-const PromoElement = ({ type, image, eyebrow, heading, text, children }) => (
+const PromoElement = ({
+  type,
+  image,
+  eyebrow = {},
+  heading,
+  text,
+  children
+}) => (
   <section
     className={classNames('promo-element', {
       'promo-alt': type === 'alt',
@@ -15,7 +22,7 @@ const PromoElement = ({ type, image, eyebrow, heading, text, children }) => (
   >
     <div className='container'>
       <div className='promo-element-content'>
-        {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+        {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
         <h3
           className='promo-element-heading'
           dangerouslySetInnerHTML={{ __html: heading }}

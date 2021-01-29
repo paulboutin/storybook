@@ -3,11 +3,31 @@
   padding-bottom: spacing(48);
   text-align: center;
 
+  .eyebrow {
+    align-items: center;
+  }
+
   .callout-title {
     margin-bottom: spacing(16);
   }
 
   .callout-text {
     @include font-size('h5');
+  }
+
+  &.callout-centered {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &.callout-green {
+    background-color: color('green');
+    color: color('white');
+
+    .eyebrow {
+      color: inherit;
+    }
   }
 }

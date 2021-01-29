@@ -3,6 +3,7 @@ import Navigation from '../../components/layout/Navigation'
 import Breadcrumbs from '../../components/base/Breadcrumbs'
 import Accordion from '../../components/base/Accordion'
 import Link from '../../components/base/Link'
+import Footer from '../../components/layout/Footer'
 
 export const AccountDisclosure = () => {
   const sections = [
@@ -28,15 +29,6 @@ export const AccountDisclosure = () => {
       <Navigation />
 
       <main className='account-disclosure container'>
-        <Breadcrumbs
-          items={[
-            'Home',
-            'Checking',
-            'Any Deposit Checking',
-            'Deposit Account Disclosure'
-          ]}
-        />
-
         <h2>Deposit Account Disclosure</h2>
         <p>
           and Safe Deposit Box Rental Agreement Terms and Conditions For
@@ -93,7 +85,18 @@ export const AccountDisclosure = () => {
             ))}
           </section>
         ))}
+
+        <Breadcrumbs
+          items={[
+            'Home',
+            'Checking',
+            'Any Deposit Checking',
+            'Deposit Account Disclosure'
+          ]}
+        />
       </main>
+
+      <Footer />
     </>
   )
 }

@@ -6,14 +6,19 @@ export const defaultTitle =
   'Together, we can safeguard the environment and the future of our planet.'
 export const altTitle = 'Open online in about 10 minutes'
 export const defaultText = 'Type something'
+export const defaultLabel = 'Call to Action'
 
 const ClosingCTA = ({
   type,
   image,
   title = defaultTitle,
-  text = defaultText
+  text = defaultText,
+  label = defaultLabel,
+  className
 }) => (
-  <section className={classNames('closing-cta', `closing-cta-${type}`)}>
+  <section
+    className={classNames('closing-cta', `closing-cta-${type}`, className)}
+  >
     <div className='container'>
       {type === '2col' && (
         <img
@@ -42,7 +47,7 @@ const ClosingCTA = ({
             dangerouslySetInnerHTML={{ __html: text }}
           />
         )}
-        <Button type='tertiary' label='Call to Action' link />
+        <Button type='tertiary' label={label} link />
       </div>
     </div>
   </section>

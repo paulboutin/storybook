@@ -8,202 +8,209 @@ import Link from '../../components/base/Link'
 import Navigation from '../../components/layout/Navigation'
 import Table from '../../components/base/Table'
 
-export const RatesAndFees = () => {
-  const accordions = [
-    {
-      title: 'ATM Cards and Debit Cards',
-      table: {
-        body: [
-          [['ATM Card/Debit Card Purchases', 'ATM Card/Debit Card Purchases']],
-          [['ATM Statements', '$2 each']],
+export const defaultItems = [
+  {
+    title: 'ATM Cards and Debit Cards',
+    table: {
+      header: [],
+      body: [
+        [['ATM Card/Debit Card Purchases', 'ATM Card/Debit Card Purchases']],
+        [['ATM Statements', '$2 each']],
+        [
+          ['Foreign Currency Transactions', ''],
+          ['MasterCard® Fee', '1% of transaction amount'],
+          ['Bank of the West Fee', '2% of transaction amount']
+        ],
+        [
+          ['Non-Bank of the West ATM Transactions', ''],
+          ['Balance Inquiry', '$3 per inquiry'],
+          ['Transfer', '$3 per transfer'],
+          ['Withdrawal', '$3 per withdrawal']
+        ],
+        [
           [
-            ['Foreign Currency Transactions', ''],
-            ['MasterCard® Fee', '1% of transaction amount'],
-            ['Bank of the West Fee', '2% of transaction amount']
-          ],
-          [
-            ['Non-Bank of the West ATM Transactions', ''],
-            ['Balance Inquiry', '$3 per inquiry'],
-            ['Transfer', '$3 per transfer'],
-            ['Withdrawal', '$3 per withdrawal']
-          ],
-          [
-            [
-              'Debit Card Cash Advance Withdrawal at a financial institution that displays the MasterCard® Logo',
-              '$3 per withdrawal'
-            ]
-          ],
-          [['ATM Card or Debit Card Reissuance (Lost or Stolen)', '$5']],
-          [['Withdrawal', '$3 per withdrawal']],
-          [['Expedited Domestic Delivery of ATM/Debit Card', '$25']],
-          [['Expedited International Delivery of ATM/Debit Card', '$65']],
-          [['Debit Rewards Annual Membership', '$15']]
-        ]
-      }
-    },
-    {
-      title: 'IRA',
-      table: {
-        body: [
-          [['IRA Annual Fee', '$15']],
-          [['IRA Transfer or Closing Fee', '$15']]
-        ]
-      }
-    },
-    {
-      title: 'Night Depository',
-      table: {
-        body: [
-          [['Annual Fee', '$20']],
-          [['Key Deposit (non-refundable)', '$5 per key']]
-        ]
-      }
-    },
-    {
-      title: 'Online Banking',
-      table: {
-        body: [
-          [
-            ['External Transfers', ''],
-            [
-              'Standard (3 business days) External Transfer – Web Fee',
-              'No charge'
-            ],
-            ['Next Business Day External Transfer', '$3 each'],
-            ['Same Business Day External Transfer', '$10 each']
-          ],
-          [['Zelle® Payments', '']],
-          [
-            ['Online Bill Pay', ''],
-            ['Same Day Online Bill Payment - Transaction Fee', '$10.95 each'],
-            ['Overnight Check - Transaction Fee', '$17.50 each']
-          ]
-        ]
-      }
-    },
-    {
-      title: 'Overdrafts and Returned Items',
-      table: {
-        body: [
-          [
-            ['Overdraft Fee or Returned Item Fee', '$35 each item'],
-            [
-              {
-                data:
-                  '<b>$5 Overdraft Buffer:</b> No Overdraft Fees will be assessed on your checking or money market Account if at the end of the Business Day your Account’s Available Balance is overdrawn by $5 or less after all transactions have posted.',
-                cols: 2
-              }
-            ],
-            [
-              {
-                data:
-                  '<b>Daily Maximum:</b> No more than five (5) Overdraft and/or Returned Item Fees will be applied on any one (1) Business Day per checking or money market Account.',
-                cols: 2
-              }
-            ],
-            [
-              {
-                data:
-                  '<b>Overdraft Fee Eraser:</b> Upon request, we will refund one (1) Overdraft Fee or Returned Item Fee in a rolling 12 month period.',
-                cols: 2
-              }
-            ]
-          ],
-          [
-            [
-              {
-                data:
-                  '<b>Extended Overdraft Fee:</b> If your checking or money market Account remains overdrawn $15 or more for five (5) consecutive Business Days.',
-                cols: 2
-              }
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      title: 'Overdraft Programs',
-      table: {
-        body: [
-          [
-            [
-              'Savings Overdraft Protection Transfer Fee',
-              '$12 each day that a transfer occurs'
-            ]
-          ],
-          [
-            [
-              'Key Deposit (non-refundable)',
-              'Refer to the Gold Line Account Agreement and Disclosure Statement'
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      title: 'Safe Deposit Box',
-      table: {
-        body: [
-          [['Set-Up Fee', '$20 per box']],
-          [['Annual Fee', 'Varies']],
-          [['Safe Deposit Box Forced Opening', 'Varies based on cost to Bank']]
-        ]
-      }
-    },
-    {
-      title: 'Statements',
-      table: {
-        body: [
-          [['Check Safekeeping', 'No charge']],
-          [
-            [
-              'Image Statement (front of checks only)',
-              '$2 per statement cycle.<br />Money Market Accounts - no charge'
-            ]
-          ],
-          [
-            [
-              'Image Statement (front and back of checks',
-              '$3 per statement cycle'
-            ]
-          ],
-          [['Copy of a Statement', '$5 each']],
-          [['Ongoing Duplicate Statements', '$5 each']],
-          [['Snapshot Statement', '$2 each']],
-          [['Special Schedule Statement (off-cycle)', '$5 each']],
-          [['Paper Statement Fee', '$3/month per checking Account']],
-          [
-            [
-              {
-                data:
-                  '<span style="font-weight: normal">Charged each monthly statement cycle you receive a paper statement (fee also applies to each checking Account subject to the fee in a combined statement). Fee waived for Bank of the West Premier Checking OR if any account owner is age 65 years or older OR account ownership is ineligible for Online Banking access OR Account has Alternative Statement Option of Audio, Braille, or Large Font.</span>',
-                cols: 2
-              }
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      title: 'Consumer Savings and Money Market Accounts',
-      table: {
-        header: [
-          [
-            'Type of Account',
-            'Classic Savings',
-            'Choice Money Market Savings',
-            'Money Market Premier',
-            'Assurance Money Market'
+            'Debit Card Cash Advance Withdrawal at a financial institution that displays the MasterCard® Logo',
+            '$3 per withdrawal'
           ]
         ],
-        body: [
-          [['Minimum Amount to Open', '$25', '$100', '$10,000', '$10,000']],
-          [['Pays Interest', 'Yes', 'Yes', 'Yes', 'Yes']],
-          [['Monthly Service Charge', '$5', '$15', '$15', '$15']],
+        [['ATM Card or Debit Card Reissuance (Lost or Stolen)', '$5']],
+        [['Withdrawal', '$3 per withdrawal']],
+        [['Expedited Domestic Delivery of ATM/Debit Card', '$25']],
+        [['Expedited International Delivery of ATM/Debit Card', '$65']],
+        [['Debit Rewards Annual Membership', '$15']]
+      ]
+    }
+  },
+  {
+    title: 'IRA',
+    table: {
+      header: [],
+      body: [
+        [['IRA Annual Fee', '$15']],
+        [['IRA Transfer or Closing Fee', '$15']]
+      ]
+    }
+  },
+  {
+    title: 'Night Depository',
+    table: {
+      header: [],
+      body: [
+        [['Annual Fee', '$20']],
+        [['Key Deposit (non-refundable)', '$5 per key']]
+      ]
+    }
+  },
+  {
+    title: 'Online Banking',
+    table: {
+      header: [],
+      body: [
+        [
+          ['External Transfers', ''],
           [
-            [
-              'Ways to Waive Monthly Service Charge',
-              `Meet at least one of the following each month:
+            'Standard (3 business days) External Transfer – Web Fee',
+            'No charge'
+          ],
+          ['Next Business Day External Transfer', '$3 each'],
+          ['Same Business Day External Transfer', '$10 each']
+        ],
+        [['Zelle® Payments', '']],
+        [
+          ['Online Bill Pay', ''],
+          ['Same Day Online Bill Payment - Transaction Fee', '$10.95 each'],
+          ['Overnight Check - Transaction Fee', '$17.50 each']
+        ]
+      ]
+    }
+  },
+  {
+    title: 'Overdrafts and Returned Items',
+    table: {
+      header: [],
+      body: [
+        [
+          ['Overdraft Fee or Returned Item Fee', '$35 each item'],
+          [
+            {
+              data:
+                '<b>$5 Overdraft Buffer:</b> No Overdraft Fees will be assessed on your checking or money market Account if at the end of the Business Day your Account’s Available Balance is overdrawn by $5 or less after all transactions have posted.',
+              cols: 2
+            }
+          ],
+          [
+            {
+              data:
+                '<b>Daily Maximum:</b> No more than five (5) Overdraft and/or Returned Item Fees will be applied on any one (1) Business Day per checking or money market Account.',
+              cols: 2
+            }
+          ],
+          [
+            {
+              data:
+                '<b>Overdraft Fee Eraser:</b> Upon request, we will refund one (1) Overdraft Fee or Returned Item Fee in a rolling 12 month period.',
+              cols: 2
+            }
+          ]
+        ],
+        [
+          [
+            {
+              data:
+                '<b>Extended Overdraft Fee:</b> If your checking or money market Account remains overdrawn $15 or more for five (5) consecutive Business Days.',
+              cols: 2
+            }
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    title: 'Overdraft Programs',
+    table: {
+      header: [],
+      body: [
+        [
+          [
+            'Savings Overdraft Protection Transfer Fee',
+            '$12 each day that a transfer occurs'
+          ]
+        ],
+        [
+          [
+            'Key Deposit (non-refundable)',
+            'Refer to the Gold Line Account Agreement and Disclosure Statement'
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    title: 'Safe Deposit Box',
+    table: {
+      header: [],
+      body: [
+        [['Set-Up Fee', '$20 per box']],
+        [['Annual Fee', 'Varies']],
+        [['Safe Deposit Box Forced Opening', 'Varies based on cost to Bank']]
+      ]
+    }
+  },
+  {
+    title: 'Statements',
+    table: {
+      header: [],
+      body: [
+        [['Check Safekeeping', 'No charge']],
+        [
+          [
+            'Image Statement (front of checks only)',
+            '$2 per statement cycle.<br />Money Market Accounts - no charge'
+          ]
+        ],
+        [
+          [
+            'Image Statement (front and back of checks',
+            '$3 per statement cycle'
+          ]
+        ],
+        [['Copy of a Statement', '$5 each']],
+        [['Ongoing Duplicate Statements', '$5 each']],
+        [['Snapshot Statement', '$2 each']],
+        [['Special Schedule Statement (off-cycle)', '$5 each']],
+        [['Paper Statement Fee', '$3/month per checking Account']],
+        [
+          [
+            {
+              data:
+                '<span style="font-weight: normal">Charged each monthly statement cycle you receive a paper statement (fee also applies to each checking Account subject to the fee in a combined statement). Fee waived for Bank of the West Premier Checking OR if any account owner is age 65 years or older OR account ownership is ineligible for Online Banking access OR Account has Alternative Statement Option of Audio, Braille, or Large Font.</span>',
+              cols: 2
+            }
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    title: 'Consumer Savings and Money Market Accounts',
+    table: {
+      header: [
+        [
+          'Type of Account',
+          'Classic Savings',
+          'Choice Money Market Savings',
+          'Money Market Premier',
+          'Assurance Money Market'
+        ]
+      ],
+      body: [
+        [['Minimum Amount to Open', '$25', '$100', '$10,000', '$10,000']],
+        [['Pays Interest', 'Yes', 'Yes', 'Yes', 'Yes']],
+        [['Monthly Service Charge', '$5', '$15', '$15', '$15']],
+        [
+          [
+            'Ways to Waive Monthly Service Charge',
+            `Meet at least one of the following each month:
                <br /><br />
                • Make a single transfer of $25 or more from a Bank of the West consumer checking Account through the Auto-Save program<sup>1</sup>
                <br /><br />
@@ -214,7 +221,7 @@ export const RatesAndFees = () => {
                <b>OR</b>
                <br /><br />
                • Primary Account owner is age 18 or younger`,
-              `Meet at least one of the following each month:
+            `Meet at least one of the following each month:
                <br /><br />
                • Make a single transfer of $75 or more from a Bank of the West consumer checking Account through the Auto-Save program<sup>1</sup>
                <br /><br />
@@ -225,150 +232,143 @@ export const RatesAndFees = () => {
                <b>OR</b>
                <br /><br />
                • Maintain a Bank of the West Premier Checking Account. Refer to the Bank of the West Premier Program disclosure for details.`,
-              'Maintain a $10,000 average monthly balance in this account each statement cycle.',
-              'Maintain a $10,000 average monthly balance in this account each statement cycle.'
-            ]
-          ],
-          [
-            [
-              'Transaction Limits',
-              {
-                data:
-                  'Federal regulations require that all money market and savings Accounts be strictly limited to a total of no more than six (6) transactions by check, draft, debit card, or similar order payable to third parties and/or pre-authorized, automatic or telephone transfers from the Account either to a third party or to a another Account (includes Online Banking transfers) per statement period, for money market Accounts, or calendar month, for savings Accounts. For each such transaction in excess of six (6), an Excess Withdrawal Fee will be charged, regardless of the Account balance, other fees, or type of withdrawal. There is no limit to the number of withdrawals paid directly to you by mail, messenger, ATM, or in person.',
-                cols: 4
-              }
-            ]
-          ],
-          [
-            [
-              'Excess Withdrawal Fee',
-              '$15 each',
-              '$15 each',
-              '$15 each',
-              '$15 each'
-            ]
-          ],
-          [
-            [
-              'Other Charges',
-              {
-                data:
-                  'See <i>Schedule of Fees and Charges for Personal Deposit Accounts</i> for other fees that may apply.',
-                cols: 4
-              }
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      title: 'Certificate of Deposit and Individual Retirement Accounts',
-      table: {
-        header: [
-          [
-            'Type of Account',
-            'Certificates of Deposit (CDs)',
-            'Individual Retirement Accounts (IRA CDs)'
+            'Maintain a $10,000 average monthly balance in this account each statement cycle.',
+            'Maintain a $10,000 average monthly balance in this account each statement cycle.'
           ]
         ],
-        body: [
+        [
           [
-            [
-              'Minimum Amount to Open',
-              'Flexible Term CD: $1,000',
-              'Premium Money Market IRA CD (91 days to 24 months): $100'
-            ],
-            [
-              '',
-              'Premium Money Market CD: $2,500',
-              'Flexible IRA CD (12-60 months): $100'
-            ],
-            ['', '7-32 Day CD: $100,000', 'IRA Add-On CDP2P (12 months): $100']
-          ],
-          [['Pays Interest', 'Yes', 'Yes']],
-          [
-            [
-              'Early Withdrawal Penalty',
-              'See <i>Deposit Account Disclosure</i> booklet for details,',
-              'See <i>Deposit Account Disclosure</i> booklet for details.'
-            ]
-          ],
-          [['IRA Annual Fee', 'N/A', '$12 per plan']],
-          [['IRA Transfer or Closing Fee', 'N/A', '$25 per plan']],
-          [
-            [
-              'Other Charges',
-              {
-                data:
-                  'See <i>Deposit Account Disclosure</i> booklet for other fees that may apply.',
-                cols: 2
-              }
-            ]
-          ]
-        ]
-      }
-    },
-    {
-      title: 'ATM and Debit Card Transaction Types and Limitations',
-      table: {
-        header: [
-          [
-            { data: 'Card Type', rows: 2 },
-            { data: 'ATM Withdrawals and Transfers<sup>1</sup>', cols: 2 },
-            { data: 'Point-of-Sale Transactions', cols: 2 },
-            { data: 'Cash Advances<sup>2</sup>', cols: 2 }
-          ],
-          [
-            'Frequency',
-            'Dollar Amount Limitations<sup>3</sup>',
-            'Frequency',
-            'Dollar Amount Limitations<sup>3</sup>',
-            'Frequency',
-            'Dollar Amount Limitations<sup>3</sup>'
+            'Transaction Limits',
+            {
+              data:
+                'Federal regulations require that all money market and savings Accounts be strictly limited to a total of no more than six (6) transactions by check, draft, debit card, or similar order payable to third parties and/or pre-authorized, automatic or telephone transfers from the Account either to a third party or to a another Account (includes Online Banking transfers) per statement period, for money market Accounts, or calendar month, for savings Accounts. For each such transaction in excess of six (6), an Excess Withdrawal Fee will be charged, regardless of the Account balance, other fees, or type of withdrawal. There is no limit to the number of withdrawals paid directly to you by mail, messenger, ATM, or in person.',
+              cols: 4
+            }
           ]
         ],
-        body: [
+        [
           [
-            [
-              'ATM Card',
-              'Unlimited',
-              'Up to $500 a day',
-              'N/A',
-              'N/A',
-              'N/A',
-              'N/A'
-            ]
-          ],
+            'Excess Withdrawal Fee',
+            '$15 each',
+            '$15 each',
+            '$15 each',
+            '$15 each'
+          ]
+        ],
+        [
           [
-            [
-              'Debit Card<sup>4</sup>',
-              'Unlimited',
-              'Up to $500 a day',
-              'Up to 30 merchant transactions per day',
-              'Up to $3,500 worth of goods and services per day',
-              'Unlimited',
-              'Up to $1,000 per day'
-            ]
+            'Other Charges',
+            {
+              data:
+                'See <i>Schedule of Fees and Charges for Personal Deposit Accounts</i> for other fees that may apply.',
+              cols: 4
+            }
           ]
         ]
-      }
+      ]
     }
-  ]
+  },
+  {
+    title: 'Certificate of Deposit and Individual Retirement Accounts',
+    table: {
+      header: [
+        [
+          'Type of Account',
+          'Certificates of Deposit (CDs)',
+          'Individual Retirement Accounts (IRA CDs)'
+        ]
+      ],
+      body: [
+        [
+          [
+            'Minimum Amount to Open',
+            'Flexible Term CD: $1,000',
+            'Premium Money Market IRA CD (91 days to 24 months): $100'
+          ],
+          [
+            '',
+            'Premium Money Market CD: $2,500',
+            'Flexible IRA CD (12-60 months): $100'
+          ],
+          ['', '7-32 Day CD: $100,000', 'IRA Add-On CDP2P (12 months): $100']
+        ],
+        [['Pays Interest', 'Yes', 'Yes']],
+        [
+          [
+            'Early Withdrawal Penalty',
+            'See <i>Deposit Account Disclosure</i> booklet for details,',
+            'See <i>Deposit Account Disclosure</i> booklet for details.'
+          ]
+        ],
+        [['IRA Annual Fee', 'N/A', '$12 per plan']],
+        [['IRA Transfer or Closing Fee', 'N/A', '$25 per plan']],
+        [
+          [
+            'Other Charges',
+            {
+              data:
+                'See <i>Deposit Account Disclosure</i> booklet for other fees that may apply.',
+              cols: 2
+            }
+          ]
+        ]
+      ]
+    }
+  },
+  {
+    title: 'ATM and Debit Card Transaction Types and Limitations',
+    table: {
+      header: [
+        [
+          { data: 'Card Type', rows: 2 },
+          { data: 'ATM Withdrawals and Transfers<sup>1</sup>', cols: 2 },
+          { data: 'Point-of-Sale Transactions', cols: 2 },
+          { data: 'Cash Advances<sup>2</sup>', cols: 2 }
+        ],
+        [
+          'Frequency',
+          'Dollar Amount Limitations<sup>3</sup>',
+          'Frequency',
+          'Dollar Amount Limitations<sup>3</sup>',
+          'Frequency',
+          'Dollar Amount Limitations<sup>3</sup>'
+        ]
+      ],
+      body: [
+        [
+          [
+            'ATM Card',
+            'Unlimited',
+            'Up to $500 a day',
+            'N/A',
+            'N/A',
+            'N/A',
+            'N/A'
+          ]
+        ],
+        [
+          [
+            'Debit Card<sup>4</sup>',
+            'Unlimited',
+            'Up to $500 a day',
+            'Up to 30 merchant transactions per day',
+            'Up to $3,500 worth of goods and services per day',
+            'Unlimited',
+            'Up to $1,000 per day'
+          ]
+        ]
+      ]
+    }
+  }
+]
 
+export const RatesAndFees = ({ accordions = defaultItems }) => {
   return (
     <>
       <Navigation />
 
-      <main className='rates-and-fees'>
-        <section className='raf-intro container'>
-          <Breadcrumbs
-            items={[
-              'Banking',
-              'Savings',
-              'Schedule of Fees and Changes for Personal Deposit Accounts'
-            ]}
-          />
-
+      <main className='rates-and-fees container'>
+        <section className='raf-intro'>
           <p className='raf-rotate-hint visible-xs'>
             <i className='icon icon-rotate-phone' />
             <span>Rotate device for best view</span>
@@ -424,7 +424,11 @@ export const RatesAndFees = () => {
 
         <section className='raf-accordions container'>
           {accordions.map((accordion, index) => (
-            <Accordion key={index} title={accordion.title}>
+            <Accordion
+              key={index}
+              title={accordion.title}
+              className='accordion-table'
+            >
               <Table data={accordion.table} />
             </Accordion>
           ))}
@@ -563,6 +567,14 @@ export const RatesAndFees = () => {
           at ATMs we own or operate will be available on the first Business Day
           after the day of your deposit, unless a longer hold applies.
         </section>
+
+        <Breadcrumbs
+          items={[
+            'Banking',
+            'Savings',
+            'Schedule of Fees and Changes for Personal Deposit Accounts'
+          ]}
+        />
       </main>
 
       <Footer />

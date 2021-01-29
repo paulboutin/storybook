@@ -1,7 +1,13 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Link = ({ href = '#', standalone, className, children }) => (
+const Link = ({
+  href = '#',
+  standalone,
+  noArrow = false,
+  className,
+  children
+}) => (
   <a
     href={href}
     className={classNames(
@@ -11,7 +17,7 @@ const Link = ({ href = '#', standalone, className, children }) => (
     )}
   >
     {children}
-    {standalone && <i className='icon icon-long-arrow-right' />}
+    {standalone && !noArrow && <i className='icon icon-long-arrow-right' />}
   </a>
 )
 

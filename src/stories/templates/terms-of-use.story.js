@@ -1,26 +1,16 @@
 import React from 'react'
 import Breadcrumbs from '../../components/base/Breadcrumbs'
-import Link from '../../components/base/Link'
 import Navigation from '../../components/layout/Navigation'
+import Footer from '../../components/layout/Footer'
+import Aside from '../../components/base/Aside'
 
 export const TermsOfUse = () => (
   <>
     <Navigation />
 
     <main className='terms-of-use container'>
-      <Breadcrumbs
-        items={['Home', 'Credit Cards', 'Cash Back Card', 'Terms of Use']}
-      />
-
       <section className='tos-wrapper'>
-        <aside className='tos-contents'>
-          <h6 className='tos-contents-title'>Content</h6>
-          <Link href='#agreement'>The Agreement</Link>
-          <Link href='#liability'>Liability</Link>
-          <Link href='#relationship'>Our Relationship</Link>
-          <Link href='#rights'>Reservation of Rights</Link>
-          <Link href='#compliance'>Compliance with Law and Governing Law</Link>
-        </aside>
+        <Aside />
 
         <div>
           <h2 className='tos-title'>Terms of Use</h2>
@@ -140,7 +130,13 @@ export const TermsOfUse = () => (
           </p>
         </div>
       </section>
+
+      <Breadcrumbs
+        items={['Home', 'Credit Cards', 'Cash Back Card', 'Terms of Use']}
+      />
     </main>
+
+    <Footer />
   </>
 )
 

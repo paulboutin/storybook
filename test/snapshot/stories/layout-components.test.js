@@ -26,12 +26,12 @@ describe('Layout Components', () => {
       path: 'layout-components--cards-three-column',
       devices: ['mobile', 'tablet', 'desktop']
     },
-    {
-      title: 'faq',
-      path: 'layout-components--faq-story',
-      devices: ['mobile', 'tablet', 'desktop']
-    },
-    ...['standard', 'alt', 'accent-square', 'accent-dark'].map(type => ({
+    ...['accordion', 'table'].map(type => ({
+      title: `faq ${type}`,
+      path: `layout-components-faq--${type}`,
+      devices: ['tablet']
+    })),
+    ...['standard', 'accent-square', 'accent-dark'].map(type => ({
       title: `promo-element ${type}`,
       path: `layout-components-promo-element--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
@@ -187,10 +187,6 @@ describe('Layout Components', () => {
     {
       title: 'help intro',
       path: 'layout-components--help-intro-story'
-    },
-    {
-      title: 'help outro',
-      path: 'layout-components--help-outro-story'
     },
     {
       title: 'callout',

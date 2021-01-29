@@ -1,7 +1,74 @@
 import React from 'react'
-import Infographic from '../../components/layout/Infographic'
+import { boolean, number, radios, text } from '@storybook/addon-knobs'
+import {
+  Infographic,
+  InfographicBox,
+  InfographicBoxImage,
+  defaultItems
+} from '../../components/layout/Infographic'
 
-export const InfographicStory = () => <Infographic />
+const numberOptions = {
+  range: true,
+  min: 2,
+  max: 6,
+  step: 1
+}
+
+const typeOptions = {
+  Text: 'text',
+  Image: 'image'
+}
+
+export const InfographicStory = () => {
+  const items = []
+
+  const cards = number('Cards', 3, numberOptions, 'config')
+  const starBirds = boolean('Starbirds', true, 'config')
+
+  for (let i = 0; i < cards; i++) {
+    const defaultColumn = defaultItems[i] || defaultItems[0]
+
+    const type = radios('Type', typeOptions, typeOptions.Text, `card ${i + 1}`)
+
+    let title = ''
+    let content = ''
+
+    if (type === typeOptions.Text) {
+      title = text('Title', defaultColumn.title, `card ${i + 1}`)
+      content = text('Text', defaultColumn.content, `card ${i + 1}`)
+    } else {
+      content = text(
+        'Image',
+        'http://via.placeholder.com/400x400',
+        `card ${i + 1}`
+      )
+    }
+
+    items.push({
+      type,
+      title,
+      content
+    })
+  }
+
+  return (
+    <Infographic
+      columns={cards}
+      className={starBirds ? 'infographic-star-birds' : ''}
+    >
+      {items.map(({ type, title, content }) => {
+        switch (type) {
+          case typeOptions.Text:
+            return <InfographicBox title={title}>{content}</InfographicBox>
+          case typeOptions.Image:
+            return <InfographicBoxImage src={content} />
+          default:
+            return null
+        }
+      })}
+    </Infographic>
+  )
+}
 
 InfographicStory.story = {
   name: 'Infographic'

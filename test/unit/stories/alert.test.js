@@ -1,7 +1,7 @@
 import React from 'react'
 import { waitFor } from '@testing-library/dom'
 import { mount } from '../utils'
-import Alert from '../../../src/components/base/Alert'
+import Alert from '../../../src/components/layout/Alert'
 import fn from '../../../src/js/components/alert'
 
 describe('Alert component', () => {

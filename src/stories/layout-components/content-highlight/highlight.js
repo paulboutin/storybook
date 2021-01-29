@@ -1,5 +1,5 @@
 import React from 'react'
-import { text, radios } from '@storybook/addon-knobs'
+import { text, radios, boolean } from '@storybook/addon-knobs'
 import Highlight from '../../../components/layout/Highlight'
 import Link from '../../../components/base/Link'
 import Button from '../../../components/base/Button'
@@ -28,8 +28,9 @@ const CTAContent = ({ type = 'link' }) => {
 }
 
 export const HighlightStory = ({ type }) => {
+  const enableEyebrow = boolean('Eyebrow Enable', true)
+  const eyebrow = text('Eyebrow Text', 'Bank for the planet')
   const images = [text('Image', defaultImage)]
-  const eyebrow = text('Eyebrow', 'Bank for the planet')
   const title = text('Title', defaultTitle)
   const textContent = text('Text', defaultText)
   const cta = radios('CTA Content', CTAOptions, CTAOptions.Link)
@@ -42,7 +43,7 @@ export const HighlightStory = ({ type }) => {
         type={type}
         images={images}
         color='primary'
-        eyebrow={eyebrow}
+        eyebrow={{ enable: enableEyebrow, text: eyebrow }}
       >
         <CTAContent type={cta} />
       </Highlight>
@@ -52,7 +53,7 @@ export const HighlightStory = ({ type }) => {
         type={type}
         images={images}
         color='secondary'
-        eyebrow={eyebrow}
+        eyebrow={{ enable: enableEyebrow, text: eyebrow }}
         reverse
       >
         <CTAContent type={cta} />
