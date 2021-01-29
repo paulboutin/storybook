@@ -39,7 +39,7 @@ export const FAQAccordion = ({ data = [] }) => (
   <>
     {data.map(({ title, text }, idx) => {
       return (
-        <Accordion key={idx} title={title}>
+        <Accordion key={idx} title={title} expanded={idx === 0}>
           {text}
         </Accordion>
       )
@@ -58,6 +58,7 @@ export const FAQTables = ({ data = [] }) => (
         key={index}
         title={accordion.title}
         className='accordion-table'
+        expanded={index === 0}
       >
         <Table data={accordion.table} />
       </Accordion>
