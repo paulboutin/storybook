@@ -1,6 +1,12 @@
 .terms-of-use {
   padding-top: spacing(32);
 
+  .aside {
+    @include screen('md', 'down') {
+      display: none;
+    }
+  }
+
   .tos-title {
     margin-bottom: spacing(8);
 
