@@ -12,6 +12,7 @@ export const defaultItems = [
   {
     title: 'ATM Cards and Debit Cards',
     table: {
+      header: [],
       body: [
         [['ATM Card/Debit Card Purchases', 'ATM Card/Debit Card Purchases']],
         [['ATM Statements', '$2 each']],
@@ -43,6 +44,7 @@ export const defaultItems = [
   {
     title: 'IRA',
     table: {
+      header: [],
       body: [
         [['IRA Annual Fee', '$15']],
         [['IRA Transfer or Closing Fee', '$15']]
@@ -52,6 +54,7 @@ export const defaultItems = [
   {
     title: 'Night Depository',
     table: {
+      header: [],
       body: [
         [['Annual Fee', '$20']],
         [['Key Deposit (non-refundable)', '$5 per key']]
@@ -61,6 +64,7 @@ export const defaultItems = [
   {
     title: 'Online Banking',
     table: {
+      header: [],
       body: [
         [
           ['External Transfers', ''],
@@ -83,6 +87,7 @@ export const defaultItems = [
   {
     title: 'Overdrafts and Returned Items',
     table: {
+      header: [],
       body: [
         [
           ['Overdraft Fee or Returned Item Fee', '$35 each item'],
@@ -123,6 +128,7 @@ export const defaultItems = [
   {
     title: 'Overdraft Programs',
     table: {
+      header: [],
       body: [
         [
           [
@@ -142,6 +148,7 @@ export const defaultItems = [
   {
     title: 'Safe Deposit Box',
     table: {
+      header: [],
       body: [
         [['Set-Up Fee', '$20 per box']],
         [['Annual Fee', 'Varies']],
@@ -152,6 +159,7 @@ export const defaultItems = [
   {
     title: 'Statements',
     table: {
+      header: [],
       body: [
         [['Check Safekeeping', 'No charge']],
         [

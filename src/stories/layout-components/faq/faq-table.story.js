@@ -20,7 +20,10 @@ export const Table = () => {
 
     items.push({
       title: text('Title', defaultColumn.title, prefix),
-      table: object('Data', defaultColumn.table, prefix)
+      table: {
+        header: object('Table Header', defaultColumn.table.header, prefix),
+        body: object('Table Data', defaultColumn.table.body, prefix)
+      }
     })
   }
 
