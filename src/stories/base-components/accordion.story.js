@@ -2,6 +2,13 @@ import React from 'react'
 import Accordion from '../../components/base/Accordion'
 import { number, text } from '@storybook/addon-knobs'
 
+const options = {
+  range: true,
+  min: 1,
+  max: 10,
+  step: 1
+}
+
 const defaultContent = [
   '<p>Accordion content</p>',
   '<img src="http://via.placeholder.com/160">',
@@ -14,14 +21,14 @@ const defaultContent = [
 
 export const AccordionStory = () => {
   const accordions = []
-  const accordionNumber = number('Accordions', 3)
+  const accordionNumber = number('Accordions', 3, options, 'config')
 
   for (let i = 0; i < accordionNumber; i++) {
-    const prefix = `Accordion ${i + 1} -`
+    const prefix = `Accordion ${i + 1}`
 
     accordions.push({
-      title: text(`${prefix} Title`, `Accordion ${i + 1} title`),
-      content: text(`${prefix} Content`, defaultContent[i])
+      title: text('Title', `Accordion ${i + 1} title`, prefix),
+      content: text('Content', defaultContent[i], prefix)
     })
   }
 
