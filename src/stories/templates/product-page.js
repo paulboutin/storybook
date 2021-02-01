@@ -39,9 +39,9 @@ const ProductPage = () => (
       />
 
       <Highlight
-        reverse
-        title='Bank for the planet'
-        text="Bank of the West has the strongest environmental stance of any major bank. Our policies are 100% transparent because we're proud of what we finance and what we don't."
+        eyebrow={{ enable: true, text: 'Bank for the planet' }}
+        title='The strongest environmental stance of any major bank.'
+        text="Our policies are 100% transparent because we're proud of what we finance and what we don't."
         type='single'
         images={['http://via.placeholder.com/640']}
       >
