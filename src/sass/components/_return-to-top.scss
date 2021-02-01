@@ -1,0 +1,27 @@
+.return-to-top {
+  display: none;
+
+  position: fixed;
+  bottom: spacing(32);
+
+  background-color: color('green');
+  color: color('white');
+
+  @include font-size('h2');
+
+  @include border-radius('round');
+
+  padding: spacing(8) spacing(12);
+
+  &.visible {
+    display: block;
+  }
+
+  &.right {
+    right: spacing(32);
+  }
+
+  &.left {
+    left: spacing(32);
+  }
+}

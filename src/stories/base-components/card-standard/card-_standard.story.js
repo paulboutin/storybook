@@ -4,7 +4,7 @@ import { CardStory } from './card'
 export const Standard = () => <CardStory type='standard' />
 
 export default {
-  title: 'Base Components/Card Standard',
+  title: 'Base Components/Card',
   parameters: {
     'in-dsm': {
       id: '60055161fd695b08bcf8dfc1'

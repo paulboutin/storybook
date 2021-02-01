@@ -2,23 +2,72 @@
   display: flex;
   flex-direction: column;
 
-  .dropdown-native {
-    @include font-size('sm');
+  .dropdown-native-group {
     @include border-radius('md');
-    padding: spacing(12);
-    background-color: color('white');
     border: 1px solid color('grey-30');
     cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .icon {
+      position: absolute;
+      right: spacing(12);
+      color: color('green');
+    }
 
     &.dropdown-native-inline {
       border: none;
       display: inline;
-      align-self: flex-start;
+
+      .dropdown-native {
+        padding-right: spacing(24);
+      }
+
+      .icon {
+        position: relative;
+        margin-left: -#{spacing(12)};
+        bottom: -#{spacing(2)};
+      }
     }
 
     &.dropdown-native-error {
       border-color: color('error');
       color: color('error');
+
+      .icon {
+        color: inherit;
+      }
+    }
+
+    &.dropdown-native-disabled {
+      border-color: color('grey-10');
+      color: color('grey-10');
+      cursor: not-allowed;
+
+      .icon {
+        color: inherit;
+      }
+    }
+  }
+
+  .dropdown-native {
+    @include font-size('sm');
+    background-color: color('white');
+    padding: spacing(12);
+
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+
+    flex-grow: 1;
+
+    &:focus {
+      @include focus-outline();
+    }
+
+    option {
+      color: color('black');
     }
   }
 

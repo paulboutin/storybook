@@ -12,32 +12,39 @@ const DropdownNative = ({
   error
 }) => (
   <div className='dropdown-native-wrapper'>
-    <select
-      disabled={disabled}
-      className={classNames('dropdown-native', {
+    <div
+      className={classNames('dropdown-native-group', {
         'dropdown-native-inline': inline,
         'dropdown-native-disabled': disabled,
         'dropdown-native-error': !!error
       })}
-      name={name}
-      id={name}
     >
-      <option disabled selected hidden>
-        {label}
-      </option>
-      {items.map((item, idx) => (
-        <option
-          className='dropdown-native-item'
-          key={idx}
-          value={slugify(item)}
-        >
-          {item}
+      <select
+        disabled={disabled}
+        className={'dropdown-native'}
+        name={name}
+        id={name}
+      >
+        <option disabled selected hidden>
+          {label}
         </option>
-      ))}
-    </select>
-    {helper && <p className='dropdown-helper-text'>{helper}</p>}
+        {items.map((item, idx) => (
+          <option
+            className='dropdown-native-item'
+            key={idx}
+            value={slugify(item)}
+          >
+            {item}
+          </option>
+        ))}
+      </select>
 
-    {error && (
+      <i className='icon icon-chevron-down' />
+    </div>
+
+    {helper && !inline && <p className='dropdown-helper-text'>{helper}</p>}
+
+    {error && !inline && (
       <p className='dropdown-error-text'>
         <i className='icon icon-error' />
         {error}
