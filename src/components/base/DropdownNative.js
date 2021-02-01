@@ -42,9 +42,9 @@ const DropdownNative = ({
       <i className='icon icon-chevron-down' />
     </div>
 
-    {helper && <p className='dropdown-helper-text'>{helper}</p>}
+    {helper && !inline && <p className='dropdown-helper-text'>{helper}</p>}
 
-    {error && (
+    {error && !inline && (
       <p className='dropdown-error-text'>
         <i className='icon icon-error' />
         {error}

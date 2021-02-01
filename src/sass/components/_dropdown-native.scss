@@ -34,6 +34,20 @@
     &.dropdown-native-error {
       border-color: color('error');
       color: color('error');
+
+      .icon {
+        color: inherit;
+      }
+    }
+
+    &.dropdown-native-disabled {
+      border-color: color('grey-10');
+      color: color('grey-10');
+      cursor: not-allowed;
+
+      .icon {
+        color: inherit;
+      }
     }
   }
 
@@ -47,6 +61,14 @@
     appearance: none;
 
     flex-grow: 1;
+
+    &:focus {
+      @include focus-outline();
+    }
+
+    option {
+      color: color('black');
+    }
   }
 
   .dropdown-helper-text,
