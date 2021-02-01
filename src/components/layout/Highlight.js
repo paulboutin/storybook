@@ -15,7 +15,7 @@ const Highlight = ({
   images,
   reverse,
   color,
-  eyebrow,
+  eyebrow = {},
   children
 }) => (
   <section className={classNames('highlight container', { reverse })}>

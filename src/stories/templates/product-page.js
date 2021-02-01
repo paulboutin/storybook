@@ -12,6 +12,7 @@ import Legal from '../../components/layout/Legal'
 import ListElement from '../../components/layout/ListElement'
 import Navigation from '../../components/layout/Navigation'
 import PromoElement from '../../components/layout/PromoElement'
+import Link from '../../components/base/Link'
 
 const ProductPage = () => (
   <>
@@ -38,26 +39,18 @@ const ProductPage = () => (
       />
 
       <Highlight
-        position='right'
-        type='overlap-image'
-        images={[
-          'http://via.placeholder.com/640',
-          'http://via.placeholder.com/640'
-        ]}
-      />
-
-      <Highlight
-        position='left'
-        type='overlap-image'
-        images={[
-          'http://via.placeholder.com/640',
-          'http://via.placeholder.com/640'
-        ]}
-      />
+        reverse
+        title='Bank for the planet'
+        text="Bank of the West has the strongest environmental stance of any major bank. Our policies are 100% transparent because we're proud of what we finance and what we don't."
+        type='single'
+        images={['http://via.placeholder.com/640']}
+      >
+        <Link standalone>Learn why your choice of bank matters</Link>
+      </Highlight>
 
       <PromoElement
         heading='The strongest environmental stance of any major bank.'
-        type='Accent Square'
+        type='alt'
         text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         eyebrow='Sustainable Banking'
         image={{ src: 'http://via.placeholder.com/640', alt: 'Promo image' }}
