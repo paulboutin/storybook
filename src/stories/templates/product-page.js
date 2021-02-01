@@ -52,7 +52,7 @@ const ProductPage = () => (
         heading='The strongest environmental stance of any major bank.'
         type='alt'
         text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        eyebrow='Sustainable Banking'
+        eyebrow={{ enable: true, text: 'Sustainable Banking' }}
         image={{ src: 'http://via.placeholder.com/640', alt: 'Promo image' }}
       >
         <Button type='tertiary' label='Call to Action' link />
