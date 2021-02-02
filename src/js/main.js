@@ -8,6 +8,7 @@ import dropdowns from './components/dropdown'
 import sliders from './components/slider'
 import alerts from './components/alert'
 import returnToTop from './components/return-to-top'
+import cardCarousel from './components/card-carousel'
 
 function ready(fn) {
   if (
@@ -32,6 +33,7 @@ function setup() {
     sliders()
     alerts()
     returnToTop()
+    cardCarousel()
   })
 }
 

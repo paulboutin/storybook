@@ -1,0 +1,73 @@
+.card-carousel {
+  position: relative;
+
+  overflow-x: hidden;
+
+  .card-carousel-controls {
+    .card-carousel-control {
+      position: absolute;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      background-color: color('green');
+      color: color('white');
+
+      padding: spacing(4) spacing(8);
+
+      @include box-shadow('xs');
+      @include font-size('h3');
+
+      cursor: pointer;
+
+      &.card-carousel-prev {
+        left: spacing(16);
+      }
+
+      &.card-carousel-next {
+        right: spacing(16);
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  .card-carousel-items-wrapper {
+    overflow-x: visible;
+    padding: spacing(16) spacing(24);
+
+    @include screen('sm') {
+      padding: spacing(16) spacing(32);
+    }
+  }
+
+  .card-carousel-items {
+    display: flex;
+
+    transition-duration: 300ms;
+
+    .card-carousel-item {
+      flex-shrink: 0;
+      padding: 0 spacing(8);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .card-new {
+        width: calc(100vw - #{spacing(64)});
+
+        @include screen('sm') {
+          min-height: 4 * spacing(80);
+          width: 3 * spacing(80);
+        }
+      }
+
+      @include screen('sm') {
+        padding: 0 spacing(12);
+      }
+    }
+  }
+}

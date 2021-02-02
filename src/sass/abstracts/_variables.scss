@@ -44,6 +44,7 @@ $spacings: (
   32: 2rem,
   48: 3rem,
   64: 4rem,
+  80: 5rem,
   96: 6rem,
   128: 8rem,
   160: 10rem
@@ -123,6 +124,7 @@ $font-weights: (
 );
 
 $box-shadows: (
+  xs: 2px 2px 10px 0 rgba(0, 0, 0, 0.5),
   sm: 4px 4px 20px 0 rgba(0, 0, 0, 0.1),
   md: 8px 8px 20px 0 rgba(0, 0, 0, 0.1),
   lg: 12px 12px 20px 0 rgba(0, 0, 0, 0.1),
