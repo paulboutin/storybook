@@ -69,7 +69,7 @@ const ArticleVideo = ({ heading, subtext, tag }) => {
 const Services = ({ heading, image }) => {
   return (
     <>
-      <Image src={image.src} alt={image.alt} ratio='auto' />
+      <Image src={image.src} alt={image.alt} ratio='3:4' />
 
       <div className='card-content'>
         <Link standalone noArrow>

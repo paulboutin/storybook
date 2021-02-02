@@ -21,3 +21,7 @@
 .ratio-2\:1 {
   @include fixed-ratio(2, 1);
 }
+
+.ratio-3\:4 {
+  @include fixed-ratio(3, 4);
+}

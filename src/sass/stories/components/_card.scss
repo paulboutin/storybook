@@ -1,6 +1,6 @@
 .sb\:card {
   width: 100%;
-  max-width: 3 * spacing(160);
+  width: 3 * spacing(160);
 
   @include screen('md') {
     width: percentage(1/3);
@@ -12,5 +12,6 @@
 }
 
 .sb\:card-new {
-  height: 2.75 * spacing(160);
+  min-height: 4 * spacing(80);
+  width: 3 * spacing(80);
 }
