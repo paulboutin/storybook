@@ -3,6 +3,9 @@
 
   position: fixed;
   bottom: spacing(32);
+  z-index: 1000;
+
+  cursor: pointer;
 
   background-color: color('green');
   color: color('white');
