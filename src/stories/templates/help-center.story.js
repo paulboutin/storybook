@@ -4,6 +4,7 @@ import Navigation from '../../components/layout/Navigation'
 import HelpIntro from '../../components/layout/HelpIntro'
 import Legal from '../../components/layout/Legal'
 import Footer from '../../components/layout/Footer'
+import Breadcrumbs from '../../components/base/Breadcrumbs'
 
 export const HelpCenter = () => {
   const topic = {
@@ -50,8 +51,12 @@ export const HelpCenter = () => {
 
         <Legal />
 
-        <Footer />
+        <div className='container'>
+          <Breadcrumbs items={['Help Center', 'Accounts']} />
+        </div>
       </main>
+
+      <Footer />
     </>
   )
 }

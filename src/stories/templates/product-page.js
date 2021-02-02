@@ -13,6 +13,7 @@ import ListElement from '../../components/layout/ListElement'
 import Navigation from '../../components/layout/Navigation'
 import PromoElement from '../../components/layout/PromoElement'
 import Link from '../../components/base/Link'
+import Breadcrumbs from '../../components/base/Breadcrumbs'
 
 const ProductPage = () => (
   <>
@@ -113,6 +114,10 @@ const ProductPage = () => (
       </ColumnCards>
 
       <Legal />
+
+      <div className='container'>
+        <Breadcrumbs items={['Home', 'Checking', 'Any Deposit Checking']} />
+      </div>
     </main>
 
     <Footer />
