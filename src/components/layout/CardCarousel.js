@@ -1,6 +1,5 @@
 import React from 'react'
 import CardNew from '../base/CardNew'
-import Column, { cardCarouselConfig } from '../base/Column'
 
 export const defaultItems = [
   {
@@ -11,11 +10,10 @@ export const defaultItems = [
     image: { src: 'http://via.placeholder.com/640' }
   },
   {
-    type: 'standard',
+    type: 'video',
     tag: 'Living',
     heading: 'Pandemic Accelerates Change in U.S. Wine Business',
-    subtext: '12min read',
-    image: { src: 'http://via.placeholder.com/640' }
+    subtext: '12min read'
   },
   {
     type: 'text-only',
@@ -49,6 +47,8 @@ export const defaultItems = [
 ]
 
 const CardCarousel = ({ items = [] }) => {
+  console.log(items)
+
   return (
     <section className='card-carousel'>
       <div className='card-carousel-items-wrapper container'>
