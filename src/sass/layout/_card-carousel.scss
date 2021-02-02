@@ -57,6 +57,7 @@
       align-items: center;
 
       .card-new {
+        min-height: 66vh;
         width: calc(100vw - #{spacing(64)});
 
         @include screen('sm') {

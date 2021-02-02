@@ -1,3 +1,7 @@
+const translate = ({ element, fraction, width }) => {
+  element.style.transform = `translateX(-${fraction * width}px)`
+}
+
 export default () => {
   const cardCarousels = document.querySelectorAll('.card-carousel')
 
@@ -14,8 +18,11 @@ export default () => {
       const step = Math.floor(cardCarousel.offsetWidth / firstItem.scrollWidth)
 
       current++
-      items.style.transform = `translateX(-${(current / total) *
-        items.scrollWidth}px)`
+      translate({
+        element: items,
+        fraction: current / total,
+        width: items.scrollWidth
+      })
 
       if (current > 0) {
         prev.classList.remove('hidden')
@@ -34,8 +41,11 @@ export default () => {
       const step = Math.floor(cardCarousel.offsetWidth / firstItem.scrollWidth)
 
       current--
-      items.style.transform = `translateX(-${(current / total) *
-        items.scrollWidth}px)`
+      translate({
+        element: items,
+        fraction: current / total,
+        width: items.scrollWidth
+      })
 
       if (current < 1) {
         prev.classList.add('hidden')
