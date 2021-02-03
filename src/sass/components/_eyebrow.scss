@@ -6,12 +6,20 @@
   letter-spacing: 2px;
   text-transform: uppercase;
 
-  &:not(.no-underline):after {
+  &:after {
     display: block;
     content: '';
     border-bottom: 4px solid color('yellow');
     width: spacing(64);
     margin-top: spacing(8);
     margin-bottom: spacing(16);
+  }
+
+  &.white {
+    color: color('white');
+  }
+
+  &.centered {
+    align-items: center;
   }
 }
