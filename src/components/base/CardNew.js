@@ -31,7 +31,10 @@ const ArticleTextOnly = ({ heading }) => {
 const ArticleVideo = ({ heading, subtext, tag }) => {
   return (
     <>
-      <section className='popup-video'>
+      <section
+        className='popup-video'
+        data-popup-video-src='https://player.vimeo.com/video/445351154'
+      >
         <img
           src='https://i.vimeocdn.com/video/936265353.jpg'
           alt='Popup video poster'
@@ -42,17 +45,6 @@ const ArticleVideo = ({ heading, subtext, tag }) => {
         <div className='popup-video-content'>
           <Button type='primary' icon='play' />
         </div>
-
-        <aside className='popup-video-modal'>
-          <iframe
-            src='https://player.vimeo.com/video/445351154'
-            className='popup-video-iframe'
-            allow='autoplay; fullscreen'
-            allowFullScreen
-          />
-
-          <i className='icon icon-close' />
-        </aside>
       </section>
 
       <div className='card-content'>
