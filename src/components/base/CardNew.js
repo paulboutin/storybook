@@ -10,7 +10,9 @@ const ArticleStandard = ({ heading, subtext, image, tag }) => {
       <Image src={image.src} alt={image.alt} ratio='2:1' />
 
       <div className='card-content'>
-        <span className='card-tag'>{tag}</span>
+        <a className='card-tag' href='#'>
+          {tag}
+        </a>
         <Link standalone noArrow>
           {heading}
         </Link>
@@ -48,7 +50,9 @@ const ArticleVideo = ({ heading, subtext, tag }) => {
       </section>
 
       <div className='card-content'>
-        <span className='card-tag'>{tag}</span>
+        <a className='card-tag' href='#'>
+          {tag}
+        </a>
         <Link standalone noArrow>
           {heading}
         </Link>
