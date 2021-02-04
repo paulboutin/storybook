@@ -12,6 +12,11 @@ const defaultText =
   'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
 
 export const PromoElementStory = ({ type }) => {
+  let starBirds = false
+
+  if (type !== 'standard') {
+    starBirds = boolean('Starbirds', false)
+  }
   const enableEyebrow = boolean('Eyebrow Enable', true)
   const eyebrow = text('Eyebrow Text', defaultEyebrow)
   const image = text('Image', defaultImage)
@@ -20,7 +25,7 @@ export const PromoElementStory = ({ type }) => {
 
   let cta
 
-  if (type === 'accent square') {
+  if (type === 'accent green') {
     cta = <Button type='tertiary' label='Call to Action' link />
   } else {
     cta = (
@@ -37,6 +42,7 @@ export const PromoElementStory = ({ type }) => {
       eyebrow={{ enable: enableEyebrow, text: eyebrow }}
       heading={heading}
       text={textContent}
+      starBirds={starBirds}
       image={{
         src: image,
         alt: 'Promo image'

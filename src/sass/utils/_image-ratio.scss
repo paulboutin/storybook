@@ -1,0 +1,21 @@
+.ratio-auto {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@each $horizontal, $vertical in $image-ratios {
+  .ratio-#{$horizontal}\:#{$vertical} {
+    @include fixed-ratio($horizontal, $vertical);
+  }
+
+  @each $size in map-keys($screens) {
+    .#{$size}\:ratio-#{$horizontal}\:#{$vertical} {
+      @include screen($size) {
+        @include fixed-ratio($horizontal, $vertical);
+      }
+    }
+  }
+}
