@@ -1,19 +1,12 @@
 .highlight {
   display: flex;
   flex-direction: column;
-  padding-top: spacing(32);
-  padding-bottom: spacing(32);
+
+  padding-bottom: spacing(16);
 
   @include screen('sm') {
-    padding-top: spacing(64);
-    padding-bottom: spacing(64);
     flex-direction: row;
     align-items: center;
-  }
-
-  @include screen('md') {
-    padding-top: spacing(48);
-    padding-bottom: spacing(48);
   }
 
   .highlight-content-container {
@@ -62,6 +55,33 @@
       @include screen('sm') {
         margin-left: spacing(32);
         margin-right: 0;
+      }
+    }
+  }
+
+  &.highlight-A {
+    padding-top: spacing(32);
+    padding-bottom: spacing(32);
+
+    @include screen('sm') {
+      padding-top: spacing(64);
+      padding-bottom: spacing(64);
+    }
+
+    @include screen('md') {
+      padding-top: spacing(48);
+      padding-bottom: spacing(48);
+    }
+  }
+
+  &.highlight-B {
+    @include screen('sm', 'down') {
+      padding-left: 0;
+      padding-right: 0;
+
+      .highlight-content-container {
+        padding-left: spacing(16);
+        padding-right: spacing(16);
       }
     }
   }

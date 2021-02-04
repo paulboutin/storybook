@@ -1,6 +1,6 @@
 import React from 'react'
-import ColumnIcons from '../../../components/layout/ColumnIcons'
 import { boolean, text, number } from '@storybook/addon-knobs'
+import ColumnIcons from '../../components/layout/ColumnIcons'
 
 const defaultColumns = [
   {
@@ -68,7 +68,7 @@ ColumnIconsStory.story = {
 }
 
 export default {
-  title: 'Layout Components/Content Highlight',
+  title: 'Layout Components',
   parameters: {
     'in-dsm': {
       id: '5f29d237b0d2de8f867d826d'
