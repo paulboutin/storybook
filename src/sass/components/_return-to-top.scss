@@ -7,12 +7,13 @@
 
   cursor: pointer;
 
-  background-color: color('green');
-  color: color('white');
+  background-color: color('white');
+  color: color('green');
 
   @include font-size('h4');
 
-  @include border-radius('round');
+  @include border-radius('sm');
+  @include box-shadow('xs');
 
   padding: spacing(8) spacing(12);
 
