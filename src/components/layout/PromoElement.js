@@ -4,14 +4,7 @@ import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
 
 const AccentGreenImage = ({ alt, src }) => {
-  return (
-    <Image
-      className='image-block sm:ratio-4:3'
-      alt={alt}
-      src={src}
-      ratio='1:1'
-    />
-  )
+  return <Image className='image-block' alt={alt} src={src} ratio='4:3' />
 }
 
 const AccentDarkImage = ({ alt, src }) => {

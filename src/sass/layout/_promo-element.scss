@@ -8,6 +8,18 @@
     background-color: color('grey-5');
   }
 
+  &:not(.promo-accent) {
+    .promo-element-image-wrapper {
+      @include screen('sm', 'down') {
+        margin-bottom: spacing(32);
+      }
+    }
+
+    .app-cta {
+      align-items: flex-start;
+    }
+  }
+
   &.promo-accent {
     background-color: color('green');
     align-items: stretch;
@@ -24,6 +36,13 @@
 
       @include screen('sm') {
         flex-direction: row;
+      }
+    }
+
+    .promo-element-image-wrapper {
+      @include screen('sm', 'down') {
+        margin-top: spacing(32);
+        margin-bottom: spacing(16);
       }
     }
 
@@ -56,12 +75,6 @@
     background-color: color('green-dark');
 
     .promo-element-content {
-      margin-top: spacing(64);
-
-      @include screen('sm') {
-        margin-top: 0;
-      }
-
       .cta-wrapper {
         display: block;
 
@@ -106,7 +119,7 @@
     }
 
     .promo-element-heading {
-      margin-bottom: spacing(12);
+      margin-bottom: spacing(8);
     }
 
     .promo-element-text {

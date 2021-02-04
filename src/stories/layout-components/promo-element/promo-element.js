@@ -6,8 +6,8 @@ import Button from '../../../components/base/Button'
 import { text, boolean } from '@storybook/addon-knobs'
 
 const defaultImage = 'http://via.placeholder.com/480x640'
-const defaultEyebrow = 'Sustainable banking'
-const defaultHeading = 'The strongest environmental stance of any major bank.'
+const defaultEyebrow = 'Eyebrow'
+const defaultHeading = 'Headline'
 const defaultText =
   'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
 
@@ -26,11 +26,11 @@ export const PromoElementStory = ({ type }) => {
   let cta
 
   if (type === 'accent green') {
-    cta = <Button type='tertiary' label='Call to Action' link />
+    cta = <Button type='tertiary' label='Apply Now' link />
   } else {
     cta = (
       <>
-        <Link standalone>See all you can do in mobile banking</Link>
+        <Link standalone>Call to Action</Link>
         <AppCTA />
       </>
     )
