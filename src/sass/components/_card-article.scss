@@ -1,4 +1,4 @@
-.card-new {
+.card-article {
   @include box-shadow('sm');
   @include border-radius('md');
   height: 100%;
@@ -40,7 +40,7 @@
     }
   }
 
-  &.card-new-text-only {
+  &.card-article-text-only {
     background-color: color('green');
     color: color('white');
     position: relative;
@@ -62,7 +62,7 @@
     }
   }
 
-  &.card-new-video {
+  &.card-article-video {
     .popup-video {
       @include fixed-ratio(2, 1);
       height: auto;
@@ -76,7 +76,7 @@
     }
   }
 
-  &.card-new-services {
+  &.card-article-services {
     position: relative;
     color: color('white');
 

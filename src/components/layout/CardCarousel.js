@@ -1,5 +1,5 @@
 import React from 'react'
-import CardNew from '../base/CardNew'
+import CardArticle from '../base/CardArticle'
 
 export const defaultItems = [
   {
@@ -47,15 +47,13 @@ export const defaultItems = [
 ]
 
 const CardCarousel = ({ items = [] }) => {
-  console.log(items)
-
   return (
     <section className='card-carousel'>
       <div className='card-carousel-items-wrapper container'>
         <div className='card-carousel-items'>
           {items.map(({ type, heading, subtext, tag, image }, idx) => (
             <div key={idx} className='card-carousel-item'>
-              <CardNew
+              <CardArticle
                 type={type}
                 heading={heading}
                 subtext={subtext}

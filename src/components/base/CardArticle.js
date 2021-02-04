@@ -76,7 +76,7 @@ const Services = ({ heading, image }) => {
   )
 }
 
-const CardNew = ({ type, heading, subtext, tag, image }) => {
+const CardArticle = ({ type, heading, subtext, tag, image }) => {
   const Content = () => {
     switch (type) {
       case 'standard':
@@ -100,10 +100,10 @@ const CardNew = ({ type, heading, subtext, tag, image }) => {
   }
 
   return (
-    <article className={classNames('card-new', `card-new-${type}`)}>
+    <article className={classNames('card-article', `card-article-${type}`)}>
       <Content />
     </article>
   )
 }
 
-export default CardNew
+export default CardArticle

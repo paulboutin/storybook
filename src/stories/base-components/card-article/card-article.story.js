@@ -1,5 +1,5 @@
 import React from 'react'
-import CardNew from '../../../components/base/CardNew'
+import CardArticle from '../../../components/base/CardArticle'
 import { radios, text } from '@storybook/addon-knobs'
 
 const options = {
@@ -27,8 +27,8 @@ export const Article = () => {
   }
 
   return (
-    <div className='sb:card sb:card-new'>
-      <CardNew
+    <div className='sb:card sb:card-article'>
+      <CardArticle
         type={type}
         image={{ src: image }}
         tag={tag}
@@ -40,5 +40,5 @@ export const Article = () => {
 }
 
 export default {
-  title: 'Base Components/Card New'
+  title: 'Base Components/Card'
 }
