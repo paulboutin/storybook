@@ -8,13 +8,6 @@
     padding-top: spacing(64);
   }
 
-  .eyebrow {
-    @include screen('md') {
-      position: absolute;
-      transform: translateY(-100%);
-    }
-  }
-
   .resource-links-title {
     margin-bottom: spacing(8);
 
@@ -30,8 +23,11 @@
 
   .link {
     @include font-weight('semi-bold');
-    display: inline-block;
-    margin: spacing(8) 0;
-    text-decoration: none;
+    display: block;
+    margin-bottom: spacing(16);
+
+    @include screen('sm') {
+      margin-bottom: spacing(24);
+    }
   }
 }

@@ -27,30 +27,16 @@ const ResourceLinks = ({ eyebrow = {}, title, text }) => (
       <div className='col-xs-12 col-sm-5 col-sm-offset-1 col-md-7'>
         <div className='row'>
           <div className='col-xs-12 col-md-6'>
-            <div>
-              <Link href='#'>Savings & Money Markets</Link>
-            </div>
-            <div>
-              <Link href='#'>Business CDs</Link>
-            </div>
-            <div>
-              <Link href='#'>Account Services</Link>
-            </div>
-            <div>
-              <Link href='#'>Payroll Services</Link>
-            </div>
+            <Link href='#'>Savings & Money Markets</Link>
+            <Link href='#'>Business CDs</Link>
+            <Link href='#'>Account Services</Link>
+            <Link href='#'>Payroll Services</Link>
           </div>
 
           <div className='col-xs-12 col-md-6'>
-            <div>
-              <Link href='#'>Savings & Money Markets</Link>
-            </div>
-            <div>
-              <Link href='#'>Business CDs</Link>
-            </div>
-            <div>
-              <Link href='#'>Account Services</Link>
-            </div>
+            <Link href='#'>Savings & Money Markets</Link>
+            <Link href='#'>Business CDs</Link>
+            <Link href='#'>Account Services</Link>
           </div>
         </div>
       </div>
