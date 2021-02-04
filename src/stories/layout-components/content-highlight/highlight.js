@@ -15,6 +15,11 @@ const CTAOptions = {
   Off: 'off'
 }
 
+const sideOptions = {
+  Left: 'left',
+  Right: 'right'
+}
+
 const CTAContent = ({ type = 'link' }) => {
   switch (type) {
     case 'link':
@@ -28,6 +33,7 @@ const CTAContent = ({ type = 'link' }) => {
 }
 
 export const HighlightStory = ({ type }) => {
+  const reverse = radios('Side', sideOptions, sideOptions.Left)
   const enableEyebrow = boolean('Eyebrow Enable', true)
   const eyebrow = text('Eyebrow Text', 'Bank for the planet')
   const images = [text('Image', defaultImage)]
@@ -38,23 +44,13 @@ export const HighlightStory = ({ type }) => {
   return (
     <div>
       <Highlight
+        reverse={reverse === 'left'}
         title={title}
         text={textContent}
         type={type}
         images={images}
         color='primary'
         eyebrow={{ enable: enableEyebrow, text: eyebrow }}
-      >
-        <CTAContent type={cta} />
-      </Highlight>
-      <Highlight
-        title={title}
-        text={textContent}
-        type={type}
-        images={images}
-        color='secondary'
-        eyebrow={{ enable: enableEyebrow, text: eyebrow }}
-        reverse
       >
         <CTAContent type={cta} />
       </Highlight>
