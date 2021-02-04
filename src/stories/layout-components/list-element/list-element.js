@@ -24,22 +24,23 @@ export const ListElementStory = ({ type }) => {
   const heading = text('Title', headerText.heading)
   const textContent = text('Text', headerText.text)
 
-  const isAlt = type === 'alt'
-  let image
+  let image, reversed
 
-  if (isAlt) {
+  if (type === 'image') {
     image = text('Image', defaultImage)
+    reversed = boolean('Reversed', false)
   }
 
   return (
     <ListElement
+      type={type}
+      reversed={reversed}
       headerText={{
         heading,
         eyebrow: { enable: enableEyebrow, text: eyebrow },
         text: textContent
       }}
-      altLayout={isAlt}
-      image={isAlt ? { src: image, alt: 'List image' } : null}
+      image={{ src: image, alt: 'List image' }}
       items={items}
     />
   )

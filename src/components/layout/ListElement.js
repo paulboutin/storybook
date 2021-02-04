@@ -14,12 +14,12 @@ export const ListElementItems = ({ items, icon = 'check-circle' }) => (
   </ul>
 )
 
-const ListElement = ({ image, items, headerText, altLayout }) => (
+const ListElement = ({ image, items, headerText, type, reversed }) => (
   <section
-    className={classNames('list-element', { 'list-element-alt': altLayout })}
+    className={classNames('list-element', `list-element-${type}`, { reversed })}
   >
     <div className='container'>
-      {image && (
+      {type === 'image' && (
         <Image
           className='image-block'
           src={image.src}
