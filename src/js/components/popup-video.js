@@ -23,10 +23,12 @@ export default () => {
   const popupVideos = document.querySelectorAll('.popup-video')
 
   popupVideos.forEach(popupVideo => {
-    const play = popupVideo.querySelector('.button')
     const src = popupVideo.dataset.popupVideoSrc
+    const clickTarget = popupVideo.dataset.clickTarget || '.button'
 
     if (!src) return
+
+    const play = popupVideo.querySelector(clickTarget)
 
     play.addEventListener('click', () => {
       const template = modalTemplate(src)

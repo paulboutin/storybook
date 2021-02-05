@@ -36,6 +36,7 @@ const ArticleVideo = ({ heading, subtext, tag }) => {
       <section
         className='popup-video'
         data-popup-video-src='https://player.vimeo.com/video/445351154'
+        data-click-target='.popup-video-content'
       >
         <img
           src='https://i.vimeocdn.com/video/936265353.jpg'
