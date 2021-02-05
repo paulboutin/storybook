@@ -47,7 +47,7 @@ export const Horizontal = () => {
 }
 
 export default {
-  title: 'Layout Components/Cards',
+  title: 'Layout Components/Card Layouts',
   parameters: {
     'in-dsm': {
       id: '601d63e1f8349be804595507'

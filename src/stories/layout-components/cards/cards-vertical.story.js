@@ -48,7 +48,7 @@ export const Vertical = () => {
 }
 
 export default {
-  title: 'Layout Components/Cards',
+  title: 'Layout Components/Card Layouts',
   parameters: {
     'in-dsm': {
       id: '601d63e552946d0ec178574c'
