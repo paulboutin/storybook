@@ -12,14 +12,11 @@ export const Article = () => {
   let tag, subtext, image
 
   const type = radios('Type', options, options.Standard)
-  const heading = text(
-    'Heading',
-    'Real-Time Business: Are Your Payments Prepared?'
-  )
+  const heading = text('Heading', 'Heading')
 
   if ([options.Standard, options.Video].includes(type)) {
-    tag = text('Tag', 'Global Finance')
-    subtext = text('Subtext', '9min read')
+    tag = text('Tag', 'Label')
+    subtext = text('Subtext', 'Length of article')
   }
 
   if (type === options.Standard) {
@@ -40,5 +37,10 @@ export const Article = () => {
 }
 
 export default {
-  title: 'Base Components/Card'
+  title: 'Base Components/Card',
+  parameters: {
+    'in-dsm': {
+      id: '601d013652946df3de78574a'
+    }
+  }
 }

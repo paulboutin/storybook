@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: spacing(16) spacing(32);
+    padding: spacing(16) spacing(24);
 
     .link {
       @include font-size('h5');

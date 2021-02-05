@@ -1,17 +1,23 @@
 .sb\:card {
   width: 100%;
-  width: 3 * spacing(160);
 
-  @include screen('md') {
-    width: percentage(1/3);
+  @include screen('sm') {
+    width: 3 * spacing(80);
   }
 }
 
 .sb\:card-flat {
-  max-width: 2 * spacing(160);
+  @include screen('sm') {
+    max-width: 2 * spacing(160);
+  }
 }
 
 .sb\:card-article {
-  min-height: 4 * spacing(80);
-  width: 3 * spacing(80);
+  .card-article {
+    min-height: 5.5 * spacing(80);
+
+    @include screen('sm') {
+      min-height: 4 * spacing(80);
+    }
+  }
 }

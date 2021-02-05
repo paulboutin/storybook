@@ -4,7 +4,7 @@ import { text } from '@storybook/addon-knobs'
 
 export const Services = () => {
   const image = text('Image', 'http://via.placeholder.com/640')
-  const heading = text('Heading', 'Agribusiness & Farming')
+  const heading = text('Heading', 'Heading')
 
   return (
     <div className='sb:card sb:card-article'>
