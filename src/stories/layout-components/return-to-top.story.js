@@ -26,7 +26,7 @@ export const ReturnToTopStory = () => {
 }
 
 ReturnToTopStory.story = {
-  name: 'Return To Top'
+  name: 'Go Up Arrow'
 }
 
 export default {
