@@ -7,7 +7,7 @@ export default {
   title: 'Layout Components/Content Highlight',
   parameters: {
     'in-dsm': {
-      id: '5f29cf2ab0d2de67837d8262'
+      id: '601cfa9a43564b07da15668d'
     }
   }
 }

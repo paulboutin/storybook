@@ -5,9 +5,9 @@ import Link from '../../../components/base/Link'
 import Button from '../../../components/base/Button'
 
 const defaultImage = 'http://via.placeholder.com/640'
-const defaultTitle = 'The strongest environmental stance of any major bank.'
-const defaultText =
-  "Our policies are 100% transparent because we're proud of what we finance and what we don't"
+const defaultEyebrow = 'Eyebrow'
+const defaultTitle = 'Heading'
+const defaultText = 'Lorem ipsum'
 
 const CTAOptions = {
   Link: 'link',
@@ -20,12 +20,12 @@ const sideOptions = {
   Right: 'right'
 }
 
-const CTAContent = ({ type = 'link' }) => {
+const CTAContent = ({ type = 'link', text }) => {
   switch (type) {
     case 'link':
-      return <Link standalone>Your choice of bank matters</Link>
+      return <Link standalone>{text}</Link>
     case 'button':
-      return <Button type='primary' label='Apply Now' />
+      return <Button type='primary' label={text} />
     case 'off':
     default:
       return null
@@ -33,13 +33,19 @@ const CTAContent = ({ type = 'link' }) => {
 }
 
 export const HighlightStory = ({ type }) => {
+  let ctaText
+
   const reverse = radios('Side', sideOptions, sideOptions.Left)
   const enableEyebrow = boolean('Eyebrow Enable', true)
-  const eyebrow = text('Eyebrow Text', 'Bank for the planet')
+  const eyebrow = text('Eyebrow Text', defaultEyebrow)
   const images = [text('Image', defaultImage)]
   const title = text('Title', defaultTitle)
   const textContent = text('Text', defaultText)
   const cta = radios('CTA Content', CTAOptions, CTAOptions.Link)
+
+  if ([CTAOptions.Link, CTAOptions.Button].includes(cta)) {
+    ctaText = text('CTA Text', 'Call to Action')
+  }
 
   return (
     <div>
@@ -52,7 +58,7 @@ export const HighlightStory = ({ type }) => {
         color='primary'
         eyebrow={{ enable: enableEyebrow, text: eyebrow }}
       >
-        <CTAContent type={cta} />
+        <CTAContent type={cta} text={ctaText} />
       </Highlight>
     </div>
   )
