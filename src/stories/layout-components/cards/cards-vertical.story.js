@@ -1,9 +1,7 @@
 import React from 'react'
 import { text, number } from '@storybook/addon-knobs'
-import ColumnCards from '../../components/layout/ColumnCards'
-import Card, { defaultItems } from '../../components/base/Card'
-
-const defaultImage = 'http://via.placeholder.com/500'
+import ColumnCards from '../../../components/layout/ColumnCards'
+import Card, { defaultItems } from '../../../components/base/Card'
 
 const options = {
   range: true,
@@ -12,9 +10,14 @@ const options = {
   step: 1
 }
 
-export const CardsThreeColumn = () => {
+const defaultImage = 'http://via.placeholder.com/640x480'
+
+export const Vertical = () => {
   const items = []
   const cards = number('Cards', 3, options, 'config')
+
+  const heading = 'Recommended for you'
+  const linkText = 'View All'
 
   for (let i = 0; i < cards; i++) {
     const defaultColumn = defaultItems[i] || defaultItems[0]
@@ -27,13 +30,11 @@ export const CardsThreeColumn = () => {
     })
   }
 
-  const heading = 'Recommended for you'
-  const linkText = 'View All'
-
   return (
-    <ColumnCards columns={cards} heading={heading}>
+    <ColumnCards columns={1} heading={heading}>
       {items.map((item, index) => (
         <Card
+          className='card-horizontal'
           key={index}
           heading={item.heading}
           linkText={linkText}
@@ -47,10 +48,10 @@ export const CardsThreeColumn = () => {
 }
 
 export default {
-  title: 'Layout Components',
+  title: 'Layout Components/Cards',
   parameters: {
     'in-dsm': {
-      id: '5f29d31ab0d2dea9c17d82a0'
+      id: '5f29d70a5418d505acb90ce6'
     }
   }
 }

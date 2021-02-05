@@ -12,7 +12,7 @@ const sideOptions = {
   Right: 'right'
 }
 
-export const ReturnToTopStory = () => {
+export const GoUpArrowStory = () => {
   const side = radios('Side', sideOptions, sideOptions.Right, 'config')
   const showAt = number('Show button at (px)', 200, options, 'config')
   const withProductPage = boolean('Show Product Page', true, 'config')
@@ -25,7 +25,7 @@ export const ReturnToTopStory = () => {
   )
 }
 
-ReturnToTopStory.story = {
+GoUpArrowStory.story = {
   name: 'Go Up Arrow'
 }
 
