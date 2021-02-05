@@ -2,10 +2,9 @@ import React from 'react'
 import Eyebrow from '../base/Eyebrow'
 import Link from '../base/Link'
 
-export const defaultEyebrow = 'Resources'
-export const defaultTitle = 'Useful links'
-export const defaultText =
-  'Bank of the West has the strongest environment stance of any major bank.'
+export const defaultEyebrow = 'Eyebrow'
+export const defaultTitle = 'Headline'
+export const defaultText = 'Lorem ipsum'
 
 const ResourceLinks = ({ eyebrow = {}, title, text }) => (
   <section className='resource-links container'>
