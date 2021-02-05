@@ -2,7 +2,7 @@ import React from 'react'
 import { number, radios, text } from '@storybook/addon-knobs'
 import CardCarousel, {
   defaultItems
-} from '../../components/layout/CardCarousel'
+} from '../../../components/layout/CardCarousel'
 
 const options = {
   range: true,
@@ -17,7 +17,7 @@ const typeOptions = {
   Video: 'video'
 }
 
-export const CardCarouselStory = () => {
+export const Editorial = () => {
   const items = []
   const columnNumber = number('Items', defaultItems.length, options, 'config')
 
@@ -51,10 +51,11 @@ export const CardCarouselStory = () => {
   return <CardCarousel items={items} />
 }
 
-CardCarouselStory.story = {
-  name: 'Card Carousel'
-}
-
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components/Carousels',
+  parameters: {
+    'in-dsm': {
+      id: '601d656e43564b35a7156690'
+    }
+  }
 }

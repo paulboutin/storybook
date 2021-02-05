@@ -1,6 +1,6 @@
 import React from 'react'
 import { number, text, radios } from '@storybook/addon-knobs'
-import Carousel from '../../components/layout/Carousel'
+import Carousel from '../../../components/layout/Carousel'
 
 const options = {
   range: true,
@@ -77,7 +77,7 @@ const defaultItems = [
   }
 ]
 
-export const CarouselStory = () => {
+export const Standard = () => {
   const items = []
   const cards = number('Items', defaultItems.length, options, 'config')
   const eyebrow = text('Eyebrow', 'Recommended', 'config')
@@ -98,12 +98,8 @@ export const CarouselStory = () => {
   return <Carousel eyebrow={eyebrow} items={items} />
 }
 
-CarouselStory.story = {
-  name: 'Carousel'
-}
-
 export default {
-  title: 'Layout Components',
+  title: 'Layout Components/Carousels',
   parameters: {
     'in-dsm': {
       id: '5f29d6055418d54690b90ce3'
