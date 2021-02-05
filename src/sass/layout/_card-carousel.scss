@@ -56,18 +56,23 @@
       justify-content: center;
       align-items: center;
 
-      .card-article {
-        min-height: 66vh;
-        width: calc(100vw - #{spacing(64)});
-
-        @include screen('sm') {
-          min-height: 4 * spacing(80);
-          width: 3 * spacing(80);
-        }
-      }
+      width: 100%;
 
       @include screen('sm') {
-        padding: 0 spacing(12);
+        width: 50%;
+      }
+
+      @include screen('lg') {
+        width: 33.333%;
+      }
+
+      .card-article {
+        width: 100%;
+        min-height: 3 * spacing(160);
+
+        @include screen('lg') {
+          min-height: 2 * spacing(160);
+        }
       }
     }
   }
