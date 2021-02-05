@@ -1,26 +1,35 @@
 import React from 'react'
-import { array, text, boolean } from '@storybook/addon-knobs'
+import { array, text, boolean, radios } from '@storybook/addon-knobs'
 import ListElement from '../../../components/layout/ListElement'
 
 const defaultImage = 'http://via.placeholder.com/640x480'
 
 const defaultItems = [
-  '$0 monthly service charge with any deposit per statement',
-  'Free access to Online Banking in our mobile app',
-  'No minimum balance',
-  'No direct deposit required'
+  'Line 1',
+  'Line 1',
+  'Line 1',
+  'Line 1',
+  'Line 1',
+  'Line 1',
+  'Line 1'
 ]
 
 const headerText = {
-  eyebrow: 'Features',
-  heading: 'Here are the basics',
-  text: 'Manage your money while contributing with the planet'
+  eyebrow: 'Eyebrow',
+  heading: 'Headline',
+  text:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
+}
+
+const sideOptions = {
+  Left: 'reversed',
+  Right: ''
 }
 
 export const ListElementStory = ({ type }) => {
   const enableEyebrow = boolean('Eyebrow Enable', true)
   const eyebrow = text('Eyebrow Text', headerText.eyebrow)
-  const items = array('Items', defaultItems)
+  const items = array('Items', defaultItems, ';')
   const heading = text('Title', headerText.heading)
   const textContent = text('Text', headerText.text)
 
@@ -28,13 +37,13 @@ export const ListElementStory = ({ type }) => {
 
   if (type === 'image') {
     image = text('Image', defaultImage)
-    reversed = boolean('Reversed', false)
+    reversed = radios('Side', sideOptions, sideOptions.Left)
   }
 
   return (
     <ListElement
       type={type}
-      reversed={reversed}
+      reversed={reversed === sideOptions.Left}
       headerText={{
         heading,
         eyebrow: { enable: enableEyebrow, text: eyebrow },
