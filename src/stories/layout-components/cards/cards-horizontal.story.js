@@ -50,7 +50,7 @@ export default {
   title: 'Layout Components/Cards',
   parameters: {
     'in-dsm': {
-      id: '5f29d31ab0d2dea9c17d82a0'
+      id: '601d63e1f8349be804595507'
     }
   }
 }

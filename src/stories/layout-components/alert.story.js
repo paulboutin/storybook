@@ -55,5 +55,10 @@ AlertStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '601d64e2f8349b9e4859550b'
+    }
+  }
 }
