@@ -49,5 +49,10 @@ ProductSelectorStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '6021524d01f96f6e10d3479c'
+    }
+  }
 }
