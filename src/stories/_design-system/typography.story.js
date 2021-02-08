@@ -53,5 +53,10 @@ export const Typography = () => {
 }
 
 export default {
-  title: 'Design System'
+  title: 'Design System',
+  parameters: {
+    'in-dsm': {
+      id: '602107fa8aff019532d6b009'
+    }
+  }
 }

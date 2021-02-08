@@ -67,5 +67,10 @@ export const Shadows = () => (
 )
 
 export default {
-  title: 'Design System'
+  title: 'Design System',
+  parameters: {
+    'in-dsm': {
+      id: '6021085701f96f6bced34746'
+    }
+  }
 }

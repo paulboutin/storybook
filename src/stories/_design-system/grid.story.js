@@ -74,5 +74,10 @@ export const Grid = () => (
 )
 
 export default {
-  title: 'Design System'
+  title: 'Design System',
+  parameters: {
+    'in-dsm': {
+      id: '60210821625c6f4a8247f452'
+    }
+  }
 }
