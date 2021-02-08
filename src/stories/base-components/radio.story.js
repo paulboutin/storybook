@@ -26,14 +26,14 @@ export const RadioStory = () => {
 }
 
 RadioStory.story = {
-  name: 'Radio'
+  name: 'Radio Buttons'
 }
 
 export default {
   title: 'Base Components',
   parameters: {
     'in-dsm': {
-      id: '5f6ba2edc555198fd70671ae'
+      id: '5f7e17ffc357b71d44fbcf41'
     }
   }
 }

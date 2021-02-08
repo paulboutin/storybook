@@ -92,8 +92,13 @@
   }
 }
 
-@mixin focus-outline() {
+@mixin focus-outline-rounded() {
   box-shadow: 0 0 0 2px color('white'), 0 0 0 4px color('blue');
+}
+
+@mixin focus-outline() {
+  outline: 1px solid color('blue');
+  outline-offset: 1px;
 }
 
 @mixin star-birds($color) {
