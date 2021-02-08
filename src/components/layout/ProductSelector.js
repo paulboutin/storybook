@@ -17,7 +17,7 @@ const ProductSelector = ({ items, headline }) => {
               active: idx === 0
             })}
           >
-            {tab}
+            <span className='product-selector-tab-wrapper'>{tab}</span>
           </span>
         ))}
         <span className='product-selector-tab-spacer' />

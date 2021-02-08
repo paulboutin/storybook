@@ -17,13 +17,20 @@
     margin-bottom: spacing(32);
     overflow-x: hidden;
 
+    @include screen('sm') {
+      display: block;
+    }
+
     .product-selector-tab {
       @include font-size('sm');
       cursor: pointer;
 
       &.active {
         color: color('green');
-        text-decoration: underline;
+
+        .product-selector-tab-wrapper {
+          border-bottom: 2px solid color('green');
+        }
       }
 
       @include screen('sm') {

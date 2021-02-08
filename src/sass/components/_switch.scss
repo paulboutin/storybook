@@ -11,7 +11,7 @@
     @include sr-only();
 
     &:checked ~ .switch {
-      background-color: color('green');
+      background-color: color('green-light');
 
       .switch-circle {
         left: $width - $circle-size - $circle-margin;
