@@ -18,7 +18,10 @@
     }
 
     .sb\:image-ratio {
+      @include font-size('xs');
+      color: color('grey-70');
       text-transform: capitalize;
+      margin-top: spacing(4);
     }
   }
 }
