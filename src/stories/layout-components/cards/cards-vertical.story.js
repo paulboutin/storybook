@@ -10,7 +10,7 @@ const options = {
   step: 1
 }
 
-const defaultImage = 'http://via.placeholder.com/640x480'
+const defaultImage = '/img/butterfly.png'
 
 export const Vertical = () => {
   const items = []

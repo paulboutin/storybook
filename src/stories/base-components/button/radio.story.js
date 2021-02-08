@@ -1,5 +1,5 @@
 import React from 'react'
-import Radio from '../../components/base/Radio'
+import Radio from '../../../components/base/Radio'
 
 export const RadioStory = () => {
   const states = ['normal', 'hover', 'focus', 'disabled']
@@ -26,11 +26,11 @@ export const RadioStory = () => {
 }
 
 RadioStory.story = {
-  name: 'Radio Buttons'
+  name: 'Radio'
 }
 
 export default {
-  title: 'Base Components',
+  title: 'Base Components/Button',
   parameters: {
     'in-dsm': {
       id: '5f7e17ffc357b71d44fbcf41'

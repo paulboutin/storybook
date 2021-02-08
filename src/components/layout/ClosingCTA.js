@@ -1,6 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
+import Image from '../base/Image'
 
 export const defaultTitle =
   'Together, we can safeguard the environment and the future of our planet.'
@@ -21,7 +22,8 @@ const ClosingCTA = ({
   >
     <div className='container'>
       {type === '2col' && (
-        <img
+        <Image
+          ratio='4:3'
           src={image}
           alt='Closing CTA image'
           className='closing-cta-image'
@@ -40,8 +42,8 @@ const ClosingCTA = ({
       )}
 
       <div className='closing-cta-content'>
-        <h1 dangerouslySetInnerHTML={{ __html: title }} />
-        {type !== '2col' && text && (
+        <h2 dangerouslySetInnerHTML={{ __html: title }} />
+        {text && (
           <p
             className='closing-cta-text'
             dangerouslySetInnerHTML={{ __html: text }}

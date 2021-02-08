@@ -6,7 +6,7 @@ import { text } from '@storybook/addon-knobs'
 const defaultHeading = 'How to pick a checking account'
 const defaultText = 'We will help you to decide what is best for you'
 const defaultLinkText = 'Read more'
-const defaultPlaceholder = 'http://via.placeholder.com/640x480'
+const defaultPlaceholder = '/img/trees.png'
 
 export const CardStory = ({ type, className }) => {
   const heading = text('Heading', defaultHeading)

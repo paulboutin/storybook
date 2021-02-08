@@ -17,7 +17,7 @@ const radioOptions = {
 
 const defaultItems = [
   {
-    image: 'http://via.placeholder.com/640/eee',
+    image: '/img/trees.png',
     title: 'Investment Services',
     text:
       'Investing doesn’t have to be so complicated. Start on your own terms.',
@@ -25,14 +25,14 @@ const defaultItems = [
     type: 'link'
   },
   {
-    image: 'http://via.placeholder.com/640/ddd',
+    image: '/img/trees.png',
     title: 'Checking Accounts',
     text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
     linkText: 'Learn more',
     type: 'link'
   },
   {
-    image: 'http://via.placeholder.com/640/ccc',
+    image: '/img/trees.png',
     title: 'Savings Accounts',
     text:
       'A alias atque consectetur doloremque ea eligendi eveniet explicabo id.',
@@ -40,14 +40,14 @@ const defaultItems = [
     type: 'link'
   },
   {
-    image: 'http://via.placeholder.com/640/bbb',
+    image: '/img/trees.png',
     title: 'Certificates of Deposit',
     text: 'Amet asperiores atque aut beatae consequuntur delectus dicta.',
     linkText: 'Learn more',
     type: 'link'
   },
   {
-    image: 'http://via.placeholder.com/640/aaa/ccc',
+    image: '/img/trees.png',
     title: 'Investment Services',
     text:
       'Autem corporis culpa dolor eius est facilis harum maxime minima necessitatibus nemo.',
@@ -55,21 +55,21 @@ const defaultItems = [
     type: 'link'
   },
   {
-    image: 'http://via.placeholder.com/640/999/ccc',
+    image: '/img/trees.png',
     title: 'Checking Accounts',
     text: 'Atque harum id magnam mollitia nostrum!',
     linkText: 'Learn more',
     type: 'link'
   },
   {
-    image: 'http://via.placeholder.com/640/888/ccc',
+    image: '/img/trees.png',
     title: 'Savings Accounts',
     text: 'Assumenda beatae excepturi ipsam ipsum maiores minima nemo numquam.',
     linkText: 'Learn more',
     type: 'link'
   },
   {
-    image: 'http://via.placeholder.com/640/777/ccc',
+    image: '/img/trees.png',
     title: 'Certificates of Deposit',
     text: 'Ad corporis delectus ea est, fugit modi mollitia neque nisi.',
     linkText: 'Learn more',

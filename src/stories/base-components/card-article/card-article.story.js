@@ -20,7 +20,7 @@ export const Article = () => {
   }
 
   if (type === options.Standard) {
-    image = text('Image', 'http://via.placeholder.com/640')
+    image = text('Image', '/img/trees.png')
   }
 
   return (

@@ -36,7 +36,7 @@ export const Editorial = () => {
     }
 
     if (type === typeOptions.Standard) {
-      image = text('Image', 'http://via.placeholder.com/640', prefix)
+      image = text('Image', '/img/trees.png', prefix)
     }
 
     items.push({

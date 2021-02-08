@@ -4,7 +4,7 @@ import Highlight from '../../../components/layout/Highlight'
 import Link from '../../../components/base/Link'
 import Button from '../../../components/base/Button'
 
-const defaultImage = 'http://via.placeholder.com/640'
+const defaultImage = '/img/plant.png'
 const defaultEyebrow = 'Eyebrow'
 const defaultTitle = 'Heading'
 const defaultText = 'Lorem ipsum'

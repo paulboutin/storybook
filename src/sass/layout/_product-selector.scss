@@ -10,6 +10,11 @@
   .product-selector-headline {
     @include font-size('h3');
     margin-bottom: spacing(24);
+    text-align: center;
+
+    @include screen('sm') {
+      text-align: left;
+    }
   }
 
   .product-selector-tabs {

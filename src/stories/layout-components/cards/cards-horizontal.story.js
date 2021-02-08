@@ -3,7 +3,7 @@ import { text, number } from '@storybook/addon-knobs'
 import ColumnCards from '../../../components/layout/ColumnCards'
 import Card, { defaultItems } from '../../../components/base/Card'
 
-const defaultImage = 'http://via.placeholder.com/640x480'
+const defaultImage = '/img/butterfly.png'
 
 const options = {
   range: true,

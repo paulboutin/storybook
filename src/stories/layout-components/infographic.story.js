@@ -37,11 +37,7 @@ export const InfographicStory = () => {
       title = text('Title', defaultColumn.title, `card ${i + 1}`)
       content = text('Text', defaultColumn.content, `card ${i + 1}`)
     } else {
-      content = text(
-        'Image',
-        'http://via.placeholder.com/400x400',
-        `card ${i + 1}`
-      )
+      content = text('Image', '/img/plant.png', `card ${i + 1}`)
     }
 
     items.push({

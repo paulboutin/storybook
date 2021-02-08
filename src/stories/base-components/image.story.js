@@ -3,7 +3,7 @@ import Image, { ratios } from '../../components/base/Image'
 import { text } from '@storybook/addon-knobs'
 
 export const ImageStory = () => {
-  const src = text('Image', 'http://via.placeholder.com/640x480')
+  const src = text('Image', '/img/trees.png')
 
   return (
     <div className='sb:image'>

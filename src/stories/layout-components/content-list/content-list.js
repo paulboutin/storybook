@@ -2,7 +2,7 @@ import React from 'react'
 import { array, text, boolean, radios } from '@storybook/addon-knobs'
 import ListElement from '../../../components/layout/ListElement'
 
-const defaultImage = 'http://via.placeholder.com/640x480'
+const defaultImage = '/img/butterfly.png'
 
 const defaultItems = [
   'Line 1',

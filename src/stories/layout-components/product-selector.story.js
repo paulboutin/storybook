@@ -11,7 +11,7 @@ const defaultItems = [
     text: 'Product information',
     button: 'Label',
     cta: 'Call to Action',
-    image: 'http://via.placeholder.com/640x480'
+    image: '/img/plant.png'
   }
 ]
 

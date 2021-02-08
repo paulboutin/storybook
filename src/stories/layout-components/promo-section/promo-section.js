@@ -5,7 +5,7 @@ import PromoElement from '../../../components/layout/PromoElement'
 import Button from '../../../components/base/Button'
 import { text, boolean } from '@storybook/addon-knobs'
 
-const defaultImage = 'http://via.placeholder.com/480x640'
+const defaultImage = '/img/butterfly.png'
 const defaultEyebrow = 'Eyebrow'
 const defaultHeading = 'Headline'
 const defaultText =
