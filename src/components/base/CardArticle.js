@@ -7,7 +7,7 @@ import Button from './Button'
 const ArticleStandard = ({ heading, subtext, image, tag }) => {
   return (
     <>
-      <Image src={image.src} alt={image.alt} ratio='2:1' />
+      <Image src={image.src} alt={image.alt} ratio='16:9' />
 
       <div className='card-content'>
         <a className='card-tag' href='#'>

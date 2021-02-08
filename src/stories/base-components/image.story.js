@@ -1,17 +1,19 @@
 import React from 'react'
-import Image from '../../components/base/Image'
-import { text, radios } from '@storybook/addon-knobs'
+import Image, { ratios } from '../../components/base/Image'
+import { text } from '@storybook/addon-knobs'
 
 export const ImageStory = () => {
-  const src = text('Image', 'http://via.placeholder.com/300x400')
-  const ratio = radios(
-    'Ratio',
-    ['Auto', '1:1', '4:3', '16:9'],
-    'Auto'
-  ).toLowerCase()
+  const src = text('Image', 'http://via.placeholder.com/640x480')
 
   return (
-    <Image ratio={ratio} src={src} alt='Image' className='sb:img-wrapper' />
+    <div className='sb:image'>
+      {ratios.map(ratio => (
+        <div className='sb:image-wrapper'>
+          <Image ratio={ratio} src={src} alt='Image' />
+          <p className='sb:image-ratio'>Ratio {ratio}</p>
+        </div>
+      ))}
+    </div>
   )
 }
 

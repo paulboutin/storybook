@@ -64,11 +64,12 @@
 
   &.card-article-video {
     .popup-video {
-      @include fixed-ratio(2, 1);
+      @include fixed-ratio(16, 9);
       height: auto;
       width: 100%;
 
       .popup-video-content {
+        cursor: pointer;
         display: flex;
         justify-content: center;
         align-items: center;
