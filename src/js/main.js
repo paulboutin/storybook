@@ -9,6 +9,7 @@ import sliders from './components/slider'
 import alerts from './components/alert'
 import returnToTop from './components/return-to-top'
 import cardCarousel from './components/card-carousel'
+import productSelector from './components/product-selector'
 
 function ready(fn) {
   if (
@@ -34,6 +35,7 @@ function setup() {
     alerts()
     returnToTop()
     cardCarousel()
+    productSelector()
   })
 }
 

@@ -7,18 +7,26 @@ const Highlight = ({
   title,
   text,
   type,
-  images,
+  image,
   reverse,
   eyebrow = {},
+  container = true,
+  className,
   children
 }) => (
   <section
-    className={classNames('container highlight', `highlight-${type}`, {
-      reverse
-    })}
+    className={classNames(
+      'highlight',
+      `highlight-${type}`,
+      {
+        reverse,
+        container
+      },
+      className
+    )}
   >
     <Image
-      src={images[0]}
+      src={image}
       alt='Highlight image'
       ratio='1:1'
       className='highlight-img-container'
@@ -26,7 +34,7 @@ const Highlight = ({
 
     <article className='highlight-content-container'>
       {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
-      <h2>{title}</h2>
+      <h2 className='highlight-title'>{title}</h2>
 
       {text && <p className='highlight-text'>{text}</p>}
 

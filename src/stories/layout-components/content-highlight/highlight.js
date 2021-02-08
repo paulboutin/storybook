@@ -38,7 +38,7 @@ export const HighlightStory = ({ type }) => {
   const reverse = radios('Side', sideOptions, sideOptions.Left)
   const enableEyebrow = boolean('Eyebrow Enable', true)
   const eyebrow = text('Eyebrow Text', defaultEyebrow)
-  const images = [text('Image', defaultImage)]
+  const image = text('Image', defaultImage)
   const title = text('Title', defaultTitle)
   const textContent = text('Text', defaultText)
   const cta = radios('CTA Content', CTAOptions, CTAOptions.Link)
@@ -54,7 +54,7 @@ export const HighlightStory = ({ type }) => {
         title={title}
         text={textContent}
         type={type}
-        images={images}
+        image={image}
         color='primary'
         eyebrow={{ enable: enableEyebrow, text: eyebrow }}
       >
