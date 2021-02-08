@@ -26,7 +26,7 @@ const sideOptions = {
   Right: ''
 }
 
-export const ListElementStory = ({ type }) => {
+export const ContentList = ({ type }) => {
   const enableEyebrow = boolean('Eyebrow Enable', true)
   const eyebrow = text('Eyebrow Text', headerText.eyebrow)
   const items = array('Items', defaultItems, ';')

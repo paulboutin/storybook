@@ -11,7 +11,7 @@ const defaultHeading = 'Headline'
 const defaultText =
   'Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
 
-export const PromoElementStory = ({ type }) => {
+export const PromoSection = ({ type }) => {
   let starBirds = false
 
   if (type !== 'standard') {

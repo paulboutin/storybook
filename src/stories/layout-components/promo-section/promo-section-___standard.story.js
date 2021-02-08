@@ -1,6 +1,6 @@
 import React from 'react'
 import { radios } from '@storybook/addon-knobs'
-import { PromoElementStory } from './promo-element'
+import { PromoSection } from './promo-section'
 
 const options = {
   Standard: 'standard',
@@ -10,11 +10,11 @@ const options = {
 export const Standard = () => {
   const type = radios('Type', options, options.Standard)
 
-  return <PromoElementStory type={type} />
+  return <PromoSection type={type} />
 }
 
 export default {
-  title: 'Layout Components/Promo Element',
+  title: 'Layout Components/Promo Section',
   parameters: {
     'in-dsm': {
       id: '5f29c9b5b0d2de6fd47d8137'
