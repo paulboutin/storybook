@@ -4,45 +4,45 @@ import CardArticle from '../base/CardArticle'
 export const defaultItems = [
   {
     type: 'standard',
-    tag: 'Global Finance',
-    heading: 'Real-Time Business: Are Your Payments Prepared?',
-    subtext: '9min read',
-    image: { src: 'http://via.placeholder.com/640' }
+    tag: 'Label',
+    heading: 'Article Title',
+    subtext: 'Lorem ipsum',
+    image: '/img/trees.png'
   },
   {
     type: 'video',
     tag: 'Living',
-    heading: 'Pandemic Accelerates Change in U.S. Wine Business',
-    subtext: '12min read'
+    heading: 'Article Title',
+    subtext: 'Lorem ipsum'
   },
   {
     type: 'text-only',
-    heading: 'Learn More About Paycheck Protection Program Round 3'
+    heading: 'Out-link'
   },
   {
     type: 'standard',
-    tag: 'Global Finance',
-    heading: 'Six Keys to Remove Treasury Management',
-    subtext: '9min read',
-    image: { src: 'http://via.placeholder.com/640' }
+    tag: 'Label',
+    heading: 'Article Title',
+    subtext: 'Lorem ipsum',
+    image: '/img/trees.png'
+  },
+  {
+    type: 'standard',
+    tag: 'Label',
+    heading: 'Article Title',
+    subtext: 'Lorem ipsum',
+    image: '/img/trees.png'
   },
   {
     type: 'text-only',
-    heading: 'Discover additional resources'
+    heading: 'Out-link'
   },
   {
     type: 'standard',
-    tag: 'Global Finance',
-    heading: 'Real-Time Business: Are Your Payments Prepared?',
-    subtext: '9min read',
-    image: { src: 'http://via.placeholder.com/640' }
-  },
-  {
-    type: 'standard',
-    tag: 'Living',
-    heading: 'Pandemic Accelerates Change in U.S. Wine Business',
-    subtext: '12min read',
-    image: { src: 'http://via.placeholder.com/640' }
+    tag: 'Label',
+    heading: 'Article Title',
+    subtext: 'Lorem ipsum',
+    image: '/img/trees.png'
   }
 ]
 

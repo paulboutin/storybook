@@ -36,7 +36,7 @@ export const Editorial = () => {
     }
 
     if (type === typeOptions.Standard) {
-      image = text('Image', '/img/trees.png', prefix)
+      image = text('Image', defaultColumn.image, prefix)
     }
 
     items.push({
