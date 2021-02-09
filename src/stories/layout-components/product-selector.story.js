@@ -33,7 +33,7 @@ export const ProductSelectorStory = () => {
 
     items.push({
       tab: text('Tab', prefix, prefix),
-      title: text('Heading', defaultColumn.title, prefix),
+      title: text('Heading', `${defaultColumn.title} ${i + 1}`, prefix),
       text: text('Text', defaultColumn.text, prefix),
       image: text('Image', defaultColumn.image, prefix),
       button: text('Button', defaultColumn.button, prefix),
