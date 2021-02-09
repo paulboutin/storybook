@@ -29,6 +29,11 @@
       flex-direction: row;
       flex-wrap: wrap;
       text-align: left;
+
+      &:not(.promo-dark) {
+        padding-top: spacing(64);
+        padding-bottom: spacing(64);
+      }
     }
 
     .container {

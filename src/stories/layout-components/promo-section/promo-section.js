@@ -26,7 +26,7 @@ export const PromoSection = ({ type }) => {
   let cta
 
   if (type === 'accent green') {
-    cta = <Button type='tertiary' label='Apply Now' link />
+    cta = <Button type='secondary' label='Apply Now' link />
   } else {
     cta = (
       <>
