@@ -66,10 +66,6 @@
       .card-article {
         width: 100%;
         min-height: 2 * spacing(160);
-
-        @include screen('lg') {
-          min-height: 2 * spacing(160);
-        }
       }
     }
   }
