@@ -19,7 +19,7 @@
   .card-content {
     display: flex;
     flex-direction: column;
-    padding: spacing(16);
+    padding: spacing(32) spacing(16);
     text-align: left;
 
     width: 100%;
@@ -59,7 +59,6 @@
 
     .card-content {
       width: 100%;
-      padding: spacing(16) 0 0;
 
       .card-text-wrapper {
         display: block;
