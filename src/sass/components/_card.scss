@@ -10,6 +10,7 @@
   @include border-radius('sm');
 
   .image-block {
+    flex-shrink: 0;
     min-width: 120px;
     width: 100%;
 
