@@ -31,8 +31,8 @@ export const Editorial = () => {
     const heading = text('Heading', defaultColumn.heading, prefix)
 
     if ([typeOptions.Standard, typeOptions.Video].includes(type)) {
-      tag = text('Tag', 'Global Finance', prefix)
-      subtext = text('Subtext', '9min read', prefix)
+      tag = text('Tag', defaultColumn.tag, prefix)
+      subtext = text('Subtext', defaultColumn.subtext, prefix)
     }
 
     if (type === typeOptions.Standard) {

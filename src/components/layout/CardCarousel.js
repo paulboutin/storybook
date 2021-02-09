@@ -11,7 +11,7 @@ export const defaultItems = [
   },
   {
     type: 'video',
-    tag: 'Living',
+    tag: 'Label',
     heading: 'Article Title',
     subtext: 'Lorem ipsum'
   },
