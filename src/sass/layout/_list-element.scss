@@ -20,18 +20,20 @@
 
   &.list-element-image {
     .list-element-content {
-      width: 50%;
-      margin-left: spacing(16);
-    }
+      width: 100%;
+      margin-top: spacing(32);
 
-    @include screen('md') {
-      .list-element-content {
+      @include screen('sm') {
+        width: 50%;
+        margin-left: spacing(16);
+        margin-top: 0;
+      }
+
+      @include screen('md') {
         margin-left: spacing(32);
       }
-    }
 
-    @include screen('lg') {
-      .list-element-content {
+      @include screen('lg') {
         margin-left: spacing(64);
       }
     }
@@ -45,17 +47,16 @@
 
       .list-element-content {
         margin-left: 0;
-        margin-right: spacing(16);
-      }
 
-      @include screen('md') {
-        .list-element-content {
+        @include screen('sm') {
+          margin-right: spacing(16);
+        }
+
+        @include screen('md') {
           margin-right: spacing(32);
         }
-      }
 
-      @include screen('lg') {
-        .list-element-content {
+        @include screen('lg') {
           margin-right: spacing(64);
         }
       }
@@ -107,7 +108,11 @@
     }
 
     &:not(:last-of-type) {
-      margin-bottom: spacing(32);
+      margin-bottom: spacing(24);
+
+      @include screen('sm') {
+        margin-bottom: spacing(32);
+      }
     }
   }
 }
