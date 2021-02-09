@@ -3,16 +3,20 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
 
-const Highlight = ({
-  title,
-  text,
-  type,
-  image,
-  reverse,
-  eyebrow = {},
-  className,
-  children
-}) => (
+const HighlightContent = ({ eyebrow = {}, title, text, children }) => {
+  return (
+    <article className='highlight-content-container'>
+      {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
+      <h2 className='highlight-title'>{title}</h2>
+
+      {text && <p className='highlight-text'>{text}</p>}
+
+      {children}
+    </article>
+  )
+}
+
+export const Highlight = ({ type, image, reverse, className, children }) => (
   <section
     className={classNames(
       'highlight',
@@ -31,15 +35,25 @@ const Highlight = ({
       className='highlight-img-container'
     />
 
-    <article className='highlight-content-container'>
-      {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
-      <h2 className='highlight-title'>{title}</h2>
-
-      {text && <p className='highlight-text'>{text}</p>}
-
-      {children}
-    </article>
+    {children}
   </section>
 )
 
-export default Highlight
+const DefaultHighlight = ({
+  title,
+  text,
+  type,
+  image,
+  reverse,
+  eyebrow = {},
+  className,
+  children
+}) => (
+  <Highlight type={type} image={image} reverse={reverse} className={className}>
+    <HighlightContent title={title} text={text} eyebrow={eyebrow}>
+      {children}
+    </HighlightContent>
+  </Highlight>
+)
+
+export default DefaultHighlight

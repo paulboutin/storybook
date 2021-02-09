@@ -3,10 +3,10 @@ import ResourceLinks, {
   defaultEyebrow,
   defaultText,
   defaultTitle
-} from '../../components/layout/ResourceLinks'
+} from '../../../components/layout/ResourceLinks'
 import { boolean, text } from '@storybook/addon-knobs'
 
-export const ResourceLinksStory = () => {
+export const ResourceLinksStandard = () => {
   const enableEyebrow = boolean('Eyebrow Enable', true)
   const eyebrow = text('Eyebrow Text', defaultEyebrow)
   const title = text('Title', defaultTitle)
@@ -21,12 +21,8 @@ export const ResourceLinksStory = () => {
   )
 }
 
-ResourceLinksStory.story = {
-  name: 'Resource Links'
-}
-
 export default {
-  title: 'Layout Components',
+  title: 'Layout Components/Resource Links',
   parameters: {
     'in-dsm': {
       id: '5f29d6d1914d5c98271ba0a8'
