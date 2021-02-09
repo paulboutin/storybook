@@ -30,13 +30,13 @@ const ArticleTextOnly = ({ heading }) => {
   )
 }
 
-const ArticleVideo = ({ heading, subtext, tag }) => {
+const ArticleVideo = ({ heading, subtext, tag, cardId }) => {
   return (
     <>
       <section
         className='popup-video'
         data-popup-video-src='https://player.vimeo.com/video/445351154'
-        data-click-target='.popup-video-content'
+        data-click-target={`#${cardId}`}
       >
         <img
           src='https://i.vimeocdn.com/video/936265353.jpg'
@@ -54,9 +54,7 @@ const ArticleVideo = ({ heading, subtext, tag }) => {
         <a className='card-tag' href='#'>
           {tag}
         </a>
-        <Link standalone noArrow>
-          {heading}
-        </Link>
+        <span className='link link-standalone'>{heading}</span>
         <p className='card-subtext'>{subtext}</p>
       </div>
     </>
@@ -78,6 +76,10 @@ const Services = ({ heading, image }) => {
 }
 
 const CardArticle = ({ type, heading, subtext, tag, image }) => {
+  const cardId = `card-${
+    (Math.random() * Math.random()).toString().split('.')[1]
+  }`
+
   const Content = () => {
     switch (type) {
       case 'standard':
@@ -92,7 +94,14 @@ const CardArticle = ({ type, heading, subtext, tag, image }) => {
       case 'text-only':
         return <ArticleTextOnly heading={heading} />
       case 'video':
-        return <ArticleVideo heading={heading} subtext={subtext} tag={tag} />
+        return (
+          <ArticleVideo
+            heading={heading}
+            subtext={subtext}
+            tag={tag}
+            cardId={cardId}
+          />
+        )
       case 'services':
         return <Services heading={heading} image={image} />
       default:
@@ -101,7 +110,10 @@ const CardArticle = ({ type, heading, subtext, tag, image }) => {
   }
 
   return (
-    <article className={classNames('card-article', `card-article-${type}`)}>
+    <article
+      className={classNames('card-article', `card-article-${type}`)}
+      {...(type === 'video' ? { id: cardId } : {})}
+    >
       <Content />
     </article>
   )
