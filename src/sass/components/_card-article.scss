@@ -68,7 +68,12 @@
       height: auto;
       width: 100%;
 
+      .popup-video-overlay {
+        @include border-radius('md', 'md', 'none', 'none');
+      }
+
       .popup-video-content {
+        @include border-radius('md', 'md', 'none', 'none');
         cursor: pointer;
         display: flex;
         justify-content: center;
