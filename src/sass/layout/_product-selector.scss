@@ -75,6 +75,15 @@
       width: 100%;
       flex-shrink: 0;
 
+      .highlight-content-container {
+        padding-left: 0;
+        padding-right: 0;
+
+        @include screen('sm') {
+          padding-right: spacing(32);
+        }
+      }
+
       .highlight-title {
         @include font-size('h5');
       }

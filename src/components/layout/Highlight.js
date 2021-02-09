@@ -10,7 +10,6 @@ const Highlight = ({
   image,
   reverse,
   eyebrow = {},
-  container = true,
   className,
   children
 }) => (
@@ -20,7 +19,7 @@ const Highlight = ({
       `highlight-${type}`,
       {
         reverse,
-        container
+        container: type === 'A'
       },
       className
     )}

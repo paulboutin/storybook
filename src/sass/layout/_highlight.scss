@@ -75,13 +75,22 @@
   }
 
   &.highlight-B {
-    @include screen('sm', 'down') {
-      padding-left: 0;
-      padding-right: 0;
+    .highlight-content-container {
+      padding-left: spacing(16);
+      padding-right: spacing(16);
 
-      .highlight-content-container {
-        padding-left: spacing(16);
-        padding-right: spacing(16);
+      @include screen('sm') {
+        padding-left: spacing(24);
+        padding-right: spacing(24);
+      }
+
+      @include screen('md') {
+        padding-left: spacing(48);
+        padding-right: spacing(48);
+      }
+
+      @include screen('lg') {
+        padding-left: spacing(160);
       }
     }
   }
