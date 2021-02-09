@@ -15,20 +15,26 @@
     }
 
     .card-carousel-control {
+      height: 100%;
+
       position: absolute;
-      top: 50%;
+      top: 0;
 
-      transform: translateY(-50%);
-
-      background-color: color('green');
-      color: color('white');
-
-      padding: spacing(4) spacing(8);
-
-      @include box-shadow('xs');
-      @include font-size('h3');
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       cursor: pointer;
+
+      .icon {
+        background-color: color('green');
+        color: color('white');
+
+        padding: spacing(4) spacing(8);
+
+        @include box-shadow('xs');
+        @include font-size('h3');
+      }
 
       &.card-carousel-prev {
         left: spacing(24);
