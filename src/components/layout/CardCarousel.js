@@ -49,7 +49,7 @@ export const defaultItems = [
 const CardCarousel = ({ items = [] }) => {
   return (
     <section className='card-carousel'>
-      <div className='card-carousel-items-wrapper container'>
+      <div className='card-carousel-wrapper container'>
         <div className='card-carousel-items'>
           {items.map(({ type, heading, subtext, tag, image }, idx) => (
             <div key={idx} className='card-carousel-item'>
@@ -63,8 +63,6 @@ const CardCarousel = ({ items = [] }) => {
             </div>
           ))}
         </div>
-      </div>
-      <div className='card-carousel-controls'>
         <span className='card-carousel-control card-carousel-prev hidden'>
           <i className='icon icon-chevron-left' />
         </span>
