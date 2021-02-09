@@ -4,10 +4,14 @@
   .card-carousel-wrapper {
     position: relative;
     overflow-x: visible;
-    padding: spacing(16) spacing(24);
+    padding: spacing(16) spacing(48);
 
     @include screen('sm') {
-      padding: spacing(16) spacing(32);
+      padding: spacing(16) spacing(64);
+    }
+
+    @include screen('md') {
+      padding: spacing(16) spacing(0);
     }
 
     .card-carousel-control {
@@ -27,11 +31,27 @@
       cursor: pointer;
 
       &.card-carousel-prev {
-        left: spacing(8);
+        left: spacing(24);
+
+        @include screen('sm') {
+          left: 2.5 * spacing(16);
+        }
+
+        @include screen('md') {
+          left: -#{spacing(8)};
+        }
       }
 
       &.card-carousel-next {
-        right: spacing(8);
+        right: spacing(24);
+
+        @include screen('sm') {
+          right: 2.5 * spacing(16);
+        }
+
+        @include screen('md') {
+          right: -#{spacing(8)};
+        }
       }
 
       &.hidden {
