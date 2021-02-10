@@ -3,14 +3,6 @@
     align-items: flex-start;
   }
 
-  .resource-links-content {
-    padding-top: spacing(16);
-
-    @include screen('sm') {
-      padding-top: 0;
-    }
-  }
-
   .resource-links-headline {
     margin-bottom: spacing(24);
   }
@@ -30,16 +22,6 @@
 
       &:first-of-type {
         border-top: 1px solid color('grey-5');
-      }
-    }
-  }
-
-  &.highlight-B {
-    .resource-links-content {
-      padding: spacing(16);
-
-      @include screen('md') {
-        padding: spacing(64);
       }
     }
   }
