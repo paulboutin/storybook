@@ -32,8 +32,8 @@ const ListElement = ({ image, items, headerText, type, reversed }) => (
           {headerText.eyebrow.enable && (
             <Eyebrow>{headerText.eyebrow.text}</Eyebrow>
           )}
-          <h2
-            className='list-element-heading'
+          <h3
+            className='list-element-heading text-h2'
             dangerouslySetInnerHTML={{ __html: headerText.heading }}
           />
           {headerText.text && (

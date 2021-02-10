@@ -11,10 +11,6 @@
     margin-bottom: spacing(16);
   }
 
-  .callout-text {
-    @include font-size('h5');
-  }
-
   &.callout-centered {
     min-height: 100vh;
     display: flex;

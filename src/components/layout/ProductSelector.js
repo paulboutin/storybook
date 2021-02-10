@@ -7,7 +7,7 @@ import Highlight from './Highlight'
 const ProductSelector = ({ items, headline }) => {
   return (
     <section className='product-selector container'>
-      <h2 className='product-selector-headline'>{headline}</h2>
+      <h2 className='product-selector-headline text-h3'>{headline}</h2>
       <div className='product-selector-tabs'>
         {items.map(({ tab }, idx) => (
           <span

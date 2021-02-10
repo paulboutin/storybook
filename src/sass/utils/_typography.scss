@@ -1,0 +1,19 @@
+@each $size in map-keys($font-sizes) {
+  .text-#{$size} {
+    @include font-size($size);
+  }
+
+  @each $screen in map-keys($screens) {
+    .#{$screen}\:text-#{$size} {
+      @include screen($screen) {
+        @include font-size($size);
+      }
+    }
+  }
+}
+
+@each $weight in map-keys($font-weights) {
+  .font-#{$weight} {
+    @include font-weight($weight);
+  }
+}

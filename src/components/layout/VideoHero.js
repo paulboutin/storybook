@@ -17,7 +17,7 @@ const VideoHero = ({
       <div className='video-hero-overlay' />
 
       <div className='video-hero-content container'>
-        <h1>{title}</h1>
+        <h2 className='text-h1'>{title}</h2>
 
         <p
           className='video-hero-text'

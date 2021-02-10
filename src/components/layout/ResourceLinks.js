@@ -11,8 +11,8 @@ const ResourceLinks = ({ eyebrow = {}, title, text }) => (
     <div className='row'>
       <div className='col-xs-12 col-sm-6 col-md-4'>
         {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
-        <h2
-          className='resource-links-title'
+        <h3
+          className='resource-links-title text-h2'
           dangerouslySetInnerHTML={{ __html: title }}
         />
         {text && (

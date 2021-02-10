@@ -12,7 +12,7 @@ const ColumnCards = ({ columns, heading, children, inverted, className }) => (
       className
     )}
   >
-    <h2 className='column-cards-heading'>{heading}</h2>
+    <h3 className='column-cards-heading text-h2'>{heading}</h3>
     <div className='row'>
       {children.map((child, index) => (
         <Column columns={columns} key={index} configFn={columnContentConfig}>

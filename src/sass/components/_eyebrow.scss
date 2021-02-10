@@ -1,5 +1,6 @@
 .eyebrow {
   @include font-size('base');
+  @include font-weight('bold');
   display: flex;
   flex-direction: column;
   color: color('grey-70');

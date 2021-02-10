@@ -1,4 +1,4 @@
-.sb\:form-wrapper {
+.form-wrapper {
   padding-top: spacing(48);
   padding-bottom: spacing(48);
 
@@ -6,16 +6,11 @@
     margin-top: spacing(32);
   }
 
-  .sb\:form-description {
-    @include font-size('xs');
-  }
-
-  .sb\:form-title {
-    @include font-size('xs');
+  .form-title {
     margin-bottom: spacing(16);
   }
 
-  .sb\:form-buttons {
+  .form-buttons {
     margin-top: spacing(32);
 
     button:first-child {
@@ -24,7 +19,7 @@
   }
 }
 
-.sb\:form-1 {
+.form-1 {
   .checkbox-wrapper {
     display: flex;
 
@@ -38,6 +33,6 @@
   }
 }
 
-.sb\:form-2 {
+.form-2 {
   background-color: color('grey-5');
 }

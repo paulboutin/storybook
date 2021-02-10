@@ -42,8 +42,8 @@ const PromoElement = ({
       <div className='container'>
         <div className='promo-element-content'>
           {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
-          <h3
-            className='promo-element-heading'
+          <h2
+            className='promo-element-heading text-h3'
             dangerouslySetInnerHTML={{ __html: heading }}
           />
           {text && (

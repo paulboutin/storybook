@@ -7,7 +7,7 @@ const HighlightContent = ({ eyebrow = {}, title, text, children }) => {
   return (
     <article className='highlight-content-container'>
       {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
-      <h2 className='highlight-title'>{title}</h2>
+      <h3 className='text-h2'>{title}</h3>
 
       {text && <p className='highlight-text'>{text}</p>}
 

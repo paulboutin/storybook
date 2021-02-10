@@ -17,7 +17,7 @@ const PopupVideo = () => (
     <div className='popup-video-content'>
       <div className='container'>
         <Eyebrow>Success stories</Eyebrow>
-        <h1>A to Z Wineworks</h1>
+        <h2 className='text-h1'>A to Z Wineworks</h2>
         <Button type='primary' icon='play' />
 
         <p className='popup-video-text'>

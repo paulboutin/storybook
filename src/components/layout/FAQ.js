@@ -68,7 +68,10 @@ export const FAQTables = ({ data = [] }) => (
 
 const FAQ = ({ heading, children }) => (
   <section className='faq container'>
-    <h2 className='faq-heading' dangerouslySetInnerHTML={{ __html: heading }} />
+    <h3
+      className='faq-heading text-h2'
+      dangerouslySetInnerHTML={{ __html: heading }}
+    />
     {children}
   </section>
 )

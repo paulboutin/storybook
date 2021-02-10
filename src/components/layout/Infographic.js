@@ -38,7 +38,9 @@ export const InfographicBoxImage = ({ src }) => (
 export const Infographic = ({ columns, className, children }) => {
   return (
     <section className={classNames('infographic', className)}>
-      <h2 className='infographic-title'>We invest in what we believe</h2>
+      <h2 className='infographic-title text-h2'>
+        We invest in what we believe
+      </h2>
 
       <div className='container'>
         <div className='row'>

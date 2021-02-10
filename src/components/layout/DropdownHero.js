@@ -9,7 +9,7 @@ const DropdownHero = ({ image, items, title = defaultTitle }) => (
     <div className='dropdown-hero-overlay' />
 
     <div className='dropdown-hero-content container'>
-      <h1 className='dropdown-hero-title'>{title}</h1>
+      <h2 className='dropdown-hero-title text-h1'>{title}</h2>
       <Dropdown
         className='dropdown-hero-dropdown'
         type='Options'

@@ -5,10 +5,10 @@ import Button from '../../../components/base/Button'
 import Dropdown from '../../../components/base/Dropdown'
 
 export const TwoColumnBackground = () => (
-  <div className='sb:form-wrapper sb:form-2'>
+  <div className='form-wrapper form-2'>
     <form className='container'>
-      <h4>Form title</h4>
-      <p className='sb:form-description'>Form description</p>
+      <h3 className='text-h4'>Form title</h3>
+      <p className='text-xs'>Form description</p>
 
       <div className='row'>
         <div className='col-xs-12'>
@@ -44,7 +44,7 @@ export const TwoColumnBackground = () => (
 
       <div className='row'>
         <div className='col-xs-6'>
-          <h6 className='sb:form-title'>Checkbox title</h6>
+          <h6 className='form-title'>Checkbox title</h6>
           <Checkbox label='Checkbox Item' />
         </div>
 
@@ -62,7 +62,7 @@ export const TwoColumnBackground = () => (
         </div>
       </div>
 
-      <div className='sb:form-buttons'>
+      <div className='form-buttons'>
         <Button type='secondary' label='Cancel' />
         <Button type='primary' label='Submit' />
       </div>

@@ -9,7 +9,7 @@ const Legal = () => {
 
   return (
     <section className='legal container'>
-      <h5 className='legal-heading'>All the legal stuff</h5>
+      <h2 className='legal-heading text-h5'>All the legal stuff</h2>
       <ol className='legal-list'>
         {items.map((item, index) => (
           <li key={index} className='legal-list-item'>

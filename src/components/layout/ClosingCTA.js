@@ -42,7 +42,7 @@ const ClosingCTA = ({
       )}
 
       <div className='closing-cta-content'>
-        <h2 dangerouslySetInnerHTML={{ __html: title }} />
+        <h3 className='text-h2' dangerouslySetInnerHTML={{ __html: title }} />
         {text && (
           <p
             className='closing-cta-text'
