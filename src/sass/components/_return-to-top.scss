@@ -13,7 +13,7 @@
   @include font-size('h4');
 
   @include border-radius('sm');
-  @include box-shadow('xs');
+  @include box-shadow('sm');
 
   padding: spacing(8) spacing(12);
 
