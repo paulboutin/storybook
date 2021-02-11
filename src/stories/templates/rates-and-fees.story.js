@@ -1,11 +1,7 @@
 import React from 'react'
-import RatesAndFeesPage, { defaultItems } from './rates-and-fees'
+import Template, { defaultItems } from '../../components/templates/RatesAndFees'
 
-export const RatesAndFees = () => <RatesAndFeesPage accordions={defaultItems} />
-
-RatesAndFees.story = {
-  name: 'Rates and Fees'
-}
+export const RatesAndFees = () => <Template accordions={defaultItems} />
 
 export default {
   title: 'Templates',

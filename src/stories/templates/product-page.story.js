@@ -1,11 +1,7 @@
 import React from 'react'
-import ProductPage from './product-page'
+import Template from '../../components/templates/ProductPage'
 
-export const ProductPageStory = () => <ProductPage />
-
-ProductPageStory.story = {
-  name: 'Product Page'
-}
+export const ProductPage = () => <Template />
 
 export default {
   title: 'Templates',

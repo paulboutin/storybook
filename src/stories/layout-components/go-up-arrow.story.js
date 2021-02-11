@@ -1,7 +1,7 @@
 import React from 'react'
 import { boolean, number, radios } from '@storybook/addon-knobs'
 import ReturnToTop from '../../components/base/ReturnToTop'
-import ProductPage from '../templates/product-page'
+import ProductPage from '../../components/templates/ProductPage'
 
 const options = {
   min: 0

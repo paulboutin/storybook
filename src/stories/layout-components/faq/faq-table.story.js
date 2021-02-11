@@ -1,6 +1,6 @@
 import React from 'react'
 import FAQ, { FAQTables } from '../../../components/layout/FAQ'
-import { defaultItems } from '../../templates/rates-and-fees'
+import { defaultItems } from '../../../components/templates/RatesAndFees'
 import { number, text, object } from '@storybook/addon-knobs'
 
 const options = {

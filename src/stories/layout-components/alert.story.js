@@ -1,7 +1,7 @@
 import React from 'react'
 import { text, radios, boolean, button } from '@storybook/addon-knobs'
 import Alert from '../../components/layout/Alert'
-import ProductPage from '../templates/product-page'
+import ProductPage from '../../components/templates/ProductPage'
 
 const options = {
   Danger: 'danger',

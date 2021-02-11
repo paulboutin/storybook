@@ -1,50 +1,7 @@
 import React from 'react'
-import { ComparisonCards } from '../../components/layout/Comparison'
-import FAQ from '../../components/layout/FAQ'
-import Footer from '../../components/layout/Footer'
-import Hero from '../../components/layout/Hero'
-import Legal from '../../components/layout/Legal'
-import Navigation from '../../components/layout/Navigation'
-import PromoElement from '../../components/layout/PromoElement'
-import Button from '../../components/base/Button'
-import Breadcrumbs from '../../components/base/Breadcrumbs'
+import Template from '../../components/templates/ComparisonPage'
 
-export const ComparisonPage = () => (
-  <>
-    <Navigation />
-
-    <main>
-      <Hero type='full' image='http://via.placeholder.com/1600' />
-
-      <ComparisonCards />
-
-      <PromoElement
-        heading='The strongest environmental stance of any major bank.'
-        type='accent dark'
-        text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
-        eyebrow='Sustainable Banking'
-        image={{
-          src: 'http://via.placeholder.com/480x640',
-          alt: 'Promo image'
-        }}
-      >
-        <Button type='tertiary' label='Call to Action' link />
-      </PromoElement>
-
-      <FAQ />
-
-      <Legal />
-
-      <div className='container'>
-        <Breadcrumbs
-          items={['Home', 'Checking', 'Any Deposit Checking', 'Comparison']}
-        />
-      </div>
-    </main>
-
-    <Footer />
-  </>
-)
+export const ComparisonPage = () => <Template />
 
 export default {
   title: 'Templates',
