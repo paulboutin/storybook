@@ -21,15 +21,6 @@ const ClosingCTA = ({
     className={classNames('closing-cta', `closing-cta-${type}`, className)}
   >
     <div className='container'>
-      {type === '2col' && (
-        <Image
-          ratio='4:3'
-          src={image}
-          alt='Closing CTA image'
-          className='closing-cta-image'
-        />
-      )}
-
       {type === 'bgi' && (
         <>
           <img
