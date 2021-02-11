@@ -4,6 +4,7 @@ import { PromoSection } from './promo-section'
 
 const options = {
   Standard: 'standard',
+  'Accent Dark': 'accent dark',
   Alt: 'alt'
 }
 
