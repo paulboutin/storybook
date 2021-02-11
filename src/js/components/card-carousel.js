@@ -1,3 +1,5 @@
+import { swipeDetect } from '../../utils'
+
 const translate = ({ element, fraction, width }) => {
   element.style.transform = `translateX(-${fraction * width}px)`
 }
@@ -58,5 +60,16 @@ export default () => {
 
     next.addEventListener('click', handleNext)
     prev.addEventListener('click', handlePrev)
+
+    swipeDetect(cardCarousel, swipeDir => {
+      switch (swipeDir) {
+        case 'left':
+          return handleNext()
+        case 'right':
+          return handlePrev()
+        default:
+          return null
+      }
+    })
   })
 }
