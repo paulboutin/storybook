@@ -85,7 +85,11 @@
 
       .card-article {
         width: 100%;
-        min-height: 2 * spacing(160);
+        min-height: 2.5 * spacing(160);
+
+        @include screen('sm') {
+          min-height: 2 * spacing(160);
+        }
       }
     }
   }

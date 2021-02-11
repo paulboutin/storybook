@@ -80,12 +80,18 @@
         justify-content: center;
         align-items: center;
       }
+
+      .button {
+        background-color: color('white');
+        color: color('green');
+      }
     }
 
     &:hover {
       .popup-video {
         .button {
-          background-color: color('green-dark');
+          background-color: color('grey-10');
+          color: color('green-dark');
         }
       }
     }
