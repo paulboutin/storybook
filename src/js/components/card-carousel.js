@@ -1,4 +1,4 @@
-import { swipeDetect } from '../../utils'
+import { swipeDetect } from '../utils'
 
 const translate = ({ element, fraction, width }) => {
   element.style.transform = `translateX(-${fraction * width}px)`
