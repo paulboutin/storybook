@@ -1,5 +1,3 @@
-import { swipeDetect } from '../utils'
-
 export default () => {
   const productSelectors = document.querySelectorAll('.product-selector')
 
@@ -33,7 +31,7 @@ export default () => {
       })
     }
 
-    const handleSwipe = incr => {
+    const handleSwipe = incr => () => {
       if (current < 1) return
 
       current = current + incr
@@ -55,15 +53,7 @@ export default () => {
       tab.addEventListener('click', handleClick(tab))
     })
 
-    swipeDetect(productSelector, swipeDir => {
-      switch (swipeDir) {
-        case 'left':
-          return handleSwipe(1)
-        case 'right':
-          return handleSwipe(-1)
-        default:
-          return null
-      }
-    })
+    productSelector.addEventListener('swiped-left', handleSwipe(1))
+    productSelector.addEventListener('swiped-right', handleSwipe(-1))
   })
 }
