@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
-import Image from '../base/Image'
 
 export const defaultTitle =
   'Together, we can safeguard the environment and the future of our planet.'
