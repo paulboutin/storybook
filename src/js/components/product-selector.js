@@ -32,11 +32,14 @@ export default () => {
     }
 
     const handleSwipe = incr => () => {
-      if (current < 1) return
+      let next = current + incr
+      if (next < 0 || next > items.length - 1) return
 
-      current = current + incr
+      current = next
 
-      let tab = Array.from(tabs).find(tab => tab.dataset.index === current)
+      let tab = Array.from(tabs).find(
+        tab => parseInt(tab.dataset.index) === current
+      )
 
       updateActiveTab(tab)
       scrollItems(tab)
@@ -53,7 +56,7 @@ export default () => {
       tab.addEventListener('click', handleClick(tab))
     })
 
-    productSelector.addEventListener('swiped-left', handleSwipe(1))
-    productSelector.addEventListener('swiped-right', handleSwipe(-1))
+    container.addEventListener('swiped-left', handleSwipe(1))
+    container.addEventListener('swiped-right', handleSwipe(-1))
   })
 }
