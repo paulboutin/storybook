@@ -24,9 +24,9 @@
 }
 
 .sb\:checkbox-hover {
-  @extend .checkbox-wrapper:hover;
+  @extend .checkbox-wrapper, :hover;
 }
 
 .sb\:checkbox-focus {
-  @extend .checkbox-wrapper:focus-within;
+  @extend .checkbox-wrapper, :focus-within;
 }

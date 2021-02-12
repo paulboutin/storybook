@@ -14,7 +14,7 @@
 
   &.sb\:input-active {
     input {
-      @extend .input-control:active;
+      @extend .input-control, :active;
     }
   }
 
