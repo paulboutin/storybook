@@ -8,6 +8,10 @@ function convertToKebabCase(string) {
   return string.replace(/([a-z0-9])([A-Z])/g, '$1-$2').toLowerCase()
 }
 
+function convertToTitleCase(string) {
+  return string.replace(/([A-Z]+)/g, ' $1').replace(/([A-Z][a-z])/g, ' $1')
+}
+
 function baseTemplate({ title, body }) {
   return `
     <!doctype html>
@@ -53,7 +57,7 @@ function renderTemplates() {
 
       const output = html.prettyPrint(
         baseTemplate({
-          title: template,
+          title: convertToTitleCase(template.split('.')[0]),
           body: renderToStaticMarkup(<Component />)
         })
       )
