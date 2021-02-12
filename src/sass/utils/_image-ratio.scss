@@ -10,12 +10,4 @@
   .ratio-#{$horizontal}\:#{$vertical} {
     @include fixed-ratio($horizontal, $vertical);
   }
-
-  @each $size in map-keys($screens) {
-    .#{$size}\:ratio-#{$horizontal}\:#{$vertical} {
-      @include screen($size) {
-        @include fixed-ratio($horizontal, $vertical);
-      }
-    }
-  }
 }
