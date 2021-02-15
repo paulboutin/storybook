@@ -39,19 +39,24 @@ const ArticleTextOnly = ({ heading, href }) => {
   )
 }
 
-const ArticleVideo = ({ heading, subtext, tag, cardId, tagHref }) => {
+const ArticleVideo = ({
+  src = 'https://player.vimeo.com/video/445351154',
+  poster = 'https://i.vimeocdn.com/video/936265353.jpg',
+  posterAlt = 'Popup video poster',
+  heading,
+  subtext,
+  tag,
+  cardId,
+  tagHref
+}) => {
   return (
     <>
       <section
         className='popup-video'
-        data-popup-video-src='https://player.vimeo.com/video/445351154'
+        data-popup-video-src={src}
         data-click-target={`#${cardId}`}
       >
-        <img
-          src='https://i.vimeocdn.com/video/936265353.jpg'
-          alt='Popup video poster'
-          className='popup-video-poster'
-        />
+        <img src={poster} alt={posterAlt} className='popup-video-poster' />
         <div className='popup-video-overlay' />
 
         <div className='popup-video-content'>
@@ -84,7 +89,7 @@ const Services = ({ heading, image, href }) => {
   )
 }
 
-const CardArticle = ({ type, heading, subtext, tag, image, href, tagHref }) => {
+const CardArticle = ({ type, ...props }) => {
   const cardId = `card-${
     (Math.random() * Math.random()).toString().split('.')[1]
   }`
@@ -92,30 +97,13 @@ const CardArticle = ({ type, heading, subtext, tag, image, href, tagHref }) => {
   const Content = () => {
     switch (type) {
       case 'standard':
-        return (
-          <ArticleStandard
-            heading={heading}
-            subtext={subtext}
-            tag={tag}
-            image={image}
-            href={href}
-            tagHref={tagHref}
-          />
-        )
+        return <ArticleStandard {...props} />
       case 'text-only':
-        return <ArticleTextOnly href={href} heading={heading} />
+        return <ArticleTextOnly {...props} />
       case 'video':
-        return (
-          <ArticleVideo
-            heading={heading}
-            subtext={subtext}
-            tag={tag}
-            cardId={cardId}
-            tagHref={tagHref}
-          />
-        )
+        return <ArticleVideo cardId={cardId} {...props} />
       case 'services':
-        return <Services href={href} heading={heading} image={image} />
+        return <Services {...props} />
       default:
         return null
     }
