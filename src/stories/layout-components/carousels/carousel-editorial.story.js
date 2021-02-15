@@ -6,7 +6,7 @@ import CardCarousel, {
 
 const options = {
   range: true,
-  min: 6,
+  min: 4,
   max: 10,
   step: 1
 }
