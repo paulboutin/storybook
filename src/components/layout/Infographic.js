@@ -44,8 +44,12 @@ export const Infographic = ({ columns, className, children }) => {
 
       <div className='container'>
         <div className='row'>
-          {children.map(child => (
-            <Column columns={columns} configFn={columnInfographicConfig}>
+          {children.map((child, idx) => (
+            <Column
+              key={idx}
+              columns={columns}
+              configFn={columnInfographicConfig}
+            >
               {child}
             </Column>
           ))}
@@ -65,8 +69,10 @@ export const Infographic = ({ columns, className, children }) => {
 const DefaultInfographic = ({ className }) => {
   return (
     <Infographic className={className} columns={defaultItems.length}>
-      {defaultItems.map(({ title, content }) => (
-        <InfographicBox title={title}>{content}</InfographicBox>
+      {defaultItems.map(({ title, content }, idx) => (
+        <InfographicBox key={idx} title={title}>
+          {content}
+        </InfographicBox>
       ))}
     </Infographic>
   )

@@ -52,12 +52,16 @@ export const InfographicStory = () => {
       columns={cards}
       className={starBirds ? 'infographic-star-birds' : ''}
     >
-      {items.map(({ type, title, content }) => {
+      {items.map(({ type, title, content }, idx) => {
         switch (type) {
           case typeOptions.Text:
-            return <InfographicBox title={title}>{content}</InfographicBox>
+            return (
+              <InfographicBox key={idx} title={title}>
+                {content}
+              </InfographicBox>
+            )
           case typeOptions.Image:
-            return <InfographicBoxImage src={content} />
+            return <InfographicBoxImage key={idx} src={content} />
           default:
             return null
         }
