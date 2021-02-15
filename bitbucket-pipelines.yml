@@ -7,15 +7,15 @@ definitions:
           - npm install
           - npm run test:unit
 
-    #    - step: &snapshot-tests
-    #        name: Snapshot tests
-    #        image: buildkite/puppeteer:v3.0.4
-    #        script:
-    #          - apt-get update && apt-get -y install procps
-    #          - npm install
-    #          - npm run test:snapshot
-    #        artifacts:
-    #          - test/**/__diff_output__/*.png
+    - step: &snapshot-tests
+        name: Snapshot tests
+        image: buildkite/puppeteer:v3.0.4
+        script:
+          - apt-get update && apt-get -y install procps
+          - npm install
+          - npm run test:snapshot
+        artifacts:
+          - test/**/__diff_output__/*.png
 
     - step: &publish-dsm
         name: Publish InVision DSM
@@ -26,12 +26,11 @@ definitions:
 
 pipelines:
   default:
-    # - parallel: &run-tests
-    # - step: *unit-tests
-    # - step: *snapshot-tests
-    - step: *unit-tests
+    - parallel: &run-tests
+        - step: *unit-tests
+        - step: *snapshot-tests
 
   branches:
     master:
-      # - parallel: *run-tests
+      - parallel: *run-tests
       - step: *publish-dsm
