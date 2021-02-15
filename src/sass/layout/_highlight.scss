@@ -44,11 +44,6 @@
       padding-bottom: spacing(64);
     }
 
-    @include screen('md') {
-      padding-top: spacing(48);
-      padding-bottom: spacing(48);
-    }
-
     .highlight-content-container {
       @include screen('sm') {
         padding-left: spacing(24);
