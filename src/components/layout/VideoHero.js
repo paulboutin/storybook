@@ -24,7 +24,7 @@ const VideoHero = ({
           dangerouslySetInnerHTML={{ __html: text }}
         />
 
-        <Button type='tertiary' label='Learn more' link />
+        <Button type='secondary' label='Learn more' link />
       </div>
     </div>
   </section>

@@ -13,8 +13,8 @@ const ResourceLinksImage = ({ type, reverse, headline, image = {}, items }) => {
       <div className='highlight-content-container resource-links-content'>
         <h3 className='resource-links-headline text-h2'>{headline}</h3>
         <div className='resource-links-wrapper'>
-          {items.map(item => (
-            <Link className='resource-link' standalone>
+          {items.map((item, idx) => (
+            <Link key={idx} className='resource-link' standalone>
               {item}
             </Link>
           ))}

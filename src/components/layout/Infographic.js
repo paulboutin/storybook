@@ -53,7 +53,7 @@ export const Infographic = ({ columns, className, children }) => {
       </div>
 
       <Button
-        type='tertiary'
+        type='secondary'
         label='Learn more'
         className='infographic-button'
         link
