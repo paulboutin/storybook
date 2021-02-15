@@ -51,15 +51,9 @@ const CardCarousel = ({ items = [] }) => {
     <section className='card-carousel'>
       <div className='card-carousel-wrapper container'>
         <div className='card-carousel-items'>
-          {items.map(({ type, heading, subtext, tag, image }, idx) => (
+          {items.map((item, idx) => (
             <div key={idx} className='card-carousel-item'>
-              <CardArticle
-                type={type}
-                heading={heading}
-                subtext={subtext}
-                tag={tag}
-                image={image}
-              />
+              <CardArticle {...item} />
             </div>
           ))}
         </div>

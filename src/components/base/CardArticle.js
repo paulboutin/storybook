@@ -4,16 +4,23 @@ import Image from './Image'
 import Link from './Link'
 import Button from './Button'
 
-const ArticleStandard = ({ heading, subtext, image, tag }) => {
+const ArticleStandard = ({
+  heading,
+  subtext,
+  image,
+  tag,
+  href,
+  tagHref = '#'
+}) => {
   return (
     <>
       <Image src={image.src} alt={image.alt} ratio='16:9' />
 
       <div className='card-content'>
-        <a className='card-tag' href='#'>
+        <a className='card-tag' href={tagHref}>
           {tag}
         </a>
-        <Link standalone noArrow>
+        <Link href={href} standalone noArrow>
           {heading}
         </Link>
         <p className='card-subtext'>{subtext}</p>
@@ -22,15 +29,17 @@ const ArticleStandard = ({ heading, subtext, image, tag }) => {
   )
 }
 
-const ArticleTextOnly = ({ heading }) => {
+const ArticleTextOnly = ({ heading, href }) => {
   return (
     <div className='card-content'>
-      <Link standalone>{heading}</Link>
+      <Link href={href} standalone>
+        {heading}
+      </Link>
     </div>
   )
 }
 
-const ArticleVideo = ({ heading, subtext, tag, cardId }) => {
+const ArticleVideo = ({ heading, subtext, tag, cardId, tagHref }) => {
   return (
     <>
       <section
@@ -51,7 +60,7 @@ const ArticleVideo = ({ heading, subtext, tag, cardId }) => {
       </section>
 
       <div className='card-content'>
-        <a className='card-tag' href='#'>
+        <a className='card-tag' href={tagHref}>
           {tag}
         </a>
         <span className='link link-standalone'>{heading}</span>
@@ -61,13 +70,13 @@ const ArticleVideo = ({ heading, subtext, tag, cardId }) => {
   )
 }
 
-const Services = ({ heading, image }) => {
+const Services = ({ heading, image, href }) => {
   return (
     <>
       <Image src={image.src} alt={image.alt} ratio='3:4' />
 
       <div className='card-content'>
-        <Link standalone noArrow>
+        <Link href={href} standalone noArrow>
           {heading}
         </Link>
       </div>
@@ -75,7 +84,7 @@ const Services = ({ heading, image }) => {
   )
 }
 
-const CardArticle = ({ type, heading, subtext, tag, image }) => {
+const CardArticle = ({ type, heading, subtext, tag, image, href, tagHref }) => {
   const cardId = `card-${
     (Math.random() * Math.random()).toString().split('.')[1]
   }`
@@ -89,10 +98,12 @@ const CardArticle = ({ type, heading, subtext, tag, image }) => {
             subtext={subtext}
             tag={tag}
             image={image}
+            href={href}
+            tagHref={tagHref}
           />
         )
       case 'text-only':
-        return <ArticleTextOnly heading={heading} />
+        return <ArticleTextOnly href={href} heading={heading} />
       case 'video':
         return (
           <ArticleVideo
@@ -100,10 +111,11 @@ const CardArticle = ({ type, heading, subtext, tag, image }) => {
             subtext={subtext}
             tag={tag}
             cardId={cardId}
+            tagHref={tagHref}
           />
         )
       case 'services':
-        return <Services heading={heading} image={image} />
+        return <Services href={href} heading={heading} image={image} />
       default:
         return null
     }
