@@ -15,12 +15,12 @@ describe('Base Components', () => {
     ...['inline', 'standalone'].map(type => ({
       title: `link ${type}`,
       path: `base-components-link--${type}`,
-      devices: ['mobile', 'tablet', 'desktop']
+      devices: ['mobile', 'tablet']
     })),
-    ...['standard', 'flat'].map(type => ({
+    ...['standard', 'flat', 'article', 'services'].map(type => ({
       title: `card ${type}`,
       path: `base-components-card--${type}`,
-      devices: ['mobile', 'tablet', 'desktop']
+      devices: ['mobile', 'tablet']
     })),
     ...['outline', 'underline'].map(type => ({
       title: `input ${type}`,
@@ -28,30 +28,18 @@ describe('Base Components', () => {
       devices: ['mobile']
     })),
     {
-      title: 'image auto ratio',
+      title: 'image ratio',
       path: 'base-components--image-story',
-      devices: ['mobile']
-    },
-    {
-      title: 'image 1-1 ratio',
-      path: 'base-components--image-story',
-      devices: ['mobile'],
-      'knob-Ratio': '1:1'
-    },
-    {
-      title: 'image 4-3 ratio',
-      path: 'base-components--image-story',
-      devices: ['mobile'],
-      'knob-Ratio': '4:3'
+      devices: ['desktop']
     },
     {
       title: 'switch off',
-      path: 'base-components--switch-story',
+      path: 'base-components-button--switch-story',
       devices: ['mobile']
     },
     {
       title: 'switch on',
-      path: 'base-components--switch-story',
+      path: 'base-components-button--switch-story',
       devices: ['mobile'],
       callback: async () => {
         await page.click('.switch')
@@ -107,7 +95,7 @@ describe('Base Components', () => {
     })),
     {
       title: 'radio',
-      path: 'base-components--radio-story',
+      path: 'base-components-button--radio-story',
       devices: ['desktop']
     },
     {

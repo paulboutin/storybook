@@ -6,12 +6,12 @@ describe('Layout Components', () => {
       title: 'legal',
       path: 'layout-components--legal-story'
     },
-    ...['standard', 'alt'].map(type => ({
-      title: `list-element ${type}`,
-      path: `layout-components-list-element--${type}`,
+    ...['standard', 'image'].map(type => ({
+      title: `content-list ${type}`,
+      path: `layout-components-content-list--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    ...['standard', 'background-image', 'two-column'].map(type => ({
+    ...['standard', 'background-image'].map(type => ({
       title: `closing-cta ${type}`,
       path: `layout-components-closing-cta--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
@@ -21,44 +21,26 @@ describe('Layout Components', () => {
       path: `layout-components-hero--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    {
-      title: 'cards-three-column',
-      path: 'layout-components--cards-three-column',
-      devices: ['mobile', 'tablet', 'desktop']
-    },
     ...['accordion', 'table'].map(type => ({
       title: `faq ${type}`,
       path: `layout-components-faq--${type}`,
       devices: ['tablet']
     })),
-    ...['standard', 'accent-square', 'accent-dark'].map(type => ({
-      title: `promo-element ${type}`,
-      path: `layout-components-promo-element--${type}`,
+    ...['standard', 'accent-green'].map(type => ({
+      title: `promo-section ${type}`,
+      path: `layout-components-promo-section--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    ...['single', 'overlap-color'].map(type => ({
+    ...['a', 'b'].map(type => ({
       title: `highlight ${type}`,
-      path: `layout-components-content-highlight--${type}`,
+      path: `layout-components-content-highlight--highlight-${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    {
-      title: 'column cards',
-      path: 'layout-components--column-cards-story'
-    },
-    {
-      title: 'column-icons normal',
-      path: 'layout-components-content-highlight--column-icons-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Columns_config': 4,
-      'knob-Inverted_config': false
-    },
-    {
-      title: 'column-icons inverted',
-      path: 'layout-components-content-highlight--column-icons-story',
-      devices: ['mobile', 'tablet', 'desktop'],
-      'knob-Columns_config': 5,
-      'knob-Inverted_config': true
-    },
+    ...['horizontal', 'vertical'].map(type => ({
+      title: `card layout ${type}`,
+      path: `layout-components-card-layouts--${type}`,
+      devices: ['mobile', 'tablet']
+    })),
     ...['single-column', 'two-column-background'].map(type => ({
       title: `form ${type}`,
       path: `layout-components-form--${type}`,
@@ -86,21 +68,16 @@ describe('Layout Components', () => {
       title: 'dropdown-hero',
       path: 'layout-components-hero--dropdown-hero-story'
     },
-    {
-      title: 'resource-links',
-      path: 'layout-components--resource-links-story',
+    ...['standard', 'a', 'b'].map(type => ({
+      title: `resource-links ${type}`,
+      path: `layout-components-resource-links--resource-links-${type}`,
+      devices: ['mobile', 'tablet']
+    })),
+    ...['standard', 'editorial'].map(type => ({
+      title: `carousel ${type}`,
+      path: `layout-components-carousels--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'carousel',
-      path: 'layout-components--carousel-story',
-      devices: ['mobile', 'tablet', 'desktop']
-    },
-    {
-      title: 'cards-horizontal-list',
-      path: 'layout-components--cards-horizontal-list-story',
-      devices: ['mobile', 'tablet', 'desktop']
-    },
+    })),
     {
       title: 'footer',
       path: 'layout-components--footer-story',
@@ -195,6 +172,11 @@ describe('Layout Components', () => {
     {
       title: 'alert',
       path: 'layout-components--alert-story',
+      devices: ['mobile', 'desktop']
+    },
+    {
+      title: 'product-selector',
+      path: 'layout-components--product-selector-story',
       devices: ['mobile', 'desktop']
     }
   ]
