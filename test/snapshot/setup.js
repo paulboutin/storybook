@@ -3,12 +3,12 @@ const { configureToMatchImageSnapshot } = require('jest-image-snapshot')
 const { slugify } = require('../../src/utils')
 
 const toMatchImageSnapshot = configureToMatchImageSnapshot({
-  customDiffConfig: {
-    threshold: env
-      .get('SNAPSHOT_DIFF_THRESHOLD')
-      .default('0')
-      .asFloatPositive()
-  },
+  comparisonMethod: 'ssim',
+  failureThreshold: env
+    .get('SNAPSHOT_DIFF_THRESHOLD')
+    .default('0.01')
+    .asFloatPositive(),
+  failureThresholdType: 'percent',
   customSnapshotIdentifier: ({ currentTestName }) => {
     return slugify(currentTestName).replace('matches-snapshot-on-', '')
   }
