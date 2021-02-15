@@ -39,7 +39,7 @@ const ClosingCTA = ({
             dangerouslySetInnerHTML={{ __html: text }}
           />
         )}
-        <Button type='tertiary' label={label} link />
+        <Button type='secondary' label={label} link />
       </div>
     </div>
   </section>

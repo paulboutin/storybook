@@ -43,8 +43,8 @@ const ProductPage = () => (
         eyebrow={{ enable: true, text: 'Bank for the planet' }}
         title='The strongest environmental stance of any major bank.'
         text="Our policies are 100% transparent because we're proud of what we finance and what we don't."
-        type='single'
-        images={['http://via.placeholder.com/640']}
+        type='A'
+        image={'http://via.placeholder.com/640'}
       >
         <Link standalone>Learn why your choice of bank matters</Link>
       </Highlight>
@@ -56,7 +56,7 @@ const ProductPage = () => (
         eyebrow={{ enable: true, text: 'Sustainable Banking' }}
         image={{ src: 'http://via.placeholder.com/640', alt: 'Promo image' }}
       >
-        <Button type='tertiary' label='Call to Action' link />
+        <Button type='primary' label='Call to Action' link />
       </PromoElement>
 
       <ColumnIcons
@@ -82,7 +82,10 @@ const ProductPage = () => (
 
       <FAQ />
 
-      <ClosingCTA type='2col' image='http://via.placeholder.com/1600x1000' />
+      <ClosingCTA
+        type='standard'
+        image='http://via.placeholder.com/1600x1000'
+      />
 
       <ColumnCards heading='Three more reasons to love your account'>
         {[

@@ -2,8 +2,7 @@ import React from 'react'
 import { text, boolean } from '@storybook/addon-knobs'
 import ClosingCTA, {
   defaultText,
-  defaultTitle,
-  altTitle
+  defaultTitle
 } from '../../../components/layout/ClosingCTA'
 
 const ClosingCTAStory = ({ type, image }) => {
@@ -12,7 +11,7 @@ const ClosingCTAStory = ({ type, image }) => {
   const title = text('Title', defaultTitle, 'content')
   const textContent = text('Text', defaultText, 'content')
 
-  if (['standard', '2col'].includes(type)) {
+  if (type === 'standard') {
     starBirds = boolean('Starbirds', false, 'config')
   }
 
