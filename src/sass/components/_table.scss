@@ -61,7 +61,7 @@
 .table-standard {
   thead,
   tbody {
-    &:nth-child(odd) {
+    &:nth-child(even) {
       background-color: color('grey-5');
     }
 

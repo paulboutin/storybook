@@ -60,7 +60,7 @@ export const FAQTables = ({ data = [] }) => (
         className='accordion-table'
         expanded={index === 0}
       >
-        <Table data={accordion.table} />
+        <Table type='standard' data={accordion.table} />
       </Accordion>
     ))}
   </>

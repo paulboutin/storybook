@@ -429,7 +429,7 @@ const RatesAndFees = ({ accordions = defaultItems }) => {
               title={accordion.title}
               className='accordion-table'
             >
-              <Table data={accordion.table} />
+              <Table type='standard' data={accordion.table} />
             </Accordion>
           ))}
         </section>
