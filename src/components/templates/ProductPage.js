@@ -20,7 +20,7 @@ const ProductPage = () => (
     <Navigation />
 
     <main>
-      <Hero type='spaced' image='http://via.placeholder.com/1600' />
+      <Hero type='spaced' image='/img/trees.png' />
 
       <ListElement
         headerText={{
@@ -44,7 +44,7 @@ const ProductPage = () => (
         title='The strongest environmental stance of any major bank.'
         text="Our policies are 100% transparent because we're proud of what we finance and what we don't."
         type='A'
-        image={'http://via.placeholder.com/640'}
+        image='/img/plant.png'
       >
         <Link standalone>Learn why your choice of bank matters</Link>
       </Highlight>
@@ -54,7 +54,7 @@ const ProductPage = () => (
         type='alt'
         text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         eyebrow={{ enable: true, text: 'Sustainable Banking' }}
-        image={{ src: 'http://via.placeholder.com/640', alt: 'Promo image' }}
+        image={{ src: '/img/butterfly.png', alt: 'Promo image' }}
       >
         <Button type='primary' label='Call to Action' link />
       </PromoElement>
@@ -82,10 +82,7 @@ const ProductPage = () => (
 
       <FAQ />
 
-      <ClosingCTA
-        type='standard'
-        image='http://via.placeholder.com/1600x1000'
-      />
+      <ClosingCTA type='standard' image='/img/trees.png' />
 
       <ColumnCards heading='Three more reasons to love your account'>
         {[
@@ -107,7 +104,7 @@ const ProductPage = () => (
         ].map((item, index) => (
           <Card
             key={index}
-            image={{ src: 'http://via.placeholder.com/640', alt: 'image' }}
+            image={{ src: '/img/trees.png', alt: 'image' }}
             heading={item.heading}
             linkText='View all'
           >

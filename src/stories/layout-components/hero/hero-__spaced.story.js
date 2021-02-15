@@ -7,7 +7,7 @@ import Hero, {
 import { text } from '@storybook/addon-knobs'
 
 export const Spaced = () => {
-  const image = text('Image', 'http://via.placeholder.com/1600')
+  const image = text('Image', '/img/trees.png')
   const eyebrow = text('Eyebrow', defaultEyebrow)
   const title = text('Title', defaultTitle)
   const textContent = text('Text', defaultText)

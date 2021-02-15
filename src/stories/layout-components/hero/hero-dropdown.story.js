@@ -5,7 +5,7 @@ import DropdownHero, {
 import { text, array } from '@storybook/addon-knobs'
 
 export const DropdownHeroStory = () => {
-  const image = text('Image', 'http://via.placeholder.com/1600')
+  const image = text('Image', '/img/trees.png')
   const title = text('Title', defaultTitle)
   const items = array(
     'Options',

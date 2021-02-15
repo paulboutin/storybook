@@ -14,7 +14,7 @@ const ComparisonPage = () => (
     <Navigation />
 
     <main>
-      <Hero type='full' image='http://via.placeholder.com/1600' />
+      <Hero type='full' image='/img/trees.png' />
 
       <ComparisonCards />
 
@@ -24,11 +24,11 @@ const ComparisonPage = () => (
         text='Lorem Ipsum is simply dummy text of the printing and typesetting industry.'
         eyebrow='Sustainable Banking'
         image={{
-          src: 'http://via.placeholder.com/480x640',
+          src: '/img/butterfly.png',
           alt: 'Promo image'
         }}
       >
-        <Button type='tertiary' label='Call to Action' link />
+        <Button type='secondary' label='Call to Action' link />
       </PromoElement>
 
       <FAQ />
