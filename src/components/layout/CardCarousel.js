@@ -13,7 +13,10 @@ export const defaultItems = [
     type: 'video',
     tag: 'Label',
     heading: 'Article Title',
-    subtext: 'Lorem ipsum'
+    subtext: 'Lorem ipsum',
+    src: 'https://player.vimeo.com/video/445351154',
+    poster: 'https://i.vimeocdn.com/video/936265353.jpg',
+    posterAlt: 'Popup video poster'
   },
   {
     type: 'text-only',

@@ -25,13 +25,19 @@ export const Editorial = () => {
     const defaultColumn = defaultItems[i] || defaultItems[0]
     const prefix = `item ${i + 1}`
 
-    let tag, subtext, image
+    let tag,
+      tagHref,
+      subtext,
+      image,
+      href,
+      video = {}
 
     const type = radios('Type', typeOptions, defaultColumn.type, prefix)
     const heading = text('Heading', defaultColumn.heading, prefix)
 
     if ([typeOptions.Standard, typeOptions.Video].includes(type)) {
       tag = text('Tag', defaultColumn.tag, prefix)
+      tagHref = text('Tag Link', '#', prefix)
       subtext = text('Subtext', defaultColumn.subtext, prefix)
     }
 
@@ -39,12 +45,25 @@ export const Editorial = () => {
       image = text('Image', defaultColumn.image, prefix)
     }
 
+    if (type !== typeOptions.Video) {
+      href = text('Link', '#', prefix)
+    }
+
+    if (type === typeOptions.Video) {
+      video.src = text('Video Source', defaultColumn.src, prefix)
+      video.poster = text('Poster', defaultColumn.poster, prefix)
+      video.posterAlt = text('Poster Alt', defaultColumn.posterAlt, prefix)
+    }
+
     items.push({
       type,
       heading,
+      href,
       subtext,
       tag,
-      image: { src: image }
+      tagHref,
+      image: { src: image },
+      ...video
     })
   }
 
