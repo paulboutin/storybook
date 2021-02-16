@@ -1,4 +1,8 @@
+import smoothScroll from '../lib/smoothscroll-polyfill'
+
 export default () => {
+  smoothScroll.polyfill()
+
   const productSelectors = document.querySelectorAll('.product-selector')
 
   productSelectors.forEach(productSelector => {
