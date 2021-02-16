@@ -18,10 +18,12 @@ export default () => {
       const step = Math.floor(cardCarousel.offsetWidth / firstItem.scrollWidth)
 
       current++
-      translate({
-        element: items,
-        fraction: current / total,
-        width: items.scrollWidth
+      window.requestAnimationFrame(() => {
+        translate({
+          element: items,
+          fraction: current / total,
+          width: items.scrollWidth
+        })
       })
 
       if (current > 0) {
@@ -41,10 +43,12 @@ export default () => {
       const step = Math.floor(cardCarousel.offsetWidth / firstItem.scrollWidth)
 
       current--
-      translate({
-        element: items,
-        fraction: current / total,
-        width: items.scrollWidth
+      window.requestAnimationFrame(() => {
+        translate({
+          element: items,
+          fraction: current / total,
+          width: items.scrollWidth
+        })
       })
 
       if (current < 1) {

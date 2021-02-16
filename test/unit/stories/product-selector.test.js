@@ -37,8 +37,6 @@ describe('ProductSelector component', () => {
 
     window.Element.prototype.scrollTo = mockScroll
 
-    jest.useFakeTimers()
-
     // Arrange
     const container = mount(
       <ProductSelector items={testItems} headline='foo' />,
