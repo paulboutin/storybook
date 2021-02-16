@@ -108,6 +108,19 @@
           width: 100%;
         }
       }
+
+      .highlight-content-container,
+      .highlight-img-container {
+        opacity: 0;
+        transition: opacity 300ms 300ms;
+      }
+
+      &.active {
+        .highlight-content-container,
+        .highlight-img-container {
+          opacity: 1;
+        }
+      }
     }
   }
 }
