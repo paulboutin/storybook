@@ -54,7 +54,7 @@ describe('Layout Components', () => {
     {
       title: 'pull-quote',
       path: 'layout-components--pull-quote-story',
-      devices: ['mobile', 'tablet', 'desktop']
+      devices: ['mobile', 'tablet']
     },
     {
       title: 'popup-video',
