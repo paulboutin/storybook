@@ -11,7 +11,7 @@ import returnToTop from './components/return-to-top'
 import cardCarousel from './components/card-carousel'
 import productSelector from './components/product-selector'
 import './lib/smoothscroll-polyfill'
-import './lib/swiped-events.min'
+import './lib/swiped-events'
 
 function ready(fn) {
   if (
