@@ -32,7 +32,9 @@ const ProductSelector = ({ items, headline }) => {
             text={text}
             reverse
             container={false}
-            className='product-selector-item'
+            className={classNames('product-selector-item', {
+              active: idx === 0
+            })}
           >
             {button && <Button type='primary' label={button} />}
             {cta && <Link>{cta}</Link>}

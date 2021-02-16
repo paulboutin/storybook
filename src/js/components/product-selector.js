@@ -28,6 +28,9 @@ export default () => {
           left: items[current].offsetLeft - container.offsetLeft,
           behavior: 'smooth'
         })
+
+        items.forEach(item => item.classList.remove('active'))
+        items[current].classList.add('active')
       })
     }
 
