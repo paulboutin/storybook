@@ -87,18 +87,23 @@ export default async () => {
 
     updatePagination(pagination, currentSlide, totalSlides)
 
-    prevTrigger.addEventListener('click', () => {
+    const handlePrev = () => {
       currentSlide--
       if (currentSlide < 1) currentSlide = totalSlides
       updatePagination(pagination, currentSlide, totalSlides)
       sliders.forEach(slider => slide(slider, currentSlide, -1))
-    })
+    }
 
-    nextTrigger.addEventListener('click', () => {
+    const handleNext = () => {
       currentSlide++
       if (currentSlide > totalSlides) currentSlide = 1
       updatePagination(pagination, currentSlide, totalSlides)
       sliders.forEach(slider => slide(slider, currentSlide, 1))
-    })
+    }
+
+    prevTrigger.addEventListener('click', handlePrev)
+    nextTrigger.addEventListener('click', handleNext)
+    container.addEventListener('swiped-left', handlePrev)
+    container.addEventListener('swiped-right', handleNext)
   })
 }
