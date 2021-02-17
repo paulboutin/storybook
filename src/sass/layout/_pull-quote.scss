@@ -17,6 +17,10 @@
     @include screen('md') {
       padding-bottom: 0;
     }
+
+    .slider {
+      background: color('white');
+    }
   }
 
   .pull-quote-middle-wrapper {
