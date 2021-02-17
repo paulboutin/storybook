@@ -83,7 +83,7 @@ function renderTemplates() {
     })
   )
 
-  fs.writeFileSync(path.join(outDir, '_base.html'), base)
+  fs.writeFileSync(path.join(outDir, '__base.html'), base)
 }
 
 renderTemplates()
