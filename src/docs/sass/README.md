@@ -25,6 +25,6 @@ To be able to generate a corresponding bundle.css:
 
 - Ensure `node` v.12 or later is installed with `npm` package manager.
 - Run `npm i -g sass` to install webpack globally.
-- Run `sass src/sass/main.scss bundles/bundle.css --style compressed --no-source-map` to compile production-ready bundle.
+- Run `sass sass/main.scss path/to/output/bundle.css --style compressed --no-source-map` to compile production-ready bundle.
 
 A precompiled version is already included in the /bundles folder of this zipfile.

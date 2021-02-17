@@ -20,6 +20,6 @@ To be able to generate a corresponding main.js:
 
 - Ensure `node` v.12 or later is installed with `npm` package manager.
 - Run `npm i -g webpack webpack-cli` to install webpack globally.
-- Run `webpack --entry ./js/main.js -o ./bundles --mode production` to compile production-ready bundle.
+- Run `webpack --entry ./js/main.js -o ./path/to/output --mode production` to compile production-ready bundle.
 
 A precompiled version is already included in the /bundles folder of this zipfile.
