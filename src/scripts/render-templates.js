@@ -38,17 +38,17 @@ function mkdir(outDir) {
 }
 
 function renderTemplates() {
-  const dir = path.join(path.dirname(__filename), '../components/templates')
+  const dir = path.join(path.dirname(__filename), '../components/pre-render')
   const templates = fs.readdirSync(dir)
 
-  const outDir = path.join(path.dirname(__filename), '../../tmp/templates')
+  const outDir = path.join(path.dirname(__filename), '../../tmp/pre-render')
 
   mkdir(outDir)
 
   templates.forEach(template => {
     const inPath = path.join(
       path.dirname(__filename),
-      '../components/templates',
+      '../components/pre-render',
       template
     )
 
