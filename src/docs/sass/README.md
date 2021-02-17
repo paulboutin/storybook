@@ -26,7 +26,7 @@ You can read more about this package [here](https://github.com/sass/sass)
 To be able to generate a corresponding bundle.css:
 
 - Ensure `node` v.12 or later is installed with `npm` package manager.
-- Run `npm install -g sass` to install webpack globally.
+- Run `npm install -g sass` to install sass globally.
 - Run `sass sass/main.scss path/to/output/bundle.css --style compressed --no-source-map` to compile production-ready bundle.
 
 A precompiled version is already included in the /bundles folder of this zipfile.
