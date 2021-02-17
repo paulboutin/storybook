@@ -14,12 +14,14 @@ The code is organized as follows:
 
 ## Compiling
 
-Compiling this code for use in browsers is very simple using `webpack`. No specific configurations are required.
+Compiling this code for use in browsers is very simple using `webpack-cli`. No specific configurations are required.
+
+You can read more about this package [here](https://github.com/webpack/webpack-cli/blob/master/packages/webpack-cli/README.md)
 
 To be able to generate a corresponding main.js:
 
 - Ensure `node` v.12 or later is installed with `npm` package manager.
-- Run `npm i -g webpack webpack-cli` to install webpack globally.
+- Run `npm install -g webpack webpack-cli` to install webpack globally.
 - Run `webpack --entry ./js/main.js -o ./path/to/output --mode production` to compile production-ready bundle.
 
 A precompiled version is already included in the /bundles folder of this zipfile.
