@@ -10,9 +10,7 @@ import alerts from './components/alert'
 import returnToTop from './components/return-to-top'
 import cardCarousel from './components/card-carousel'
 import productSelector from './components/product-selector'
-import './lib/smoothscroll-polyfill'
-import './lib/swiped-events'
-import './lib/vimeo-player.min'
+import './lib'
 
 function ready(fn) {
   if (
