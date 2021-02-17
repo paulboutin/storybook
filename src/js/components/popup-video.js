@@ -1,5 +1,3 @@
-import VimeoPlayer from '@vimeo/player'
-
 const modalTemplate = src => `
   <aside class='popup-video-modal'>
     <iframe
@@ -40,7 +38,7 @@ export default () => {
       document.body.prepend(modal.body)
 
       const iframe = document.querySelector('.popup-video-modal iframe')
-      const player = new VimeoPlayer(iframe)
+      const player = new Vimeo.Player(iframe)
 
       toggleBodyClass()
 

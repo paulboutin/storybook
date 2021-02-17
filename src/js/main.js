@@ -12,6 +12,7 @@ import cardCarousel from './components/card-carousel'
 import productSelector from './components/product-selector'
 import './lib/smoothscroll-polyfill'
 import './lib/swiped-events'
+import './lib/vimeo-player.min'
 
 function ready(fn) {
   if (
