@@ -21,8 +21,10 @@ The code is organized as follows:
 
 Compiling this code for use in browsers is very simple using `sass`. No specific configurations are required.
 
-Simply run to generate a corresponding production-ready bundle.css:
+To be able to generate a corresponding bundle.css:
 
-`sass src/sass/main.scss bundles/bundle.css --style compressed --no-source-map`
+- Ensure `node` v.12 or later is installed with `npm` package manager.
+- Run `npm i -g sass` to install webpack globally.
+- Run `sass src/sass/main.scss bundles/bundle.css --style compressed --no-source-map` to compile production-ready bundle.
 
 A precompiled version is already included in the /bundles folder of this zipfile.

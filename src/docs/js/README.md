@@ -16,8 +16,10 @@ The code is organized as follows:
 
 Compiling this code for use in browsers is very simple using `webpack`. No specific configurations are required.
 
-Simply run to generate a corresponding main.js:
+To be able to generate a corresponding main.js:
 
-`webpack --entry ./js/main.js -o ./bundles --mode production`
+- Ensure `node` v.12 or later is installed with `npm` package manager.
+- Run `npm i -g webpack webpack-cli` to install webpack globally.
+- Run `webpack --entry ./js/main.js -o ./bundles --mode production` to compile production-ready bundle.
 
 A precompiled version is already included in the /bundles folder of this zipfile.
