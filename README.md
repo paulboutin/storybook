@@ -12,10 +12,15 @@ These are the most noteworthy. For a full list of libraries, check the [package.
 - **.storybook**: Storybook configuration files
 - **public**: Static files needed for the components
 - **src**: Source code files
-  - **components**: All the existing components, divided into **base** and **layout**
+  - **components**: All the existing components
+    - **base**: Base components
+    - **layout**: Layout components
+    - **pre-render**: Components that will be pre-rendered with data and bundled into a zip file
+    - **templates**: Full sample templates
   - **decorators**: Functions that are run every time a story loads on Storybook
   - **js**: Scripts that add interactivity to some components
   - **sass**: All the styles for the components and stories
+  - **scripts**: Build utilities and other scripts
   - **stories**: All the Storybook story files
 - **test**: Files to test the components
   - **snapshot**: Testing framework to take snapshots of all components
