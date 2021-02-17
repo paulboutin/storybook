@@ -35,6 +35,26 @@
     }
   }
 
+  &.centered {
+    .highlight-content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .eyebrow {
+        align-items: center;
+      }
+
+      @include screen('sm') {
+        display: block;
+
+        .eyebrow {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+
   &.highlight-A {
     padding-top: spacing(32);
     padding-bottom: spacing(32);

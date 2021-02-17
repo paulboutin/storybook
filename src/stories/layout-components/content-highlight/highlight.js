@@ -35,6 +35,7 @@ const CTAContent = ({ type = 'link', text }) => {
 export const HighlightStory = ({ type }) => {
   let ctaText
 
+  const centered = boolean('Mobile Centered', false)
   const reverse = radios('Side', sideOptions, sideOptions.Left)
   const enableEyebrow = boolean('Eyebrow Enable', true)
   const eyebrow = text('Eyebrow Text', defaultEyebrow)
@@ -57,6 +58,7 @@ export const HighlightStory = ({ type }) => {
         image={image}
         color='primary'
         eyebrow={{ enable: enableEyebrow, text: eyebrow }}
+        className={centered && 'centered'}
       >
         <CTAContent type={cta} text={ctaText} />
       </Highlight>
