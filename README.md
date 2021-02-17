@@ -18,6 +18,7 @@ These are the most noteworthy. For a full list of libraries, check the [package.
     - **pre-render**: Components that will be pre-rendered with data and bundled into a zip file
     - **templates**: Full sample templates
   - **decorators**: Functions that are run every time a story loads on Storybook
+  - **docs**: Additional support documentation for zip file
   - **js**: Scripts that add interactivity to some components
   - **sass**: All the styles for the components and stories
   - **scripts**: Build utilities and other scripts
