@@ -24,7 +24,6 @@ function baseTemplate({ title, body }) {
     </head>
     <body>
     ${body}
-    <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="/bundles/main.js"></script>
     </body>
     </html>
