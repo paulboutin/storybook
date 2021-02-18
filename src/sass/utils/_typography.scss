@@ -17,3 +17,9 @@
     @include font-weight($weight);
   }
 }
+
+@each $family in map-keys($font-families) {
+  .font-#{$family} {
+    @include font-family($family);
+  }
+}
