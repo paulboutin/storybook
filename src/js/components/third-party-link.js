@@ -45,28 +45,30 @@ const Modal = actionFn => {
     'text/html'
   ).body
 
-  const handleCancel = () => {
-    modal.remove()
-    document.body.classList.remove('modal-active')
-  }
-
+  const action = modal.querySelector('.modal-action')
   const cancels = modal.querySelectorAll('.modal-cancel')
 
-  cancels.forEach(cancel => cancel.addEventListener('click', handleCancel))
-
-  const action = modal.querySelector('.modal-action')
+  cancels.forEach(cancel =>
+    cancel.addEventListener('click', () => {
+      modal.remove()
+      document.body.classList.remove('modal-active')
+    })
+  )
 
   action.addEventListener('click', actionFn)
 
   return modal
 }
 
-export default () => {
+export default ({ hosts = [] } = {}) => {
+  // to include additional hosts, pass array to function invocation
+  hosts = [...hosts, window.location.host]
+
   document.addEventListener('click', event => {
     if (event.target.tagName === 'A') {
       const url = new URL(event.target.href)
 
-      if (url.host !== window.location.host) {
+      if (!hosts.includes(url.host)) {
         event.preventDefault()
 
         const handleContinue = () => {
