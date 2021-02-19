@@ -73,11 +73,9 @@ export default ({ hosts = [] } = {}) => {
       link.addEventListener('click', e => {
         e.preventDefault()
 
-        const handleContinue = () => {
+        const modal = Modal(() => {
           window.location.assign(url.toString())
-        }
-
-        const modal = Modal(handleContinue)
+        })
 
         document.body.classList.add('modal-active')
         document.body.append(modal)
