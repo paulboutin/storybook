@@ -10,8 +10,8 @@ const ThirdPartyPopup = ({ title, children }) => {
       <div className='third-party-controls'>
         <Checkbox label="Don't show again" className='show-popup-control' />
         <div className='action-wrapper'>
-          <Button label='Cancel' type='tertiary' />
-          <Button label='Continue' type='primary' />
+          <Button label='Cancel' type='tertiary' className='modal-cancel' />
+          <Button label='Continue' type='primary' className='modal-action' />
         </div>
       </div>
     </Modal>

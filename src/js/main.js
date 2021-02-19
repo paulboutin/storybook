@@ -10,7 +10,7 @@ import alerts from './components/alert'
 import returnToTop from './components/return-to-top'
 import cardCarousel from './components/card-carousel'
 import productSelector from './components/product-selector'
-import modals from './components/modal'
+import thirdPartyLink from './components/third-party-link'
 import './lib'
 
 function ready(fn) {
@@ -38,7 +38,7 @@ function setup() {
     returnToTop()
     cardCarousel()
     productSelector()
-    modals()
+    thirdPartyLink()
   })
 }
 

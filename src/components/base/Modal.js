@@ -6,7 +6,7 @@ const Modal = ({ title, children }) => (
       <div className='modal-body col-12 col-sm-8'>
         <div className='modal-header'>
           <p className='text-h4 font-display'>{title}</p>
-          <i className='icon icon-close text-lg' />
+          <i className='icon icon-close text-lg modal-cancel' />
         </div>
         <div className='modal-content'>{children}</div>
       </div>
