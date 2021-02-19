@@ -1,10 +1,14 @@
 import React from 'react'
+import { boolean } from '@storybook/addon-knobs'
 import Navigation from '../../../components/layout/Navigation'
 import Highlight from '../../../components/layout/Highlight'
+import ThirdPartyPopup from '../../../components/layout/ThirdPartyPopup'
 import Link from '../../../components/base/Link'
 
 export const ThirdParty = () => {
-  return (
+  const showModalOnly = boolean('Show component markup only', false)
+
+  const MockPage = () => (
     <>
       <Navigation />
       <Highlight
@@ -19,6 +23,8 @@ export const ThirdParty = () => {
       </Highlight>
     </>
   )
+
+  return showModalOnly ? <ThirdPartyPopup /> : <MockPage />
 }
 
 export default {

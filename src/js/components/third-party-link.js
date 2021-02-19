@@ -3,7 +3,7 @@ const Modal = actionFn => {
     `
 <article class="modal-wrapper">
   <div class="modal-overlay">
-    <div class="modal-body col-12 col-sm-8">
+    <div class="modal-body col-12 col-sm-8 col-lg-6">
       <div class="modal-header">
         <p class="text-h4 font-display">You are leaving Bank of the West</p>
         <i class="icon icon-close text-lg modal-cancel"></i>
@@ -21,13 +21,6 @@ const Modal = actionFn => {
           the Bank of the West website.
         </p>
         <div class="third-party-controls">
-          <div class="action-wrapper">
-            <label class="checkbox-wrapper show-popup-control">
-              <input type="checkbox" />
-              <span class="checkbox"><i class="icon icon-check-solid"></i></span>
-              <span class="checkbox-label">Don&#x27;t show again</span>
-            </label>
-          </div>
           <div class="action-wrapper">
             <button type="button" class="button button-tertiary modal-cancel">
               <span>Cancel</span>
