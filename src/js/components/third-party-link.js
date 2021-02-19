@@ -77,7 +77,7 @@ export default ({ hosts = [] } = {}) => {
         event.stopImmediatePropagation()
 
         const handleContinue = () => {
-          window.location = url.toString()
+          window.location.assign(url.toString())
         }
 
         const modal = Modal(handleContinue)
