@@ -74,6 +74,7 @@ export default ({ hosts = [] } = {}) => {
 
       if (!hosts.includes(url.host)) {
         event.preventDefault()
+        event.stopImmediatePropagation()
 
         const handleContinue = () => {
           window.location = url.toString()
