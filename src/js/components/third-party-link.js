@@ -64,17 +64,14 @@ export default ({ hosts = [] } = {}) => {
   // to include additional hosts, pass array to function invocation
   hosts = [...hosts, window.location.host]
 
-  document.addEventListener('click', event => {
-    const { target } = event
-    // handle anchor tags with child elements
-    const isLink = [target.tagName, target.parentElement.tagName].includes('A')
+  const links = document.querySelectorAll('.link')
 
-    if (isLink) {
-      const url = new URL(event.target.href || event.target.parentElement.href)
+  links.forEach(link => {
+    const url = new URL(link.href)
 
-      if (!hosts.includes(url.host)) {
-        event.preventDefault()
-        event.stopImmediatePropagation()
+    if (!hosts.includes(url.host)) {
+      link.addEventListener('click', e => {
+        e.preventDefault()
 
         const handleContinue = () => {
           window.location.assign(url.toString())
@@ -84,7 +81,7 @@ export default ({ hosts = [] } = {}) => {
 
         document.body.classList.add('modal-active')
         document.body.append(modal)
-      }
+      })
     }
   })
 }
