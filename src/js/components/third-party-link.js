@@ -43,7 +43,7 @@ const Modal = actionFn => {
 </article>
 `,
     'text/html'
-  ).body
+  ).body.firstChild
 
   const action = modal.querySelector('.modal-action')
   const cancels = modal.querySelectorAll('.modal-cancel')
@@ -65,8 +65,12 @@ export default ({ hosts = [] } = {}) => {
   hosts = [...hosts, window.location.host]
 
   document.addEventListener('click', event => {
-    if (event.target.tagName === 'A') {
-      const url = new URL(event.target.href)
+    const { target } = event
+    // handle anchor tags with child elements
+    const isLink = [target.tagName, target.parentElement.tagName].includes('A')
+
+    if (isLink) {
+      const url = new URL(event.target.href || event.target.parentElement.href)
 
       if (!hosts.includes(url.host)) {
         event.preventDefault()
