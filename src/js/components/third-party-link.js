@@ -20,7 +20,7 @@ const Modal = actionFn => {
           To proceed to this website, select Continue, or Cancel to remain on
           the Bank of the West website.
         </p>
-        <div class="third-party-controls">
+        <div class="popup-controls">
           <div class="action-wrapper">
             <button type="button" class="button button-tertiary modal-cancel">
               <span>Cancel</span>

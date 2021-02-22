@@ -3,8 +3,6 @@
   flex-direction: column;
 
   .dropdown-native-group {
-    @include border-radius('md');
-    border: 1px solid color('grey-30');
     cursor: pointer;
     position: relative;
     display: flex;
@@ -17,10 +15,10 @@
     }
 
     &.dropdown-native-inline {
-      border: none;
       display: inline;
 
       .dropdown-native {
+        border: none;
         padding-right: spacing(24);
       }
 
@@ -52,9 +50,13 @@
   }
 
   .dropdown-native {
+    @include border-radius('md');
+    border: 1px solid color('grey-30');
+
     @include font-size('sm');
     background-color: color('white');
     padding: spacing(12);
+    padding-right: spacing(32);
 
     -moz-appearance: none;
     -webkit-appearance: none;

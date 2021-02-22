@@ -46,7 +46,7 @@
         margin-bottom: spacing(16);
       }
 
-      .third-party-controls {
+      .popup-controls {
         padding-top: spacing(16);
 
         .show-popup-control {
@@ -54,6 +54,9 @@
         }
 
         .action-wrapper {
+          display: flex;
+          flex-direction: column;
+
           .button {
             width: 100%;
             margin-bottom: spacing(12);
@@ -67,13 +70,15 @@
           justify-content: flex-end;
 
           .action-wrapper {
+            flex-direction: row;
+
+            > :nth-child(1) {
+              margin-right: spacing(16);
+            }
+
             .button {
               width: unset;
               margin-bottom: 0;
-
-              &:not(:last-of-type) {
-                margin-right: spacing(16);
-              }
             }
           }
         }

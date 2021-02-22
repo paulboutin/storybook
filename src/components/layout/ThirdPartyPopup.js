@@ -6,7 +6,7 @@ export const ThirdPartyPopup = ({ title, children }) => {
   return (
     <Modal title={title}>
       {children}
-      <div className='third-party-controls'>
+      <div className='popup-controls'>
         <div className='action-wrapper'>
           <Button label='Cancel' type='tertiary' className='modal-cancel' />
           <Button label='Continue' type='primary' className='modal-action' />
