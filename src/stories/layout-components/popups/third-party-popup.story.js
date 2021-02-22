@@ -6,7 +6,7 @@ import ThirdPartyPopup from '../../../components/layout/ThirdPartyPopup'
 import Link from '../../../components/base/Link'
 
 export const ThirdParty = () => {
-  const showModalOnly = boolean('Show component markup only', false)
+  const showModalOnly = boolean('Show component markup only', true)
 
   const MockPage = () => (
     <>

@@ -45,41 +45,40 @@
       p:not(:last-of-type) {
         margin-bottom: spacing(16);
       }
+    }
 
-      .popup-controls {
-        padding-top: spacing(16);
+    .popup-controls {
+      padding-top: spacing(16);
 
-        .show-popup-control {
-          display: none; // Currently disabled
+      .action-wrapper {
+        display: flex;
+        flex-direction: column;
+
+        > :nth-child(1) {
+          margin-bottom: spacing(12);
         }
+
+        .button {
+          width: 100%;
+        }
+      }
+
+      @include screen('sm') {
+        padding-top: spacing(32);
+
+        display: flex;
+        justify-content: flex-end;
 
         .action-wrapper {
-          display: flex;
-          flex-direction: column;
+          flex-direction: row;
+
+          > :nth-child(1) {
+            margin-bottom: 0;
+            margin-right: spacing(16);
+          }
 
           .button {
-            width: 100%;
-            margin-bottom: spacing(12);
-          }
-        }
-
-        @include screen('sm') {
-          padding-top: spacing(32);
-
-          display: flex;
-          justify-content: flex-end;
-
-          .action-wrapper {
-            flex-direction: row;
-
-            > :nth-child(1) {
-              margin-right: spacing(16);
-            }
-
-            .button {
-              width: unset;
-              margin-bottom: 0;
-            }
+            width: unset;
           }
         }
       }
