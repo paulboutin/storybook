@@ -28,7 +28,7 @@ A precompiled version is already included in the /bundles folder of this zipfile
 
 ## Component modules
 
-Each component includes an executable function that targets _all_ components of the type via class name.
+Each component module includes a default export of an executable function that targets _all_ components of the type via class name.
 
 Individual components may be deactivated by simply removing the function call from `main.js`
 
