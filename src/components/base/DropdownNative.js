@@ -3,6 +3,7 @@ import classNames from 'classnames'
 import { slugify } from '../../utils'
 
 const DropdownNative = ({
+  className,
   name,
   items,
   label,
@@ -11,7 +12,7 @@ const DropdownNative = ({
   helper,
   error
 }) => (
-  <div className='dropdown-native-wrapper'>
+  <div className={classNames('dropdown-native-wrapper', className)}>
     <div
       className={classNames('dropdown-native-group', {
         'dropdown-native-inline': inline,

@@ -29,7 +29,11 @@ export const SelectStatePopup = ({ title, children }) => {
       {children}
       <form className='popup-controls'>
         <div className='action-wrapper'>
-          <DropdownNative label='Select your state' items={defaultItems} />
+          <DropdownNative
+            label='Select your state'
+            items={defaultItems}
+            className='text-xs'
+          />
           <Button label='Continue' type='primary' className='modal-action' />
         </div>
       </form>

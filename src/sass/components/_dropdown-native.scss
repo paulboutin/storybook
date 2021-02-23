@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
 
+  @include font-size('sm');
+
   .dropdown-native-group {
     cursor: pointer;
     position: relative;
@@ -53,10 +55,12 @@
     @include border-radius('md');
     border: 1px solid color('grey-30');
 
-    @include font-size('sm');
+    font-size: inherit;
+    line-height: inherit;
+
     background-color: color('white');
-    padding: spacing(12);
-    padding-right: spacing(32);
+    padding: 16px;
+    padding-right: 40px;
 
     -moz-appearance: none;
     -webkit-appearance: none;
