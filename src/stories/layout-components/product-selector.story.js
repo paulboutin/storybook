@@ -7,11 +7,35 @@ const defaultHeadline = 'Headline'
 const defaultItems = [
   {
     tab: 'Item 1',
-    title: 'Product Title',
+    title: 'Product Title 1',
     text: 'Product information',
     button: 'Label',
     cta: 'Call to Action',
     image: '/img/plant.png'
+  },
+  {
+    tab: 'Item 2',
+    title: 'Product Title 2',
+    text: 'Product information',
+    button: 'Label',
+    cta: 'Call to Action',
+    image: '/img/trees.png'
+  },
+  {
+    tab: 'Item 3',
+    title: 'Product Title 3',
+    text: 'Product information',
+    button: 'Label',
+    cta: 'Call to Action',
+    image: '/img/butterfly.png'
+  },
+  {
+    tab: 'Item 4',
+    title: 'Product Title 4',
+    text: 'Product information',
+    button: 'Label',
+    cta: 'Call to Action',
+    image: '/img/trees.png'
   }
 ]
 
@@ -24,7 +48,7 @@ const options = {
 
 export const ProductSelectorStory = () => {
   const items = []
-  const cards = number('Cards', 5, options, 'config')
+  const cards = number('Cards', defaultItems.length, options, 'config')
   const headline = text('Headline', defaultHeadline, 'config')
 
   for (let i = 0; i < cards; i++) {
@@ -33,7 +57,7 @@ export const ProductSelectorStory = () => {
 
     items.push({
       tab: text('Tab', prefix, prefix),
-      title: text('Heading', `${defaultColumn.title} ${i + 1}`, prefix),
+      title: text('Heading', defaultColumn.title, prefix),
       text: text('Text', defaultColumn.text, prefix),
       image: text('Image', defaultColumn.image, prefix),
       button: text('Button', defaultColumn.button, prefix),
