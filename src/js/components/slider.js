@@ -37,7 +37,6 @@ function setup() {
 
 function slide(slider, slide, direction) {
   const axis = slider.dataset.axis
-  const transitionOpacity = slider.dataset.transitionOpacity === 'true'
   const activeSlide = slider.querySelector('.slider-slide-active')
   const nextSlide = slider.querySelector(`.slider-slide:nth-child(${slide})`)
 
@@ -76,9 +75,9 @@ export default async () => {
   window.addEventListener('resize', debounce(setup, 100))
 
   containers.forEach(container => {
-    const prevTrigger = document.querySelector(container.dataset.prevTrigger)
-    const nextTrigger = document.querySelector(container.dataset.nextTrigger)
-    const pagination = document.querySelector(container.dataset.pagination)
+    const prevTrigger = container.querySelector(container.dataset.prevTrigger)
+    const nextTrigger = container.querySelector(container.dataset.nextTrigger)
+    const pagination = container.querySelector(container.dataset.pagination)
     const sliders = container.querySelectorAll('.slider')
     const totalSlides = sliders.length
       ? sliders[0].querySelectorAll('.slider-slide').length

@@ -68,15 +68,22 @@
 
   .product-selector-items {
     display: flex;
-    overflow-x: hidden;
+    position: relative;
 
     .highlight {
       width: 100%;
       flex-shrink: 0;
 
+      position: absolute;
+      top: 0;
+      left: 0;
+
       .highlight-content-container {
         padding-left: 0;
         padding-right: 0;
+
+        transform: translateY(25%);
+        transition: transform 600ms ease-in-out;
 
         @include screen('sm') {
           padding-right: spacing(32);
@@ -97,10 +104,6 @@
         margin-bottom: spacing(24);
       }
 
-      &:not(:last-of-type) {
-        margin-right: spacing(32);
-      }
-
       @include screen('sm', 'down') {
         text-align: center;
 
@@ -110,10 +113,15 @@
       }
 
       opacity: 0;
-      transition: opacity 600ms 300ms;
+      transition: opacity 600ms;
 
       &.active {
         opacity: 1;
+        z-index: 1;
+
+        .highlight-content-container {
+          transform: translateY(0);
+        }
       }
     }
   }

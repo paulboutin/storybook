@@ -17,20 +17,15 @@ export default () => {
       tab.classList.add('active')
     }
 
-    const scrollItems = tab => {
+    const showItem = tab => {
       window.requestAnimationFrame(() => {
         controls.scrollTo({
           left: tab.offsetLeft - tab.scrollWidth / 2 - controls.offsetLeft,
           behavior: 'smooth'
         })
 
-        container.scrollTo({
-          left: items[current].offsetLeft - container.offsetLeft,
-          behavior: 'smooth'
-        })
-
         items.forEach(item => item.classList.remove('active'))
-        items[current].classList.add('active')
+        setTimeout(() => items[current].classList.add('active'), 300)
       })
     }
 
@@ -45,14 +40,14 @@ export default () => {
       )
 
       updateActiveTab(tab)
-      scrollItems(tab)
+      showItem(tab)
     }
 
     const handleClick = tab => () => {
       current = parseInt(tab.dataset.index)
 
       updateActiveTab(tab)
-      scrollItems(tab)
+      showItem(tab)
     }
 
     tabs.forEach(tab => {
