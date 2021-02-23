@@ -94,10 +94,13 @@ Individual components may be deactivated by simply removing the function call fr
 
   Implements logic for third-party popup. Detects external links via URL host matching.
 
-  Safe hosts may be included in the algorithm at compile-time by providing a list to the function call:
+  Additional safe hosts may be included in the algorithm at compile-time by providing a list to the function call:
 
   ```js
   thirdPartyLink({
     hosts: ['host1', 'host2']
   })
   ```
+
+  On clicking an external link, page navigation will be interrupted, and a popup will be dynamically generated with a
+  new link to the content.
