@@ -82,10 +82,10 @@
         padding-left: 0;
         padding-right: 0;
 
-        transform: translateY(25%);
-        transition: transform 600ms ease-in-out;
+        transition: transform 450ms ease-in-out;
 
         @include screen('sm') {
+          transform: translateY(25%);
           padding-right: spacing(32);
         }
       }
@@ -113,7 +113,7 @@
       }
 
       opacity: 0;
-      transition: opacity 600ms;
+      transition: opacity 600ms ease-in-out;
 
       &.active {
         opacity: 1;
