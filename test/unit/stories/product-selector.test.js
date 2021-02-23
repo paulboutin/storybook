@@ -56,7 +56,7 @@ describe('ProductSelector component', () => {
     await waitFor(() => {
       expect(items[0]).not.toHaveClass('active')
       expect(items[2]).toHaveClass('active')
-      expect(mockScroll).toHaveBeenCalledTimes(2)
+      expect(mockScroll).toHaveBeenCalled()
     })
   })
 })

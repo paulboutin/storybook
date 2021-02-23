@@ -81,6 +81,7 @@ describe('Layout Components', () => {
     {
       title: 'footer',
       path: 'layout-components--footer-story',
+      fullPage: true,
       devices: ['tablet', 'desktop']
     },
     {
@@ -178,14 +179,6 @@ describe('Layout Components', () => {
       title: 'product-selector',
       path: 'layout-components--product-selector-story',
       devices: ['mobile', 'desktop']
-    },
-    {
-      title: 'third-party link popup',
-      path: 'layout-components-popups--third-party',
-      devices: ['mobile', 'tablet'],
-      callback: async () => {
-        await page.click('.highlight .link')
-      }
     }
   ]
   buildSnapshotTests(stories)
