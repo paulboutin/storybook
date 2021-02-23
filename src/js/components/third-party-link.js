@@ -57,7 +57,7 @@ export default ({ hosts = [] } = {}) => {
   // to include additional hosts, pass array to function invocation
   hosts = [...hosts, window.location.host]
 
-  const links = document.querySelectorAll('.link')
+  const links = document.querySelectorAll('a.link')
 
   links.forEach(link => {
     const url = new URL(link.href)

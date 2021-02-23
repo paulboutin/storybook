@@ -25,3 +25,79 @@ To be able to generate a corresponding main.js:
 - Run `webpack --entry ./js/main.js -o ./path/to/output --mode production` to compile production-ready bundle.
 
 A precompiled version is already included in the /bundles folder of this zipfile.
+
+## Component modules
+
+Each component includes an executable function that targets _all_ components of the type via class name.
+
+Individual components may be deactivated by simply removing the function call from `main.js`
+
+- **accordion**
+
+  Implements expand/contract logic for accordion component
+
+- **alert**
+
+  Implements logic for closing accordion component via 'x' icon
+
+- **card-carousel**
+
+  Implements logic for article carousel component.
+
+  Includes support for swipe gestures via `lib/swiped-events`
+
+- **comparison**
+
+  Implements logic for comparison table pagination.
+
+- **dropdown**
+
+  Implements logic for custom dropdown selectors.
+
+- **help-center**
+
+  Implements logic for help center article viewer component.
+
+- **input**
+
+  Implements logic for custom inputs.
+
+- **navigation**
+
+  Implements logic for navigation top bar component.
+
+- **popup-video**
+
+  Implements logic for popup-video components (both hero and article cards) via `lib/vimeo-player`
+
+- **product-selector**
+
+  Implements logic for product selector component.
+
+  Includes support for swipe gestures via `lib/swiped-events`
+
+  Requires cross-browser support for smooth scroll behavior, provided by `lib/smoothscroll-polyfill`
+
+- **return-to-top**
+
+  Implements logic for go up arrow component.
+
+  Requires cross-browser support for smooth scroll behavior, provided by `lib/smoothscroll-polyfill`
+
+- **slider**
+
+  Implements logic for pull quote and standard carousel components.
+
+  Includes support for swipe gestures via `lib/swiped-events`
+
+- **third-party link**
+
+  Implements logic for third-party popup. Detects external links via URL host matching.
+
+  Safe hosts may be included in the algorithm at compile-time by providing a list to the function call:
+
+  ```js
+  thirdPartyLink({
+    hosts: ['host1', 'host2']
+  })
+  ```

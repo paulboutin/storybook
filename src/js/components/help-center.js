@@ -1,15 +1,18 @@
 export default () => {
-  const helpCenter = document.querySelector('.help-center')
-  if (!helpCenter) return
+  const helpCenters = document.querySelectorAll('.help-center-articles')
 
-  const links = helpCenter.querySelectorAll('.help-center-article-link .link')
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      const oldArticle = document.querySelector('.help-center-article-selected')
-      const newArticle = document.getElementById(link.dataset.articleId)
-      oldArticle.classList.remove('help-center-article-selected')
-      newArticle.classList.add('help-center-article-selected')
-      newArticle.scrollIntoView({ behavior: 'smooth' })
+  helpCenters.forEach(helpCenter => {
+    const links = helpCenter.querySelectorAll('.help-center-article-link .link')
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        const oldArticle = helpCenter.querySelector(
+          '.help-center-article-selected'
+        )
+        const newArticle = document.getElementById(link.dataset.articleId)
+        oldArticle.classList.remove('help-center-article-selected')
+        newArticle.classList.add('help-center-article-selected')
+        newArticle.scrollIntoView({ behavior: 'smooth' })
+      })
     })
   })
 }
