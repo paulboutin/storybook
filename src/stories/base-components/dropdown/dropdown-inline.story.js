@@ -30,7 +30,7 @@ export const DropdownInlineStory = () => {
 }
 
 DropdownInlineStory.story = {
-  name: 'Dropdown Inline'
+  name: 'Inline (Custom)'
 }
 
 export default {

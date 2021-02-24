@@ -38,12 +38,18 @@ export const InfographicBoxImage = ({ src }) => (
 export const Infographic = ({ columns, className, children }) => {
   return (
     <section className={classNames('infographic', className)}>
-      <h2 className='infographic-title'>We invest in what we believe</h2>
+      <h2 className='infographic-title text-h2'>
+        We invest in what we believe
+      </h2>
 
       <div className='container'>
         <div className='row'>
-          {children.map(child => (
-            <Column columns={columns} configFn={columnInfographicConfig}>
+          {children.map((child, idx) => (
+            <Column
+              key={idx}
+              columns={columns}
+              configFn={columnInfographicConfig}
+            >
               {child}
             </Column>
           ))}
@@ -51,7 +57,7 @@ export const Infographic = ({ columns, className, children }) => {
       </div>
 
       <Button
-        type='tertiary'
+        type='secondary'
         label='Learn more'
         className='infographic-button'
         link
@@ -63,8 +69,10 @@ export const Infographic = ({ columns, className, children }) => {
 const DefaultInfographic = ({ className }) => {
   return (
     <Infographic className={className} columns={defaultItems.length}>
-      {defaultItems.map(({ title, content }) => (
-        <InfographicBox title={title}>{content}</InfographicBox>
+      {defaultItems.map(({ title, content }, idx) => (
+        <InfographicBox key={idx} title={title}>
+          {content}
+        </InfographicBox>
       ))}
     </Infographic>
   )

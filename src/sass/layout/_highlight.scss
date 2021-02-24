@@ -1,48 +1,31 @@
 .highlight {
   display: flex;
   flex-direction: column;
-  padding-top: spacing(32);
-  padding-bottom: spacing(32);
+
+  padding-bottom: spacing(16);
 
   @include screen('sm') {
-    padding-top: spacing(64);
-    padding-bottom: spacing(64);
     flex-direction: row;
     align-items: center;
   }
 
-  @include screen('md') {
-    padding-top: spacing(48);
-    padding-bottom: spacing(48);
-  }
-
   .highlight-content-container {
-    margin-top: spacing(24);
+    padding-top: spacing(24);
 
     @include screen('sm') {
-      margin-top: 0;
+      padding-top: 0;
     }
   }
 
   .highlight-text {
     color: color('grey-70');
-    margin-top: spacing(12);
+    margin-top: spacing(8);
     margin-bottom: spacing(24);
   }
 
-  > :nth-child(even) {
+  > * {
     @include screen('sm') {
       width: 50%;
-      margin-left: spacing(32);
-      margin-right: 0;
-    }
-  }
-
-  > :nth-child(odd) {
-    @include screen('sm') {
-      width: 50%;
-      margin-left: 0;
-      margin-right: spacing(32);
     }
   }
 
@@ -50,18 +33,85 @@
     @include screen('sm') {
       flex-direction: row-reverse;
     }
+  }
 
-    > :nth-child(even) {
+  &.centered {
+    .highlight-content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .eyebrow {
+        align-items: center;
+      }
+
       @include screen('sm') {
-        margin-left: 0;
-        margin-right: spacing(32);
+        display: block;
+
+        .eyebrow {
+          align-items: flex-start;
+        }
+      }
+    }
+  }
+
+  &.highlight-A {
+    padding-top: spacing(32);
+    padding-bottom: spacing(32);
+
+    @include screen('sm') {
+      padding-top: spacing(64);
+      padding-bottom: spacing(64);
+    }
+
+    .highlight-content-container {
+      @include screen('sm') {
+        padding-left: spacing(24);
+      }
+
+      @include screen('md') {
+        padding-left: spacing(48);
+      }
+
+      @include screen('lg') {
+        padding-left: spacing(128);
       }
     }
 
-    > :nth-child(odd) {
+    &.reverse {
+      .highlight-content-container {
+        @include screen('sm') {
+          padding-left: 0;
+          padding-right: spacing(24);
+        }
+
+        @include screen('md') {
+          padding-left: 0;
+          padding-right: spacing(48);
+        }
+
+        @include screen('lg') {
+          padding-left: 0;
+          padding-right: spacing(128);
+        }
+      }
+    }
+  }
+
+  &.highlight-B {
+    .highlight-content-container {
+      padding: spacing(16);
+
       @include screen('sm') {
-        margin-left: spacing(32);
-        margin-right: 0;
+        padding: spacing(24);
+      }
+
+      @include screen('md') {
+        padding: spacing(48);
+      }
+
+      @include screen('lg') {
+        padding-left: spacing(128);
       }
     }
   }

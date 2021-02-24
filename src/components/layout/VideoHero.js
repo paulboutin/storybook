@@ -17,14 +17,14 @@ const VideoHero = ({
       <div className='video-hero-overlay' />
 
       <div className='video-hero-content container'>
-        <h1>{title}</h1>
+        <h2 className='text-h1'>{title}</h2>
 
         <p
           className='video-hero-text'
           dangerouslySetInnerHTML={{ __html: text }}
         />
 
-        <Button type='tertiary' label='Learn more' link />
+        <Button type='secondary' label='Learn more' link />
       </div>
     </div>
   </section>

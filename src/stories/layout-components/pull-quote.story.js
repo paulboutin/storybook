@@ -66,11 +66,11 @@ export const PullQuoteStory = () => (
       },
       {
         image:
-          'https://www.bankofthewest.com/-/media/Images-responsive/about-us/leadership/sheri-paulo.png',
+          'https://www.bankofthewest.com/-/media/Images-responsive/about-us/leadership/hans-vanbets.png',
         quote:
           'Assumenda blanditiis culpa, dicta eos, et fugiat ipsa iste magnam molestiae natus.',
         author: {
-          name: 'Sheri Paulo',
+          name: 'Hans Vanbets',
           role: 'Chief HR Officer'
         }
       },

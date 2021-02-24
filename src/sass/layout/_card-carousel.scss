@@ -1,0 +1,96 @@
+.card-carousel {
+  overflow-x: hidden;
+
+  .card-carousel-wrapper {
+    position: relative;
+    overflow-x: visible;
+    padding: spacing(16) spacing(48);
+
+    @include screen('sm') {
+      padding: spacing(16) spacing(64);
+    }
+
+    @include screen('md') {
+      padding: spacing(16) spacing(0);
+    }
+
+    .card-carousel-control {
+      position: absolute;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      background-color: color('green');
+      color: color('white');
+
+      padding: spacing(4) spacing(8);
+
+      @include box-shadow('sm');
+      @include font-size('h3');
+
+      cursor: pointer;
+
+      &.card-carousel-prev {
+        left: spacing(24);
+
+        @include screen('sm') {
+          left: 2.5 * spacing(16);
+        }
+
+        @include screen('md') {
+          left: -#{spacing(8)};
+        }
+      }
+
+      &.card-carousel-next {
+        right: spacing(24);
+
+        @include screen('sm') {
+          right: 2.5 * spacing(16);
+        }
+
+        @include screen('md') {
+          right: -#{spacing(8)};
+        }
+      }
+
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  .card-carousel-items {
+    display: flex;
+
+    transition-duration: 300ms;
+
+    .card-carousel-item {
+      flex-shrink: 0;
+      padding: 0 spacing(8);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      width: 100%;
+
+      @include screen('sm') {
+        width: 50%;
+      }
+
+      @include screen('md') {
+        width: percentage(1/3);
+      }
+
+      .card-article {
+        width: 100%;
+        min-height: 2.5 * spacing(160);
+
+        @include screen('sm') {
+          min-height: 2 * spacing(160);
+        }
+      }
+    }
+  }
+}

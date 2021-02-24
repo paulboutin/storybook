@@ -2,48 +2,58 @@ import React from 'react'
 import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
-import ImageOverlap from '../base/ImageOverlap'
 
-const defaultTitle = 'The strongest environmental stance of any major bank.'
-const defaultText =
-  "Our policies are 100% transparent because we're proud of what we finance and what we don't"
-
-const Highlight = ({
-  title,
-  text,
-  type,
-  images,
-  reverse,
-  color,
-  eyebrow = {},
-  children
-}) => (
-  <section className={classNames('highlight container', { reverse })}>
-    {type === 'single' ? (
-      <Image
-        src={images[0]}
-        alt='Highlight image'
-        ratio='1:1'
-        className='highlight-img-container'
-      />
-    ) : (
-      <ImageOverlap
-        images={images}
-        position={reverse ? 'left' : 'right'}
-        color={color}
-        className='highlight-img-container'
-      />
-    )}
-
+const HighlightContent = ({ eyebrow = {}, title, text, children }) => {
+  return (
     <article className='highlight-content-container'>
       {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
-      <h2>{title}</h2>
+      <h3 className='text-h2'>{title}</h3>
 
       {text && <p className='highlight-text'>{text}</p>}
 
       {children}
     </article>
+  )
+}
+
+export const Highlight = ({ type, image, reverse, className, children }) => (
+  <section
+    className={classNames(
+      'highlight',
+      `highlight-${type}`,
+      {
+        reverse,
+        container: type === 'A'
+      },
+      className
+    )}
+  >
+    <Image
+      src={image}
+      alt='Highlight image'
+      ratio='1:1'
+      className='highlight-img-container'
+    />
+
+    {children}
   </section>
 )
 
-export default Highlight
+const DefaultHighlight = ({
+  title,
+  text,
+  type,
+  image,
+  reverse,
+  eyebrow = {},
+  className,
+  children
+}) => (
+  <Highlight type={type} image={image} reverse={reverse} className={className}>
+    <HighlightContent title={title} text={text} eyebrow={eyebrow}>
+      {children}
+    </HighlightContent>
+  </Highlight>
+)
+
+export default DefaultHighlight

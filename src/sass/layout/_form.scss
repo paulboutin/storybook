@@ -1,0 +1,38 @@
+.form-wrapper {
+  padding-top: spacing(48);
+  padding-bottom: spacing(48);
+
+  .row {
+    margin-top: spacing(32);
+  }
+
+  .form-title {
+    margin-bottom: spacing(16);
+  }
+
+  .form-buttons {
+    margin-top: spacing(32);
+
+    button:first-child {
+      margin-right: spacing(32);
+    }
+  }
+}
+
+.form-1 {
+  .checkbox-wrapper {
+    display: flex;
+
+    &:last-child {
+      margin-top: spacing(16);
+    }
+  }
+
+  .switch-wrapper {
+    margin-bottom: spacing(32);
+  }
+}
+
+.form-2 {
+  background-color: color('grey-5');
+}

@@ -24,9 +24,9 @@
 }
 
 .sb\:radio-hover {
-  @extend .radio-wrapper:hover;
+  @extend .radio-wrapper, :hover;
 }
 
 .sb\:radio-focus {
-  @extend .radio-wrapper:focus-within;
+  @extend .radio-wrapper, :focus-within;
 }

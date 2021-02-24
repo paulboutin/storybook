@@ -142,5 +142,10 @@ export const Spacing = () => {
 }
 
 export default {
-  title: 'Design System'
+  title: 'Design System',
+  parameters: {
+    'in-dsm': {
+      id: '6021085001f96f8418d34744'
+    }
+  }
 }

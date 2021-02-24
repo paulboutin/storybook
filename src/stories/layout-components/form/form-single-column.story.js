@@ -6,10 +6,10 @@ import Switch from '../../../components/base/Switch'
 import Button from '../../../components/base/Button'
 
 export const SingleColumn = () => (
-  <div className='sb:form-wrapper sb:form-1'>
+  <div className='form-wrapper form-1'>
     <form className='container'>
-      <h4>Form title</h4>
-      <p className='sb:form-description'>Form description</p>
+      <h3 className='text-h4'>Form title</h3>
+      <p className='text-xs'>Form description</p>
 
       <div className='row'>
         <div className='col-xs-12 col-sm-6'>
@@ -43,7 +43,7 @@ export const SingleColumn = () => (
 
       <div className='row'>
         <div className='col-xs-12 col-sm-6'>
-          <h6 className='sb:form-title'>Checkbox title</h6>
+          <h6 className='form-title'>Checkbox title</h6>
           <Checkbox label='Checkbox 1' />
           <Checkbox label='Checkbox 2' />
         </div>
@@ -51,12 +51,12 @@ export const SingleColumn = () => (
 
       <div className='row'>
         <div className='col-xs-12 col-sm-6'>
-          <h6 className='sb:form-title'>Switch title</h6>
+          <h6 className='form-title'>Switch title</h6>
           <Switch label='Switch' checked />
         </div>
       </div>
 
-      <div className='sb:form-buttons'>
+      <div className='form-buttons'>
         <Button type='secondary' label='Cancel' />
         <Button type='primary' label='Submit' />
       </div>

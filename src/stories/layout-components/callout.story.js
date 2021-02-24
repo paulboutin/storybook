@@ -1,12 +1,19 @@
 import React from 'react'
+import { text, radios, boolean, number } from '@storybook/addon-knobs'
 import Callout from '../../components/layout/Callout'
-import { text, radios, boolean } from '@storybook/addon-knobs'
+import ColumnIcons from '../../components/layout/ColumnIcons'
 
-const defaultTitle =
-  'Together, we can safeguard the environment and the future of our planet.'
-const defaultText =
-  'It is a long established fact that a reader will be distracted by the readable.'
-const defaultEyebrow = 'Lorem ipsum dolor sit amet'
+const defaultTitle = 'Headline'
+const defaultText = 'Lorem ipsum dolor sit amet'
+const defaultEyebrow = 'Eyebrow'
+
+const defaultColumns = [
+  {
+    icon: '/icons/img/lock-card.svg',
+    title: 'Title',
+    text: 'Lorem ipsum'
+  }
+]
 
 const options = {
   Standard: '',
@@ -14,18 +21,37 @@ const options = {
 }
 
 export const CalloutStory = () => {
-  const bg = radios('Background Color', options, options.Standard, 'config')
-  const centered = boolean('Centered', true, 'config')
+  let iconsNumber, inverted
+  let columns = []
 
-  const enable = boolean('Eyebrow Enable', false, 'content')
-  const eyebrow = text('Eyebrow Text', defaultEyebrow, 'content')
-  const title = text('Title', defaultTitle, 'content')
-  const txt = text('Text', defaultText, 'content')
+  const bg = radios('Background Color', options, options.Standard, 'config')
+  const enable = boolean('Eyebrow Enable', false, 'config')
+  const eyebrow = text('Eyebrow Text', defaultEyebrow, 'config')
+  const title = text('Title', defaultTitle, 'config')
+  const txt = text('Text', defaultText, 'config')
+  const centered = boolean('Centered', true, 'config')
+  const withIcons = boolean('Icons', false, 'config')
 
   let classes = bg
 
   if (centered) {
     classes += ' callout-centered'
+  }
+
+  if (withIcons) {
+    iconsNumber = number('Items', 3, options, 'config')
+    inverted = boolean('Inverted', false, 'config')
+  }
+
+  for (let i = 0; i < iconsNumber; i++) {
+    const defaultColumn = defaultColumns[i] || defaultColumns[0]
+    const prefix = `Item ${i + 1}`
+
+    columns.push({
+      icon: text('Icon', defaultColumn.icon, prefix),
+      title: text('Title', defaultColumn.title, prefix),
+      text: text('Text', defaultColumn.text, prefix)
+    })
   }
 
   return (
@@ -34,7 +60,9 @@ export const CalloutStory = () => {
       title={title}
       text={txt}
       className={classes}
-    />
+    >
+      {withIcons && <ColumnIcons columns={columns} inverted={inverted} />}
+    </Callout>
   )
 }
 

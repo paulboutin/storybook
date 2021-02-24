@@ -1,0 +1,13 @@
+.ratio-auto {
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+@each $horizontal, $vertical in $image-ratios {
+  .ratio-#{$horizontal}\:#{$vertical} {
+    @include fixed-ratio($horizontal, $vertical);
+  }
+}

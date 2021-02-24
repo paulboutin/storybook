@@ -32,7 +32,7 @@ export default {
   title: 'Base Components/Checkbox',
   parameters: {
     'in-dsm': {
-      id: '5f6ba2d7230dafd7c39b8fa2'
+      id: '5f06312f707a16a9122e05f3'
     }
   }
 }

@@ -7,7 +7,7 @@ export default {
   title: 'Base Components/Button',
   parameters: {
     'in-dsm': {
-      id: '5f0c88bf707a164d752e0cfc'
+      id: '5f0c88cd5b094d10df89d7d4'
     }
   }
 }

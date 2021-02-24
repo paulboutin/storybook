@@ -1,40 +1,39 @@
 .promo-element {
   overflow: hidden;
 
+  padding-top: spacing(32);
+  padding-bottom: spacing(32);
+
+  &.promo-alt {
+    background-color: color('grey-5');
+  }
+
+  &:not(.promo-accent) {
+    .promo-element-image-wrapper {
+      @include screen('sm', 'down') {
+        margin-bottom: spacing(32);
+      }
+    }
+
+    .app-cta {
+      align-items: flex-start;
+    }
+  }
+
   &.promo-accent {
     background-color: color('green');
     align-items: stretch;
     text-align: center;
 
-    &:not(.promo-dark) {
-      padding-top: spacing(32);
-      padding-bottom: spacing(32);
-    }
-
-    &.promo-dark {
-      background-color: color('green-dark');
-
-      .promo-element-content {
-        margin-top: spacing(64);
-
-        @include screen('sm') {
-          margin-top: 0;
-        }
-
-        .cta-wrapper {
-          display: block;
-
-          .link {
-            color: color('white');
-          }
-        }
-      }
-    }
-
     @include screen('sm') {
       flex-direction: row;
       flex-wrap: wrap;
       text-align: left;
+
+      &:not(.promo-dark) {
+        padding-top: spacing(64);
+        padding-bottom: spacing(64);
+      }
     }
 
     .container {
@@ -42,6 +41,13 @@
 
       @include screen('sm') {
         flex-direction: row;
+      }
+    }
+
+    .promo-element-image-wrapper {
+      @include screen('sm', 'down') {
+        margin-top: spacing(32);
+        margin-bottom: spacing(16);
       }
     }
 
@@ -70,6 +76,20 @@
     }
   }
 
+  &.promo-dark {
+    background-color: color('green-dark');
+
+    .promo-element-content {
+      .cta-wrapper {
+        display: block;
+
+        .link {
+          color: color('white');
+        }
+      }
+    }
+  }
+
   .promo-element-image-wrapper {
     position: relative;
     width: 100%;
@@ -77,14 +97,6 @@
     .image-block {
       z-index: 1;
       position: relative;
-
-      @include screen('sm') {
-        margin: spacing(32);
-      }
-
-      @include screen('lg') {
-        margin: spacing(64);
-      }
     }
   }
 
@@ -112,10 +124,7 @@
     }
 
     .promo-element-heading {
-    }
-
-    .promo-element-heading {
-      margin-bottom: spacing(12);
+      margin-bottom: spacing(8);
     }
 
     .promo-element-text {
@@ -138,31 +147,6 @@
       @include screen('sm') {
         align-self: flex-start;
       }
-    }
-  }
-
-  &:not(.promo-accent) {
-    padding-top: spacing(16);
-
-    .cta-wrapper .app-cta {
-      align-items: flex-start;
-    }
-  }
-
-  &.promo-alt {
-    background-color: color('grey-5');
-  }
-
-  &.promo-accent.promo-dark {
-    .promo-element-image-wrapper {
-      display: flex;
-      justify-content: center;
-      align-self: flex-end;
-      padding: 0;
-    }
-
-    .image-block {
-      margin: 0;
     }
   }
 

@@ -8,7 +8,7 @@ import Link from '../base/Link'
 const HelpIntro = ({ showLinks, fullWidth }) => (
   <section className='help-intro'>
     <div className='container'>
-      <h1 className='help-intro-title'>How can we help you today?</h1>
+      <h2 className='help-intro-title text-h1'>How can we help you today?</h2>
 
       <div
         className={classNames('help-intro-search', {

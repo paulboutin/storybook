@@ -1,10 +1,19 @@
 import React from 'react'
-import PopupVideo from '../../components/layout/PopupVideo'
-import { text } from '@storybook/addon-knobs'
+import PopupVideo, { defaults } from '../../components/layout/PopupVideo'
+import { text, boolean } from '@storybook/addon-knobs'
 
 export const PopupVideoStory = () => {
-  const video = text('Video', '/vid/hero-background.mp4')
-  return <PopupVideo video={video} poster='/img/hero-background.jpg' />
+  const props = {
+    eyebrowEnable: boolean('Enable Eyebrow', defaults.eyebrowEnable),
+    eyebrow: text('Eyebrow', defaults.eyebrow),
+    title: text('Title', defaults.title),
+    text: text('Text', defaults.text),
+    src: text('Video', defaults.src),
+    poster: text('Poster', defaults.poster),
+    alt: text('Poster Alt', defaults.posterAlt)
+  }
+
+  return <PopupVideo {...props} />
 }
 
 PopupVideoStory.story = {

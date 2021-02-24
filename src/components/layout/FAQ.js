@@ -60,7 +60,7 @@ export const FAQTables = ({ data = [] }) => (
         className='accordion-table'
         expanded={index === 0}
       >
-        <Table data={accordion.table} />
+        <Table type='standard' data={accordion.table} />
       </Accordion>
     ))}
   </>
@@ -68,7 +68,10 @@ export const FAQTables = ({ data = [] }) => (
 
 const FAQ = ({ heading, children }) => (
   <section className='faq container'>
-    <h2 className='faq-heading' dangerouslySetInnerHTML={{ __html: heading }} />
+    <h3
+      className='faq-heading text-h2'
+      dangerouslySetInnerHTML={{ __html: heading }}
+    />
     {children}
   </section>
 )

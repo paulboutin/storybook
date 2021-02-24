@@ -20,14 +20,6 @@ const ClosingCTA = ({
     className={classNames('closing-cta', `closing-cta-${type}`, className)}
   >
     <div className='container'>
-      {type === '2col' && (
-        <img
-          src={image}
-          alt='Closing CTA image'
-          className='closing-cta-image'
-        />
-      )}
-
       {type === 'bgi' && (
         <>
           <img
@@ -40,14 +32,14 @@ const ClosingCTA = ({
       )}
 
       <div className='closing-cta-content'>
-        <h1 dangerouslySetInnerHTML={{ __html: title }} />
-        {type !== '2col' && text && (
+        <h3 className='text-h2' dangerouslySetInnerHTML={{ __html: title }} />
+        {text && (
           <p
             className='closing-cta-text'
             dangerouslySetInnerHTML={{ __html: text }}
           />
         )}
-        <Button type='tertiary' label={label} link />
+        <Button type='secondary' label={label} link />
       </div>
     </div>
   </section>

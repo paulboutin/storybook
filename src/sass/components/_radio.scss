@@ -10,7 +10,7 @@
 
   &:focus-within {
     .radio {
-      @include focus-outline();
+      @include focus-outline-rounded();
     }
   }
 

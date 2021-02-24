@@ -2,9 +2,9 @@
   display: flex;
   flex-direction: column;
 
+  @include font-size('sm');
+
   .dropdown-native-group {
-    @include border-radius('md');
-    border: 1px solid color('grey-30');
     cursor: pointer;
     position: relative;
     display: flex;
@@ -17,10 +17,10 @@
     }
 
     &.dropdown-native-inline {
-      border: none;
       display: inline;
 
       .dropdown-native {
+        border: none;
         padding-right: spacing(24);
       }
 
@@ -52,9 +52,15 @@
   }
 
   .dropdown-native {
-    @include font-size('sm');
+    @include border-radius('md');
+    border: 1px solid color('grey-30');
+
+    font-size: inherit;
+    line-height: inherit;
+
     background-color: color('white');
-    padding: spacing(12);
+    padding: 16px;
+    padding-right: 40px;
 
     -moz-appearance: none;
     -webkit-appearance: none;

@@ -3,13 +3,17 @@
 
   position: fixed;
   bottom: spacing(32);
+  z-index: 1000;
 
-  background-color: color('green');
-  color: color('white');
+  cursor: pointer;
 
-  @include font-size('h2');
+  background-color: color('white');
+  color: color('green');
 
-  @include border-radius('round');
+  @include font-size('h4');
+
+  @include border-radius('sm');
+  @include box-shadow('sm');
 
   padding: spacing(8) spacing(12);
 

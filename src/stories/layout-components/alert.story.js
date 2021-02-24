@@ -1,7 +1,7 @@
 import React from 'react'
 import { text, radios, boolean, button } from '@storybook/addon-knobs'
 import Alert from '../../components/layout/Alert'
-import ProductPage from '../templates/product-page'
+import ProductPage from '../../components/templates/ProductPage'
 
 const options = {
   Danger: 'danger',
@@ -55,5 +55,10 @@ AlertStory.story = {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '601d64e2f8349b9e4859550b'
+    }
+  }
 }

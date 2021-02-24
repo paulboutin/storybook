@@ -37,11 +37,7 @@ export const InfographicStory = () => {
       title = text('Title', defaultColumn.title, `card ${i + 1}`)
       content = text('Text', defaultColumn.content, `card ${i + 1}`)
     } else {
-      content = text(
-        'Image',
-        'http://via.placeholder.com/400x400',
-        `card ${i + 1}`
-      )
+      content = text('Image', '/img/plant.png', `card ${i + 1}`)
     }
 
     items.push({
@@ -56,12 +52,16 @@ export const InfographicStory = () => {
       columns={cards}
       className={starBirds ? 'infographic-star-birds' : ''}
     >
-      {items.map(({ type, title, content }) => {
+      {items.map(({ type, title, content }, idx) => {
         switch (type) {
           case typeOptions.Text:
-            return <InfographicBox title={title}>{content}</InfographicBox>
+            return (
+              <InfographicBox key={idx} title={title}>
+                {content}
+              </InfographicBox>
+            )
           case typeOptions.Image:
-            return <InfographicBoxImage src={content} />
+            return <InfographicBoxImage key={idx} src={content} />
           default:
             return null
         }

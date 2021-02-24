@@ -152,5 +152,10 @@ export const Colors = () => (
 )
 
 export default {
-  title: 'Design System'
+  title: 'Design System',
+  parameters: {
+    'in-dsm': {
+      id: '602107bd8aff01f6aad6b007'
+    }
+  }
 }

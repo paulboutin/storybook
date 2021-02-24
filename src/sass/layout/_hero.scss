@@ -34,18 +34,6 @@
   @include screen('sm') {
     height: auto;
   }
-
-  @include screen('md') {
-    .hero-heading {
-      @include font-size('h2');
-    }
-  }
-
-  @include screen('lg') {
-    .hero-heading {
-      @include font-size('h1');
-    }
-  }
 }
 
 .hero-full {

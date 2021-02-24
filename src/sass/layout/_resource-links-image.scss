@@ -1,0 +1,28 @@
+.resource-links-image {
+  @include screen('sm') {
+    align-items: flex-start;
+  }
+
+  .resource-links-headline {
+    margin-bottom: spacing(24);
+  }
+
+  .resource-links-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .resource-link {
+      display: flex;
+      justify-content: space-between;
+
+      padding-top: spacing(16);
+      padding-bottom: spacing(16);
+
+      border-bottom: 1px solid color('grey-5');
+
+      &:first-of-type {
+        border-top: 1px solid color('grey-5');
+      }
+    }
+  }
+}

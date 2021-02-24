@@ -11,14 +11,11 @@
     margin-bottom: spacing(16);
   }
 
-  .callout-text {
-    @include font-size('h5');
-  }
-
   &.callout-centered {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
   }
 

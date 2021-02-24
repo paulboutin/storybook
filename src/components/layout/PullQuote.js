@@ -12,7 +12,7 @@ const PullQuote = ({ items }) => (
     data-pagination='.pull-quote-pagination'
   >
     <Eyebrow>Bank of the West</Eyebrow>
-    <h2 className='pull-quote-title'>From Our Team</h2>
+    <h3 className='pull-quote-title text-h2'>From Our Team</h3>
 
     <div className='pull-quote-outer-wrapper'>
       <ImageOverlap

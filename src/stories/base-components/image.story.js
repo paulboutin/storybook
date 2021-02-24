@@ -1,17 +1,19 @@
 import React from 'react'
-import Image from '../../components/base/Image'
-import { text, radios } from '@storybook/addon-knobs'
+import Image, { ratios } from '../../components/base/Image'
+import { text } from '@storybook/addon-knobs'
 
 export const ImageStory = () => {
-  const src = text('Image', 'http://via.placeholder.com/300x400')
-  const ratio = radios(
-    'Ratio',
-    ['Auto', '1:1', '4:3', '16:9'],
-    'Auto'
-  ).toLowerCase()
+  const src = text('Image', '/img/trees.png')
 
   return (
-    <Image ratio={ratio} src={src} alt='Image' className='sb:img-wrapper' />
+    <div className='sb:image'>
+      {ratios.map(ratio => (
+        <div className='sb:image-wrapper'>
+          <Image ratio={ratio} src={src} alt='Image' />
+          <p className='sb:image-ratio'>Ratio {ratio}</p>
+        </div>
+      ))}
+    </div>
   )
 }
 
@@ -23,7 +25,7 @@ export default {
   title: 'Base Components',
   parameters: {
     'in-dsm': {
-      id: '5f6ba2ea345184338c4a7d63'
+      id: '6014c4bcbb248e9dbe727488'
     }
   }
 }

@@ -47,7 +47,10 @@ const DefaultHeroContent = ({
 }) => (
   <>
     {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-    <h2 className='hero-heading' dangerouslySetInnerHTML={{ __html: title }} />
+    <h3
+      className='hero-heading text-h2 lg:text-h1'
+      dangerouslySetInnerHTML={{ __html: title }}
+    />
     {text && (
       <p className='hero-text' dangerouslySetInnerHTML={{ __html: text }} />
     )}

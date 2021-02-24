@@ -29,8 +29,8 @@
 @each $type in (primary, secondary, tertiary, ghost, danger) {
   @each $state in (hover, active, focus, disabled) {
     .sb\:button-#{$type}-#{$state} {
-      @extend .button:#{$state} !optional;
-      @extend .button-#{$type}:#{$state} !optional;
+      @extend :#{$state} !optional;
+      @extend .button-#{$type}, :#{$state} !optional;
     }
   }
 }

@@ -35,5 +35,10 @@ export const Fonts = () => (
 )
 
 export default {
-  title: 'Design System'
+  title: 'Design System',
+  parameters: {
+    'in-dsm': {
+      id: '60210916625c6fd1cd47f4a2'
+    }
+  }
 }

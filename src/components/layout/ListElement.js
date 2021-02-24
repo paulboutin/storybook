@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
 
-export const ListElementItems = ({ items, icon = 'check-circle' }) => (
+export const ListElementItems = ({ items, icon = 'check' }) => (
   <ul className='list-element-items'>
     {items.map((item, index) => (
       <li key={index} className='list-element-item'>
@@ -14,12 +14,12 @@ export const ListElementItems = ({ items, icon = 'check-circle' }) => (
   </ul>
 )
 
-const ListElement = ({ image, items, headerText, altLayout }) => (
+const ListElement = ({ image, items, headerText, type, reversed }) => (
   <section
-    className={classNames('list-element', { 'list-element-alt': altLayout })}
+    className={classNames('list-element', `list-element-${type}`, { reversed })}
   >
     <div className='container'>
-      {image && (
+      {type === 'image' && (
         <Image
           className='image-block'
           src={image.src}
@@ -32,8 +32,8 @@ const ListElement = ({ image, items, headerText, altLayout }) => (
           {headerText.eyebrow.enable && (
             <Eyebrow>{headerText.eyebrow.text}</Eyebrow>
           )}
-          <h2
-            className='list-element-heading'
+          <h3
+            className='list-element-heading text-h2'
             dangerouslySetInnerHTML={{ __html: headerText.heading }}
           />
           {headerText.text && (

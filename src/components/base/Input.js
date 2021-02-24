@@ -31,18 +31,20 @@ const Input = ({ id, variant, value, error, help, label, ...attrs }) => (
       </div>
     )}
 
-    {(error || help) && (
-      <p className='input-help'>
-        {error ? (
-          <>
-            <i className='icon icon-error' />
-            {error}
-          </>
-        ) : (
-          help
-        )}
-      </p>
-    )}
+    <div className='input-text-wrapper'>
+      {(error || help) && (
+        <p className='input-help'>
+          {error ? (
+            <>
+              <i className='icon icon-error' />
+              {error}
+            </>
+          ) : (
+            help
+          )}
+        </p>
+      )}
+    </div>
   </div>
 )
 

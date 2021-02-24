@@ -1,0 +1,64 @@
+.lead-form {
+  padding-top: spacing(32);
+  padding-bottom: spacing(32);
+
+  text-align: center;
+
+  @include screen('sm') {
+    text-align: left;
+  }
+
+  .lead-form-header {
+    margin-bottom: spacing(24);
+
+    @include screen('sm') {
+      margin-bottom: spacing(32);
+    }
+
+    .lead-form-headline {
+      margin-bottom: spacing(12);
+    }
+  }
+
+  .lead-form-row {
+    display: flex;
+    flex-direction: column;
+
+    @include screen('sm') {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .lead-form-input-group {
+    margin-bottom: spacing(24);
+
+    .input-block {
+      margin-bottom: spacing(8);
+    }
+
+    .button {
+      margin-top: spacing(16);
+      width: 100%;
+
+      @include screen('sm') {
+        width: unset;
+      }
+    }
+
+    @include screen('sm') {
+      margin-top: -2.125 * spacing(32);
+      margin-bottom: 0;
+    }
+  }
+
+  .lead-form-text-group {
+    .lead-form-subheadline {
+      margin-bottom: spacing(16);
+    }
+
+    .link {
+      display: block;
+      margin-bottom: spacing(12);
+    }
+  }
+}
