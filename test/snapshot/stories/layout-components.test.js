@@ -78,22 +78,22 @@ describe('Layout Components', () => {
       path: `layout-components-carousels--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    {
-      title: 'footer',
-      path: 'layout-components--footer-story',
-      fullPage: true,
-      devices: ['tablet', 'desktop']
-    },
-    {
-      title: 'footer',
-      path: 'layout-components--footer-story',
-      devices: ['mobile'],
-      callback: async () => {
-        await page.click('.accordion:first-of-type')
-        await page.click('.accordion:last-of-type')
-        await page.waitForTransition('.accordion-content')
-      }
-    },
+    // {
+    //   title: 'footer',
+    //   path: 'layout-components--footer-story',
+    //   fullPage: true,
+    //   devices: ['tablet', 'desktop']
+    // },
+    // {
+    //   title: 'footer',
+    //   path: 'layout-components--footer-story',
+    //   devices: ['mobile'],
+    //   callback: async () => {
+    //     await page.click('.accordion:first-of-type')
+    //     await page.click('.accordion:last-of-type')
+    //     await page.waitForTransition('.accordion-content')
+    //   }
+    // },
     {
       title: 'navigation main menu',
       path: 'layout-components--navigation-story',
