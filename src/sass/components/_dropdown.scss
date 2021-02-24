@@ -37,10 +37,9 @@
     @include border-radius('md');
     @include box-shadow('md');
     position: relative;
-    top: -1px;
-    left: -1px;
-    right: -1px;
-    border: 1px solid color('grey-5');
+    top: 0;
+    left: 0;
+    right: 0;
     display: none;
     overflow-x: hidden;
     overflow-y: auto;
@@ -105,8 +104,6 @@
 }
 
 .dropdown-open {
-  @include border-radius('md', 'md', 'none', 'none');
-
   &:focus {
     .dropdown-wrapper {
       outline: none;
@@ -140,6 +137,10 @@
   display: inline-block;
   border: none;
   margin: 0 spacing(4);
+
+  .dropdown-items {
+    border: 1px solid color('grey-5');
+  }
 
   &.dropdown-keyboard.dropdown-open:focus {
     .dropdown-wrapper {

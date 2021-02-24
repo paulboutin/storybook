@@ -40,7 +40,7 @@ const DropdownNative = ({
         ))}
       </select>
 
-      <i className='icon icon-chevron-down' />
+      <i className='icon icon-chevron-down text-lg' />
     </div>
 
     {helper && !inline && <p className='dropdown-helper-text'>{helper}</p>}

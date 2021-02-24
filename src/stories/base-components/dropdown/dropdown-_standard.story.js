@@ -31,7 +31,7 @@ export const DropdownStory = () => {
 }
 
 DropdownStory.story = {
-  name: 'Dropdown (Custom)'
+  name: 'Standard (Custom)'
 }
 
 export default {
