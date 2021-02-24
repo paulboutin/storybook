@@ -34,10 +34,6 @@
 
     .input-block {
       margin-bottom: spacing(8);
-
-      @include screen('sm') {
-        margin-bottom: spacing(12);
-      }
     }
 
     .button {
