@@ -33,7 +33,7 @@ export const DropdownNativeStory = () => {
 }
 
 DropdownNativeStory.story = {
-  name: 'Dropdown Native (Experimental)'
+  name: 'Dropdown (Select)'
 }
 
 export default {
