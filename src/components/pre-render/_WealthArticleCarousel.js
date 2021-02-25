@@ -8,10 +8,9 @@ const items = [
     tag: 'Living',
     heading: 'Impact investing and creating a sustainable recovery',
     subtext: '2 minutes read',
-    image: {
-      src: prefixImagePath({ src: '/wealth/BOTW_Wealth_Articles_Impact.jpg' }),
-      alt: 'Impact investing and creating a sustainable recovery'
-    },
+    image: prefixImagePath({
+      src: '/wealth/BOTW_Wealth_Articles_Impact.jpg'
+    }),
     href:
       'https://meansandmatters.bankofthewest.com/article/living/investing-during-a-time-of-crisis',
     tagHref: 'https://meansandmatters.bankofthewest.com/category/living'
@@ -21,12 +20,9 @@ const items = [
     tag: 'Economic Outlook',
     heading: 'Pandemic Woes Lead to Fiscal Spending Hopes',
     subtext: '1 minute read',
-    image: {
-      src: prefixImagePath({
-        src: '/wealth/BOTW_Wealth_Articles_Pandemic.png'
-      }),
-      alt: 'Pandemic Woes Lead to Fiscal Spending Hopes'
-    },
+    image: prefixImagePath({
+      src: '/wealth/BOTW_Wealth_Articles_Pandemic.png'
+    }),
     href: 'https://changematters.bankofthewest.com/category/economicoutlook',
     tagHref: 'https://changematters.bankofthewest.com/category/economicoutlook'
   },

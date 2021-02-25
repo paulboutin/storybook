@@ -14,7 +14,7 @@ const ArticleStandard = ({
 }) => {
   return (
     <>
-      <Image src={image.src} alt={image.alt} ratio='16:9' />
+      <Image src={image} alt={heading} ratio='16:9' />
 
       <div className='card-content'>
         <a className='card-tag' href={tagHref}>
