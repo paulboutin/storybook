@@ -2,6 +2,21 @@ import React from 'react'
 import { Highlight } from './Highlight'
 import Link from '../base/Link'
 
+export const ResourceLinksList = ({ headline, items }) => (
+  <div className='highlight-content-container resource-links-content'>
+    {headline && (
+      <h3 className='resource-links-headline text-h2'>{headline}</h3>
+    )}
+    <div className='resource-links-wrapper'>
+      {items.map(({ href, text }, idx) => (
+        <Link href={href || '#'} key={idx} className='resource-link' standalone>
+          {text}
+        </Link>
+      ))}
+    </div>
+  </div>
+)
+
 const ResourceLinksImage = ({ type, reverse, headline, image = {}, items }) => {
   return (
     <Highlight
@@ -10,16 +25,7 @@ const ResourceLinksImage = ({ type, reverse, headline, image = {}, items }) => {
       reverse={reverse}
       className='resource-links-image'
     >
-      <div className='highlight-content-container resource-links-content'>
-        <h3 className='resource-links-headline text-h2'>{headline}</h3>
-        <div className='resource-links-wrapper'>
-          {items.map((item, idx) => (
-            <Link key={idx} className='resource-link' standalone>
-              {item}
-            </Link>
-          ))}
-        </div>
-      </div>
+      <ResourceLinksList headline={headline} items={items} />
     </Highlight>
   )
 }

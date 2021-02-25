@@ -65,9 +65,11 @@ const ArticleVideo = ({
       </section>
 
       <div className='card-content'>
-        <a className='card-tag' href={tagHref}>
-          {tag}
-        </a>
+        {tag && (
+          <a className='card-tag' href={tagHref}>
+            {tag}
+          </a>
+        )}
         <span className='link link-standalone'>{heading}</span>
         <p className='card-subtext'>{subtext}</p>
       </div>

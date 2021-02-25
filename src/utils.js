@@ -4,3 +4,10 @@ export function slugify(string) {
     .replace(/\s/g, '-')
     .toLowerCase()
 }
+
+export function prefixImagePath({
+  prefix = '/-/media/Project/BOTW/DotCom/BOTW/Propelland/',
+  src
+}) {
+  return [prefix.replace(/\/$/, ''), src.replace(/^\//, '')].join('/')
+}

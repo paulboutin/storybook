@@ -22,6 +22,9 @@
       @include font-weight('bold');
       color: color('black');
       flex-grow: 1;
+
+      display: flex;
+      align-items: flex-start;
     }
 
     .card-tag {
@@ -52,6 +55,8 @@
 
       .link {
         color: inherit;
+
+        align-items: center;
 
         .icon {
           position: absolute;
