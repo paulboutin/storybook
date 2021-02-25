@@ -60,8 +60,8 @@ export const ProductSelectorStory = () => {
       title: text('Heading', defaultColumn.title, prefix),
       text: text('Text', defaultColumn.text, prefix),
       image: text('Image', defaultColumn.image, prefix),
-      button: text('Button', defaultColumn.button, prefix),
-      cta: text('CTA', defaultColumn.cta, prefix)
+      button: { text: text('Button', defaultColumn.button, prefix) },
+      cta: { text: text('CTA', defaultColumn.cta, prefix) }
     })
   }
 

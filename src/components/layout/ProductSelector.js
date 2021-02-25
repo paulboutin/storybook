@@ -28,6 +28,7 @@ const ProductSelector = ({ items, headline }) => {
             key={idx}
             type='B'
             image={image}
+            imageAlt={title}
             title={title}
             text={text}
             reverse
@@ -36,8 +37,15 @@ const ProductSelector = ({ items, headline }) => {
               active: idx === 0
             })}
           >
-            {button && <Button type='primary' label={button} />}
-            {cta && <Link>{cta}</Link>}
+            {button && (
+              <Button
+                type='primary'
+                label={button.text}
+                link={!!button.href}
+                {...(button.href ? { href: button.href } : {})}
+              />
+            )}
+            {cta && <Link href={cta.href}>{cta.text}</Link>}
           </Highlight>
         ))}
       </div>

@@ -16,7 +16,14 @@ const HighlightContent = ({ eyebrow = {}, title, text, children }) => {
   )
 }
 
-export const Highlight = ({ type, image, reverse, className, children }) => (
+export const Highlight = ({
+  alt,
+  type,
+  image,
+  reverse,
+  className,
+  children
+}) => (
   <section
     className={classNames(
       'highlight',
@@ -30,7 +37,7 @@ export const Highlight = ({ type, image, reverse, className, children }) => (
   >
     <Image
       src={image}
-      alt='Highlight image'
+      alt={alt}
       ratio='1:1'
       className='highlight-img-container'
     />
@@ -44,12 +51,19 @@ const DefaultHighlight = ({
   text,
   type,
   image,
+  imageAlt,
   reverse,
   eyebrow = {},
   className,
   children
 }) => (
-  <Highlight type={type} image={image} reverse={reverse} className={className}>
+  <Highlight
+    type={type}
+    image={image}
+    alt={imageAlt}
+    reverse={reverse}
+    className={className}
+  >
     <HighlightContent title={title} text={text} eyebrow={eyebrow}>
       {children}
     </HighlightContent>
