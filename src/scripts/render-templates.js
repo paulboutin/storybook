@@ -53,21 +53,29 @@ function renderTemplates() {
 
     import(inPath).then(module => {
       const Component = module.default
-      const outPath = path.join(
-        outDir,
-        convertToKebabCase(template.split('.')[0]) + '.html'
-      )
-
+      let outPath
       let output
 
       if (template.charAt(0) === '_') {
+        mkdir(path.join(outDir, '/partials'))
         output = html.prettyPrint(renderToStaticMarkup(<Component />))
+        outPath = path.join(
+          outDir,
+          '/partials',
+          convertToKebabCase(template.split('.')[0]) + '.html'
+        )
       } else {
+        mkdir(path.join(outDir, '/full'))
         output = html.prettyPrint(
           baseTemplate({
             title: convertToTitleCase(template.split('.')[0]),
             body: renderToStaticMarkup(<Component />)
           })
+        )
+        outPath = path.join(
+          outDir,
+          'full',
+          convertToKebabCase(template.split('.')[0]) + '.html'
         )
       }
 
