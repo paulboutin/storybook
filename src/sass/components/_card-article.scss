@@ -97,7 +97,8 @@
     }
   }
 
-  &.card-article-services {
+  &.card-article-services,
+  &.card-article-services-icon {
     position: relative;
     color: color('white');
 
@@ -130,6 +131,20 @@
         flex-grow: 0;
         color: inherit;
       }
+    }
+  }
+
+  &.card-article-services-icon {
+    background: color('white');
+
+    .card-content {
+      background: none;
+      color: color('black');
+    }
+
+    img {
+      padding: spacing(24);
+      object-fit: contain;
     }
   }
 }

@@ -80,7 +80,7 @@ const ArticleVideo = ({
 const Services = ({ heading, image, href }) => {
   return (
     <>
-      <Image src={image.src} alt={image.alt} ratio='3:4' />
+      <Image src={image} alt={heading} ratio='3:4' />
 
       <div className='card-content'>
         <Link href={href} standalone noArrow>
@@ -105,6 +105,7 @@ const CardArticle = ({ type, ...props }) => {
       case 'video':
         return <ArticleVideo cardId={cardId} {...props} />
       case 'services':
+      case 'services-icon':
         return <Services {...props} />
       default:
         return null

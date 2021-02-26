@@ -27,7 +27,7 @@ export const Article = () => {
     <div className='sb:card sb:card-article'>
       <CardArticle
         type={type}
-        image={{ src: image }}
+        image={image}
         tag={tag}
         heading={heading}
         subtext={subtext}

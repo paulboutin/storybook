@@ -1,14 +1,26 @@
 import React from 'react'
 import CardArticle from '../../../components/base/CardArticle'
-import { text } from '@storybook/addon-knobs'
+import { text, radios } from '@storybook/addon-knobs'
+
+const images = {
+  trees: '/img/trees.png',
+  icon: '/img/wealth/BOTW_Wealth_Expertise_Individual.png'
+}
+
+const options = {
+  Services: 'services',
+  'Services Icon': 'services-icon'
+}
 
 export const Services = () => {
-  const image = text('Image', '/img/trees.png')
+  const type = radios('Type', options, options.Services)
+  const image = type === options.Services ? images.trees : images.icon
+
   const heading = text('Heading', 'Heading')
 
   return (
     <div className='sb:card sb:card-article'>
-      <CardArticle type='services' image={{ src: image }} heading={heading} />
+      <CardArticle type={type} image={image} heading={heading} />
     </div>
   )
 }
