@@ -33,6 +33,7 @@ const items = [
 
 const ResourceLinksPartial = () => (
   <ResourceLinksImage
+    type='A'
     headline='We implement solutions that evolve with your business and help you gain a competitive edge.'
     image={prefixImagePath({
       src: '/commercial/BOTW_Commercial_Solutions_City view.jpg'
