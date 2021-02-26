@@ -7,7 +7,6 @@ export const PopupVideoStory = () => {
     eyebrowEnable: boolean('Enable Eyebrow', defaults.eyebrowEnable),
     eyebrow: text('Eyebrow', defaults.eyebrow),
     title: text('Title', defaults.title),
-    text: text('Text', defaults.text),
     src: text('Video', defaults.src),
     poster: text('Poster', defaults.poster),
     alt: text('Poster Alt', defaults.posterAlt)

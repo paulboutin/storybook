@@ -29,7 +29,7 @@ const items = [
   {
     type: 'video',
     heading: 'Investing in the time of COVID-19',
-    subtext: '1 minute read',
+    subtext: '50 minutes watch',
     src: 'https://youtu.be/Me-eyi28aFo',
     poster: prefixImagePath({
       src: '/wealth/BOTW_Wealth_Articles_Investing.png'

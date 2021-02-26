@@ -31,17 +31,23 @@
     color: color('white');
 
     .container {
+      padding: spacing(64) spacing(48);
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
+      text-align: center;
       height: 100%;
+
+      @include screen('sm') {
+        justify-content: flex-start;
+      }
     }
 
     .eyebrow {
       color: color('white');
       align-items: center;
-      margin-bottom: spacing(8);
+      margin-bottom: spacing(64);
     }
 
     .button {

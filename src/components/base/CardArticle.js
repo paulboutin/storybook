@@ -60,7 +60,7 @@ const ArticleVideo = ({
         <div className='popup-video-overlay' />
 
         <div className='popup-video-content'>
-          <Button type='primary' icon='play' />
+          <Button type='secondary' icon='play' />
         </div>
       </section>
 
