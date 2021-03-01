@@ -33,8 +33,8 @@ const states = [
   'Wyoming'
 ]
 
-export const Hero = ({ type, image, children }) => (
-  <section className={classNames('hero', `hero-${type}`)}>
+export const Hero = ({ type, image, className, children }) => (
+  <section className={classNames('hero', `hero-${type}`, className)}>
     <img className='hero-img' src={image} alt='Hero image' />
     <article className='hero-content'>{children}</article>
   </section>
