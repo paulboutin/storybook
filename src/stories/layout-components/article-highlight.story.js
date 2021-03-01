@@ -32,5 +32,10 @@ export const Standard = () => {
 }
 
 export default {
-  title: 'Layout Components/Article Highlight'
+  title: 'Layout Components/Article Highlight',
+  parameters: {
+    'in-dsm': {
+      id: '603ce15b52db9e24baa44762'
+    }
+  }
 }
