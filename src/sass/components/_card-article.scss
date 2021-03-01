@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    padding: spacing(16) spacing(24);
+    padding: spacing(16);
 
     .link {
       @include font-size('h5');
@@ -142,8 +142,14 @@
       color: color('black');
     }
 
+    .link {
+      min-height: 3.5 * spacing(16);
+    }
+
     img {
-      padding: spacing(24);
+      padding-left: spacing(24);
+      padding-right: spacing(24);
+      padding-bottom: 2.5 * spacing(16);
       object-fit: contain;
     }
   }

@@ -1,6 +1,5 @@
 import React from 'react'
 import { ResourceLinksList } from '../layout/ResourceLinksImage'
-import Eyebrow from '../base/Eyebrow'
 
 const items = [
   {

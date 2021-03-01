@@ -4,7 +4,7 @@ import { prefixImagePath } from '../../utils'
 
 const items = [
   {
-    type: 'services',
+    type: 'services-icon',
     heading: 'Individuals and Families',
     image: prefixImagePath({
       src: '/wealth/BOTW_Wealth_Expertise_Individual.png'
@@ -13,7 +13,7 @@ const items = [
       'https://www.bankofthewest.com/wealth-management/who-we-serve/individuals-families'
   },
   {
-    type: 'services',
+    type: 'services-icon',
     heading: 'High Net Worth',
     image: prefixImagePath({
       src: '/wealth/BOTW_Wealth_Expertise_HighNet.png'
@@ -22,7 +22,7 @@ const items = [
       'https://www.bankofthewest.com/wealth-management/who-we-serve/key-client-group-america'
   },
   {
-    type: 'services',
+    type: 'services-icon',
     heading: 'Private Business and Entrepreneurs',
     image: prefixImagePath({
       src: '/wealth/BOTW_Wealth_Expertise_PrivateBusiness.png'
@@ -31,7 +31,7 @@ const items = [
       'https://www.bankofthewest.com/wealth-management/who-we-serve/private-business-owners'
   },
   {
-    type: 'services',
+    type: 'services-icon',
     heading: 'International',
     image: prefixImagePath({
       src: '/wealth/BOTW_Wealth_Expertise_International.png'
