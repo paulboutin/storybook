@@ -2,12 +2,14 @@ import React from 'react'
 import Callout from '../layout/Callout'
 import CardCarousel from '../layout/CardCarousel'
 import { prefixImagePath } from '../../utils'
+import * as config from '../../config'
 
-const items = [
+const items = prefix => [
   {
     type: 'services-icon',
     heading: 'Technology',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_industries_Technology.png'
     }),
     href: 'https://www.bankofthewest.com/commercial-banking/industry/technology'
@@ -16,6 +18,7 @@ const items = [
     type: 'services-icon',
     heading: 'Healthcare',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_industries_Healthcare.png'
     }),
     href: 'https://www.bankofthewest.com/commercial-banking/industry/healthcare'
@@ -24,6 +27,7 @@ const items = [
     type: 'services-icon',
     heading: 'Food and Agribusiness',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_industries_Food.png'
     }),
     href:
@@ -33,6 +37,7 @@ const items = [
     type: 'services-icon',
     heading: 'Wine and Beverage',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_industries_Wine.png'
     }),
     href:
@@ -42,6 +47,7 @@ const items = [
     type: 'services-icon',
     heading: 'Title and Escrow',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_industries_Title.png'
     }),
     href:
@@ -51,6 +57,7 @@ const items = [
     type: 'services-icon',
     heading: 'Commercial Real Estate',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_industries_Commercial.png'
     }),
     href:
@@ -60,6 +67,7 @@ const items = [
     type: 'services-icon',
     heading: 'Government & Public Sector',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_industries_Government.png'
     }),
     href:
@@ -69,6 +77,7 @@ const items = [
     type: 'services-icon',
     heading: 'Religious Institutions',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_industries_Religious.png'
     }),
     href:
@@ -78,19 +87,20 @@ const items = [
     type: 'services-icon',
     heading: 'Environmental, Social, and Governance',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_industries_Environmental.png'
     }),
     href: ''
   }
 ]
 
-const CarouselPartial = () => (
+const CarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
   <>
     <Callout
       title='There’s more to your business than just business'
       text='Work with an expert who has deep market expertise, specific to your industry.'
     />
-    <CardCarousel items={items} />
+    <CardCarousel items={items(imgPath)} />
   </>
 )
 

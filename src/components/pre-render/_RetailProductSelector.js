@@ -1,8 +1,9 @@
 import React from 'react'
 import ProductSelector from '../layout/ProductSelector'
 import { prefixImagePath } from '../../utils'
+import * as config from '../../config'
 
-const items = [
+const items = prefix => [
   {
     tab: 'Checking',
     title: '1% for the Planet Checking',
@@ -17,7 +18,10 @@ const items = [
       text: 'Compare Checking Accounts',
       href: 'https://www.bankofthewest.com/personal-banking/checking-accounts'
     },
-    image: prefixImagePath({ src: '/retail/BOTW_Retail_Products_1Percent.png' })
+    image: prefixImagePath({
+      prefix,
+      src: '/retail/BOTW_Retail_Products_1Percent.png'
+    })
   },
   {
     tab: 'Savings',
@@ -32,7 +36,10 @@ const items = [
       text: 'View All Savings',
       href: 'https://www.bankofthewest.com/personal-banking/savings-accounts'
     },
-    image: prefixImagePath({ src: '/retail/BOTW_Retail_Products_Savings.png' })
+    image: prefixImagePath({
+      prefix,
+      src: '/retail/BOTW_Retail_Products_Savings.png'
+    })
   },
   {
     tab: 'Credit Cards',
@@ -48,6 +55,7 @@ const items = [
       href: 'https://www.bankofthewest.com/personal-banking/credit-cards'
     },
     image: prefixImagePath({
+      prefix,
       src: '/retail/BOTW_Retail_Products_CreditCard.png'
     })
   },
@@ -65,7 +73,10 @@ const items = [
       href:
         'https://www.bankofthewest.com/personal-banking/loans/personal-loans'
     },
-    image: prefixImagePath({ src: '/retail/BOTW_Retail_Products_CarLoan.png' })
+    image: prefixImagePath({
+      prefix,
+      src: '/retail/BOTW_Retail_Products_CarLoan.png'
+    })
   },
   {
     tab: 'Home Loans',
@@ -80,6 +91,7 @@ const items = [
       href: 'https://www.bankofthewest.com/personal-banking/loans/home-equity'
     },
     image: prefixImagePath({
+      prefix,
       src: '/retail/BOTW_Retail_Products_HomeEquity.png'
     })
   },
@@ -98,13 +110,14 @@ const items = [
         'https://www.bankofthewest.com/wealth-management/our-solutions/online-investing'
     },
     image: prefixImagePath({
+      prefix,
       src: '/retail/BOTW_Retail_Products_OnlineInvesting.png'
     })
   }
 ]
 
-const ProductSelectorPartial = () => (
-  <ProductSelector headline='Our Products' items={items} />
+const ProductSelectorPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
+  <ProductSelector headline='Our Products' items={items(imgPath)} />
 )
 
 export default ProductSelectorPartial

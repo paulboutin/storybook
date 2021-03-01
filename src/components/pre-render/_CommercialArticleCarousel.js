@@ -1,14 +1,16 @@
 import React from 'react'
 import CardCarousel from '../layout/CardCarousel'
 import { prefixImagePath } from '../../utils'
+import * as config from '../../config'
 
-const items = [
+const items = prefix => [
   {
     type: 'standard',
     tag: 'Treasury Solutions',
     heading: 'Balancing Risks and Rewards in the Push to Digitize',
     subtext: '2 minutes read',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_Articles_Balancing-Risks.jpg'
     }),
     href:
@@ -21,6 +23,7 @@ const items = [
     heading: 'Real-Time Business: Are Your Payments Prepared?',
     subtext: '1 minute read',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_Articles_Real-time-Business.jpg'
     }),
     href:
@@ -33,6 +36,7 @@ const items = [
     heading: 'Six Keys to Remove Treasury Management',
     subtext: '2 minutes read',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_Articles_Six-keys.jpg'
     }),
     href:
@@ -45,6 +49,7 @@ const items = [
     heading: 'Six Keys to Remove Treasury Management',
     subtext: '2 minutes read',
     image: prefixImagePath({
+      prefix,
       src: '/commercial/BOTW_Commercial_Articles_Pandemic-Accelerates.jpg'
     }),
     href:
@@ -58,6 +63,8 @@ const items = [
   }
 ]
 
-const CarouselPartial = () => <CardCarousel items={items} />
+const CarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
+  <CardCarousel items={items(imgPath)} />
+)
 
 export default CarouselPartial

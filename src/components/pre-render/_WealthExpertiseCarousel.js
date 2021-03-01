@@ -1,12 +1,14 @@
 import React from 'react'
 import CardCarousel from '../layout/CardCarousel'
 import { prefixImagePath } from '../../utils'
+import * as config from '../../config'
 
-const items = [
+const items = prefix => [
   {
     type: 'services-icon',
     heading: 'Individuals and Families',
     image: prefixImagePath({
+      prefix,
       src: '/wealth/BOTW_Wealth_Expertise_Individual.png'
     }),
     href:
@@ -16,6 +18,7 @@ const items = [
     type: 'services-icon',
     heading: 'High Net Worth',
     image: prefixImagePath({
+      prefix,
       src: '/wealth/BOTW_Wealth_Expertise_HighNet.png'
     }),
     href:
@@ -25,6 +28,7 @@ const items = [
     type: 'services-icon',
     heading: 'Private Business and Entrepreneurs',
     image: prefixImagePath({
+      prefix,
       src: '/wealth/BOTW_Wealth_Expertise_PrivateBusiness.png'
     }),
     href:
@@ -34,6 +38,7 @@ const items = [
     type: 'services-icon',
     heading: 'International',
     image: prefixImagePath({
+      prefix,
       src: '/wealth/BOTW_Wealth_Expertise_International.png'
     }),
     href:
@@ -41,6 +46,8 @@ const items = [
   }
 ]
 
-const CarouselPartial = () => <CardCarousel items={items} />
+const CarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
+  <CardCarousel items={items(imgPath)} />
+)
 
 export default CarouselPartial

@@ -5,9 +5,6 @@ export function slugify(string) {
     .toLowerCase()
 }
 
-export function prefixImagePath({
-  prefix = '/-/media/Project/BOTW/DotCom/BOTW/Propelland/',
-  src
-}) {
+export function prefixImagePath({ prefix, src }) {
   return [prefix.replace(/\/$/, ''), src.replace(/^\//, '')].join('/')
 }

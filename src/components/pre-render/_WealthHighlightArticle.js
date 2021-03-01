@@ -1,10 +1,12 @@
 import React from 'react'
 import ArticleHighlight from '../layout/ArticleHighlight'
 import { prefixImagePath } from '../../utils'
+import * as config from '../../config'
 
-const ArticleHighlightPartial = () => (
+const ArticleHighlightPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
   <ArticleHighlight
     image={prefixImagePath({
+      prefix: imgPath,
       src: '/img/wealth/BOTW_Wealth_Highlight-article.jpg'
     })}
     tag='Living'
