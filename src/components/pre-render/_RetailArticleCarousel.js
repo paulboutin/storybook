@@ -9,7 +9,7 @@ const items = [
     heading: 'What Banks Do with Your Money and Why It Matters',
     subtext: '2 minutes read',
     image: prefixImagePath({
-      src: '/wealth/BOTW_Retail_Article_Why-it -matters.jpg'
+      src: '/retail/BOTW_Retail_Articles_Why-it -matters.jpg'
     }),
     href:
       'https://meansandmatters.bankofthewest.com/article/living/what-banks-do-with-your-money-and-why-it-matters',
@@ -21,7 +21,7 @@ const items = [
     heading: 'Ways to Offset Your Carbon Footprint',
     subtext: '2 minutes read',
     image: prefixImagePath({
-      src: '/wealth/BOTW_Retail_Article_Carbon-footprint.jpg'
+      src: '/retail/BOTW_Retail_Articles_Carbon-footprint.jpg'
     }),
     href:
       'https://meansandmatters.bankofthewest.com/article/living/ways-to-offset-your-carbon-footprint',
@@ -33,7 +33,7 @@ const items = [
     heading: 'Women Take the Lead in Impact Investing',
     subtext: '1 minute read',
     image: prefixImagePath({
-      src: '/wealth/BOTW_Retail_Article_Women-lead.png'
+      src: '/retail/BOTW_Retail_Articles_Women-lead.png'
     }),
     href:
       'https://meansandmatters.bankofthewest.com/article/living/women-take-the-lead-in-impact-investing',
@@ -45,7 +45,7 @@ const items = [
     heading: 'This Is the Decade to Reverse Climate Change',
     subtext: '1 minute read',
     image: prefixImagePath({
-      src: '/wealth/BOTW_Retail_Article_Climate-change.jpg'
+      src: '/retail/BOTW_Retail_Articles_Climate-change.jpg'
     }),
     href:
       'https://meansandmatters.bankofthewest.com/article/inspiration/decade-to-reverse-climate-change',

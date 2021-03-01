@@ -9,7 +9,7 @@ const items = [
     heading: 'Balancing Risks and Rewards in the Push to Digitize',
     subtext: '2 minutes read',
     image: prefixImagePath({
-      src: '/commercial/BOTW_Commercial_Articles_Balancing Risks.jpg'
+      src: '/commercial/BOTW_Commercial_Articles_Balancing-Risks.jpg'
     }),
     href:
       'https://perspectives.bankofthewest.com/treasury-solutions/balancing-risks-and-rewards-in-the-push-to-digitize',
@@ -21,7 +21,7 @@ const items = [
     heading: 'Real-Time Business: Are Your Payments Prepared?',
     subtext: '1 minute read',
     image: prefixImagePath({
-      src: '/commercial/BOTW_Commercial_Articles_Real-time Business.jpg'
+      src: '/commercial/BOTW_Commercial_Articles_Real-time-Business.jpg'
     }),
     href:
       'https://perspectives.bankofthewest.com/international-finance/real-time-business-are-your-payments-prepared',
@@ -33,7 +33,7 @@ const items = [
     heading: 'Six Keys to Remove Treasury Management',
     subtext: '2 minutes read',
     image: prefixImagePath({
-      src: '/commercial/BOTW_Commercial_Articles_Six keys.jpg'
+      src: '/commercial/BOTW_Commercial_Articles_Six-keys.jpg'
     }),
     href:
       'https://perspectives.bankofthewest.com/international-finance/six-keys-to-remote-treasury-management',
@@ -45,7 +45,7 @@ const items = [
     heading: 'Six Keys to Remove Treasury Management',
     subtext: '2 minutes read',
     image: prefixImagePath({
-      src: '/commercial/BOTW_Commercial_Articles_Pandemic Accelerates.jpg'
+      src: '/commercial/BOTW_Commercial_Articles_Pandemic-Accelerates.jpg'
     }),
     href:
       'https://perspectives.bankofthewest.com/food-and-agribusiness/pandemic-accelerates-transformative-change-in-u-s-wine-business',
