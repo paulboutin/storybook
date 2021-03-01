@@ -9,16 +9,18 @@
     }
   }
 
-  .article-highlight-container {
+  .article-highlight-wrapper {
     @include overlay('medium');
 
+    display: block;
     cursor: pointer;
+  }
 
-    width: 100%;
-    min-height: 100vh;
-
+  .article-highlight-container {
     display: flex;
     flex-direction: column;
+
+    min-height: 100vh;
 
     padding: spacing(64) spacing(16);
 
@@ -28,7 +30,7 @@
     }
   }
 
-  .article-highlight-wrapper {
+  .article-highlight-content {
     flex-grow: 1;
 
     display: flex;
@@ -55,6 +57,17 @@
 
       > * {
         width: 50%;
+      }
+    }
+  }
+
+  .article-highlight-subtext {
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+      @include screen('sm') {
+        display: none;
       }
     }
   }
