@@ -36,6 +36,8 @@ export const ClosingCTA = () => {
   const items = []
   const cards = number('Items', defaultItems.length, options, 'config')
   const headline = text('Headline', 'Headline', 'config')
+  const button = text('Button Text', 'Button CTA', 'config')
+  const link = text('Link Text', 'Link CTA', 'config')
 
   for (let i = 0; i < cards; i++) {
     const defaultColumn = defaultItems[i] || defaultItems[0]
@@ -50,8 +52,8 @@ export const ClosingCTA = () => {
 
   return (
     <ClosingCTACarousel headline={headline} items={items}>
-      <Button type='secondary' label='Button CTA' />
-      <Link>Link CTA</Link>
+      <Button type='secondary' label={button} />
+      <Link>{link}</Link>
     </ClosingCTACarousel>
   )
 }
@@ -60,7 +62,7 @@ export default {
   title: 'Layout Components/Carousels',
   parameters: {
     'in-dsm': {
-      id: '5f29d6055418d54690b90ce3'
+      id: '603ce8f28a3603c36a64131f'
     }
   }
 }
