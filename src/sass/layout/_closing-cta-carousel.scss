@@ -28,6 +28,12 @@
   .carousel-slide-wrapper {
     position: relative;
 
+    @include fixed-ratio(3, 4);
+
+    @include screen('sm') {
+      @include fixed-ratio(4, 3);
+    }
+
     .carousel-slide-content {
       @include overlay('medium');
 
@@ -68,12 +74,6 @@
 
   .slider {
     position: static !important;
-  }
-
-  .slider-image {
-    @include screen('sm') {
-      @include fixed-ratio(4, 3);
-    }
   }
 
   .closing-cta-carousel-container {

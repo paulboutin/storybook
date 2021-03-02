@@ -16,12 +16,7 @@ const ClosingCTACarousel = ({ headline, items, children }) => {
           <Slider axis='horizontal' transitionOpacity>
             {items.map((item, index) => (
               <div className='carousel-slide-wrapper' key={index}>
-                <Image
-                  src={item.image}
-                  alt={item.text}
-                  ratio='3:4'
-                  className='slider-image'
-                />
+                <Image src={item.image} alt={item.text} ratio='auto' />
                 <div className='carousel-slide-content'>
                   <p className='carousel-card-title text-cta font-display'>
                     {item.title}
