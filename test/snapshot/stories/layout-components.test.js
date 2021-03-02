@@ -73,7 +73,7 @@ describe('Layout Components', () => {
       path: `layout-components-resource-links--resource-links-${type}`,
       devices: ['mobile', 'tablet']
     })),
-    ...['standard', 'editorial'].map(type => ({
+    ...['standard', 'editorial', 'closing-cta'].map(type => ({
       title: `carousel ${type}`,
       path: `layout-components-carousels--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
