@@ -26,7 +26,7 @@ const ClosingCTACarousel = ({ headline, items, children }) => {
                   <p className='carousel-card-title text-cta font-display'>
                     {item.title}
                   </p>
-                  <p className='carousel-card-text text-h2 font-display'>
+                  <p className='carousel-card-text text-h3 font-display'>
                     {item.text}
                   </p>
                 </div>
