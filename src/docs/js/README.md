@@ -76,7 +76,7 @@ Individual components may be deactivated by simply removing the function call fr
 
   Includes support for swipe gestures via `lib/swiped-events`
 
-  Requires cross-browser support for smooth scroll behavior, provided by `lib/smoothscroll-polyfill`
+  Requires cross-browser support for smooth scroll behavior (tabs), provided by `lib/smoothscroll-polyfill`
 
 - **return-to-top**
 
@@ -86,7 +86,7 @@ Individual components may be deactivated by simply removing the function call fr
 
 - **slider**
 
-  Implements logic for pull quote and standard carousel components.
+  Implements logic for pull quote, standard carousel and closing cta carousel components.
 
   Includes support for swipe gestures via `lib/swiped-events`
 
