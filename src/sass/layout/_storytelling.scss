@@ -13,6 +13,7 @@
 
   .storytelling-item {
     position: relative;
+    overflow: hidden;
 
     cursor: pointer;
 
@@ -20,52 +21,84 @@
     flex-direction: column;
     flex: 1;
 
-    padding: spacing(16);
+    padding: spacing(32) spacing(16);
 
-    transition: flex 600ms ease-in-out;
+    transition: all 600ms ease-in-out, background-color 150ms ease-in,
+      color 150ms ease-in;
 
-    &:not(.expanded) {
-      .storytelling-content {
-        opacity: 0;
+    .icon-plus {
+      margin-bottom: spacing(64);
+    }
+
+    .storytelling-image {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      z-index: -1;
+    }
+
+    .storytelling-item-cover {
+      transition: opacity 300ms ease-in-out, color 0ms;
+      opacity: 1;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    .storytelling-item-wrapper {
+      transition: opacity 150ms ease-in-out;
+      opacity: 0;
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      padding: spacing(32);
+
+      .storytelling-title {
+        margin-bottom: spacing(8);
       }
     }
 
-    &.collapsed {
-      flex: 0;
+    &:not(.expanded) {
+      background-color: color('green');
+      color: color('white');
 
-      .storytelling-title,
-      .storytelling-content {
-        display: none;
-      }
+      &:hover {
+        background-color: color('green-dark');
 
-      .storytelling-subtitle {
-        position: absolute;
-        bottom: 0;
-
-        transform-origin: top left;
-        transform: rotate(-90deg);
-
-        width: 150%;
+        .storytelling-item-cover {
+          .storytelling-title {
+            text-decoration: underline;
+          }
+        }
       }
     }
 
     &.expanded {
-      flex: 7;
-    }
+      flex: 3;
+      cursor: default;
 
-    .storytelling-content {
-      flex-grow: 1;
-      width: 75%;
-      overflow-x: hidden;
-    }
+      .storytelling-item-cover {
+        opacity: 0;
+      }
 
-    .storytelling-subtitle {
-      text-transform: uppercase;
-      color: color('grey-70');
+      .storytelling-item-wrapper {
+        transition: opacity 300ms ease-in-out 600ms;
+        opacity: 1;
+      }
     }
 
     &:not(:last-of-type) {
       border-right: 1px solid color('grey-10');
     }
   }
+}
+
+@keyframes fade-in-out-in {
 }
