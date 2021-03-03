@@ -40,6 +40,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      text-align: center;
 
       .eyebrow {
         align-items: center;
@@ -47,6 +48,7 @@
 
       @include screen('sm') {
         display: block;
+        text-align: left;
 
         .eyebrow {
           align-items: flex-start;
@@ -74,7 +76,7 @@
       }
 
       @include screen('lg') {
-        padding-left: spacing(128);
+        padding-left: spacing(64);
       }
     }
 
@@ -92,7 +94,7 @@
 
         @include screen('lg') {
           padding-left: 0;
-          padding-right: spacing(128);
+          padding-right: spacing(64);
         }
       }
     }

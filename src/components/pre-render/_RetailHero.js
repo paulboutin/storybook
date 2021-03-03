@@ -11,6 +11,7 @@ const text =
 const RetailHeroPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
   return (
     <Highlight
+      className='centered'
       type='A'
       title={title}
       text={text}
