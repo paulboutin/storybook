@@ -10,4 +10,10 @@
   > * {
     margin-bottom: spacing(16);
   }
+
+  &.centered {
+    @include screen('sm') {
+      align-items: center;
+    }
+  }
 }

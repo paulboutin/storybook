@@ -8,13 +8,13 @@ export const altTitle = 'Open online in about 10 minutes'
 export const defaultText = 'Type something'
 export const defaultLabel = 'Call to Action'
 
-const ClosingCTA = ({
+export const ClosingCTA = ({
   type,
   image,
-  title = defaultTitle,
-  text = defaultText,
-  label = defaultLabel,
-  className
+  title,
+  text,
+  className,
+  children
 }) => (
   <section
     className={classNames('closing-cta', `closing-cta-${type}`, className)}
@@ -39,10 +39,22 @@ const ClosingCTA = ({
             dangerouslySetInnerHTML={{ __html: text }}
           />
         )}
-        <Button type='secondary' label={label} link />
+        {children}
       </div>
     </div>
   </section>
 )
 
-export default ClosingCTA
+const DefaultClosingCTA = ({ type, image, title, text, label, className }) => (
+  <ClosingCTA
+    type={type}
+    image={image}
+    title={title}
+    text={text}
+    className={className}
+  >
+    <Button type='secondary' label={label} link />
+  </ClosingCTA>
+)
+
+export default DefaultClosingCTA

@@ -21,9 +21,18 @@
 }
 
 .closing-cta-standard {
-  background-color: color('green');
+  &.closing-cta-green {
+    background-color: color('green');
+    color: color('white');
+  }
+
+  &.closing-cta-white {
+    background-color: color('white');
+    color: color('black');
+  }
 
   &.closing-cta-star-birds {
+    background-color: color('green');
     .container {
       @include star-birds('light');
       background-position: left center;
