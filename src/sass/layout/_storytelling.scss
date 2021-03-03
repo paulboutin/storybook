@@ -6,9 +6,30 @@
     margin-bottom: spacing(32);
   }
 
+  .accordion-items {
+    display: block;
+
+    .accordion-content {
+      position: relative;
+
+      .accordion-text {
+        position: absolute;
+        top: 0;
+      }
+    }
+
+    @include screen('sm') {
+      display: none;
+    }
+  }
+
   .storytelling-items {
-    display: flex;
     height: 70vh;
+    display: none;
+
+    @include screen('sm') {
+      display: flex;
+    }
   }
 
   .storytelling-item {
@@ -25,10 +46,6 @@
 
     transition: all 600ms ease-in-out, background-color 150ms ease-in,
       color 150ms ease-in;
-
-    .icon-plus {
-      margin-bottom: spacing(64);
-    }
 
     .storytelling-image {
       position: absolute;
@@ -98,7 +115,4 @@
       border-right: 1px solid color('grey-10');
     }
   }
-}
-
-@keyframes fade-in-out-in {
 }

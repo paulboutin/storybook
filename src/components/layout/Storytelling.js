@@ -1,5 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
+import Accordion from '../base/Accordion'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
 
@@ -35,9 +36,19 @@ export const defaultItems = [
   }
 ]
 
-const StorytellingItem = ({ className, image, title, text, children }) => {
+const AccordionItem = ({ expanded, title, text, image, children }) => {
   return (
-    <article className={classNames('storytelling-item', className)}>
+    <Accordion expanded={expanded} title={title} text={text}>
+      <p className='accordion-text text-sm'>{text}</p>
+      <Image alt={title} src={image} ratio='auto' />
+      {children}
+    </Accordion>
+  )
+}
+
+const StorytellingItem = ({ expanded, image, title, text, children }) => {
+  return (
+    <article className={classNames('storytelling-item', { expanded })}>
       <div className='storytelling-item-cover'>
         <i className='icon icon-plus text-h3' />
         <Eyebrow />
@@ -64,11 +75,26 @@ const Storytelling = ({ items = defaultItems, headline = 'Headline' }) => {
   return (
     <section className='storytelling container'>
       <p className=' storytelling-headline text-h2 font-display'>{headline}</p>
+
+      <div className='accordion-items'>
+        {items.map(({ image, title, text, children }, idx) => (
+          <AccordionItem
+            key={idx}
+            expanded={idx === 0}
+            title={title}
+            text={text}
+            image={image}
+          >
+            {children}
+          </AccordionItem>
+        ))}
+      </div>
+
       <div className='storytelling-items'>
         {items.map(({ image, title, text, children }, idx) => (
           <StorytellingItem
-            className={idx === 0 ? 'expanded' : ''}
             key={idx}
+            expanded={idx === 0}
             title={title}
             text={text}
             image={image}

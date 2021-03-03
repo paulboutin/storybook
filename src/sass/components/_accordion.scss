@@ -19,14 +19,8 @@
     }
   }
 
-  .accordion-title,
-  .accordion-content {
-    max-width: 75%;
-  }
-
   .accordion-title {
-    @include font-size('base');
-    @include font-weight('semi-bold');
+    padding-right: spacing(16);
   }
 
   .accordion-content {
