@@ -1,7 +1,16 @@
+const toggleSiblings = target => {
+  const siblings = target.parentNode.querySelectorAll('.accordion')
+  siblings.forEach(accordion => {
+    accordion.classList.remove('accordion-expanded')
+    accordion.querySelector('.accordion-content').style.height = '0'
+  })
+}
+
 export default () => {
   const accordions = document.querySelectorAll('.accordion')
 
   accordions.forEach(accordion => {
+    const toggleMode = accordion.dataset.toggleMode
     const summary = accordion.querySelector('.accordion-summary')
     const content = accordion.querySelector('.accordion-content')
 
@@ -11,6 +20,8 @@ export default () => {
         content.style.transitionProperty = 'all'
 
         requestAnimationFrame(() => {
+          if (toggleMode) toggleSiblings(accordion)
+
           content.style.height = '0'
           accordion.classList.remove('accordion-expanded')
         })
@@ -22,6 +33,8 @@ export default () => {
         content.style.transitionProperty = 'all'
 
         requestAnimationFrame(() => {
+          if (toggleMode) toggleSiblings(accordion)
+
           content.style.height = height
           accordion.classList.add('accordion-expanded')
         })

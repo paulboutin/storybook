@@ -38,7 +38,7 @@ export const defaultItems = [
 
 const AccordionItem = ({ expanded, title, text, image, children }) => {
   return (
-    <Accordion expanded={expanded} title={title} text={text}>
+    <Accordion expanded={expanded} title={title} text={text} data-toggle-mode>
       <p className='accordion-text text-sm'>{text}</p>
       <Image alt={title} src={image} ratio='auto' />
       {children}
