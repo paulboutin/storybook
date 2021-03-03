@@ -21,10 +21,7 @@
 }
 
 .closing-cta-standard {
-  &.closing-cta-green {
-    background-color: color('green');
-    color: color('white');
-  }
+  background-color: color('green');
 
   &.closing-cta-white {
     background-color: color('white');
