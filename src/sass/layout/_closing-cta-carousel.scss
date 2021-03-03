@@ -56,19 +56,6 @@
       @include screen('md') {
         padding: spacing(64);
       }
-
-      p {
-        transform: translateY(100%);
-        transition: transform 600ms ease-in-out;
-      }
-    }
-  }
-
-  .slider-slide-active {
-    .carousel-slide-content {
-      p {
-        transform: translateY(0);
-      }
     }
   }
 
