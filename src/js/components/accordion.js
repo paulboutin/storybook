@@ -33,7 +33,10 @@ export default () => {
         content.style.transitionProperty = 'all'
 
         requestAnimationFrame(() => {
-          if (toggleMode) toggleSiblings(accordion)
+          if (toggleMode) {
+            toggleSiblings(accordion)
+            accordion.scrollIntoView({ behavior: 'smooth' })
+          }
 
           content.style.height = height
           accordion.classList.add('accordion-expanded')

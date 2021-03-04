@@ -1,38 +1,32 @@
 import React from 'react'
 import classNames from 'classnames'
 import Accordion from '../base/Accordion'
+import Button from '../base/Button'
 import Eyebrow from '../base/Eyebrow'
 import Image from '../base/Image'
+import Link from '../base/Link'
 
 export const defaultItems = [
   {
-    title: 'Your money doesn’t just sit at a bank',
+    title: 'Lorem',
     text:
-      'When you put your money in a bank, 90% of your deposits are lent out by your bank to finance things. ' +
-      'Some of that money can be used to fund student loans, mortgages or community initiatives.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, illo?',
     image: '/img/retail/storytelling/BOTW_Retail_How Banks Works_BanksLend.png'
   },
   {
-    title: 'What is your bank financing?',
+    title: 'Lorem',
     text:
-      'Unfortunately, many banks lend out your money to finance projects that you wouldn’t support—like those that cause climate change.' +
-      ' In fact, 4 of the top US banks finance an average of $202 billion worth of fossil fuel funding.',
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, illo?',
     image:
-      '/img/retail/storytelling/BOTW_Retail_How Banks Works_WhatIsYourBankFinancing.png'
+      '/img/retail/storytelling/BOTW_Retail_How Banks Works_WhatIsYourBankFinancing.png',
+    Content: () => <Link standalone>Link CTA</Link>
   },
   {
-    title: 'Here’s how we’re different',
+    title: 'Lorem',
     text:
-      'We have the strongest environmental stance of any major US bank, and have policies to back up our values. ' +
-      'So not only do we invest in a sustainable planet, but we’ve restricted our financing for environmentally harmful industries.',
-    image: '/img/retail/storytelling/BOTW_Retail_How Banks Works_HeresHow.png'
-  },
-  {
-    title: 'Where you put your money matters',
-    text:
-      'Put your money where your values are. Your money supports the investments made by your bank, ' +
-      'so when your bank finances a sustainable planet, you do too.',
-    image: '/img/retail/storytelling/BOTW_Retail_How Banks Works_WhereYou.png'
+      'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, illo?',
+    image: '/img/retail/storytelling/BOTW_Retail_How Banks Works_WhereYou.png',
+    Content: () => <Button type='primary' label='Button CTA' />
   }
 ]
 
@@ -40,8 +34,8 @@ const AccordionItem = ({ expanded, title, text, image, children }) => {
   return (
     <Accordion expanded={expanded} title={title} text={text} data-toggle-mode>
       <p className='accordion-text text-sm'>{text}</p>
+      <div className='storytelling-item-content'>{children}</div>
       <Image alt={title} src={image} ratio='auto' />
-      {children}
     </Accordion>
   )
 }
@@ -59,7 +53,7 @@ const StorytellingItem = ({ expanded, image, title, text, children }) => {
         <Eyebrow />
         <p className='storytelling-title font-bold text-lg'>{title}</p>
         <p className='storytelling-text text-xs'>{text}</p>
-        <div className='storytelling-content'>{children}</div>
+        <div className='storytelling-item-content'>{children}</div>
         <Image
           alt={title}
           src={image}
@@ -71,13 +65,13 @@ const StorytellingItem = ({ expanded, image, title, text, children }) => {
   )
 }
 
-const Storytelling = ({ items = defaultItems, headline = 'Headline' }) => {
+const Storytelling = ({ items, headline }) => {
   return (
     <section className='storytelling container'>
-      <p className=' storytelling-headline text-h2 font-display'>{headline}</p>
+      <p className='text-center text-h2 font-display'>{headline}</p>
 
       <div className='accordion-items'>
-        {items.map(({ image, title, text, children }, idx) => (
+        {items.map(({ image, title, text, Content }, idx) => (
           <AccordionItem
             key={idx}
             expanded={idx === 0}
@@ -85,13 +79,13 @@ const Storytelling = ({ items = defaultItems, headline = 'Headline' }) => {
             text={text}
             image={image}
           >
-            {children}
+            {Content && <Content />}
           </AccordionItem>
         ))}
       </div>
 
       <div className='storytelling-items'>
-        {items.map(({ image, title, text, children }, idx) => (
+        {items.map(({ image, title, text, Content }, idx) => (
           <StorytellingItem
             key={idx}
             expanded={idx === 0}
@@ -99,7 +93,7 @@ const Storytelling = ({ items = defaultItems, headline = 'Headline' }) => {
             text={text}
             image={image}
           >
-            {children}
+            {Content && <Content />}
           </StorytellingItem>
         ))}
       </div>
