@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from '../base/Button'
 import Storytelling from '../layout/Storytelling'
 import { prefixImagePath } from '../../utils'
 import * as config from '../../config'
@@ -43,7 +44,15 @@ const items = prefix => [
     image: prefixImagePath({
       prefix,
       src: '/img/retail/storytelling/BOTW_Retail_How Banks Works_WhereYou.png'
-    })
+    }),
+    Content: () => (
+      <Button
+        type='primary'
+        link
+        href='https://www.bankofthewest.com/personal-banking/checking-accounts'
+        label='Open an Account Today'
+      />
+    )
   }
 ]
 
