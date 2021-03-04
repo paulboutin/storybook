@@ -8,7 +8,7 @@ const WealthClosingCTAPartial = () => {
     <ClosingCTA
       type='standard'
       className='closing-cta-white'
-      title='Call an advisor today'
+      title='Connect with an advisor to get started today'
     >
       <div className='flex-content centered'>
         <Button
@@ -19,7 +19,7 @@ const WealthClosingCTAPartial = () => {
         />
         <Link href='tel:1-800-435-1912'>1-800-435-1912</Link>
         <Link href='tel:1-800-659-5495'>TTY:1-800-659-5495</Link>
-        <p>24/7 Exclusive Assistance</p>
+        <p>Privilege Connect 24/7 Exclusive Assistance</p>
       </div>
     </ClosingCTA>
   )
