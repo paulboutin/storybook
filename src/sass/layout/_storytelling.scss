@@ -9,6 +9,58 @@
     @include screen('sm') {
       display: none;
     }
+
+    .accordion {
+      border-bottom: 1px solid color('white');
+      background-color: color('green');
+      transition: background-color 300ms ease-in;
+
+      padding: 0;
+
+      .accordion-summary {
+        color: color('white');
+        padding: spacing(24) spacing(16);
+
+        .icon {
+          color: color('white');
+        }
+
+        &:before {
+          display: block;
+          content: '';
+          border-top: 4px solid color('yellow');
+          margin-left: spacing(16);
+          margin-top: spacing(32);
+
+          width: 4 * 16px; // non-fluid
+        }
+      }
+
+      .accordion-content {
+        background-color: color('white');
+        color: color('black');
+        position: relative;
+
+        .storytelling-item-wrapper {
+          padding: 0 spacing(16);
+          position: absolute;
+          top: 0;
+        }
+      }
+
+      &.accordion-expanded {
+        background-color: color('white');
+
+        .accordion-summary {
+          color: color('black');
+          padding-bottom: 0;
+
+          .icon {
+            display: none;
+          }
+        }
+      }
+    }
   }
 
   .storytelling-items {

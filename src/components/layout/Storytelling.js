@@ -8,13 +8,13 @@ import Link from '../base/Link'
 
 export const defaultItems = [
   {
-    title: 'Lorem',
+    title: 'Lorem Ipsum',
     text:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, illo?',
     image: '/img/retail/storytelling/BOTW_Retail_How Banks Works_BanksLend.png'
   },
   {
-    title: 'Lorem',
+    title: 'Lorem Ipsum',
     text:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, illo?',
     image:
@@ -22,7 +22,7 @@ export const defaultItems = [
     Content: () => <Link standalone>Link CTA</Link>
   },
   {
-    title: 'Lorem',
+    title: 'Lorem Ipsum',
     text:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, illo?',
     image: '/img/retail/storytelling/BOTW_Retail_How Banks Works_WhereYou.png',
@@ -33,8 +33,10 @@ export const defaultItems = [
 const AccordionItem = ({ expanded, title, text, image, children }) => {
   return (
     <Accordion expanded={expanded} title={title} text={text} data-toggle-mode>
-      <p className='accordion-text text-sm'>{text}</p>
-      <div className='storytelling-item-content'>{children}</div>
+      <div className='storytelling-item-wrapper'>
+        <p className='accordion-text'>{text}</p>
+        <div className='storytelling-item-content'>{children}</div>
+      </div>
       <Image alt={title} src={image} ratio='auto' />
     </Accordion>
   )
@@ -70,7 +72,7 @@ const Storytelling = ({ items, headline }) => {
     <section className='storytelling container'>
       <p className='text-center text-h2 font-display'>{headline}</p>
 
-      <div className='accordion-items'>
+      <div className='accordion-items row'>
         {items.map(({ image, title, text, Content }, idx) => (
           <AccordionItem
             key={idx}

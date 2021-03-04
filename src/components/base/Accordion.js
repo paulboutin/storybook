@@ -19,7 +19,7 @@ const Accordion = ({
     {...props}
   >
     <div className='accordion-summary'>
-      <p className='accordion-title text-h6 font-semi-bold'>{title}</p>
+      <p className='accordion-title text-h5 font-semi-bold'>{title}</p>
       <i className='icon' />
     </div>
 
