@@ -1,165 +1,182 @@
 import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
+import Image from '../base/Image'
 import Input from '../base/Input'
 import Link from '../base/Link'
 import Accordion from '../base/Accordion'
 import AppCTA from '../base/AppCTA'
 
-const Navigation = () => {
-  const menu = {
-    categories: [
-      {
-        name: 'Personal',
-        id: 'personal',
-        products: [
-          {
-            name: 'Checking',
-            items: [
-              'Any Deposit Checking',
-              'Premier Checking',
-              'Debit Cards',
-              'Digital Services',
-              'Overdraft Program'
-            ]
-          },
-          {
-            name: 'Savings',
-            items: ['Saving Accounts', 'Certificate of Deposits', "IRA CD's"]
-          },
-          {
-            name: 'Credit Cards',
-            items: [
-              'Cash Back Card',
-              'Platinum Card',
-              'Secured Card',
-              'Rewards Program'
-            ]
-          },
-          {
-            name: 'Loans',
-            items: ['Car Loans', 'RV Loans', 'Boat Loans', 'Personal Loans']
-          },
-          {
-            name: 'Mortgages',
-            items: [
-              'Mortgage Options',
-              'Mortgage Calculators',
-              'Mortgage Tips',
-              'Service Assistance',
-              'Pay Online'
-            ]
-          }
-        ]
-      },
-      {
-        name: 'Small Business',
-        id: 'small-business',
-        products: [
-          {
-            name: 'Checking',
-            items: [
-              'Any Deposit for Business',
-              'Classic Business Checking',
-              'Choice Business Checking'
-            ]
-          },
-          {
-            name: 'Savings',
-            items: [
-              'Classic Business Savings',
-              'Business Money Market',
-              "Business CD's"
-            ]
-          },
-          {
-            name: 'Credit Cards',
-            items: ['Business Rewards Card', 'Business Mastercard']
-          },
-          {
-            name: 'Lending',
-            items: [
-              'Line of Credit',
-              'Term Loans',
-              'SBA Loans',
-              'Equipment Leasing',
-              'Real Estate Lending'
-            ]
-          },
-          {
-            name: 'Business Services',
-            items: [
-              'Treasury Management',
-              'Payroll Services',
-              'Merchant Services'
-            ]
-          }
-        ]
-      },
-      {
-        name: 'Commercial',
-        id: 'commercial',
-        products: [
-          {
-            name: 'Credit & Financing',
-            items: ['Lorem Ipsum']
-          },
-          {
-            name: 'Solutions',
-            items: ['Lorem Ipsum']
-          },
-          {
-            name: 'Treasury Management',
-            items: ['Lorem Ipsum']
-          },
-          {
-            name: 'International Banking',
-            items: ['Lorem Ipsum']
-          },
-          {
-            name: 'Industry Insights',
-            items: ['Lorem Ipsum']
-          }
-        ]
-      },
-      {
-        name: 'Wealth',
-        id: 'wealth',
-        products: [
-          {
-            name: 'Solutions',
-            items: [
-              'Planning',
-              'Investment',
-              'Lending & Credit',
-              'Deposit Solutions',
-              'Impact Solutions'
-            ]
-          },
-          {
-            name: 'Who we serve',
-            items: ['Individuals', 'Corporate']
-          },
-          {
-            name: 'Insights',
-            items: ['Lorem Ipsum']
-          }
-        ]
-      },
-      {
-        name: 'Insights',
-        id: 'insights',
-        products: [
-          {
-            name: 'Lorem Ipsum',
-            items: ['Lorem Ipsum']
-          }
-        ]
-      }
-    ],
-    links: ['Help Center', 'Locations', 'Search']
-  }
+const menuConfig = {
+  categories: [
+    {
+      name: 'Personal',
+      id: 'personal',
+      products: [
+        {
+          name: 'Checking',
+          items: [
+            'Any Deposit Checking',
+            'Premier Checking',
+            'Debit Cards',
+            'Digital Services',
+            'Overdraft Program'
+          ]
+        },
+        {
+          name: 'Savings',
+          items: ['Saving Accounts', 'Certificate of Deposits', "IRA CD's"]
+        },
+        {
+          name: 'Credit Cards',
+          items: [
+            'Cash Back Card',
+            'Platinum Card',
+            'Secured Card',
+            'Rewards Program'
+          ]
+        },
+        {
+          name: 'Loans',
+          items: ['Car Loans', 'RV Loans', 'Boat Loans', 'Personal Loans']
+        },
+        {
+          name: 'Mortgages',
+          items: [
+            'Mortgage Options',
+            'Mortgage Calculators',
+            'Mortgage Tips',
+            'Service Assistance',
+            'Pay Online'
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Small Business',
+      id: 'small-business',
+      products: [
+        {
+          name: 'Checking',
+          items: [
+            'Any Deposit for Business',
+            'Classic Business Checking',
+            'Choice Business Checking'
+          ]
+        },
+        {
+          name: 'Savings',
+          items: [
+            'Classic Business Savings',
+            'Business Money Market',
+            "Business CD's"
+          ]
+        },
+        {
+          name: 'Credit Cards',
+          items: ['Business Rewards Card', 'Business Mastercard']
+        },
+        {
+          name: 'Lending',
+          items: [
+            'Line of Credit',
+            'Term Loans',
+            'SBA Loans',
+            'Equipment Leasing',
+            'Real Estate Lending'
+          ]
+        },
+        {
+          name: 'Business Services',
+          items: [
+            'Treasury Management',
+            'Payroll Services',
+            'Merchant Services'
+          ]
+        }
+      ]
+    },
+    {
+      name: 'Commercial',
+      id: 'commercial',
+      products: [
+        {
+          name: 'Credit & Financing',
+          items: ['Lorem Ipsum']
+        },
+        {
+          name: 'Solutions',
+          items: ['Lorem Ipsum']
+        },
+        {
+          name: 'Treasury Management',
+          items: ['Lorem Ipsum']
+        },
+        {
+          name: 'International Banking',
+          items: ['Lorem Ipsum']
+        },
+        {
+          name: 'Industry Insights',
+          items: ['Lorem Ipsum']
+        }
+      ]
+    },
+    {
+      name: 'Wealth',
+      id: 'wealth',
+      products: [
+        {
+          name: 'Solutions',
+          items: [
+            'Planning',
+            'Investment',
+            'Lending & Credit',
+            'Deposit Solutions',
+            'Impact Solutions'
+          ]
+        },
+        {
+          name: 'Who we serve',
+          items: ['Individuals', 'Corporate']
+        },
+        {
+          name: 'Insights',
+          items: ['Lorem Ipsum']
+        }
+      ]
+    },
+    {
+      name: 'Insights',
+      id: 'insights',
+      products: [
+        {
+          name: 'Lorem Ipsum',
+          items: ['Lorem Ipsum']
+        }
+      ]
+    }
+  ],
+  links: ['Help Center', 'Locations', 'Search']
+}
 
+const NavigationPromo = () => (
+  <article className='navigation-promo'>
+    <Image
+      src='http://via.placeholder.com/640'
+      alt='promo image'
+      ratio='16:9'
+    />
+    <h3>Bank Whenever, Wherever</h3>
+    <p className='navigation-promo-text'>
+      The Bank of the West website and app offer 24/7 access to your accounts
+      and balances. With just a few clicks you can sign up.
+    </p>
+    <AppCTA />
+  </article>
+)
+
+const Navigation = () => {
   return (
     <nav className='navigation'>
       <header className='navigation-banner'>
@@ -205,7 +222,7 @@ const Navigation = () => {
           </a>
 
           <div className='navigation-header-categories'>
-            {menu.categories.map((category, categoryIndex) => (
+            {menuConfig.categories.map((category, categoryIndex) => (
               <React.Fragment key={categoryIndex}>
                 <div
                   data-subheader={`#subheader-${category.id}`}
@@ -239,7 +256,7 @@ const Navigation = () => {
           </div>
 
           <div className='navigation-header-buttons'>
-            <Button type='ghost' label='Apply Now' link />
+            <Button type='tertiary' label='Apply Now' link />
             <Button type='primary' label='Sign In' link />
           </div>
         </div>
@@ -249,7 +266,7 @@ const Navigation = () => {
 
       <div className='navigation-dropdowns'>
         <div className='navigation-container'>
-          {menu.categories.map((category, categoryIndex) =>
+          {menuConfig.categories.map((category, categoryIndex) =>
             category.products.map((product, productIndex) => (
               <div
                 key={`${categoryIndex}-${productIndex}`}
@@ -269,20 +286,7 @@ const Navigation = () => {
             ))
           )}
 
-          <article className='navigation-promo'>
-            <div className='navigation-promo-content'>
-              <h3>Bank Whenever, Wherever</h3>
-              <p className='navigation-promo-text'>
-                The Bank of the West website and app offer 24/7 access to your
-                accounts and balances. With just a few clicks you can sign up.
-              </p>
-              <AppCTA />
-            </div>
-
-            <div className='navigation-promo-image'>
-              <img src='http://via.placeholder.com/640' alt='Promo image' />
-            </div>
-          </article>
+          <NavigationPromo />
         </div>
       </div>
 
@@ -290,7 +294,7 @@ const Navigation = () => {
         <aside className='navigation-menu navigation-main-menu'>
           <div className='container'>
             <div className='navigation-main-menu-buttons'>
-              <Button type='ghost' label='Apply Now' link />
+              <Button type='tertiary' label='Apply Now' link />
               <Button
                 type='primary'
                 label='Sign In'
@@ -298,7 +302,7 @@ const Navigation = () => {
               />
             </div>
 
-            {menu.categories.map((category, index) => (
+            {menuConfig.categories.map((category, index) => (
               <div
                 key={index}
                 data-menu={`#menu-${category.id}`}
@@ -311,7 +315,7 @@ const Navigation = () => {
 
             <div className='navigation-divider' />
 
-            {menu.links.map((link, index) => (
+            {menuConfig.links.map((link, index) => (
               <div key={index} className='navigation-main-menu-link'>
                 <a href='#'>{link}</a>
               </div>
@@ -345,7 +349,7 @@ const Navigation = () => {
           </div>
         </aside>
 
-        {menu.categories.map((category, categoryIndex) => (
+        {menuConfig.categories.map((category, categoryIndex) => (
           <aside
             key={categoryIndex}
             id={`menu-${category.id}`}

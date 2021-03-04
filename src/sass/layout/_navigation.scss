@@ -199,11 +199,7 @@ body.navigation-open {
     right: 0;
     z-index: 1000;
     border-top: 1px solid color('grey-20');
-    background-image: linear-gradient(
-      to right,
-      color('white') 50%,
-      color('green') 50%
-    );
+    background-color: color('white');
     display: none;
 
     .navigation-container {
@@ -212,9 +208,14 @@ body.navigation-open {
     }
 
     .navigation-dropdown {
-      width: 25%;
       padding: spacing(24) 0;
       display: none;
+
+      flex: 2;
+
+      @include screen('lg') {
+        flex: 1;
+      }
     }
 
     .navigation-dropdown-active {
@@ -232,54 +233,18 @@ body.navigation-open {
     }
 
     .navigation-promo {
-      display: flex;
-      width: 75%;
+      flex: 1;
       background-color: color('green');
       color: color('white');
-    }
-
-    .navigation-promo-content {
-      width: 55%;
       padding: spacing(24) spacing(48);
-      padding-right: 0;
-
-      @include screen('lg') {
-        width: 50%;
-      }
 
       .app-cta {
         margin-bottom: 0;
       }
-    }
 
-    .navigation-promo-text {
-      @include font-size('xs');
-      margin-top: spacing(4);
-    }
-
-    .navigation-promo-image {
-      @include star-birds('dark');
-      position: relative;
-      background-size: cover;
-      background-position: right;
-      flex-grow: 1;
-
-      @include screen('lg') {
-        background-size: contain;
-        background-position: center;
-      }
-
-      img {
-        position: absolute;
-        height: 100%;
-        width: calc(100% - #{spacing(96)});
-        left: spacing(48);
-        object-fit: cover;
-
-        @include screen('lg') {
-          width: calc(100% - #{spacing(64)} - #{spacing(64)});
-          left: spacing(64);
-        }
+      .navigation-promo-text {
+        @include font-size('xs');
+        margin-top: spacing(4);
       }
     }
   }

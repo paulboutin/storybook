@@ -88,6 +88,7 @@
       color: color('white');
 
       &:hover {
+        flex: 1.5;
         background-color: color('green-dark');
 
         .storytelling-item-cover {
