@@ -7,7 +7,7 @@ import * as config from '../../config'
 
 const title = 'Align a global wealth strategy with your values'
 const text =
-  'Your dedicated advisor will approach your entire financial picture, and help you invest sustainably and competitively.'
+  'Your dedicated advisor will approach your entire financial picture, and help you invest sustainably towards your goals.'
 
 const WealthHeroPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
   return (
@@ -30,7 +30,7 @@ const WealthHeroPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
         />
         <Link href='tel:1-800-435-1912'>1-800-435-1912</Link>
         <Link href='tel:1-800-659-5495'>TTY:1-800-659-5495</Link>
-        <p>24/7 Exclusive Assistance</p>
+        <p>Privilege Connect 24/7 Exclusive Assistance</p>
       </div>
     </Highlight>
   )

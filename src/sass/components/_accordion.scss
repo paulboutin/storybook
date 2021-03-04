@@ -17,16 +17,17 @@
       left: 0;
       right: 0;
     }
-  }
 
-  .accordion-title,
-  .accordion-content {
-    max-width: 75%;
+    .icon {
+      @extend .icon-plus;
+      @include font-size('lg');
+      @include font-weight('bold');
+      color: color('green');
+    }
   }
 
   .accordion-title {
-    @include font-size('base');
-    @include font-weight('semi-bold');
+    padding-right: spacing(16);
   }
 
   .accordion-content {
@@ -36,21 +37,16 @@
     transition-duration: 0.3s;
   }
 
-  .icon {
-    @extend .icon-plus;
-    @include font-size('lg');
-    @include font-weight('bold');
-    color: color('green');
-  }
-
   &.accordion-expanded {
     .accordion-content {
       height: auto;
       margin-top: spacing(8);
     }
 
-    .icon {
-      @extend .icon-minus;
+    .accordion-summary {
+      .icon {
+        @extend .icon-minus;
+      }
     }
   }
 
@@ -84,7 +80,9 @@
 .accordion-inverted {
   border-bottom-color: color('white');
 
-  .icon {
-    color: color('white');
+  .accordion-summary {
+    .icon {
+      color: color('white');
+    }
   }
 }

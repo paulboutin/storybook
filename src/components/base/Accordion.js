@@ -1,7 +1,14 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Accordion = ({ title, children, expanded, inverted, className }) => (
+const Accordion = ({
+  title,
+  children,
+  expanded,
+  inverted,
+  className,
+  ...props
+}) => (
   <div
     className={classNames(
       'accordion',
@@ -9,9 +16,10 @@ const Accordion = ({ title, children, expanded, inverted, className }) => (
       { 'accordion-inverted': inverted },
       className
     )}
+    {...props}
   >
     <div className='accordion-summary'>
-      <h6 className='accordion-title'>{title}</h6>
+      <p className='accordion-title text-h6 font-semi-bold'>{title}</p>
       <i className='icon' />
     </div>
 
