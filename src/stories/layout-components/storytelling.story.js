@@ -13,7 +13,7 @@ const options = {
 
 export const Storytelling = () => {
   const items = []
-  const quantity = number('Items', defaultItems.length, options, 'config')
+  const quantity = number('Items', 4, options, 'config')
   const headline = text('Headline', 'Headline', 'config')
 
   for (let i = 0; i < quantity; i++) {
