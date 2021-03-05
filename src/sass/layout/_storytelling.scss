@@ -2,9 +2,13 @@
   padding-top: spacing(32);
   padding-bottom: spacing(32);
 
+  @include screen('sm') {
+    padding-top: spacing(64);
+    padding-bottom: spacing(64);
+  }
+
   .accordion-items {
     display: block;
-    margin-top: spacing(32);
 
     @include screen('sm') {
       display: none;
@@ -67,7 +71,6 @@
     height: 56vw;
     max-height: 70vh;
     display: none;
-    margin-top: spacing(32);
 
     @include screen('sm') {
       display: flex;
