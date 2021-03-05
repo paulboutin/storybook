@@ -12,7 +12,7 @@ const items = prefix => [
       'Some of that money can be used to fund student loans, mortgages or community initiatives.',
     image: prefixImagePath({
       prefix,
-      src: '/retail/storytelling/BOTW_Retail_How Banks Works_BanksLend.png'
+      src: '/retail/storytelling/BOTW_Retail_Storytelling_BanksLend.png'
     })
   },
   {

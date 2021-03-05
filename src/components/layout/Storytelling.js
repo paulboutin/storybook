@@ -11,7 +11,7 @@ export const defaultItems = [
     title: 'Lorem Ipsum',
     text:
       'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic, illo?',
-    image: '/img/retail/storytelling/BOTW_Retail_How Banks Works_BanksLend.png'
+    image: '/img/retail/storytelling/BOTW_Retail_Storytelling_BanksLend.png'
   },
   {
     title: 'Lorem Ipsum',
