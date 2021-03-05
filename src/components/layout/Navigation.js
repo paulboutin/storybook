@@ -5,7 +5,6 @@ import Image from '../base/Image'
 import Input from '../base/Input'
 import Link from '../base/Link'
 import Accordion from '../base/Accordion'
-import AppCTA from '../base/AppCTA'
 
 const menuConfig = {
   categories: [
@@ -50,7 +49,14 @@ const menuConfig = {
             'Pay Online'
           ]
         }
-      ]
+      ],
+      Promo: () => (
+        <NavigationPromo
+          image='/img/trees.png'
+          title='Lorem ipsum 1'
+          text='Dolor sit amet, consectetur adipisicing elit. Distinctio, ut.'
+        />
+      )
     },
     {
       name: 'Small Business',
@@ -94,7 +100,17 @@ const menuConfig = {
             'Merchant Services'
           ]
         }
-      ]
+      ],
+      Promo: () => (
+        <NavigationPromo
+          className='navigation-promo-green'
+          image='/img/trees.png'
+          title='Lorem ipsum 2'
+          text='Dolor sit amet, consectetur adipisicing elit. Distinctio, ut.'
+        >
+          <Button type='secondary' label='Button CTA' />
+        </NavigationPromo>
+      )
     },
     {
       name: 'Commercial',
@@ -120,7 +136,14 @@ const menuConfig = {
           name: 'Industry Insights',
           items: ['Lorem Ipsum']
         }
-      ]
+      ],
+      Promo: () => (
+        <NavigationPromo
+          image='/img/trees.png'
+          title='Lorem ipsum 3'
+          text='Dolor sit amet, consectetur adipisicing elit. Distinctio, ut.'
+        />
+      )
     },
     {
       name: 'Wealth',
@@ -144,7 +167,14 @@ const menuConfig = {
           name: 'Insights',
           items: ['Lorem Ipsum']
         }
-      ]
+      ],
+      Promo: () => (
+        <NavigationPromo
+          image='/img/trees.png'
+          title='Lorem ipsum 4'
+          text='Dolor sit amet, consectetur adipisicing elit. Distinctio, ut.'
+        />
+      )
     },
     {
       name: 'Insights',
@@ -154,29 +184,31 @@ const menuConfig = {
           name: 'Lorem Ipsum',
           items: ['Lorem Ipsum']
         }
-      ]
+      ],
+      Promo: () => (
+        <NavigationPromo
+          image='/img/trees.png'
+          title='Lorem ipsum'
+          text='Dolor sit amet, consectetur adipisicing elit. Distinctio, ut.'
+        />
+      )
     }
   ],
   links: ['Help Center', 'Locations', 'Search']
 }
 
-const NavigationPromo = () => (
-  <article className='navigation-promo'>
-    <Image
-      src='http://via.placeholder.com/640'
-      alt='promo image'
-      ratio='16:9'
-    />
-    <h3>Bank Whenever, Wherever</h3>
-    <p className='navigation-promo-text'>
-      The Bank of the West website and app offer 24/7 access to your accounts
-      and balances. With just a few clicks you can sign up.
-    </p>
-    <AppCTA />
+const NavigationPromo = ({ image, alt, title, text, className, children }) => (
+  <article className={classNames('navigation-promo', className)}>
+    {image && <Image src={image} alt={alt} ratio='16:9' />}
+    <p className='font-bold'>{title}</p>
+    <p className='text-sm'>{text}</p>
+    {children}
   </article>
 )
 
-const Navigation = () => {
+const Navigation = ({
+  CTA = () => <Button type='tertiary' label='Apply Now' link />
+}) => {
   return (
     <nav className='navigation'>
       <header className='navigation-banner'>
@@ -242,7 +274,7 @@ const Navigation = () => {
                   {category.products.map((product, productIndex) => (
                     <div
                       key={productIndex}
-                      data-dropdown={`#dropdown-${category.id}-${productIndex}`}
+                      data-dropdown-section={`#dropdown-${category.id}`}
                       className='navigation-header-product'
                     >
                       <span className='navigation-header-product-name'>
@@ -256,7 +288,7 @@ const Navigation = () => {
           </div>
 
           <div className='navigation-header-buttons'>
-            <Button type='tertiary' label='Apply Now' link />
+            <CTA />
             <Button type='primary' label='Sign In' link />
           </div>
         </div>
@@ -266,27 +298,30 @@ const Navigation = () => {
 
       <div className='navigation-dropdowns'>
         <div className='navigation-container'>
-          {menuConfig.categories.map((category, categoryIndex) =>
+          {menuConfig.categories.map(({ Promo, ...category }, categoryIndex) =>
             category.products.map((product, productIndex) => (
               <div
-                key={`${categoryIndex}-${productIndex}`}
-                id={`dropdown-${category.id}-${productIndex}`}
-                className='navigation-dropdown'
+                className='navigation-dropdown-section'
+                id={`dropdown-${category.id}`}
               >
-                {product.items.map((item, itemIndex) => (
-                  <a
-                    key={itemIndex}
-                    href='#'
-                    className='navigation-dropdown-item'
-                  >
-                    {item}
-                  </a>
-                ))}
+                <div
+                  key={`${categoryIndex}-${productIndex}`}
+                  className='navigation-dropdown'
+                >
+                  {product.items.map((item, itemIndex) => (
+                    <a
+                      key={itemIndex}
+                      href='#'
+                      className='navigation-dropdown-item'
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+                {Promo && <Promo />}
               </div>
             ))
           )}
-
-          <NavigationPromo />
         </div>
       </div>
 
@@ -294,7 +329,7 @@ const Navigation = () => {
         <aside className='navigation-menu navigation-main-menu'>
           <div className='container'>
             <div className='navigation-main-menu-buttons'>
-              <Button type='tertiary' label='Apply Now' link />
+              <CTA />
               <Button
                 type='primary'
                 label='Sign In'

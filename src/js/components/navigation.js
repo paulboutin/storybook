@@ -70,9 +70,9 @@ function mobileSetup(navigation) {
   })
 }
 
-function hideDropdown(dropdowns, dropdown, product) {
+function hideDropdown(dropdowns, dropdownSection, product) {
   product.classList.remove('navigation-header-product-active')
-  dropdown.classList.remove('navigation-dropdown-active')
+  dropdownSection.classList.remove('navigation-dropdown-section-active')
   dropdowns.classList.remove('navigation-dropdowns-active')
 }
 
@@ -100,7 +100,9 @@ function desktopSetup(navigation) {
   })
 
   products.forEach(product => {
-    const dropdown = navigation.querySelector(product.dataset.dropdown)
+    const dropdownSection = navigation.querySelector(
+      product.dataset.dropdownSection
+    )
 
     product.addEventListener('mouseenter', () => {
       const activeDropdown = document.querySelector(
@@ -114,13 +116,13 @@ function desktopSetup(navigation) {
       }
 
       product.classList.add('navigation-header-product-active')
-      dropdown.classList.add('navigation-dropdown-active')
+      dropdownSection.classList.add('navigation-dropdown-section-active')
       dropdowns.classList.add('navigation-dropdowns-active')
     })
 
     product.addEventListener('mouseleave', e => {
       if (!dropdowns.contains(e.relatedTarget)) {
-        hideDropdown(dropdowns, dropdown, product)
+        hideDropdown(dropdowns, dropdownSection, product)
       }
     })
 
@@ -130,7 +132,7 @@ function desktopSetup(navigation) {
       )
       if (!activeSubheader.contains(e.relatedTarget)) {
         product.classList.remove('navigation-header-product-active')
-        hideDropdown(dropdowns, dropdown, product)
+        hideDropdown(dropdowns, dropdownSection, product)
       }
     })
   })
