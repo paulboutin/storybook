@@ -48,7 +48,7 @@ const StorytellingItem = ({ expanded, image, title, text, children }) => {
       <div className='storytelling-item-cover'>
         <i className='icon icon-plus text-h3' />
         <Eyebrow />
-        <p className='storytelling-title font-bold text-sm'>{title}</p>
+        <p className='storytelling-title font-bold text-h6'>{title}</p>
       </div>
 
       <div className='storytelling-item-wrapper'>
@@ -67,11 +67,9 @@ const StorytellingItem = ({ expanded, image, title, text, children }) => {
   )
 }
 
-const Storytelling = ({ items, headline }) => {
+const Storytelling = ({ items }) => {
   return (
     <section className='storytelling container'>
-      <p className='text-center text-h2 font-display'>{headline}</p>
-
       <div className='accordion-items row'>
         {items.map(({ image, title, text, Content }, idx) => (
           <AccordionItem

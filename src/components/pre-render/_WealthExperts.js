@@ -6,7 +6,7 @@ import * as config from '../../config'
 
 const title = 'Your team of specialists'
 const text =
-  'You’ll work with a single point of contact, who will take the time to understand your entire financial picture. ' +
+  'Work with a single point of contact, who will take the time to understand your entire financial picture. ' +
   'To meet the complexity of your needs and help bring your goals within reach, your advisor will leverage local and ' +
   'global wealth professionals who specialize in just what you’re looking for.'
 

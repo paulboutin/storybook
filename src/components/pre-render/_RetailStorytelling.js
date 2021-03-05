@@ -6,7 +6,7 @@ import * as config from '../../config'
 
 const items = prefix => [
   {
-    title: 'Banks lend every $9 out of $10',
+    title: 'Your money doesn’t just sit at a bank',
     text:
       'When you put your money in a bank, 90% of your deposits are lent out by your bank to finance things. ' +
       'Some of that money can be used to fund student loans, mortgages or community initiatives.',
@@ -59,12 +59,7 @@ const items = prefix => [
 const RetailStoryTellingPartial = ({
   imgPath = config.PRERENDER_IMAGE_PATH
 }) => {
-  return (
-    <Storytelling
-      headline='Your money doesn’t just sit at a bank'
-      items={items(imgPath)}
-    />
-  )
+  return <Storytelling items={items(imgPath)} />
 }
 
 export default RetailStoryTellingPartial

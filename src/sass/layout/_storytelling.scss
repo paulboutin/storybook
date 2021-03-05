@@ -112,14 +112,22 @@
     }
 
     .storytelling-item-cover {
+      position: relative;
       transition: opacity 300ms ease-in-out, color 0ms;
       opacity: 1;
+      height: 100%;
 
       display: flex;
       flex-direction: column;
 
       .eyebrow {
         margin-top: spacing(64);
+      }
+
+      .icon-plus {
+        position: absolute;
+        bottom: -#{spacing(16)};
+        right: 0;
       }
     }
 

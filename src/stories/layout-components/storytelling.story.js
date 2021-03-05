@@ -14,7 +14,6 @@ const options = {
 export const Storytelling = () => {
   const items = []
   const quantity = number('Items', 4, options, 'config')
-  const headline = text('Headline', 'Headline', 'config')
 
   for (let i = 0; i < quantity; i++) {
     const defaultColumn = defaultItems[i] || defaultItems[0]
@@ -28,7 +27,7 @@ export const Storytelling = () => {
     })
   }
 
-  return <StorytellingComponent headline={headline} items={items} />
+  return <StorytellingComponent items={items} />
 }
 
 export default {
