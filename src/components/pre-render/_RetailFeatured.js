@@ -35,7 +35,12 @@ const images = prefix => [
 ]
 
 const RetailFeaturedPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
-  return <Affiliates headline='As featured in:' images={images(imgPath)} />
+  return (
+    <Affiliates
+      headline='Awarded and recognized by:'
+      images={images(imgPath)}
+    />
+  )
 }
 
 export default RetailFeaturedPartial
