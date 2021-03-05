@@ -13,6 +13,7 @@ const menuConfig = {
       id: 'personal',
       products: [
         {
+          id: 'checking',
           name: 'Checking',
           items: [
             'Any Deposit Checking',
@@ -23,10 +24,12 @@ const menuConfig = {
           ]
         },
         {
+          id: 'savings',
           name: 'Savings',
           items: ['Saving Accounts', 'Certificate of Deposits', "IRA CD's"]
         },
         {
+          id: 'credit-cards',
           name: 'Credit Cards',
           items: [
             'Cash Back Card',
@@ -36,10 +39,12 @@ const menuConfig = {
           ]
         },
         {
+          id: 'loans',
           name: 'Loans',
           items: ['Car Loans', 'RV Loans', 'Boat Loans', 'Personal Loans']
         },
         {
+          id: 'mortgages',
           name: 'Mortgages',
           items: [
             'Mortgage Options',
@@ -63,6 +68,7 @@ const menuConfig = {
       id: 'small-business',
       products: [
         {
+          id: 'checking',
           name: 'Checking',
           items: [
             'Any Deposit for Business',
@@ -71,6 +77,7 @@ const menuConfig = {
           ]
         },
         {
+          id: 'savings',
           name: 'Savings',
           items: [
             'Classic Business Savings',
@@ -79,10 +86,12 @@ const menuConfig = {
           ]
         },
         {
+          id: 'credit-cards',
           name: 'Credit Cards',
           items: ['Business Rewards Card', 'Business Mastercard']
         },
         {
+          id: 'lending',
           name: 'Lending',
           items: [
             'Line of Credit',
@@ -93,6 +102,7 @@ const menuConfig = {
           ]
         },
         {
+          id: 'business-services',
           name: 'Business Services',
           items: [
             'Treasury Management',
@@ -117,22 +127,27 @@ const menuConfig = {
       id: 'commercial',
       products: [
         {
+          id: 'credit-financing',
           name: 'Credit & Financing',
           items: ['Lorem Ipsum']
         },
         {
+          id: 'solutions',
           name: 'Solutions',
           items: ['Lorem Ipsum']
         },
         {
+          id: 'treasury-management',
           name: 'Treasury Management',
           items: ['Lorem Ipsum']
         },
         {
+          id: 'international-banking',
           name: 'International Banking',
           items: ['Lorem Ipsum']
         },
         {
+          id: 'industry-insights',
           name: 'Industry Insights',
           items: ['Lorem Ipsum']
         }
@@ -150,6 +165,7 @@ const menuConfig = {
       id: 'wealth',
       products: [
         {
+          id: 'solutions',
           name: 'Solutions',
           items: [
             'Planning',
@@ -160,10 +176,12 @@ const menuConfig = {
           ]
         },
         {
+          id: 'who-we-serve',
           name: 'Who we serve',
           items: ['Individuals', 'Corporate']
         },
         {
+          id: 'insights',
           name: 'Insights',
           items: ['Lorem Ipsum']
         }
@@ -181,6 +199,7 @@ const menuConfig = {
       id: 'insights',
       products: [
         {
+          id: 'lorem-ipsum',
           name: 'Lorem Ipsum',
           items: ['Lorem Ipsum']
         }
@@ -275,6 +294,7 @@ const Navigation = ({
                     <div
                       key={productIndex}
                       data-dropdown-section={`#dropdown-${category.id}`}
+                      data-dropdown-product={`#dropdown-${category.id}-${product.id}`}
                       className='navigation-header-product'
                     >
                       <span className='navigation-header-product-name'>
@@ -298,29 +318,32 @@ const Navigation = ({
 
       <div className='navigation-dropdowns'>
         <div className='navigation-container'>
-          {menuConfig.categories.map(({ Promo, ...category }, categoryIndex) =>
-            category.products.map((product, productIndex) => (
+          {menuConfig.categories.map(
+            ({ Promo, ...category }, categoryIndex) => (
               <div
                 className='navigation-dropdown-section'
                 id={`dropdown-${category.id}`}
               >
-                <div
-                  key={`${categoryIndex}-${productIndex}`}
-                  className='navigation-dropdown'
-                >
-                  {product.items.map((item, itemIndex) => (
-                    <a
-                      key={itemIndex}
-                      href='#'
-                      className='navigation-dropdown-item'
-                    >
-                      {item}
-                    </a>
-                  ))}
-                </div>
+                {category.products.map((product, productIndex) => (
+                  <div
+                    key={`${categoryIndex}-${productIndex}`}
+                    id={`dropdown-${category.id}-${product.id}`}
+                    className='navigation-dropdown'
+                  >
+                    {product.items.map((item, itemIndex) => (
+                      <a
+                        key={itemIndex}
+                        href='#'
+                        className='navigation-dropdown-item'
+                      >
+                        {item}
+                      </a>
+                    ))}
+                  </div>
+                ))}
                 {Promo && <Promo />}
               </div>
-            ))
+            )
           )}
         </div>
       </div>
