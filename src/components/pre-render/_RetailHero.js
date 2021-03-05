@@ -4,9 +4,9 @@ import Highlight from '../layout/Highlight'
 import { prefixImagePath } from '../../utils'
 import * as config from '../../config'
 
-const title = 'The Debit Card that Gives Back'
+const title = 'Not all checking accounts are created equal'
 const text =
-  'We’ll give 1% of our account net revenue back to the planet. You pay $0/month with no minimum balance.'
+  'This one gives back to the planet, at no cost to you. It’s $0/month and no minimum balance.'
 
 const RetailHeroPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
   return (
@@ -21,11 +21,11 @@ const RetailHeroPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
       })}
     >
       <Button
+        type='primary'
         link
         href='https://www.bankofthewest.com/personal-banking/checking-accounts'
-      >
-        Open An Account
-      </Button>
+        label='Apply Now'
+      />
     </Highlight>
   )
 }

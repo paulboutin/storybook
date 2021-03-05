@@ -69,8 +69,8 @@ const StorytellingItem = ({ expanded, image, title, text, children }) => {
 
 const Storytelling = ({ items }) => {
   return (
-    <section className='storytelling container'>
-      <div className='accordion-items row'>
+    <section className='storytelling'>
+      <div className='accordion-items'>
         {items.map(({ image, title, text, Content }, idx) => (
           <AccordionItem
             key={idx}

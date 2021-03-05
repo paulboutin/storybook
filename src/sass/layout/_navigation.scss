@@ -9,6 +9,14 @@ body.navigation-open {
 }
 
 .navigation {
+  background-color: color('white');
+
+  &.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
   .navigation-container {
     @include screen('lg') {
       width: 1200px !important;

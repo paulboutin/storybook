@@ -30,6 +30,12 @@
 
       cursor: pointer;
 
+      transition: background-color 300ms ease-in;
+
+      &:hover {
+        background-color: color('green-dark');
+      }
+
       &.card-carousel-prev {
         left: spacing(24);
 

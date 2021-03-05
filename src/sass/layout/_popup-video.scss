@@ -5,7 +5,8 @@
 
   @include screen('sm') {
     @include fixed-ratio(16, 9);
-    height: unset;
+    height: auto;
+    max-height: 100vh;
   }
 
   .popup-video-poster,

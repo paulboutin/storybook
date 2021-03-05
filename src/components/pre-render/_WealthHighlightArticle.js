@@ -3,11 +3,13 @@ import ArticleHighlight from '../layout/ArticleHighlight'
 import { prefixImagePath } from '../../utils'
 import * as config from '../../config'
 
-const ArticleHighlightPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
+const WealthArticleHighlightPartial = ({
+  imgPath = config.PRERENDER_IMAGE_PATH
+}) => (
   <ArticleHighlight
     image={prefixImagePath({
       prefix: imgPath,
-      src: '/img/wealth/BOTW_Wealth_Highlight-article.jpg'
+      src: '/wealth/BOTW_Wealth_Highlight-article.jpg'
     })}
     tag='Living'
     eyebrow={{ enable: true, text: 'STAY IN THE KNOW' }}
@@ -18,4 +20,4 @@ const ArticleHighlightPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
   />
 )
 
-export default ArticleHighlight
+export default WealthArticleHighlightPartial

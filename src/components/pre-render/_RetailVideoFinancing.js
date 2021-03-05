@@ -15,7 +15,7 @@ const RetailVideoPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
         src: '/retail/BOTW_Retail_Video-Financing.png'
       })}
       posterAlt={title}
-      src='https://vimeo.com/516870835'
+      src='https://player.vimeo.com/video/516870835'
       title={title}
     />
   )

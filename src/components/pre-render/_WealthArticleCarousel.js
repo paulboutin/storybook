@@ -24,7 +24,7 @@ const items = prefix => [
     subtext: '1 minute read',
     image: prefixImagePath({
       prefix,
-      src: '/wealth/BOTW_Wealth_Articles_Pandemic.png'
+      src: '/wealth/BOTW_Wealth_Articles_Pandemic.jpg'
     }),
     href: 'https://changematters.bankofthewest.com/category/economicoutlook',
     tagHref: 'https://changematters.bankofthewest.com/category/economicoutlook'
@@ -48,8 +48,8 @@ const items = prefix => [
   }
 ]
 
-const CarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
+const WealthCarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
   <CardCarousel items={items(imgPath)} />
 )
 
-export default CarouselPartial
+export default WealthCarouselPartial

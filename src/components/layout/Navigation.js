@@ -225,10 +225,11 @@ const NavigationPromo = ({ image, alt, title, text, className, children }) => (
 )
 
 const Navigation = ({
+  sticky,
   CTA = () => <Button type='tertiary' label='Apply Now' link />
 }) => {
   return (
-    <nav className='navigation'>
+    <nav className={classNames('navigation', { sticky })}>
       <header className='navigation-banner'>
         <div className='container'>
           <div className='navigation-banner-location'>

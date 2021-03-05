@@ -39,7 +39,7 @@ const items = [
   }
 ]
 
-const ResourceLinksPartial = () => (
+const WealthResourceLinksPartial = () => (
   <section className='highlight highlight-A resource-links-image container'>
     <div>
       <h3 className='text-h2'>Beyond your investable assets</h3>
@@ -54,4 +54,4 @@ const ResourceLinksPartial = () => (
   </section>
 )
 
-export default ResourceLinksPartial
+export default WealthResourceLinksPartial
