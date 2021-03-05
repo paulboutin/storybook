@@ -12,7 +12,7 @@ const items = prefix => [
       'Some of that money can be used to fund student loans, mortgages or community initiatives.',
     image: prefixImagePath({
       prefix,
-      src: '/img/retail/storytelling/BOTW_Retail_How Banks Works_BanksLend.png'
+      src: '/retail/storytelling/BOTW_Retail_How Banks Works_BanksLend.png'
     })
   },
   {
@@ -23,7 +23,7 @@ const items = prefix => [
     image: prefixImagePath({
       prefix,
       src:
-        '/img/retail/storytelling/BOTW_Retail_How Banks Works_WhatIsYourBankFinancing.png'
+        '/retail/storytelling/BOTW_Retail_How Banks Works_WhatIsYourBankFinancing.png'
     })
   },
   {
@@ -33,7 +33,7 @@ const items = prefix => [
       'So not only do we invest in a sustainable planet, but we’ve restricted our financing for environmentally harmful industries.',
     image: prefixImagePath({
       prefix,
-      src: '/img/retail/storytelling/BOTW_Retail_How Banks Works_HeresHow.png'
+      src: '/retail/storytelling/BOTW_Retail_How Banks Works_HeresHow.png'
     })
   },
   {
@@ -43,7 +43,7 @@ const items = prefix => [
       'so when your bank finances a sustainable planet, you do too.',
     image: prefixImagePath({
       prefix,
-      src: '/img/retail/storytelling/BOTW_Retail_How Banks Works_WhereYou.png'
+      src: '/retail/storytelling/BOTW_Retail_How Banks Works_WhereYou.png'
     }),
     Content: () => (
       <Button

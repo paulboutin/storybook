@@ -11,7 +11,7 @@ const items = prefix => [
     subtext: '2 minutes read',
     image: prefixImagePath({
       prefix,
-      src: '/retail/BOTW_Retail_Articles_Why-it -matters.jpg'
+      src: '/retail/BOTW_Retail_Articles_Why-it-matters.jpg'
     }),
     href:
       'https://meansandmatters.bankofthewest.com/article/living/what-banks-do-with-your-money-and-why-it-matters',
@@ -37,7 +37,7 @@ const items = prefix => [
     subtext: '1 minute read',
     image: prefixImagePath({
       prefix,
-      src: '/retail/BOTW_Retail_Articles_Women-lead.png'
+      src: '/retail/BOTW_Retail_Articles_Women-lead.jpg'
     }),
     href:
       'https://meansandmatters.bankofthewest.com/article/living/women-take-the-lead-in-impact-investing',
@@ -63,8 +63,8 @@ const items = prefix => [
   }
 ]
 
-const CarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
+const RetailCarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
   <CardCarousel items={items(imgPath)} />
 )
 
-export default CarouselPartial
+export default RetailCarouselPartial

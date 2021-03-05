@@ -5,7 +5,7 @@ import * as config from '../../config'
 
 const title = 'Scale Faster with TreasuryNow'
 
-const RetailVideoPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
+const CommercialVideoPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
   return (
     <PopupVideo
       eyebrowEnable
@@ -21,4 +21,4 @@ const RetailVideoPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
   )
 }
 
-export default RetailVideoPartial
+export default CommercialVideoPartial

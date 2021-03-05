@@ -116,8 +116,8 @@ const items = prefix => [
   }
 ]
 
-const ProductSelectorPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
-  <ProductSelector headline='Our Products' items={items(imgPath)} />
-)
+const RetailProductSelectorPartial = ({
+  imgPath = config.PRERENDER_IMAGE_PATH
+}) => <ProductSelector headline='Our Products' items={items(imgPath)} />
 
-export default ProductSelectorPartial
+export default RetailProductSelectorPartial

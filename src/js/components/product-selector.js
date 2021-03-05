@@ -17,6 +17,13 @@ export default () => {
       tab.classList.add('active')
     }
 
+    const hideCurrent = item => {
+      window.requestAnimationFrame(() => {
+        item.classList.remove('active')
+        setTimeout(() => item.classList.remove('current'), 300)
+      })
+    }
+
     const showItem = tab => {
       window.requestAnimationFrame(() => {
         controls.scrollTo({
@@ -24,7 +31,7 @@ export default () => {
           behavior: 'smooth'
         })
 
-        items.forEach(item => item.classList.remove('active'))
+        items[current].classList.add('current')
         setTimeout(() => items[current].classList.add('active'), 300)
       })
     }
@@ -32,6 +39,8 @@ export default () => {
     const handleSwipe = incr => () => {
       let next = current + incr
       if (next < 0 || next > items.length - 1) return
+
+      hideCurrent(items[current])
 
       current = next
 
@@ -44,6 +53,8 @@ export default () => {
     }
 
     const handleClick = tab => () => {
+      hideCurrent(items[current])
+
       current = parseInt(tab.dataset.index)
 
       updateActiveTab(tab)

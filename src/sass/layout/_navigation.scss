@@ -209,6 +209,7 @@ body.navigation-open {
     }
 
     .navigation-dropdown-section {
+      min-height: spacing(160);
       width: 100%;
       display: none;
 

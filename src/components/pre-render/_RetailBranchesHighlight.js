@@ -1,13 +1,10 @@
 import React from 'react'
-import AppCTA from '../base/AppCTA'
 import Highlight from '../layout/Highlight'
 import Link from '../base/Link'
 import { prefixImagePath } from '../../utils'
 import * as config from '../../config'
 
-const RetailAppHighlightPartial = ({
-  imgPath = config.PRERENDER_IMAGE_PATH
-}) => {
+const RetailBranchesPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
   return (
     <Highlight
       reverse
@@ -33,4 +30,4 @@ const RetailAppHighlightPartial = ({
   )
 }
 
-export default RetailAppHighlightPartial
+export default RetailBranchesPartial

@@ -7,11 +7,11 @@
     padding: spacing(16) spacing(48);
 
     @include screen('sm') {
-      padding: spacing(16) spacing(64);
+      padding: spacing(32) spacing(64);
     }
 
     @include screen('md') {
-      padding: spacing(16) spacing(0);
+      padding: spacing(64) 0;
     }
 
     .card-carousel-control {
@@ -38,7 +38,7 @@
         }
 
         @include screen('md') {
-          left: -#{spacing(8)};
+          left: -#{spacing(24)};
         }
       }
 
@@ -50,7 +50,7 @@
         }
 
         @include screen('md') {
-          right: -#{spacing(8)};
+          right: -#{spacing(24)};
         }
       }
 

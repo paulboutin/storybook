@@ -14,7 +14,7 @@ const ProductSelector = ({ items, headline }) => {
             key={idx}
             data-index={idx}
             className={classNames('product-selector-tab', {
-              active: idx === 0
+              'current active': idx === 0
             })}
           >
             <span className='product-selector-tab-wrapper'>{tab}</span>

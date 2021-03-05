@@ -154,7 +154,6 @@ const menuConfig = {
       ],
       Promo: () => (
         <NavigationPromo
-          image='/img/trees.png'
           title='Lorem ipsum 3'
           text='Dolor sit amet, consectetur adipisicing elit. Distinctio, ut.'
         />
@@ -321,6 +320,7 @@ const Navigation = ({
           {menuConfig.categories.map(
             ({ Promo, ...category }, categoryIndex) => (
               <div
+                key={categoryIndex}
                 className='navigation-dropdown-section'
                 id={`dropdown-${category.id}`}
               >
