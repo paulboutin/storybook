@@ -127,20 +127,22 @@ const Footer = ({ imgPath = '/img' }) => (
       <div className='container'>
         <hr />
 
-        <p className='text-base font-bold'>Legal information and Disclosures</p>
+        <p className='footer-legal-text text-base font-bold'>
+          Legal information and Disclosures
+        </p>
 
-        <p className='text-xs'>
+        <p className='footer-legal-text text-xs'>
           Deposit and loan products offered by Bank of the West, Member FDIC.
         </p>
 
-        <p className='text-xs'>
+        <p className='footer-legal-text text-xs'>
           Wireless carriers may charge fees for text transmissions or data
           usage. Message frequency depends on account settings. Text HELP to
           BKWST for help. Availability of Mobile Banking may be affected by your
           mobile device's coverage area.
         </p>
 
-        <p className='text-xs'>
+        <p className='footer-legal-text text-xs'>
           Securities and variable annuities are offered through BancWest
           Investment Services, a registered broker/dealer, member FINRA/SIPC,
           and SEC Registered Investment Adviser. Financial Advisors are
@@ -153,13 +155,15 @@ const Footer = ({ imgPath = '/img' }) => (
           various affiliates and subsidiaries are not tax or legal advisors.
         </p>
 
-        <p className='text-xs'>
+        <p className='footer-legal-text text-xs'>
           BancWest Investment Services is a wholly owned subsidiary of Bank of
           the West. Bank of the West is a wholly owned subsidiary of BNP
           Paribas.
         </p>
 
-        <p className='text-base font-bold'>Investment and Insurance Products</p>
+        <p className='footer-legal-text text-base font-bold'>
+          Investment and Insurance Products
+        </p>
 
         <div className='footer-products'>
           <p className='footer-product'>Not FDIC Insured</p>
