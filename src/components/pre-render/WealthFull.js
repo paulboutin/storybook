@@ -10,7 +10,6 @@ import WealthExpertiseCarouselPartial from './_WealthExpertiseCarousel'
 import WealthResourceLinksPartial from './_WealthSolutionsLinks'
 import WealthClosingCTAPartial from './_WealthClosingCta'
 import Footer from '../layout/Footer'
-import * as config from '../../config'
 
 const WealthFull = ({ imgPath, sticky }) => {
   return (

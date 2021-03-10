@@ -140,4 +140,34 @@
     content: '·';
     margin: 0 spacing(12);
   }
+
+  .footer-legal {
+    background-color: color('green-dark');
+
+    padding-top: spacing(24);
+    padding-bottom: spacing(24);
+
+    hr {
+      opacity: 0.5;
+      margin-bottom: spacing(24);
+    }
+
+    p {
+      margin-bottom: spacing(16);
+    }
+  }
+
+  .footer-products {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    .footer-product {
+      border: 2px solid color('grey-5');
+      margin: 1px;
+      padding: spacing(4);
+      text-transform: uppercase;
+    }
+  }
 }

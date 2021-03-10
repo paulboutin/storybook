@@ -2,6 +2,7 @@ import React from 'react'
 import Navigation from '../layout/Navigation'
 import CommercialHeroPartial from './_CommercialHero'
 import CommercialDifferentiatorsPartial from './_CommercialDifferentiators'
+import CommercialInfographicPartial from './_CommercialInfographic'
 import CommercialVideoPartial from './_CommercialVideoTreasury'
 import CommercialArticlesPartial from './_CommercialArticleCarousel'
 import CommercialIndustryPartial from './_CommercialIndustryCarousel'
@@ -10,7 +11,6 @@ import CommercialLeadFormPartial from './_CommercialLeadForm'
 import CommercialSolutionsHighlightPartial from './_CommercialSolutionsHighlight'
 import CommercialClosingCTAPartial from './_CommercialClosingCta'
 import Footer from '../layout/Footer'
-import * as config from '../../config'
 
 const Commercial = ({ imgPath, sticky }) => {
   return (
@@ -18,6 +18,7 @@ const Commercial = ({ imgPath, sticky }) => {
       <Navigation sticky={sticky} />
       <CommercialHeroPartial imgPath={imgPath} />
       <CommercialDifferentiatorsPartial imgPath={imgPath} />
+      <CommercialInfographicPartial imgPath={imgPath} />
       <CommercialVideoPartial imgPath={imgPath} />
       <CommercialArticlesPartial imgPath={imgPath} />
       <CommercialIndustryPartial imgPath={imgPath} />

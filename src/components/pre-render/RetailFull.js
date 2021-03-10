@@ -11,7 +11,6 @@ import RetailBranchesPartial from './_RetailBranchesHighlight'
 import RetailClosingCTAPartial from './_RetailClosingCtaCarousel'
 import RetailFeaturedPartial from './_RetailFeatured'
 import Footer from '../layout/Footer'
-import * as config from '../../config'
 
 const Retail = ({ imgPath, sticky }) => {
   return (
