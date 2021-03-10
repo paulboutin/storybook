@@ -58,7 +58,7 @@ const items = prefix => [
   },
   {
     type: 'text-only',
-    heading: 'Discover Additional Resources',
+    heading: 'Explore More Stories',
     href: 'https://meansandmatters.bankofthewest.com'
   }
 ]

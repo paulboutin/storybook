@@ -137,6 +137,15 @@
         bottom: -#{spacing(16)};
         right: 0;
       }
+
+      .storytelling-title {
+        display: block;
+        max-width: spacing(128);
+
+        @include screen('md') {
+          max-width: spacing(160);
+        }
+      }
     }
 
     .storytelling-item-wrapper {
@@ -155,6 +164,10 @@
       .storytelling-title {
         margin-bottom: spacing(8);
       }
+
+      .storytelling-text {
+        max-width: 85%;
+      }
     }
 
     &:not(.expanded) {
@@ -162,7 +175,7 @@
       color: color('white');
 
       &:hover {
-        flex: 1.5;
+        flex: 1.125;
         background-color: color('green-dark');
 
         .storytelling-item-cover {

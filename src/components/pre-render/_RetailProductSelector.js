@@ -60,7 +60,7 @@ const items = prefix => [
     })
   },
   {
-    tab: 'Personal Loans',
+    tab: 'Customer Loans',
     title: 'Car Loans',
     text:
       'Take advantage of our competitive rates and flexible terms for your car financing.',
