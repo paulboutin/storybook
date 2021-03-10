@@ -63,8 +63,8 @@ const items = prefix => [
   }
 ]
 
-const CarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
-  <CardCarousel items={items(imgPath)} />
-)
+const CommercialArticlesPartial = ({
+  imgPath = config.PRERENDER_IMAGE_PATH
+}) => <CardCarousel items={items(imgPath)} />
 
-export default CarouselPartial
+export default CommercialArticlesPartial

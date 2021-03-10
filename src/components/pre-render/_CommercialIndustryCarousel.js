@@ -94,9 +94,12 @@ const items = prefix => [
   }
 ]
 
-const CarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
+const CommercialIndustryPartial = ({
+  imgPath = config.PRERENDER_IMAGE_PATH
+}) => (
   <>
     <Callout
+      className='no-padding-bottom'
       title='There’s more to your business than just business'
       text='Work with an expert who has deep market expertise, specific to your industry.'
     />
@@ -104,4 +107,4 @@ const CarouselPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
   </>
 )
 
-export default CarouselPartial
+export default CommercialIndustryPartial

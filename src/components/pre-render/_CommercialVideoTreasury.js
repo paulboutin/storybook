@@ -15,7 +15,7 @@ const CommercialVideoPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
         src: '/commercial/BOTW_Commercial_Video_TreasuryNow.png'
       })}
       posterAlt={title}
-      src='https://vimeo.com/516873221'
+      src='https://player.vimeo.com/video/516873221'
       title={title}
     />
   )

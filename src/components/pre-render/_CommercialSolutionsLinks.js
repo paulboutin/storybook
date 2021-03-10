@@ -5,36 +5,51 @@ import * as config from '../../config'
 
 const items = [
   {
-    text: 'Funding Growth',
-    href: ''
-  },
-  {
-    text: 'Managing Risk',
+    text: 'Asset-Based Lending',
     href:
-      'https://www.bankofthewest.com/commercial-banking/solutions/risk-management'
+      'https://www.bankofthewest.com/commercial-banking/solutions/asset-based-lending'
   },
   {
-    text: 'Operating Efficiently',
-    href: ''
+    text: 'Dealer Financial Services',
+    href:
+      'https://www.bankofthewest.com/commercial-banking/solutions/dealer-financial-services'
   },
   {
-    text: 'Raising Capital',
-    href: ''
+    text: 'Equipment Financing',
+    href:
+      'https://www.bankofthewest.com/commercial-banking/solutions/equipment-financing'
   },
   {
-    text: 'Doing Business Internationally',
+    text: 'Fraud Prevention',
+    href:
+      'https://www.bankofthewest.com/commercial-banking/treasury-management/fraud-prevention'
+  },
+  {
+    text: 'Global Trade Solutions',
     href:
       'https://www.bankofthewest.com/commercial-banking/international/global-trade-solutions'
   },
   {
-    text: 'Managing Personal Wealth',
-    href: ''
+    text: 'Risk Management',
+    href:
+      'https://www.bankofthewest.com/commercial-banking/solutions/risk-management'
+  },
+  {
+    text: 'Syndicated Loans',
+    href:
+      'https://www.bankofthewest.com/commercial-banking/solutions/loan-syndications'
+  },
+  {
+    text: 'Treasury Management',
+    href: 'https://www.bankofthewest.com/commercial-banking/treasury-management'
   }
 ]
 
-const ResourceLinksPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
+const CommercialSolutionsLinksPartial = ({
+  imgPath = config.PRERENDER_IMAGE_PATH
+}) => (
   <ResourceLinksImage
-    type='A'
+    type='B'
     headline='We implement solutions that evolve with your business and help you gain a competitive edge.'
     image={prefixImagePath({
       prefix: imgPath,
@@ -44,4 +59,4 @@ const ResourceLinksPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => (
   />
 )
 
-export default ResourceLinksPartial
+export default CommercialSolutionsLinksPartial
