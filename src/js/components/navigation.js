@@ -94,9 +94,11 @@ function desktopSetup(navigation) {
       )
 
       activeCategory.classList.remove('navigation-header-category-active')
-      activeSubheader.classList.remove('navigation-header-products-active')
       category.classList.add('navigation-header-category-active')
-      subheader.classList.add('navigation-header-products-active')
+      if (activeSubheader)
+        activeSubheader.classList.remove('navigation-header-products-active')
+      if (subheader)
+        subheader.classList.add('navigation-header-products-active')
     })
   })
 
