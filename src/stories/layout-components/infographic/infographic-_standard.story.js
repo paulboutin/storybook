@@ -5,7 +5,7 @@ import {
   InfographicBox,
   InfographicBoxImage,
   defaultItems
-} from '../../components/layout/Infographic'
+} from '../../../components/layout/InfographicStandard'
 
 const numberOptions = {
   range: true,
@@ -19,7 +19,7 @@ const typeOptions = {
   Image: 'image'
 }
 
-export const InfographicStory = () => {
+export const Standard = () => {
   const items = []
 
   const cards = number('Cards', 3, numberOptions, 'config')
@@ -70,12 +70,8 @@ export const InfographicStory = () => {
   )
 }
 
-InfographicStory.story = {
-  name: 'Infographic'
-}
-
 export default {
-  title: 'Layout Components',
+  title: 'Layout Components/Infographic',
   parameters: {
     'in-dsm': {
       id: '5f29d4c5b0d2de46c17d82aa'

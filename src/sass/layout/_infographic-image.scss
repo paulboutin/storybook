@@ -1,0 +1,33 @@
+.infographic-image {
+  padding-top: spacing(64);
+  padding-bottom: spacing(64);
+
+  background-color: color('green');
+  color: color('white');
+
+  .container {
+    position: relative;
+    min-height: 50vh;
+  }
+
+  .infographic-image-text {
+    margin-bottom: spacing(128);
+  }
+
+  .infographic-image-wrapper {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    img {
+      object-fit: contain;
+      object-position: right;
+      mix-blend-mode: color-burn;
+    }
+  }
+
+  .infographic-image-item {
+    margin-bottom: spacing(32);
+  }
+}

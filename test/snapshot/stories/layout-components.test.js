@@ -48,7 +48,7 @@ describe('Layout Components', () => {
     })),
     {
       title: 'infographic',
-      path: 'layout-components--infographic-story',
+      path: 'layout-components-infographic--standard',
       devices: ['mobile', 'tablet', 'desktop']
     },
     {
