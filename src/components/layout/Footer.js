@@ -2,12 +2,16 @@ import React from 'react'
 import Accordion from '../base/Accordion'
 import Link from '../base/Link'
 import AppCTA from '../base/AppCTA'
+import { prefixImagePath } from '../../utils'
 
-const Footer = () => (
+const Footer = ({ imgPath = '/img' }) => (
   <footer className='footer'>
     <section className='footer-links-mobile visible-xs'>
       <img
-        src='/img/star-birds-white.svg'
+        src={prefixImagePath({
+          prefix: imgPath,
+          src: 'star-birds-white.svg'
+        })}
         alt='Starbirds'
         className='footer-starbirds'
       />
@@ -73,7 +77,7 @@ const Footer = () => (
 
           <div className='footer-column col-sm-5 col-md-3'>
             <h6 className='footer-column-title'>Download the app</h6>
-            <AppCTA />
+            <AppCTA imgPath={imgPath} />
           </div>
         </div>
       </div>

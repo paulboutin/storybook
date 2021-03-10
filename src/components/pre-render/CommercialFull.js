@@ -10,6 +10,7 @@ import CommercialLeadFormPartial from './_CommercialLeadForm'
 import CommercialSolutionsHighlightPartial from './_CommercialSolutionsHighlight'
 import CommercialClosingCTAPartial from './_CommercialClosingCta'
 import Footer from '../layout/Footer'
+import * as config from '../../config'
 
 const Commercial = ({ imgPath, sticky }) => {
   return (
@@ -24,7 +25,7 @@ const Commercial = ({ imgPath, sticky }) => {
       <CommercialLeadFormPartial imgPath={imgPath} />
       <CommercialSolutionsHighlightPartial imgPath={imgPath} />
       <CommercialClosingCTAPartial imgPath={imgPath} />
-      <Footer />
+      <Footer imgPath={imgPath} />
     </>
   )
 }

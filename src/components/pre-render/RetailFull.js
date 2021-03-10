@@ -11,6 +11,7 @@ import RetailBranchesPartial from './_RetailBranchesHighlight'
 import RetailClosingCTAPartial from './_RetailClosingCtaCarousel'
 import RetailFeaturedPartial from './_RetailFeatured'
 import Footer from '../layout/Footer'
+import * as config from '../../config'
 
 const Retail = ({ imgPath, sticky }) => {
   return (
@@ -26,7 +27,7 @@ const Retail = ({ imgPath, sticky }) => {
       <RetailBranchesPartial imgPath={imgPath} />
       <RetailClosingCTAPartial imgPath={imgPath} />
       <RetailFeaturedPartial imgPath={imgPath} />
-      <Footer />
+      <Footer imgPath={imgPath} />
     </>
   )
 }
