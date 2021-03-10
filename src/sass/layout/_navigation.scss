@@ -9,8 +9,6 @@ body.navigation-open {
 }
 
 .navigation {
-  background-color: color('white');
-
   &.sticky {
     position: sticky;
     top: 0;
@@ -78,6 +76,7 @@ body.navigation-open {
   }
 
   .navigation-header {
+    background-color: color('white');
     border-bottom: 1px solid color('grey-20');
 
     @include screen('md') {
@@ -231,7 +230,7 @@ body.navigation-open {
       flex-direction: column;
       align-items: flex-start;
 
-      padding: spacing(24) 0;
+      padding: spacing(24);
       width: percentage(2/3);
 
       @include screen('lg') {
