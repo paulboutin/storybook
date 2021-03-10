@@ -2,8 +2,6 @@
   display: flex;
   flex-direction: column;
 
-  padding-bottom: spacing(16);
-
   @include screen('sm') {
     flex-direction: row;
     align-items: center;
@@ -26,6 +24,16 @@
   > * {
     @include screen('sm') {
       width: 50%;
+    }
+  }
+
+  &.margins {
+    margin-top: spacing(64);
+    margin-bottom: spacing(64);
+
+    @include screen('md') {
+      margin-top: spacing(128);
+      margin-bottom: spacing(128);
     }
   }
 

@@ -15,7 +15,7 @@ const WealthExpertsHeroPartial = ({
 }) => {
   return (
     <Highlight
-      className='centered'
+      className='centered margins'
       type='B'
       title={title}
       text={text}

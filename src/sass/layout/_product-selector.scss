@@ -27,6 +27,7 @@
     .product-selector-tab {
       @include font-size('sm');
       cursor: pointer;
+      margin-bottom: spacing(32);
 
       &.active {
         color: color('green');
