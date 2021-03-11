@@ -17,27 +17,50 @@ const Footer = ({ imgPath = '/img' }) => (
       />
 
       <Accordion title='Get to know us' inverted>
-        <Link>About Us</Link>
-        <Link>Press</Link>
-        <Link>Careers</Link>
-        <Link>Diversity & Inclusion</Link>
-        <Link>Security</Link>
-        <Link>[+] Feedback</Link>
+        <Link href='https://www.bankofthewest.com/about-us'>About Us</Link>
+        <Link href='https://www.bankofthewest.com/about-us/press-center'>
+          Press
+        </Link>
+        <Link href='https://www.bankofthewest.com/about-us/careers'>
+          Careers
+        </Link>
+        <Link href='https://www.bankofthewest.com/about-us/diversity-inclusion'>
+          Diversity & Inclusion
+        </Link>
+        <Link href='https://www.bankofthewest.com/security-center-personal'>
+          Security
+        </Link>
+        <Link href='https://www.bankofthewest.com/security-center-personal/integrity-hotline'>
+          [+] Feedback
+        </Link>
       </Accordion>
 
       <Accordion title='Support' inverted>
-        <Link>FAQs</Link>
-        <Link>Customer service</Link>
-        <Link>Find an advisor</Link>
-        <Link>Branch Locator</Link>
+        <Link href='https://www.bankofthewest.com/personal-banking/online-banking/online-banking-faqs'>
+          FAQs
+        </Link>
+        <Link href='https://www.bankofthewest.com/customer-service'>
+          Customer service
+        </Link>
+        <Link href='https://advisors.bankofthewest.com'>Find an advisor</Link>
+        <Link href='https://advisors.bankofthewest.com/search'>
+          Branch Locator
+        </Link>
       </Accordion>
 
       <Accordion title='Products' inverted>
-        <Link>Checking</Link>
-        <Link>Savings</Link>
-        <Link>Credit Cards</Link>
-        <Link>Loans</Link>
-        <Link>Mortgages</Link>
+        <Link href='https://www.bankofthewest.com/personal-banking/checking-accounts'>
+          Checking
+        </Link>
+        <Link href='https://www.bankofthewest.com/personal-banking/savings-accounts'>
+          Savings
+        </Link>
+        <Link href='https://www.bankofthewest.com/personal-banking/credit-cards'>
+          Credit Cards
+        </Link>
+        <Link href='https://www.bankofthewest.com/personal-banking/loans/personal-loans'>
+          Loans
+        </Link>
       </Accordion>
 
       <Accordion title='Download the App' inverted>
@@ -50,29 +73,56 @@ const Footer = ({ imgPath = '/img' }) => (
         <div className='row'>
           <div className='footer-column col-sm-6 col-sm-offset-1 col-md-3 col-md-offset-0'>
             <h6 className='footer-column-title'>About us</h6>
-            <Link>What we believe</Link>
-            <Link>Press Center</Link>
-            <Link>Careers</Link>
-            <Link>Diversity & Inclusion</Link>
-            <Link>Security</Link>
-            <Link>Feedback</Link>
+            <Link href='https://www.bankofthewest.com/about-us'>
+              What we believe
+            </Link>
+            <Link href='https://www.bankofthewest.com/about-us/press-center'>
+              Press Center
+            </Link>
+            <Link href='https://www.bankofthewest.com/about-us/careers'>
+              Careers
+            </Link>
+            <Link href='https://www.bankofthewest.com/about-us/diversity-inclusion'>
+              Diversity & Inclusion
+            </Link>
+            <Link href='https://www.bankofthewest.com/security-center-personal'>
+              Security
+            </Link>
+            <Link href='https://www.bankofthewest.com/security-center-personal/integrity-hotline'>
+              Feedback
+            </Link>
           </div>
 
           <div className='footer-column col-sm-5 col-md-3'>
             <h6 className='footer-column-title'>Need help?</h6>
-            <Link>FAQs</Link>
-            <Link>Customer service</Link>
-            <Link>Find an advisor</Link>
-            <Link>Branch Locator</Link>
+            <Link href='https://www.bankofthewest.com/personal-banking/online-banking/online-banking-faqs'>
+              FAQs
+            </Link>
+            <Link href='https://www.bankofthewest.com/customer-service'>
+              Customer service
+            </Link>
+            <Link href='https://advisors.bankofthewest.com'>
+              Find an advisor
+            </Link>
+            <Link href='https://advisors.bankofthewest.com/search'>
+              Branch Locator
+            </Link>
           </div>
 
           <div className='footer-column col-sm-6 col-sm-offset-1 col-md-3 col-md-offset-0'>
             <h6 className='footer-column-title'>Products & Services</h6>
-            <Link>Checking</Link>
-            <Link>Savings</Link>
-            <Link>Credit Cards</Link>
-            <Link>Loans</Link>
-            <Link>Mortgages</Link>
+            <Link href='https://www.bankofthewest.com/personal-banking/checking-accounts'>
+              Checking
+            </Link>
+            <Link href='https://www.bankofthewest.com/personal-banking/savings-accounts'>
+              Savings
+            </Link>
+            <Link href='https://www.bankofthewest.com/personal-banking/credit-cards'>
+              Credit Cards
+            </Link>
+            <Link href='https://www.bankofthewest.com/personal-banking/loans/personal-loans'>
+              Loans
+            </Link>
           </div>
 
           <div className='footer-column col-sm-5 col-md-3'>
@@ -86,32 +136,38 @@ const Footer = ({ imgPath = '/img' }) => (
     <section className='footer-bottom'>
       <div className='container'>
         <div className='footer-social'>
-          <a href='#'>
+          <a href='https://www.facebook.com/BankoftheWest'>
             <i className='icon icon-facebook' />
           </a>
-          <a href='#'>
+          <a href='https://www.instagram.com/bankofthewest'>
             <i className='icon icon-instagram' />
           </a>
-          <a href='#'>
+          <a href='http://www.linkedin.com/company/bank-of-the-west'>
             <i className='icon icon-linkedin' />
           </a>
-          <a href='#'>
+          <a href='https://twitter.com/bankofthewest'>
             <i className='icon icon-twitter' />
           </a>
-          <a href='#'>
+          <a href='http://www.youtube.com/bankofthewest'>
             <i className='icon icon-youtube' />
           </a>
-          <a href='#'>
+          <a href='https://meansandmatters.bankofthewest.com'>
             <i className='icon icon-help' />
           </a>
         </div>
 
         <div>
-          <Link>Terms of Use</Link>
+          <Link href='https://www.bankofthewest.com/security-center-personal/policies/terms-of-use'>
+            Terms of Use
+          </Link>
           <span className='footer-dot' />
-          <Link>Security</Link>
+          <Link href='https://www.bankofthewest.com/security-center-personal'>
+            Security
+          </Link>
           <span className='footer-dot' />
-          <Link>Privacy</Link>
+          <Link href='https://www.bankofthewest.com/security-center-personal/policies'>
+            Privacy
+          </Link>
         </div>
 
         <p>
