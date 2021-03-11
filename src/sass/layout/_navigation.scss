@@ -132,6 +132,7 @@ body.navigation-open {
       @include font-weight('semi-bold');
       margin: 0 spacing(8);
       cursor: pointer;
+      white-space: nowrap;
     }
 
     .navigation-header-category-active {
@@ -172,11 +173,15 @@ body.navigation-open {
     .navigation-header-buttons {
       display: none;
 
-      @include screen('md') {
-        display: block;
+      > * {
+        white-space: nowrap;
       }
 
-      .button:first-child {
+      @include screen('md') {
+        display: flex;
+      }
+
+      > :first-child {
         margin-right: spacing(16);
       }
     }
@@ -317,7 +322,7 @@ body.navigation-open {
       display: flex;
       margin-bottom: spacing(24);
 
-      .button {
+      > * {
         flex-basis: 50%;
 
         &:first-child {
@@ -425,6 +430,20 @@ body.navigation-open {
 
         &:last-child {
           margin-bottom: spacing(8);
+        }
+      }
+    }
+  }
+
+  .navigation-header-cta-actions {
+    .navigation-header-cta-wrapper {
+      display: none;
+
+      &.navigation-cta-active {
+        display: block;
+
+        > * {
+          width: 100%;
         }
       }
     }
