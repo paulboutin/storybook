@@ -70,6 +70,12 @@ function mobileSetup(navigation) {
   })
 }
 
+function showCTA(CTAs, activeCTA) {
+  console.log(CTAs, activeCTA)
+  CTAs.forEach(CTA => CTA.classList.remove('navigation-cta-active'))
+  activeCTA.classList.add('navigation-cta-active')
+}
+
 function hideDropdown(dropdowns, section, dropdown, product) {
   product.classList.remove('navigation-header-product-active')
   section.classList.remove('navigation-dropdown-section-active')
@@ -95,10 +101,20 @@ function desktopSetup(navigation) {
 
       activeCategory.classList.remove('navigation-header-category-active')
       category.classList.add('navigation-header-category-active')
-      if (activeSubheader)
+      if (activeSubheader) {
         activeSubheader.classList.remove('navigation-header-products-active')
-      if (subheader)
+      }
+      if (subheader) {
         subheader.classList.add('navigation-header-products-active')
+      }
+
+      const activeCTA = navigation.querySelector(category.dataset.ctaAction)
+      if (activeCTA) {
+        const CTAs = navigation.querySelectorAll(
+          '.navigation-header-cta-wrapper'
+        )
+        showCTA(CTAs, activeCTA)
+      }
     })
   })
 

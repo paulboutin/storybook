@@ -80,6 +80,7 @@ const menuConfig = {
           items: ['Online Investing']
         }
       ],
+      CTA: () => <Button type='tertiary' label='Apply Now' link />,
       Promo: () => (
         <NavigationPromo
           image='/img/trees.png'
@@ -145,6 +146,7 @@ const menuConfig = {
           ]
         }
       ],
+      CTA: () => <Button type='tertiary' label='Apply Now' link />,
       Promo: () => (
         <NavigationPromo
           className='navigation-promo-green'
@@ -212,6 +214,7 @@ const menuConfig = {
           ]
         }
       ],
+      CTA: () => <Button type='tertiary' label='Get in Touch' link />,
       Promo: () => (
         <NavigationPromo
           title='Lorem ipsum 3'
@@ -257,6 +260,7 @@ const menuConfig = {
           directLink: '#'
         }
       ],
+      CTA: () => <Button type='tertiary' label='Online Portfolio' link />,
       Promo: () => (
         <NavigationPromo
           image='/img/trees.png'
@@ -270,11 +274,35 @@ const menuConfig = {
       id: 'about',
       products: [],
       directLink: '#',
+      CTA: null,
       Promo: null
     }
   ],
   links: ['Help Center', 'Locations', 'Search']
 }
+
+const NavigationBanner = () => (
+  <header className='navigation-banner'>
+    <div className='container'>
+      <div className='navigation-banner-location'>
+        <i className='icon icon-location' />
+        California
+      </div>
+
+      <div className='navigation-banner-notice hidden-xs'>
+        <a href='#'>Learn about our new 1% for the planet account</a>
+      </div>
+
+      <div className='navigation-banner-links hidden-xs hidden-sm'>
+        <a href='#'>Help Center</a>
+        <span className='navigation-link-separator' />
+        <a href='#'>Locations</a>
+        <span className='navigation-link-separator' />
+        <a href='#'>Search</a>
+      </div>
+    </div>
+  </header>
+)
 
 const DesktopNavigationCategories = () => (
   <div className='navigation-header-categories'>
@@ -294,6 +322,7 @@ const DesktopNavigationCategories = () => (
       return (
         <React.Fragment key={categoryIndex}>
           <div
+            data-cta-action={`#cta-${category.id}`}
             data-subheader={`#subheader-${category.id}`}
             className={classNames('navigation-header-category', {
               'navigation-header-category-active': categoryIndex === 0
@@ -360,88 +389,96 @@ const DesktopNavigationDropdowns = () => (
   </div>
 )
 
-const MobileNavigationMenus = ({ CTA }) => (
-  <div className='navigation-menus'>
-    <aside className='navigation-menu navigation-main-menu'>
-      <div className='container'>
-        <div className='navigation-main-menu-buttons'>
-          <CTA />
-          <Button type='primary' label='Sign In' id='navigation-login-button' />
-        </div>
+const MobileNavigationMenus = () => {
+  const CTA = menuConfig.categories.find(category => category.CTA).CTA
 
-        {menuConfig.categories.map((category, index) => (
-          <div
-            key={index}
-            data-menu={`#menu-${category.id}`}
-            className='navigation-main-menu-category'
-          >
-            <span>{category.name}</span>
-            <i className='icon icon-chevron-right' />
-          </div>
-        ))}
-
-        <div className='navigation-divider' />
-
-        {menuConfig.links.map((link, index) => (
-          <div key={index} className='navigation-main-menu-link'>
-            <a href='#'>{link}</a>
-          </div>
-        ))}
-      </div>
-    </aside>
-
-    <aside className='navigation-menu navigation-login-menu'>
-      <div className='container'>
-        <h2 className='navigation-login-title'>Sign In</h2>
-
-        <Input
-          id='navigation-login-username'
-          variant='outline'
-          type='text'
-          label='Username'
-          required
-        />
-        <Input
-          id='navigation-login-password'
-          variant='outline'
-          type='password'
-          label='Password'
-          required
-        />
-
-        <Link>Forgot password</Link>
-        <Button type='primary' label='Sign In' />
-        <div className='navigation-divider' />
-        <Link standalone>Open an Account</Link>
-      </div>
-    </aside>
-
-    {menuConfig.categories.map((category, categoryIndex) => (
-      <aside
-        key={categoryIndex}
-        id={`menu-${category.id}`}
-        className='navigation-menu navigation-category-menu'
-      >
+  return (
+    <div className='navigation-menus'>
+      <aside className='navigation-menu navigation-main-menu'>
         <div className='container'>
-          <div className='navigation-category-menu-header'>
-            <i className='navigation-category-menu-back icon icon-chevron-left' />
-            <div>{category.name}</div>
+          <div className='navigation-main-menu-buttons'>
+            <CTA />
+            <Button
+              type='primary'
+              label='Sign In'
+              id='navigation-login-button'
+            />
           </div>
 
-          {category.products.map((product, productIndex) => (
-            <Accordion key={productIndex} title={product.name}>
-              {product.items.map((item, itemIndex) => (
-                <div key={itemIndex}>
-                  <a href='#'>{item}</a>
-                </div>
-              ))}
-            </Accordion>
+          {menuConfig.categories.map((category, index) => (
+            <div
+              key={index}
+              data-menu={`#menu-${category.id}`}
+              className='navigation-main-menu-category'
+            >
+              <span>{category.name}</span>
+              <i className='icon icon-chevron-right' />
+            </div>
+          ))}
+
+          <div className='navigation-divider' />
+
+          {menuConfig.links.map((link, index) => (
+            <div key={index} className='navigation-main-menu-link'>
+              <a href='#'>{link}</a>
+            </div>
           ))}
         </div>
       </aside>
-    ))}
-  </div>
-)
+
+      <aside className='navigation-menu navigation-login-menu'>
+        <div className='container'>
+          <h2 className='navigation-login-title'>Sign In</h2>
+
+          <Input
+            id='navigation-login-username'
+            variant='outline'
+            type='text'
+            label='Username'
+            required
+          />
+          <Input
+            id='navigation-login-password'
+            variant='outline'
+            type='password'
+            label='Password'
+            required
+          />
+
+          <Link>Forgot password</Link>
+          <Button type='primary' label='Sign In' />
+          <div className='navigation-divider' />
+          <Link standalone>Open an Account</Link>
+        </div>
+      </aside>
+
+      {menuConfig.categories.map((category, categoryIndex) => (
+        <aside
+          key={categoryIndex}
+          id={`menu-${category.id}`}
+          className='navigation-menu navigation-category-menu'
+        >
+          <div className='container'>
+            <div className='navigation-category-menu-header'>
+              <i className='navigation-category-menu-back icon icon-chevron-left' />
+              <div>{category.name}</div>
+            </div>
+
+            {category.products.map((product, productIndex) => (
+              <Accordion key={productIndex} title={product.name}>
+                {product.items.map((item, itemIndex) => (
+                  <div key={itemIndex}>
+                    <a href='#'>{item}</a>
+                  </div>
+                ))}
+              </Accordion>
+            ))}
+          </div>
+        </aside>
+      ))}
+    </div>
+  )
+}
 
 const NavigationPromo = ({ image, alt, title, text, className, children }) => (
   <article className={classNames('navigation-promo', className)}>
@@ -452,32 +489,10 @@ const NavigationPromo = ({ image, alt, title, text, className, children }) => (
   </article>
 )
 
-const Navigation = ({
-  sticky,
-  CTA = () => <Button type='tertiary' label='Apply Now' link />
-}) => {
+const Navigation = ({ sticky }) => {
   return (
     <nav className={classNames('navigation', { sticky })}>
-      <header className='navigation-banner'>
-        <div className='container'>
-          <div className='navigation-banner-location'>
-            <i className='icon icon-location' />
-            California
-          </div>
-
-          <div className='navigation-banner-notice hidden-xs'>
-            <a href='#'>Learn about our new 1% for the planet account</a>
-          </div>
-
-          <div className='navigation-banner-links hidden-xs hidden-sm'>
-            <a href='#'>Help Center</a>
-            <span className='navigation-link-separator' />
-            <a href='#'>Locations</a>
-            <span className='navigation-link-separator' />
-            <a href='#'>Search</a>
-          </div>
-        </div>
-      </header>
+      <NavigationBanner />
 
       <header className='navigation-header'>
         <div className='container'>
@@ -503,7 +518,19 @@ const Navigation = ({
           <DesktopNavigationCategories />
 
           <div className='navigation-header-buttons'>
-            <CTA />
+            <div className='navigation-header-cta-actions'>
+              {menuConfig.categories.map(({ CTA, ...category }, idx) => (
+                <div
+                  key={idx}
+                  id={`cta-${category.id}`}
+                  className={classNames('navigation-header-cta-wrapper', {
+                    'navigation-cta-active': idx === 0
+                  })}
+                >
+                  {CTA && <CTA />}
+                </div>
+              ))}
+            </div>
             <Button type='primary' label='Sign In' link />
           </div>
         </div>
@@ -513,7 +540,7 @@ const Navigation = ({
 
       <DesktopNavigationDropdowns />
 
-      <MobileNavigationMenus CTA={CTA} />
+      <MobileNavigationMenus />
     </nav>
   )
 }
