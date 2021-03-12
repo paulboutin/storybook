@@ -46,14 +46,14 @@ describe('Layout Components', () => {
       path: `layout-components-form--${type}`,
       devices: ['mobile']
     })),
-    {
-      title: 'infographic',
-      path: 'layout-components-infographic--standard',
+    ...['standard', 'alternate'].map(type => ({
+      title: `infographic ${type}`,
+      path: `layout-components-infographic--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
+    })),
     {
       title: 'pull-quote',
-      path: 'layout-components--pull-quote-story',
+      path: 'layout-components--pull-quote',
       devices: ['mobile', 'tablet']
     },
     {
@@ -178,6 +178,11 @@ describe('Layout Components', () => {
     {
       title: 'product-selector',
       path: 'layout-components--product-selector-story',
+      devices: ['mobile', 'desktop']
+    },
+    {
+      title: 'storytelling',
+      path: 'layout-components--storytelling',
       devices: ['mobile', 'desktop']
     }
   ]
