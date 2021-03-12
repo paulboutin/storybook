@@ -11,7 +11,7 @@ const options = {
   step: 1
 }
 
-export const Image = () => {
+export const Alternate = () => {
   let items = []
   const num = number('Items', 6, options, 'config')
   const headline = text('Headline', 'Headline', 'config')

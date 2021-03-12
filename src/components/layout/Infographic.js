@@ -15,7 +15,7 @@ export const defaultItems = [
 
 const InfographicItem = ({ className, title, text }) => {
   return (
-    <article className={classNames('infographic-image-item', className)}>
+    <article className={classNames('infographic-alt-item', className)}>
       <p className='text-h4 font-display'>{title}</p>
       <p className='text-sm'>{text}</p>
     </article>
@@ -29,17 +29,17 @@ const Infographic = ({
   items = []
 }) => {
   return (
-    <section className='infographic-image'>
+    <section className='infographic-alt'>
       <div className='container'>
         <Image
-          className='infographic-image-wrapper'
+          className='infographic-alt-wrapper'
           src={background}
           ratio='auto'
         />
         <p className='text-h3 font-display'>{headline}</p>
         <div className='row'>
           <div className='col-xs-12 col-sm-6'>
-            <p className='infographic-image-text'>{text}</p>
+            <p className='infographic-alt-text'>{text}</p>
           </div>
           <div className='col-xs-12 col-sm-6'>
             <div className='row'>
