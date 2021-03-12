@@ -141,10 +141,20 @@
     margin: 0 spacing(12);
   }
 
+  .footer-copyright {
+    text-align: left;
+
+    @include screen('sm') {
+      text-align: center;
+    }
+
+    > :not(:last-child) {
+      margin-bottom: spacing(16);
+    }
+  }
+
   .footer-legal {
     background-color: color('green-dark');
-
-    padding-top: spacing(24);
     padding-bottom: spacing(24);
 
     hr {

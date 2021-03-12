@@ -16,7 +16,7 @@ const Footer = ({ imgPath = '/img' }) => (
         className='footer-starbirds'
       />
 
-      <Accordion title='Get to know us' inverted>
+      <Accordion title='Get to know us' inverted expanded>
         <Link href='https://www.bankofthewest.com/about-us'>About Us</Link>
         <Link href='https://www.bankofthewest.com/about-us/press-center'>
           Press
@@ -156,7 +156,7 @@ const Footer = ({ imgPath = '/img' }) => (
           </a>
         </div>
 
-        <div>
+        <div className='font-semi-bold text-base'>
           <Link href='https://www.bankofthewest.com/security-center-personal/policies/terms-of-use'>
             Terms of Use
           </Link>
@@ -170,12 +170,16 @@ const Footer = ({ imgPath = '/img' }) => (
           </Link>
         </div>
 
-        <p>
-          © 2020 Bank of the West | NMLS# 19116 | Member FDIC | Equal Housing
-          Lender
-        </p>
+        <div className='footer-copyright'>
+          <p className='font-semi-bold'>
+            © 2020 Bank of the West | NMLS# 19116 | Member FDIC | Equal Housing
+            Lender
+          </p>
 
-        <p>Doing business in South Dakota as Bank of the West California</p>
+          <p className='font-semi-bold'>
+            Doing business in South Dakota as Bank of the West California
+          </p>
+        </div>
       </div>
     </section>
 
