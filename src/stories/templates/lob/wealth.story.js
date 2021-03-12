@@ -3,7 +3,7 @@ import { boolean } from '@storybook/addon-knobs'
 import WealthFull from '../../../components/pre-render/WealthFull'
 
 export const Wealth = () => {
-  const sticky = boolean('Sticky Nav', false)
+  const sticky = boolean('Sticky Nav', true)
   return <WealthFull imgPath='/img' sticky={sticky} />
 }
 
