@@ -17,13 +17,13 @@ const Retail = ({ imgPath, sticky }) => {
     <>
       <Navigation sticky={sticky} />
       <RetailHeroPartial imgPath={imgPath} />
-      <RetailStoryTellingPartial imgPath={imgPath} />
-      <RetailAffiliatePartial imgPath={imgPath} />
       <RetailProductSelectorPartial imgPath={imgPath} />
-      <RetailVideoPartial imgPath={imgPath} />
-      <RetailCarouselPartial imgPath={imgPath} />
       <RetailAppHighlightPartial imgPath={imgPath} />
       <RetailBranchesPartial imgPath={imgPath} />
+      <RetailStoryTellingPartial imgPath={imgPath} />
+      <RetailAffiliatePartial imgPath={imgPath} />
+      <RetailVideoPartial imgPath={imgPath} />
+      <RetailCarouselPartial imgPath={imgPath} />
       <RetailClosingCTAPartial imgPath={imgPath} />
       <RetailFeaturedPartial imgPath={imgPath} />
       <Footer imgPath={imgPath} />

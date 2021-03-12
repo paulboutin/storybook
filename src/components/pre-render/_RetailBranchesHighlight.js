@@ -7,6 +7,7 @@ import * as config from '../../config'
 const RetailBranchesPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
   return (
     <Highlight
+      className='margins'
       reverse
       type='B'
       title='In person, or on the phone'
