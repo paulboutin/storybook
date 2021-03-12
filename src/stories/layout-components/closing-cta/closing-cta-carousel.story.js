@@ -19,7 +19,7 @@ const defaultItems = [
   }
 ]
 
-export const ClosingCTA = () => {
+export const Carousel = () => {
   const items = []
   const cards = number('Items', 3, options, 'config')
   const headline = text('Headline', 'Headline', 'config')
@@ -46,7 +46,7 @@ export const ClosingCTA = () => {
 }
 
 export default {
-  title: 'Layout Components/Carousels',
+  title: 'Layout Components/Closing CTA',
   parameters: {
     'in-dsm': {
       id: '603ce8f28a3603c36a64131f'
