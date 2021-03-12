@@ -1,16 +1,24 @@
 import React from 'react'
 import classNames from 'classnames'
 
-const Input = ({ id, variant, value, error, help, label, ...attrs }) => (
+const Input = ({
+  id,
+  variant,
+  value,
+  error,
+  help,
+  label,
+  noHelperSpacing,
+  ...attrs
+}) => (
   <div
-    className={classNames(
-      'input-block',
-      `input-block-${variant}`,
-      value ? 'input-active' : '',
-      error ? 'input-error' : '',
-      attrs.disabled ? 'input-disabled' : '',
-      attrs.placeholder ? 'input-placeholder' : ''
-    )}
+    className={classNames('input-block', `input-block-${variant}`, {
+      'input-active': !!value,
+      'input-error': error,
+      'input-disabled': attrs.disabled,
+      'input-placeholder': !!attrs.placeholder,
+      'no-helper-spacing': noHelperSpacing
+    })}
   >
     {label && (
       <label className='input-label' htmlFor={id}>

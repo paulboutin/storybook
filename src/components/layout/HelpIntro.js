@@ -18,6 +18,7 @@ const HelpIntro = ({ showLinks, fullWidth }) => (
         <Input
           variant='outline'
           placeholder='Search by topic or category'
+          noHelperSpacing
           required
         />
         <Button type='tertiary' label='Search' />
