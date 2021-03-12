@@ -11,3 +11,9 @@
     @include fixed-ratio($horizontal, $vertical);
   }
 }
+
+.rounded {
+  img {
+    border-radius: 100%;
+  }
+}
