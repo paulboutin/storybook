@@ -11,7 +11,7 @@ describe('Layout Components', () => {
       path: `layout-components-content-list--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    ...['standard', 'background-image'].map(type => ({
+    ...['standard', 'background-image', 'carousel'].map(type => ({
       title: `closing-cta ${type}`,
       path: `layout-components-closing-cta--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
@@ -73,7 +73,7 @@ describe('Layout Components', () => {
       path: `layout-components-resource-links--resource-links-${type}`,
       devices: ['mobile', 'tablet']
     })),
-    ...['standard', 'editorial', 'closing-cta'].map(type => ({
+    ...['standard', 'editorial'].map(type => ({
       title: `carousel ${type}`,
       path: `layout-components-carousels--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
