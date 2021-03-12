@@ -15,6 +15,25 @@ body.navigation-open {
     z-index: 1000;
   }
 
+  @include screen('md') {
+    position: relative;
+
+    &::after {
+      transition: transform 300ms ease-in;
+      content: '';
+
+      position: absolute;
+      left: 0;
+      right: 0;
+
+      height: 56px;
+      width: 100%;
+      background-color: color('grey-10');
+      transform: translateY(-100%);
+      z-index: -2;
+    }
+  }
+
   .navigation-container {
     @include screen('lg') {
       width: 1200px !important;
@@ -140,10 +159,13 @@ body.navigation-open {
     }
 
     .navigation-header-products {
+      transition: transform 300ms ease-in;
       position: absolute;
-      bottom: 0;
-      transform: translateY(100%);
+      transform: translateY(0);
       display: none;
+      z-index: -1;
+
+      height: 56px;
     }
 
     .navigation-header-products-active {
@@ -187,29 +209,13 @@ body.navigation-open {
     }
   }
 
-  .navigation-subheader,
-  .navigation-header-products {
-    height: 56px;
-
-    @include screen('lg') {
-      height: 64px;
-    }
-  }
-
-  .navigation-subheader {
-    background-color: color('grey-10');
-    display: none;
-
-    @include screen('md') {
-      display: block;
-    }
-  }
-
   .navigation-dropdowns {
     @include box-shadow('lg');
     position: absolute;
     left: 0;
     right: 0;
+    margin-top: 56px;
+
     z-index: 1000;
     border-top: 1px solid color('grey-20');
     background-color: color('white');
@@ -293,7 +299,7 @@ body.navigation-open {
   }
 
   .navigation-menus {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
@@ -403,7 +409,7 @@ body.navigation-open {
         text-align: center;
       }
 
-      &:after {
+      &::after {
         content: '';
         position: absolute;
         left: 0;
@@ -446,6 +452,17 @@ body.navigation-open {
           width: 100%;
         }
       }
+    }
+  }
+
+  &.navigation-dropdowns-open,
+  &.navigation-subheader-visible {
+    &::after {
+      transform: translateY(0);
+    }
+
+    .navigation-header-products-active {
+      transform: translateY(100%);
     }
   }
 }

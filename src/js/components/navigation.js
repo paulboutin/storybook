@@ -6,6 +6,30 @@ function setup(navigation) {
   location.addEventListener('click', () => {
     alert('Not implemented')
   })
+
+  let currentScroll = 0
+
+  window.addEventListener(
+    'scroll',
+    () => {
+      const delta = window.scrollY - currentScroll
+      currentScroll = window.scrollY
+
+      if (delta > 0) {
+        navigation.classList.remove('navigation-subheader-visible')
+        return
+      }
+
+      navigation.classList.add('navigation-subheader-visible')
+    },
+    {
+      passive: true
+    }
+  )
+
+  navigation.addEventListener('mouseover', () => {
+    navigation.classList.add('navigation-subheader-visible')
+  })
 }
 
 function positionMenus() {
@@ -57,16 +81,18 @@ function mobileSetup(navigation) {
   })
 
   categories.forEach(category => {
-    const menu = navigation.querySelector(category.dataset.menu)
-    const back = menu.querySelector('.navigation-category-menu-back')
+    if (category.dataset.menu) {
+      const menu = navigation.querySelector(category.dataset.menu)
+      const back = menu.querySelector('.navigation-category-menu-back')
 
-    category.addEventListener('click', () => {
-      menu.classList.add('navigation-menu-open')
-    })
+      category.addEventListener('click', () => {
+        menu.classList.add('navigation-menu-open')
+      })
 
-    back.addEventListener('click', () => {
-      menu.classList.remove('navigation-menu-open')
-    })
+      back.addEventListener('click', () => {
+        menu.classList.remove('navigation-menu-open')
+      })
+    }
   })
 }
 
@@ -76,7 +102,8 @@ function showCTA(CTAs, activeCTA) {
   activeCTA.classList.add('navigation-cta-active')
 }
 
-function hideDropdown(dropdowns, section, dropdown, product) {
+function hideDropdown(navigation, dropdowns, section, dropdown, product) {
+  navigation.classList.remove('navigation-dropdowns-open')
   product.classList.remove('navigation-header-product-active')
   section.classList.remove('navigation-dropdown-section-active')
   dropdown.classList.remove('navigation-dropdown-active')
@@ -133,18 +160,25 @@ function desktopSetup(navigation) {
         const activeProduct = document.querySelector(
           '.navigation-header-product-active'
         )
-        hideDropdown(dropdowns, dropdownSection, activeDropdown, activeProduct)
+        hideDropdown(
+          navigation,
+          dropdowns,
+          dropdownSection,
+          activeDropdown,
+          activeProduct
+        )
       }
 
       product.classList.add('navigation-header-product-active')
       dropdownSection.classList.add('navigation-dropdown-section-active')
       dropdown.classList.add('navigation-dropdown-active')
       dropdowns.classList.add('navigation-dropdowns-active')
+      navigation.classList.add('navigation-dropdowns-open')
     })
 
     product.addEventListener('mouseleave', e => {
       if (!dropdowns.contains(e.relatedTarget)) {
-        hideDropdown(dropdowns, dropdownSection, dropdown, product)
+        hideDropdown(navigation, dropdowns, dropdownSection, dropdown, product)
       }
     })
 
@@ -154,7 +188,7 @@ function desktopSetup(navigation) {
       )
       if (!activeSubheader.contains(e.relatedTarget)) {
         product.classList.remove('navigation-header-product-active')
-        hideDropdown(dropdowns, dropdownSection, dropdown, product)
+        hideDropdown(navigation, dropdowns, dropdownSection, dropdown, product)
       }
     })
   })

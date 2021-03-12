@@ -144,16 +144,26 @@ const MobileNavigationMenus = () => {
             />
           </div>
 
-          {navigation.categories.map((category, index) => (
-            <div
-              key={index}
-              data-menu={`#menu-${category.id}`}
-              className='navigation-main-menu-category'
-            >
-              <span>{category.name}</span>
-              <i className='icon icon-chevron-right' />
-            </div>
-          ))}
+          {navigation.categories.map((category, index) => {
+            if (category.directLink)
+              return (
+                <div key={index} className='navigation-main-menu-category'>
+                  <a href={category.directLink}>{category.name}</a>
+                  <i className='icon icon-chevron-right' />
+                </div>
+              )
+
+            return (
+              <div
+                key={index}
+                data-menu={`#menu-${category.id}`}
+                className='navigation-main-menu-category'
+              >
+                <span>{category.name}</span>
+                <i className='icon icon-chevron-right' />
+              </div>
+            )
+          })}
 
           <div className='navigation-divider' />
 
@@ -193,30 +203,34 @@ const MobileNavigationMenus = () => {
         </div>
       </aside>
 
-      {navigation.categories.map((category, categoryIndex) => (
-        <aside
-          key={categoryIndex}
-          id={`menu-${category.id}`}
-          className='navigation-menu navigation-category-menu'
-        >
-          <div className='container'>
-            <div className='navigation-category-menu-header'>
-              <i className='navigation-category-menu-back icon icon-chevron-left' />
-              <div>{category.name}</div>
-            </div>
+      {navigation.categories.map((category, categoryIndex) => {
+        if (category.directLink) return null
 
-            {category.products.map((product, productIndex) => (
-              <Accordion key={productIndex} title={product.name}>
-                {product.items.map(({ text, href }, itemIndex) => (
-                  <div key={itemIndex}>
-                    <a href={href}>{text}</a>
-                  </div>
-                ))}
-              </Accordion>
-            ))}
-          </div>
-        </aside>
-      ))}
+        return (
+          <aside
+            key={categoryIndex}
+            id={`menu-${category.id}`}
+            className='navigation-menu navigation-category-menu'
+          >
+            <div className='container'>
+              <div className='navigation-category-menu-header'>
+                <i className='navigation-category-menu-back icon icon-chevron-left' />
+                <div>{category.name}</div>
+              </div>
+
+              {category.products.map((product, productIndex) => (
+                <Accordion key={productIndex} title={product.name}>
+                  {product.items.map(({ text, href }, itemIndex) => (
+                    <div key={itemIndex}>
+                      <a href={href}>{text}</a>
+                    </div>
+                  ))}
+                </Accordion>
+              ))}
+            </div>
+          </aside>
+        )
+      })}
     </div>
   )
 }
@@ -243,7 +257,11 @@ export const NavigationPromo = ({
 const Navigation = ({ sticky }) => {
   // main Navigation component
   return (
-    <nav className={classNames('navigation', { sticky })}>
+    <nav
+      className={classNames('navigation navigation-subheader-visible', {
+        sticky
+      })}
+    >
       <NavigationBanner />
 
       <header className='navigation-header'>
@@ -287,8 +305,6 @@ const Navigation = ({ sticky }) => {
           </div>
         </div>
       </header>
-
-      <div className='navigation-subheader' />
 
       <DesktopNavigationDropdowns />
 
