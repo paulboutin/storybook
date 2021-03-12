@@ -18,12 +18,8 @@ const ClosingCTACarousel = ({ headline, items, children }) => {
               <div className='carousel-slide-wrapper' key={index}>
                 <Image src={item.image} alt={item.text} ratio='auto' />
                 <div className='carousel-slide-content'>
-                  <p className='carousel-card-title text-cta font-display'>
-                    {item.title}
-                  </p>
-                  <p className='carousel-card-text text-h3 font-display'>
-                    {item.text}
-                  </p>
+                  <p className='carousel-card-title text-cta'>{item.title}</p>
+                  <p className='carousel-card-text text-h3'>{item.text}</p>
                 </div>
               </div>
             ))}

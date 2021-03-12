@@ -80,7 +80,7 @@
 
   .carousel-card-content {
     background-color: color('white');
-    padding: spacing(24) 0;
+    padding: spacing(48) 0;
   }
 
   .eyebrow,
@@ -117,22 +117,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    transform: translateY(100%);
-    padding-top: spacing(16);
+    margin-top: spacing(16);
 
     @include screen('sm') {
-      padding-top: spacing(24);
-    }
-
-    @include screen('md') {
-      position: static;
-      transform: none;
-      justify-content: flex-start;
-      padding-top: spacing(16);
+      margin-top: 3 * spacing(16);
     }
 
     .button {

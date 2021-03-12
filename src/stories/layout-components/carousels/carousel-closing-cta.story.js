@@ -13,28 +13,15 @@ const options = {
 
 const defaultItems = [
   {
-    image: '/img/trees.png',
-    title: 'Lorem',
-    text:
-      'ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolorem.'
-  },
-  {
-    image: '/img/trees.png',
-    title: 'Lorem',
-    text:
-      'ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolorem.'
-  },
-  {
-    image: '/img/trees.png',
-    title: 'Lorem',
-    text:
-      'ipsum dolor sit amet, consectetur adipisicing elit. Consectetur, dolorem.'
+    image: '/img/butterfly.png',
+    title: '000',
+    text: 'Lorem ipsum'
   }
 ]
 
 export const ClosingCTA = () => {
   const items = []
-  const cards = number('Items', defaultItems.length, options, 'config')
+  const cards = number('Items', 3, options, 'config')
   const headline = text('Headline', 'Headline', 'config')
   const button = text('Button Text', 'Button CTA', 'config')
   const link = text('Link Text', 'Link CTA', 'config')
