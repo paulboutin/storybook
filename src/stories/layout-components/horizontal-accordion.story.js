@@ -31,5 +31,10 @@ export const HorizontalAccordion = () => {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '604f6b62db22093378c1d9c0'
+    }
+  }
 }
