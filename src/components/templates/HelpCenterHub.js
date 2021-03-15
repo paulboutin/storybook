@@ -6,7 +6,6 @@ import Accordion from '../base/Accordion'
 import { slugify } from '../../utils'
 import classNames from 'classnames'
 import ClosingCTA from '../layout/ClosingCTA'
-import Legal from '../layout/Legal'
 import Breadcrumbs from '../base/Breadcrumbs'
 import Footer from '../layout/Footer'
 
@@ -195,8 +194,6 @@ const HelpCenterHub = ({ topics = defaultTopics }) => {
           text='Feel free to get in touch.'
           label='Contact Us'
         />
-
-        <Legal />
 
         <section className='help-center-breadcrumbs'>
           <div className='container'>

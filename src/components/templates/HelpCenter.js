@@ -2,7 +2,6 @@ import React from 'react'
 import Navigation from '../layout/Navigation'
 import HelpIntro from '../layout/HelpIntro'
 import ClosingCTA from '../layout/ClosingCTA'
-import Legal from '../layout/Legal'
 import Breadcrumbs from '../base/Breadcrumbs'
 import Footer from '../layout/Footer'
 
@@ -48,8 +47,6 @@ const HelpCenter = () => {
           text='Feel free to get in touch.'
           label='Contact Us'
         />
-
-        <Legal />
 
         <div className='container'>
           <Breadcrumbs items={['Help Center', 'Accounts']} />
