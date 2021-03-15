@@ -17,15 +17,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 100%;
   }
 
   .modal-body {
     background: color('white');
     padding: spacing(16);
     margin: spacing(16);
+    width: 100%;
 
     @include screen('sm') {
       padding: spacing(32);
+      width: 75%;
+    }
+
+    @include screen('lg') {
+      max-width: 50%;
     }
 
     .modal-header {
@@ -61,6 +69,10 @@
         .button {
           width: 100%;
         }
+
+        &.left {
+          flex-grow: 1;
+        }
       }
 
       @include screen('sm') {
@@ -72,7 +84,7 @@
         .action-wrapper {
           flex-direction: row;
 
-          > :nth-child(1) {
+          > :first-child {
             margin-bottom: 0;
             margin-right: spacing(16);
           }
