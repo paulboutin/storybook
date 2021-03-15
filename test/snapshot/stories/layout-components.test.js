@@ -182,7 +182,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'storytelling',
-      path: 'layout-components--storytelling',
+      path: 'layout-components--horizontal-accordion',
       devices: ['mobile', 'desktop']
     }
   ]
