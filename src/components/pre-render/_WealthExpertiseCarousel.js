@@ -2,6 +2,7 @@ import React from 'react'
 import CardCarousel from '../layout/CardCarousel'
 import { prefixImagePath } from '../../utils'
 import * as config from '../../config'
+import Callout from '../layout/Callout'
 
 const items = prefix => [
   {
@@ -48,6 +49,15 @@ const items = prefix => [
 
 const WealthExpertiseCarouselPartial = ({
   imgPath = config.PRERENDER_IMAGE_PATH
-}) => <CardCarousel items={items(imgPath)} />
+}) => (
+  <>
+    <Callout
+      className='no-padding-bottom'
+      title='Expertise to serve you'
+      text="Work with an advisor who'll take a comprehensive approach to meet your financial goals"
+    />
+    <CardCarousel items={items(imgPath)} />
+  </>
+)
 
 export default WealthExpertiseCarouselPartial
