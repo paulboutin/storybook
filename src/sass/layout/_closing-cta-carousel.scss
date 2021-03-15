@@ -61,10 +61,16 @@
 
   .slider {
     position: static !important;
+
+    .slider-slide {
+      opacity: 1 !important;
+    }
   }
 
   .closing-cta-carousel-container {
     position: relative;
+    overflow: hidden;
+    background-color: color('white');
 
     .carousel-pagination-container {
       position: absolute;

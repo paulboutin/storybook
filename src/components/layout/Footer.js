@@ -152,7 +152,7 @@ const Footer = ({ imgPath = '/img' }) => (
             <i className='icon icon-youtube' />
           </a>
           <a href='https://meansandmatters.bankofthewest.com'>
-            <i className='icon icon-help' />
+            <i className='icon icon-means-matters' />
           </a>
         </div>
 
