@@ -1,8 +1,8 @@
 import React from 'react'
 import { number, text } from '@storybook/addon-knobs'
-import StorytellingComponent, {
+import HorizontalAccordionComponent, {
   defaultItems
-} from '../../components/layout/Storytelling'
+} from '../../components/layout/HorizontalAccordion'
 
 const options = {
   range: true,
@@ -11,7 +11,7 @@ const options = {
   step: 1
 }
 
-export const Storytelling = () => {
+export const HorizontalAccordion = () => {
   const items = []
   const quantity = number('Items', 4, options, 'config')
 
@@ -27,7 +27,7 @@ export const Storytelling = () => {
     })
   }
 
-  return <StorytellingComponent items={items} />
+  return <HorizontalAccordionComponent items={items} />
 }
 
 export default {

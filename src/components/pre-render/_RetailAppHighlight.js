@@ -9,6 +9,7 @@ const RetailAppHighlightPartial = ({
 }) => {
   return (
     <Highlight
+      className='margins'
       type='B'
       title='Bank whenever, wherever'
       text='Deposit checks, transfer funds, and manage all of your finances securely, on the go.'

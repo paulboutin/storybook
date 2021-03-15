@@ -1,7 +1,9 @@
 export default () => {
-  const storytellers = document.querySelectorAll('.storytelling')
+  const horizontalAccordions = document.querySelectorAll(
+    '.horizontal-accordion'
+  )
 
-  storytellers.forEach(storyteller => {
+  horizontalAccordions.forEach(storyteller => {
     const items = storyteller.querySelectorAll('.storytelling-item')
 
     items.forEach(item => {

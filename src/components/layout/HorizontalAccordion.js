@@ -67,9 +67,9 @@ const StorytellingItem = ({ expanded, image, title, text, children }) => {
   )
 }
 
-const Storytelling = ({ items }) => {
+const HorizontalAccordion = ({ items }) => {
   return (
-    <section className='storytelling'>
+    <section className='horizontal-accordion'>
       <div className='accordion-items'>
         {items.map(({ image, title, text, Content }, idx) => (
           <AccordionItem
@@ -101,4 +101,4 @@ const Storytelling = ({ items }) => {
   )
 }
 
-export default Storytelling
+export default HorizontalAccordion

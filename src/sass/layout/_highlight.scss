@@ -7,11 +7,28 @@
     align-items: center;
   }
 
+  .highlight-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .highlight-content-container {
-    padding-top: spacing(24);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     @include screen('sm') {
-      padding-top: 0;
+      padding: spacing(24);
+    }
+
+    @include screen('md') {
+      padding: spacing(48);
+    }
+
+    @include screen('lg') {
+      padding: spacing(64);
     }
   }
 
@@ -44,9 +61,7 @@
   }
 
   &.centered {
-    .highlight-content-container {
-      display: flex;
-      flex-direction: column;
+    .highlight-content-wrapper {
       align-items: center;
       text-align: center;
 
@@ -55,8 +70,8 @@
       }
 
       @include screen('sm') {
-        display: block;
         text-align: left;
+        align-items: flex-start;
 
         .eyebrow {
           align-items: flex-start;
@@ -73,55 +88,27 @@
       padding-top: spacing(64);
       padding-bottom: spacing(64);
     }
-
-    .highlight-content-container {
-      @include screen('sm') {
-        padding-left: spacing(24);
-      }
-
-      @include screen('md') {
-        padding-left: spacing(48);
-      }
-
-      @include screen('lg') {
-        padding-left: spacing(64);
-      }
-    }
-
-    &.reverse {
-      .highlight-content-container {
-        @include screen('sm') {
-          padding-left: 0;
-          padding-right: spacing(24);
-        }
-
-        @include screen('md') {
-          padding-left: 0;
-          padding-right: spacing(48);
-        }
-
-        @include screen('lg') {
-          padding-left: 0;
-          padding-right: spacing(64);
-        }
-      }
-    }
   }
 
   &.highlight-B {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include screen('sm') {
+      padding-left: 0;
+    }
+
+    @include screen('xl') {
+      max-width: 1440px;
+    }
+
     .highlight-content-container {
-      padding: spacing(16);
-
-      @include screen('sm') {
-        padding: spacing(24);
-      }
-
       @include screen('md') {
         padding: spacing(48);
       }
 
       @include screen('lg') {
-        padding-left: spacing(128);
+        padding: spacing(64);
       }
     }
   }

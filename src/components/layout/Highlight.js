@@ -6,12 +6,14 @@ import Image from '../base/Image'
 const HighlightContent = ({ eyebrow = {}, title, text, children }) => {
   return (
     <article className='highlight-content-container'>
-      {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
-      <h3 className='text-h2'>{title}</h3>
+      <div className='highlight-content-wrapper'>
+        {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
+        <h3 className='text-h2'>{title}</h3>
 
-      {text && <p className='highlight-text'>{text}</p>}
+        {text && <p className='highlight-text'>{text}</p>}
 
-      {children}
+        {children}
+      </div>
     </article>
   )
 }

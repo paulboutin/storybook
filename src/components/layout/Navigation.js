@@ -254,14 +254,10 @@ export const NavigationPromo = ({
   )
 }
 
-const Navigation = ({ sticky }) => {
+const Navigation = () => {
   // main Navigation component
   return (
-    <nav
-      className={classNames('navigation navigation-subheader-visible', {
-        sticky
-      })}
-    >
+    <nav className='navigation navigation-subheader-visible sticky'>
       <NavigationBanner />
 
       <header className='navigation-header'>

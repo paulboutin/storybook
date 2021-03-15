@@ -33,7 +33,7 @@ const ProductSelector = ({ items, headline }) => {
             text={text}
             reverse
             container={false}
-            className={classNames('product-selector-item', {
+            className={classNames('product-selector-item centered', {
               active: idx === 0
             })}
           >

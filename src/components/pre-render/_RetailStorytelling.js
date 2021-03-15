@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../base/Button'
-import Storytelling from '../layout/Storytelling'
+import HorizontalAccordion from '../layout/HorizontalAccordion'
 import { prefixImagePath } from '../../utils'
 import * as config from '../../config'
 
@@ -59,7 +59,7 @@ const items = prefix => [
 const RetailStoryTellingPartial = ({
   imgPath = config.PRERENDER_IMAGE_PATH
 }) => {
-  return <Storytelling items={items(imgPath)} />
+  return <HorizontalAccordion items={items(imgPath)} />
 }
 
 export default RetailStoryTellingPartial

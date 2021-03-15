@@ -87,7 +87,7 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.3s;
-  z-index: 1000;
+  z-index: 2000;
 
   .icon {
     @include font-size('lg');
