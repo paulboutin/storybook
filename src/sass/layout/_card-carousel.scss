@@ -11,12 +11,13 @@
     }
 
     @include screen('md') {
-      padding: spacing(64) 0;
+      padding: spacing(64) spacing(16);
     }
 
     .card-carousel-control {
       position: absolute;
       top: 50%;
+      z-index: 1;
 
       transform: translateY(-50%);
 
@@ -44,7 +45,7 @@
         }
 
         @include screen('md') {
-          left: -#{spacing(24)};
+          left: -#{spacing(8)};
         }
       }
 
@@ -56,11 +57,11 @@
         }
 
         @include screen('md') {
-          right: -#{spacing(24)};
+          right: -#{spacing(8)};
         }
       }
 
-      &.hidden {
+      &:disabled {
         display: none;
       }
     }
@@ -68,6 +69,7 @@
 
   .card-carousel-items {
     display: flex;
+    overflow: unset;
 
     transition-duration: 300ms;
 
@@ -78,16 +80,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-      width: 100%;
-
-      @include screen('sm') {
-        width: 50%;
-      }
-
-      @include screen('md') {
-        width: percentage(1/3);
-      }
 
       .card-article {
         width: 100%;

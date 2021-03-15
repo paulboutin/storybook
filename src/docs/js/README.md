@@ -60,7 +60,7 @@ Individual components may be deactivated by simply removing the function call fr
 
   Implements logic for article carousel component.
 
-  Includes support for swipe gestures via `lib/swiped-events`
+  Requires splide library, included as `lib/minified/splide`.
 
 - **comparison**
 
@@ -74,6 +74,10 @@ Individual components may be deactivated by simply removing the function call fr
 
   Implements logic for help center article viewer component.
 
+- **horizontal-accordion**
+
+  Implements additional logic for horizontal accordion (tablet/desktop)
+
 - **input**
 
   Implements logic for custom inputs.
@@ -84,7 +88,7 @@ Individual components may be deactivated by simply removing the function call fr
 
 - **popup-video**
 
-  Implements logic for popup-video components (both hero and article cards) via `lib/vimeo-player`
+  Implements logic for popup-video components (both hero and article cards) via `lib/minified/vimeo-player`
 
   Can be configured via `dataset` attributes:
 
@@ -118,11 +122,7 @@ Individual components may be deactivated by simply removing the function call fr
 
   Includes support for swipe gestures via `lib/swiped-events`
 
-- **storytelling**
-
-  Implements additional logic for storytelling (tablet/desktop)
-
-- **third-party link**
+* **third-party link**
 
   Implements logic for third-party popup. Detects external links via URL host matching.
 
