@@ -91,18 +91,15 @@
   }
 
   &.highlight-B {
-    margin-left: auto;
-    margin-right: auto;
+    @include max-width-screen('xl');
 
     @include screen('sm') {
       padding-left: 0;
     }
 
-    @include screen('xl') {
-      max-width: 1440px;
-    }
-
     .highlight-content-container {
+      padding: spacing(16);
+
       @include screen('md') {
         padding: spacing(48);
       }

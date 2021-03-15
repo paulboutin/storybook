@@ -5,6 +5,11 @@
   background-color: color('green');
   color: color('white');
 
+  @include screen('sm') {
+    margin-top: spacing(64);
+    margin-bottom: spacing(64);
+  }
+
   .container {
     position: relative;
     min-height: 50vh;

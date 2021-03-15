@@ -121,3 +121,12 @@
 @mixin overlay($opacity) {
   background-color: rgba(color('black'), map-get($overlays, $opacity));
 }
+
+@mixin max-width-screen($size) {
+  margin-left: auto;
+  margin-right: auto;
+
+  @include screen($size) {
+    max-width: map-get($screens, $size);
+  }
+}

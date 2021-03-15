@@ -2,6 +2,8 @@
   padding-top: spacing(32);
   padding-bottom: spacing(32);
 
+  @include max-width-screen('xl');
+
   @include screen('sm') {
     padding-top: spacing(64);
     padding-bottom: spacing(64);
