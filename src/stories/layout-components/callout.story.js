@@ -20,6 +20,13 @@ const options = {
   Green: 'callout-green'
 }
 
+const numberOptions = {
+  range: true,
+  min: 3,
+  max: 6,
+  step: 1
+}
+
 export const CalloutStory = () => {
   let iconsNumber, inverted
   let columns = []
@@ -30,7 +37,7 @@ export const CalloutStory = () => {
   const title = text('Title', defaultTitle, 'config')
   const txt = text('Text', defaultText, 'config')
   const centered = boolean('Centered', true, 'config')
-  const withIcons = boolean('Icons', false, 'config')
+  const withIcons = boolean('Icons', true, 'config')
 
   let classes = bg
 
@@ -39,7 +46,7 @@ export const CalloutStory = () => {
   }
 
   if (withIcons) {
-    iconsNumber = number('Items', 3, options, 'config')
+    iconsNumber = number('Items', 3, numberOptions, 'config')
     inverted = boolean('Inverted', false, 'config')
   }
 
