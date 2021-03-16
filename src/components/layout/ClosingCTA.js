@@ -2,10 +2,8 @@ import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
 
-export const defaultTitle =
-  'Together, we can safeguard the environment and the future of our planet.'
-export const altTitle = 'Open online in about 10 minutes'
-export const defaultText = 'Type something'
+export const defaultTitle = 'Headline'
+export const defaultText = 'Subtext'
 export const defaultLabel = 'Call to Action'
 
 export const ClosingCTA = ({
