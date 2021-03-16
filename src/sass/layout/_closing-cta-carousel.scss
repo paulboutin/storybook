@@ -45,7 +45,7 @@
       height: 100%;
       width: 100%;
 
-      overflow-y: hidden;
+      overflow: hidden;
 
       padding: spacing(48) spacing(24);
 
@@ -56,6 +56,19 @@
       @include screen('md') {
         padding: spacing(64);
       }
+
+      // animation
+      > * {
+        transition: opacity 300ms ease-in, transform 300ms ease-out;
+        opacity: 0;
+        transform: translateX(-50%);
+      }
+
+      @for $i from 1 through 4 {
+        > :nth-child(#{$i}) {
+          transition-delay: #{300 * $i}ms;
+        }
+      }
     }
   }
 
@@ -63,7 +76,17 @@
     position: static !important;
 
     .slider-slide {
+      transition: transform 300ms ease-out;
       opacity: 1 !important;
+
+      &.slider-slide-active {
+        .carousel-slide-content {
+          > * {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
     }
   }
 
