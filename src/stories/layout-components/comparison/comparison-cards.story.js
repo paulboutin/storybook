@@ -2,13 +2,19 @@ import React from 'react'
 import { ComparisonCards } from '../../../components/layout/Comparison'
 import { radios, text } from '@storybook/addon-knobs'
 
+const options = {
+  Standard: 'standard',
+  'Alt A': 'branded',
+  'Alt B': 'highlight'
+}
+
 export const Cards = () => {
   let image
-  let style = radios('Style', ['Regular', 'Highlight', 'Branded'], 'Regular')
+  let style = radios('Style', options, options.Standard)
   style = style.toLowerCase()
 
-  if (style === 'branded') {
-    image = text('Image', 'http://via.placeholder.com/640')
+  if (style === options['Alt A']) {
+    image = text('Image', '/img/trees.png')
   }
 
   return <ComparisonCards style={style} image={image} />
