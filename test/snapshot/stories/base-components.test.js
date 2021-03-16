@@ -17,11 +17,13 @@ describe('Base Components', () => {
       path: `base-components-link--${type}`,
       devices: ['mobile', 'tablet']
     })),
-    ...['standard', 'flat', 'article', 'services'].map(type => ({
-      title: `card ${type}`,
-      path: `base-components-card--${type}`,
-      devices: ['mobile', 'tablet']
-    })),
+    ...['horizontal-card', 'flat-card', 'editorial-card', 'segmented-card'].map(
+      type => ({
+        title: `card ${type}`,
+        path: `base-components-card--${type}`,
+        devices: ['mobile', 'tablet']
+      })
+    ),
     ...['outline', 'underline'].map(type => ({
       title: `input ${type}`,
       path: `base-components-input--${type}`,
