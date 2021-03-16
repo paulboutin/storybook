@@ -8,7 +8,7 @@ const options = {
   Video: 'video'
 }
 
-export const Article = () => {
+export const EditorialCard = () => {
   let tag, subtext, image
 
   const type = radios('Type', options, options.Standard)
