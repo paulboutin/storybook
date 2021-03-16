@@ -16,10 +16,11 @@
 
   .highlight-content-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     @include screen('sm') {
+      justify-content: center;
       padding: spacing(24);
     }
 
@@ -61,6 +62,10 @@
   }
 
   &.centered {
+    .highlight-content-container {
+      justify-content: center;
+    }
+
     .highlight-content-wrapper {
       align-items: center;
       text-align: center;
@@ -87,6 +92,14 @@
     @include screen('sm') {
       padding-top: spacing(64);
       padding-bottom: spacing(64);
+    }
+
+    .highlight-content-container {
+      padding-top: spacing(16);
+
+      @include screen('sm') {
+        padding-top: unset;
+      }
     }
   }
 

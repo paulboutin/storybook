@@ -33,7 +33,7 @@ const items = prefix => [
     type: 'video',
     heading: 'Investing in the time of COVID-19',
     subtext: '50 minutes watch',
-    src: 'https://youtu.be/Me-eyi28aFo',
+    src: 'https://player.vimeo.com/video/523922964',
     poster: prefixImagePath({
       prefix,
       src: '/wealth/BOTW_Wealth_Articles_Investing.png'
