@@ -77,7 +77,7 @@ const defaultItems = [
   }
 ]
 
-export const Standard = () => {
+export const Single = () => {
   const items = []
   const cards = number('Items', defaultItems.length, options, 'config')
   const eyebrow = text('Eyebrow', 'Recommended', 'config')
