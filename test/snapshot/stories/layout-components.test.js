@@ -68,6 +68,11 @@ describe('Layout Components', () => {
       title: 'dropdown-hero',
       path: 'layout-components-hero--dropdown-hero-story'
     },
+    {
+      title: 'search-hero',
+      path: 'layout-components-hero--search',
+      devices: ['mobile', 'desktop']
+    },
     ...['standard', 'a', 'b'].map(type => ({
       title: `resource-links ${type}`,
       path: `layout-components-resource-links--resource-links-${type}`,
