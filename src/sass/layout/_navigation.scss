@@ -74,17 +74,41 @@ body.navigation-open {
       flex-grow: 1;
       text-align: center;
 
-      @include screen('sm') {
+      display: none;
+
+      @include screen('md') {
+        display: block;
+      }
+
+      .navigation-banner-notice-item {
         position: absolute;
         left: 0;
         right: 0;
+
+        opacity: 0;
+        display: none;
+
+        transition: opacity 300ms ease-in-out;
+
+        &.current {
+          display: block;
+        }
+
+        &.active {
+          opacity: 1;
+        }
       }
     }
 
     .navigation-banner-links {
-      display: flex;
       align-items: center;
       z-index: 1;
+
+      display: none;
+
+      @include screen('md') {
+        display: flex;
+      }
     }
 
     .navigation-link-separator {

@@ -16,11 +16,21 @@ const NavigationBanner = () => (
         California
       </div>
 
-      <div className='navigation-banner-notice hidden-xs'>
-        <a href='#'>Learn about our new 1% for the planet account</a>
+      <div className='navigation-banner-notice'>
+        {navigation.notices.map(({ href, text }, idx) => (
+          <a
+            className={classNames('navigation-banner-notice-item', {
+              'current active': idx === 0
+            })}
+            key={idx}
+            href={href}
+          >
+            {text}
+          </a>
+        ))}
       </div>
 
-      <div className='navigation-banner-links hidden-xs hidden-sm'>
+      <div className='navigation-banner-links'>
         <a href='#'>Help Center</a>
         <span className='navigation-link-separator' />
         <a href='#'>Locations</a>
