@@ -3,23 +3,21 @@
   width: 100vw;
   height: 100vh;
 
+  @include max-width-screen('xl');
+
   @include screen('sm') {
-    @include fixed-ratio(16, 9);
-    height: unset;
+    height: auto;
   }
 
   .video-hero-wrapper {
-    position: absolute;
     width: 100%;
     height: 100%;
   }
 
   video,
   .video-hero-overlay {
-    position: absolute;
     width: 100%;
     height: 100%;
-    z-index: -1;
   }
 
   video {
@@ -28,13 +26,23 @@
 
   .video-hero-overlay {
     @include overlay('medium');
+    @include fixed-ratio(16, 9);
+
+    position: absolute;
+    top: 0;
   }
 
   .video-hero-content {
+    position: absolute;
+    top: 0;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
+
     height: 100%;
+    width: 100%;
+
     color: color('white');
     text-align: center;
 

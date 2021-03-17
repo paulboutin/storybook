@@ -1,21 +1,24 @@
 .dropdown-hero {
   position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
 
+  @include max-width-screen('xl');
+
   @include screen('sm') {
-    @include fixed-ratio(16, 9);
-    height: unset;
+    height: auto;
   }
 
   .dropdown-hero-content {
+    position: absolute;
+    top: 0;
+
+    height: 100%;
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 
     @include screen('sm') {
       padding: 0 spacing(24);
@@ -28,7 +31,6 @@
 
   .dropdown-hero-img,
   .dropdown-hero-overlay {
-    position: absolute;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -40,16 +42,22 @@
 
   .dropdown-hero-overlay {
     @include overlay('medium');
+    @include fixed-ratio(16, 9);
+
+    position: absolute;
+    top: 0;
   }
 
   .dropdown-hero-title {
+    height: 50%;
+    display: flex;
+    align-items: flex-end;
+
     color: color('white');
     text-align: center;
   }
 
   .dropdown-hero-dropdown {
-    position: absolute;
-    top: 100%;
     width: spacing(160) + spacing(64);
     margin-top: spacing(24);
 

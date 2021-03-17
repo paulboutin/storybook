@@ -1,11 +1,17 @@
 import React from 'react'
 import Dropdown from '../base/Dropdown'
+import Image from '../base/Image'
 
 export const defaultTitle = 'We stand with your small business'
 
 const DropdownHero = ({ image, items, title = defaultTitle }) => (
   <section className='dropdown-hero'>
-    <img src={image} alt='Hero image' className='dropdown-hero-img' />
+    <Image
+      src={image}
+      alt='Hero image'
+      className='dropdown-hero-img'
+      ratio='16:9'
+    />
     <div className='dropdown-hero-overlay' />
 
     <div className='dropdown-hero-content container'>
