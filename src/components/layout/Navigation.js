@@ -17,7 +17,7 @@ const NavigationBanner = () => (
       </div>
 
       <div className='navigation-banner-notice'>
-        {navigation.notices.map(({ href, text }, idx) => (
+        {navigation.banner.notices.map(({ href, text }, idx) => (
           <a
             className={classNames('navigation-banner-notice-item', {
               'current active': idx === 0
@@ -31,11 +31,14 @@ const NavigationBanner = () => (
       </div>
 
       <div className='navigation-banner-links'>
-        <a href='#'>Help Center</a>
-        <span className='navigation-link-separator' />
-        <a href='#'>Locations</a>
-        <span className='navigation-link-separator' />
-        <a href='#'>Search</a>
+        {navigation.banner.links.map(({ href, text }, idx, arr) => (
+          <React.Fragment key={idx}>
+            <a href={href}>{text}</a>
+            {idx + 1 < arr.length && (
+              <span className='navigation-link-separator' />
+            )}
+          </React.Fragment>
+        ))}
       </div>
     </div>
   </header>
@@ -102,6 +105,32 @@ const DesktopNavigationDropdowns = () => {
   // renders navigation dropdowns for Desktop.
   // renders one dropdown-section for each category, with corresponding Promo.
 
+  const NavigationColumns = ({ items }) => {
+    const { maxPerColumn } = navigation.config.dropdowns
+
+    const left = items.slice(0, maxPerColumn)
+    const right = items.slice(maxPerColumn)
+
+    return (
+      <>
+        <div className='navigation-dropdown-column flex-content'>
+          {left.map(({ href, text }, idx) => (
+            <a key={idx} href={href} className='navigation-dropdown-item'>
+              {text}
+            </a>
+          ))}
+        </div>
+        <div className='navigation-dropdown-column flex-content'>
+          {right.map(({ href, text }, idx) => (
+            <a key={idx} href={href} className='navigation-dropdown-item'>
+              {text}
+            </a>
+          ))}
+        </div>
+      </>
+    )
+  }
+
   return (
     <div className='navigation-dropdowns'>
       <div className='navigation-container'>
@@ -117,15 +146,7 @@ const DesktopNavigationDropdowns = () => {
                 id={`dropdown-${category.id}-${product.id}`}
                 className='navigation-dropdown'
               >
-                {product.items.map(({ text, href }, itemIndex) => (
-                  <a
-                    key={itemIndex}
-                    href={href}
-                    className='navigation-dropdown-item'
-                  >
-                    {text}
-                  </a>
-                ))}
+                <NavigationColumns items={product.items} />
               </div>
             ))}
             {Promo && <Promo />}
@@ -204,8 +225,13 @@ const MobileNavigationMenus = () => {
             required
           />
 
-          <Link href='#'>Forgot password</Link>
-          <Button link href='#' type='primary' label='Sign In' />
+          <Link href={navigation.config.auth.forgot}>Forgot password</Link>
+          <Button
+            link
+            href={navigation.config.auth.signIn}
+            type='primary'
+            label='Sign In'
+          />
           <div className='navigation-divider' />
           <Link href='#' standalone>
             Open an Account
@@ -307,7 +333,12 @@ const Navigation = () => {
                 </div>
               ))}
             </div>
-            <Button type='primary' label='Sign In' link href='#' />
+            <Button
+              type='primary'
+              label='Sign In'
+              link
+              href={navigation.config.auth.signIn}
+            />
           </div>
         </div>
       </header>

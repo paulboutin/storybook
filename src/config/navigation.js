@@ -3,20 +3,45 @@ import Button from '../components/base/Button'
 import { NavigationPromo } from '../components/layout/Navigation'
 
 const navigation = {
-  notices: [
-    {
-      href: '#1-percent',
-      text: 'Learn about our new 1% for the planet account'
+  config: {
+    dropdowns: {
+      maxPerColumn: 7
     },
-    {
-      href: '#covid',
-      text: 'Learn more about our COVID-19 Response'
-    },
-    {
-      href: '#lorem',
-      text: 'Lorem ipsum dolor sit amet'
+    auth: {
+      signIn: '#',
+      forgot: '#'
     }
-  ],
+  },
+  banner: {
+    notices: [
+      {
+        href: '#1-percent',
+        text: 'Learn about our new 1% for the planet account'
+      },
+      {
+        href: '#covid',
+        text: 'Learn more about our COVID-19 Response'
+      },
+      {
+        href: '#lorem',
+        text: 'Lorem ipsum dolor sit amet'
+      }
+    ],
+    links: [
+      {
+        href: '#',
+        text: 'Help Center'
+      },
+      {
+        href: '#',
+        text: 'Locations'
+      },
+      {
+        href: '#',
+        text: 'Search'
+      }
+    ]
+  },
   categories: [
     {
       name: 'Personal',

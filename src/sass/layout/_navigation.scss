@@ -263,8 +263,6 @@ body.navigation-open {
 
     .navigation-dropdown {
       display: none;
-      flex-direction: column;
-      align-items: flex-start;
 
       padding: spacing(24);
       width: percentage(2/3);
@@ -275,6 +273,10 @@ body.navigation-open {
 
       &.navigation-dropdown-active {
         display: flex;
+      }
+
+      .navigation-dropdown-column {
+        width: 50%;
       }
 
       .navigation-dropdown-item {
