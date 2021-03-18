@@ -20,9 +20,9 @@ const SearchBox = ({ placeholder, action, method }) => {
 
 const SearchHero = ({ eyebrow = {}, title, text, placeholder, background }) => {
   return (
-    <section className='search-hero container'>
-      <div className='search-hero-wrapper row'>
-        <Image className='search-hero-image' src={background} />
+    <section className='search-hero'>
+      <div className='search-hero-wrapper'>
+        <Image className='search-hero-image container' src={background} />
         <article className='search-hero-card'>
           {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
           <p className='text-h2 font-display'>{title}</p>
