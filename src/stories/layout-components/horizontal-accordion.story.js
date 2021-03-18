@@ -23,7 +23,7 @@ export const HorizontalAccordion = () => {
       title: text('Title', defaultColumn.title, prefix),
       text: text('Text', defaultColumn.text, prefix),
       image: text('Image', defaultColumn.image, prefix),
-      Content: defaultColumn.Content
+      content: text('Content', defaultColumn.content, prefix)
     })
   }
 
