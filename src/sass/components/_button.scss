@@ -22,6 +22,14 @@
   &:disabled {
     cursor: not-allowed;
   }
+
+  &.fullwidth-xs {
+    width: 100%;
+
+    @include screen('sm') {
+      width: auto;
+    }
+  }
 }
 
 .button-icon {

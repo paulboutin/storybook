@@ -246,7 +246,7 @@ function desktopSetup(navigation) {
   categories.forEach(category => {
     const subheader = navigation.querySelector(category.dataset.subheader)
 
-    category.addEventListener('click', () => {
+    category.addEventListener('mouseenter', () => {
       const activeCategory = navigation.querySelector(
         '.navigation-header-category-active'
       )

@@ -179,6 +179,10 @@ body.navigation-open {
       white-space: nowrap;
     }
 
+    .navigation-header-category-current {
+      color: color('green-dark');
+    }
+
     .navigation-header-category-active {
       color: color('green');
     }

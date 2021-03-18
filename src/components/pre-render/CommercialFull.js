@@ -15,7 +15,11 @@ import Footer from '../layout/Footer'
 const Commercial = ({ imgPath, sticky }) => {
   return (
     <>
-      <Navigation sticky={sticky} />
+      <Navigation
+        sticky={sticky}
+        imgPath={imgPath}
+        currentCategory='commercial'
+      />
       <CommercialHeroPartial imgPath={imgPath} />
       <CommercialDifferentiatorsPartial imgPath={imgPath} />
       <CommercialInfographicPartial imgPath={imgPath} />

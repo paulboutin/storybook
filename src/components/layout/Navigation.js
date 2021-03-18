@@ -6,8 +6,9 @@ import Input from '../base/Input'
 import Link from '../base/Link'
 import Accordion from '../base/Accordion'
 import navigation from '../../config/navigation'
+import { prefixImagePath } from '../../utils'
 
-const NavigationBanner = () => (
+const NavigationBanner = ({ banner }) => (
   // renders top banner (dark green)
   <header className='navigation-banner'>
     <div className='container'>
@@ -17,7 +18,7 @@ const NavigationBanner = () => (
       </div>
 
       <div className='navigation-banner-notice'>
-        {navigation.banner.notices.map(({ href, text }, idx) => (
+        {banner.notices.map(({ href, text }, idx) => (
           <a
             className={classNames('navigation-banner-notice-item', {
               'current active': idx === 0
@@ -31,7 +32,7 @@ const NavigationBanner = () => (
       </div>
 
       <div className='navigation-banner-links'>
-        {navigation.banner.links.map(({ href, text }, idx, arr) => (
+        {banner.links.map(({ href, text }, idx, arr) => (
           <React.Fragment key={idx}>
             <a href={href}>{text}</a>
             {idx + 1 < arr.length && (
@@ -44,19 +45,22 @@ const NavigationBanner = () => (
   </header>
 )
 
-const DesktopNavigationCategories = () => {
+const DesktopNavigationCategories = ({ categories, current }) => {
   // renders desktop version of navigation menus (header categories and products bars)
   // if category is a directLink, does not render product submenu, and renders link as <a> tag
 
   return (
     <div className='navigation-header-categories'>
-      {navigation.categories.map((category, categoryIndex) => {
-        if (category.directLink) {
+      {categories.map((category, categoryIndex) => {
+        if (!category.products.length) {
           return (
             <a
               key={categoryIndex}
-              className='navigation-header-category'
-              href={category.directLink}
+              className={classNames('navigation-header-category', {
+                'navigation-header-category-current': category.id === current,
+                'navigation-header-category-active': category.id === current
+              })}
+              href={category.link}
             >
               {category.name}
             </a>
@@ -65,20 +69,22 @@ const DesktopNavigationCategories = () => {
 
         return (
           <React.Fragment key={categoryIndex}>
-            <div
+            <a
               data-cta-action={`#cta-${category.id}`}
               data-subheader={`#subheader-${category.id}`}
               className={classNames('navigation-header-category', {
-                'navigation-header-category-active': categoryIndex === 0
+                'navigation-header-category-current': category.id === current,
+                'navigation-header-category-active': category.id === current
               })}
+              href={category.link}
             >
               {category.name}
-            </div>
+            </a>
 
             <header
               id={`subheader-${category.id}`}
               className={classNames('navigation-header-products', {
-                'navigation-header-products-active': categoryIndex === 0
+                'navigation-header-products-active': category.id === current
               })}
             >
               {category.products.map((product, productIndex) => (
@@ -101,12 +107,12 @@ const DesktopNavigationCategories = () => {
   )
 }
 
-const DesktopNavigationDropdowns = () => {
+const DesktopNavigationDropdowns = ({ categories, config }) => {
   // renders navigation dropdowns for Desktop.
   // renders one dropdown-section for each category, with corresponding Promo.
 
   const NavigationColumns = ({ items }) => {
-    const { maxPerColumn } = navigation.config.dropdowns
+    const { maxPerColumn } = config.dropdowns
 
     const left = items.slice(0, maxPerColumn)
     const right = items.slice(maxPerColumn)
@@ -134,7 +140,7 @@ const DesktopNavigationDropdowns = () => {
   return (
     <div className='navigation-dropdowns'>
       <div className='navigation-container'>
-        {navigation.categories.map(({ Promo, ...category }, categoryIndex) => (
+        {categories.map(({ Promo, ...category }, categoryIndex) => (
           <div
             key={categoryIndex}
             className='navigation-dropdown-section'
@@ -157,10 +163,10 @@ const DesktopNavigationDropdowns = () => {
   )
 }
 
-const MobileNavigationMenus = () => {
+const MobileNavigationMenus = ({ categories, links, config }) => {
   // renders navigation menus for Mobile devices.
   // TODO: renders only first CTA it finds.
-  const CTA = navigation.categories.find(category => category.CTA).CTA
+  const CTA = categories.find(category => category.CTA).CTA
 
   return (
     <div className='navigation-menus'>
@@ -175,7 +181,7 @@ const MobileNavigationMenus = () => {
             />
           </div>
 
-          {navigation.categories.map((category, index) => {
+          {categories.map((category, index) => {
             if (category.directLink)
               return (
                 <div key={index} className='navigation-main-menu-category'>
@@ -198,7 +204,7 @@ const MobileNavigationMenus = () => {
 
           <div className='navigation-divider' />
 
-          {navigation.links.map(({ text, href }, index) => (
+          {links.map(({ text, href }, index) => (
             <div key={index} className='navigation-main-menu-link'>
               <a href={href}>{text}</a>
             </div>
@@ -225,21 +231,21 @@ const MobileNavigationMenus = () => {
             required
           />
 
-          <Link href={navigation.config.auth.forgot}>Forgot password</Link>
+          <Link href={config.auth.forgot}>Forgot password</Link>
           <Button
             link
-            href={navigation.config.auth.signIn}
+            href={config.auth.signIn}
             type='primary'
             label='Sign In'
           />
           <div className='navigation-divider' />
-          <Link href='#' standalone>
+          <Link href={config.auth.open} standalone>
             Open an Account
           </Link>
         </div>
       </aside>
 
-      {navigation.categories.map((category, categoryIndex) => {
+      {categories.map((category, categoryIndex) => {
         if (category.directLink) return null
 
         return (
@@ -290,11 +296,15 @@ export const NavigationPromo = ({
   )
 }
 
-const Navigation = () => {
+const Navigation = ({ imgPath = '/img', currentCategory }) => {
   // main Navigation component
+  const nav = navigation(imgPath)
+
+  if (!currentCategory) currentCategory = nav.categories[0].id
+
   return (
     <nav className='navigation navigation-subheader-visible sticky'>
-      <NavigationBanner />
+      <NavigationBanner banner={nav.banner} />
 
       <header className='navigation-header'>
         <div className='container'>
@@ -311,17 +321,23 @@ const Navigation = () => {
 
           <a href='/'>
             <img
-              src='/img/logo.svg'
+              src={prefixImagePath({
+                prefix: imgPath,
+                src: 'logo.svg'
+              })}
               alt='Bank of the West logo'
               className='navigation-logo'
             />
           </a>
 
-          <DesktopNavigationCategories />
+          <DesktopNavigationCategories
+            categories={nav.categories}
+            current={currentCategory}
+          />
 
           <div className='navigation-header-buttons'>
             <div className='navigation-header-cta-actions'>
-              {navigation.categories.map(({ CTA, ...category }, idx) => (
+              {nav.categories.map(({ CTA, ...category }, idx) => (
                 <div
                   key={idx}
                   id={`cta-${category.id}`}
@@ -337,15 +353,22 @@ const Navigation = () => {
               type='primary'
               label='Sign In'
               link
-              href={navigation.config.auth.signIn}
+              href={nav.config.auth.signIn}
             />
           </div>
         </div>
       </header>
 
-      <DesktopNavigationDropdowns />
+      <DesktopNavigationDropdowns
+        categories={nav.categories}
+        config={nav.config}
+      />
 
-      <MobileNavigationMenus />
+      <MobileNavigationMenus
+        categories={nav.categories}
+        config={nav.config}
+        links={nav.links}
+      />
     </nav>
   )
 }

@@ -7,7 +7,7 @@ const CommercialClosingCTAPartial = () => {
     <ClosingCTA
       type='standard'
       className='closing-cta-white'
-      title='Connect with an Relationship Manager'
+      title='Connect with a Relationship Manager'
     >
       <div className='flex-content centered'>
         <Button

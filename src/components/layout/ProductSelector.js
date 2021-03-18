@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
-import Link from '../base/Link'
 import Highlight from './Highlight'
 
 const ProductSelector = ({ items, headline }) => {
@@ -37,15 +36,19 @@ const ProductSelector = ({ items, headline }) => {
               active: idx === 0
             })}
           >
-            {button && (
-              <Button
-                type='primary'
-                label={button.text}
-                link={!!button.href}
-                {...(button.href ? { href: button.href } : {})}
-              />
-            )}
-            {cta && <Link href={cta.href}>{cta.text}</Link>}
+            <div className='product-selector-actions'>
+              {button && (
+                <Button
+                  type='primary'
+                  label={button.text}
+                  link
+                  href={button.href}
+                />
+              )}
+              {cta && (
+                <Button type='tertiary' link href={cta.href} label={cta.text} />
+              )}
+            </div>
           </Highlight>
         ))}
       </div>

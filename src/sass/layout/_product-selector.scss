@@ -66,6 +66,14 @@
     }
   }
 
+  .product-selector-actions {
+    display: flex;
+
+    :not(:last-child) {
+      margin-right: spacing(16);
+    }
+  }
+
   .product-selector-items {
     display: flex;
     position: relative;

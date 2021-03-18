@@ -3,7 +3,7 @@ export default () => {
 
   carousels.forEach(carousel => {
     new Splide(carousel, {
-      easing: 'cubic-bezier(0.5, 0, 0.75, 0)',
+      easing: 'cubic-bezier(0.65,0.05,0.36,1)',
       speed: 450,
       perMove: 1,
       perPage: 3,

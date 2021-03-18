@@ -46,8 +46,8 @@ const items = prefix => [
   {
     type: 'standard',
     tag: 'Global Finance',
-    heading: 'Six Keys to Remove Treasury Management',
-    subtext: '2 minutes read',
+    heading: 'Pandemic Accelerates Change in U.S. Wine Business',
+    subtext: '1 minutes read',
     image: prefixImagePath({
       prefix,
       src: '/commercial/BOTW_Commercial_Articles_Pandemic-Accelerates.jpg'

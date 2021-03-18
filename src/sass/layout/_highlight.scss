@@ -69,6 +69,7 @@
     .highlight-content-wrapper {
       align-items: center;
       text-align: center;
+      width: 100%;
 
       .eyebrow {
         align-items: center;
@@ -77,6 +78,7 @@
       @include screen('sm') {
         text-align: left;
         align-items: flex-start;
+        width: auto;
 
         .eyebrow {
           align-items: flex-start;

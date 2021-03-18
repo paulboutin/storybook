@@ -15,7 +15,7 @@ import Footer from '../layout/Footer'
 const Retail = ({ imgPath, sticky }) => {
   return (
     <>
-      <Navigation sticky={sticky} />
+      <Navigation sticky={sticky} imgPath={imgPath} />
       <RetailHeroPartial imgPath={imgPath} />
       <RetailProductSelectorPartial imgPath={imgPath} />
       <RetailAppHighlightPartial imgPath={imgPath} />

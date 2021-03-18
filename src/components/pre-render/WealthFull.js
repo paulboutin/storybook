@@ -14,7 +14,7 @@ import Footer from '../layout/Footer'
 const WealthFull = ({ imgPath, sticky }) => {
   return (
     <>
-      <Navigation sticky={sticky} />
+      <Navigation sticky={sticky} imgPath={imgPath} currentCategory='wealth' />
       <WealthHeroPartial imgPath={imgPath} />
       <WealthDifferentiatorsPartial imgPath={imgPath} />
       <WealthExpertsHeroPartial imgPath={imgPath} />
