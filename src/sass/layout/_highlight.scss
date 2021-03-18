@@ -106,8 +106,6 @@
   }
 
   &.highlight-B {
-    @include max-width-screen('xl');
-
     @include screen('sm') {
       padding-left: 0;
     }

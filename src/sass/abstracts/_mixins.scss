@@ -86,7 +86,7 @@
 
   img {
     position: absolute;
-    width: 100%;
+    width: auto;
     height: 100%;
     object-fit: cover;
   }
@@ -120,13 +120,4 @@
 
 @mixin overlay($opacity) {
   background-color: rgba(color('black'), map-get($overlays, $opacity));
-}
-
-@mixin max-width-screen($size) {
-  margin-left: auto;
-  margin-right: auto;
-
-  @include screen($size) {
-    max-width: map-get($screens, $size);
-  }
 }

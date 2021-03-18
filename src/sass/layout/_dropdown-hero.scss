@@ -3,8 +3,6 @@
   width: 100vw;
   height: 100vh;
 
-  @include max-width-screen('xl');
-
   @include screen('sm') {
     height: auto;
   }

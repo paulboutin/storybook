@@ -1,8 +1,6 @@
 .hero {
   height: 100vh;
 
-  @include max-width-screen('xl');
-
   .hero-img {
     width: 100%;
     object-fit: cover;
