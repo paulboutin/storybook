@@ -166,7 +166,11 @@
       }
 
       .storytelling-text {
-        max-width: 60%;
+        max-width: 70%;
+
+        @include screen('lg') {
+          max-width: 80%;
+        }
       }
     }
 
