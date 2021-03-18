@@ -4,7 +4,7 @@ import classNames from 'classnames'
 export const ratios = ['auto', '4:3', '16:9', '1:1', '3:4', '9:16']
 
 const Image = ({
-  desktopLimit = true,
+  desktopLimit = false,
   src,
   alt,
   ratio = ratios[0],

@@ -284,7 +284,10 @@ body.navigation-open {
       }
 
       .navigation-dropdown-item {
-        @include font-size('xs');
+        // custom font size
+        font-size: 0.675rem;
+        line-height: 1.333;
+
         display: inline;
 
         border-bottom: 2px solid transparent;

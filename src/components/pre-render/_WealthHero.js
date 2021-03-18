@@ -13,7 +13,7 @@ const WealthHeroPartial = ({ imgPath = config.PRERENDER_IMAGE_PATH }) => {
   return (
     <Highlight
       className='centered'
-      type='A'
+      type='B'
       title={title}
       text={text}
       image={prefixImagePath({
