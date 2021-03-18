@@ -32,7 +32,7 @@ const ResourceLinksImageStory = ({ type }) => {
       reverse={reverse === 'left'}
       headline={headline}
       image={image}
-      items={items}
+      items={items.map(item => ({ text: item }))}
     />
   )
 }

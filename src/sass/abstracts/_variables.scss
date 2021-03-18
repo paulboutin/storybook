@@ -55,7 +55,8 @@ $screens: (
   xs: 480px,
   sm: 768px,
   md: 992px,
-  lg: 1200px
+  lg: 1200px,
+  xl: 1440px
 );
 
 $font-sizes: (
@@ -74,6 +75,10 @@ $font-sizes: (
   lg: (
     font-size: 1.125rem,
     line-height: 1.333
+  ),
+  cta: (
+    font-size: 3.5rem,
+    line-height: 1
   ),
   h1: (
     font-size: 2.25rem,

@@ -14,13 +14,16 @@ The code is organized as follows:
 
 ## Compiling
 
-Compiling this code for use in browsers is very simple using `webpack-cli`. No specific configurations are required.
+Compiling this code for use in browsers is very simple using `webpack-cli`.
+No specific configurations are required.
 
 You can read more about this package [here](https://github.com/webpack/webpack-cli/blob/master/packages/webpack-cli/README.md)
 
 To be able to generate a corresponding main.js:
 
-- Ensure `node` v.12 or later is installed with `npm` package manager.
+- Ensure `node` v.12 or later is installed with `npm` package manager. .icon {
+  color: color('white');
+  }
 - Run `npm install -g webpack webpack-cli` to install webpack globally.
 - Run `webpack --entry ./js/main.js -o ./path/to/output --mode production` to compile production-ready bundle.
 
@@ -28,13 +31,26 @@ A precompiled version is already included in the /bundles folder of this zipfile
 
 ## Component modules
 
-Each component module includes a default export of an executable function that targets _all_ components of the type via class name.
+Each component module includes a default export of an executable function that targets _all_
+components of the type via class name.
 
 Individual components may be deactivated by simply removing the function call from `main.js`
 
 - **accordion**
 
-  Implements expand/contract logic for accordion component
+  Implements expand/contract logic for accordion and storytelling (mobile)
+
+  Has an additional "toggle mode" where sibling accordions are automatically collapsed,
+  and the current accordion is scrolled into view. To enable mark each accordion with
+
+  ```html
+  <div class="accordion" data-toggle-mode="true">
+    ...
+  </div>
+  ```
+
+  Requires cross-browser support for smooth scroll behavior (toggle mode),
+  provided by `lib/smoothscroll-polyfill`
 
 - **alert**
 
@@ -44,7 +60,7 @@ Individual components may be deactivated by simply removing the function call fr
 
   Implements logic for article carousel component.
 
-  Includes support for swipe gestures via `lib/swiped-events`
+  Requires splide library, included as `lib/minified/splide`.
 
 - **comparison**
 
@@ -58,6 +74,10 @@ Individual components may be deactivated by simply removing the function call fr
 
   Implements logic for help center article viewer component.
 
+- **horizontal-accordion**
+
+  Implements additional logic for horizontal accordion (tablet/desktop)
+
 - **input**
 
   Implements logic for custom inputs.
@@ -68,7 +88,19 @@ Individual components may be deactivated by simply removing the function call fr
 
 - **popup-video**
 
-  Implements logic for popup-video components (both hero and article cards) via `lib/vimeo-player`
+  Implements logic for popup-video components (both hero and article cards) via `lib/minified/vimeo-player`
+
+  Can be configured via `dataset` attributes:
+
+  ```html
+  <section
+    class="popup-video"
+    data-popup-video-src="<vimeo source link>"
+    data-click-target="<css selector for video click trigger>"
+  >
+    ...
+  </section>
+  ```
 
 - **product-selector**
 
@@ -76,7 +108,7 @@ Individual components may be deactivated by simply removing the function call fr
 
   Includes support for swipe gestures via `lib/swiped-events`
 
-  Requires cross-browser support for smooth scroll behavior, provided by `lib/smoothscroll-polyfill`
+  Requires cross-browser support for smooth scroll behavior (tabs), provided by `lib/smoothscroll-polyfill`
 
 - **return-to-top**
 
@@ -86,15 +118,16 @@ Individual components may be deactivated by simply removing the function call fr
 
 - **slider**
 
-  Implements logic for pull quote and standard carousel components.
+  Implements logic for pull quote, standard carousel and closing cta carousel components.
 
   Includes support for swipe gestures via `lib/swiped-events`
 
-- **third-party link**
+* **third-party link**
 
   Implements logic for third-party popup. Detects external links via URL host matching.
 
-  Additional safe hosts may be included in the algorithm at compile-time by providing a list to the function call in `main.js`:
+  Additional safe hosts may be included in the algorithm at compile-time by providing a
+  list to the function call in `main.js`:
 
   ```js
   thirdPartyLink({
@@ -102,5 +135,5 @@ Individual components may be deactivated by simply removing the function call fr
   })
   ```
 
-  On clicking an external link, page navigation will be interrupted, and a popup will be dynamically generated with a
-  new link to the content.
+  On clicking an external link, page navigation will be interrupted, and a popup will be
+  dynamically generated with a new link to the content.

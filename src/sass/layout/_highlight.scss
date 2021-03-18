@@ -2,18 +2,34 @@
   display: flex;
   flex-direction: column;
 
-  padding-bottom: spacing(16);
-
   @include screen('sm') {
     flex-direction: row;
     align-items: center;
   }
 
+  .highlight-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
   .highlight-content-container {
-    padding-top: spacing(24);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
     @include screen('sm') {
-      padding-top: 0;
+      justify-content: center;
+      padding: spacing(24);
+    }
+
+    @include screen('md') {
+      padding: spacing(48);
+    }
+
+    @include screen('lg') {
+      padding: spacing(64);
     }
   }
 
@@ -29,6 +45,16 @@
     }
   }
 
+  &.margins {
+    margin-top: spacing(64);
+    margin-bottom: spacing(64);
+
+    @include screen('md') {
+      margin-top: spacing(128);
+      margin-bottom: spacing(128);
+    }
+  }
+
   &.reverse {
     @include screen('sm') {
       flex-direction: row-reverse;
@@ -37,16 +63,22 @@
 
   &.centered {
     .highlight-content-container {
-      display: flex;
-      flex-direction: column;
+      justify-content: center;
+    }
+
+    .highlight-content-wrapper {
       align-items: center;
+      text-align: center;
+      width: 100%;
 
       .eyebrow {
         align-items: center;
       }
 
       @include screen('sm') {
-        display: block;
+        text-align: left;
+        align-items: flex-start;
+        width: auto;
 
         .eyebrow {
           align-items: flex-start;
@@ -65,53 +97,28 @@
     }
 
     .highlight-content-container {
+      padding-top: spacing(16);
+
       @include screen('sm') {
-        padding-left: spacing(24);
-      }
-
-      @include screen('md') {
-        padding-left: spacing(48);
-      }
-
-      @include screen('lg') {
-        padding-left: spacing(128);
-      }
-    }
-
-    &.reverse {
-      .highlight-content-container {
-        @include screen('sm') {
-          padding-left: 0;
-          padding-right: spacing(24);
-        }
-
-        @include screen('md') {
-          padding-left: 0;
-          padding-right: spacing(48);
-        }
-
-        @include screen('lg') {
-          padding-left: 0;
-          padding-right: spacing(128);
-        }
+        padding-top: unset;
       }
     }
   }
 
   &.highlight-B {
+    @include screen('sm') {
+      padding-left: 0;
+    }
+
     .highlight-content-container {
       padding: spacing(16);
-
-      @include screen('sm') {
-        padding: spacing(24);
-      }
 
       @include screen('md') {
         padding: spacing(48);
       }
 
       @include screen('lg') {
-        padding-left: spacing(128);
+        padding: spacing(64);
       }
     }
   }

@@ -14,7 +14,7 @@ const ArticleStandard = ({
 }) => {
   return (
     <>
-      <Image src={image.src} alt={image.alt} ratio='16:9' />
+      <Image src={image} alt={heading} ratio='16:9' />
 
       <div className='card-content'>
         <a className='card-tag' href={tagHref}>
@@ -60,14 +60,16 @@ const ArticleVideo = ({
         <div className='popup-video-overlay' />
 
         <div className='popup-video-content'>
-          <Button type='primary' icon='play' />
+          <Button type='secondary' icon='play' />
         </div>
       </section>
 
       <div className='card-content'>
-        <a className='card-tag' href={tagHref}>
-          {tag}
-        </a>
+        {tag && (
+          <a className='card-tag' href={tagHref}>
+            {tag}
+          </a>
+        )}
         <span className='link link-standalone'>{heading}</span>
         <p className='card-subtext'>{subtext}</p>
       </div>
@@ -78,7 +80,7 @@ const ArticleVideo = ({
 const Services = ({ heading, image, href }) => {
   return (
     <>
-      <Image src={image.src} alt={image.alt} ratio='3:4' />
+      <Image src={image} alt={heading} ratio='3:4' />
 
       <div className='card-content'>
         <Link href={href} standalone noArrow>
@@ -103,6 +105,7 @@ const CardArticle = ({ type, ...props }) => {
       case 'video':
         return <ArticleVideo cardId={cardId} {...props} />
       case 'services':
+      case 'services-icon':
         return <Services {...props} />
       default:
         return null

@@ -43,25 +43,25 @@ const Carousel = ({ eyebrow, items }) => (
               </div>
             ))}
           </Slider>
-
-          <nav className='carousel-pagination-container'>
-            <Button
-              type='ghost'
-              icon='chevron-left'
-              className='carousel-prev-slide'
-            />
-
-            <span className='carousel-pagination' />
-
-            <Button
-              type='ghost'
-              icon='chevron-right'
-              className='carousel-next-slide'
-            />
-          </nav>
         </article>
       </div>
     </div>
+
+    <nav className='carousel-pagination-container'>
+      <Button
+        type='ghost'
+        icon='chevron-left'
+        className='carousel-prev-slide'
+      />
+
+      <span className='carousel-pagination' />
+
+      <Button
+        type='ghost'
+        icon='chevron-right'
+        className='carousel-next-slide'
+      />
+    </nav>
   </section>
 )
 

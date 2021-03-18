@@ -13,7 +13,15 @@ const VideoHero = ({
 }) => (
   <section className='video-hero'>
     <div className='video-hero-wrapper'>
-      <video src={video} poster={poster} autoPlay loop muted playsInline />
+      <video
+        className='ratio-16:9'
+        src={video}
+        poster={poster}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
       <div className='video-hero-overlay' />
 
       <div className='video-hero-content container'>

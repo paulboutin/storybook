@@ -120,10 +120,6 @@
       right: unset;
       bottom: 0;
     }
-
-    @include screen('lg') {
-      bottom: spacing(32);
-    }
   }
 
   .pull-quote-pagination {

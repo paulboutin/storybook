@@ -4,3 +4,7 @@ export function slugify(string) {
     .replace(/\s/g, '-')
     .toLowerCase()
 }
+
+export function prefixImagePath({ prefix, src }) {
+  return [prefix.replace(/\/$/, ''), src.replace(/^\//, '')].join('/')
+}

@@ -43,7 +43,7 @@ const PullQuote = ({ items }) => (
 
           <nav className='pull-quote-pagination-container'>
             <Button
-              type='secondary'
+              type='tertiary'
               icon='chevron-left'
               className='pull-quote-prev-slide'
             />
@@ -51,7 +51,7 @@ const PullQuote = ({ items }) => (
             <span className='pull-quote-pagination' />
 
             <Button
-              type='secondary'
+              type='tertiary'
               icon='chevron-right'
               className='pull-quote-next-slide'
             />

@@ -5,15 +5,17 @@
   @include font-size('sm');
 
   .dropdown-native-group {
-    cursor: pointer;
+    background-color: color(white);
     position: relative;
     display: flex;
     align-items: center;
+    z-index: 1;
 
     .icon {
       position: absolute;
       right: spacing(12);
       color: color('green');
+      z-index: -1;
     }
 
     &.dropdown-native-inline {
@@ -26,7 +28,7 @@
 
       .icon {
         position: relative;
-        margin-left: -#{spacing(12)};
+        margin-left: -#{spacing(8)};
         bottom: -#{spacing(2)};
       }
     }
@@ -54,13 +56,13 @@
   .dropdown-native {
     @include border-radius('md');
     border: 1px solid color('grey-30');
+    cursor: pointer;
 
     font-size: inherit;
     line-height: inherit;
 
-    background-color: color('white');
-    padding: 16px;
-    padding-right: 40px;
+    background-color: transparent;
+    padding: 16px 48px 16px 16px;
 
     -moz-appearance: none;
     -webkit-appearance: none;

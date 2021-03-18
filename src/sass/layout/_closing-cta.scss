@@ -1,6 +1,5 @@
 .closing-cta {
   position: relative;
-  color: color('white');
   text-align: center;
 
   .container {
@@ -20,10 +19,28 @@
   }
 }
 
+.closing-cta-bgi {
+  color: color('white');
+}
+
 .closing-cta-standard {
   background-color: color('green');
 
+  &:not(.closing-cta-white) {
+    color: color('white');
+
+    .link {
+      color: inherit;
+    }
+  }
+
+  &.closing-cta-white {
+    background-color: color('white');
+    color: color('black');
+  }
+
   &.closing-cta-star-birds {
+    background-color: color('green');
     .container {
       @include star-birds('light');
       background-position: left center;

@@ -1,40 +1,34 @@
 .legal {
-  @include font-size('xs');
-  padding-top: spacing(48);
-  padding-bottom: spacing(48);
+  margin: spacing(16) spacing(16) 0;
+  padding: spacing(24) 0;
+
+  border-top: 1px solid color('grey-10');
 
   .legal-heading {
-    margin-bottom: spacing(32);
+    margin-bottom: spacing(24);
   }
 
   .legal-list {
     list-style-type: none;
     counter-reset: item;
+    padding-left: spacing(16);
   }
 
   .legal-list-item {
     position: relative;
+    @include font-size('sm');
 
     &:before {
       content: counter(item);
       counter-increment: item;
       position: absolute;
-      left: -#{spacing(12)};
-      color: color('grey-70');
-      font-size: 0.5rem;
-      line-height: 1.625;
+      top: -#{spacing(4)};
+      left: -#{spacing(16)};
+      color: color('green');
     }
 
     &:not(:last-child) {
       margin-bottom: spacing(24);
-    }
-
-    @include screen('sm') {
-      padding-left: spacing(16);
-
-      &:before {
-        left: 0;
-      }
     }
   }
 }

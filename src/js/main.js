@@ -11,6 +11,7 @@ import returnToTop from './components/return-to-top'
 import cardCarousel from './components/card-carousel'
 import productSelector from './components/product-selector'
 import thirdPartyLink from './components/third-party-link'
+import horizontalAccordion from './components/horizontal-accordion'
 import './lib'
 
 function ready(fn) {
@@ -39,6 +40,7 @@ function setup() {
     cardCarousel()
     productSelector()
     thirdPartyLink()
+    horizontalAccordion()
   })
 }
 

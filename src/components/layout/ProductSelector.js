@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
-import Link from '../base/Link'
 import Highlight from './Highlight'
 
 const ProductSelector = ({ items, headline }) => {
@@ -14,7 +13,7 @@ const ProductSelector = ({ items, headline }) => {
             key={idx}
             data-index={idx}
             className={classNames('product-selector-tab', {
-              active: idx === 0
+              'current active': idx === 0
             })}
           >
             <span className='product-selector-tab-wrapper'>{tab}</span>
@@ -28,16 +27,28 @@ const ProductSelector = ({ items, headline }) => {
             key={idx}
             type='B'
             image={image}
+            imageAlt={title}
             title={title}
             text={text}
             reverse
             container={false}
-            className={classNames('product-selector-item', {
+            className={classNames('product-selector-item centered', {
               active: idx === 0
             })}
           >
-            {button && <Button type='primary' label={button} />}
-            {cta && <Link>{cta}</Link>}
+            <div className='product-selector-actions'>
+              {button && (
+                <Button
+                  type='primary'
+                  label={button.text}
+                  link
+                  href={button.href}
+                />
+              )}
+              {cta && (
+                <Button type='tertiary' link href={cta.href} label={cta.text} />
+              )}
+            </div>
           </Highlight>
         ))}
       </div>

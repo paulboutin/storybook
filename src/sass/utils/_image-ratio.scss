@@ -11,3 +11,19 @@
     @include fixed-ratio($horizontal, $vertical);
   }
 }
+
+.rounded {
+  img {
+    border-radius: 100%;
+  }
+}
+
+.desktop-size-limit {
+  @include screen('lg') {
+    max-height: 80vh;
+  }
+
+  img {
+    width: auto;
+  }
+}

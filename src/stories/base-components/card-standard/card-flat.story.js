@@ -1,7 +1,7 @@
 import React from 'react'
 import { CardStory } from './card'
 
-export const Flat = () => <CardStory type='flat' className='card-flat' />
+export const FlatCard = () => <CardStory type='flat' className='card-flat' />
 
 export default {
   title: 'Base Components/Card',

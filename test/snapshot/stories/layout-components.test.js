@@ -11,7 +11,7 @@ describe('Layout Components', () => {
       path: `layout-components-content-list--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    ...['standard', 'background-image'].map(type => ({
+    ...['standard', 'background-image', 'carousel'].map(type => ({
       title: `closing-cta ${type}`,
       path: `layout-components-closing-cta--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
@@ -46,14 +46,14 @@ describe('Layout Components', () => {
       path: `layout-components-form--${type}`,
       devices: ['mobile']
     })),
-    {
-      title: 'infographic',
-      path: 'layout-components--infographic-story',
+    ...['standard', 'alternate'].map(type => ({
+      title: `infographic ${type}`,
+      path: `layout-components-infographic--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
-    },
+    })),
     {
       title: 'pull-quote',
-      path: 'layout-components--pull-quote-story',
+      path: 'layout-components--pull-quote',
       devices: ['mobile', 'tablet']
     },
     {
@@ -68,32 +68,32 @@ describe('Layout Components', () => {
       title: 'dropdown-hero',
       path: 'layout-components-hero--dropdown-hero-story'
     },
+    {
+      title: 'search-hero',
+      path: 'layout-components-hero--search',
+      devices: ['mobile', 'desktop']
+    },
     ...['standard', 'a', 'b'].map(type => ({
       title: `resource-links ${type}`,
       path: `layout-components-resource-links--resource-links-${type}`,
       devices: ['mobile', 'tablet']
     })),
-    ...['standard', 'editorial'].map(type => ({
+    ...['single', 'editorial'].map(type => ({
       title: `carousel ${type}`,
       path: `layout-components-carousels--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    // {
-    //   title: 'footer',
-    //   path: 'layout-components--footer-story',
-    //   fullPage: true,
-    //   devices: ['tablet', 'desktop']
-    // },
-    // {
-    //   title: 'footer',
-    //   path: 'layout-components--footer-story',
-    //   devices: ['mobile'],
-    //   callback: async () => {
-    //     await page.click('.accordion:first-of-type')
-    //     await page.click('.accordion:last-of-type')
-    //     await page.waitForTransition('.accordion-content')
-    //   }
-    // },
+    {
+      title: 'footer',
+      path: 'layout-components--footer-story',
+      fullPage: true,
+      devices: ['tablet', 'desktop']
+    },
+    {
+      title: 'footer',
+      path: 'layout-components--footer-story',
+      devices: ['mobile']
+    },
     {
       title: 'navigation main menu',
       path: 'layout-components--navigation-story',
@@ -178,6 +178,11 @@ describe('Layout Components', () => {
     {
       title: 'product-selector',
       path: 'layout-components--product-selector-story',
+      devices: ['mobile', 'desktop']
+    },
+    {
+      title: 'storytelling',
+      path: 'layout-components--horizontal-accordion',
       devices: ['mobile', 'desktop']
     }
   ]

@@ -64,7 +64,7 @@ export const ComparisonCards = ({ style, image }) => (
           </p>
         </div>
         <Button
-          type={style === 'branded' ? 'tertiary' : 'primary'}
+          type={style === 'branded' ? 'secondary' : 'primary'}
           label='Apply Now'
           link
         />

@@ -5,6 +5,7 @@
 @import 'lib/bootstrap-grid';
 @import 'lib/icomoon';
 @import 'lib/hamburgers/index';
+@import 'lib/splide';
 
 @import 'base/reset';
 @import 'base/fonts';
@@ -23,6 +24,7 @@
 @import 'components/dropdown';
 @import 'components/dropdown-native';
 @import 'components/eyebrow';
+@import 'components/flex-content';
 @import 'components/image-overlap';
 @import 'components/input';
 @import 'components/link';
@@ -33,10 +35,12 @@
 @import 'components/switch';
 @import 'components/table';
 
+@import 'layout/article-highlight';
 @import 'layout/callout';
 @import 'layout/card-carousel';
 @import 'layout/carousel';
 @import 'layout/closing-cta';
+@import 'layout/closing-cta-carousel';
 @import 'layout/column-cards';
 @import 'layout/column-icons';
 @import 'layout/comparison';
@@ -47,7 +51,9 @@
 @import 'layout/help-intro';
 @import 'layout/hero';
 @import 'layout/highlight';
-@import 'layout/infographic';
+@import 'layout/horizontal-accordion';
+@import 'layout/infographic-alt';
+@import 'layout/infographic-standard';
 @import 'layout/lead-form';
 @import 'layout/legal';
 @import 'layout/list-element';
@@ -58,6 +64,8 @@
 @import 'layout/pull-quote';
 @import 'layout/resource-links';
 @import 'layout/resource-links-image';
+@import 'layout/retail-affiliate';
+@import 'layout/search-hero';
 @import 'layout/video-hero';
 
 @import 'pages/account-disclosure';

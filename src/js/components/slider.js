@@ -84,19 +84,19 @@ export default async () => {
       : 0
     let currentSlide = 1
 
-    updatePagination(pagination, currentSlide, totalSlides)
+    if (pagination) updatePagination(pagination, currentSlide, totalSlides)
 
     const handlePrev = () => {
       currentSlide--
       if (currentSlide < 1) currentSlide = totalSlides
-      updatePagination(pagination, currentSlide, totalSlides)
+      if (pagination) updatePagination(pagination, currentSlide, totalSlides)
       sliders.forEach(slider => slide(slider, currentSlide, -1))
     }
 
     const handleNext = () => {
       currentSlide++
       if (currentSlide > totalSlides) currentSlide = 1
-      updatePagination(pagination, currentSlide, totalSlides)
+      if (pagination) updatePagination(pagination, currentSlide, totalSlides)
       sliders.forEach(slider => slide(slider, currentSlide, 1))
     }
 

@@ -52,20 +52,25 @@ export const defaultItems = [
 const CardCarousel = ({ items = [] }) => {
   return (
     <section className='card-carousel'>
-      <div className='card-carousel-wrapper container'>
-        <div className='card-carousel-items'>
-          {items.map((item, idx) => (
-            <div key={idx} className='card-carousel-item'>
-              <CardArticle {...item} />
-            </div>
-          ))}
+      <div className='card-carousel-wrapper container splide'>
+        <div className='splide__arrows'>
+          <button className='card-carousel-prev card-carousel-control splide__arrow--prev splide__arrow '>
+            <i className='icon icon-chevron-left' />
+          </button>
+          <button className='card-carousel-next card-carousel-control splide__arrow--next splide__arrow '>
+            <i className='icon icon-chevron-right' />
+          </button>
         </div>
-        <span className='card-carousel-control card-carousel-prev hidden'>
-          <i className='icon icon-chevron-left' />
-        </span>
-        <span className='card-carousel-control card-carousel-next'>
-          <i className='icon icon-chevron-right' />
-        </span>
+
+        <div className='card-carousel-items splide__track'>
+          <div className='splide__list'>
+            {items.map((item, idx) => (
+              <div key={idx} className='card-carousel-item splide__slide'>
+                <CardArticle {...item} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   )

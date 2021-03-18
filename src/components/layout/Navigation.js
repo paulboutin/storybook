@@ -1,187 +1,310 @@
 import React from 'react'
 import classNames from 'classnames'
 import Button from '../base/Button'
+import Image from '../base/Image'
 import Input from '../base/Input'
 import Link from '../base/Link'
 import Accordion from '../base/Accordion'
-import AppCTA from '../base/AppCTA'
+import navigation from '../../config/navigation'
+import { prefixImagePath } from '../../utils'
 
-const Navigation = () => {
-  const menu = {
-    categories: [
-      {
-        name: 'Personal',
-        id: 'personal',
-        products: [
-          {
-            name: 'Checking',
-            items: [
-              'Any Deposit Checking',
-              'Premier Checking',
-              'Debit Cards',
-              'Digital Services',
-              'Overdraft Program'
-            ]
-          },
-          {
-            name: 'Savings',
-            items: ['Saving Accounts', 'Certificate of Deposits', "IRA CD's"]
-          },
-          {
-            name: 'Credit Cards',
-            items: [
-              'Cash Back Card',
-              'Platinum Card',
-              'Secured Card',
-              'Rewards Program'
-            ]
-          },
-          {
-            name: 'Loans',
-            items: ['Car Loans', 'RV Loans', 'Boat Loans', 'Personal Loans']
-          },
-          {
-            name: 'Mortgages',
-            items: [
-              'Mortgage Options',
-              'Mortgage Calculators',
-              'Mortgage Tips',
-              'Service Assistance',
-              'Pay Online'
-            ]
-          }
-        ]
-      },
-      {
-        name: 'Small Business',
-        id: 'small-business',
-        products: [
-          {
-            name: 'Checking',
-            items: [
-              'Any Deposit for Business',
-              'Classic Business Checking',
-              'Choice Business Checking'
-            ]
-          },
-          {
-            name: 'Savings',
-            items: [
-              'Classic Business Savings',
-              'Business Money Market',
-              "Business CD's"
-            ]
-          },
-          {
-            name: 'Credit Cards',
-            items: ['Business Rewards Card', 'Business Mastercard']
-          },
-          {
-            name: 'Lending',
-            items: [
-              'Line of Credit',
-              'Term Loans',
-              'SBA Loans',
-              'Equipment Leasing',
-              'Real Estate Lending'
-            ]
-          },
-          {
-            name: 'Business Services',
-            items: [
-              'Treasury Management',
-              'Payroll Services',
-              'Merchant Services'
-            ]
-          }
-        ]
-      },
-      {
-        name: 'Commercial',
-        id: 'commercial',
-        products: [
-          {
-            name: 'Credit & Financing',
-            items: ['Lorem Ipsum']
-          },
-          {
-            name: 'Solutions',
-            items: ['Lorem Ipsum']
-          },
-          {
-            name: 'Treasury Management',
-            items: ['Lorem Ipsum']
-          },
-          {
-            name: 'International Banking',
-            items: ['Lorem Ipsum']
-          },
-          {
-            name: 'Industry Insights',
-            items: ['Lorem Ipsum']
-          }
-        ]
-      },
-      {
-        name: 'Wealth',
-        id: 'wealth',
-        products: [
-          {
-            name: 'Solutions',
-            items: [
-              'Planning',
-              'Investment',
-              'Lending & Credit',
-              'Deposit Solutions',
-              'Impact Solutions'
-            ]
-          },
-          {
-            name: 'Who we serve',
-            items: ['Individuals', 'Corporate']
-          },
-          {
-            name: 'Insights',
-            items: ['Lorem Ipsum']
-          }
-        ]
-      },
-      {
-        name: 'Insights',
-        id: 'insights',
-        products: [
-          {
-            name: 'Lorem Ipsum',
-            items: ['Lorem Ipsum']
-          }
-        ]
-      }
-    ],
-    links: ['Help Center', 'Locations', 'Search']
+const NavigationBanner = ({ banner }) => (
+  // renders top banner (dark green)
+  <header className='navigation-banner'>
+    <div className='container'>
+      <div className='navigation-banner-location'>
+        <i className='icon icon-location' />
+        California
+      </div>
+
+      <div className='navigation-banner-notice'>
+        {banner.notices.map(({ href, text }, idx) => (
+          <a
+            className={classNames('navigation-banner-notice-item', {
+              'current active': idx === 0
+            })}
+            key={idx}
+            href={href}
+          >
+            {text}
+          </a>
+        ))}
+      </div>
+
+      <div className='navigation-banner-links'>
+        {banner.links.map(({ href, text }, idx, arr) => (
+          <React.Fragment key={idx}>
+            <a href={href}>{text}</a>
+            {idx + 1 < arr.length && (
+              <span className='navigation-link-separator' />
+            )}
+          </React.Fragment>
+        ))}
+      </div>
+    </div>
+  </header>
+)
+
+const DesktopNavigationCategories = ({ categories, current }) => {
+  // renders desktop version of navigation menus (header categories and products bars)
+  // if category is a directLink, does not render product submenu, and renders link as <a> tag
+
+  return (
+    <div className='navigation-header-categories'>
+      {categories.map((category, categoryIndex) => {
+        if (!category.products.length) {
+          return (
+            <a
+              key={categoryIndex}
+              className={classNames('navigation-header-category', {
+                'navigation-header-category-current': category.id === current,
+                'navigation-header-category-active': category.id === current
+              })}
+              href={category.link}
+            >
+              {category.name}
+            </a>
+          )
+        }
+
+        return (
+          <React.Fragment key={categoryIndex}>
+            <a
+              data-cta-action={`#cta-${category.id}`}
+              data-subheader={`#subheader-${category.id}`}
+              className={classNames('navigation-header-category', {
+                'navigation-header-category-current': category.id === current,
+                'navigation-header-category-active': category.id === current
+              })}
+              href={category.link}
+            >
+              {category.name}
+            </a>
+
+            <header
+              id={`subheader-${category.id}`}
+              className={classNames('navigation-header-products', {
+                'navigation-header-products-active': category.id === current
+              })}
+            >
+              {category.products.map((product, productIndex) => (
+                <div
+                  key={productIndex}
+                  data-dropdown-section={`#dropdown-${category.id}`}
+                  data-dropdown-product={`#dropdown-${category.id}-${product.id}`}
+                  className='navigation-header-product'
+                >
+                  <span className='navigation-header-product-name'>
+                    {product.name}
+                  </span>
+                </div>
+              ))}
+            </header>
+          </React.Fragment>
+        )
+      })}
+    </div>
+  )
+}
+
+const DesktopNavigationDropdowns = ({ categories, config }) => {
+  // renders navigation dropdowns for Desktop.
+  // renders one dropdown-section for each category, with corresponding Promo.
+
+  const NavigationColumns = ({ items }) => {
+    const { maxPerColumn } = config.dropdowns
+
+    const left = items.slice(0, maxPerColumn)
+    const right = items.slice(maxPerColumn)
+
+    return (
+      <>
+        <div className='navigation-dropdown-column flex-content'>
+          {left.map(({ href, text }, idx) => (
+            <a key={idx} href={href} className='navigation-dropdown-item'>
+              {text}
+            </a>
+          ))}
+        </div>
+        <div className='navigation-dropdown-column flex-content'>
+          {right.map(({ href, text }, idx) => (
+            <a key={idx} href={href} className='navigation-dropdown-item'>
+              {text}
+            </a>
+          ))}
+        </div>
+      </>
+    )
   }
 
   return (
-    <nav className='navigation'>
-      <header className='navigation-banner'>
+    <div className='navigation-dropdowns'>
+      <div className='navigation-container'>
+        {categories.map(({ Promo, ...category }, categoryIndex) => (
+          <div
+            key={categoryIndex}
+            className='navigation-dropdown-section'
+            id={`dropdown-${category.id}`}
+          >
+            {category.products.map((product, productIndex) => (
+              <div
+                key={`${categoryIndex}-${productIndex}`}
+                id={`dropdown-${category.id}-${product.id}`}
+                className='navigation-dropdown'
+              >
+                <NavigationColumns items={product.items} />
+              </div>
+            ))}
+            {Promo && <Promo />}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+const MobileNavigationMenus = ({ categories, links, config }) => {
+  // renders navigation menus for Mobile devices.
+  // TODO: renders only first CTA it finds.
+  const CTA = categories.find(category => category.CTA).CTA
+
+  return (
+    <div className='navigation-menus'>
+      <aside className='navigation-menu navigation-main-menu'>
         <div className='container'>
-          <div className='navigation-banner-location'>
-            <i className='icon icon-location' />
-            California
+          <div className='navigation-main-menu-buttons'>
+            <CTA />
+            <Button
+              type='primary'
+              label='Sign In'
+              id='navigation-login-button'
+            />
           </div>
 
-          <div className='navigation-banner-notice hidden-xs'>
-            <a href='#'>Learn about our new 1% for the planet account</a>
-          </div>
+          {categories.map((category, index) => {
+            if (category.directLink)
+              return (
+                <div key={index} className='navigation-main-menu-category'>
+                  <a href={category.directLink}>{category.name}</a>
+                  <i className='icon icon-chevron-right' />
+                </div>
+              )
 
-          <div className='navigation-banner-links hidden-xs hidden-sm'>
-            <a href='#'>Help Center</a>
-            <span className='navigation-link-separator' />
-            <a href='#'>Locations</a>
-            <span className='navigation-link-separator' />
-            <a href='#'>Search</a>
-          </div>
+            return (
+              <div
+                key={index}
+                data-menu={`#menu-${category.id}`}
+                className='navigation-main-menu-category'
+              >
+                <span>{category.name}</span>
+                <i className='icon icon-chevron-right' />
+              </div>
+            )
+          })}
+
+          <div className='navigation-divider' />
+
+          {links.map(({ text, href }, index) => (
+            <div key={index} className='navigation-main-menu-link'>
+              <a href={href}>{text}</a>
+            </div>
+          ))}
         </div>
-      </header>
+      </aside>
+
+      <aside className='navigation-menu navigation-login-menu'>
+        <div className='container'>
+          <h2 className='navigation-login-title'>Sign In</h2>
+
+          <Input
+            id='navigation-login-username'
+            variant='outline'
+            type='text'
+            label='Username'
+            required
+          />
+          <Input
+            id='navigation-login-password'
+            variant='outline'
+            type='password'
+            label='Password'
+            required
+          />
+
+          <Link href={config.auth.forgot}>Forgot password</Link>
+          <Button
+            link
+            href={config.auth.signIn}
+            type='primary'
+            label='Sign In'
+          />
+          <div className='navigation-divider' />
+          <Link href={config.auth.open} standalone>
+            Open an Account
+          </Link>
+        </div>
+      </aside>
+
+      {categories.map((category, categoryIndex) => {
+        if (category.directLink) return null
+
+        return (
+          <aside
+            key={categoryIndex}
+            id={`menu-${category.id}`}
+            className='navigation-menu navigation-category-menu'
+          >
+            <div className='container'>
+              <div className='navigation-category-menu-header'>
+                <i className='navigation-category-menu-back icon icon-chevron-left' />
+                <div>{category.name}</div>
+              </div>
+
+              {category.products.map((product, productIndex) => (
+                <Accordion key={productIndex} title={product.name}>
+                  {product.items.map(({ text, href }, itemIndex) => (
+                    <div key={itemIndex}>
+                      <a href={href}>{text}</a>
+                    </div>
+                  ))}
+                </Accordion>
+              ))}
+            </div>
+          </aside>
+        )
+      })}
+    </div>
+  )
+}
+
+export const NavigationPromo = ({
+  image,
+  alt,
+  title,
+  text,
+  className,
+  children
+}) => {
+  // renders Promo element for category dropdowns (Desktop)
+  return (
+    <article className={classNames('navigation-promo', className)}>
+      {image && <Image src={image} alt={alt} ratio='16:9' />}
+      <p className='font-bold'>{title}</p>
+      <p className='text-sm'>{text}</p>
+      {children}
+    </article>
+  )
+}
+
+const Navigation = ({ imgPath = '/img', currentCategory }) => {
+  // main Navigation component
+  const nav = navigation(imgPath)
+
+  if (!currentCategory) currentCategory = nav.categories[0].id
+
+  return (
+    <nav className='navigation navigation-subheader-visible sticky'>
+      <NavigationBanner banner={nav.banner} />
 
       <header className='navigation-header'>
         <div className='container'>
@@ -198,178 +321,54 @@ const Navigation = () => {
 
           <a href='/'>
             <img
-              src='/img/logo.svg'
+              src={prefixImagePath({
+                prefix: imgPath,
+                src: 'logo.svg'
+              })}
               alt='Bank of the West logo'
               className='navigation-logo'
             />
           </a>
 
-          <div className='navigation-header-categories'>
-            {menu.categories.map((category, categoryIndex) => (
-              <React.Fragment key={categoryIndex}>
-                <div
-                  data-subheader={`#subheader-${category.id}`}
-                  className={classNames('navigation-header-category', {
-                    'navigation-header-category-active': categoryIndex === 0
-                  })}
-                >
-                  {category.name}
-                </div>
-
-                <header
-                  id={`subheader-${category.id}`}
-                  className={classNames('navigation-header-products', {
-                    'navigation-header-products-active': categoryIndex === 0
-                  })}
-                >
-                  {category.products.map((product, productIndex) => (
-                    <div
-                      key={productIndex}
-                      data-dropdown={`#dropdown-${category.id}-${productIndex}`}
-                      className='navigation-header-product'
-                    >
-                      <span className='navigation-header-product-name'>
-                        {product.name}
-                      </span>
-                    </div>
-                  ))}
-                </header>
-              </React.Fragment>
-            ))}
-          </div>
+          <DesktopNavigationCategories
+            categories={nav.categories}
+            current={currentCategory}
+          />
 
           <div className='navigation-header-buttons'>
-            <Button type='ghost' label='Apply Now' link />
-            <Button type='primary' label='Sign In' link />
+            <div className='navigation-header-cta-actions'>
+              {nav.categories.map(({ CTA, ...category }, idx) => (
+                <div
+                  key={idx}
+                  id={`cta-${category.id}`}
+                  className={classNames('navigation-header-cta-wrapper', {
+                    'navigation-cta-active': idx === 0
+                  })}
+                >
+                  {CTA && <CTA />}
+                </div>
+              ))}
+            </div>
+            <Button
+              type='primary'
+              label='Sign In'
+              link
+              href={nav.config.auth.signIn}
+            />
           </div>
         </div>
       </header>
 
-      <div className='navigation-subheader' />
+      <DesktopNavigationDropdowns
+        categories={nav.categories}
+        config={nav.config}
+      />
 
-      <div className='navigation-dropdowns'>
-        <div className='navigation-container'>
-          {menu.categories.map((category, categoryIndex) =>
-            category.products.map((product, productIndex) => (
-              <div
-                key={`${categoryIndex}-${productIndex}`}
-                id={`dropdown-${category.id}-${productIndex}`}
-                className='navigation-dropdown'
-              >
-                {product.items.map((item, itemIndex) => (
-                  <a
-                    key={itemIndex}
-                    href='#'
-                    className='navigation-dropdown-item'
-                  >
-                    {item}
-                  </a>
-                ))}
-              </div>
-            ))
-          )}
-
-          <article className='navigation-promo'>
-            <div className='navigation-promo-content'>
-              <h3>Bank Whenever, Wherever</h3>
-              <p className='navigation-promo-text'>
-                The Bank of the West website and app offer 24/7 access to your
-                accounts and balances. With just a few clicks you can sign up.
-              </p>
-              <AppCTA />
-            </div>
-
-            <div className='navigation-promo-image'>
-              <img src='http://via.placeholder.com/640' alt='Promo image' />
-            </div>
-          </article>
-        </div>
-      </div>
-
-      <div className='navigation-menus'>
-        <aside className='navigation-menu navigation-main-menu'>
-          <div className='container'>
-            <div className='navigation-main-menu-buttons'>
-              <Button type='ghost' label='Apply Now' link />
-              <Button
-                type='primary'
-                label='Sign In'
-                id='navigation-login-button'
-              />
-            </div>
-
-            {menu.categories.map((category, index) => (
-              <div
-                key={index}
-                data-menu={`#menu-${category.id}`}
-                className='navigation-main-menu-category'
-              >
-                <span>{category.name}</span>
-                <i className='icon icon-chevron-right' />
-              </div>
-            ))}
-
-            <div className='navigation-divider' />
-
-            {menu.links.map((link, index) => (
-              <div key={index} className='navigation-main-menu-link'>
-                <a href='#'>{link}</a>
-              </div>
-            ))}
-          </div>
-        </aside>
-
-        <aside className='navigation-menu navigation-login-menu'>
-          <div className='container'>
-            <h2 className='navigation-login-title'>Sign In</h2>
-
-            <Input
-              id='navigation-login-username'
-              variant='outline'
-              type='text'
-              label='Username'
-              required
-            />
-            <Input
-              id='navigation-login-password'
-              variant='outline'
-              type='password'
-              label='Password'
-              required
-            />
-
-            <Link>Forgot password</Link>
-            <Button type='primary' label='Sign In' />
-            <div className='navigation-divider' />
-            <Link standalone>Open an Account</Link>
-          </div>
-        </aside>
-
-        {menu.categories.map((category, categoryIndex) => (
-          <aside
-            key={categoryIndex}
-            id={`menu-${category.id}`}
-            className='navigation-menu navigation-category-menu'
-          >
-            <div className='container'>
-              <div className='navigation-category-menu-header'>
-                <i className='navigation-category-menu-back icon icon-chevron-left' />
-                <div>{category.name}</div>
-              </div>
-
-              {category.products.map((product, productIndex) => (
-                <Accordion key={productIndex} title={product.name}>
-                  {product.items.map((item, itemIndex) => (
-                    <div key={itemIndex}>
-                      <a href='#'>{item}</a>
-                    </div>
-                  ))}
-                </Accordion>
-              ))}
-            </div>
-          </aside>
-        ))}
-      </div>
+      <MobileNavigationMenus
+        categories={nav.categories}
+        config={nav.config}
+        links={nav.links}
+      />
     </nav>
   )
 }

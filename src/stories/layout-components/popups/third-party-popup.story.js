@@ -28,5 +28,10 @@ export const ThirdParty = () => {
 }
 
 export default {
-  title: 'Layout Components/Popups'
+  title: 'Layout Components/Popups',
+  parameters: {
+    'in-dsm': {
+      id: '604f8c6b3307f156306b9797'
+    }
+  }
 }

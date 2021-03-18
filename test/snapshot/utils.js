@@ -48,6 +48,8 @@ export const buildSnapshotTests = stories => {
           // Act
           await page.setViewport(viewport)
           await page.goto(url, { waitUntil: 'networkidle2' })
+          await page.waitForSelector('#root')
+
           if (story.callback) {
             await story.callback()
           }

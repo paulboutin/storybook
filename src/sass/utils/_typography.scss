@@ -12,6 +12,18 @@
   }
 }
 
+@each $color in map-keys($colors) {
+  .text-#{$color} {
+    color: color($color);
+  }
+}
+
+@each $alignment in (left, center, right) {
+  .text-#{$alignment} {
+    text-align: $alignment;
+  }
+}
+
 @each $weight in map-keys($font-weights) {
   .font-#{$weight} {
     @include font-weight($weight);

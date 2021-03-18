@@ -104,8 +104,10 @@
 
   .input-text-wrapper {
     text-align: left;
+  }
 
-    &:empty {
+  &:not(.no-helper-spacing) {
+    .input-text-wrapper:empty {
       padding-bottom: spacing(20);
     }
   }

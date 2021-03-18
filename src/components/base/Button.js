@@ -17,7 +17,7 @@ const Button = ({ type, label, icon, className, link, ...props }) => {
   )
 
   return link ? (
-    <a href='#' className={classes} {...props}>
+    <a href={props.href || '#'} className={classes} {...props}>
       {children}
     </a>
   ) : (

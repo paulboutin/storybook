@@ -13,6 +13,11 @@ export const ImageStory = () => {
           <p className='sb:image-ratio'>Ratio {ratio}</p>
         </div>
       ))}
+
+      <div className='sb:image-wrapper'>
+        <Image ratio='1:1' src={src} alt='Image' className='rounded' />
+        <p className='sb:image-ratio'>Rounded</p>
+      </div>
     </div>
   )
 }

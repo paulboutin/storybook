@@ -1,3 +1,4 @@
 import './smoothscroll-polyfill'
 import './swiped-events'
-import './vimeo-player.min'
+import './minified/vimeo-player.min'
+import './minified/splide.min'

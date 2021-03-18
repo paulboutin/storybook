@@ -8,6 +8,27 @@
     text-align: left;
   }
 
+  &.lead-form-alt {
+    .lead-form-header {
+      margin-bottom: spacing(16);
+    }
+
+    .lead-form-row {
+      display: flex;
+      flex-direction: column-reverse;
+
+      @include screen('sm') {
+        flex-direction: row-reverse;
+      }
+    }
+
+    .lead-form-input-group {
+      @include screen('sm') {
+        margin-top: 0;
+      }
+    }
+  }
+
   .lead-form-header {
     margin-bottom: spacing(24);
 

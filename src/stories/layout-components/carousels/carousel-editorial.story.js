@@ -62,7 +62,7 @@ export const Editorial = () => {
       subtext,
       tag,
       tagHref,
-      image: { src: image },
+      image,
       ...video
     })
   }

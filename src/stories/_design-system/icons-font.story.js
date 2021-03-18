@@ -34,7 +34,8 @@ const icons = [
   'show',
   'twitter',
   'youtube',
-  'long-arrow-right'
+  'long-arrow-right',
+  'means-matters'
 ]
 
 export const FontIcons = () => (

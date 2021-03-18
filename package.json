@@ -15,7 +15,7 @@
     "build:scripts": "cp -R src/js tmp/js",
     "build:fonts": "cp -R public/fonts tmp/fonts",
     "build:icons": "cp -R public/icons tmp/icons",
-    "build:images": "mkdir -p tmp/img && cp public/img/* tmp/img",
+    "build:images": "mkdir -p tmp/img && cp -R public/img/* tmp/img",
     "build:docs": "cp -R src/docs/* tmp",
     "build:zip": "cd tmp && zip -r -X ../public/lib.zip . && cd .. && rm -rf tmp",
     "build:storybook": "build-storybook -s public",

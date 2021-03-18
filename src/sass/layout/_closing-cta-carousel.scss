@@ -1,0 +1,135 @@
+.closing-cta-carousel {
+  position: relative;
+  overflow: hidden;
+
+  padding: spacing(64) 0;
+
+  .container {
+    padding: 0 spacing(16);
+
+    @include screen('sm') {
+      padding: 0 spacing(64);
+    }
+  }
+
+  .closing-cta-carousel-background {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    background: color('green');
+
+    transform: translateY(40%);
+    z-index: -1;
+  }
+
+  .carousel-slide-wrapper {
+    position: relative;
+
+    @include fixed-ratio(3, 4);
+
+    @include screen('sm') {
+      @include fixed-ratio(4, 3);
+    }
+
+    .carousel-slide-content {
+      @include overlay('medium');
+
+      color: color('white');
+
+      position: absolute;
+      top: 0;
+
+      height: 100%;
+      width: 100%;
+
+      overflow: hidden;
+
+      padding: spacing(48) spacing(24);
+
+      @include screen('sm') {
+        padding: spacing(64) spacing(32);
+      }
+
+      @include screen('md') {
+        padding: spacing(64);
+      }
+
+      // animation
+      > * {
+        transition: opacity 300ms ease-in, transform 300ms ease-out;
+        opacity: 0;
+        transform: translateX(-50%);
+      }
+
+      @for $i from 1 through 4 {
+        > :nth-child(#{$i}) {
+          transition-delay: #{300 * $i}ms;
+        }
+      }
+    }
+  }
+
+  .slider {
+    position: static !important;
+
+    .slider-slide {
+      transition: transform 300ms ease-out;
+      opacity: 1 !important;
+
+      &.slider-slide-active {
+        .carousel-slide-content {
+          > * {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+
+  .closing-cta-carousel-container {
+    position: relative;
+    overflow: hidden;
+    background-color: color('white');
+
+    .carousel-pagination-container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      margin: spacing(24);
+
+      @include screen('sm') {
+        margin: spacing(32);
+      }
+
+      .button {
+        @include border-radius('none');
+
+        &:first-of-type {
+          margin-right: spacing(4);
+        }
+      }
+    }
+  }
+
+  .closing-cta-carousel-content {
+    padding-top: spacing(32);
+    color: color('white');
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > * {
+      margin-bottom: spacing(16);
+    }
+
+    .link {
+      color: inherit;
+    }
+  }
+}
