@@ -11,7 +11,7 @@ export default {
   title: 'Layout Components',
   parameters: {
     'in-dsm': {
-      id: '5f6ce07234518495134a814e'
+      id: '6016f3836a7ae8becbede02e'
     }
   }
 }

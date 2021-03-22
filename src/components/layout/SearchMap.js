@@ -6,7 +6,7 @@ import Input from '../base/Input'
 
 const SearchBox = ({ placeholder, action, method }) => {
   return (
-    <form className='search-hero-search-block' action={action} method={method}>
+    <form className='search-map-search-block' action={action} method={method}>
       <Input
         variant='outline'
         placeholder={placeholder}
@@ -18,12 +18,12 @@ const SearchBox = ({ placeholder, action, method }) => {
   )
 }
 
-const SearchHero = ({ eyebrow = {}, title, text, placeholder, background }) => {
+const SearchMap = ({ eyebrow = {}, title, text, placeholder, background }) => {
   return (
-    <section className='search-hero'>
-      <div className='search-hero-wrapper'>
-        <Image className='search-hero-image container' src={background} />
-        <article className='search-hero-card'>
+    <section className='search-map'>
+      <div className='search-map-wrapper'>
+        <Image className='search-map-image container' src={background} />
+        <article className='search-map-card'>
           {eyebrow.enable && <Eyebrow>{eyebrow.text}</Eyebrow>}
           <p className='text-h2 font-display'>{title}</p>
           <p>{text}</p>
@@ -34,4 +34,4 @@ const SearchHero = ({ eyebrow = {}, title, text, placeholder, background }) => {
   )
 }
 
-export default SearchHero
+export default SearchMap

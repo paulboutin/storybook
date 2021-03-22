@@ -70,7 +70,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'search-hero',
-      path: 'layout-components-hero--search',
+      path: 'layout-components-search--search',
       devices: ['mobile', 'desktop']
     },
     ...['standard', 'a', 'b'].map(type => ({
