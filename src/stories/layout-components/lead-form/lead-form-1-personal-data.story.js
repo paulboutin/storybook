@@ -79,5 +79,10 @@ PersonalData.story = {
 }
 
 export default {
-  title: 'Layout Components/Lead Form'
+  title: 'Layout Components/Lead Form',
+  parameters: {
+    'in-dsm': {
+      id: '6053d714e8a36b628b35190c'
+    }
+  }
 }

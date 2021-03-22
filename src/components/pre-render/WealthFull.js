@@ -10,11 +10,17 @@ import WealthExpertiseCarouselPartial from './_WealthExpertiseCarousel'
 import WealthResourceLinksPartial from './_WealthSolutionsLinks'
 import WealthClosingCTAPartial from './_WealthClosingCta'
 import Footer from '../layout/Footer'
+import Button from '../base/Button'
 
 const WealthFull = ({ imgPath, sticky }) => {
   return (
     <>
-      <Navigation sticky={sticky} imgPath={imgPath} currentCategory='wealth' />
+      <Navigation
+        sticky={sticky}
+        imgPath={imgPath}
+        currentCategory='wealth'
+        CTA={() => <Button type='tertiary' label='Online Portfolio' link />}
+      />
       <WealthHeroPartial imgPath={imgPath} />
       <WealthDifferentiatorsPartial imgPath={imgPath} />
       <WealthExpertsHeroPartial imgPath={imgPath} />

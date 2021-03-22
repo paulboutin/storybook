@@ -23,13 +23,14 @@ const InfographicItem = ({ className, title, text }) => {
 }
 
 const Infographic = ({
+  className,
   background,
   headline = 'Headline',
   text = 'Lorem ipsum',
   items = []
 }) => {
   return (
-    <section className='infographic-alt'>
+    <section className={classNames('infographic-alt', className)}>
       <div className='container'>
         <Image
           className='infographic-alt-wrapper'

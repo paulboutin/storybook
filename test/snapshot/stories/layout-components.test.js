@@ -21,11 +21,6 @@ describe('Layout Components', () => {
       path: `layout-components-hero--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    ...['accordion', 'table'].map(type => ({
-      title: `faq ${type}`,
-      path: `layout-components-faq--${type}`,
-      devices: ['tablet']
-    })),
     ...['standard', 'accent-green'].map(type => ({
       title: `promo-section ${type}`,
       path: `layout-components-promo-section--${type}`,
@@ -52,6 +47,11 @@ describe('Layout Components', () => {
       devices: ['mobile', 'tablet', 'desktop']
     })),
     {
+      title: 'faq accordion',
+      path: 'layout-components-faq--accordion',
+      devices: ['tablet']
+    },
+    {
       title: 'pull-quote',
       path: 'layout-components--pull-quote',
       devices: ['mobile', 'tablet']
@@ -70,7 +70,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'search-hero',
-      path: 'layout-components-hero--search',
+      path: 'layout-components-search--search',
       devices: ['mobile', 'desktop']
     },
     ...['standard', 'a', 'b'].map(type => ({

@@ -225,7 +225,6 @@ function mobileSetup(navigation) {
 }
 
 function showCTA(CTAs, activeCTA) {
-  console.log(CTAs, activeCTA)
   CTAs.forEach(CTA => CTA.classList.remove('navigation-cta-active'))
   activeCTA.classList.add('navigation-cta-active')
 }

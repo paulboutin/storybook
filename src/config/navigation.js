@@ -6,6 +6,7 @@ import { prefixImagePath } from '../utils'
 
 const navigation = prefix => ({
   config: {
+    defaultCTA: () => <Button type='tertiary' label='Apply Now' link />,
     dropdowns: {
       maxPerColumn: 7
     },
@@ -241,7 +242,6 @@ const navigation = prefix => ({
         }
       ],
       link: 'https://www.bankofthewest.com',
-      CTA: () => <Button type='tertiary' label='Apply Now' link />,
       Promo: () => (
         <NavigationPromo
           image={prefixImagePath({
@@ -251,7 +251,10 @@ const navigation = prefix => ({
           title='1% for the Planet Checking Account'
           text='The first checking account to give 1% back to the planet at no cost to you.'
         >
-          <Link standalone href='#'>
+          <Link
+            standalone
+            href='https://www.bankofthewest.com/personal-banking/checking-accounts/one-percent-checking'
+          >
             Learn More
           </Link>
         </NavigationPromo>
@@ -397,7 +400,6 @@ const navigation = prefix => ({
         }
       ],
       link: 'https://www.bankofthewest.com/small-business',
-      CTA: () => <Button type='tertiary' label='Apply Now' link />,
       Promo: () => (
         <NavigationPromo
           image={prefixImagePath({
@@ -407,7 +409,7 @@ const navigation = prefix => ({
           title='Paycheck Protection Program'
           text='Get information about the SBA Paycheck Protection Program'
         >
-          <Link standalone href='#'>
+          <Link standalone href='https://www.bankofthewest.com/ppp-2'>
             Learn More
           </Link>
         </NavigationPromo>
@@ -574,7 +576,6 @@ const navigation = prefix => ({
         }
       ],
       link: 'https://www.bankofthewest.com/commercial-banking',
-      CTA: () => <Button type='tertiary' label='Get in Touch' link />,
       Promo: () => (
         <NavigationPromo
           image={prefixImagePath({
@@ -584,7 +585,10 @@ const navigation = prefix => ({
           title="Scott Anderson's Economic Report"
           text='Our Chief Economist, Scott A. Anderson, analyzes international, national, and regional economic trends.'
         >
-          <Link standalone href='#'>
+          <Link
+            standalone
+            href='https://www.bankofthewest.com/wealth-management/insights/economic-research'
+          >
             learn More
           </Link>
         </NavigationPromo>
@@ -680,17 +684,16 @@ const navigation = prefix => ({
         }
       ],
       link: 'https://www.bankofthewest.com/wealth-management',
-      CTA: () => <Button type='tertiary' label='Online Portfolio' link />,
       Promo: () => (
         <NavigationPromo
           image={prefixImagePath({
             prefix,
-            src: 'trees.png'
+            src: '/wealth/BOTW_Wealth_Articles_Investing.png'
           })}
           title='Investing in the Time of COVID-19'
           text='Chief Investment Officer Wade Balliet shares how markets are navigating through COVID-19 and the new normal for investors.'
         >
-          <Link standalone href='#'>
+          <Link standalone href='https://vimeo.com/523922964'>
             Learn More
           </Link>
         </NavigationPromo>
@@ -701,7 +704,6 @@ const navigation = prefix => ({
       id: 'about',
       products: [],
       link: 'https://www.bankofthewest.com/about-us',
-      CTA: null,
       Promo: null
     }
   ],

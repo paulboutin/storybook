@@ -163,10 +163,9 @@ const DesktopNavigationDropdowns = ({ categories, config }) => {
   )
 }
 
-const MobileNavigationMenus = ({ categories, links, config }) => {
+const MobileNavigationMenus = ({ CTA, categories, links, config }) => {
   // renders navigation menus for Mobile devices.
   // TODO: renders only first CTA it finds.
-  const CTA = categories.find(category => category.CTA).CTA
 
   return (
     <div className='navigation-menus'>
@@ -296,7 +295,11 @@ export const NavigationPromo = ({
   )
 }
 
-const Navigation = ({ imgPath = '/img', currentCategory }) => {
+const Navigation = ({
+  imgPath = '/img',
+  currentCategory,
+  CTA = navigation(imgPath).config.defaultCTA
+}) => {
   // main Navigation component
   const nav = navigation(imgPath)
 
@@ -337,7 +340,7 @@ const Navigation = ({ imgPath = '/img', currentCategory }) => {
 
           <div className='navigation-header-buttons'>
             <div className='navigation-header-cta-actions'>
-              {nav.categories.map(({ CTA, ...category }, idx) => (
+              {nav.categories.map((category, idx) => (
                 <div
                   key={idx}
                   id={`cta-${category.id}`}
@@ -368,6 +371,7 @@ const Navigation = ({ imgPath = '/img', currentCategory }) => {
         categories={nav.categories}
         config={nav.config}
         links={nav.links}
+        CTA={CTA}
       />
     </nav>
   )

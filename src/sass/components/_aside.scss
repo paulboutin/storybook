@@ -1,7 +1,7 @@
 .aside {
   @include box-shadow('sm');
   position: sticky;
-  top: spacing(16);
+  top: spacing(160);
   display: flex;
   flex-direction: column;
   align-items: flex-start;

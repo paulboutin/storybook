@@ -1,4 +1,4 @@
-.search-hero {
+.search-map {
   @include screen('sm') {
     margin-top: spacing(48);
     margin-bottom: spacing(48);
@@ -17,11 +17,11 @@
     padding: spacing(24);
   }
 
-  .search-hero-wrapper {
+  .search-map-wrapper {
     position: relative;
   }
 
-  .search-hero-image {
+  .search-map-image {
     padding: 0;
 
     @include screen('sm') {
@@ -45,7 +45,7 @@
     }
   }
 
-  .search-hero-card {
+  .search-map-card {
     background-color: color('white');
     padding: spacing(24) spacing(16);
 
@@ -73,7 +73,7 @@
     }
   }
 
-  .search-hero-search-block {
+  .search-map-search-block {
     display: flex;
 
     .input-block {

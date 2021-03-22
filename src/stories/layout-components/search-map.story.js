@@ -1,6 +1,6 @@
 import React from 'react'
 import { boolean, text } from '@storybook/addon-knobs'
-import SearchHero from '../../../components/layout/SearchHero'
+import SearchMap from '../../components/layout/SearchMap'
 
 export const Search = () => {
   const title = text('Title', 'Headline Lorem Ipsum')
@@ -13,7 +13,7 @@ export const Search = () => {
   }
 
   return (
-    <SearchHero
+    <SearchMap
       title={title}
       text={textContent}
       eyebrow={eyebrow}
@@ -24,5 +24,5 @@ export const Search = () => {
 }
 
 export default {
-  title: 'Layout Components/Hero'
+  title: 'Layout Components/Search'
 }
