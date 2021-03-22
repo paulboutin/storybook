@@ -303,7 +303,7 @@ body.navigation-open {
     }
 
     .navigation-promo {
-      background-color: color('grey-5');
+      height: 100%;
       color: color('black');
       padding: spacing(24) spacing(48);
 
@@ -313,9 +313,23 @@ body.navigation-open {
         width: 50%;
       }
 
+      &:before {
+        background-color: color('grey-5');
+        height: 100%;
+        width: 50%;
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: -1;
+      }
+
       &.navigation-promo-green {
-        background-color: color('green');
         color: color('white');
+
+        &:before {
+          background-color: color('green');
+        }
       }
 
       :not(:last-child) {

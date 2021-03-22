@@ -21,11 +21,6 @@ describe('Layout Components', () => {
       path: `layout-components-hero--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
-    ...['accordion', 'table'].map(type => ({
-      title: `faq ${type}`,
-      path: `layout-components-faq--${type}`,
-      devices: ['tablet']
-    })),
     ...['standard', 'accent-green'].map(type => ({
       title: `promo-section ${type}`,
       path: `layout-components-promo-section--${type}`,
@@ -51,6 +46,11 @@ describe('Layout Components', () => {
       path: `layout-components-infographic--${type}`,
       devices: ['mobile', 'tablet', 'desktop']
     })),
+    {
+      title: 'faq accordion',
+      path: 'layout-components-faq--accordion',
+      devices: ['tablet']
+    },
     {
       title: 'pull-quote',
       path: 'layout-components--pull-quote',
