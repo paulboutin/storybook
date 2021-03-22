@@ -82,9 +82,17 @@ const ProductPage = () => (
 
       <FAQ />
 
-      <ClosingCTA type='standard' image='/img/trees.png' />
+      <ClosingCTA
+        type='standard'
+        title='Headline'
+        text='Subtext'
+        label='Call to Action'
+      />
 
-      <ColumnCards heading='Three more reasons to love your account'>
+      <ColumnCards
+        columns={3}
+        heading='Three more reasons to love your account'
+      >
         {[
           {
             heading: 'Online banking',

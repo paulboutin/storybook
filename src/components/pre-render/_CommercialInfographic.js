@@ -35,6 +35,7 @@ const CommercialInfographicPartial = ({
 }) => {
   return (
     <Infographic
+      className='no-margins'
       background={prefixImagePath({
         prefix: imgPath,
         src: '/commercial/BOTW_Commercial_Infographic_World.png'

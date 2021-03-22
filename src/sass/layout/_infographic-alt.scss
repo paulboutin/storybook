@@ -35,4 +35,9 @@
   .infographic-alt-item {
     margin-bottom: spacing(32);
   }
+
+  &.no-margins {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

@@ -11,6 +11,7 @@ import CommercialLeadFormPartial from './_CommercialLeadForm'
 import CommercialSolutionsHighlightPartial from './_CommercialSolutionsHighlight'
 import CommercialClosingCTAPartial from './_CommercialClosingCta'
 import Footer from '../layout/Footer'
+import Button from '../base/Button'
 
 const Commercial = ({ imgPath, sticky }) => {
   return (
@@ -19,6 +20,7 @@ const Commercial = ({ imgPath, sticky }) => {
         sticky={sticky}
         imgPath={imgPath}
         currentCategory='commercial'
+        CTA={() => <Button type='tertiary' label='Get in Touch' link />}
       />
       <CommercialHeroPartial imgPath={imgPath} />
       <CommercialDifferentiatorsPartial imgPath={imgPath} />
