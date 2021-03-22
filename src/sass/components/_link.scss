@@ -4,10 +4,6 @@
   cursor: pointer;
   text-decoration: underline;
 
-  &:visited {
-    color: color('green-darker');
-  }
-
   &:focus {
     color: color('green-light');
     @include focus-outline();
