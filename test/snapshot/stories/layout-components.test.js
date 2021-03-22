@@ -47,11 +47,6 @@ describe('Layout Components', () => {
       devices: ['mobile', 'tablet', 'desktop']
     })),
     {
-      title: 'faq accordion',
-      path: 'layout-components-faq--accordion',
-      devices: ['tablet']
-    },
-    {
       title: 'pull-quote',
       path: 'layout-components--pull-quote',
       devices: ['mobile', 'tablet']
@@ -70,7 +65,7 @@ describe('Layout Components', () => {
     },
     {
       title: 'search-hero',
-      path: 'layout-components-search--search',
+      path: 'layout-components--search-map',
       devices: ['mobile', 'desktop']
     },
     ...['standard', 'a', 'b'].map(type => ({
