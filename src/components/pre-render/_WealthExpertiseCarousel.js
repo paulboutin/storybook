@@ -10,7 +10,7 @@ const items = prefix => [
     heading: 'Individuals and Families',
     image: prefixImagePath({
       prefix,
-      src: '/wealth/BOTW_Wealth_Expertise_Individual.png'
+      src: '/wealth/expertise/BOTW_Wealth_Expertise_Individuals.svg'
     }),
     href:
       'https://www.bankofthewest.com/wealth-management/who-we-serve/individuals-families'
@@ -20,7 +20,7 @@ const items = prefix => [
     heading: 'Private Business and Entrepreneurs',
     image: prefixImagePath({
       prefix,
-      src: '/wealth/BOTW_Wealth_Expertise_PrivateBusiness.png'
+      src: '/wealth/expertise/BOTW_Wealth_Expertise_Business.svg'
     }),
     href:
       'https://www.bankofthewest.com/wealth-management/who-we-serve/private-business-owners'
@@ -30,7 +30,7 @@ const items = prefix => [
     heading: 'Ultra High Net Worth',
     image: prefixImagePath({
       prefix,
-      src: '/wealth/BOTW_Wealth_Expertise_HighNet.png'
+      src: '/wealth/expertise/BOTW_Wealth_Expertise_NetWorth.svg'
     }),
     href:
       'https://www.bankofthewest.com/wealth-management/who-we-serve/key-client-group-america'
@@ -40,7 +40,7 @@ const items = prefix => [
     heading: 'International',
     image: prefixImagePath({
       prefix,
-      src: '/wealth/BOTW_Wealth_Expertise_International.png'
+      src: '/wealth/expertise/BOTW_Wealth_Expertise_International.svg'
     }),
     href:
       'https://www.bankofthewest.com/commercial-banking/international/global-capabilities'

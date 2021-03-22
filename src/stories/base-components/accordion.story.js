@@ -23,6 +23,8 @@ export const AccordionStory = () => {
   const accordions = []
   const accordionNumber = number('Accordions', 3, options, 'config')
 
+  const title = text('Title', 'Headline', 'config')
+
   for (let i = 0; i < accordionNumber; i++) {
     const prefix = `Accordion ${i + 1}`
 
@@ -33,13 +35,14 @@ export const AccordionStory = () => {
   }
 
   return (
-    <>
+    <div className='container'>
+      <h2 className='text-h2 font-display'>{title}</h2>
       {accordions.map((accordion, index) => (
         <Accordion key={index} title={accordion.title}>
           <div dangerouslySetInnerHTML={{ __html: accordion.content }} />
         </Accordion>
       ))}
-    </>
+    </div>
   )
 }
 

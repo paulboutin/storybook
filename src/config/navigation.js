@@ -246,7 +246,7 @@ const navigation = prefix => ({
         <NavigationPromo
           image={prefixImagePath({
             prefix,
-            src: 'trees.png'
+            src: '/nav/BOTW_NavPromo_Retail.jpg'
           })}
           title='1% for the Planet Checking Account'
           text='The first checking account to give 1% back to the planet at no cost to you.'
@@ -404,7 +404,7 @@ const navigation = prefix => ({
         <NavigationPromo
           image={prefixImagePath({
             prefix,
-            src: 'trees.png'
+            src: '/nav/BOTW_NavPromo_SmallBusiness.png'
           })}
           title='Paycheck Protection Program'
           text='Get information about the SBA Paycheck Protection Program'
@@ -580,7 +580,7 @@ const navigation = prefix => ({
         <NavigationPromo
           image={prefixImagePath({
             prefix,
-            src: 'trees.png'
+            src: '/nav/BOTW_NavPromo_Commercial.jpg'
           })}
           title="Scott Anderson's Economic Report"
           text='Our Chief Economist, Scott A. Anderson, analyzes international, national, and regional economic trends.'
@@ -688,7 +688,7 @@ const navigation = prefix => ({
         <NavigationPromo
           image={prefixImagePath({
             prefix,
-            src: '/wealth/BOTW_Wealth_Articles_Investing.png'
+            src: '/nav/BOTW_NavPromo_Wealth.png'
           })}
           title='Investing in the Time of COVID-19'
           text='Chief Investment Officer Wade Balliet shares how markets are navigating through COVID-19 and the new normal for investors.'

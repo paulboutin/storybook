@@ -10,7 +10,7 @@ const items = prefix => [
     heading: 'Technology',
     image: prefixImagePath({
       prefix,
-      src: '/commercial/BOTW_Commercial_industries_Technology.png'
+      src: '/commercial/industries/BOTW_Retail_industries_Technology.svg'
     }),
     href: 'https://www.bankofthewest.com/commercial-banking/industry/technology'
   },
@@ -19,7 +19,7 @@ const items = prefix => [
     heading: 'Healthcare',
     image: prefixImagePath({
       prefix,
-      src: '/commercial/BOTW_Commercial_industries_Healthcare.png'
+      src: '/commercial/industries/BOTW_Retail_industries_Healthcare.svg'
     }),
     href: 'https://www.bankofthewest.com/commercial-banking/industry/healthcare'
   },
@@ -28,7 +28,7 @@ const items = prefix => [
     heading: 'Food and Agribusiness',
     image: prefixImagePath({
       prefix,
-      src: '/commercial/BOTW_Commercial_industries_Food.png'
+      src: '/commercial/industries/BOTW_Retail_industries_agribusiness.svg'
     }),
     href:
       'https://www.bankofthewest.com/commercial-banking/industry/agribusiness-farming'
@@ -38,7 +38,7 @@ const items = prefix => [
     heading: 'Wine and Beverage',
     image: prefixImagePath({
       prefix,
-      src: '/commercial/BOTW_Commercial_industries_Wine.png'
+      src: '/commercial/industries/BOTW_Retail_industries_wine.svg'
     }),
     href:
       'https://www.bankofthewest.com/commercial-banking/industry/beverage-industry'
@@ -48,7 +48,7 @@ const items = prefix => [
     heading: 'Title and Escrow',
     image: prefixImagePath({
       prefix,
-      src: '/commercial/BOTW_Commercial_industries_Title.png'
+      src: '/commercial/industries/BOTW_Retail_industries_Title.svg'
     }),
     href:
       'https://www.bankofthewest.com/commercial-banking/industry/title-escrow-banking'
@@ -58,7 +58,7 @@ const items = prefix => [
     heading: 'Commercial Real Estate',
     image: prefixImagePath({
       prefix,
-      src: '/commercial/BOTW_Commercial_industries_Commercial.png'
+      src: '/commercial/industries/BOTW_Retail_industries_Commercial.svg'
     }),
     href:
       'https://www.bankofthewest.com/commercial-banking/industry/real-estate'
@@ -68,7 +68,7 @@ const items = prefix => [
     heading: 'Government & Public Sector',
     image: prefixImagePath({
       prefix,
-      src: '/commercial/BOTW_Commercial_industries_Government.png'
+      src: '/commercial/industries/BOTW_Retail_industries_Goverment.svg'
     }),
     href:
       'https://www.bankofthewest.com/commercial-banking/industry/government-banking-public-finance'
@@ -78,7 +78,7 @@ const items = prefix => [
     heading: 'Religious Institutions',
     image: prefixImagePath({
       prefix,
-      src: '/commercial/BOTW_Commercial_industries_Religious.png'
+      src: '/commercial/industries/BOTW_Retail_industries_Religious.svg'
     }),
     href:
       'https://www.bankofthewest.com/commercial-banking/industry/religious-institution-banking'
@@ -88,7 +88,7 @@ const items = prefix => [
     heading: 'Environmental, Social, and Governance',
     image: prefixImagePath({
       prefix,
-      src: '/commercial/BOTW_Commercial_industries_Environmental.png'
+      src: '/commercial/industries/BOTW_Retail_industries_Environmental.svg'
     }),
     href: ''
   }
