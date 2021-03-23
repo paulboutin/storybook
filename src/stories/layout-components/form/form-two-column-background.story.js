@@ -76,7 +76,7 @@ export default {
   title: 'Layout Components/Form',
   parameters: {
     'in-dsm': {
-      id: '5f6ce02d230daf48a39b932c'
+      id: '5f7f2edc69ef52e07a127471'
     }
   }
 }

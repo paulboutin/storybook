@@ -24,5 +24,10 @@ export const SearchMap = () => {
 }
 
 export default {
-  title: 'Layout Components'
+  title: 'Layout Components',
+  parameters: {
+    'in-dsm': {
+      id: '6054c9a9c0b7266e2e6e0f50'
+    }
+  }
 }
