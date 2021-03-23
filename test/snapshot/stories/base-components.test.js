@@ -104,6 +104,11 @@ describe('Base Components', () => {
       title: 'aside',
       path: 'base-components--aside-story',
       devices: ['desktop']
+    },
+    {
+      title: 'alert',
+      path: 'base-components--alert-story',
+      devices: ['mobile', 'desktop']
     }
   ]
   buildSnapshotTests(stories)

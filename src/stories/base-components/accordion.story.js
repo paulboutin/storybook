@@ -54,7 +54,7 @@ export default {
   title: 'Base Components',
   parameters: {
     'in-dsm': {
-      id: '5f6ba2aac55519e1650671aa'
+      id: '6054b3f0e8a36b228e3524f1'
     }
   }
 }

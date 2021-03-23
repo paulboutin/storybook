@@ -29,5 +29,10 @@ AsideStory.story = {
 }
 
 export default {
-  title: 'Base Components'
+  title: 'Base Components',
+  parameters: {
+    'in-dsm': {
+      id: '60538cafe8a36b58123509c1'
+    }
+  }
 }
