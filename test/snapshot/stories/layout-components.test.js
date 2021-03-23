@@ -166,11 +166,6 @@ describe('Layout Components', () => {
       path: 'layout-components--callout-story'
     },
     {
-      title: 'alert',
-      path: 'layout-components--alert-story',
-      devices: ['mobile', 'desktop']
-    },
-    {
       title: 'product-selector',
       path: 'layout-components--product-selector-story',
       devices: ['mobile', 'desktop']
