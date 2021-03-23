@@ -7,7 +7,7 @@ export default {
   title: 'Layout Components/Comparison',
   parameters: {
     'in-dsm': {
-      id: '5f6a4ea24be36e0b01bda909'
+      id: '6053d258ba8b256aaf5c88aa'
     }
   }
 }

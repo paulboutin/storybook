@@ -67,7 +67,7 @@ export default {
   title: 'Layout Components/Carousels',
   parameters: {
     'in-dsm': {
-      id: '601d656e43564b35a7156690'
+      id: '6053a580c0b72685a36e011d'
     }
   }
 }

@@ -24,7 +24,7 @@ export default {
   title: 'Layout Components/Hero',
   parameters: {
     'in-dsm': {
-      id: '5f29d50e914d5c330e1ba096'
+      id: '6054ca8de8a36b8412352ae1'
     }
   }
 }
